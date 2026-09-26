@@ -137,3 +137,59 @@
 	font-weight: 700;
 	font-style: italic
 }
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Semibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-ThinItalic.otf') format('opentype');
+	font-weight: 100;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-LightItalic.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-SemiboldItalic.otf') format('opentype');
+	font-weight: 600;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Acma';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-BlackItalic.otf') format('opentype');
+	font-weight: 900;
+	font-style: italic
+}

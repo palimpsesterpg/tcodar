@@ -1,0 +1,97 @@
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Thin.ttf') format('opentype');
+	font-weight: 100;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Light.ttf') format('opentype');
+	font-weight: 200;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Book.ttf') format('opentype');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Middle.ttf') format('opentype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Regular.ttf') format('opentype');
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Bold.ttf') format('opentype');
+	font-weight: 600;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ExtraBold.ttf') format('opentype');
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ThinItalic.ttf') format('opentype');
+	font-weight: 100;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-LightItalic.ttf') format('opentype');
+	font-weight: 200;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-BookItalic.ttf') format('opentype');
+	font-weight: 300;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-MiddleItalic.ttf') format('opentype');
+	font-weight: 400;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Italic.ttf') format('opentype');
+	font-weight: 500;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-BoldItalic.ttf') format('opentype');
+	font-weight: 600;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ExtraBoldItalic.ttf') format('opentype');
+	font-weight: 700;
+	font-style: italic
+}

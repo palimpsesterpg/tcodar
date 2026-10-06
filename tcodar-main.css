@@ -1,0 +1,27 @@
+#c4 .forumlist:before {
+    background-image: url("tcodar-marrakech.jpg");
+}
+
+#c5 .forumlist:before {
+    background-image: url("tcodar-new-york.jpg");
+}
+
+#c6 .forumlist:before {
+    background-image: url("tcodar-rio.jpg");
+}
+
+#c7 .forumlist:before {
+    background-image: url("tcodar-singapore.jpg");
+}
+
+#c10 .forumlist:before {
+    background-image: url("tcodar-world.jpg");
+}
+
+#c3 .forumlist:before {
+    background-image: url("tcodar-london.jpg");
+}
+
+#c1 .forumlist:before, #c11 .forumlist:before {
+    background-image: url("tcodar-background.jpg");
+}

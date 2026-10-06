@@ -1,0 +1,39 @@
+#c4 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-marrakech.jpg");
+}
+
+#c5 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-new-york.jpg");
+}
+
+#c6 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-rio.jpg");
+}
+
+#c7 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-singapore.jpg");
+}
+
+#c10 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-world.jpg");
+}
+
+#c14 .forumlist:before {
+    background-image: url("https://github.com/palimpsesterpg/tcodar/blob/main/tcodar-london.jpg");
+}
+
+#c4:has(#f4:hover) .forumlist:before {
+    background-image: url("https://i.pinimg.com/736x/65/72/52/6572520850c7db0451d78edb88b841ba.jpg");
+}
+
+#c4:has(#f40:hover) .forumlist:before {
+    background-image: url("https://i.pinimg.com/736x/fc/aa/f3/fcaaf35d37fdb0a737b66bfa427bc3de.jpg");
+}
+
+#c4:has(#f41:hover) .forumlist:before {
+    background-image: url("https://i.pinimg.com/736x/35/3c/99/353c99f56dc443372ca02a2aec6e96b7.jpg");
+}
+
+#c4:has(#f42:hover) .forumlist:before {
+    background-image: url("https://i.pinimg.com/736x/f1/99/e1/f199e142dc53bf4c71e874734165ef55.jpg");
+}

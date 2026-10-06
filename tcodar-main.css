@@ -24,5 +24,10 @@
 
 #c1 .forumlist:before,
 #c11 .forumlist:before {
-    background-image: url("tcodar-background.jpg");
+    background-image: url("tcodar-admin.jpg");
+}
+
+#c2 .forumlist:before,
+#c9 .forumlist:before {
+    background-image: url("tcodar-off.jpg");
 }

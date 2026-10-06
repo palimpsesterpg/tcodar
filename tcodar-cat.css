@@ -23,7 +23,7 @@
 }
 
 #c1 .forumlist:before, #c11 .forumlist:before {
-    background-image: url("tcodar-london.jpg");
+    background-image: url("tcodar-background.jpg");
 }
 
 #c4:has(#f4:hover) .forumlist:before {

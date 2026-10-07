@@ -22,6 +22,14 @@
     background-image: var(--forum-bg, url("tcodar-london.jpg"));
 }
 
+#c8 .forumlist:before {
+    background-image: var(--forum-bg, url("tcodar-media.jpg"));
+}
+
+#c12 .forumlist:before {
+    background-image: var(--forum-bg, url("tcodar-archives.jpg"));
+}
+
 #c1 .forumlist:before,
 #c11 .forumlist:before {
     background-image: url("tcodar-admin.jpg");

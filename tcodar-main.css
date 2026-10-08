@@ -30,6 +30,15 @@
     background-image: var(--forum-bg, url("tcodar-archives.jpg"));
 }
 
+body {
+    background-image: url("tcodar-body.jpg");
+}
+
+
+#page-header {
+    background-image: url("tcodar-header.jpg");
+}
+
 #c1 .forumlist:before,
 #c11 .forumlist:before {
     background-image: url("tcodar-admin.jpg");

@@ -1,3 +1,11 @@
+body {
+    background-image: url("tcodar-body.png");
+}
+
+#page-header {
+    background-image: url("tcodar-header.jpg");
+}
+
 #c4 .forumlist:before {
     background-image: var(--forum-bg, url("tcodar-marrakech.jpg"));
 }
@@ -28,14 +36,6 @@
 
 #c12 .forumlist:before {
     background-image: var(--forum-bg, url("tcodar-archives.jpg"));
-}
-
-body {
-    background-image: url("tcodar-body.png");
-}
-
-#page-header {
-    background-image: url("tcodar-header.jpg");
 }
 
 #c1 .forumlist:before,

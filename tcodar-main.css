@@ -34,7 +34,6 @@ body {
     background-image: url("tcodar-body.png");
 }
 
-
 #page-header {
     background-image: url("tcodar-header.jpg");
 }
@@ -47,8 +46,4 @@ body {
 #c2 .forumlist:before,
 #c9 .forumlist:before {
     background-image: url("tcodar-off.jpg");
-}
-
-.forumlist {
-    background-image: url(tcodar-body.png);
 }

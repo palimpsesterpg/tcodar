@@ -48,3 +48,7 @@ body {
 #c9 .forumlist:before {
     background-image: url("tcodar-off.jpg");
 }
+
+.forumlist {
+    background-image: url(tcodar-body.png);
+}

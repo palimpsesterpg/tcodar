@@ -1,53 +1,53 @@
 body {
-    background-image: url("tcodar-body.png");
+    background-image: url("Images/tcodar-body.png");
 }
 
 #page-header {
-    background-image: url("tcodar-header-light.jpg");
+    background-image: url("Images/tcodar-header-light.jpg");
 }
 
 [data-color-scheme="dark"] #page-header {
-    background-image: url("tcodar-header-dark.jpg");
+    background-image: url("Images/tcodar-header-dark.jpg");
 }
 
 #c4 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-marrakech.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-marrakech.jpg"));
 }
 
 #c5 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-new-york.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-new-york.jpg"));
 }
 
 #c6 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-rio.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-rio.jpg"));
 }
 
 #c7 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-singapore.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-singapore.jpg"));
 }
 
 #c10 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-world.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-world.jpg"));
 }
 
 #c3 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-london.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-london.jpg"));
 }
 
 #c8 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-media.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-media.jpg"));
 }
 
 #c12 .forumlist:before {
-    background-image: var(--forum-bg, url("tcodar-archives.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-archives.jpg"));
 }
 
 #c1 .forumlist:before,
 #c11 .forumlist:before {
-    background-image: url("images/tcodar-admin.jpg");
+    background-image: url("Images/tcodar-admin.jpg");
 }
 
 #c2 .forumlist:before,
 #c9 .forumlist:before {
-    background-image: url("tcodar-off.jpg");
+    background-image: url("Images/tcodar-off.jpg");
 }

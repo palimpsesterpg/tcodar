@@ -3,7 +3,11 @@ body {
 }
 
 #page-header {
-    background-image: url("tcodar-header.jpg");
+    background-image: url("tcodar-header-light.jpg");
+}
+
+[data-color-scheme="dark"] #page-header {
+    background-image: url("tcodar-header-dark.jpg");
 }
 
 #c4 .forumlist:before {

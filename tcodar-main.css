@@ -52,30 +52,27 @@ body {
     background-image: url("Images/tcodar-off.jpg");
 }
 
-.group-2 {
+.group-4 {
+    --group-color-50: #dddddd
     --group-color: #333333;
 }
 
-.group-3 {
-    --group-color: #60646c;
-}
-
-.group-4 {
-    --group-color-50: #2c80637c;
+.group-5 {
+    --group-color-50: #d5f1e7;
     --group-color: #2c8063;
 }
 
-.group-5 {
-    --group-color-50: #cd00007c;
+.group-6 {
+    --group-color-50: #ffcccc;
     --group-color: #cd0000;
 }
 
-.group-6 {
-    --group-color-50: #2e37607c;
-    --group-color: #2e3760;
+.group-7 {
+    --group-color-50: #dde0ee;
+    --group-color: #424f8a;
 }
 
-.group-7 {
-    --group-color-50: #e597007c;
+.group-8 {
+    --group-color-50: #ffefd0;
     --group-color: #e59700;
 }

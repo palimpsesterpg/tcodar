@@ -4,11 +4,11 @@
 }
 
 #directory .page-filters {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)
 }
 
 #masterlist .page-filters {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr)
 }
 
 .filter {
@@ -40,7 +40,7 @@
 }
 
 .filter h3 {
-    grid-area: 1 / 1 / 7 / 7
+    grid-area: 1 / 1 / 6 / 6
 }
 
 .page-items {
@@ -51,15 +51,15 @@
     margin-top: var(--large);
     flex: 1;
     min-height: 0;
-    overflow: auto;
+    overflow: auto
 }
 
 #directory .page-items {
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr)
 }
 
 #masterlist .page-items {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr)
 }
 
 .page-items .item {
@@ -148,12 +148,12 @@
 
 #masterlist .item-content>img {
     width: 150px;
-    height: 150px;
+    height: 150px
 }
 
 #directory .item-content>img {
     width: 250px;
-    height: 250px;
+    height: 250px
 }
 
 .item-content>img {
@@ -297,7 +297,7 @@
     border-top: 0.5px solid;
     border-bottom: 0.5px solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .content-fam,
@@ -314,7 +314,7 @@
     background-color: var(--white);
     border: 0.5px solid var(--group-color-50);
     flex: 1;
-    min-height: 0;
+    min-height: 0
 }
 
 .content-desc div {
@@ -342,7 +342,7 @@
     height: 50px;
     width: 50px;
     border-radius: var(--large);
-    object-fit: cover;
+    object-fit: cover
 }
 
 .content-player a {

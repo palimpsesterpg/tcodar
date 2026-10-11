@@ -447,9 +447,11 @@ body {
 
 .page-items .item-content {
     padding: var(--2xlarge);
+    gap: var(--large);
     background-color: var(--light);
     display: flex;
     flex-direction: column;
+    align-items: center;
     box-sizing: border-box
 }
 
@@ -489,4 +491,11 @@ body {
     font-weight: 900;
     padding: 0 var(--large);
     border-radius: var(--small);
+}
+
+.tabsystem-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
 }

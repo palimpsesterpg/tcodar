@@ -306,9 +306,10 @@
     padding: var(--large);
     gap: var(--large);
     width: auto;
-    height: calc(100vh - var(--4xlarge));
+    height: calc(100vh - var(--2xlarge));
+    border-radius: var(--large);
     box-sizing: border-box;
-    margin: var(--2xlarge);
+    margin: var(--large);
     background-color: var(--darklight);
     border-left: 0.5px solid var(--co2);
     border-right: 0.5px solid var(--co3);

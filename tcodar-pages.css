@@ -48,7 +48,6 @@
     grid-auto-rows: max-content;
     align-content: start;
     gap: var(--large);
-    margin-top: var(--large);
     flex: 1;
     min-height: 0;
     overflow: auto
@@ -286,6 +285,7 @@
 
 .page-body {
     padding: var(--large);
+    gap: var(--large);
     width: auto;
     height: calc(100vh - var(--4xlarge));
     box-sizing: border-box;

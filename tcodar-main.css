@@ -555,3 +555,7 @@ body {
 .tabsystem .tab-content.active {
     display: block;
 }
+
+.page-items .item.search-hidden {
+    display: none !important;
+}

@@ -77,7 +77,8 @@
     width: 100%;
     height: 100%;
     padding: var(--large);
-    background-color: var(--group-color-op50, var(--whiteop90));
+    background-color: var(--group-color-op50, var(--whiteop75));
+    border-radius: var(--xsmall);
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
@@ -369,8 +370,5 @@ fam {
 }
 
 #masterlist .item {
-    padding: var(--xsmall);
-    border-radius: 0.25rem var(--xsmall);
     border: 0.5px solid var(--group-color);
-    background-color: var(--group-color-50)
 }

@@ -433,25 +433,27 @@ body {
 
 .page-items .item-body {
     padding: var(--2xlarge);
-    border: 0.5px solid var(--neutral);
-    background-color: var(--whiteop75);
+    background-color: var(--whiteop50);
     position: fixed;
-    height: calc(100% - var(--2xlarge));
-    width: calc(100% - var(--2xlarge));
-    top: var(--large);
-    left: var(--large);
+    height: calc(100% - var(--4xlarge));
+    width: calc(100% - var(--4xlarge));
+    top: var(--2xlarge);
+    left: var(--2xlarge);
     box-sizing: border-box;
     display: none;
-    z-index: 99;
+    z-index: 99
 }
 
 .page-items .item-content {
     padding: var(--2xlarge);
     gap: var(--large);
+    border: 0.5px solid var(--neutral);
     background-color: var(--light);
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box
 }
 

@@ -61,7 +61,7 @@
     grid-template-columns: repeat(5, 1fr)
 }
 
-.page-items .item {
+.item {
     width: 100%;
     border-radius: var(--xsmall);
     box-sizing: border-box;
@@ -73,7 +73,7 @@
     position: relative
 }
 
-.item-title {
+.item-title.name {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -101,7 +101,7 @@
     color: var(--group-color) !important
 }
 
-.item:hover .item>.item-title {
+.item:hover .item>.name {
     display: flex
 }
 

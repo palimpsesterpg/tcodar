@@ -74,7 +74,7 @@
 }
 
 #masterlist .item>h3 {
-    color: var(--group-color)
+    color: var(--group-color) !important
 }
 
 .page-items .item:hover>h3 {
@@ -117,7 +117,7 @@
 }
 
 #masterlist .item-content h3 {
-    color: var(--group-color)
+    color: var(--group-color) !important
 }
 
 .page-items .item>img {
@@ -182,7 +182,7 @@
 }
 
 .content-head span {
-    background-color: var(--group-color var(--co3));
+    background-color: var(--group-color, var(--co3));
     color: var(--white);
     text-transform: lowercase;
     font-weight: 900;

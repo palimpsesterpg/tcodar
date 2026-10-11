@@ -214,37 +214,37 @@ low,
 h1,
 .h1 {
     font-size: var(--3xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h2,
 .h2 {
     font-size: var(--2xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h3,
 .h3 {
     font-size: var(--xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h4,
 .h4 {
     font-size: var(--large) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h5,
 .h5 {
     font-size: var(--medium) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h6,
 .h6 {
     font-size: var(--small) !important;
-    margin: var(--large) 0 !important;
+    margin: 0 !important;
 }
 
 h1,
@@ -366,7 +366,8 @@ body {
 
 .filter {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .filter div {
@@ -375,7 +376,7 @@ body {
     background-color: var(--co1-50);
     color: var(--co1);
     border: 0.5px solid var(--co1);
-    padding: var(--2xsmall) var(--small);
+    padding: var(--2xsmall);
     margin: var(--2xsmall);
     text-align: center;
     border-radius: var(--small)

@@ -379,8 +379,23 @@ body {
     gap: var(--large);
 }
 
-.item {
+.page-items .item {
     width: 100%;
     background-color: var(--white);
-    border: var(--neutral)
+    border: var(--neutral);
+    padding: var(--large);
+    box-sizing: border-box;
+    height: 150px;
+    transition-duration: 1s
+}
+
+.page-items .item img {
+    width: 100%;
+    height: 150px;
+    filter: grayscale(1)
+}
+
+.page-items .item:hover {
+    height: 300px;
+    transition-duration: 1s
 }

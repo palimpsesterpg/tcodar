@@ -101,7 +101,7 @@
     color: var(--group-color) !important
 }
 
-.item>img:hover .item-title {
+.item:hover .item>.item-title {
     display: flex
 }
 

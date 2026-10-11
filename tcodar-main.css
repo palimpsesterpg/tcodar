@@ -358,15 +358,13 @@ body {
 }
 
 .page-filters {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--large);
 }
 
 .filter {
     display: grid;
-    flex: 1;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 

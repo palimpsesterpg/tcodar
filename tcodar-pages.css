@@ -268,7 +268,13 @@
 
 .content-desc {
     padding: var(--large);
-    background-color: var(--white)
+    background-color: var(--white);
+    border: 0.5px solid var(--group-color-50)
+}
+
+.content-links a {
+    font-family: var(--serif);
+    color: var(--group-color)
 }
 
 fam {

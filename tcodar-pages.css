@@ -310,11 +310,10 @@
     height: calc(100vh - var(--2xlarge));
     border-radius: var(--xsmall);
     box-sizing: border-box;
-    margin: var(--large);
+    margin: var(--xlarge);
     background-color: var(--light);
     border: 0.5px solid var(--neutral);
     outline: 0.25rem solid var(--white);
-    margin: 0.25rem;
     display: flex;
     flex-direction: column
 }

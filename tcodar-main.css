@@ -367,6 +367,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: var(--2xsmall);
+    align-content: start;
+    align-items: start
 }
 
 .filter div {
@@ -421,7 +423,7 @@ body {
     display: none
 }
 
-.page-items .item:hover h3 {
+.page-items .item:hover>h3 {
     display: flex
 }
 

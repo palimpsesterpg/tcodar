@@ -73,6 +73,10 @@
     box-sizing: border-box
 }
 
+#masterlist .item>h3 {
+    color: var(--group-color)
+}
+
 .page-items .item:hover>h3 {
     display: flex
 }
@@ -110,6 +114,10 @@
 .item-content h3 {
     font-size: var(--3xlarge) !important;
     text-transform: uppercase
+}
+
+#masterlist .item-content h3 {
+    color: var(--group-color)
 }
 
 .page-items .item>img {
@@ -174,7 +182,7 @@
 }
 
 .content-head span {
-    background-color: var(--co3);
+    background-color: var(--group-color var(--co3));
     color: var(--white);
     text-transform: lowercase;
     font-weight: 900;
@@ -194,7 +202,7 @@
     color: var(--white);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: var(--2xsmall);
+    padding: 0.25rem var(--xsmall);
     border-radius: var(--large)
 }
 
@@ -258,11 +266,11 @@
 }
 
 fam {
-    background-color: var(--co2);
+    background-color: var(--group-color);
     color: var(--white);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: var(--2xsmall) var(--small);
+    padding: 0.25rem var(--xsmall);
     border-radius: var(--large)
 }
 

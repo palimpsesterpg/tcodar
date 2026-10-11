@@ -185,25 +185,24 @@
     filter: grayscale(1)
 }
 
-.fewres .item-content:after {
-    content: '! peu de ressources';
+.fewres .item-content:after,
+.nores .item-content:after {
     text-transform: uppercase;
     font-weight: 300;
     top: var(--4xlarge);
     right: var(--4xlarge);
-    color: orange;
     position: absolute;
     font-family: var(--mono)
 }
 
+.fewres .item-content:after {
+    content: '! peu de ressources';
+    color: orange;
+}
+
 .nores .item-content:after {
     content: '! aucune ressource';
-    text-transform: uppercase;
-    font-family: var(--mono) font-weight: 300;
-    top: var(--4xlarge);
-    right: var(--4xlarge);
     color: red;
-    position: absolute;
 }
 
 .played.item:before,
@@ -213,7 +212,7 @@
     width: 5px;
     position: absolute;
     top: var(--xsmall);
-    left: var(--xsmall);
+    right: var(--xsmall);
     z-index: 99;
     border-radius: 100%
 }
@@ -230,7 +229,7 @@
 .free .item-content:before {
     position: absolute;
     top: var(--4xlarge);
-    left: var(--4xlarge);
+    right: var(--4xlarge);
     text-transform: uppercase;
     font-family: var(--mono);
     z-index: 99;

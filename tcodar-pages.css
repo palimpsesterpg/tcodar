@@ -208,11 +208,12 @@
 .played.item:before,
 .free.item:before {
     content: '';
-    height: 5px;
-    width: 5px;
+    height: 4.5px;
+    width: 4.5px;
     position: absolute;
     top: var(--xsmall);
     right: var(--xsmall);
+    border: 0.5px solid var(--white);
     z-index: 99;
     border-radius: 100%
 }

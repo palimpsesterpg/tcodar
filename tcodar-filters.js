@@ -66,7 +66,7 @@ document.querySelectorAll('.page-items .item').forEach(item => {
   const content = item.querySelector('.item-content');
   if (!content) return;
 
-  const clones = [...item.querySelectorAll(':scope > img, :scope > h3')]
+  const clones = [...item.querySelectorAll(':scope > img, :scope > .item-title')]
     .map(el => el.cloneNode(true));
 
   content.prepend(...clones);
@@ -82,7 +82,7 @@ function searchItems() {
   const query = normalize(searchInput.value.trim());
 
   document.querySelectorAll('.page-items .item').forEach(item => {
-    const name = normalize(item.querySelector(':scope > h3')?.textContent || '');
+    const name = normalize(item.querySelector(':scope > .item-title') ? .textContent || '');
     item.classList.toggle('search-hidden', !name.includes(query));
   });
 }

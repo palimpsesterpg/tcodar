@@ -70,13 +70,13 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     gap: var(--large);
+    text-transform: capitalize;
+    font-size: var(--2xlarge);
     position: relative
 }
 
 .item-title {
     font-family: var(--spe);
-    font-size: var(--2xlarge);
-    text-transform: capitalize;
 }
 
 .name {

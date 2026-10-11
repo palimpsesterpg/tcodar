@@ -244,7 +244,7 @@
 
 .content-origines {
     font-family: var(--var);
-    font-size: var(--large);
+    font-size: var(--xlarge);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px
@@ -262,7 +262,7 @@
     color: var(--white);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: 0.var(--xsmall) var(--large);
+    padding: var(--xsmall) var(--large);
     border-radius: var(--large)
 }
 

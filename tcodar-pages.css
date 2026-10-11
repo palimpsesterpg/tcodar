@@ -101,11 +101,11 @@
     color: var(--group-color) !important
 }
 
-.page-items .item:hover .item-title {
+.item>img:hover .item-title {
     display: flex
 }
 
-.page-items .item.open .item-body {
+.item.open .item-body {
     display: block
 }
 

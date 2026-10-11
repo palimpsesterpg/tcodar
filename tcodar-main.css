@@ -1,3 +1,190 @@
+:root {
+    --2xsmall: 0.313rem;
+    --xsmall: 0.5rem;
+    --small: 0.625rem;
+    --medium: 0.8125rem;
+    --large: 1rem;
+    --xlarge: 1.5rem;
+    --2xlarge: 2rem;
+    --3xlarge: 3rem;
+    --4xlarge: 4rem;
+    --5xlarge: 5rem;
+    --6xlarge: 6rem;
+
+    --main: "Open Sans";
+    --mono: "Inconsolata";
+    --serif: "Editorial";
+    --var: "Bebas";
+    --spe: "Acma";
+
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+
+    --co1-50: #dedfea;
+    --co1-100: #bdbfd5;
+    --co1-200: #9ba0bf;
+    --co1-300: #7a80aa;
+    --co1-400: #5d6391;
+    --co1: #474c6f;
+    --co1op50: rgb(71 76 111 / 50%);
+    --co1-600: #3c405d;
+    --co1-700: #30334b;
+    --co1-800: #242638;
+    --co1-900: #181925;
+    --co1-950: #0c0d13;
+
+    --co2-50: #fbd1d4;
+    --co2-100: #f6a3a9;
+    --co2-200: #f2757e;
+    --co2-300: #ee4753;
+    --co2-400: #ea1a27;
+    --co2: #c1121f;
+    --co2op50: rgb(193 18 31 / 50%);
+    --co2-600: #9f0f18;
+    --co2-700: #800c14;
+    --co2-800: #60090f;
+    --co2-900: #40060a;
+    --co2-950: #200305;
+
+    --co3-50: #e6eef4;
+    --co3-100: #ccdee9;
+    --co3-200: #b3cdde;
+    --co3-300: #99bdd2;
+    --co3-400: #80acc7;
+    --co3: #669bbc;
+    --co3op50: rgb(102 155 188 / 50%);
+    --co3-600: #4a84a8;
+    --co3-700: #3b6a87;
+    --co3-800: #2c4f65;
+    --co3-900: #1e3543;
+    --co3-950: #0f1a22;
+
+    --whiteop50: rgb(255 255 255 / 50%);
+    --whiteop75: rgb(255 255 255 / 75%);
+    --blackop50: rgb(0 0 0 / 50%);
+    --blackop75: rgb(0 0 0 / 75%);
+
+    --white: #fff;
+    --black: #000;
+    --light: #fafafa;
+    --darklight: #f2f2f2;
+    --darkerlight: #ebebeb;
+    --neutral: #e6e6e6;
+    --darkneutral: #b8b8b8;
+    --darkerneutral: #737373;
+    --dark: #191919;
+    --lightdark: #333;
+    --lighterdark: #4c4c4c;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+    --gradient12: linear-gradient(to right, var(--co1), var(--co2));
+    --gradient13: linear-gradient(to right, var(--co1), var(--co3));
+    --gradient23: linear-gradient(to right, var(--co2), var(--co3));
+    --gradientAll: linear-gradient(to right,
+            var(--co3),
+            var(--co1),
+            var(--co2),
+            var(--co1),
+            var(--co2),
+            var(--co1),
+            var(--co3));
+    --gradient12-50: linear-gradient(to right, var(--co1-50), var(--co2-50));
+    --gradient13-50: linear-gradient(to right, var(--co1-50), var(--co3-50));
+    --gradient23-50: linear-gradient(to right, var(--co2-50), var(--co3-50));
+    --gradientAll-50: linear-gradient(to right,
+            var(--co1-50),
+            var(--co2-50),
+            var(--co3-50));
+    color-scheme: light;
+}
+
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+
+    --white: #191919;
+    --black: #fafafa;
+
+    --blackop50: rgb(255 255 255 / 50%);
+    --blackop75: rgb(255 255 255 / 75%);
+    --whiteop50: rgb(0 0 0 / 50%);
+    --whiteop75: rgb(0 0 0 / 75%);
+
+    --light: #292929;
+    --darklight: #1c1c1c;
+    --darkerlight: #242424;
+
+    --neutral: #2b2b2b;
+    --darkneutral: #4d4d4d;
+    --darkerneutral: #8c8c8c;
+
+    --dark: #e6e6e6;
+    --lightdark: #cccccc;
+    --lighterdark: #b3b3b3;
+
+    --co1-950: #dedfea;
+    --co1-900: #bdbfd5;
+    --co1-800: #9ba0bf;
+    --co1-700: #7a80aa;
+    --co1-600: #5d6391;
+    --co1: #474c6f;
+    --co1-400: #3c405d;
+    --co1-300: #30334b;
+    --co1-200: #242638;
+    --co1-100: #181925;
+    --co1-50: #0c0d13;
+
+    --co2-950: #fbd1d4;
+    --co2-900: #f6a3a9;
+    --co2-800: #f2757e;
+    --co2-700: #ee4753;
+    --co2-600: #ea1a27;
+    --co2: #c1121f;
+    --co2-400: #9f0f18;
+    --co2-300: #800c14;
+    --co2-200: #60090f;
+    --co2-100: #40060a;
+    --co2-50: #200305;
+
+    --co3-950: #e6eef4;
+    --co3-900: #ccdee9;
+    --co3-800: #b3cdde;
+    --co3-700: #99bdd2;
+    --co3-600: #80acc7;
+    --co3: #669bbc;
+    --co3-400: #4a84a8;
+    --co3-300: #3b6a87;
+    --co3-200: #2c4f65;
+    --co3-100: #1e3543;
+    --co3-50: #0f1a22;
+}
+
+.group-3 {
+    --group-color-100: #f6a3a9;
+    --group-color-200: #f2757e;
+    --group-color-300: #ee4753;
+    --group-color-400: #ea1a27;
+    --group-color: #c1121f;
+    --group-color-600: #9f0f18;
+    --group-color-700: #800c14;
+    --group-color-800: #60090f;
+    --group-color-900: #40060a;
+    --group-color-950: #200305;
+}
+
+.group-2 {
+    --group-color-50: #e6eef4;
+    --group-color-100: #ccdee9;
+    --group-color-200: #b3cdde;
+    --group-color-300: #99bdd2;
+    --group-color-400: #80acc7;
+    --group-color: #669bbc;
+    --group-color-600: #4a84a8;
+    --group-color-700: #3b6a87;
+    --group-color-800: #2c4f65;
+    --group-color-900: #1e3543;
+    --group-color-950: #0f1a22;
+}
+
 body {
     background-image: url("Images/tcodar-body.png");
 }

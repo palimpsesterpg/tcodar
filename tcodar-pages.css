@@ -104,6 +104,10 @@
 }
 
 #masterlist .item-title {
+    color: var(--co1) !important
+}
+
+#masterlist .item-title {
     color: var(--group-color) !important
 }
 

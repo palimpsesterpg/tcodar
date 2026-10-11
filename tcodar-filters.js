@@ -67,7 +67,11 @@ document.querySelectorAll('.page-items .item').forEach(item => {
   if (!content) return;
 
   const clones = [...item.querySelectorAll(':scope > img, :scope > .item-title')]
-    .map(el => el.cloneNode(true));
+    .map(el => {
+      const clone = el.cloneNode(true);
+      clone.classList.remove('name');
+      return clone;
+    });
 
   content.prepend(...clones);
 });
@@ -82,7 +86,7 @@ function searchItems() {
   const query = normalize(searchInput.value.trim());
 
   document.querySelectorAll('.page-items .item').forEach(item => {
-    const name = normalize(item.querySelector(':scope > .item-title') ?.textContent || '');
+    const name = normalize(item.querySelector(':scope > .item-title') ? .textContent || '');
     item.classList.toggle('search-hidden', !name.includes(query));
   });
 }

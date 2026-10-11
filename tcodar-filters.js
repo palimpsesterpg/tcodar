@@ -26,3 +26,14 @@ groups.forEach(group => {
 });
 
 updateItems();
+
+document.querySelectorAll('.page-items .item').forEach(item => {
+  item.addEventListener('click', () => item.classList.toggle('open'));
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.page-items .item.open')
+      .forEach(item => item.classList.remove('open'));
+  }
+});

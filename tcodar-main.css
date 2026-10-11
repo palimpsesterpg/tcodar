@@ -378,7 +378,7 @@ body {
     gap: var(--large);
 }
 
-.items {
+.item {
     width: 100%;
     background-color: var(--white);
     border: var(--neutral)

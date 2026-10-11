@@ -355,3 +355,30 @@ body {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
 }
+
+.page-filters {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--large);
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase
+}
+
+.page-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: var(--large);
+}
+
+.items {
+    width: 100%;
+    background-color: var(--white);
+    border: var(--neutral)
+}

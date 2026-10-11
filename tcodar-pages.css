@@ -267,7 +267,8 @@ fam {
 }
 
 #masterlist .item {
-    padding: var(--large);
+    padding: var(--xsmall);
+    border-radius: 0.25rem var(--xsmall);
     border: 0.5px solid var(--group-color);
     background-color: var(--group-color-50)
 }

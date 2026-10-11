@@ -259,7 +259,8 @@
 }
 
 .content-fam,
-.content-links {
+.content-links,
+.content-player {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,6 +275,23 @@
 
 .content-links a {
     font-family: var(--serif);
+    text-transform: uppercase;
+    color: var(--group-color)
+}
+
+.content-player div {
+    font-family: var(--spe);
+    color: var(--group-color)
+}
+
+.content-player img {
+    height: 100px;
+    width: 100px;
+}
+
+.content-player a {
+    font-family: var(--serif);
+    text-transform: lowercase;
     color: var(--group-color)
 }
 

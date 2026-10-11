@@ -475,8 +475,31 @@ body {
     filter: grayscale(1)
 }
 
-.page-items .item-body .nores:before {
+.nores .item-content:after {
     content: 'faibles ressources';
+    top: var(--4xlarge);
+    right: var(--4xlarge);
+    color: red;
+    font-family: var(--mono)
+}
+
+.played .item-content:before,
+.free .item-content:before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: var(--4xlarge);
+    left: var(--4xlarge);
+    border-radius: 100%
+}
+
+.free .item-content:before {
+    background-color: green;
+}
+
+.played .item-content:before {
+    background-color: red;
 }
 
 .content-head {

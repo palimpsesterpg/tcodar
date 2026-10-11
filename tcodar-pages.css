@@ -250,6 +250,10 @@
     padding-left: 1px
 }
 
+.tabsystem {
+    width: 75%
+}
+
 .tabsystem-tabs {
     display: flex;
     align-items: center;
@@ -272,8 +276,14 @@
     color: var(--white);
 }
 
+.tabsystem .tab-contents {
+    margin-top: var(--large)
+}
+
 .tabsystem .tab-content {
-    display: none
+    display: none;
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .tabsystem .tab-content.active {

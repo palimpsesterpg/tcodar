@@ -22,11 +22,10 @@ const GENDERS = {
 };
 
 const JOBS = {
-  actor: { masculine: 'acteur', feminine: 'actrice' },
-  singer: { masculine: 'chanteur', feminine: 'chanteuse' },
-  director: { masculine: 'réalisateur', feminine: 'réalisatrice' },
-  author: { masculine: 'auteur', feminine: 'autrice' },
-  model: { masculine: 'mannequin', feminine: 'mannequin' }
+  acting: { masculine: 'acteur', feminine: 'actrice' },
+  music: { masculine: 'chanteur', feminine: 'chanteuse' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse' },
+  modeling: { masculine: 'mannequin', feminine: 'mannequin' }
 };
 
 function buildContentHead(item) {

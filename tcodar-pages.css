@@ -341,7 +341,7 @@
 .content-player img {
     height: 50px;
     width: 50px;
-    border-radius: var(--large);
+    border-radius: var(--xsmall);
     object-fit: cover
 }
 

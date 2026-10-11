@@ -310,8 +310,7 @@
     box-sizing: border-box;
     margin: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--neutral);
-    outline: 0.25rem solid var(--white);
+    border: 0.5px solid var(--darkneutral);
     display: flex;
     flex-direction: column
 }

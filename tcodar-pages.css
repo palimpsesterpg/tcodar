@@ -282,7 +282,9 @@
 
 .content-player div {
     font-family: var(--spe);
-    color: var(--group-color)
+    color: var(--group-color);
+    font-size: var(--2xlarge);
+    font-weight: 300
 }
 
 .content-player img {
@@ -291,8 +293,9 @@
 }
 
 .content-player a {
-    text-transform: lowercase;
     font-weight: 900;
+    font-family: var(--var);
+    text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px;
     color: var(--group-color)

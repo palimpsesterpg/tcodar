@@ -71,6 +71,7 @@
     width: 100%;
     height: 100%;
     padding: var(--large);
+    font-size: var(--large) !important;
     background-color: var(--whiteop75);
     align-items: center;
     justify-content: center;
@@ -208,7 +209,7 @@
 }
 
 .content-origines:before {
-    content: "content:";
+    content: "origines:";
     padding-right: var(--large);
     color: var(--co1)
 }

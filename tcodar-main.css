@@ -389,7 +389,7 @@ body {
     height: 150px;
     overflow: hidden;
     gap: var(--large);
-    transition-duration: 1s
+    transition-duration: 2s
 }
 
 .page-items .item-content {
@@ -407,6 +407,6 @@ body {
 }
 
 .page-items .item:hover {
-    height: 300px;
-    transition-duration: 1s
+    height: 100%;
+    transition-duration: 2s
 }

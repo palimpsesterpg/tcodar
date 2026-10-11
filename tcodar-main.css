@@ -419,12 +419,16 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--whiteop50);
+    padding: var(--large);
+    background-color: var(--whiteop75);
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px var(--white);
     text-transform: capitalize;
-    display: none
+    display: flex;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
 .page-items .item:hover>h3 {
@@ -451,7 +455,7 @@ body {
 .page-items .item-content {
     padding: var(--2xlarge);
     gap: var(--large);
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--group-color, var(neutral));
     background-color: var(--light);
     display: flex;
     flex-direction: column;

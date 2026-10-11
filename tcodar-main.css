@@ -314,6 +314,10 @@ body {
     background-image: var(--forum-bg, url("Images/tcodar-world.jpg"));
 }
 
+#c13 .forumlist:before {
+    background-image: var(--forum-bg, url("Images/tcodar-sydney.jpg"));
+}
+
 #c3 .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-london.jpg"));
 }

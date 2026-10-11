@@ -108,7 +108,8 @@
 }
 
 .item-content h3 {
-    font-size: var(--4xlarge)
+    font-size: var(--3xlarge) !important;
+    text-transform: uppercase;
 }
 
 .page-items .item>img {
@@ -249,12 +250,19 @@
     border-bottom: 0.5px solid;
 }
 
+.content-fam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+}
+
 fam {
     background-color: var(--co2);
     color: var(--white);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: var(--2xsmall);
+    padding: var(--2xsmall) var(--small);
     border-radius: var(--large)
 }
 

@@ -118,6 +118,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    justify-content: center;
     box-sizing: border-box
 }
 
@@ -138,9 +139,17 @@
     filter: grayscale(1)
 }
 
-.item-content img {
+#masterlist .item-content>img {
     width: 150px;
     height: 150px;
+}
+
+#directory .item-content>img {
+    width: 250px;
+    height: 250px;
+}
+
+.item-content>img {
     object-position: center center;
     border-radius: 100%;
     object-fit: cover;
@@ -325,6 +334,8 @@
 .content-player img {
     height: 50px;
     width: 50px;
+    border-radius: var(--large);
+    object-fit: cover;
 }
 
 .content-player a {

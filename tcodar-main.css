@@ -375,12 +375,18 @@ body {
     background-color: var(--co1-50);
     color: var(--co1);
     border: 0.5px solid var(--co1);
+    padding: var(--2xsmall) var(--small);
+    border-radius: var(--small)
 }
 
 .filter .active {
     font-weight: 700;
     background-color: var(--co1);
     color: var(--white)
+}
+
+.filter h3 {
+    grid-area: 1 / 6 / 2 / 2;
 }
 
 .page-items {

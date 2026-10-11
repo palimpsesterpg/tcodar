@@ -129,8 +129,8 @@
 }
 
 .item-content img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-position: center center;
     border-radius: 100%;
     object-fit: cover;
@@ -275,6 +275,7 @@
 
 .content-links a {
     font-family: var(--serif);
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--group-color)
 }
@@ -285,13 +286,15 @@
 }
 
 .content-player img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .content-player a {
-    font-family: var(--serif);
     text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-left: 1px;
     color: var(--group-color)
 }
 

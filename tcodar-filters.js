@@ -12,6 +12,43 @@ const getTitle = item =>
 
 const filterClass = el => [...el.classList].find(c => c !== 'active');
 
+const GENDERS = {
+  cismale: { label: 'homme cis', feminine: false },
+  cisfemale: { label: 'femme cis', feminine: true },
+  transmale: { label: 'homme trans', feminine: false },
+  transfemale: { label: 'femme trans', feminine: true },
+  nonbinary: { label: 'personne non-binaire', feminine: false }
+};
+
+const JOBS = {
+  acting: { masculine: 'acteur', feminine: 'actrice' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse' },
+  director: { masculine: 'réalisateur', feminine: 'réalisatrice' },
+  model: { masculine: 'mannequin', feminine: 'mannequin' }
+};
+
+function buildContentHead(item) {
+  const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
+  const gender = genderClass ? GENDERS[genderClass] : null;
+  const jobClass = Object.keys(JOBS).find(c => item.classList.contains(c));
+  const job = jobClass
+    ? JOBS[jobClass][gender?.feminine ? 'feminine' : 'masculine']
+    : null;
+
+  const head = document.createElement('div');
+  head.className = 'content-head';
+
+  [gender?.label, item.dataset.year, job]
+    .filter(Boolean)
+    .forEach(text => {
+      const span = document.createElement('span');
+      span.textContent = text;
+      head.appendChild(span);
+    });
+
+  return head;
+}
+
 function addDecadeClasses() {
   items.forEach(item => {
     const year = parseInt(item.dataset.year, 10);
@@ -34,7 +71,7 @@ function cloneContent() {
         return clone;
       });
 
-    content.prepend(...clones);
+    content.prepend(...clones, buildContentHead(item));
   });
 }
 

@@ -258,16 +258,23 @@
     border-bottom: 0.5px solid
 }
 
-.content-fam {
+.content-fam,
+.content-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large)
 }
 
+.content-desc {
+    padding: var(--large);
+    background-color: var(--white)
+}
+
 fam {
-    background-color: var(--group-color);
-    color: var(--white);
+    background-color: var(--group-color-50);
+    border: 0.5px solid var(--group-color);
+    color: var(--group-color);
     font-family: var(--mono);
     text-transform: lowercase;
     padding: 0.25rem var(--xsmall);

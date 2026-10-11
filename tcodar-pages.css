@@ -70,7 +70,6 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     gap: var(--large);
-    text-transform: capitalize;
     position: relative
 }
 
@@ -92,6 +91,7 @@
     top: 0;
     left: 0;
     text-align: center;
+    text-transform: capitalize;
     box-sizing: border-box
 }
 

@@ -467,7 +467,7 @@ body {
 
 .page-items .item>img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-position: center center;
     object-fit: cover;
     filter: grayscale(1)
@@ -561,4 +561,30 @@ body {
 
 .page-items .item.search-hidden {
     display: none !important;
+}
+
+.page-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--co1);
+}
+
+.page-search input {
+    background-color: var(--co1-50);
+    border: 0px;
+    color: var(--co1);
+    font-family: var(--mono);
+    padding: var(--2xsmall) var(--xsmall)
+}
+
+.page-search button {
+    background-color: var(--co1);
+    color: var(--white);
+    border: 0px;
+    font-family: var(--mono);
+    padding: var(--2xsmall) var(--xsmall)
 }

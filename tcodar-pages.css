@@ -189,8 +189,8 @@
 .nores .item-content:after {
     text-transform: uppercase;
     font-weight: 300;
-    top: var(--4xlarge);
-    right: var(--4xlarge);
+    top: var(--3xlarge);
+    left: var(--3xlarge);
     position: absolute;
     font-family: var(--mono)
 }
@@ -229,8 +229,8 @@
 .played .item-content:before,
 .free .item-content:before {
     position: absolute;
-    top: var(--4xlarge);
-    right: var(--4xlarge);
+    top: var(--3xlarge);
+    right: var(--3xlarge);
     text-transform: uppercase;
     font-family: var(--mono);
     z-index: 99;

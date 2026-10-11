@@ -28,7 +28,7 @@ groups.forEach(group => {
 updateItems();
 
 document.addEventListener('click', e => {
-  if (e.target.closest('.item-content')) return;
+  if (e.target.closest('.item-body')) return;
 
   document.querySelectorAll('.page-items .item.open')
     .forEach(item => item.classList.remove('open'));
@@ -60,4 +60,14 @@ document.querySelectorAll('.tabsystem').forEach(system => {
       });
     });
   });
+});
+
+document.querySelectorAll('.page-items .item').forEach(item => {
+  const content = item.querySelector('.item-content');
+  if (!content) return;
+
+  const clones = [...item.querySelectorAll(':scope > img, :scope > h3')]
+    .map(el => el.cloneNode(true));
+
+  content.prepend(...clones);
 });

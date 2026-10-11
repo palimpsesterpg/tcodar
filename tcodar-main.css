@@ -475,11 +475,21 @@ body {
     filter: grayscale(1)
 }
 
+.fewres .item-content:after {
+    content: '! peu de ressources';
+    top: var(--4xlarge);
+    right: var(--4xlarge);
+    color: orange;
+    position: absolute;
+    font-family: var(--mono)
+}
+
 .nores .item-content:after {
-    content: 'faibles ressources';
+    content: '! aucune ressource';
     top: var(--4xlarge);
     right: var(--4xlarge);
     color: red;
+    position: absolute;
     font-family: var(--mono)
 }
 

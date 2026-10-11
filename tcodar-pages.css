@@ -303,8 +303,9 @@
 
 .content-desc div {
     overflow: auto;
-    height: calc(100% - var(--large));
-    width: calc(100% - var(--large));
+    height: 100%;
+    width: 100%;
+    text-align: justify
 }
 
 .content-links a {

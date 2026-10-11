@@ -129,7 +129,7 @@
     left: var(--2xlarge);
     box-sizing: border-box;
     display: none;
-    z-index: 99
+    z-index: 999
 }
 
 .item-content {
@@ -218,9 +218,12 @@
     border-radius: 100%
 }
 
-.free.item:before,
-.free .item-content:before {
+.free.item:before {
     background-color: green
+}
+
+.free .item-content:before {
+    color: green
 }
 
 .played .item-content:before,
@@ -231,7 +234,6 @@
     text-transform: uppercase;
     font-family: var(--mono);
     z-index: 99;
-    border-radius: 100%
 }
 
 .played .item-content:before {
@@ -242,7 +244,10 @@
     content: 'libre'
 }
 
-.played.item:before,
+.played.item:before {
+    background-color: red
+}
+
 .played .item-content:before {
     background-color: red
 }

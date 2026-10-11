@@ -454,7 +454,7 @@ body {
     box-sizing: border-box
 }
 
-.page-content h3 {
+.item-content h3 {
     font-size: var(--4xlarge)
 }
 
@@ -465,7 +465,7 @@ body {
     filter: grayscale(1)
 }
 
-.page-content img {
+.item-content img {
     width: 200px;
     height: 200px;
     object-fit: cover;

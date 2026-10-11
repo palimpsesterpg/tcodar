@@ -77,8 +77,8 @@
     width: 100%;
     height: 100%;
     padding: var(--large);
-    font-size: var(--large) !important;
-    background-color: var(--whiteop75);
+    background-color: var(--group-color-op50, var(--whiteop90));
+    backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px var(--white);
@@ -87,6 +87,10 @@
     top: 0;
     left: 0;
     box-sizing: border-box
+}
+
+#directory .item>h3 {
+    font-size: var(--large) !important;
 }
 
 #masterlist .item>h3 {

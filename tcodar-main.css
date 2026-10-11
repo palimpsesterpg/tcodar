@@ -61,8 +61,10 @@
 
     --whiteop50: rgb(255 255 255 / 50%);
     --whiteop75: rgb(255 255 255 / 75%);
+    --whiteop75: rgb(255 255 255 / 90%);
     --blackop50: rgb(0 0 0 / 50%);
     --blackop75: rgb(0 0 0 / 75%);
+    --blackop75: rgb(0 0 0 / 90%);
 
     --white: #fff;
     --black: #000;
@@ -106,8 +108,10 @@
 
     --blackop50: rgb(255 255 255 / 50%);
     --blackop75: rgb(255 255 255 / 75%);
+    --blackop75: rgb(255 255 255 / 90%);
     --whiteop50: rgb(0 0 0 / 50%);
     --whiteop75: rgb(0 0 0 / 75%);
+    --whiteop75: rgb(0 0 0 / 90%);
 
     --light: #292929;
     --darklight: #1c1c1c;
@@ -335,24 +339,29 @@ body {
 .group-4 {
     --group-color-50: #dddddd;
     --group-color: #333333;
+    --group-color-op50: rgb(51, 51, 51 / 50%);
 }
 
 .group-5 {
     --group-color-50: #d5f1e7;
     --group-color: #2c8063;
+    --group-color-op50: rgb(44, 128, 99 / 50%);
 }
 
 .group-6 {
     --group-color-50: #ffcccc;
     --group-color: #cd0000;
+    --group-color-op50: rgb(44, 128, 99 / 50%);
 }
 
 .group-7 {
     --group-color-50: #dde0ee;
     --group-color: #424f8a;
+    --group-color-op50: rgb(44, 128, 99 / 50%);
 }
 
 .group-8 {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
+    --group-color-op50: rgb(229, 151, 0 / 50%);
 }

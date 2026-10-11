@@ -148,7 +148,8 @@
 
 .item-content .item-title {
     font-size: var(--3xlarge) !important;
-    text-transform: uppercase
+    text-transform: uppercase;
+    text-align: center;
 }
 
 #masterlist .item-content .item-title {

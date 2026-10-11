@@ -71,7 +71,6 @@
     overflow: hidden;
     gap: var(--large);
     text-transform: capitalize;
-    font-size: var(--2xlarge);
     position: relative
 }
 
@@ -96,8 +95,12 @@
     box-sizing: border-box
 }
 
-#directory .item-title {
+#directory .name {
     font-size: var(--large) !important;
+}
+
+#masterlist .name {
+    font-size: var(--2xlarge);
 }
 
 #masterlist .item-title {

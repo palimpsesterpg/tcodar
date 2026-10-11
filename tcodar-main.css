@@ -401,6 +401,7 @@ body {
     gap: var(--large);
     margin-top: var(--large);
     height: -webkit-fill-available;
+    grid-template-rows: max-content;
     overflow: auto
 }
 

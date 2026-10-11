@@ -24,7 +24,7 @@ const JOBS = {
   acting: { masculine: 'acteur', feminine: 'actrice' },
   influence: { masculine: 'influenceur', feminine: 'influenceuse' },
   director: { masculine: 'réalisateur', feminine: 'réalisatrice' },
-  model: { masculine: 'mannequin', feminine: 'mannequin' }
+  modeling: { masculine: 'mannequin', feminine: 'mannequin' }
 };
 
 function buildContentHead(item) {

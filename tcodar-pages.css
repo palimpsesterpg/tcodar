@@ -132,7 +132,7 @@
     z-index: 99
 }
 
-.page-items .item-content {
+.item-content {
     padding: var(--2xlarge);
     gap: var(--large);
     border: 0.5px solid var(--group-color, var(--neutral));
@@ -144,6 +144,10 @@
     width: 100%;
     justify-content: center;
     box-sizing: border-box
+}
+
+#directory .item-content {
+    font-size: var(--large)
 }
 
 .item-content .item-title {
@@ -258,7 +262,7 @@
     color: var(--white);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: 0.25rem var(--xsmall);
+    padding: 0.var(--xsmall) var(--large);
     border-radius: var(--large)
 }
 

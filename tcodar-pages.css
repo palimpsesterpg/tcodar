@@ -242,8 +242,8 @@
 }
 
 .content-origines:before {
-    content: "origines:";
-    padding-right: var(--large);
+    content: "d'origine";
+    padding-right: var(--xsmall);
     color: var(--co1)
 }
 

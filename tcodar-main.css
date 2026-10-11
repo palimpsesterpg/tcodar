@@ -279,6 +279,7 @@ body {
     background-attachment: fixed;
     padding: 0 !important;
     background-image: url("Images/tcodar-body.png");
+    margin: 0px !important;
 }
 
 #page-header {

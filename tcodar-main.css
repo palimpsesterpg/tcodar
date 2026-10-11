@@ -425,7 +425,7 @@ body {
     justify-content: center;
     text-shadow: 1px 1px var(--white);
     text-transform: capitalize;
-    display: flex;
+    display: none;
     top: 0;
     left: 0;
     box-sizing: border-box;

@@ -183,6 +183,8 @@
 
 .fewres .item-content:after {
     content: '! peu de ressources';
+    text-transform: uppercase;
+    font-weight: 300;
     top: var(--4xlarge);
     right: var(--4xlarge);
     color: orange;
@@ -192,6 +194,8 @@
 
 .nores .item-content:after {
     content: '! aucune ressource';
+    text-transform: uppercase;
+    font-weight: 300;
     top: var(--4xlarge);
     right: var(--4xlarge);
     color: red;
@@ -240,12 +244,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px
-}
-
-.content-origines:before {
-    content: "d'origine";
-    padding-right: var(--xsmall);
-    color: var(--co1)
 }
 
 .tabsystem-tabs {

@@ -375,10 +375,10 @@ body {
     background-color: var(--co1-50);
     color: var(--co1);
     border: 0.5px solid var(--co1);
-    padding: var(--2xsmall);
+    padding: 0 var(--2xsmall);
     font-size: var(--small);
     text-align: center;
-    border-radius: var(--small)
+    border-radius: var(--large)
 }
 
 .filter .active {

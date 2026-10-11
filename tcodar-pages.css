@@ -258,12 +258,18 @@
 }
 
 .tabsystem .tab {
-    background-color: var(--co2);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--co2);
+    border: 0.5px solid var(--co2);
     font-family: var(--mono);
     text-transform: lowercase;
     padding: var(--xsmall) var(--large);
     border-radius: var(--large)
+}
+
+.tabsystem .tab.active {
+    background-color: var(--co2);
+    color: var(--white);
 }
 
 .tabsystem .tab-content {

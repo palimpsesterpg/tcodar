@@ -474,3 +474,19 @@ body {
 .page-items .item-body .nores:before {
     content: 'faibles ressources';
 }
+
+.content-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+.content-head span {
+    background-color: var(--co3);
+    color: var(--white);
+    text-transform: lowercase;
+    font-weight: 900;
+    padding: 0 var(--large);
+    border-radius: var(--small);
+}

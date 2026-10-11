@@ -364,6 +364,8 @@ body {
 }
 
 .filter {
+    height: 75px;
+    overflow: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: var(--2xsmall);
@@ -397,7 +399,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: var(--large);
-    margin-top: var(--large)
+    margin-top: var(--large);
+    height: -webkit-fill-available;
+    overflow: auto
 }
 
 .page-items .item {

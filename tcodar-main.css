@@ -61,10 +61,10 @@
 
     --whiteop50: rgb(255 255 255 / 50%);
     --whiteop75: rgb(255 255 255 / 75%);
-    --whiteop75: rgb(255 255 255 / 90%);
+    --whiteop90: rgb(255 255 255 / 90%);
     --blackop50: rgb(0 0 0 / 50%);
     --blackop75: rgb(0 0 0 / 75%);
-    --blackop75: rgb(0 0 0 / 90%);
+    --blackop90: rgb(0 0 0 / 90%);
 
     --white: #fff;
     --black: #000;
@@ -108,10 +108,10 @@
 
     --blackop50: rgb(255 255 255 / 50%);
     --blackop75: rgb(255 255 255 / 75%);
-    --blackop75: rgb(255 255 255 / 90%);
+    --blackop90: rgb(255 255 255 / 90%);
     --whiteop50: rgb(0 0 0 / 50%);
     --whiteop75: rgb(0 0 0 / 75%);
-    --whiteop75: rgb(0 0 0 / 90%);
+    --whiteop90: rgb(0 0 0 / 90%);
 
     --light: #292929;
     --darklight: #1c1c1c;

@@ -37,3 +37,21 @@ document.addEventListener('keydown', e => {
       .forEach(item => item.classList.remove('open'));
   }
 });
+
+document.querySelectorAll('.tabsystem').forEach(system => {
+  const tabs = system.querySelectorAll('.tab');
+  const contents = system.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabId = tab.dataset.tab;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      contents.forEach(content => {
+        content.classList.toggle('active', content.dataset.tab === tabId);
+      });
+    });
+  });
+});

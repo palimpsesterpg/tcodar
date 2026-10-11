@@ -418,6 +418,7 @@ body {
     justify-content: center;
     text-shadow: 1px 1px var(--white);
     text-transform: capitalize;
+    display: none
 }
 
 .page-items .item:hover h3 {

@@ -299,6 +299,7 @@
     color: var(--white);
     border: 0px;
     font-family: var(--mono);
+    text-transform: uppercase;
     padding: var(--2xsmall) var(--xsmall)
 }
 
@@ -307,12 +308,13 @@
     gap: var(--large);
     width: auto;
     height: calc(100vh - var(--2xlarge));
-    border-radius: var(--large);
+    border-radius: var(--xsmall);
     box-sizing: border-box;
     margin: var(--large);
     background-color: var(--light);
-    border: 0.25rem solid var(--darklight);
-    outline: 0.5px solid var(--white);
+    border: 0.5px solid var(--neutral);
+    outline: 0.25rem solid var(--white);
+    margin: 0.25rem;
     display: flex;
     flex-direction: column
 }

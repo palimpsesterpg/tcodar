@@ -86,7 +86,7 @@ function searchItems() {
   const query = normalize(searchInput.value.trim());
 
   document.querySelectorAll('.page-items .item').forEach(item => {
-    const name = normalize(item.querySelector(':scope > .item-title') ? .textContent || '');
+    const name = normalize(item.querySelector(':scope > .item-title') ?.textContent || '');
     item.classList.toggle('search-hidden', !name.includes(query));
   });
 }
@@ -98,7 +98,7 @@ const list = document.querySelector('.page-items');
 const cards = [...list.querySelectorAll(':scope > .item')];
 
 const titleOf = item =>
-  item.querySelector(':scope > .item-title') ? .textContent.trim() || '';
+  item.querySelector(':scope > .item-title') ?.textContent.trim() || '';
 
 cards.sort((a, b) =>
   titleOf(a).localeCompare(titleOf(b), 'fr', {

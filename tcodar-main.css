@@ -385,6 +385,7 @@ body {
     background-color: var(--white);
     border: var(--neutral);
     box-sizing: border-box;
+    flex-direction: column;
     height: 150px;
     overflow: hidden;
     gap: var(--large);
@@ -393,7 +394,9 @@ body {
 
 .page-items .item-content {
     padding: var(--large);
-    background-color: var(--light)
+    border: 0.5px solid var(--neutra);
+    background-color: var(--light);
+    margin: var(--large)
 }
 
 .page-items .item img {

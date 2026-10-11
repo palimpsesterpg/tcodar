@@ -3,6 +3,7 @@ const itemsContainer = document.querySelector('.page-items');
 const items = document.querySelectorAll('.page-items .item');
 const searchInput = document.querySelector('#site-search');
 const searchButton = document.querySelector('.page-search button');
+const isDirectory = document.body.id === 'directory';
 
 const normalize = str =>
   str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -21,10 +22,11 @@ const GENDERS = {
 };
 
 const JOBS = {
-  acting: { masculine: 'acteur', feminine: 'actrice' },
-  influence: { masculine: 'influenceur', feminine: 'influenceuse' },
+  actor: { masculine: 'acteur', feminine: 'actrice' },
+  singer: { masculine: 'chanteur', feminine: 'chanteuse' },
   director: { masculine: 'réalisateur', feminine: 'réalisatrice' },
-  modeling: { masculine: 'mannequin', feminine: 'mannequin' }
+  author: { masculine: 'auteur', feminine: 'autrice' },
+  model: { masculine: 'mannequin', feminine: 'mannequin' }
 };
 
 function buildContentHead(item) {
@@ -71,7 +73,7 @@ function cloneContent() {
         return clone;
       });
 
-    content.prepend(...clones, buildContentHead(item));
+    content.prepend(...clones, ...(isDirectory ? [buildContentHead(item)] : []));
   });
 }
 

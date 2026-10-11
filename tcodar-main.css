@@ -375,7 +375,7 @@ body {
 
 .page-items {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: var(--large);
     margin-top: var(--large)
 }
@@ -383,7 +383,7 @@ body {
 .page-items .item {
     width: 100%;
     background-color: var(--white);
-    border: var(--neutral);
+    border: 0.5px solid var(--neutral);
     box-sizing: border-box;
     flex-direction: column;
     height: 150px;
@@ -394,9 +394,9 @@ body {
 
 .page-items .item-content {
     padding: var(--large);
-    border: 0.5px solid var(--neutra);
+    border: 0.5px solid var(--neutral);
     background-color: var(--light);
-    margin: var(--large)
+    margin: 0 var(--large) var(--large)
 }
 
 .page-items .item img {

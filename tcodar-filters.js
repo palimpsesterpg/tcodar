@@ -71,3 +71,21 @@ document.querySelectorAll('.page-items .item').forEach(item => {
 
   content.prepend(...clones);
 });
+
+const searchInput = document.querySelector('#site-search');
+const searchButton = document.querySelector('.page-search button');
+
+const normalize = str =>
+  str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+function searchItems() {
+  const query = normalize(searchInput.value.trim());
+
+  document.querySelectorAll('.page-items .item').forEach(item => {
+    const name = normalize(item.querySelector(':scope > h3')?.textContent || '');
+    item.classList.toggle('search-hidden', !name.includes(query));
+  });
+}
+
+searchInput.addEventListener('input', searchItems);
+searchButton.addEventListener('click', searchItems);

@@ -359,7 +359,7 @@ body {
 
 .page-filters {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--large);
 }
 

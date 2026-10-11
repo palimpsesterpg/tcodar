@@ -369,7 +369,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .page-items {

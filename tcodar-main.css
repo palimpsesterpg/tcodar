@@ -501,3 +501,20 @@ body {
     justify-content: center;
     gap: var(--large);
 }
+
+.tabsystem .tab {
+    background-color: var(--co2);
+    color: var(--white);
+    font-family: var(--mono);
+    text-transform: lowercase;
+    padding: var(--2xsmall);
+    border-radius: var(--large)
+}
+
+.tabsystem .tab-content {
+    display: none;
+}
+
+.tabsystem .tab-content.active {
+    display: block;
+}

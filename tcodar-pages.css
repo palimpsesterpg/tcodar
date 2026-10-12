@@ -121,12 +121,13 @@
 
 .page-items .item-body {
     padding: var(--2xlarge);
-    background-color: var(--whiteop50);
+    background-color: var(--whiteop75);
+    backdrop-filter: blur(2px);
     position: fixed;
-    height: calc(100% - var(--4xlarge));
-    width: calc(100% - var(--4xlarge));
-    top: var(--2xlarge);
-    left: var(--2xlarge);
+    height: calc(100% - var(--2xlarge));
+    width: calc(100% - var(--2xlarge));
+    top: var(--large);
+    left: var(--large);
     box-sizing: border-box;
     display: none;
     z-index: 999

@@ -24,22 +24,24 @@ const GENDERS = {
 const JOBS = {
   acting: { masculine: 'acteur', feminine: 'actrice' },
   music: { masculine: 'chanteur', feminine: 'chanteuse' },
-  influence: { masculine: 'influenceur', feminine: 'influenceuse' },
-  modeling: { masculine: 'mannequin', feminine: 'mannequin' }
+  modeling: { masculine: 'mannequin', feminine: 'mannequin' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse' }
 };
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const jobClass = Object.keys(JOBS).find(c => item.classList.contains(c));
-  const job = jobClass
-    ? JOBS[jobClass][gender?.feminine ? 'feminine' : 'masculine']
-    : null;
+  const form = gender?.feminine ? 'feminine' : 'masculine';
+
+  // Tous les métiers présents, dans l'ordre des classes de l'item
+  const jobs = [...item.classList]
+    .filter(c => c in JOBS)
+    .map(c => JOBS[c][form]);
 
   const head = document.createElement('div');
   head.className = 'content-head';
 
-  [gender?.label, item.dataset.year, job]
+  [gender?.label, item.dataset.year, ...jobs]
     .filter(Boolean)
     .forEach(text => {
       const span = document.createElement('span');

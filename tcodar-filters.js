@@ -18,22 +18,21 @@ const GENDERS = {
   cisfemale: { label: 'femme cis', feminine: true },
   transmale: { label: 'homme trans', feminine: false },
   transfemale: { label: 'femme trans', feminine: true },
-  nonbinary: { label: 'personne non-binaire', feminine: false }
+  nonbinary: { label: 'personne non-binaire', nby: true }
 };
 
 const JOBS = {
-  acting: { masculine: 'acteur', feminine: 'actrice' },
-  music: { masculine: 'chanteur', feminine: 'chanteuse' },
-  modeling: { masculine: 'mannequin', feminine: 'mannequin' },
-  influence: { masculine: 'influenceur', feminine: 'influenceuse' }
+  acting: { masculine: 'acteur', feminine: 'actrice', nby: 'acteur.ice' },
+  music: { masculine: 'musicien', feminine: 'musicienne', nby: 'musicien.ne' },
+  modeling: { masculine: 'mannequin', feminine: 'mannequin', nby: 'mannequin' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse', nby: 'influenceur.euse' }
 };
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const form = gender?.feminine ? 'feminine' : 'masculine';
+  const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
 
-  // Tous les métiers présents, dans l'ordre des classes de l'item
   const jobs = [...item.classList]
     .filter(c => c in JOBS)
     .map(c => JOBS[c][form]);

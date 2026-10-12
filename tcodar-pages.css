@@ -11,6 +11,9 @@
     grid-template-columns: repeat(3, 1fr)
 }
 
+.filter .sans {    background-color: var(--co1);
+    color: var(--white);}
+
 .filter {
     height: 75px;
     overflow: auto;

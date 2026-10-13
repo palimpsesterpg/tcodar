@@ -26,7 +26,7 @@
     --co1-300: #7a80aa;
     --co1-400: #5d6391;
     --co1: #474c6f;
-    --co1op50: rgb(71 76 111 / 50%);
+    --co1op50: #474c6f80;
     --co1-600: #3c405d;
     --co1-700: #30334b;
     --co1-800: #242638;
@@ -39,7 +39,7 @@
     --co2-300: #ee4753;
     --co2-400: #ea1a27;
     --co2: #c1121f;
-    --co2op50: rgb(193 18 31 / 50%);
+    --co2op50: #c1121f80;
     --co2-600: #9f0f18;
     --co2-700: #800c14;
     --co2-800: #60090f;
@@ -52,19 +52,19 @@
     --co3-300: #99bdd2;
     --co3-400: #80acc7;
     --co3: #669bbc;
-    --co3op50: rgb(102 155 188 / 50%);
+    --co3op50: #669bbc80;
     --co3-600: #4a84a8;
     --co3-700: #3b6a87;
     --co3-800: #2c4f65;
     --co3-900: #1e3543;
     --co3-950: #0f1a22;
 
-    --whiteop50: rgb(255 255 255 / 50%);
-    --whiteop75: rgb(255 255 255 / 75%);
-    --whiteop90: rgb(255 255 255 / 90%);
-    --blackop50: rgb(0 0 0 / 50%);
-    --blackop75: rgb(0 0 0 / 75%);
-    --blackop90: rgb(0 0 0 / 90%);
+    --whiteop50: #ffffff80;
+    --whiteop75: #ffffffbf;
+    --whiteop90: #ffffffe6;
+    --blackop50: #00000080;
+    --blackop75: #000000bf;
+    --blackop90: #000000e6;
 
     --white: #fff;
     --black: #000;
@@ -106,12 +106,12 @@
     --white: #191919;
     --black: #fafafa;
 
-    --blackop50: rgb(255 255 255 / 50%);
-    --blackop75: rgb(255 255 255 / 75%);
-    --blackop90: rgb(255 255 255 / 90%);
-    --whiteop50: rgb(0 0 0 / 50%);
-    --whiteop75: rgb(0 0 0 / 75%);
-    --whiteop90: rgb(0 0 0 / 90%);
+    --blackop50: #ffffff80;
+    --blackop75: #ffffffbf;
+    --blackop90: #ffffffe6;
+    --whiteop50: #00000080;
+    --whiteop75: #000000bf;
+    --whiteop90: #000000e6;
 
     --light: #292929;
     --darklight: #1c1c1c;

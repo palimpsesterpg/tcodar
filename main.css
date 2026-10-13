@@ -343,29 +343,29 @@ body {
 .group-4 {
     --group-color-50: #dddddd;
     --group-color: #333333;
-    --group-color-op50: #33333380;
+    --group-colorop50: #33333380;
 }
 
 .group-5 {
     --group-color-50: #d5f1e7;
     --group-color: #2c8063;
-    --group-color-op50: #2C806380;
+    --group-colorop50: #2C806380;
 }
 
 .group-6 {
     --group-color-50: #ffcccc;
     --group-color: #cd0000;
-    --group-color-op50: #cd000080;
+    --group-colorop50: #cd000080;
 }
 
 .group-7 {
     --group-color-50: #dde0ee;
     --group-color: #424f8a;
-    --group-color-op50: #424f8a80;
+    --group-colorop50: #424f8a80;
 }
 
 .group-8 {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
-    --group-color-op50: #e5970080;
+    --group-colorop50: #e5970080;
 }

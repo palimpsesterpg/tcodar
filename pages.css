@@ -87,7 +87,7 @@
     width: 100%;
     height: 100%;
     padding: var(--large);
-    background-color: var(--group-color-op50, var(--whiteop75));
+    background-color: var(--group-colorop50, var(--whiteop75));
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;

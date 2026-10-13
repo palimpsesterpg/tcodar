@@ -347,7 +347,7 @@
 
 .tabsystem-contents {
     margin-top: var(--large);
-    margin-left: var(--large);
+    padding-left: var(--large);
     border-left: var(--xsmall) solid var(--co2)
 }
 

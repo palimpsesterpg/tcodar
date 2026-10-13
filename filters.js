@@ -9,62 +9,30 @@ const normalize = str =>
   str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 const getTitle = item =>
-  item.querySelector(':scope > .item-title') ?.textContent.trim() || '';
+  item.querySelector(':scope > .item-title')?.textContent.trim() || '';
 
 const filterClass = el => [...el.classList].find(c => c !== 'active');
 
 const GENDERS = {
-  cismale: {
-    label: 'homme cis',
-    feminine: false
-  },
-  cisfemale: {
-    label: 'femme cis',
-    feminine: true
-  },
-  transmale: {
-    label: 'homme trans',
-    feminine: false
-  },
-  transfemale: {
-    label: 'femme trans',
-    feminine: true
-  },
-  nonbinary: {
-    label: 'personne non-binaire',
-    nby: true
-  }
+  cismale: { label: 'homme cis', feminine: false },
+  cisfemale: { label: 'femme cis', feminine: true },
+  transmale: { label: 'homme trans', feminine: false },
+  transfemale: { label: 'femme trans', feminine: true },
+  nonbinary: { label: 'personne non-binaire', nby: true }
 };
 
 const JOBS = {
-  acting: {
-    masculine: 'acteur',
-    feminine: 'actrice',
-    nby: 'acteur.ice'
-  },
-  music: {
-    masculine: 'musicien',
-    feminine: 'musicienne',
-    nby: 'musicien.ne'
-  },
-  modeling: {
-    masculine: 'mannequin',
-    feminine: 'mannequin',
-    nby: 'mannequin'
-  },
-  influence: {
-    masculine: 'influenceur',
-    feminine: 'influenceuse',
-    nby: 'influenceur.euse'
-  }
+  acting: { masculine: 'acteur', feminine: 'actrice', nby: 'acteur.ice' },
+  music: { masculine: 'musicien', feminine: 'musicienne', nby: 'musicien.ne' },
+  modeling: { masculine: 'mannequin', feminine: 'mannequin', nby: 'mannequin' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse', nby: 'influenceur.euse' }
 };
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const form = gender ?.nby ? 'nby' : gender ?.feminine ? 'feminine' : 'masculine';
+  const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
 
-  // Tous les métiers présents, dans l'ordre des classes de l'item
   const jobs = [...item.classList]
     .filter(c => c in JOBS)
     .map(c => JOBS[c][form]);
@@ -72,8 +40,8 @@ function buildContentHead(item) {
   const head = document.createElement('div');
   head.className = 'content-head';
 
-  [gender ?.label, item.dataset.year, ...jobs]
-  .filter(Boolean)
+  [gender?.label, item.dataset.year, ...jobs]
+    .filter(Boolean)
     .forEach(text => {
       const span = document.createElement('span');
       span.textContent = text;
@@ -105,7 +73,6 @@ function cloneContent() {
         return clone;
       });
 
-    // Image + crédits dans un même wrapper, pour que les crédits se calent sur l'image
     const credits = content.querySelector(':scope > .content-credits');
     const imgClone = clones.find(el => el.tagName === 'IMG');
     if (imgClone) {
@@ -120,18 +87,20 @@ function cloneContent() {
 }
 
 function sortItems() {
+  if (!itemsContainer) return;
+
   [...items]
-  .sort((a, b) =>
-      getTitle(a).localeCompare(getTitle(b), 'fr', {
-        sensitivity: 'base'
-      })
+    .sort((a, b) =>
+      getTitle(a).localeCompare(getTitle(b), 'fr', { sensitivity: 'base' })
     )
     .forEach(item => itemsContainer.appendChild(item));
 }
 
 function updateFilters() {
   const activeByGroup = [...filterGroups]
-    .map(group => [...group.querySelectorAll(':scope > div.active')].map(filterClass))
+    .map(group =>
+      [...group.querySelectorAll(':scope > div.active')].map(filterClass)
+    )
     .filter(classes => classes.length > 0);
 
   items.forEach(item => {
@@ -164,8 +133,10 @@ function updateSearch() {
 }
 
 function initSearch() {
+  if (!searchInput) return;
+
   searchInput.addEventListener('input', updateSearch);
-  searchButton.addEventListener('click', updateSearch);
+  searchButton?.addEventListener('click', updateSearch);
 }
 
 function closeAllItems() {

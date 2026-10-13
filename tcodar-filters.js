@@ -33,6 +33,7 @@ function buildContentHead(item) {
   const gender = genderClass ? GENDERS[genderClass] : null;
   const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
 
+  // Tous les métiers présents, dans l'ordre des classes de l'item
   const jobs = [...item.classList]
     .filter(c => c in JOBS)
     .map(c => JOBS[c][form]);
@@ -72,6 +73,16 @@ function cloneContent() {
         clone.classList.remove('name');
         return clone;
       });
+
+    // Image + crédits dans un même wrapper, pour que les crédits se calent sur l'image
+    const credits = content.querySelector(':scope > .content-credits');
+    const imgClone = clones.find(el => el.tagName === 'IMG');
+    if (imgClone) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'content-image';
+      wrapper.append(imgClone, ...(credits ? [credits] : []));
+      clones[clones.indexOf(imgClone)] = wrapper;
+    }
 
     content.prepend(...clones, ...(isDirectory ? [buildContentHead(item)] : []));
   });

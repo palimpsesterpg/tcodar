@@ -11,8 +11,10 @@
     grid-template-columns: repeat(3, 1fr)
 }
 
-.filter .sans {    background-color: var(--co1);
-    color: var(--white);}
+.filter .sans {
+    background-color: var(--co1);
+    color: var(--white);
+}
 
 .filter {
     height: 75px;
@@ -184,11 +186,18 @@
 .content-credits {
     display: none;
     position: absolute;
+    color: var(--white);
+    text-shadow: 1px 1px var(--co1);
+    font-family: var(--mono);
+    text-transform: lowercase;
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--white);
+    outline: var(--large) solid var(--co1op50);
     top: 25px;
     left: 25px;
     z-index: 10;
     background-color: var(--co1op50);
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 #directory .content-credits {
@@ -203,8 +212,6 @@
 
 .content-image:hover .content-credits {
     display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 #directory .content-image img {

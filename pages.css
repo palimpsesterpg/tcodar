@@ -197,6 +197,8 @@
     left: 25px;
     z-index: 10;
     background-color: var(--co1op50);
+    align-items: center;
+    justify-content: center;
     border-radius: 50%
 }
 

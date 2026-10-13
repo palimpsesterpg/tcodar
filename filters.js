@@ -9,29 +9,60 @@ const normalize = str =>
   str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 const getTitle = item =>
-  item.querySelector(':scope > .item-title')?.textContent.trim() || '';
+  item.querySelector(':scope > .item-title') ?.textContent.trim() || '';
 
 const filterClass = el => [...el.classList].find(c => c !== 'active');
 
 const GENDERS = {
-  cismale: { label: 'homme cis', feminine: false },
-  cisfemale: { label: 'femme cis', feminine: true },
-  transmale: { label: 'homme trans', feminine: false },
-  transfemale: { label: 'femme trans', feminine: true },
-  nonbinary: { label: 'personne non-binaire', nby: true }
+  cismale: {
+    label: 'homme cis',
+    feminine: false
+  },
+  cisfemale: {
+    label: 'femme cis',
+    feminine: true
+  },
+  transmale: {
+    label: 'homme trans',
+    feminine: false
+  },
+  transfemale: {
+    label: 'femme trans',
+    feminine: true
+  },
+  nonbinary: {
+    label: 'personne non-binaire',
+    nby: true
+  }
 };
 
 const JOBS = {
-  acting: { masculine: 'acteur', feminine: 'actrice', nby: 'acteur.ice' },
-  music: { masculine: 'musicien', feminine: 'musicienne', nby: 'musicien.ne' },
-  modeling: { masculine: 'mannequin', feminine: 'mannequin', nby: 'mannequin' },
-  influence: { masculine: 'influenceur', feminine: 'influenceuse', nby: 'influenceur.euse' }
+  acting: {
+    masculine: 'acteur',
+    feminine: 'actrice',
+    nby: 'acteur.ice'
+  },
+  music: {
+    masculine: 'musicien',
+    feminine: 'musicienne',
+    nby: 'musicien.ne'
+  },
+  modeling: {
+    masculine: 'mannequin',
+    feminine: 'mannequin',
+    nby: 'mannequin'
+  },
+  influence: {
+    masculine: 'influenceur',
+    feminine: 'influenceuse',
+    nby: 'influenceur.euse'
+  }
 };
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
+  const form = gender ?.nby ? 'nby' : gender ?.feminine ? 'feminine' : 'masculine';
 
   // Tous les métiers présents, dans l'ordre des classes de l'item
   const jobs = [...item.classList]
@@ -41,8 +72,8 @@ function buildContentHead(item) {
   const head = document.createElement('div');
   head.className = 'content-head';
 
-  [gender?.label, item.dataset.year, ...jobs]
-    .filter(Boolean)
+  [gender ?.label, item.dataset.year, ...jobs]
+  .filter(Boolean)
     .forEach(text => {
       const span = document.createElement('span');
       span.textContent = text;
@@ -90,17 +121,17 @@ function cloneContent() {
 
 function sortItems() {
   [...items]
-    .sort((a, b) =>
-      getTitle(a).localeCompare(getTitle(b), 'fr', { sensitivity: 'base' })
+  .sort((a, b) =>
+      getTitle(a).localeCompare(getTitle(b), 'fr', {
+        sensitivity: 'base'
+      })
     )
     .forEach(item => itemsContainer.appendChild(item));
 }
 
 function updateFilters() {
   const activeByGroup = [...filterGroups]
-    .map(group =>
-      [...group.querySelectorAll(':scope > div.active')].map(filterClass)
-    )
+    .map(group => [...group.querySelectorAll(':scope > div.active')].map(filterClass))
     .filter(classes => classes.length > 0);
 
   items.forEach(item => {
@@ -162,18 +193,17 @@ function initTabs() {
     const tabs = system.querySelectorAll('.tab');
     const contents = system.querySelectorAll('.tab-content');
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const tabId = tab.dataset.tab;
-
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        contents.forEach(content => {
-          content.classList.toggle('active', content.dataset.tab === tabId);
-        });
+    const activate = tab => {
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+      contents.forEach(content => {
+        content.classList.toggle('active', content.dataset.tab === tab.dataset.tab);
       });
-    });
+    };
+
+    tabs.forEach(tab => tab.addEventListener('click', () => activate(tab)));
+
+    const initial = system.querySelector('.tab.active') || tabs[0];
+    if (initial) activate(initial);
   });
 }
 

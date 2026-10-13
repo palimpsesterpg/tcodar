@@ -77,8 +77,7 @@
     --dark: #191919;
     --lightdark: #333;
     --lighterdark: #4c4c4c;
-    --ease: cubic-bezier(0.4, 0, 0.2, 1);
-    --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
@@ -368,4 +367,12 @@ body {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
     --group-colorop50: #e5970080;
+}
+
+.tabsystem .tab-content {
+    display: none;
+}
+
+.tabsystem .tab-content.active {
+    display: block
 }

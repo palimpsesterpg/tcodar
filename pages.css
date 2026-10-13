@@ -352,13 +352,8 @@
 }
 
 .tabsystem .tab-content {
-    display: none;
     text-transform: uppercase;
     font-weight: 300
-}
-
-.tabsystem .tab-content.active {
-    display: block
 }
 
 .page-items .item.search-hidden {

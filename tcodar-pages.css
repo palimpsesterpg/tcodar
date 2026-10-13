@@ -172,18 +172,21 @@
     filter: grayscale(1)
 }
 
-#masterlist .item-content>img {
+#masterlist .content-image img {
     width: 150px;
     height: 150px
+}
+
+.content-image {
+    position: relative;
 }
 
 .content-credits {
     display: none;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 10;
-    background-color: var(--co1-op50);
+    background-color: var(--co1op50);
     border-radius: 50%;
 }
 
@@ -197,17 +200,16 @@
     width: 100px;
 }
 
-.item-content > img:hover ~ .content-credits,
-.item-content > .content-credits:hover {
+.content-image .content-credits:hover {
     display: block;
 }
 
-#directory .item-content>img {
+#directory .content-image img {
     width: 250px;
     height: 250px
 }
 
-.item-content>img {
+.content-image img {
     object-position: center center;
     border-radius: 100%;
     object-fit: cover;

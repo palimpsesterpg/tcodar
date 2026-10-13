@@ -12,7 +12,7 @@
 }
 
 .filter .sans {
-    background-color: var(--co1);
+    background-color: var(--co1-200);
     color: var(--white);
 }
 

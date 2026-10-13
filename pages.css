@@ -306,7 +306,7 @@
     background-color: var(--group-color, var(--co3));
     color: var(--white);
     text-transform: lowercase;
-    font-weight: 900;
+    font-weight: 700;
     padding: 0 var(--large);
     border-radius: var(--small)
 }

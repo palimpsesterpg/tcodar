@@ -177,13 +177,12 @@
     height: 150px
 }
 
-#masterlist .item-content>img:hover .content-credits {display: block;}
+.item-content>img:hover~.content-credits {display: block;}
 
 .content-credits {display: none;
                  position: absolute;
-                 top: 200px;
-                 right: 400px;}
-
+                 top: 300px;
+                 right: 300px;}
 
 #directory .item-content>img {
     width: 250px;

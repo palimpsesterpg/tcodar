@@ -177,13 +177,30 @@
     height: 150px
 }
 
-.item-content>img:hover~.content-credits {display: block;}
+.content-credits {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--co1-op50);
+    border-radius: 50%;
+}
 
-.content-credits {display: none;
-                 position: absolute;
-                 top: 300px;
-                 left: 50%;
-                 translate: Z(50%)}
+#directory .content-credits {
+    height: 200px;
+    width: 200px;
+}
+
+#masterlist .content-credits {
+    height: 100px;
+    width: 100px;
+}
+
+.item-content > img:hover ~ .content-credits,
+.item-content > .content-credits:hover {
+    display: block;
+}
 
 #directory .item-content>img {
     width: 250px;

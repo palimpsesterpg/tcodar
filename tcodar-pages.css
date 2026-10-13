@@ -182,7 +182,8 @@
 .content-credits {display: none;
                  position: absolute;
                  top: 300px;
-                 right: 300px;}
+                 left: 50%;
+                 translate: Z(50%)}
 
 #directory .item-content>img {
     width: 250px;

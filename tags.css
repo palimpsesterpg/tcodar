@@ -1,0 +1,1770 @@
+border1,
+border2,
+border3,
+bordern,
+borderd,
+bordergc,
+borderb1,
+borderb2,
+borderb3,
+borderbn,
+borderbd,
+borderbgc,
+borderi1,
+borderi2,
+borderi3,
+borderin,
+borderid,
+borderigc,
+borderbi1,
+borderbi2,
+borderbi3,
+borderbin,
+borderbid,
+borderbigc {
+    border: 0.5px solid;
+    font-weight: 300;
+    padding: 0.25rem var(--xlarge)
+}
+
+bborder1,
+bborder2,
+bborder3,
+bbordern,
+bborderd,
+bbordergc,
+bborderb1,
+bborderb2,
+bborderb3,
+bborderbn,
+bborderbd,
+bborderbgc,
+bborderi1,
+bborderi2,
+bborderi3,
+bborderin,
+bborderid,
+bborderigc,
+bborderbi1,
+bborderbi2,
+bborderbi3,
+bborderbin,
+bborderbid,
+bborderbigc {
+    border-bottom: 2px solid;
+    padding: 0.1rem var(--small);
+    background-color: var(--white)
+}
+
+mborder1,
+mborder2,
+mborder3,
+mbordern,
+mborderd,
+mbordergc,
+mborderb1,
+mborderb2,
+mborderb3,
+mborderbn,
+mborderbd,
+mborderbgc,
+mborderi1,
+mborderi2,
+mborderi3,
+mborderin,
+mborderid,
+mborderigc,
+mborderbi1,
+mborderbi2,
+mborderbi3,
+mborderbin,
+mborderbid,
+mborderbigc {
+    border: 0.5px solid;
+    background-color: var(--white);
+    padding: 0.1rem var(--xsmall);
+    font-family: var(--mono)
+}
+
+border1,
+borderb1,
+borderi1,
+borderbi1,
+bborder1,
+bborderb1,
+bborderi1,
+bborderbi1,
+mborder1,
+mborderb1,
+mborderi1,
+mborderbi1 {
+    color: var(--co1)
+}
+
+border2,
+borderb2,
+borderi2,
+borderbi2,
+bborder2,
+bborderb2,
+bborderi2,
+bborderbi2,
+mborder2,
+mborderb2,
+mborderi2,
+mborderbi2 {
+    color: var(--co2)
+}
+
+border3,
+borderb3,
+borderi3,
+borderbi3,
+bborder3,
+bborderb3,
+bborderi3,
+bborderbi3,
+mborder3,
+mborderb3,
+mborderi3,
+mborderbi3 {
+    color: var(--co3)
+}
+
+bordern,
+borderbn,
+borderin,
+borderbin,
+bbordern,
+bborderbn,
+bborderin,
+bborderbin,
+mbordern,
+mborderbn,
+mborderin,
+mborderbin {
+    color: var(--darkneutral)
+}
+
+borderd,
+borderbd,
+borderid,
+borderbid,
+bborderd,
+bborderbd,
+bborderid,
+bborderbid,
+mborderd,
+mborderbd,
+mborderid,
+mborderbid {
+    color: var(--dark)
+}
+
+bordergc,
+borderbgc,
+borderigc,
+borderbigc,
+bbordergc,
+bborderbgc,
+bborderigc,
+bborderbigc,
+mborgcergc,
+mborgcerbgc,
+mborgcerigc,
+mborgcerbigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+back1,
+backb1,
+backi1,
+backbi1 {
+    background-color: var(--co1)
+}
+
+back2,
+backb2,
+backi2,
+backbi2 {
+    background-color: var(--co2)
+}
+
+back3,
+backb3,
+backi3,
+backbi3 {
+    background-color: var(--co3)
+}
+
+backn,
+backbn,
+backin,
+backbin {
+    background-color: var(--darkneutral)
+}
+
+backd,
+backbd,
+backid,
+backbid {
+    background-color: var(--dark)
+}
+
+backgc,
+backbgc,
+backigc,
+backbigc {
+    background-color: var(--group-color, var(--lightdark))
+}
+
+lback1,
+lbackb1,
+lbacki1,
+lbackbi1 {
+    background-color: var(--co1-50)
+}
+
+lback2,
+lbackb2,
+lbacki2,
+lbackbi2 {
+    background-color: var(--co2-50)
+}
+
+lback3,
+lbackb3,
+lbacki3,
+lbackbi3 {
+    background-color: var(--co3-50)
+}
+
+lbackn,
+lbackbn,
+lbackin,
+lbackbin {
+    background-color: var(--darklight)
+}
+
+lbackd,
+lbackbd,
+lbackid,
+lbackbid {
+    background-color: var(--neutral)
+}
+
+lbackgc,
+lbackbgc,
+lbackigc,
+lbackbigc {
+    background-color: var(--group-color-50)
+}
+
+dback1,
+dbackb1,
+dbacki1,
+dbackbi1 {
+    background-color: var(--co1-700)
+}
+
+dback2,
+dbackb2,
+dbacki2,
+dbackbi2 {
+    background-color: var(--co2-700)
+}
+
+dback3,
+dbackb3,
+dbacki3,
+dbackbi3 {
+    background-color: var(--co3-700)
+}
+
+dbackn,
+dbackbn,
+dbackin,
+dbackbin {
+    background-color: var(--darkneutral)
+}
+
+dbackd,
+dbackbd,
+dbackid,
+dbackbid {
+    background-color: var(--black)
+}
+
+dbackgc,
+dbackbgc,
+dbackigc,
+dbackbigc {
+    background-color: var(--group-color-700)
+}
+
+mback1,
+mbackb1,
+mbacki1,
+mbackbi1 {
+    background-color: var(--co1-300)
+}
+
+mback2,
+mbackb2,
+mbacki2,
+mbackbi2 {
+    background-color: var(--co2-300)
+}
+
+mback3,
+mbackb3,
+mbacki3,
+mbackbi3 {
+    background-color: var(--co3-300)
+}
+
+mbackn,
+mbackbn,
+mbackin,
+mbackbin {
+    background-color: var(--neutral)
+}
+
+mbackd,
+mbackbd,
+mbackid,
+mbackbid {
+    background-color: var(--black)
+}
+
+mbackgc,
+mbackbgc,
+mbackigc,
+mbackbigc {
+    background-color: var(--group-color-300)
+}
+
+wback1,
+wbackb1,
+wbacki1,
+wbackbi1,
+lback1,
+lbackb1,
+lbacki1,
+lbackbi1 {
+    color: var(--co1)
+}
+
+wback2,
+wbackb2,
+wbacki2,
+wbackbi2,
+lback2,
+lbackb2,
+lbacki2,
+lbackbi2 {
+    color: var(--co2)
+}
+
+wback3,
+wbackb3,
+wbacki3,
+wbackbi3,
+lback3,
+lbackb3,
+lbacki3,
+lbackbi3 {
+    color: var(--co3)
+}
+
+wbackn,
+wbackbn,
+wbackin,
+wbackbin,
+lbackn,
+lbackbn,
+lbackin,
+lbackbin {
+    color: var(--darkneutral)
+}
+
+wbackd,
+wbackbd,
+wbackid,
+wbackbid,
+lbackd,
+lbackbd,
+lbackid,
+lbackbid {
+    color: var(--dark)
+}
+
+wbackgc,
+wbackbgc,
+wbackigc,
+wbackbigc,
+lbackgc,
+lbackbgc,
+lbackigc,
+lbackbigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+back1,
+backb1,
+backi1,
+backbi1,
+back2,
+backb2,
+backi2,
+backbi2,
+back3,
+backb3,
+backi3,
+backbi3,
+backn,
+backbn,
+backin,
+backbin,
+backd,
+backbd,
+backid,
+backbid,
+backgc,
+backbgc,
+backigc,
+backbigc,
+bgrad1,
+bgrad2,
+bgrad3,
+bgradgc,
+bgradbi1,
+bgradbi2,
+bgradbi3,
+bgradbigc,
+bgradi1,
+bgradi2,
+bgradi3,
+bgradigc,
+bgradb1,
+bgradb2,
+bgradb3,
+bgradbgc,
+lbgrad1,
+lbgradb1,
+lbgradi1,
+lbgradbi1,
+lbgrad2,
+lbgradb2,
+lbgradi2,
+lbgradbi2,
+lbgrad3,
+lbgradb3,
+lbgradi3,
+lbgradbi3,
+lbgradgc,
+lbgradbgc,
+lbgradigc,
+lbgradbigc,
+back1 a,
+backb1 a,
+backi1 a,
+backbi1 a,
+back2 a,
+backb2 a,
+backi2 a,
+backbi2 a,
+back3 a,
+backb3 a,
+backi3 a,
+backbi3 a,
+backn a,
+backbn a,
+backin a,
+backbin a,
+backd a,
+backbd a,
+backid a,
+backbid a,
+backgc a,
+backbgc a,
+backigc a,
+backbigc a,
+bgrad1 a,
+bgrad2 a,
+bgrad3 a,
+bgradgc a,
+bgradbi1 a,
+bgradbi2 a,
+bgradbi3 a,
+bgradbigc a,
+bgradi1 a,
+bgradi2 a,
+bgradi3 a,
+bgradigc a,
+bgradb1 a,
+bgradb2 a,
+bgradb3 a,
+bgradbgc a,
+lbgrad1 a,
+lbgradb1 a,
+lbgradi1 a,
+lbgradbi1 a,
+lbgrad2 a,
+lbgradb2 a,
+lbgradi2 a,
+lbgradbi2 a,
+lbgrad3 a,
+lbgradb3 a,
+lbgradi3 a,
+lbgradbi3 a,
+lbgradgc a,
+lbgradbgc a,
+lbgradigc a,
+lbgradbigc {
+    color: var(--white) !important
+}
+
+wback1,
+wbackb1,
+wbacki1,
+wbackbi1,
+wback2,
+wbackb2,
+wbacki2,
+wbackbi2,
+wback3,
+wbackb3,
+wbacki3,
+wbackbi3,
+wbackn,
+wbackbn,
+wbackin,
+wbackbin,
+wbackd,
+wbackbd,
+wbackid,
+wbackbid,
+wbackgc,
+wbackbgc,
+wbackigc,
+wbackbigc {
+    background-color: var(--white)
+}
+
+lback1,
+lbackb1,
+lbacki1,
+lbackbi1,
+lback2,
+lbackb2,
+lbacki2,
+lbackbi2,
+lback3,
+lbackb3,
+lbacki3,
+lbackbi3,
+lbackn,
+lbackbn,
+lbackin,
+lbackbin,
+lbackd,
+lbackbd,
+lbackid,
+lbackbid,
+lbackgc,
+lbackbgc,
+lbackigc,
+lbackbigc,
+back1,
+backb1,
+backi1,
+backbi1,
+back2,
+backb2,
+backi2,
+backbi2,
+back3,
+backb3,
+backi3,
+backbi3,
+backn,
+backbn,
+backin,
+backbin,
+backd,
+backbd,
+backid,
+backbid,
+wback1,
+wbackb1,
+wbacki1,
+wbackbi1,
+wback2,
+wbackb2,
+wbacki2,
+wbackbi2,
+wback3,
+wbackb3,
+wbacki3,
+wbackbi3,
+wbackn,
+wbackbn,
+wbackin,
+wbackbin,
+wbackd,
+wbackbd,
+wbackid,
+wbackbid,
+wbackgc,
+wbackbgc,
+wbackigc,
+wbackbigc,
+backgc,
+backbgc,
+backigc,
+backbigc {
+    padding: 0 var(--small)
+}
+
+bgrad1,
+bgrad2,
+bgrad3,
+bgradgc,
+bgradbi1,
+bgradbi2,
+bgradbi3,
+bgradbigc,
+bgradi1,
+bgradi2,
+bgradi3,
+bgradigc,
+bgradb1,
+bgradb2,
+bgradb3,
+bgradbgc,
+lbgrad1,
+lbgrad2,
+lbgrad3,
+lbgradgc,
+lbgradbi1,
+lbgradbi2,
+lbgradbi3,
+lbgradbigc,
+lbgradi1,
+lbgradi2,
+lbgradi3,
+lbgradigc,
+lbgradb1,
+lbgradb2,
+lbgradb3,
+lbgradbgc {
+    padding: 0 var(--medium)
+}
+
+lback1,
+lbackb1,
+lbacki1,
+lbackbi1,
+lback2,
+lbackb2,
+lbacki2,
+lbackbi2,
+lback3,
+lbackb3,
+lbacki3,
+lbackbi3,
+lbackn,
+lbackbn,
+lbackin,
+lbackbin,
+lbackd,
+lbackbd,
+lbackid,
+lbackbid,
+lbackgc,
+lbackbgc,
+lbackigc,
+lbackbigc {
+    font-family: var(--mono)
+}
+
+dback1,
+dbackb1,
+dbacki1,
+dbackbi1,
+dback2,
+dbackb2,
+dbacki2,
+dbackbi2,
+dback3,
+dbackb3,
+dbacki3,
+dbackbi3,
+dbackn,
+dbackbn,
+dbackin,
+dbackbin,
+dbackd,
+dbackbd,
+dbackid,
+dbackbid,
+dbackgc,
+dbackbgc,
+dbackigc,
+dbackbigc {
+    padding-left: calc(var(--large) + 2.5px);
+    padding-right: var(--large);
+    letter-spacing: 2.5px;
+    font-size: var(--small);
+    text-transform: uppercase;
+    color: var(--white)
+}
+
+mback1,
+mbackb1,
+mbacki1,
+mbackbi1,
+mback2,
+mbackb2,
+mbacki2,
+mbackbi2,
+mback3,
+mbackb3,
+mbacki3,
+mbackbi3,
+mbackn,
+mbackbn,
+mbackin,
+mbackbin,
+mbackd,
+mbackbd,
+mbackid,
+mbackbid,
+mbackgc,
+mbackbgc,
+mbackigc,
+mbackbigc {
+    padding-left: calc(var(--2xsmall) + 5px);
+    padding-right: var(--2xsmall);
+    letter-spacing: 5px;
+    font-size: var(--small);
+    text-transform: lowercase;
+    color: var(--white)
+}
+
+grad1,
+gradb1,
+gradi1,
+gradbi1,
+bgrad1,
+bgradb1,
+bgradi1,
+bgradbi1 {
+    background: var(--gradient12)
+}
+
+grad2,
+gradb2,
+gradi2,
+gradbi2,
+bgrad2,
+bgradb2,
+bgradi2,
+bgradbi2 {
+    background: var(--gradient13)
+}
+
+grad3,
+gradb3,
+gradi3,
+gradbi3,
+bgrad3,
+bgradb3,
+bgradi3,
+bgradbi3 {
+    background: var(--gradient23)
+}
+
+gradgc,
+gradbgc,
+gradigc,
+gradbigc,
+bgradgc,
+bgradbgc,
+bgradigc,
+bgradbigc {
+    background: var(--gradientgc2)
+}
+
+lbgrad1,
+lbgradb1,
+lbgradi1,
+lbgradbi1,
+lgrad1,
+lgradb1,
+lgradi1,
+lgradbi1 {
+    background: var(--gradient12-50)
+}
+
+lbgrad2,
+lbgradb2,
+lbgradi2,
+lbgradbi2,
+lgrad2,
+lgradb2,
+lgradi2,
+lgradbi2 {
+    background: var(--gradient13-50)
+}
+
+lbgrad3,
+lbgradb3,
+lbgradi3,
+lbgradbi3,
+lgrad3,
+lgradb3,
+lgradi3,
+lgradbi3 {
+    background: var(--gradient23-50)
+}
+
+lbgradgc,
+lbgradbgc,
+lbgradigc,
+lbgradbigc,
+lgradgc,
+lgradbgc,
+lgradigc,
+lgradbigc {
+    background: var(--gradientgc1)
+}
+
+grad1,
+grad2,
+grad3,
+gradgc,
+gradbi1,
+gradbi2,
+gradbi3,
+gradbigc,
+gradi1,
+gradi2,
+gradi3,
+gradigc,
+gradb1,
+gradb2,
+gradb3,
+gradbgc,
+lgrad1,
+lgrad2,
+lgrad3,
+lgradgc,
+lgradbi1,
+lgradbi2,
+lgradbi3,
+lgradbigc,
+lgradi1,
+lgradi2,
+lgradi3,
+lgradigc,
+lgradb1,
+lgradb2,
+lgradb3,
+lgradbgc {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+back1,
+back2,
+back3,
+backn,
+backd,
+backb1,
+backb2,
+backb3,
+backbn,
+backbd,
+backi1,
+backi2,
+backi3,
+backin,
+backid,
+backbi1,
+backbi2,
+backbi3,
+backbin,
+backbid,
+backgc,
+backbgc,
+backigc,
+backbigc,
+wback1,
+wback2,
+wback3,
+wbackn,
+wbackd,
+wbackb1,
+wbackb2,
+wbackb3,
+wbackbn,
+wbackbd,
+wbacki1,
+wbacki2,
+wbacki3,
+wbackin,
+wbackid,
+wbackbi1,
+wbackbi2,
+wbackbi3,
+wbackbin,
+wbackbid,
+wbackgc,
+wbackbgc,
+wbackigc,
+wbackbigc,
+serif1,
+serif2,
+serif3,
+serifn,
+serifd,
+serifgc,
+serifb1,
+serifb2,
+serifb3,
+serifbn,
+serifbd,
+serifbgc,
+serifi1,
+serifi2,
+serifi3,
+serifin,
+serifid,
+serifigc,
+serifbi1,
+serifbi2,
+serifbi3,
+serifbin,
+serifbid,
+serifbigc {
+    font-family: var(--serif)
+}
+
+serif1,
+serifb1,
+serifi1,
+serifbi1 {
+    color: var(--co1)
+}
+
+serif2,
+serifb2,
+serifi2,
+serifbi2 {
+    color: var(--co2)
+}
+
+serif3,
+serifb3,
+serifi3,
+serifbi3 {
+    color: var(--co3)
+}
+
+serifn,
+serifbn,
+serifin,
+serifbin {
+    color: var(--darkneutral)
+}
+
+serifd,
+serifbd,
+serifid,
+serifbid {
+    color: var(--dark)
+}
+
+serifgc,
+serifbgc,
+serifigc,
+serifbigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+under1,
+under2,
+under3,
+undern,
+underd,
+undergc,
+underb1,
+underb2,
+underb3,
+underbn,
+underbd,
+underbgc,
+underi1,
+underi2,
+underi3,
+underin,
+underid,
+underigc,
+underbi1,
+underbi2,
+underbi3,
+underbin,
+underbid,
+underbigc,
+var1,
+var2,
+var3,
+varn,
+vard,
+vargc,
+varb1,
+varb2,
+varb3,
+varbn,
+varbd,
+varbgc,
+vari1,
+vari2,
+vari3,
+varin,
+varid,
+varigc,
+varbi1,
+varbi2,
+varbi3,
+varbin,
+varbid,
+varbigc {
+    font-family: var(--var);
+    font-weight: 500;
+    font-size: var(--large)
+}
+
+mono1,
+mono2,
+mono3,
+monon,
+monod,
+monogc,
+monob1,
+monob2,
+monob3,
+monobn,
+monobd,
+monobgc,
+monoi1,
+monoi2,
+monoi3,
+monoin,
+monoid,
+monoigc,
+monobi1,
+monobi2,
+monobi3,
+monobin,
+monobid,
+monobigc {
+    font-family: var(--mono)
+}
+
+var1,
+varb1,
+vari1,
+varbi1 {
+    color: var(--co1)
+}
+
+var2,
+varb2,
+vari2,
+varbi2 {
+    color: var(--co2)
+}
+
+var3,
+varb3,
+vari3,
+varbi3 {
+    color: var(--co3)
+}
+
+varn,
+varbn,
+varin,
+varbin {
+    color: var(--darkneutral)
+}
+
+vard,
+varbd,
+varid,
+varbid {
+    color: var(--dark)
+}
+
+vargc,
+varbgc,
+varigc,
+varbigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+mono1,
+monob1,
+monoi1,
+monobi1 {
+    color: var(--co1)
+}
+
+mono2,
+monob2,
+monoi2,
+monobi2 {
+    color: var(--co2)
+}
+
+mono3,
+monob3,
+monoi3,
+monobi3 {
+    color: var(--co3)
+}
+
+monon,
+monobn,
+monoin,
+monobin {
+    color: var(--darkneutral)
+}
+
+monod,
+monobd,
+monoid,
+monobid {
+    color: var(--dark)
+}
+
+monogc,
+monobgc,
+monoigc,
+monobigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+under1,
+underb1,
+underi1,
+underbi1 {
+    box-shadow: inset 0 -8px 0 var(--co1-50);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px;
+    color: var(--co1-600)
+}
+
+under2,
+underb2,
+underi2,
+underbi2 {
+    box-shadow: inset 0 -8px 0 var(--co2-50);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px;
+    color: var(--co2-600)
+}
+
+under3,
+underb3,
+underi3,
+underbi3 {
+    box-shadow: inset 0 -8px 0 var(--co3-50);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px;
+    color: var(--co3-600)
+}
+
+undern,
+underbn,
+underin,
+underbin {
+    box-shadow: inset 0 -8px 0 var(--darklight);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px;
+    color: var(--darkneutral)
+}
+
+underd,
+underbd,
+underid,
+underbid {
+    box-shadow: inset 0 -8px 0 var(--white);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px
+}
+
+undergc,
+underbgc,
+underigc,
+underbigc {
+    box-shadow: inset 0 -8px 0 var(--group-color-50);
+    letter-spacing: 2.5px;
+    padding-left: 2.5px;
+    color: var(--group-color-600)
+}
+
+main1,
+mainb1,
+maini1,
+mainbi1 {
+    color: var(--co1)
+}
+
+main2,
+mainb2,
+maini2,
+mainbi2 {
+    color: var(--co2)
+}
+
+main3,
+mainb3,
+maini3,
+mainbi3 {
+    color: var(--co3)
+}
+
+mainn,
+mainbn,
+mainin,
+mainbin {
+    color: var(--darkneutral)
+}
+
+maind,
+mainbd,
+mainid,
+mainbid {
+    color: var(--dark)
+}
+
+maingc,
+mainbgc,
+mainigc,
+mainbigc {
+    color: var(--group-color, var(--lightdark))
+}
+
+lbackb1,
+lbackb2,
+lbackb3,
+lbackbn,
+lbackbd,
+lbackbgc,
+dbackb1,
+dbackb2,
+dbackb3,
+dbackbn,
+dbackbd,
+dbackbgc,
+mbackb1,
+mbackb2,
+mbackb3,
+mbackbn,
+mbackbd,
+mbackbgc,
+gradb1,
+gradb2,
+gradb3,
+gradb5,
+gradb6,
+gradbgc,
+bgradb1,
+bgradb2,
+bgradb3,
+bgradb5,
+bgradb6,
+bgradbgc,
+lgradb1,
+lgradb2,
+lgradb3,
+lgradb5,
+lgradb6,
+lgradbgc,
+lbgradb1,
+lbgradb2,
+lbgradb3,
+lbgradb5,
+lbgradb6,
+lbgradbgc,
+borderb1,
+borderb2,
+borderb3,
+borderbn,
+borderbd,
+borderbgc,
+bborderb1,
+bborderb2,
+bborderb3,
+bborderbn,
+bborderbd,
+bborderbgc,
+mborderb1,
+mborderb2,
+mborderb3,
+mborderbn,
+mborderbd,
+mborderbgc,
+serifb1,
+serifb2,
+serifb3,
+serifbn,
+serifbd,
+serifbgc,
+monob1,
+monob2,
+monob3,
+monobn,
+monobd,
+monobgc,
+varb1,
+varb2,
+varb3,
+varbn,
+varbd,
+varbgc,
+mainb1,
+mainb2,
+mainb3,
+mainbn,
+mainbd,
+mainbgc,
+backb1,
+backb2,
+backb3,
+backbn,
+backbd,
+backbgc,
+wbackb1,
+wbackb2,
+wbackb3,
+wbackbn,
+wbackbd,
+wbackbgc,
+underb1,
+underb2,
+underb3,
+underbn,
+underbd,
+underbgc {
+    font-weight: 700
+}
+
+lbacki1,
+lbacki2,
+lbacki3,
+lbackin,
+lbackid,
+lbackigc,
+dbacki1,
+dbacki2,
+dbacki3,
+dbackin,
+dbackid,
+dbackigc,
+mbacki1,
+mbacki2,
+mbacki3,
+mbackin,
+mbackid,
+mbackigc,
+gradi1,
+gradi2,
+gradi3,
+gradi5,
+gradi6,
+gradigc,
+bgradi1,
+bgradb2,
+bgradi3,
+bgradi5,
+bgradi6,
+bgradigc,
+lbgradi1,
+lbgradi2,
+lbgradi3,
+lbgradi5,
+lbgradi6,
+lbgradigc,
+lgradi1,
+lgradb2,
+lgradi3,
+lgradi5,
+lgradi6,
+lgradigc,
+borderi1,
+borderi2,
+borderi3,
+borderin,
+borderid,
+borderigc,
+bborderi1,
+bborderi2,
+bborderi3,
+bborderin,
+bborderid,
+bborderigc,
+mborderi1,
+mborderi2,
+mborderi3,
+mborderin,
+mborderid,
+mborderigc,
+serifi1,
+serifi2,
+serifi3,
+serifin,
+serifid,
+serifigc,
+vari1,
+vari2,
+vari3,
+varin,
+varid,
+varigc,
+monoi1,
+monoi2,
+monoi3,
+monoin,
+monoid,
+monoigc,
+maini1,
+maini2,
+maini3,
+mainin,
+mainid,
+mainigc,
+backi1,
+backi2,
+backi3,
+backin,
+backid,
+backigc,
+wbacki1,
+wbacki2,
+wbacki3,
+wbackin,
+wbackid,
+wbackigc,
+underi1,
+underi2,
+underi3,
+underin,
+underid,
+underigc {
+    font-style: italic
+}
+
+lbackbi1,
+lbackbi2,
+lbackbi3,
+lbackbin,
+lbackbid,
+lbackbigc,
+dbackbi1,
+dbackbi2,
+dbackbi3,
+dbackbin,
+dbackbid,
+dbackbigc,
+mbackbi1,
+mbackbi2,
+mbackbi3,
+mbackbin,
+mbackbid,
+mbackbigc,
+gradbi1,
+gradbi2,
+gradbi3,
+gradbigc,
+bgradbi1,
+bgradbi2,
+bgradbi3,
+bgradbigc,
+lbgradbi1,
+lbgradbi2,
+lbgradbi3,
+lbgradbigc,
+lgradbi1,
+lgradbi2,
+lgradbi3,
+lgradbigc,
+borderbi1,
+borderbi2,
+borderbi3,
+borderbin,
+borderbid,
+borderbigc,
+bborderbi1,
+bborderbi2,
+bborderbi3,
+bborderbin,
+bborderbid,
+bborderbigc,
+mborderbi1,
+mborderbi2,
+mborderbi3,
+mborderbin,
+mborderbid,
+mborderbigc,
+serifbi1,
+serifbi2,
+serifbi3,
+serifbin,
+serifbid,
+serifbigc,
+monobi1,
+monobi2,
+monobi3,
+monobin,
+monobid,
+monobigc,
+varbi1,
+varbi2,
+varbi3,
+varbin,
+varbid,
+varbigc,
+mainbi1,
+mainbi2,
+mainbi3,
+mainbin,
+mainbid,
+mainbigc,
+backbi1,
+backbi2,
+backbi3,
+backbin,
+backbid,
+backbigc,
+wbackbi1,
+wbackbi2,
+wbackbi3,
+wbackbin,
+wbackbid,
+wbackbigc,
+underbi1,
+underbi2,
+underbi3,
+underbin,
+underbid,
+underbigc {
+    font-weight: 700;
+    font-style: italic
+}
+
+tit1,
+tit2,
+tit3,
+titn,
+titd,
+titgc {
+    font-size: var(--2xlarge);
+    letter-spacing: 2.5px;
+    color: transparent;
+    font-weight: 700
+}
+
+tit1 {
+    -webkit-text-stroke: 1px var(--co1);
+    color: var(--co1-200)
+}
+
+tit2 {
+    -webkit-text-stroke: 1px var(--co2);
+    color: var(--co2-200)
+}
+
+tit3 {
+    -webkit-text-stroke: 1px var(--co3);
+    color: var(--co3-200)
+}
+
+titn {
+    -webkit-text-stroke: 1px var(--darkneutral);
+    color: var(--neutral)
+}
+
+titd {
+    -webkit-text-stroke: 1px var(--dark);
+    color: var(--lighterdark)
+}
+
+titgc {
+    -webkit-text-stroke: 1px var(--group-color, var(--lightdark));
+    color: var(--group-color-200, var(--neutral))
+}
+
+sstit1,
+sstit2,
+sstit3,
+sstitn,
+sstitd,
+sstitgc {
+    font-size: var(--2xlarge);
+    letter-spacing: 1px;
+    color: var(--white);
+    color: transparent;
+    font-weight: 700;
+    font-family: var(--serif)
+}
+
+sstit1 {
+    -webkit-text-stroke: 1px var(--co1)
+}
+
+sstit2 {
+    -webkit-text-stroke: 1px var(--co2)
+}
+
+sstit3 {
+    -webkit-text-stroke: 1px var(--co3)
+}
+
+sstitn {
+    -webkit-text-stroke: 1px var(--darkneutral)
+}
+
+sstitd {
+    -webkit-text-stroke: 1px var(--dark)
+}
+
+sstitgc {
+    -webkit-text-stroke: 1px var(--group-color, var(--darkneutral))
+}
+
+upp1,
+upp2,
+upp3,
+uppn,
+uppd,
+uppgc {
+    text-transform: uppercase;
+    font-weight: 200;
+    border-bottom: 0.5px solid
+}
+
+spcl1,
+spcl2,
+spcl3,
+spcln,
+spcld,
+spclgc {
+    font-family: var(--spe);
+    font-weight: 100;
+    font-size: var(--large);
+    letter-spacing: 1px
+}
+
+upp1,
+maj1,
+spcl1 {
+    color: var(--co1)
+}
+
+upp2,
+maj2,
+spcl2 {
+    color: var(--co2)
+}
+
+upp3,
+maj3,
+spcl3 {
+    color: var(--co3)
+}
+
+uppn,
+majn,
+spcln {
+    color: var(--darkneutral)
+}
+
+uppd,
+majd,
+spcld {
+    color: var(--dark)
+}
+
+uppgc,
+majgc,
+spclgc {
+    color: var(--group-color, var(--darkneutral))
+}
+
+blsp1,
+blsp2,
+blsp3,
+blspn,
+blspd,
+blspgc {
+    text-transform: lowercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding-left: 5px
+}
+
+blsp1 {
+    color: var(--co1)
+}
+
+blsp2 {
+    color: var(--co2)
+}
+
+blsp3 {
+    color: var(--co3)
+}
+
+blsp4 {
+    color: var(--co3)
+}
+
+blspn {
+    color: var(--darkneutral)
+}
+
+blspd {
+    color: var(--dark)
+}
+
+blspgc {
+    color: var(--group-color, var(--darkneutral))
+}
+
+maj1,
+maj2,
+maj3,
+majn,
+majd,
+majgc {
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block
+}
+
+maj1::first-letter,
+maj2::first-letter,
+maj3::first-letter,
+majn::first-letter,
+majd::first-letter,
+majgc::first-letter {
+    font-size: var(--xlarge) !important;
+    text-transform: lowercase !important;
+    font-family: var(--spe)
+}

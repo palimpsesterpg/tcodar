@@ -86,15 +86,15 @@
             var(--co1),
             var(--co2),
             var(--co1),
-            var(--co2),
-            var(--co1),
             var(--co3));
     --gradient12-50: linear-gradient(to right, var(--co1-50), var(--co2-50));
     --gradient13-50: linear-gradient(to right, var(--co1-50), var(--co3-50));
     --gradient23-50: linear-gradient(to right, var(--co2-50), var(--co3-50));
     --gradientAll-50: linear-gradient(to right,
+            var(--co3-50),
             var(--co1-50),
             var(--co2-50),
+            var(--co1-50),
             var(--co3-50));
     color-scheme: light;
 }
@@ -379,72 +379,72 @@ body {
 
 [class^="fi-ts-"]:before,
 [class*="fi-ts-"]:before {
-	font-family: uicons-thin-straight !important;
-	font-style: normal;
-	font-weight: normal !important;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
+    font-family: uicons-thin-straight !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 .d-flex {
-	display: flex !important
+    display: flex !important
 }
 
 x2small,
 .x2small {
-	font-size: var(--2xsmall)
+    font-size: var(--2xsmall)
 }
 
 xsmall,
 .xsmall {
-	font-size: var(--xsmall)
+    font-size: var(--xsmall)
 }
 
 small,
 .small {
-	font-size: var(--small)
+    font-size: var(--small)
 }
 
 medium,
 .medium {
-	font-size: var(--medium)
+    font-size: var(--medium)
 }
 
 large,
 .large {
-	font-size: var(--large)
+    font-size: var(--large)
 }
 
 xlarge,
 .xlarge {
-	font-size: var(--xlarge)
+    font-size: var(--xlarge)
 }
 
 x2large,
 .x2large {
-	font-size: var(--2xlarge)
+    font-size: var(--2xlarge)
 }
 
 .reverse {
-	--gradient12: linear-gradient(to left, var(--co1), var(--co2));
-	--gradient13: linear-gradient(to left, var(--co1), var(--co3));
-	--gradient23: linear-gradient(to left, var(--co2), var(--co3));
-	--gradient12-50: linear-gradient(to left, var(--co1-50), var(--co2-50));
-	--gradient13-50: linear-gradient(to left, var(--co1-50), var(--co3-50));
-	--gradient23-50: linear-gradient(to left, var(--co2-50), var(--co3-50))
+    --gradient12: linear-gradient(to left, var(--co1), var(--co2));
+    --gradient13: linear-gradient(to left, var(--co1), var(--co3));
+    --gradient23: linear-gradient(to left, var(--co2), var(--co3));
+    --gradient12-50: linear-gradient(to left, var(--co1-50), var(--co2-50));
+    --gradient13-50: linear-gradient(to left, var(--co1-50), var(--co3-50));
+    --gradient23-50: linear-gradient(to left, var(--co2-50), var(--co3-50))
 }
 
 fssmalll {
-	font-size: var(--small)
+    font-size: var(--small)
 }
 
 fsmedium {
-	font-size: var(--medium)
+    font-size: var(--medium)
 }
 
 fslarge {
-	font-size: var(--large)
+    font-size: var(--large)
 }

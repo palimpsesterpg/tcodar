@@ -18,12 +18,17 @@
 
 .filter {
     height: 75px;
-    overflow: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: var(--2xsmall);
+    gap: 0.25rem;
     align-content: start;
+    transition-duration: 1s;
     align-items: start
+}
+
+.filter:hover {
+    height: 100%;
+    transition-duration: 1s
 }
 
 .filter div {
@@ -383,7 +388,7 @@
     border: 0px;
     color: var(--co1);
     font-family: var(--mono);
-    padding: var(--2xsmall) var(--xsmall)
+    padding: 0.25rem var(--xsmall)
 }
 
 .page-search button {
@@ -392,7 +397,7 @@
     border: 0px;
     font-family: var(--mono);
     text-transform: uppercase;
-    padding: var(--2xsmall) var(--xsmall)
+    padding: 0.25rem var(--xsmall)
 }
 
 .page-body {

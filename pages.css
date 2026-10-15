@@ -21,15 +21,15 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.25rem;
-    overflow: hidden;
+    overflow: over;
     align-content: start;
-    transition-duration: 1s;
     align-items: start
 }
 
-.filter:hover {
-    height: 100%;
-    transition-duration: 1s
+.filter.families {
+    grid-area: 3 / 1 / 4 / 3;
+    height: auto;
+    grid-template-columns: repeat(10, 1fr)
 }
 
 .filter div {

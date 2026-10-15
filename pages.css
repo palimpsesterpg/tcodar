@@ -181,11 +181,15 @@
     height: 100%;
     object-position: center center;
     object-fit: cover;
-    filter: grayscale(0.5)
+    filter: grayscale(0.65)
 }
 
 .page-items .item.played>img {
     filter: grayscale(1)
+}
+
+.page-items .item.res>img {
+    filter: grayscale(0.85)
 }
 
 #masterlist .content-image img {
@@ -195,6 +199,10 @@
 
 .played .content-image img {
     filter: grayscale(1)
+}
+
+.res .content-image img {
+    filter: grayscale(0.85)
 }
 
 .content-image {
@@ -243,7 +251,7 @@
     object-position: center center;
     border-radius: 100%;
     object-fit: cover;
-    filter: grayscale(0.5)
+    filter: grayscale(0.65)
 }
 
 .fewres .item-content:after,

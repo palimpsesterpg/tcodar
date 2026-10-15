@@ -171,12 +171,21 @@
     height: 100%;
     object-position: center center;
     object-fit: cover;
+    filter: grayscale(0.5)
+}
+
+.page-items .item.played>img {
     filter: grayscale(1)
 }
 
 #masterlist .content-image img {
     width: 150px;
-    height: 150px
+    height: 150px;
+    filter: grayscale(0.5)
+}
+
+.played .content-image img {
+    filter: grayscale(1)
 }
 
 .content-image {

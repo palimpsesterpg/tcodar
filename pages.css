@@ -1,6 +1,6 @@
 .page-filters {
     display: grid;
-    gap: var(--large)
+    gap: var(--xsmall)
 }
 
 #directory .page-filters {
@@ -17,11 +17,10 @@
 }
 
 .filter {
-    height: 75px;
+    max-height: 75px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.25rem;
-    overflow: over;
     align-content: start;
     align-items: start
 }

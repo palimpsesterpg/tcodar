@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.25rem;
+    overflow: hidden;
     align-content: start;
     transition-duration: 1s;
     align-items: start
@@ -72,6 +73,7 @@
 }
 
 .item {
+    cursor: pointer;
     width: 100%;
     border-radius: var(--xsmall);
     box-sizing: border-box;

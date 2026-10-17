@@ -188,6 +188,21 @@
     --group-color-950: #0f1a22;
 }
 
+.group-test {
+    --group-color-50: #F7E5D2;
+    --group-color-100: #EECBA5;
+    --group-color-200: #E6B177;
+    --group-color-300: #DE964A;
+    --group-color-400: #CD7C26;
+    --group-color: #9E5F1D;
+    --group-color-600: #855018;
+    --group-color-700: #6A4013;
+    --group-color-800: #50300F;
+    --gradientgc1: linear-gradient(to right, var(--group-color-50), var(--group-color-100), var(--group-color-50));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--group-color-600), var(--group-color-800), var(--group-color-600));
+}
+
 a,
 a:visited,
 a:hover {

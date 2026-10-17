@@ -228,6 +228,22 @@
     border-radius: 50%
 }
 
+.content-families {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    overflow: auto;
+}
+
+.content-families .tabsystem-contents {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    overflow: auto;
+}
+
 #directory .content-credits {
     height: 200px;
     width: 200px

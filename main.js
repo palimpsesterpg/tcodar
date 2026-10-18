@@ -23,12 +23,10 @@ function initHeaderNav() {
 
   document.querySelectorAll('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
-      const key = headerTab.id; // c3, c4, c5…
+      const key = headerTab.id; 
 
-      // 1. active l'onglet + la catégorie via ton initTabs
       categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
 
-      // 2. défile jusqu'à la catégorie
       categories.querySelector(`.category[data-tab="${key}"]`)
         ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });

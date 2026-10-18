@@ -265,7 +265,14 @@
 
 #directory .content-image img {
     width: 250px;
-    height: 250px
+    height: 250px;
+}
+
+#directory .content-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    overflow: hidden
 }
 
 .content-image img {

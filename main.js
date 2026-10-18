@@ -17,22 +17,23 @@ function initTabs() {
   });
 }
 
-function initCategoryNav() {
-  const goTo = key => {
-    document.querySelectorAll('.category-tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.tab === key);
+function initHeaderNav() {
+  const categories = document.querySelector('#categories');
+  if (!categories) return;
+
+  document.querySelectorAll('.header-tab').forEach(headerTab => {
+    headerTab.addEventListener('click', () => {
+      const key = headerTab.id; // c3, c4, c5…
+
+      // 1. active l'onglet + la catégorie via ton initTabs
+      categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
+
+      // 2. défile jusqu'à la catégorie
+      categories.querySelector(`.category[data-tab="${key}"]`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-
-    document.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-  };
-
-  document.querySelectorAll('.header-tab, .category-tab').forEach(tab => {
-    tab.addEventListener('click', () => goTo(tab.dataset.tab));
   });
 }
 
 initTabs();
-initCategoryNav();
+initHeaderNav();

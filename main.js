@@ -17,4 +17,21 @@ function initTabs() {
   });
 }
 
+document.querySelectorAll('.map-header .header-tab').forEach(headerTab => {
+  headerTab.addEventListener('click', () => {
+    const id = headerTab.dataset.target;
+
+    document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+
+    const target = document.querySelector(`.category-tab[data-id="${id}"]`);
+    if (target) {
+      target.classList.add('active');
+      target.click();
+    }
+
+    document.querySelectorAll('.header-tab').forEach(t => t.classList.remove('active'));
+    headerTab.classList.add('active');
+  });
+});
+
 initTabs();

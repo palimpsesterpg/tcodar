@@ -17,22 +17,21 @@ function initTabs() {
   });
 }
 
-function initCategoryNav() {
-  const goTo = key => {
-    document.querySelectorAll('.category-tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.tab === key);
+function initHeaderNav() {
+  const categories = document.querySelector('#categories');
+  if (!categories) return;
+
+  document.querySelectorAll('.header-tab').forEach(headerTab => {
+    headerTab.addEventListener('click', () => {
+      const key = headerTab.id; 
+
+      categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
+
+      categories.querySelector(`.category[data-tab="${key}"]`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-
-    document.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-  };
-
-  document.querySelectorAll('.header-tab, .category-tab').forEach(tab => {
-    tab.addEventListener('click', () => goTo(tab.dataset.tab));
   });
 }
 
 initTabs();
-initCategoryNav();
+initHeaderNav();

@@ -312,49 +312,49 @@ body {
     background-image: url("Images/tcodar-header-dark.png");
 }
 
-#c4 .forumlist:before {
+[data-tab="c4"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-marrakech.jpg"));
 }
 
-#c5 .forumlist:before {
+[data-tab="c5"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-new-york.jpg"));
 }
 
-#c6 .forumlist:before {
+[data-tab="c6"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-rio.jpg"));
 }
 
-#c7 .forumlist:before {
+[data-tab="c7"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-singapore.jpg"));
 }
 
-#c10 .forumlist:before {
+[data-tab="c10"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-world.jpg"));
 }
 
-#c13 .forumlist:before {
+[data-tab="c13"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-sydney.jpg"));
 }
 
-#c3 .forumlist:before {
+[data-tab="c3"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-london.jpg"));
 }
 
-#c8 .forumlist:before {
+[data-tab="c8"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-media.jpg"));
 }
 
-#c12 .forumlist:before {
+[data-tab="c12"] .forumlist:before {
     background-image: var(--forum-bg, url("Images/tcodar-archives.jpg"));
 }
 
-#c1 .forumlist:before,
-#c11 .forumlist:before {
+[data-tab="c1"] .forumlist:before,
+[data-tab="c11"] .forumlist:before {
     background-image: url("Images/tcodar-admin.jpg");
 }
 
-#c2 .forumlist:before,
-#c9 .forumlist:before {
+[data-tab="c2"] .forumlist:before,
+[data-tab="c9"] .forumlist:before {
     background-image: url("Images/tcodar-off.jpg");
 }
 

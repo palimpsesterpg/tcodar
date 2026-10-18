@@ -197,18 +197,6 @@
     filter: grayscale(0.85)
 }
 
-#masterlist .content-image img {
-    width: 150px;
-    height: 150px
-}
-
-#masterlist .content-image {
-    width: 150px;
-    border-radius: 100%;
-    overflow: hidden;
-    height: 150px
-}
-
 .played .content-image img {
     filter: grayscale(1)
 }
@@ -240,6 +228,12 @@
     border-radius: 50%
 }
 
+#masterlist .content-credits {
+    background-color: var(--group-colorop50);
+    text-shadow: 1px 1px var(--group-color);
+    outline: var(--large) solid var(--group-color50);
+}
+
 .content-families {
     display: flex;
     flex-direction: column;
@@ -256,26 +250,16 @@
     overflow: auto;
 }
 
-#directory .content-credits {
+.content-credits {
     height: 150px;
     width: 150px
-}
-
-#masterlist .content-credits {
-    height: 100px;
-    width: 100px
 }
 
 .content-image:hover .content-credits {
     display: flex
 }
 
-#directory .content-image img {
-    width: 200px;
-    height: 200px;
-}
-
-#directory .content-image {
+.content-image {
     width: 200px;
     height: 200px;
     border-radius: 100%;
@@ -284,7 +268,8 @@
 
 .content-image img {
     object-position: center center;
-    border-radius: 100%;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     filter: grayscale(0.65)
 }

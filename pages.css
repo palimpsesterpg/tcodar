@@ -53,12 +53,12 @@
     color: var(--white)
 }
 
-.filter h3 {
+.filter h4 {
     grid-area: 1 / 1 / 6 / 6
 }
 
-.filter.families h3,
-.filter.decades h3 {
+.filter.families h4,
+.filter.decades h4 {
     grid-area: 1 / 1 / 2 / 11
 }
 
@@ -202,6 +202,13 @@
     height: 150px
 }
 
+#masterlist .content-image {
+    width: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 150px
+}
+
 .played .content-image img {
     filter: grayscale(1)
 }
@@ -250,8 +257,8 @@
 }
 
 #directory .content-credits {
-    height: 200px;
-    width: 200px
+    height: 150px;
+    width: 150px
 }
 
 #masterlist .content-credits {
@@ -264,13 +271,13 @@
 }
 
 #directory .content-image img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 #directory .content-image img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     overflow: hidden
 }

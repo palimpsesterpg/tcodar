@@ -14,6 +14,7 @@
 
 .filter {
     max-height: 75px;
+    overflow: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.25rem;
@@ -227,7 +228,7 @@
 #masterlist .content-credits {
     background-color: var(--group-colorop50);
     text-shadow: 1px 1px var(--group-color);
-    outline: var(--large) solid var(--group-color50);
+    outline: var(--large) solid var(--group-colorop50);
 }
 
 .content-families {

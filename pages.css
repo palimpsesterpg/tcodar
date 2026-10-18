@@ -184,7 +184,7 @@
     filter: grayscale(1)
 }
 
-.item.res img {
+.item.booked img {
     filter: grayscale(0.75)
 }
 
@@ -270,7 +270,7 @@
 }
 
 .played.item:before,
-.res.item:before,
+.booked.item:before,
 .free.item:before {
     content: '';
     height: 4.5px;
@@ -309,23 +309,15 @@
     content: 'libre'
 }
 
-.res .item-content:before {
+.booked .item-content:before {
     content: 'réservé.e'
 }
 
-.played.item:before {
+.played.item:before, .played .item-content:before {
     background-color: red
 }
 
-.played .item-content:before {
-    background-color: red
-}
-
-.res.item:before {
-    background-color: orange
-}
-
-.res .item-content:before {
+.booked.item:before, .booked .item-content:before {
     background-color: orange
 }
 

@@ -276,7 +276,8 @@
     height: 4.5px;
     width: 4.5px;
     position: absolute;
-    bottom: var(--medium);
+    bottom: var(--large);
+    left: 50%;
     border: 0.5px solid var(--white);
     z-index: 99;
     border-radius: 100%

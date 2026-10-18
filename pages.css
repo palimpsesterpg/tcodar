@@ -12,11 +12,6 @@
     gap: var(--xsmall)
 }
 
-.filter .sans {
-    background-color: var(--co1-200);
-    color: var(--white)
-}
-
 .filter {
     display: flex;
     gap: 0.25rem;
@@ -35,6 +30,14 @@
     text-align: center;
     border-radius: var(--large)
 }
+
+.families div {
+    background-color: var(--co1-100);
+    text-transform: lowercase;
+}
+
+.filter .sans {background-color: var(--co1-200);
+    color: var(--white)}
 
 .filter .active {
     font-weight: 700;

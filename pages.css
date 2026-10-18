@@ -368,7 +368,7 @@
 }
 
 .content-origines {
-    font-family: var(--var);
+    font-family: var(--display);
     font-size: var(--xlarge);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -504,7 +504,7 @@
 
 .content-player a {
     font-weight: 900;
-    font-family: var(--var);
+    font-family: var(--display);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px;

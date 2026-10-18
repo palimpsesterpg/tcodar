@@ -3,12 +3,8 @@
     gap: var(--xsmall)
 }
 
-#directory .page-filters {
+.page-filters {
     grid-template-columns: repeat(2, 1fr)
-}
-
-#masterlist .page-filters {
-    grid-template-columns: repeat(3, 1fr)
 }
 
 .filter .sans {
@@ -525,5 +521,7 @@ fam {
 }
 
 #masterlist .item {
-    border: 0.5px solid var(--group-color)
+    outline: 0.5px solid var(--group-color);
+    margin: 0.5px;
+    border: var(--xsmall) solid var(--light);
 }

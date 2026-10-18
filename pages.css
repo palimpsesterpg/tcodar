@@ -2,11 +2,13 @@
     flex: 1;
     min-height: 0;
     display: flex;
+    gap: var(--large)
 }
 
 .page-filters {
     display: flex;
     flex-direction: column;
+    width: 100px;
     gap: var(--xsmall)
 }
 

@@ -276,7 +276,7 @@
     height: 4.5px;
     width: 4.5px;
     position: absolute;
-    top: var(--medium);
+    bottom: var(--medium);
     border: 0.5px solid var(--white);
     z-index: 99;
     border-radius: 100%

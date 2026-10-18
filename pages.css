@@ -1,10 +1,13 @@
-.page-filters {
-    display: grid;
-    gap: var(--xsmall)
+.page-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
 }
 
 .page-filters {
-    grid-template-columns: repeat(2, 1fr)
+    display: flex;
+    flex-direction: column;
+    gap: var(--xsmall)
 }
 
 .filter .sans {
@@ -13,23 +16,10 @@
 }
 
 .filter {
-    max-height: 75px;
-    overflow: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
     gap: 0.25rem;
-    align-content: start;
-    align-items: start
-}
-
-.filter.families {
-    grid-area: 3 / 1 / 4 / 3;
-    max-height: 100%;
-    grid-template-columns: repeat(10, 1fr)
-}
-
-.filter.decades {
-    grid-template-columns: repeat(10, 1fr)
+    flex-direction: column;
+    justify-content: stretch;
 }
 
 .filter div {
@@ -48,15 +38,6 @@
     font-weight: 700;
     background-color: var(--co1);
     color: var(--white)
-}
-
-.filter h4 {
-    grid-area: 1 / 1 / 6 / 6
-}
-
-.filter.families h4,
-.filter.decades h4 {
-    grid-area: 1 / 1 / 2 / 11
 }
 
 .page-items {

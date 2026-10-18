@@ -167,6 +167,7 @@
     --group-color-300: #ee4753;
     --group-color-400: #ea1a27;
     --group-color: #c1121f;
+    --group-colorop50: #c1121f80;
     --group-color-600: #9f0f18;
     --group-color-700: #800c14;
     --group-color-800: #60090f;
@@ -181,6 +182,7 @@
     --group-color-300: #99bdd2;
     --group-color-400: #80acc7;
     --group-color: #669bbc;
+    --group-colorop50: #669bbc80;
     --group-color-600: #4a84a8;
     --group-color-700: #3b6a87;
     --group-color-800: #2c4f65;
@@ -195,6 +197,7 @@
     --group-color-300: #DE964A;
     --group-color-400: #CD7C26;
     --group-color: #9E5F1D;
+    --group-colorop50: #9f611d80;
     --group-color-600: #855018;
     --group-color-700: #6A4013;
     --group-color-800: #50300F;

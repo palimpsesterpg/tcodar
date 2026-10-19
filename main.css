@@ -1671,7 +1671,7 @@ fslarge {
 
 .page-home.seven {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
     grid-template-columns: repeat(6, 1fr)
 }
 
@@ -1689,15 +1689,15 @@ fslarge {
     width: -webkit-fill-available;
 }
 
-.phseven-city {width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: var(--display);
-text-transform: uppercase}
-
-.div.clock.small div.date {font-family: var(--display);
-text-transform: lowercase}
+.phseven-city {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    flex-direction: column;
+    text-transform: uppercase
+}
 
 #page-qeel {
     display: flex;

@@ -7,50 +7,57 @@
     <title>TCODAR ⊹ FRONT PAGE</title>
     <link href="main.css" rel="stylesheet" />
     <link href="fonts.css" rel="stylesheet" />
-    <link rel='stylesheet'
-        href='https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
-    <link rel='stylesheet'
-        href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-straight/css/uicons-thin-straight.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
 </head>
 
-<div class="page-home" id="page-home">
-    <div class="inside">
-        <div class="page-home one">one</div>
-        <div class="page-home two">two</div>
-        <div class="page-home three">three</div>
-        <div class="page-home four">four</div>
-        <div class="page-home five">five</div>
-        <div class="page-home six">six</div>
-        <div class="page-home seven">
-            <div class="phseven-city">London, United Kingdom<br />Europe</div>
-            <div class="phseven-city">Marrakech, Morocco<br />Africa</div>
-            <div class="phseven-city">New York, United States of America<br />America</div>
-            <div class="phseven-city">Rio de Janeiro, Brazil<br />America</div>
-            <div class="phseven-city">Singapore, Singapore<br />Asia</div>
-            <div class="phseven-city">Sydney, Australia<br />Oceania</div>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Europe%2FLondon"
-                width="100%" height="90" frameborder="0" seamless></iframe>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Africa%2FCasablanca"
-                width="100%" height="90" frameborder="0" seamless></iframe>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=America%2FNew_York"
-                width="100%" height="90" frameborder="0" seamless></iframe>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=America%2FSao_Paulo"
-                width="100%" height="90" frameborder="0" seamless></iframe>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Asia%2FSingapore"
-                width="100%" height="90" frameborder="0" seamless></iframe>
-            <iframe
-                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Australia%2FSydney"
-                width="100%" height="90" frameborder="0" seamless></iframe>
+<body>
+    <div class="page-home" id="page-home">
+        <div class="inside">
+            <div class="page-home one">one</div>
+            <div class="page-home two">two</div>
+            <div class="page-home three">three</div>
+            <div class="page-home four">four</div>
+            <div class="page-home five">five</div>
+            <div class="page-home six">six</div>
+            <div class="page-home seven" id="station">
+                <div class="phseven-city" data-tz="Europe/London">London<span>United
+                        Kingdom</span><span>Europe</span><span class="heure"></span></div>
+                <div class="phseven-city" data-tz="Africa/Casablanca">
+                    Marrakech<span>Morocco</span><span>Africa</span><span class="heure"></span></div>
+                <div class="phseven-city" data-tz="America/New_York">New York<span>United States of
+                        America</span><span>America</span><span class="heure"></span></div>
+                <div class="phseven-city" data-tz="America/Sao_Paulo">Rio de
+                    Janeiro<span>Brazil</span><span>America</span><span class="heure"></span></div>
+                <div class="phseven-city" data-tz="Asia/Singapore">Singapore<span>Singapore</span><span>Asia</span><span
+                        class="heure"></span></div>
+                <div class="phseven-city" data-tz="Australia/Sydney">
+                    Sydney<span>Australia</span><span>Oceania</span><span class="heure"></span></div>
+            </div>
         </div>
     </div>
-</div>
 
+    <script src="main.js"></script>
+    <script>
+        const villes = document.querySelectorAll("#station .phseven-city");
+
+        function actualiser() {
+            const maintenant = new Date();
+            villes.forEach((ville) => {
+                ville.querySelector(".heure").textContent =
+                    maintenant.toLocaleTimeString("fr-FR", {
+                        timeZone: ville.dataset.tz,
+                        hour: "2-digit",
+                        minute: "2-digit",
+                    });
+            });
+        }
+
+        actualiser();
+        setInterval(actualiser, 1000);
+    </script>
 </body>
-<script src="main.js"></script>
 
 </html>

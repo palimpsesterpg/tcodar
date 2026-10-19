@@ -1722,10 +1722,20 @@ x2large,
     align-items: center;
     justify-content: center;
     gap: var(--large);
+    flex-wrap: wrap;
 }
 
 .details-modal>* {
-    width: 30%
+    width: 30%;
+    text-align: center;
+    flex: 1 1 calc(100%/3 - var(--small))
+}
+
+.details-modal a {
+    flex: 1 1 100%;
+    font-family: var(--spe);
+    font-size: var(--xlarge);
+    color: var(--black)
 }
 
 .details-modal div {
@@ -1763,8 +1773,9 @@ x2large,
     background-color: var(--group-color);
     color: var(--white);
     font-weight: 700;
-    padding: 0 var(--3xsmall);
+    padding: var(--3xsmall);
     border-radius: var(--small);
+    font-size: var(--small);
     text-transform: lowercase
 }
 

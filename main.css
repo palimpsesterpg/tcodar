@@ -1681,6 +1681,7 @@ x2large,
 
 #page-home .two {
     grid-area: 3 / 1 / 4 / 3;
+    height: 107px;
 }
 
 #page-home .six {
@@ -1717,16 +1718,8 @@ x2large,
     border: 0.5px solid var(--darkneutral);
 }
 
-#page-home .three div {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-}
-
 .button-modal {
-    flex: 100px;
+    width: 75px;
     aspect-ratio: 1 / 1;
     overflow: hidden;
 }
@@ -1870,8 +1863,6 @@ x2large,
 #page-home .one div {
     background-color: var(--whiteop75);
     padding: var(--2xlarge);
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
     border: var(--2xsmall) solid var(--white)
 }
 
@@ -1886,12 +1877,22 @@ x2large,
 }
 
 #page-home .five div,
-#page-home .five three,
+#page-home .three div,
+#page-home .two div,
 #page-home .one span {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: block;
     overflow: auto
+}
+
+#page-home .two div {
+    text-align: justify
+}
+
+#page-home .three div {
+    display: flex;
+    flex-direction: column;
 }
 
 #page-home .five span {

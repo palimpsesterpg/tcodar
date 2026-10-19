@@ -1808,7 +1808,7 @@ x2large,
 }
 
 .details-modal div {
-font-family: var(--mono);
+    font-family: var(--mono);
     text-transform: lowercase;
     font-size: var(--large);
     color: var(--darkerneutral);
@@ -1889,6 +1889,8 @@ font-family: var(--mono);
 
 #page-home .one div {
     background-color: var(--whiteop75);
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     padding: var(--2xlarge);
     border: var(--2xsmall) solid var(--white)
 }

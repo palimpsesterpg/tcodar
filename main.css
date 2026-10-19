@@ -1704,13 +1704,9 @@ fslarge {
     font-size: var(--large);
     flex-direction: column;
     padding: var(--xsmall);
-    filter: grayscale(1);
+    filter: grayscale(0.75);
     box-sizing: border-box;
     text-transform: uppercase
-}
-
-.phseven-city:hover {
-    filter: grayscale(0)
 }
 
 .phseven-city>* {

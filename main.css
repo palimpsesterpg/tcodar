@@ -1732,12 +1732,12 @@ x2large,
     margin-top: var(--2xlarge)
 }
 
-.page-qeel-bloc {
+#page-qeel>div {
     z-index: 99;
     height: 300px
 }
 
-.page-qeel-bloc.one {
+#page-qeel .one {
     flex: 1;
     border: 1px solid var(--neutral);
     outline: 2.5px solid var(--white);
@@ -1747,17 +1747,17 @@ x2large,
     border-radius: var(--large)
 }
 
-.page-qeel-bloc.one a {
+#page-qeel .one a {
     text-transform: uppercase;
     letter-spacing: .5px;
     padding-left: .5px
 }
 
-.page-qeel-bloc.one a strong {
+#page-qeel .one a strong {
     font-weight: 700
 }
 
-.page-qeel-bloc.two {
+#page-qeel .two {
     width: 100%;
     height: auto;
     display: flex;
@@ -1765,7 +1765,7 @@ x2large,
     gap: var(--large)
 }
 
-.page-qeel-bloc.two div {
+#page-qeel .two div {
     background-color: var(--group-color-50);
     color: var(--group-color);
     padding: var(--large);
@@ -1778,20 +1778,20 @@ x2large,
     margin: 2.5px
 }
 
-.page-qeel-bloc.three {
+#page-qeel .three {
     display: flex;
     gap: var(--large);
     flex-direction: column
 }
 
-.page-qeel-bloc.four {
+#page-qeel .four {
     display: flex;
     gap: var(--large);
     height: auto;
     width: 100%
 }
 
-.page-qeel-bloc.four div {
+#page-qeel .four div {
     display: flex;
     align-items: center;
     flex: 1;
@@ -1809,7 +1809,7 @@ x2large,
     margin: 2.5px
 }
 
-.page-qeel-bloc.four strong {
+#page-qeel .four strong {
     color: var(--white)
 }
 

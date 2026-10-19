@@ -1936,6 +1936,10 @@ x2large,
     align-items: center
 }
 
+#page-home .five span:hover {
+    background-color: var(--light)
+}
+
 #page-home .five date {
     text-transform: lowercase;
     font-weight: 700;
@@ -1954,6 +1958,7 @@ x2large,
     font-weight: 300;
     height: 37.5px;
     position: relative;
+    font-size: var(--small);
     display: flex;
     align-items: center;
     flex: 1

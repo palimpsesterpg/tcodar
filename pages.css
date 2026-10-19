@@ -52,7 +52,7 @@
     display: grid;
     grid-auto-rows: max-content;
     align-content: start;
-    gap: var(--large);
+    gap: var(--xsmall);
     flex: 1;
     min-height: 0;
     overflow: auto

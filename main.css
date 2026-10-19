@@ -1676,7 +1676,7 @@ x2large,
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--xsmall);
+    gap: var(--xsmall)
 }
 
 #page-home .two {
@@ -1685,22 +1685,23 @@ x2large,
     padding: var(--large);
     box-sizing: border-box;
     background-color: var(--co1);
-    color: var(--co1-50)
+    color: var(--co1-100)
 }
 
 #page-home .two span {
     font-family: var(--serif);
     text-transform: lowercase;
     color: var(--white);
+    font-weight: 700;
     padding: var(--xsmall)
 }
 
 #page-home .six {
-    grid-area: 4 / 1 / 4 / 4;
+    grid-area: 4 / 1 / 4 / 4
 }
 
 #page-home .eight {
-    grid-area: 4 / 4 / 5 / 6;
+    grid-area: 4 / 4 / 5 / 6
 }
 
 #page-home .three strong,
@@ -1711,7 +1712,7 @@ x2large,
     display: flex;
     box-sizing: border-box;
     color: var(--white);
-    align-items: center;
+    align-items: center
 }
 
 #page-home .three strong {
@@ -1730,13 +1731,13 @@ x2large,
 #page-home .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--darkneutral);
+    border: 0.5px solid var(--darkneutral)
 }
 
 .button-modal {
     width: 75px;
     aspect-ratio: 1 / 1;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .button-modal img {
@@ -1754,7 +1755,7 @@ x2large,
     box-sizing: border-box;
     background: var(--white);
     font-size: var(--medium);
-    color: var(--lightdark);
+    color: var(--lightdark)
 }
 
 .admin-modal[open]>div {
@@ -1772,7 +1773,7 @@ x2large,
     background-color: transparent;
     color: inherit;
     border: 0px;
-    padding: 0px;
+    padding: 0px
 }
 
 .admin-modal .inside-modal {
@@ -1792,7 +1793,7 @@ x2large,
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .details-modal>* {
@@ -1827,7 +1828,7 @@ x2large,
     color: var(--darkerneutral);
     padding: var(--3xsmall);
     letter-spacing: var(--3xsmall);
-    padding-right: 0px !important;
+    padding-right: 0px !important
 }
 
 .admin-modal .inside-modal div {
@@ -1861,7 +1862,8 @@ x2large,
 }
 
 .inside-modal a {
-    color: var(--group-color)
+    color: var(--group-color);
+        padding: var(--xsmall)
 }
 
 .admin-modal .inside-modal img {
@@ -1872,7 +1874,7 @@ x2large,
 }
 
 #page-home .five {
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 4 / 2 / 6
 }
 
 #page-home .four {
@@ -1886,7 +1888,7 @@ x2large,
     margin: 0 auto;
     padding: var(--large);
     background-color: var(--white);
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 #page-home .one div {
@@ -1898,7 +1900,7 @@ x2large,
 }
 
 #page-home .one span {
-    text-align: justify;
+    text-align: justify
 }
 
 #page-home .five div {
@@ -1918,18 +1920,20 @@ x2large,
 }
 
 #page-home .two div {
-    text-align: justify
+    text-align: justify;
+    line-height: 1.45;
+    font-weight: 300
 }
 
 #page-home .three div {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-home .five span {
     color: var(--co1);
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 #page-home .five date {
@@ -1942,7 +1946,7 @@ x2large,
     box-sizing: border-box;
     width: 75px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 #page-home .five intel {
@@ -1952,7 +1956,7 @@ x2large,
     position: relative;
     display: flex;
     align-items: center;
-    flex: 1;
+    flex: 1
 }
 
 #page-home .five intel:before {
@@ -1963,7 +1967,7 @@ x2large,
     position: absolute;
     left: -1.15rem;
     height: 5px;
-    width: 5px;
+    width: 5px
 }
 
 #page-home .five .ipt {
@@ -1971,7 +1975,7 @@ x2large,
 }
 
 #page-home .five .ipt intel:before {
-    background-color: var(--black);
+    background-color: var(--black)
 }
 
 #page-home .five .ipt intel {

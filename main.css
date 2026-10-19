@@ -684,10 +684,6 @@ x2large,
     transition-duration: 2.5s
 }
 
-.inside>div {
-    z-index: 99
-}
-
 #categories {
     display: flex;
     gap: var(--2xlarge);
@@ -1697,21 +1693,47 @@ x2large,
 }
 
 #page-home .five span {
-    color: var(--co1)
+    color: var(--co1);
+    display: flex;
+    align-items: center;
 }
 
 #page-home .five date {
     text-transform: lowercase;
-    font-weight: 700
+    font-weight: 700;
+    padding-right: var(--large);
+    border-right: 0.5px solid var(--neutral);
+    margin-right: var(--large);
+    height: 35px;
+    display: flex;
+    align-items: center;
 }
 
 #page-home .five intel {
     text-transform: uppercase;
-    font-weight: 300
+    font-weight: 300;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#page-home .five intel:before {
+    content: '';
+    background-color: var(--co1);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -1.15rem;
+    height: 5px;
+    width: 5px;
 }
 
 #page-home .five .ipt {
     color: var(--black)
+}
+
+#page-home .five .ipt intel:before {
+    background-color: var(--black);
 }
 
 #page-home .five .ipt intel {
@@ -1792,9 +1814,9 @@ x2large,
     margin-top: var(--2xlarge)
 }
 
-#page-qeel>div {
-    z-index: 99;
-    height: 300px
+#page-qeel>div,
+#page-home>div {
+    z-index: 99
 }
 
 #page-qeel .one {

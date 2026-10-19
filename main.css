@@ -1692,11 +1692,18 @@ fslarge {
 .phseven-city {
     width: 100%;
     display: flex;
+    color: var(--co1);
+    font-weight: 700;
     align-items: center;
     justify-content: center;
     font-family: var(--display);
     flex-direction: column;
     text-transform: uppercase
+}
+
+.phseven-city .time {
+    color: var(--black);
+    font-weight: 900;
 }
 
 #page-qeel {

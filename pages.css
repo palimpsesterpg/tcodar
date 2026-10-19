@@ -66,6 +66,14 @@
     grid-template-columns: repeat(5, 1fr)
 }
 
+@media (width < 1000px) {
+
+    #directory .page-items,
+    #masterlist .page-items {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
 .item {
     width: 100%;
     border-radius: var(--xsmall);
@@ -313,11 +321,13 @@
     content: 'réservé.e'
 }
 
-.played.item:before, .played .item-content:before {
+.played.item:before,
+.played .item-content:before {
     background-color: red
 }
 
-.booked.item:before, .booked .item-content:before {
+.booked.item:before,
+.booked .item-content:before {
     background-color: orange
 }
 

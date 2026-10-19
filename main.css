@@ -1936,8 +1936,8 @@ x2large,
     align-items: center
 }
 
-#page-home .five span:hover {
-    background-color: var(--light)
+#page-home .five intel:hover {
+    font-size: var(--medium)
 }
 
 #page-home .five date {

@@ -1778,6 +1778,7 @@ x2large,
 .admin-modal .inside-modal {
     display: flex;
     gap: var(--large);
+    align-items: center;
     width: 75%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
@@ -1804,12 +1805,13 @@ x2large,
     flex: 1 1 100%;
     font-family: var(--spe);
     font-size: var(--large);
+    text-transform: uppercase;
     color: var(--black)
 }
 
 .details-modal div {
     font-family: var(--mono);
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-size: var(--large);
     color: var(--darkerneutral);
     font-weight: 100;
@@ -1819,7 +1821,7 @@ x2large,
 
 .details-modal span {
     font-family: var(--display);
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: var(--small);
     background-color: var(--neutral);
     color: var(--darkerneutral);
@@ -1864,7 +1866,7 @@ x2large,
 
 .admin-modal .inside-modal img {
     width: 150px;
-    height: 100px;
+    height: 75px;
     object-fit: cover;
     border-radius: var(--xsmall)
 }

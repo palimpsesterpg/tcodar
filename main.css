@@ -1805,15 +1805,24 @@ x2large,
 }
 
 .details-modal div {
-    font-family: var(--mono);
+font-family: var(--mono);
     text-transform: lowercase;
     font-size: var(--large);
+    color: var(--darkerneutral);
+    font-weight: 100;
+    border-bottom: 0.5px solid var(--neutral);
+    padding-bottom: var(--xsmall)
 }
 
 .details-modal span {
     font-family: var(--display);
     text-transform: uppercase;
     font-size: var(--small);
+    background-color: var(--neutral);
+    color: var(--darkerneutral);
+    padding: var(--3xsmall);
+    letter-spacing: var(--3xsmall);
+    padding-right: 0px !important;
 }
 
 .admin-modal .inside-modal div {
@@ -1825,6 +1834,7 @@ x2large,
 }
 
 .inside-modal pseudo {
+    text-transform: capitalize;
     color: var(--group-color);
     font-family: var(--serif);
     font-size: var(--xlarge)
@@ -1839,7 +1849,7 @@ x2large,
     background-color: var(--group-color);
     color: var(--white);
     font-weight: 900;
-    padding: var(--2xsmall);
+    padding: 0 var(--xsmall);
     border-radius: var(--small);
     font-size: var(--small);
     text-transform: lowercase

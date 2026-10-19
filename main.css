@@ -1689,6 +1689,16 @@ fslarge {
     width: -webkit-fill-available;
 }
 
+.phseven-city {width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: var(--display);
+text-transform: uppercase}
+
+.div.clock.small div.date {font-family: var(--display);
+text-transform: lowercase}
+
 #page-qeel {
     display: flex;
     position: relative;

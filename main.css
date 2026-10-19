@@ -1647,7 +1647,7 @@ x2large,
     text-shadow: 2px 2px var(--white)
 }
 
-#page-home {
+#page-home .inside {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);

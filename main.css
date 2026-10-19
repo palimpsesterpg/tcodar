@@ -1701,21 +1701,19 @@ fslarge {
     font-family: var(--display);
     font-size: var(--large);
     flex-direction: column;
+    padding: var(--xsmall);
     text-transform: uppercase
 }
 
 .phseven-city>* {
-    background-color: var(--whiteop75) padding: var(--3xsmall);
-}
-
-.phseven-city img {
-    height: 15px
+    background-color: var(--whiteop75);
+    padding: var(--3xsmall);
 }
 
 .phseven-city .time>* {
     background-color: var(--dark);
     color: var(--white);
-    padding: var(--3xsmall);
+    padding: 0 var(--3xsmall);
     font-weight: 900;
     margin: 0 var(--3xsmall);
 }

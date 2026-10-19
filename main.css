@@ -1704,8 +1704,25 @@ x2large,
     padding: 0px;
 }
 
-.admin-modal div {
+.admin-modal .inside-modal {
     display: flex;
+    gap: var(--large)
+}
+
+.admin-modal .inside-modal div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xsmall)
+}
+
+.admin-modal pseudo {
+    color: var(--group-color);
+    font-size: var(--2xlarge)
+}
+
+.admin-modal .inside-modal img {
+    width: 150px;
+    height: 100px;
 }
 
 #page-home .five {

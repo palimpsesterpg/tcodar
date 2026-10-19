@@ -1692,7 +1692,7 @@ fslarge {
 .phseven-city {
     width: 100%;
     display: flex;
-    color: var(--co1);
+    color: var(--dark);
     font-weight: 700;
     align-items: center;
     justify-content: center;
@@ -1703,7 +1703,7 @@ fslarge {
 }
 
 .phseven-city .time {
-    background-color: var(--co1);
+    background-color: var(--dark);
     color: var(--white);
     padding: var(--3xsmall);
     font-weight: 900;

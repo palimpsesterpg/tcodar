@@ -283,38 +283,32 @@ a:hover {
 
 h1,
 .h1 {
-    font-size: var(--3xlarge) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--2xlarge) !important;
 }
 
 h2,
 .h2 {
-    font-size: var(--2xlarge) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--xlarge) !important;
 }
 
 h3,
 .h3 {
-    font-size: var(--xlarge) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--large) !important;
 }
 
 h4,
 .h4 {
-    font-size: var(--large) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--medium) !important;
 }
 
 h5,
 .h5 {
-    font-size: var(--medium) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--small) !important;
 }
 
 h6,
 .h6 {
-    font-size: var(--small) !important;
-    margin: var(--large) 0 !important
+    font-size: var(--xsmall) !important;
 }
 
 h1,
@@ -333,7 +327,7 @@ h6,
     text-align: center;
     display: block;
     color: var(--black) !important;
-    font-weight: 100 !important;
+    margin: 0 !important;
     font-family: var(--spe)
 }
 
@@ -380,18 +374,6 @@ xlarge,
 x2large,
 .x2large {
     font-size: var(--2xlarge)
-}
-
-fssmalll {
-    font-size: var(--small)
-}
-
-fsmedium {
-    font-size: var(--medium)
-}
-
-fslarge {
-    font-size: var(--large)
 }
 
 .d-flex {

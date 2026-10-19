@@ -1863,7 +1863,7 @@ x2large,
 
 .inside-modal a {
     color: var(--group-color);
-        padding: var(--xsmall)
+    padding: var(--xsmall)
 }
 
 .admin-modal .inside-modal img {
@@ -2071,6 +2071,17 @@ x2large,
     border-radius: var(--large)
 }
 
+#logged-in-user-list,
+#l-connected-members {
+    height: 100%
+}
+
+#logged-in-user-list div,
+#l-connected-members div {
+    height: 100%;
+    overflow: auto
+}
+
 #page-qeel .one a {
     text-transform: uppercase;
     letter-spacing: .5px;
@@ -2128,9 +2139,7 @@ x2large,
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 2.5px;
-    padding-left: 2.5px;
-    outline: 2.5px solid var(--white);
-    margin: 2.5px
+    padding-left: 2.5px
 }
 
 #page-qeel .four strong {

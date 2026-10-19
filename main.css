@@ -1691,13 +1691,17 @@ x2large,
 }
 
 .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.button-modal,
+.close-modal {
     background-color: transparent;
     color: inherit;
     border: 0px;
     padding: 0px;
-    position: absolute;
-    top: 0;
-    right: 0
 }
 
 .admin-modal div {

@@ -1710,7 +1710,34 @@ x2large,
 .admin-modal .inside-modal {
     display: flex;
     gap: var(--large);
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
+    border: 0.5px solid var(--group-color);
+    padding: var(--large)
+}
+
+.details-modal {
+    display: flex;
+    padding: var(--2xlarge);
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+}
+
+.details-modal>* {
+    width: 30%
+}
+
+.details-modal div {
+    font-family: var(--mono);
+    text-transform: lowercase;
+    font-size: var(--large);
+}
+
+.details-modal span {
+    font-family: var(--display);
+    text-transform: uppercase;
+    font-size: var(--small);
 }
 
 .admin-modal .inside-modal div {
@@ -1725,6 +1752,11 @@ x2large,
     color: var(--group-color);
     font-family: var(--serif);
     font-size: var(--2xlarge)
+}
+
+.admin-modal dtls {
+    display: flex;
+    gap: var(--xsmall)
 }
 
 .admin-modal dtls span {

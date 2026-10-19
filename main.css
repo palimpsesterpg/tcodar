@@ -602,7 +602,6 @@ x2large,
 }
 
 #page-body,
-#page-home,
 #page-footer {
     padding: var(--large);
     width: 1000px;
@@ -661,7 +660,7 @@ x2large,
 .forumlist:after,
 .post:after,
 #page-qeel:after,
-#page-home .inside:after,
+#page-home:after,
 .memberlist:after {
     position: absolute;
     content: "";
@@ -678,7 +677,7 @@ x2large,
 .forumlist:hover:after,
 .post:hover:after,
 #page-qeel:hover:after,
-#page-home .inside:hover:after,
+#page-home:hover:after,
 .memberlist:hover:after {
     box-shadow: 0 0 0.25rem 0.15rem var(--co1-50);
     border: 1px solid var(--co1-100);
@@ -1674,7 +1673,7 @@ x2large,
     padding: var(--large)
 }
 
-#page-home .one five {
+#page-home .five div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1706,7 +1705,7 @@ x2large,
     font-weight: 600
 }
 
-#page-home .inside {
+#page-home {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);

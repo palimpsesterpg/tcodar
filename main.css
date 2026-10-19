@@ -1682,12 +1682,17 @@ x2large,
 #page-home .two {
     grid-area: 3 / 1 / 4 / 3;
     height: 118px;
+    padding: var(--large);
+    box-sizing: border-box;
+    background-color: var(--co1);
+    color: var(--co1-50)
 }
 
 #page-home .two span {
     font-family: var(--serif);
     text-transform: lowercase;
-    color: var(--black)
+    color: var(--white);
+    padding: var(--xsmall)
 }
 
 #page-home .six {

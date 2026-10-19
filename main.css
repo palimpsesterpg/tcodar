@@ -1772,7 +1772,7 @@ x2large,
 .inside-modal dtls span {
     background-color: var(--group-color);
     color: var(--white);
-    font-weight: 700;
+    font-weight: 900;
     padding: var(--2xsmall);
     border-radius: var(--small);
     font-size: var(--small);

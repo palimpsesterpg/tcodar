@@ -1649,6 +1649,8 @@ x2large,
 
 #page-home {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: var(--large)
 }
 
@@ -1656,6 +1658,7 @@ x2large,
     display: grid;
     width: 100%;
     gap: var(--xsmall);
+    grid-area: 1 / 5 / 6 / 6;
     grid-template-columns: repeat(6, 1fr)
 }
 
@@ -1667,11 +1670,21 @@ x2large,
 }
 
 #page-home .one {
-    background-image: url(Images/tcodar-body.png)
+    background-image: url(Images/tcodar-body.png);
+    background-size: cover;
+    background-position: center center;
+    grid-area: 1 / 1 / 2 / 4
 }
 
 #page-home .one div {
-    background-color: var(--whiteop75)
+    background-color: var(--whiteop75);
+    padding: var(--large)
+}
+
+#page-home .one five {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #page-home .five div,

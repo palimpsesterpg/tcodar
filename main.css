@@ -1742,7 +1742,7 @@ x2large,
 
 #page-home {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto auto auto auto;
     position: relative;
     gap: var(--large);

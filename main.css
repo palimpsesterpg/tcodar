@@ -283,32 +283,32 @@ a:hover {
 
 h1,
 .h1 {
-    font-size: var(--2xlarge) !important;
+    font-size: var(--2xlarge) !important
 }
 
 h2,
 .h2 {
-    font-size: var(--xlarge) !important;
+    font-size: var(--xlarge) !important
 }
 
 h3,
 .h3 {
-    font-size: var(--large) !important;
+    font-size: var(--large) !important
 }
 
 h4,
 .h4 {
-    font-size: var(--medium) !important;
+    font-size: var(--medium) !important
 }
 
 h5,
 .h5 {
-    font-size: var(--small) !important;
+    font-size: var(--small) !important
 }
 
 h6,
 .h6 {
-    font-size: var(--xsmall) !important;
+    font-size: var(--xsmall) !important
 }
 
 h1,
@@ -1650,7 +1650,7 @@ x2large,
     display: grid;
     width: 100%;
     gap: var(--xsmall);
-    grid-area: 1 / 5 / 6 / 6;
+    grid-area: 5 / 1 / 6 / 6;
     grid-template-columns: repeat(6, 1fr)
 }
 
@@ -1665,8 +1665,18 @@ x2large,
     background-image: url(Images/tcodar-body.png);
     background-size: cover;
     background-position: center center;
-    grid-area: 1 / 1 / 2 / 4
+    grid-area: 1 / 1 / 2 / 3
 }
+
+#page-home .two {}
+
+#page-home .three {}
+
+#page-home .four {}
+
+#page-home .five {}
+
+#page-home .six {}
 
 #page-home .one div {
     background-color: var(--whiteop75);
@@ -1676,7 +1686,7 @@ x2large,
 #page-home .five div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 #page-home .five div,
@@ -1687,7 +1697,7 @@ x2large,
 }
 
 #page-home .five span {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 #page-home .five date {
@@ -1701,7 +1711,7 @@ x2large,
 }
 
 #page-home .five .ipt {
-    color: var(--black);
+    color: var(--black)
 }
 
 #page-home .five .ipt intel {
@@ -1710,9 +1720,8 @@ x2large,
 
 #page-home {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: var(--large);
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     position: relative;
     gap: var(--large);
     padding: var(--large);

@@ -35,7 +35,7 @@ function HeaderNav() {
   });
 }
 
-const cities = document.querySelectorAll("#clockwall .phseven-city");
+const cities = document.querySelectorAll("#page-home .seven .phseven-city");
 
 function ClockWall() {
   const maintenant = new Date();

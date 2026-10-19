@@ -1652,40 +1652,50 @@ x2large,
     gap: var(--large)
 }
 
-#station {
+#page-home .seven {
     display: grid;
     width: 100%;
     gap: var(--xsmall);
     grid-template-columns: repeat(6, 1fr)
 }
 
-#chrono {
+#page-home .five,
+#page-home .one {
     height: 200px;
     background-color: var(--white);
     padding: var(--large)
 }
 
-#chrono div {
+#page-home .one {
+    background-image: url(Images/tcodar-body.png)
+}
+
+#page-home .one div {
+    background-color: var(--whiteop75)
+}
+
+#page-home .five div,
+#page-home .one div {
     height: 100%;
     width: 100%;
     overflow: auto
 }
 
-#chrono span {
+#page-home .five span {
     color: var(--co1);
 }
 
-#chrono date {
+#page-home .five date {
     text-transform: lowercase;
     font-weight: 700
 }
 
-#chrono intel {
+#page-home .five intel {
     text-transform: uppercase;
     font-weight: 300
 }
 
-#chrono .ipt {
+#page-home .five .ipt {
     color: var(--co1);
     font-weight: 600
 }

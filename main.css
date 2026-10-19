@@ -1680,13 +1680,13 @@ x2large,
     display: flex;
     flex-direction: column;
     width: 75%;
-    height: 75%;
+    border: 0px;
     padding: var(--2xlarge);
-    border: var(--2xlarge) solid var(--whiteop75);
+    outline: var(--2xlarge) solid var(--whiteop75);
     box-sizing: border-box;
     background: var(--white);
     font-size: var(--medium);
-    color: var(--lightdark)
+    color: var(--lightdark);
 }
 
 .admin-modal[open]>div {
@@ -1763,6 +1763,8 @@ x2large,
     background-color: var(--group-color);
     color: var(--white);
     font-weight: 700;
+    padding: 0 var(--3xsmall);
+    border-radius: var(--small);
     text-transform: lowercase
 }
 

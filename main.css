@@ -1679,14 +1679,17 @@ x2large,
 .admin-modal[open] {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 50%;
+    width: 75%;
+    height: 75%;
     padding: var(--2xlarge);
     border: var(--2xlarge) solid var(--whiteop75);
     box-sizing: border-box;
     background: var(--white);
     font-size: var(--medium);
-    color: var(--lightdark);
+    color: var(--lightdark)
+}
+
+.admin-modal[open]>div {
     position: relative
 }
 
@@ -1706,23 +1709,36 @@ x2large,
 
 .admin-modal .inside-modal {
     display: flex;
-    gap: var(--large)
+    gap: var(--large);
+    width: 100%;
 }
 
 .admin-modal .inside-modal div {
     display: flex;
     flex-direction: column;
-    gap: var(--xsmall)
+    gap: var(--xsmall);
+    flex: 1;
+    align-items: center
 }
 
 .admin-modal pseudo {
     color: var(--group-color);
+    font-family: var(--serif);
     font-size: var(--2xlarge)
+}
+
+.admin-modal dtls span {
+    background-color: var(--group-color);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: lowercase
 }
 
 .admin-modal .inside-modal img {
     width: 150px;
     height: 100px;
+    object-fit: cover;
+    border-radius: var(--xsmall)
 }
 
 #page-home .five {

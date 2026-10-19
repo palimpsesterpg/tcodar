@@ -1677,8 +1677,13 @@ x2large,
 #page-home .one div {
     background-color: var(--whiteop75);
     padding: var(--2xlarge);
-    text-align: justify;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     border: var(--2xsmall) solid var(--white)
+}
+
+#page-home .one span {
+    text-align: justify;
 }
 
 #page-home .five div {
@@ -1688,7 +1693,7 @@ x2large,
 }
 
 #page-home .five div,
-#page-home .one div {
+#page-home .one span {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     overflow: auto

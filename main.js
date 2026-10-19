@@ -23,15 +23,33 @@ function initHeaderNav() {
 
   document.querySelectorAll('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
-      const key = headerTab.id; 
+      const key = headerTab.id;
 
-      categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
+      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
 
-      categories.querySelector(`.category[data-tab="${key}"]`)
-        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
     });
   });
 }
+
+function actualiser() {
+  const villes = document.querySelectorAll("#station .phseven-city");
+  const maintenant = new Date();
+  villes.forEach((ville) => {
+    ville.querySelector(".heure").textContent =
+      maintenant.toLocaleTimeString("fr-FR", {
+        timeZone: ville.dataset.tz,
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+  });
+}
+
+actualiser();
+setInterval(actualiser, 1000);
 
 initTabs();
 initHeaderNav();

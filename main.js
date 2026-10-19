@@ -28,9 +28,9 @@ function HeaderNav() {
       categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
 
       categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 }
@@ -40,12 +40,17 @@ const cities = document.querySelectorAll("#clockwall .phseven-city");
 function ClockWall() {
   const maintenant = new Date();
   cities.forEach((city) => {
-    city.querySelector(".time").textContent =
-      maintenant.toLocaleTimeString("fr-FR", {
+    const [h, m] = maintenant
+      .toLocaleTimeString("fr-FR", {
         timeZone: city.dataset.tz,
         hour: "2-digit",
         minute: "2-digit",
-      });
+        hourCycle: "h23",
+      })
+      .split(":");
+
+    city.querySelector("hour").textContent = h;
+    city.querySelector("min").textContent = m;
   });
 }
 

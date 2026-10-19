@@ -1702,6 +1702,8 @@ fslarge {
     text-transform: uppercase
 }
 
+.phseven-city img {}
+
 .phseven-city .time {
     background-color: var(--dark);
     color: var(--white);

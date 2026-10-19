@@ -1714,7 +1714,9 @@ x2large,
     padding-right: var(--large);
     border-right: 0.5px solid var(--neutral);
     margin-right: var(--large);
-    height: 35px;
+    height: 40px;
+    box-sizing: border-box;
+    width: 75px;
     display: flex;
     align-items: center;
 }
@@ -1725,6 +1727,7 @@ x2large,
     position: relative;
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 #page-home .five intel:before {

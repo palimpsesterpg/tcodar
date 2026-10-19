@@ -1,4 +1,4 @@
-function initTabs() {
+function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {
     const tabs = system.querySelectorAll('.tab');
     const contents = system.querySelectorAll('.tab-content');
@@ -17,7 +17,7 @@ function initTabs() {
   });
 }
 
-function initHeaderNav() {
+function HeaderNav() {
   const categories = document.querySelector('#categories');
   if (!categories) return;
 
@@ -35,21 +35,21 @@ function initHeaderNav() {
   });
 }
 
-function actualiser() {
-  const villes = document.querySelectorAll("#station .phseven-city");
+const cities = document.querySelectorAll("#clockwall .phseven-city");
+
+function ClockWall() {
   const maintenant = new Date();
-  villes.forEach((ville) => {
-    ville.querySelector(".heure").textContent =
+  cities.forEach((city) => {
+    city.querySelector(".heure").textContent =
       maintenant.toLocaleTimeString("fr-FR", {
-        timeZone: ville.dataset.tz,
+        timeZone: city.dataset.tz,
         hour: "2-digit",
         minute: "2-digit",
       });
   });
 }
 
-actualiser();
-setInterval(actualiser, 1000);
-
-initTabs();
-initHeaderNav();
+Tabs();
+HeaderNav();
+ClockWall();
+setInterval(ClockWall, 1000);

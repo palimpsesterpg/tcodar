@@ -1647,13 +1647,6 @@ x2large,
     text-shadow: 2px 2px var(--white)
 }
 
-#page-home .inside {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: var(--large)
-}
-
 #page-home .seven {
     display: grid;
     width: 100%;
@@ -1714,9 +1707,11 @@ x2large,
 }
 
 #page-home .inside {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: var(--large);
     position: relative;
-    flex-wrap: wrap;
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);

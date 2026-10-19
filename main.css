@@ -471,3 +471,13 @@ fsmedium {
 fslarge {
     font-size: var(--large)
 }
+
+.page-home {
+    display: grid;
+}
+
+.page-home.seven {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(7, 1fr)
+}

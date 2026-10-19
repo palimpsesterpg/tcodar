@@ -1663,7 +1663,6 @@ fslarge {
 
 #page-home>div {
     z-index: 99;
-    height: 200px;
 }
 
 .page-home {
@@ -1673,7 +1672,7 @@ fslarge {
 .page-home.seven {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(7, 1fr)
+    grid-template-columns: repeat(6, 1fr)
 }
 
 #page-home .inside {

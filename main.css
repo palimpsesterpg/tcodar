@@ -1895,12 +1895,13 @@ x2large,
     background-color: var(--whiteop75);
     height: -webkit-fill-available;
     width: -webkit-fill-available;
-    padding: var(--2xlarge);
-    border: var(--2xsmall) solid var(--white)
+    padding: var(--large);
+    border: var(--large) solid var(--white)
 }
 
 #page-home .one span {
-    text-align: justify
+    text-align: justify;
+    line-height: 1.5
 }
 
 #page-home .five div {

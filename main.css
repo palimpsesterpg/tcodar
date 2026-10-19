@@ -1773,7 +1773,7 @@ x2large,
     background-color: var(--group-color);
     color: var(--white);
     font-weight: 700;
-    padding: var(--3xsmall);
+    padding: var(--2xsmall);
     border-radius: var(--small);
     font-size: var(--small);
     text-transform: lowercase

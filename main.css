@@ -685,6 +685,10 @@ x2large,
     transition-duration: 2.5s
 }
 
+.inside>div {
+    z-index: 99
+}
+
 #categories {
     display: flex;
     gap: var(--2xlarge);
@@ -1641,10 +1645,6 @@ x2large,
     text-align: center;
     font-size: var(--6xlarge);
     text-shadow: 2px 2px var(--white)
-}
-
-#page-home>div {
-    z-index: 99
 }
 
 #page-home {

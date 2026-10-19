@@ -58,7 +58,7 @@ borderbid,
 borderbigc {
     border: 0.5px solid;
     font-weight: 300;
-    padding: 0.25rem var(--xlarge);
+    padding: var(--3xsmall) var(--xlarge);
 }
 
 bborder1,

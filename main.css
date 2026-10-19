@@ -1676,9 +1676,28 @@ x2large,
     object-fit: cover;
 }
 
-.admin-modal {
+.admin-modal[open] {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    height: 50%;
+    padding: var(--2xlarge);
+    border: var(--2xlarge) solid var(--whiteop75);
+    box-sizing: border-box;
+    background: var(--white);
+    font-size: var(--medium);
+    color: var(--lightdark);
+    position: relative
+}
+
+.close-modal {
+    background-color: transparent;
+    color: inherit;
+    border: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    right: 0
 }
 
 .admin-modal div {

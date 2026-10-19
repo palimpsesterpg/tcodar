@@ -40,7 +40,7 @@ const cities = document.querySelectorAll("#clockwall .phseven-city");
 function ClockWall() {
   const maintenant = new Date();
   cities.forEach((city) => {
-    city.querySelector(".heure").textContent =
+    city.querySelector(".time").textContent =
       maintenant.toLocaleTimeString("fr-FR", {
         timeZone: city.dataset.tz,
         hour: "2-digit",

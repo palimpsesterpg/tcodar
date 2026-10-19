@@ -1702,9 +1702,11 @@ fslarge {
     text-transform: uppercase
 }
 
-.phseven-city img {}
+.phseven-city img {
+    height: 25px
+}
 
-.phseven-city .time {
+.phseven-city .time span {
     background-color: var(--dark);
     color: var(--white);
     padding: var(--3xsmall);

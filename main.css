@@ -1691,6 +1691,8 @@ fslarge {
 
 .phseven-city {
     width: 100%;
+    background-size: cover;
+    background-position: center center;
     display: flex;
     color: var(--dark);
     font-weight: 700;
@@ -1702,15 +1704,20 @@ fslarge {
     text-transform: uppercase
 }
 
+.phseven-city>* {
+    background-color: var(--whiteop75) padding: var(--3xsmall);
+}
+
 .phseven-city img {
     height: 15px
 }
 
-.phseven-city .time > * {
+.phseven-city .time>* {
     background-color: var(--dark);
     color: var(--white);
     padding: var(--3xsmall);
     font-weight: 900;
+    margin: 0 var(--3xsmall);
 }
 
 #page-qeel {

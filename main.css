@@ -1676,7 +1676,9 @@ x2large,
 
 #page-home .one div {
     background-color: var(--whiteop75);
-    padding: var(--large)
+    padding: var(--2xlarge);
+    text-align: justify;
+    border: var(--2xsmall) solid var(--white)
 }
 
 #page-home .five div {

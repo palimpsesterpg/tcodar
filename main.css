@@ -1652,11 +1652,42 @@ x2large,
     gap: var(--large)
 }
 
-#page-home .seven {
+#station {
     display: grid;
     width: 100%;
     gap: var(--xsmall);
     grid-template-columns: repeat(6, 1fr)
+}
+
+#chrono {
+    height: 200px;
+    background-color: var(--white);
+    padding: var(--large)
+}
+
+#chrono div {
+    height: 100%;
+    width: 100%;
+    overflow: auto
+}
+
+#chrono span {
+    color: var(--co1);
+}
+
+#chrono date {
+    text-transform: lowercase;
+    font-weight: 700
+}
+
+#chrono intel {
+    text-transform: uppercase;
+    font-weight: 300
+}
+
+#chrono .ipt {
+    color: var(--co1);
+    font-weight: 600
 }
 
 #page-home .inside {

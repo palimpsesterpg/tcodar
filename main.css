@@ -1667,11 +1667,13 @@ fslarge {
 
 .page-home {
     display: grid;
+    gap: var(--large);
 }
 
 .page-home.seven {
     display: grid;
     width: 100%;
+    gap: var(--xsmall);
     grid-template-columns: repeat(6, 1fr)
 }
 
@@ -1702,12 +1704,16 @@ fslarge {
     font-size: var(--large);
     flex-direction: column;
     padding: var(--xsmall);
+    box-sizing: border-box;
     text-transform: uppercase
 }
 
 .phseven-city>* {
     background-color: var(--whiteop75);
     padding: var(--3xsmall);
+    width: -webkit-fill-available;
+    text-align: center;
+    backdrop-filter: blur(2px);
 }
 
 .phseven-city .time>* {

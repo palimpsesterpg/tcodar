@@ -1713,6 +1713,7 @@ x2large,
 
 #page-home .three {
     padding: var(--large);
+    grid-area: 2 / 3 / 4 / 6;
     border: 0.5px solid var(--darkneutral);
 }
 
@@ -1722,7 +1723,6 @@ x2large,
     display: flex;
     flex-direction: column;
     overflow: auto;
-    grid-area: 2 / 3 / 4 / 6
 }
 
 .button-modal {

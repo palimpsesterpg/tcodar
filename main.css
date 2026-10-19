@@ -1702,7 +1702,9 @@ fslarge {
 }
 
 .phseven-city .time {
-    color: var(--black);
+    background-color: var(--co1);
+    color: var(--white);
+    padding: var(--3xsmall);
     font-weight: 900;
 }
 

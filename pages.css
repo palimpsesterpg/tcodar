@@ -504,5 +504,5 @@ fam {
 #masterlist .item {
     outline: 0.5px solid var(--group-color);
     margin: 0.5px;
-    border: var(--xsmall) solid var(--light);
+    border: var(--3xsmall) solid var(--light);
 }

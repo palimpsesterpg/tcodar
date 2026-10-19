@@ -1647,12 +1647,12 @@ x2large,
     z-index: 99
 }
 
-.page-home {
+#page-home {
     display: grid;
     gap: var(--large)
 }
 
-.page-home.seven {
+#page-home .seven {
     display: grid;
     width: 100%;
     gap: var(--xsmall);

@@ -1703,10 +1703,10 @@ fslarge {
 }
 
 .phseven-city img {
-    height: 25px
+    height: 15px
 }
 
-.phseven-city .time span {
+.phseven-city .time > * {
     background-color: var(--dark);
     color: var(--white);
     padding: var(--3xsmall);

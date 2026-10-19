@@ -1697,6 +1697,7 @@ fslarge {
     align-items: center;
     justify-content: center;
     font-family: var(--display);
+    font-size: var(--large);
     flex-direction: column;
     text-transform: uppercase
 }

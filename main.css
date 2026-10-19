@@ -97,7 +97,7 @@
             var(--co2-50),
             var(--co1-50),
             var(--co3-50));
-    color-scheme: light;
+    color-scheme: light
 }
 
 [data-color-scheme="dark"] {
@@ -159,7 +159,7 @@
     --co3-300: #3b6a87;
     --co3-200: #2c4f65;
     --co3-100: #1e3543;
-    --co3-50: #0f1a22;
+    --co3-50: #0f1a22
 }
 
 .group-2 {
@@ -174,7 +174,7 @@
     --group-color-700: #3b6a87;
     --group-color-800: #2c4f65;
     --group-color-900: #1e3543;
-    --group-color-950: #0f1a22;
+    --group-color-950: #0f1a22
 }
 
 .group-3 {
@@ -188,37 +188,37 @@
     --group-color-700: #800c14;
     --group-color-800: #60090f;
     --group-color-900: #40060a;
-    --group-color-950: #200305;
+    --group-color-950: #200305
 }
 
 .group-4 {
     --group-color-50: #dddddd;
     --group-color: #333333;
-    --group-colorop50: #33333380;
+    --group-colorop50: #33333380
 }
 
 .group-5 {
     --group-color-50: #d5f1e7;
     --group-color: #2c8063;
-    --group-colorop50: #2C806380;
+    --group-colorop50: #2C806380
 }
 
 .group-6 {
     --group-color-50: #ffcccc;
     --group-color: #cd0000;
-    --group-colorop50: #cd000080;
+    --group-colorop50: #cd000080
 }
 
 .group-7 {
     --group-color-50: #dde0ee;
     --group-color: #424f8a;
-    --group-colorop50: #424f8a80;
+    --group-colorop50: #424f8a80
 }
 
 .group-8 {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
-    --group-colorop50: #e5970080;
+    --group-colorop50: #e5970080
 }
 
 .group-test {
@@ -234,7 +234,7 @@
     --group-color-800: #50300F;
     --gradientgc1: linear-gradient(to right, var(--group-color-50), var(--group-color-100), var(--group-color-50));
     --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
-    --gradientgc3: linear-gradient(to right, var(--group-color-600), var(--group-color-800), var(--group-color-600));
+    --gradientgc3: linear-gradient(to right, var(--group-color-600), var(--group-color-800), var(--group-color-600))
 }
 
 .reverse {
@@ -247,7 +247,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 body {
@@ -262,59 +262,59 @@ body {
     background-attachment: fixed;
     padding: 0 !important;
     background-image: url("Images/tcodar-body.png");
-    margin: 0px !important;
+    margin: 0px !important
 }
 
 a,
 a:visited,
 a:hover {
-    text-decoration: none !important;
+    text-decoration: none !important
 }
 
 a,
 a:visited {
     color: var(--lightdark);
-    font-weight: 600;
+    font-weight: 600
 }
 
 a:hover {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 h1,
 .h1 {
     font-size: var(--3xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h2,
 .h2 {
     font-size: var(--2xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h3,
 .h3 {
     font-size: var(--xlarge) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h4,
 .h4 {
     font-size: var(--large) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h5,
 .h5 {
     font-size: var(--medium) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h6,
 .h6 {
     font-size: var(--small) !important;
-    margin: var(--large) 0 !important;
+    margin: var(--large) 0 !important
 }
 
 h1,
@@ -339,12 +339,12 @@ h6,
 
 upp,
 .upp {
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 low,
 .low {
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 x2small,
@@ -400,7 +400,7 @@ fslarge {
 
 .invisible {
     display: none;
-    visibility: hidden;
+    visibility: hidden
 }
 
 [class^="fi-ts-"]:before,
@@ -416,7 +416,7 @@ fslarge {
 }
 
 .tabsystem .tab-content {
-    display: none;
+    display: none
 }
 
 .tabsystem .tab-content.active {
@@ -426,27 +426,27 @@ fslarge {
 .color-scheme-toggle {
     border: 0 !important;
     padding: 0 !important;
-    background-color: transparent !important;
+    background-color: transparent !important
 }
 
 [data-color-scheme="dark"] .color-scheme-toggle .dark,
 [data-color-scheme="light"] .color-scheme-toggle .light {
-    display: none;
+    display: none
 }
 
 #fa_toolbar {
-    display: none;
+    display: none
 }
 
 .copyright {
     position: fixed;
     bottom: var(--large);
     left: var(--large);
-    z-index: 999;
+    z-index: 999
 }
 
 .copyright br {
-    display: none;
+    display: none
 }
 
 #page-header {
@@ -458,16 +458,16 @@ fslarge {
     justify-content: center;
     background-position: center center;
     background-size: cover;
-    position: relative;
+    position: relative
 }
 
 [data-color-scheme="dark"] #page-header {
-    background-image: url("Images/tcodar-header-dark.png");
+    background-image: url("Images/tcodar-header-dark.png")
 }
 
 [data-color-scheme="dark"] #page-header div {
     -webkit-text-stroke: .5px var(--black);
-    text-shadow: 0 0 5px var(--blackop50);
+    text-shadow: 0 0 5px var(--blackop50)
 }
 
 #page-header .tabsystem-tabs {
@@ -486,7 +486,7 @@ fslarge {
 }
 
 #page-header .tab.active i:before {
-    background-color: var(--whiteop75);
+    background-color: var(--whiteop75)
 }
 
 #page-header .tabsystem-contents {
@@ -504,17 +504,17 @@ fslarge {
     text-shadow: 0 0 5px var(--whiteop50);
     height: 100vh;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .main-header:hover {
     -webkit-text-stroke: .5px var(--white);
     color: #fff0;
-    text-shadow: 0 0 5px var(--whiteop50);
+    text-shadow: 0 0 5px var(--whiteop50)
 }
 
 .main-header.active {
-    display: flex !important;
+    display: flex !important
 }
 
 .map-header {
@@ -523,7 +523,7 @@ fslarge {
     width: 100%;
     aspect-ratio: 2 / 1;
     background-size: cover;
-    background-position: center center;
+    background-position: center center
 }
 
 .header-tab {
@@ -539,7 +539,7 @@ fslarge {
 
 #c3.header-tab {
     top: 10%;
-    left: 46%;
+    left: 46%
 }
 
 .header-tab span {
@@ -551,7 +551,7 @@ fslarge {
 }
 
 .header-tab:hover span {
-    display: flex;
+    display: flex
 }
 
 #page-navbar {
@@ -567,26 +567,26 @@ fslarge {
     z-index: 999;
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-navbar>div {
     display: flex;
     align-items: center;
     gap: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-navbar>div+div {
     border-top: 2.5px solid var(--neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;
-    padding-top: var(--2xlarge);
+    padding-top: var(--2xlarge)
 }
 
 .mainmenu {
     position: relative;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .mainmenu span {
@@ -609,14 +609,14 @@ fslarge {
 }
 
 .mainmenu:hover span {
-    display: block;
+    display: block
 }
 
 .mainmenu#notiffi_button {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 #page-body,
@@ -628,7 +628,7 @@ fslarge {
     margin: 0 auto;
     background-color: var(--darklight);
     border-left: 0.5px solid var(--co2);
-    border-right: 0.5px solid var(--co3);
+    border-right: 0.5px solid var(--co3)
 }
 
 #page-footer>div:first-of-type {
@@ -638,7 +638,7 @@ fslarge {
     padding-left: calc(var(--large) + 1px);
     padding: var(--large);
     background: var(--light);
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--neutral)
 }
 
 .body-br {
@@ -657,13 +657,13 @@ fslarge {
     letter-spacing: 2.5px;
     font-weight: 100;
     white-space: nowrap;
-    margin-bottom: -0.5px;
+    margin-bottom: -0.5px
 }
 
 .body-br div {
     display: inline-block;
     padding-left: 100%;
-    animation: defilement 60s linear infinite;
+    animation: defilement 60s linear infinite
 }
 
 @keyframes defilement {
@@ -690,7 +690,7 @@ fslarge {
     left: -0.55rem;
     padding: var(--xsmall);
     box-shadow: 0 0 0.25rem 0.15rem var(--neutral);
-    transition-duration: 2.5s;
+    transition-duration: 2.5s
 }
 
 .forumlist:hover:after,
@@ -700,14 +700,14 @@ fslarge {
 .memberlist:hover:after {
     box-shadow: 0 0 0.25rem 0.15rem var(--co1-50);
     border: 1px solid var(--co1-100);
-    transition-duration: 2.5s;
+    transition-duration: 2.5s
 }
 
 #categories {
     display: flex;
     gap: var(--2xlarge);
     margin-left: calc(-5rem - 2px);
-    align-items: center;
+    align-items: center
 }
 
 #categories .tabsystem-tabs {
@@ -718,29 +718,29 @@ fslarge {
     justify-content: space-between;
     background-color: var(--whiteop75);
     flex-direction: column;
-    padding: var(--large);
+    padding: var(--large)
 }
 
 #categories .tabsystem-tabs.off {
     border: 0.5px solid var(--co2-200);
-    color: var(--co2);
+    color: var(--co2)
 }
 
 #categories .tabsystem-tabs.off:has(.active) {
-    border: 0.5px solid var(--co2);
+    border: 0.5px solid var(--co2)
 }
 
 #categories .tabsystem-tabs.loc {
     border: 0.5px solid var(--co3-200);
-    color: var(--co3);
+    color: var(--co3)
 }
 
 #categories .tabsystem-tabs.loc:has(.active) {
-    border: 0.5px solid var(--co3);
+    border: 0.5px solid var(--co3)
 }
 
 #categories .tabsystem-tabs i {
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 #categories .tab {
@@ -748,11 +748,11 @@ fslarge {
     position: relative;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 #categories .tab:hover span {
-    display: flex;
+    display: flex
 }
 
 #categories .tabsystem-tabs .tab span {
@@ -768,41 +768,41 @@ fslarge {
 }
 
 #categories .tabsystem-tabs.off .tab span {
-    right: 2.5rem;
+    right: 2.5rem
 }
 
 #categories .tabsystem-tabs.loc .tab span {
-    left: 2.5rem;
+    left: 2.5rem
 }
 
 #categories .tab.active,
 #categories .tab:hover {
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 #categories .tabsystem-tabs.off .tab.active,
 #categories .tabsystem-tabs.off .tab:hover {
-    background-color: var(--co2);
+    background-color: var(--co2)
 }
 
 #categories .tabsystem-tabs.loc .tab.active,
 #categories .tabsystem-tabs.loc .tab:hover {
-    background-color: var(--co3);
+    background-color: var(--co3)
 }
 
 .category {
     display: flex;
     flex-direction: column;
     gap: var(--large);
-    width: 968px;
+    width: 968px
 }
 
 .tabsystem .category.active {
-    display: flex !important;
+    display: flex !important
 }
 
 .category-content {
-    width: -webkit-fill-available;
+    width: -webkit-fill-available
 }
 
 .category-title h2 {
@@ -819,7 +819,7 @@ fslarge {
     text-shadow: 0 0 0.25rem var(--co1-200);
     -webkit-text-stroke: 1px var(--co1-50);
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .forumlist {
@@ -833,12 +833,12 @@ fslarge {
     outline: 0.25rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
-    width: -webkit-fill-available;
+    width: -webkit-fill-available
 }
 
 [data-tab="c1"] .forumlist,
 [data-tab="c11"] .forumlist {
-    gap: 0;
+    gap: 0
 }
 
 .forumlist:before {
@@ -852,57 +852,57 @@ fslarge {
     position: absolute;
     background-size: cover;
     filter: grayscale(1);
-    opacity: 0.75;
+    opacity: 0.75
 }
 
 [data-color-scheme="dark"] .forumlist:before {
-    filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1)
 }
 
 [data-tab="c1"] .forumlist:before,
 [data-tab="c11"] .forumlist:before {
-    background-image: url("Images/tcodar-admin.jpg");
+    background-image: url("Images/tcodar-admin.jpg")
 }
 
 [data-tab="c2"] .forumlist:before,
 [data-tab="c9"] .forumlist:before {
-    background-image: url("Images/tcodar-off.jpg");
+    background-image: url("Images/tcodar-off.jpg")
 }
 
 [data-tab="c3"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-london.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-london.jpg"))
 }
 
 [data-tab="c4"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-marrakech.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-marrakech.jpg"))
 }
 
 [data-tab="c5"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-new-york.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-new-york.jpg"))
 }
 
 [data-tab="c6"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-rio.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-rio.jpg"))
 }
 
 [data-tab="c7"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-singapore.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-singapore.jpg"))
 }
 
 [data-tab="c8"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-media.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-media.jpg"))
 }
 
 [data-tab="c10"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-world.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-world.jpg"))
 }
 
 [data-tab="c12"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-archives.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-archives.jpg"))
 }
 
 [data-tab="c13"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-sydney.jpg"));
+    background-image: var(--forum-bg, url("Images/tcodar-sydney.jpg"))
 }
 
 .forum {
@@ -911,11 +911,11 @@ fslarge {
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
-    z-index: 99;
+    z-index: 99
 }
 
 .forum-content {
-    display: grid;
+    display: grid
 }
 
 .forum-img {
@@ -923,20 +923,20 @@ fslarge {
     width: fit-content;
     filter: grayscale(1);
     margin-bottom: var(--2xlarge) !important;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 #f16 .forum-img,
 #f11 .forum-img {
     order: 3;
     margin-bottom: 0 !important;
-    margin-top: var(--2xlarge);
+    margin-top: var(--2xlarge)
 }
 
 #f1.forum:before {
     content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher. ";
     width: 80%;
-    margin-bottom: var(--large);
+    margin-bottom: var(--large)
 }
 
 #f80.forum:after {
@@ -944,7 +944,7 @@ fslarge {
     width: 90%;
     text-align: right;
     align-self: flex-end;
-    margin-top: var(--large);
+    margin-top: var(--large)
 }
 
 #f1.forum:before,
@@ -954,7 +954,7 @@ fslarge {
     font-style: italic;
     text-shadow: 0.5px 0.5px var(--darklight);
     color: var(--darkneutral);
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .forum-icon {
@@ -969,22 +969,22 @@ fslarge {
     align-items: center;
     justify-content: center;
     top: var(--large);
-    right: var(--large);
+    right: var(--large)
 }
 
 .forum-icon:before {
     font-family: uicons-thin-straight !important;
-    content: "\e688";
+    content: "\e688"
 }
 
 .forum-description br,
 .forum-description:empty {
-    display: none;
+    display: none
 }
 
 .forum-description img {
     height: 0;
-    width: 0;
+    width: 0
 }
 
 .forum-lastpost {
@@ -993,15 +993,15 @@ fslarge {
     font-size: var(--large);
     font-family: var(--display);
     letter-spacing: 1px;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-lastpost a {
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-lastpost-infos {
-    flex: 1;
+    flex: 1
 }
 
 .forum-posts,
@@ -1010,42 +1010,42 @@ fslarge {
     align-items: center;
     font-family: var(--display);
     font-size: var(--large);
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-topics:after,
 .forum-posts:after {
-    font-family: uicons-thin-straight !important;
+    font-family: uicons-thin-straight !important
 }
 
 .forum-topics:after {
-    content: "\e8d6";
+    content: "\e8d6"
 }
 
 .forum-posts:after {
-    content: "\e6de";
+    content: "\e6de"
 }
 
 .forum-divers {
     flex-direction: row;
     width: 100%;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-divers .forum-content {
-    width: 100%;
+    width: 100%
 }
 
 .forum-divers .forum-title {
-    grid-area: 1 / 1 / 1 / 1;
+    grid-area: 1 / 1 / 1 / 1
 }
 
 .forum-divers .forum-links {
-    grid-area: 2 / 1 / 2 / 1;
+    grid-area: 2 / 1 / 2 / 1
 }
 
 .forum-divers .forum-statistics {
-    grid-area: 1 / 2 / 1 / 2;
+    grid-area: 1 / 2 / 1 / 2
 }
 
 .forum-divers .forum-lastpost {
@@ -1053,18 +1053,18 @@ fslarge {
     display: flex;
     align-items: center;
     gap: var(--large);
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-divers .forum-lastpost-avatar img {
     height: 50px;
     width: 35px;
     object-fit: cover;
-    border-radius: 2.5px;
+    border-radius: 2.5px
 }
 
 .forum-loc {
-    flex: 1 1 calc(50% - var(--large));
+    flex: 1 1 calc(50% - var(--large))
 }
 
 .forum-loc .forum-content {
@@ -1074,7 +1074,7 @@ fslarge {
     border: 1px solid var(--white);
     backdrop-filter: blur(2px);
     border-radius: var(--large);
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-loc .forumtitle {
@@ -1086,7 +1086,7 @@ fslarge {
     font-family: var(--serif);
     font-size: var(--xlarge);
     font-style: italic;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .forum-loc .forum-statistics {
@@ -1094,12 +1094,12 @@ fslarge {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    order: 3;
+    order: 3
 }
 
 .forum-loc .forum-topics,
 .forum-loc .forum-posts {
-    font-size: 0px;
+    font-size: 0px
 }
 
 .forum-loc .forum-posts,
@@ -1108,64 +1108,64 @@ fslarge {
     height: 35px;
     border-radius: var(--xsmall);
     background-color: var(--co2);
-    color: var(--white);
+    color: var(--white)
 }
 
 .forum-loc .forum-topics:after,
 .forum-loc .forum-posts:after {
-    font-size: var(--medium);
+    font-size: var(--medium)
 }
 
 .forum-loc .forum-topics:hover:after,
 .forum-loc .forum-posts:hover:after {
-    font-size: 0px !important;
+    font-size: 0px !important
 }
 
 .forum-loc .forum-topics:hover span,
 .forum-loc .forum-posts:hover span {
-    font-size: var(--medium) !important;
+    font-size: var(--medium) !important
 }
 
 .forum-loc .forum-lastpost-avatar img {
     height: 25px;
     width: 25px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 .forum-admin {
     background-color: var(--whiteop50);
     backdrop-filter: blur(2px);
     padding: var(--large);
-    width: 50%;
+    width: 50%
 }
 
 .forum-admin:nth-of-type(1) {
     border-top: 0.5px solid var(--white);
     border-left: 0.5px solid var(--white);
     border-radius: var(--large) 0 0 0;
-    box-shadow: -5px -5px 5px var(--neutral);
+    box-shadow: -5px -5px 5px var(--neutral)
 }
 
 .forum-admin:nth-of-type(2) {
     border-top: 0.5px solid var(--white);
     border-right: 0.5px solid var(--white);
     border-radius: 0 var(--large) 0 0;
-    box-shadow: 5px -5px 5px var(--neutral);
+    box-shadow: 5px -5px 5px var(--neutral)
 }
 
 .forum-admin:nth-of-type(3) {
     border-bottom: 0.5px solid var(--white);
     border-left: 0.5px solid var(--white);
     border-radius: 0 0 0 var(--large);
-    box-shadow: -5px 5px 5px var(--neutral);
+    box-shadow: -5px 5px 5px var(--neutral)
 }
 
 .forum-admin:nth-of-type(4) {
     border-bottom: 0.5px solid var(--white);
     border-right: 0.5px solid var(--white);
     border-radius: 0 0 var(--large) 0;
-    box-shadow: 5px 5px 5px var(--neutral);
+    box-shadow: 5px 5px 5px var(--neutral)
 }
 
 .forum-admin:nth-of-type(even) .forum-icon,
@@ -1173,7 +1173,7 @@ fslarge {
     left: var(--large);
     bottom: var(--large);
     top: auto;
-    right: auto;
+    right: auto
 }
 
 .forum-admin .forumtitle {
@@ -1184,23 +1184,23 @@ fslarge {
 }
 
 .forum-admin:nth-of-type(even) .forumtitle {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-content {
     grid-template-rows: auto auto auto;
     grid-template-columns: 75px 1fr;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-admin:nth-of-type(even) .forum-content {
-    grid-template-columns: 1fr 75px !important;
+    grid-template-columns: 1fr 75px !important
 }
 
 .forum-admin .forum-title {
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3
 }
 
 .forum-admin .forum-description {
@@ -1209,20 +1209,20 @@ fslarge {
     padding-left: calc(var(--large) + 2.5px);
     font-size: var(--small);
     color: var(--co1-700);
-    padding: 0 var(--large);
+    padding: 0 var(--large)
 }
 
 .forum-admin:nth-of-type(even) .forum-description {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-links:not(:empty) {
     grid-area: 2 / 1 / 3 / 3;
-    font-size: 0px;
+    font-size: 0px
 }
 
 .forum-admin:nth-of-type(even) .forum-links:not(:empty) {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-links a {
@@ -1232,11 +1232,11 @@ fslarge {
     color: var(--white);
     font-size: var(--medium);
     font-weight: 700;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-admin .forum-links a+a {
-    margin-left: var(--large);
+    margin-left: var(--large)
 }
 
 .forum-admin .forum-statistics {
@@ -1246,20 +1246,20 @@ fslarge {
     align-items: flex-end;
     justify-content: center;
     gap: var(--2xsmall);
-    width: 75px;
+    width: 75px
 }
 
 .forum-admin .forum-lastpost,
 .forum-admin:nth-of-type(even) .forum-statistics {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 3 / 2 / 4 / 3
 }
 
 .forum-admin:nth-of-type(even) .forum-lastpost {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3 / 1 / 4 / 2
 }
 
 .forum-admin:nth-of-type(even) .forum-lastpost-infos {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-posts,
@@ -1271,12 +1271,12 @@ fslarge {
     border-radius: var(--2xsmall);
     gap: var(--2xsmall);
     justify-content: space-between;
-    width: -webkit-fill-available;
+    width: -webkit-fill-available
 }
 
 .forum-admin .forum-posts span,
 .forum-admin .forum-topics span {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .forum-admin .forum-posts:after,
@@ -1285,21 +1285,21 @@ fslarge {
     color: var(--white);
     border-radius: 50%;
     padding: var(--xsmall);
-    font-size: var(--small);
+    font-size: var(--small)
 }
 
 .forum-admin:nth-of-type(even) .forum-posts span,
 .forum-admin:nth-of-type(even) .forum-topics span {
-    order: 3;
+    order: 3
 }
 
 .forum-admin .forum-lastpost-avatar img {
-    display: none;
+    display: none
 }
 
 .forum-off,
 .forum-archives {
-    width: calc(50% - var(--xlarge));
+    width: calc(50% - var(--xlarge))
 }
 
 .forum-off {
@@ -1309,14 +1309,14 @@ fslarge {
     backdrop-filter: blur(2px);
     border: 0.5px solid var(--white);
     border-radius: var(--large);
-    align-items: flex-end;
+    align-items: flex-end
 }
 
 .forum-off .forum-content {
     width: calc(100% - 100px);
     grid-template-columns: auto 75px;
     row-gap: var(--large);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto
 }
 
 .forum-off .forumtitle {
@@ -1330,17 +1330,17 @@ fslarge {
 
 .forum-off .forum-links {
     grid-area: 2 / 1 / 3 / 3;
-    text-align: right;
+    text-align: right
 }
 
 .forum-off .forum-links a {
     color: var(--co1-300);
     font-family: var(--mono);
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-off .forum-lastpost {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3 / 1 / 4 / 2
 }
 
 .forum-off .forum-statistics {
@@ -1348,13 +1348,13 @@ fslarge {
     display: flex;
     gap: var(--2xsmall);
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-off .forum-posts,
 .forum-off .forum-topics {
     background-color: var(--co3);
-    color: var(--white);
+    color: var(--white)
 }
 
 .forum-off .forum-lastpost-avatar img {
@@ -1364,7 +1364,7 @@ fslarge {
     object-fit: cover;
     top: 0;
     position: absolute;
-    border-radius: var(--large) 0 0 var(--large);
+    border-radius: var(--large) 0 0 var(--large)
 }
 
 .forum-media {
@@ -1382,22 +1382,22 @@ fslarge {
 }
 
 .forum-media:nth-of-type(odd) {
-    border-color: var(--co3);
+    border-color: var(--co3)
 }
 
 .forum-media:nth-of-type(even) {
-    border-color: var(--co2);
+    border-color: var(--co2)
 }
 
 .forum-media .forum-content {
     align-items: center;
     column-gap: var(--large);
     display: flex;
-    flex: 1;
+    flex: 1
 }
 
 .forum-media .forum-title {
-    flex: 1;
+    flex: 1
 }
 
 .forum-media .forumtitle {
@@ -1406,56 +1406,56 @@ fslarge {
     letter-spacing: 5px;
     padding-left: 10px;
     font-weight: 100;
-    font-size: var(--2xlarge);
+    font-size: var(--2xlarge)
 }
 
 .forum-media:nth-of-type(odd) .forumtitle {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .forum-media:nth-of-type(even) .forumtitle {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .forum-media .forum-description {
-    display: none;
+    display: none
 }
 
 .forum-media .forum-icon {
     position: relative;
     top: auto;
-    right: auto;
+    right: auto
 }
 
 .forum-media:nth-of-type(even) .forum-icon,
 .forum-media:nth-of-type(even) .forum-links a {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .forum-media .forum-links {
-    font-size: 0px;
+    font-size: 0px
 }
 
 .forum-media .forum-links a {
     font-size: var(--medium);
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .forum-media .forum-links a+a {
-    margin-left: var(--medium);
+    margin-left: var(--medium)
 }
 
 .forum-media .forum-lastpost {
     display: flex;
     gap: var(--large);
-    align-items: center;
+    align-items: center
 }
 
 .forum-media .forum-lastpost-avatar img {
     height: 35px;
     width: 35px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .forum-archives {
@@ -1466,13 +1466,13 @@ fslarge {
     backdrop-filter: blur(2px);
     border-radius: var(--xsmall);
     margin: var(--xsmall);
-    align-items: center;
+    align-items: center
 }
 
 .forum-archives .forum-lastpost,
 .forum-archives .forum-statistics,
 .forum-archives .forum-icon {
-    display: none;
+    display: none
 }
 
 .forum-archives .forum-title {
@@ -1484,22 +1484,22 @@ fslarge {
     color: var(--white);
     font-size: var(--3xlarge);
     font-weight: 100;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-archives .forum-links {
     font-size: 0px;
-    text-align: center;
+    text-align: center
 }
 
 .forum-archives .forum-links a {
     color: var(--co1-100);
     font-size: var(--medium);
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-archives .forum-links a+a {
-    margin-left: var(--large);
+    margin-left: var(--large)
 }
 
 .topic {
@@ -1507,20 +1507,20 @@ fslarge {
     padding: var(--large);
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .topic-lastpost-avatar img {
     height: 45px;
     width: 45px;
     object-fit: cover;
-    border-radius: 2.5px;
+    border-radius: 2.5px
 }
 
 .f27.topiclist .topic-lastpost,
 .f27.topiclist .topic-author,
 .f27.topiclist .topic-statistics {
-    display: none;
+    display: none
 }
 
 .post {
@@ -1532,11 +1532,11 @@ fslarge {
     border: 1px solid var(--neutral);
     outline: 0.25rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
-    margin: var(--xsmall);
+    margin: var(--xsmall)
 }
 
 .post+.post {
-    margin-top: var(--2xlarge);
+    margin-top: var(--2xlarge)
 }
 
 .post-head {
@@ -1546,23 +1546,23 @@ fslarge {
     gap: var(--large);
     justify-content: space-between;
     background: var(--white);
-    display: flex;
+    display: flex
 }
 
 .postbody {
     flex: 1;
-    z-index: 99;
+    z-index: 99
 }
 
 .postprofile {
     width: 200px;
-    z-index: 99;
+    z-index: 99
 }
 
 .postprofile-avatar img {
     height: 300px;
     width: 200px;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .t272 .postprofile div:not(.postprofile-name) {
@@ -1570,7 +1570,7 @@ fslarge {
 }
 
 .content {
-    padding: var(--large);
+    padding: var(--large)
 }
 
 .quick-nav-topics {
@@ -1578,7 +1578,7 @@ fslarge {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .memberlist {
@@ -1593,20 +1593,20 @@ fslarge {
     border: 1px solid var(--neutral);
     outline: 0.25rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
-    margin: var(--xsmall);
+    margin: var(--xsmall)
 }
 
 .memberrow {
     gap: var(--large);
     display: flex;
     flex-direction: column;
-    z-index: 99;
+    z-index: 99
 }
 
 .memberrow-avatar img {
     height: 250px;
     width: -webkit-fill-available;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .memberrow-bloc {
@@ -1615,7 +1615,7 @@ fslarge {
     display: flex;
     gap: var(--large);
     flex-direction: column;
-    position: relative;
+    position: relative
 }
 
 .memberrow-infos {
@@ -1629,17 +1629,17 @@ fslarge {
     background: var(--light);
     box-sizing: border-box;
     top: 0;
-    right: 0;
+    right: 0
 }
 
 .memberrow-bloc:hover .memberrow-infos {
-    display: flex;
+    display: flex
 }
 
 .memberrow-pseudo {
     text-align: center;
     font-family: var(--spe);
-    font-size: var(--xlarge);
+    font-size: var(--xlarge)
 }
 
 .profile-body {
@@ -1651,23 +1651,23 @@ fslarge {
     border: 1px solid var(--neutral);
     outline: 0.75rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--large) var(--white);
-    margin: var(--large);
+    margin: var(--large)
 }
 
 .profile-pseudo {
     font-family: var(--spe);
     text-align: center;
     font-size: var(--6xlarge);
-    text-shadow: 2px 2px var(--white);
+    text-shadow: 2px 2px var(--white)
 }
 
 #page-home>div {
-    z-index: 99;
+    z-index: 99
 }
 
 .page-home {
     display: grid;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .page-home.seven {
@@ -1688,7 +1688,7 @@ fslarge {
     outline: 0.25rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
-    width: -webkit-fill-available;
+    width: -webkit-fill-available
 }
 
 .phseven-city {
@@ -1704,16 +1704,28 @@ fslarge {
     font-size: var(--large);
     flex-direction: column;
     padding: var(--xsmall);
+    filter: grayscale(1);
     box-sizing: border-box;
     text-transform: uppercase
 }
 
+.phseven-city:hover {
+    filter: grayscale(0)
+}
+
 .phseven-city>* {
     background-color: var(--whiteop75);
-    padding: var(--3xsmall);
     width: -webkit-fill-available;
     text-align: center;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px)
+}
+
+.phseven-city span:first-of-type {
+    padding-top: var(--3xsmall)
+}
+
+.phseven-city .time {
+    padding-bottom: var(--3xsmall)
 }
 
 .phseven-city .time>* {
@@ -1721,7 +1733,11 @@ fslarge {
     color: var(--white);
     padding: 0 var(--3xsmall);
     font-weight: 900;
-    margin: 0 var(--3xsmall);
+    margin: 0 var(--3xsmall)
+}
+
+.phseven-city .season {
+    padding: var(--3xsmall) 0
 }
 
 #page-qeel {
@@ -1735,12 +1751,12 @@ fslarge {
     outline: 0.25rem solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
-    margin-top: var(--2xlarge);
+    margin-top: var(--2xlarge)
 }
 
 .page-qeel-bloc {
     z-index: 99;
-    height: 300px;
+    height: 300px
 }
 
 .page-qeel-bloc.one {
@@ -1750,13 +1766,13 @@ fslarge {
     margin: 2.5px;
     padding: var(--large);
     box-sizing: border-box;
-    border-radius: var(--large);
+    border-radius: var(--large)
 }
 
 .page-qeel-bloc.one a {
     text-transform: uppercase;
     letter-spacing: .5px;
-    padding-left: .5px;
+    padding-left: .5px
 }
 
 .page-qeel-bloc.one a strong {
@@ -1768,7 +1784,7 @@ fslarge {
     height: auto;
     display: flex;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .page-qeel-bloc.two div {
@@ -1781,20 +1797,20 @@ fslarge {
     font-family: var(--serif);
     font-size: var(--large);
     outline: 2.5px solid var(--white);
-    margin: 2.5px;
+    margin: 2.5px
 }
 
 .page-qeel-bloc.three {
     display: flex;
     gap: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 .page-qeel-bloc.four {
     display: flex;
     gap: var(--large);
     height: auto;
-    width: 100%;
+    width: 100%
 }
 
 .page-qeel-bloc.four div {
@@ -1812,18 +1828,18 @@ fslarge {
     letter-spacing: 2.5px;
     padding-left: 2.5px;
     outline: 2.5px solid var(--white);
-    margin: 2.5px;
+    margin: 2.5px
 }
 
 .page-qeel-bloc.four strong {
-    color: var(--white);
+    color: var(--white)
 }
 
 #newest-user-avatar {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #newest-user-avatar img {
@@ -1831,7 +1847,7 @@ fslarge {
     border: 5px solid var(--white);
     height: -webkit-fill-available;
     position: relative;
-    width: 140px;
+    width: 140px
 }
 
 #newest-user-avatar:before {
@@ -1841,25 +1857,25 @@ fslarge {
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
     padding: .5px;
     position: absolute;
-    background: var(--gradient23);
+    background: var(--gradient23)
 }
 
 #newest-user {
     font-family: var(--spe);
     font-size: var(--2xlarge);
-    text-align: center;
+    text-align: center
 }
 
 #newest-user span {
-    color: var(--lightdark) !important;
+    color: var(--lightdark) !important
 }
 
 #newest-user span:hover {
-    color: var(--lighterdark) !important;
+    color: var(--lighterdark) !important
 }
 
 #newest-user strong {
-    font-weight: 300;
+    font-weight: 300
 }
 
 #notiffi_panel {
@@ -1878,26 +1894,26 @@ fslarge {
     padding: var(--large);
     opacity: 0;
     visibility: hidden;
-    transition: all ease 0.7s;
+    transition: all ease 0.7s
 }
 
 #notiffi_panel.open {
     visibility: visible;
-    opacity: 1;
+    opacity: 1
 }
 
 .unread_count {
     scale: 1;
     opacity: 1;
     aspect-ratio: 1;
-    transition: scale ease-out 0.2s;
+    transition: scale ease-out 0.2s
 }
 
 .unread_count:empty {
     scale: 0;
     opacity: 0;
     display: none;
-    transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s
 }
 
 .all_notifications {
@@ -1917,13 +1933,13 @@ fslarge {
 
 .no_notification {
     text-align: center;
-    font-style: italic;
+    font-style: italic
 }
 
 .notiffi_manage {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .notiffi_actions {
@@ -1947,7 +1963,7 @@ fslarge {
     gap: var(--large);
     width: 50%;
     margin: 0 auto;
-    align-items: center;
+    align-items: center
 }
 
 .notiffi_head img {
@@ -1956,11 +1972,11 @@ fslarge {
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 5px solid var(--white);
-    outline: 0.5px solid var(--group-color);
+    outline: 0.5px solid var(--group-color)
 }
 
 .notiffi_head_info {
-    flex: 1;
+    flex: 1
 }
 
 .notification {
@@ -1989,7 +2005,7 @@ fslarge {
 }
 
 .notification.unread {
-    background-color: var(--neutral);
+    background-color: var(--neutral)
 }
 
 .notification.alert {
@@ -2003,19 +2019,19 @@ fslarge {
     transform: translateY(100%);
     opacity: 0;
     filter: blur(5px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out
 }
 
 .notification.alert.up {
     transform: translateY(0%);
     opacity: 1;
     filter: blur(0);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out
 }
 
 .notif_details {
     position: relative;
-    align-self: start;
+    align-self: start
 }
 
 .notif_avatar {
@@ -2043,22 +2059,22 @@ fslarge {
     display: grid;
     place-items: center;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 10px
 }
 
 .notification.unread .notif_icon {
     color: var(--neutral);
-    background: var(--accentClr);
+    background: var(--accentClr)
 }
 
 .notif_content {
-    width: 100%;
+    width: 100%
 }
 
 .notif_time {
     font-size: var(--little-size);
     opacity: 0.8;
-    margin-top: 5px;
+    margin-top: 5px
 }
 
 .notif_close {
@@ -2070,11 +2086,11 @@ fslarge {
     border-radius: 100px;
     aspect-ratio: 1;
     padding: 2px;
-    transition: all 0.3s;
+    transition: all 0.3s
 }
 
 .notification:hover .notif_close {
-    opacity: 1;
+    opacity: 1
 }
 
 .alert_close {
@@ -2083,12 +2099,12 @@ fslarge {
     line-height: 0;
     border-radius: 100px;
     aspect-ratio: 1;
-    padding: 2px;
+    padding: 2px
 }
 
 .switcheroo {
     padding: var(--large);
-    background-color: var(--white);
+    background-color: var(--white)
 }
 
 .switcheroo__squircles {
@@ -2100,7 +2116,7 @@ fslarge {
     gap: var(--large);
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .switcheroo__squircle {
@@ -2113,27 +2129,27 @@ fslarge {
     border-radius: 50%;
     cursor: pointer;
     transition: border-radius 128ms var(--ease);
-    background-color: var(--group-color-100, var(--co1-100));
+    background-color: var(--group-color-100, var(--co1-100))
 }
 
 .switcheroo__squircle.active,
 .switcheroo__squircle:hover {
     background-color: var(--group-color, var(--co1));
-    cursor: default;
+    cursor: default
 }
 
 .switcheroo__squircle:hover:before {
     opacity: 1;
-    transform: 128ms var(--ease), opacity 64ms var(--ease);
+    transform: 128ms var(--ease), opacity 64ms var(--ease)
 }
 
 .switcheroo__squircle--button {
-    transition: border-radius 128ms var(--ease);
+    transition: border-radius 128ms var(--ease)
 }
 
 .switcheroo__squircle--button:hover {
     color: var(--light);
-    font-weight: 700;
+    font-weight: 700
 }
 
 .switcheroo__avatar img {
@@ -2144,12 +2160,12 @@ fslarge {
     border-radius: 50%;
     transition: border-radius 128ms var(--ease);
     position: relative;
-    filter: grayscale(1);
+    filter: grayscale(1)
 }
 
 .switcheroo__squircle.active img,
 .switcheroo__squircle:hover img {
-    filter: grayscale(0);
+    filter: grayscale(0)
 }
 
 .switcheroo__delete {
@@ -2167,12 +2183,12 @@ fslarge {
     transition: transform 128ms var(--ease), opacity 64ms var(--ease);
     cursor: pointer;
     color: var(--white);
-    justify-content: center;
+    justify-content: center
 }
 
 .switcheroo__squircle:hover .switcheroo__delete {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1)
 }
 
 .switcheroo__popper {
@@ -2189,28 +2205,28 @@ fslarge {
     text-transform: uppercase;
     font-weight: 300;
     top: calc(26px + var(--2xsmall));
-    right: 50%;
+    right: 50%
 }
 
 .switcheroo .switcheroo__squircle:hover .switcheroo__popper {
     opacity: 1;
-    transform: translateX(50%);
+    transform: translateX(50%)
 }
 
 .switcheroo__form {
     padding: var(--2xlarge);
-    background: var(--co2-50);
+    background: var(--co2-50)
 }
 
 .switcheroo__form-row {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    margin-bottom: var(--large);
+    margin-bottom: var(--large)
 }
 
 .switcheroo__form-row:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .switcheroo__form-label {
@@ -2218,12 +2234,12 @@ fslarge {
     font-size: var(--large);
     text-transform: uppercase;
     font-weight: 300;
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .switcheroo__form-input {
     width: 100%;
-    background-color: var(--co2-50) !important;
+    background-color: var(--co2-50) !important
 }
 
 .switcheroo__form-button {
@@ -2240,11 +2256,11 @@ fslarge {
     color: var(--co2);
     cursor: pointer;
     background-color: transparent;
-    align-self: center;
+    align-self: center
 }
 
 .switcheroo__form-button:hover {
-    color: var(--co2-700);
+    color: var(--co2-700)
 }
 
 .monomer-overlay {
@@ -2256,7 +2272,7 @@ fslarge {
     width: 100%;
     height: 100%;
     transition: 0.2s opacity ease;
-    background: var(--whiteop75);
+    background: var(--whiteop75)
 }
 
 .monomer-modal {
@@ -2267,12 +2283,12 @@ fslarge {
     opacity: 0;
     width: 100%;
     transition: 0.2s opacity ease;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 }
 
 .monomer-modal.monomer-open,
 .monomer-overlay.monomer-open {
-    opacity: 1;
+    opacity: 1
 }
 
 .monomer-close {
@@ -2293,11 +2309,11 @@ fslarge {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
+    padding: 0 !important
 }
 
 .monomer-close:hover {
     background: var(--white);
     color: var(--co2);
-    border: 0 !important;
+    border: 0 !important
 }

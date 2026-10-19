@@ -162,6 +162,12 @@
     --co3-50: #0f1a22
 }
 
+@media (width < 1000px) {
+    body {
+        padding-left: var(--3xlarge) !important;
+    }
+}
+
 .group-2 {
     --group-color-50: #e6eef4;
     --group-color-100: #ccdee9;
@@ -1815,6 +1821,7 @@ x2large,
 }
 
 #page-home .five div,
+#page-home .five three,
 #page-home .one span {
     height: -webkit-fill-available;
     width: -webkit-fill-available;

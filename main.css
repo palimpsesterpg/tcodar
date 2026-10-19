@@ -1734,7 +1734,7 @@ x2large,
 .details-modal a {
     flex: 1 1 100%;
     font-family: var(--spe);
-    font-size: var(--xlarge);
+    font-size: var(--large);
     color: var(--black)
 }
 
@@ -1758,18 +1758,18 @@ x2large,
     align-items: center
 }
 
-.admin-modal pseudo {
+.inside-modal pseudo {
     color: var(--group-color);
     font-family: var(--serif);
-    font-size: var(--2xlarge)
+    font-size: var(--xlarge)
 }
 
-.admin-modal dtls {
+.inside-modal dtls {
     display: flex;
     gap: var(--xsmall)
 }
 
-.admin-modal dtls span {
+.inside-modal dtls span {
     background-color: var(--group-color);
     color: var(--white);
     font-weight: 700;
@@ -1777,6 +1777,10 @@ x2large,
     border-radius: var(--small);
     font-size: var(--small);
     text-transform: lowercase
+}
+
+.inside-modal a {
+    color: var(--group-color)
 }
 
 .admin-modal .inside-modal img {

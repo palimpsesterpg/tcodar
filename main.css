@@ -1670,6 +1670,21 @@ x2large,
 
 #page-home .four {}
 
+.admin-modal-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.admin-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-modal div {
+    display: flex;
+}
+
 #page-home .five {
     grid-area: 1 / 4 / 2 / 6;
 }

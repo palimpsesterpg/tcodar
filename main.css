@@ -1652,7 +1652,7 @@ x2large,
 
 #page-home .five,
 #page-home .one {
-    height: 200px;
+    height: 150px;
     background-color: var(--white);
     padding: var(--large)
 }
@@ -1661,7 +1661,7 @@ x2large,
     background-image: url(Images/tcodar-body.png);
     background-size: cover;
     background-position: center center;
-    grid-area: 1 / 1 / 2 / 3
+    grid-area: 1 / 1 / 2 / 4
 }
 
 #page-home .two {}
@@ -1670,7 +1670,9 @@ x2large,
 
 #page-home .four {}
 
-#page-home .five {}
+#page-home .five {
+    grid-area: 1 / 4 / 2 / 6;
+}
 
 #page-home .six {}
 
@@ -1696,6 +1698,7 @@ x2large,
 #page-home .one span {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
+    display: block;
     overflow: auto
 }
 

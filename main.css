@@ -264,7 +264,7 @@
     #page-body,
     #page-home,
     #page-footer {
-        width: 90%
+        width: 90% !important
     }
 
 }

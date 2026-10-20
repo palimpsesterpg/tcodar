@@ -287,7 +287,8 @@ body {
 
 #page-flex {
     display: flex;
-    width: 100%
+    height: max-content;
+    width: 1000px
 }
 
 a,

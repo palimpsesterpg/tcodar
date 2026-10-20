@@ -624,6 +624,10 @@ x2large,
     border-right: 0.5px solid var(--co3)
 }
 
+#page-body:has(#page-home) {
+    padding-bottom: 0px !important
+}
+
 #page-footer>div:first-of-type {
     text-align: center;
     text-transform: uppercase;
@@ -1255,8 +1259,8 @@ x2large,
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: var(--2xsmall);
-    width: 75px
+    gap: var(--3xsmall);
+    width: 100%
 }
 
 .forum-admin .forum-lastpost,
@@ -1277,9 +1281,9 @@ x2large,
 .forum-off .forum-posts,
 .forum-off .forum-topics {
     background-color: var(--white);
-    padding: var(--2xsmall);
-    border-radius: var(--2xsmall);
-    gap: var(--2xsmall);
+    padding: var(--3xsmall);
+    border-radius: var(--xsmall);
+    gap: var(--3xsmall);
     justify-content: space-between;
     width: -webkit-fill-available
 }

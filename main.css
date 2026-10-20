@@ -254,6 +254,18 @@
     #page-header {
         width: 100vh !important;
     }
+
+    #categories {
+        gap: var(--large);
+        width: 100% !important
+    }
+
+    #page-body,
+    #page-home,
+    #page-footer {
+        width: 90%
+    }
+
 }
 
 body {
@@ -448,6 +460,7 @@ x2large,
     box-sizing: border-box;
     background-size: cover;
     flex-direction: row-reverse;
+    padding: var(--large);
     position: relative
 }
 
@@ -717,9 +730,9 @@ x2large,
 #categories {
     display: flex;
     gap: var(--3xlarge);
-    width: calc(100% + 14rem);
-    margin-left: -7rem;
-    align-items: center
+    width: calc(100% + 12rem);
+    margin-left: -6rem;
+    align-items: center;
 }
 
 #categories .tabsystem-contents {

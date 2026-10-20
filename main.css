@@ -162,12 +162,6 @@
     --co3-50: #0f1a22
 }
 
-@media (width < 1000px) {
-    body {
-        padding-left: var(--3xlarge) !important;
-    }
-}
-
 .group-2 {
     --group-color-50: #e6eef4;
     --group-color-100: #ccdee9;
@@ -252,16 +246,11 @@
     --gradient23-50: linear-gradient(to left, var(--co2-50), var(--co3-50))
 }
 
-html {
-    scroll-behavior: smooth
-}
-
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    width: 100%;
+    width: 100vh;
     font-size: var(--medium);
-    margin-top: 0 !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -440,7 +429,7 @@ x2large,
 #page-header {
     background-image: url("Images/tcodar-header-light.png");
     height: 100vh;
-    margin-left: 3rem;
+    width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,8 +447,11 @@ x2large,
     text-shadow: 0 0 5px var(--blackop50)
 }
 
+#page-header .tabsystem {
+    gap: var(--large)
+}
+
 #page-header .tabsystem-tabs {
-    margin: var(--large);
     font-size: var(--large);
     color: var(--white);
     display: flex;
@@ -467,18 +459,22 @@ x2large,
     gap: var(--large)
 }
 
-#page-header .tab i:before {
-    background-color: var(--whiteop50);
+#page-header .tab:before {
+    content: '';
+    outline: 0.5px solid var(--white);
+    height: var(--large);
+    width: var(--large);
+    text-shadow: 0 0 5px var(--whiteop50);
     border-radius: 50%;
     backdrop-filter: blur(2px)
 }
 
-#page-header .tab.active i:before {
-    background-color: var(--whiteop75)
+#page-header .tab.active:before {
+    text-shadow: 0 0 5px var(--whiteop75)
 }
 
 #page-header .tabsystem-contents {
-    width: 100%
+    flex: 1
 }
 
 .main-header {
@@ -693,6 +689,8 @@ x2large,
 #categories {
     display: flex;
     gap: var(--large);
+    width: calc(100% + 10rem);
+    margin-left: -5rem;
     align-items: center
 }
 
@@ -708,21 +706,21 @@ x2large,
 }
 
 #categories .tabsystem-tabs.off {
-    border: 0.5px solid var(--co2-200);
+    outline: 0.5px solid var(--co2-200);
     color: var(--co2)
 }
 
 #categories .tabsystem-tabs.off:has(.active) {
-    border: 0.5px solid var(--co2)
+    outline: 0.5px solid var(--co2)
 }
 
 #categories .tabsystem-tabs.loc {
-    border: 0.5px solid var(--co3-200);
+    outline: 0.5px solid var(--co3-200);
     color: var(--co3)
 }
 
 #categories .tabsystem-tabs.loc:has(.active) {
-    border: 0.5px solid var(--co3)
+    outline: 0.5px solid var(--co3)
 }
 
 #categories .tabsystem-tabs i {
@@ -744,7 +742,7 @@ x2large,
 #categories .tab:before {
     height: var(--large);
     width: var(--large);
-    border: 0.5px solid;
+    outline: 0.5px solid;
     border-radius: 100%;
     content: ''
 }

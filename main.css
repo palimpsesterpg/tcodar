@@ -2073,6 +2073,11 @@ x2large,
     padding-bottom: var(--3xsmall)
 }
 
+.phseven-city .meteo {
+    padding: var(--3xsmall) 0
+}
+
+
 .phseven-city .time>* {
     background-color: var(--dark);
     color: var(--white);

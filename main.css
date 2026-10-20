@@ -83,20 +83,16 @@
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
     --gradientAll: linear-gradient(to right,
-            var(--co3),
             var(--co1),
             var(--co2),
-            var(--co1),
             var(--co3));
-    --gradient12-50: linear-gradient(to right, var(--co1-50), var(--co2-50));
-    --gradient13-50: linear-gradient(to right, var(--co1-50), var(--co3-50));
-    --gradient23-50: linear-gradient(to right, var(--co2-50), var(--co3-50));
+    --gradient12-50: linear-gradient(to right, var(--co1-100), var(--co2-100));
+    --gradient13-50: linear-gradient(to right, var(--co1-100), var(--co3-100));
+    --gradient23-50: linear-gradient(to right, var(--co2-100), var(--co3-100));
     --gradientAll-50: linear-gradient(to right,
-            var(--co3-50),
-            var(--co1-50),
-            var(--co2-50),
-            var(--co1-50),
-            var(--co3-50));
+            var(--co1-100),
+            var(--co2-100),
+            var(--co3-100));
     color-scheme: light
 }
 
@@ -232,18 +228,17 @@
     --group-color-600: #855018;
     --group-color-700: #6A4013;
     --group-color-800: #50300F;
-    --gradientgc1: linear-gradient(to right, var(--group-color-50), var(--group-color-100), var(--group-color-50));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
-    --gradientgc3: linear-gradient(to right, var(--group-color-600), var(--group-color-800), var(--group-color-600))
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color));
 }
 
 .reverse {
     --gradient12: linear-gradient(to left, var(--co1), var(--co2));
     --gradient13: linear-gradient(to left, var(--co1), var(--co3));
     --gradient23: linear-gradient(to left, var(--co2), var(--co3));
-    --gradient12-50: linear-gradient(to left, var(--co1-50), var(--co2-50));
-    --gradient13-50: linear-gradient(to left, var(--co1-50), var(--co3-50));
-    --gradient23-50: linear-gradient(to left, var(--co2-50), var(--co3-50))
+    --gradient12-50: linear-gradient(to left, var(--co1-100), var(--co2-100));
+    --gradient13-50: linear-gradient(to left, var(--co1-100), var(--co3-100));
+    --gradient23-50: linear-gradient(to left, var(--co2-100), var(--co3-100))
 }
 
 @media (width < 1000px) {

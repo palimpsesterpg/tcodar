@@ -29,7 +29,7 @@ uppun,
 uppud,
 uppugc {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 border1,
@@ -58,7 +58,122 @@ borderbid,
 borderbigc {
     border: 0.5px solid;
     font-weight: 300;
-    padding: var(--3xsmall) var(--xlarge);
+    padding: var(--3xsmall) var(--large)
+}
+
+gborder123,
+gborder12,
+gborder13,
+gborder23,
+gbordergc,
+gborderb123,
+gborderb12,
+gborderb13,
+gborderb23,
+gborderbgc,
+gborderi123,
+gborderi12,
+gborderi13,
+gborderi23,
+gborderigc,
+gborderbi123,
+gborderbi12,
+gborderbi13,
+gborderbi23,
+gborderbigc,
+lgborder123,
+lgborder12,
+lgborder13,
+lgborder23,
+lgbordergc,
+lgborderb123,
+lgborderb12,
+lgborderb13,
+lgborderb23,
+lgborderbgc,
+lgborderi123,
+lgborderi12,
+lgborderi13,
+lgborderi23,
+lgborderigc,
+lgborderbi123,
+lgborderbi12,
+lgborderbi13,
+lgborderbi23,
+lgborderbigc {
+    border: 0.5px solid;
+    font-family: var(--display);
+    padding: var(--3xsmall)
+}
+
+gborder123,
+gborderb123,
+gborderi123,
+gborderbi123 {
+    border-image: var(--gradientAll) 1;
+}
+
+gborder12,
+gborderb12,
+gborderi12,
+gborderbi12 {
+    border-image: var(--gradient12) 1;
+}
+
+gborder13,
+gborderb13,
+gborderi13,
+gborderbi13 {
+    border-image: var(--gradient13) 1;
+}
+
+gborder23,
+gborderb23,
+gborderi23,
+gborderbi23 {
+    border-image: var(--gradient23) 1;
+}
+
+gbordergc,
+gborderbgc,
+gborderigc,
+gborderbigc {
+    border-image: var(--gradientgc2) 1;
+}
+
+lgborder123,
+lgborderb123,
+lgborderi123,
+lgborderbi123 {
+    border-image: var(--gradientAll-50) 1;
+}
+
+lgborder12,
+lgborderb12,
+lgborderi12,
+lgborderbi12 {
+    border-image: var(--gradient12-50) 1;
+}
+
+lgborder13,
+lgborderb13,
+lgborderi13,
+lgborderbi13 {
+    border-image: var(--gradient13-50) 1;
+}
+
+lgborder23,
+lgborderb23,
+lgborderi23,
+lgborderbi23 {
+    border-image: var(--gradient23-50) 1;
+}
+
+lgbordergc,
+lgborderbgc,
+lgborderigc,
+lgborderbigc {
+    border-image: var(--gradientgc1) 1;
 }
 
 bborder1,
@@ -85,10 +200,10 @@ bborderbi3,
 bborderbin,
 bborderbid,
 bborderbigc {
-    border-bottom: 1px solid;
-    padding: 0.1rem var(--small);
+    border-bottom: 0.5px solid;
+    padding: var(--3xsmall) var(--small) 0;
     font-family: var(--serif);
-    background-color: var(--white);
+    background-color: var(--white)
 }
 
 mborder1,
@@ -118,7 +233,7 @@ mborderbigc {
     border: 0.5px solid;
     background-color: var(--white);
     padding: 0.1rem var(--xsmall);
-    font-family: var(--mono);
+    font-family: var(--mono)
 }
 
 border1,
@@ -133,7 +248,7 @@ mborder1,
 mborderb1,
 mborderi1,
 mborderbi1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 border2,
@@ -148,7 +263,7 @@ mborder2,
 mborderb2,
 mborderi2,
 mborderbi2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 border3,
@@ -163,7 +278,7 @@ mborder3,
 mborderb3,
 mborderi3,
 mborderbi3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 bordern,
@@ -178,7 +293,7 @@ mbordern,
 mborderbn,
 mborderin,
 mborderbin {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 borderd,
@@ -193,7 +308,7 @@ mborderd,
 mborderbd,
 mborderid,
 mborderbid {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 bordergc,
@@ -208,175 +323,175 @@ mborgcergc,
 mborgcerbgc,
 mborgcerigc,
 mborgcerbigc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 back1,
 backb1,
 backi1,
 backbi1 {
-    background-color: var(--co1);
+    background-color: var(--co1)
 }
 
 back2,
 backb2,
 backi2,
 backbi2 {
-    background-color: var(--co2);
+    background-color: var(--co2)
 }
 
 back3,
 backb3,
 backi3,
 backbi3 {
-    background-color: var(--co3);
+    background-color: var(--co3)
 }
 
 backn,
 backbn,
 backin,
 backbin {
-    background-color: var(--darkneutral);
+    background-color: var(--darkneutral)
 }
 
 backd,
 backbd,
 backid,
 backbid {
-    background-color: var(--dark);
+    background-color: var(--dark)
 }
 
 backgc,
 backbgc,
 backigc,
 backbigc {
-    background-color: var(--group-color, var(--lightdark));
+    background-color: var(--group-color, var(--lightdark))
 }
 
 lback1,
 lbackb1,
 lbacki1,
 lbackbi1 {
-    background-color: var(--co1-50);
+    background-color: var(--co1-50)
 }
 
 lback2,
 lbackb2,
 lbacki2,
 lbackbi2 {
-    background-color: var(--co2-50);
+    background-color: var(--co2-50)
 }
 
 lback3,
 lbackb3,
 lbacki3,
 lbackbi3 {
-    background-color: var(--co3-50);
+    background-color: var(--co3-50)
 }
 
 lbackn,
 lbackbn,
 lbackin,
 lbackbin {
-    background-color: var(--darklight);
+    background-color: var(--darklight)
 }
 
 lbackd,
 lbackbd,
 lbackid,
 lbackbid {
-    background-color: var(--neutral);
+    background-color: var(--neutral)
 }
 
 lbackgc,
 lbackbgc,
 lbackigc,
 lbackbigc {
-    background-color: var(--group-color-50);
+    background-color: var(--group-color-50)
 }
 
 dback1,
 dbackb1,
 dbacki1,
 dbackbi1 {
-    background-color: var(--co1-700);
+    background-color: var(--co1-700)
 }
 
 dback2,
 dbackb2,
 dbacki2,
 dbackbi2 {
-    background-color: var(--co2-700);
+    background-color: var(--co2-700)
 }
 
 dback3,
 dbackb3,
 dbacki3,
 dbackbi3 {
-    background-color: var(--co3-700);
+    background-color: var(--co3-700)
 }
 
 dbackn,
 dbackbn,
 dbackin,
 dbackbin {
-    background-color: var(--darkneutral);
+    background-color: var(--darkneutral)
 }
 
 dbackd,
 dbackbd,
 dbackid,
 dbackbid {
-    background-color: var(--black);
+    background-color: var(--black)
 }
 
 dbackgc,
 dbackbgc,
 dbackigc,
 dbackbigc {
-    background-color: var(--group-color-700);
+    background-color: var(--group-color-700)
 }
 
 mback1,
 mbackb1,
 mbacki1,
 mbackbi1 {
-    background-color: var(--co1-300);
+    background-color: var(--co1-300)
 }
 
 mback2,
 mbackb2,
 mbacki2,
 mbackbi2 {
-    background-color: var(--co2-300);
+    background-color: var(--co2-300)
 }
 
 mback3,
 mbackb3,
 mbacki3,
 mbackbi3 {
-    background-color: var(--co3-300);
+    background-color: var(--co3-300)
 }
 
 mbackn,
 mbackbn,
 mbackin,
 mbackbin {
-    background-color: var(--neutral);
+    background-color: var(--neutral)
 }
 
 mbackd,
 mbackbd,
 mbackid,
 mbackbid {
-    background-color: var(--black);
+    background-color: var(--black)
 }
 
 mbackgc,
 mbackbgc,
 mbackigc,
 mbackbigc {
-    background-color: var(--group-color-300);
+    background-color: var(--group-color-300)
 }
 
 wback1,
@@ -387,7 +502,7 @@ lback1,
 lbackb1,
 lbacki1,
 lbackbi1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 wback2,
@@ -398,7 +513,7 @@ lback2,
 lbackb2,
 lbacki2,
 lbackbi2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 wback3,
@@ -409,7 +524,7 @@ lback3,
 lbackb3,
 lbacki3,
 lbackbi3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 wbackn,
@@ -420,7 +535,7 @@ lbackn,
 lbackbn,
 lbackin,
 lbackbin {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 wbackd,
@@ -431,7 +546,7 @@ lbackd,
 lbackbd,
 lbackid,
 lbackbid {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 wbackgc,
@@ -442,7 +557,7 @@ lbackgc,
 lbackbgc,
 lbackigc,
 lbackbigc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 back1,
@@ -565,7 +680,7 @@ lbgradgc a,
 lbgradbgc a,
 lbgradigc a,
 lbgradbigc {
-    color: var(--white) !important;
+    color: var(--white) !important
 }
 
 wback1,
@@ -592,7 +707,7 @@ wbackgc,
 wbackbgc,
 wbackigc,
 wbackbigc {
-    background-color: var(--white);
+    background-color: var(--white)
 }
 
 lback1,
@@ -667,7 +782,7 @@ backgc,
 backbgc,
 backigc,
 backbigc {
-    padding: 0 var(--small);
+    padding: 0 var(--small)
 }
 
 bgrad123,
@@ -710,7 +825,7 @@ lbgradb12,
 lbgradb13,
 lbgradb23,
 lbgradbgc {
-    padding: 0 var(--medium);
+    padding: 0 var(--xsmall)
 }
 
 lback1,
@@ -737,7 +852,7 @@ lbackgc,
 lbackbgc,
 lbackigc,
 lbackbigc {
-    font-family: var(--mono);
+    font-family: var(--mono)
 }
 
 dback1,
@@ -769,7 +884,7 @@ dbackbigc {
     letter-spacing: 2.5px;
     font-size: var(--small);
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--white)
 }
 
 mback1,
@@ -801,18 +916,22 @@ mbackbigc {
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;
-    color: var(--white);
+    color: var(--white)
 }
 
 grad12,
 gradb12,
 gradi12,
 gradbi12,
+gborder12,
+gborderb12,
+gborderi12,
+gborderbi12,
 bgrad12,
 bgradb12,
 bgradi12,
 bgradbi12 {
-    background: var(--gradient12);
+    background: var(--gradient12)
 }
 
 grad123,
@@ -822,41 +941,57 @@ gradbi123,
 bgrad123,
 bgradb123,
 bgradi123,
-bgradbi123 {
-    background: var(--gradientAll);
+bgradbi123,
+gborder123,
+gborderb123,
+gborderi123,
+gborderbi123 {
+    background: var(--gradientAll)
 }
 
 grad13,
 gradb13,
 gradi13,
 gradbi13,
+gborder13,
+gborderb13,
+gborderi13,
+gborderbi13,
 bgrad13,
 bgradb13,
 bgradi13,
 bgradbi13 {
-    background: var(--gradient13);
+    background: var(--gradient13)
 }
 
 grad23,
 gradb23,
 gradi23,
 gradbi23,
+gborder23,
+gborderb23,
+gborderi23,
+gborderbi23,
 bgrad23,
 bgradb23,
 bgradi23,
 bgradbi23 {
-    background: var(--gradient23);
+    background: var(--gradient23)
 }
 
 gradgc,
 gradbgc,
 gradigc,
 gradbigc,
+gbordergc,
+gborderbgc,
+gborderigc,
+gborderbigc,
 bgradgc,
 bgradbgc,
 bgradigc,
 bgradbigc {
-    background: var(--gradientgc2);
+    background: var(--gradientgc2)
 }
 
 lbgrad123,
@@ -866,19 +1001,27 @@ lbgradbi123,
 lgrad123,
 lgradb123,
 lgradi123,
-lgradbi123 {
-    background: var(--gradientAll-50);
+lgradbi123,
+lgborder123,
+lgborderb123,
+lgborderi123,
+lgborderbi123 {
+    background: var(--gradientAll-50)
 }
 
 lbgrad12,
 lbgradb12,
 lbgradi12,
 lbgradbi12,
+lgborder12,
+lgborderb12,
+lgborderi12,
+lgborderbi12,
 lgrad12,
 lgradb12,
 lgradi12,
 lgradbi12 {
-    background: var(--gradient12-50);
+    background: var(--gradient12-50)
 }
 
 lbgrad13,
@@ -888,8 +1031,12 @@ lbgradbi13,
 lgrad13,
 lgradb13,
 lgradi13,
-lgradbi13 {
-    background: var(--gradient13-50);
+lgradbi13,
+lgborder13,
+lgborderb13,
+lgborderi13,
+lgborderbi13 {
+    background: var(--gradient13-50)
 }
 
 lbgrad23,
@@ -899,8 +1046,12 @@ lbgradbi23,
 lgrad23,
 lgradb23,
 lgradi23,
-lgradbi23 {
-    background: var(--gradient23-50);
+lgradbi23,
+lgborder23,
+lgborderb23,
+lgborderi23,
+lgborderbi23 {
+    background: var(--gradient23-50)
 }
 
 lbgradgc,
@@ -910,8 +1061,12 @@ lbgradbigc,
 lgradgc,
 lgradbgc,
 lgradigc,
-lgradbigc {
-    background: var(--gradientgc1);
+lgradbigc,
+lgbordergc,
+lgborderbgc,
+lgborderigc,
+lgborderbigc {
+    background: var(--gradientgc1)
 }
 
 grad123,
@@ -953,10 +1108,50 @@ lgradb123,
 lgradb12,
 lgradb13,
 lgradb23,
-lgradbgc {
+lgradbgc,
+gborder123,
+gborder12,
+gborder13,
+gborder23,
+gbordergc,
+gborderbi123,
+gborderbi12,
+gborderbi13,
+gborderbi23,
+gborderbigc,
+gborderi123,
+gborderi12,
+gborderi13,
+gborderi23,
+gborderigc,
+gborderb123,
+gborderb12,
+gborderb13,
+gborderb23,
+gborderbgc,
+lgborder123,
+lgborder12,
+lgborder13,
+lgborder23,
+lgbordergc,
+lgborderbi123,
+lgborderbi12,
+lgborderbi13,
+lgborderbi23,
+lgborderbigc,
+lgborderi123,
+lgborderi12,
+lgborderi13,
+lgborderi23,
+lgborderigc,
+lgborderb123,
+lgborderb12,
+lgborderb13,
+lgborderb23,
+lgborderbgc {
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent
 }
 
 back1,
@@ -1037,7 +1232,7 @@ serifu3,
 serifun,
 serifud,
 serifugc {
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 serif1,
@@ -1045,7 +1240,7 @@ serifb1,
 serifi1,
 serifbi1,
 serifu1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 serif2,
@@ -1053,7 +1248,7 @@ serifb2,
 serifi2,
 serifbi2,
 serifu2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 serif3,
@@ -1061,7 +1256,7 @@ serifb3,
 serifi3,
 serifbi3,
 serifu3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 serifn,
@@ -1069,7 +1264,7 @@ serifbn,
 serifin,
 serifbin,
 serifun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 serifd,
@@ -1077,7 +1272,7 @@ serifbd,
 serifid,
 serifbid,
 serifud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 serifgc,
@@ -1085,7 +1280,7 @@ serifbgc,
 serifigc,
 serifbigc,
 serifugc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 under1,
@@ -1174,7 +1369,7 @@ labud,
 labugc {
     font-family: var(--display);
     font-weight: 500;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 lab1,
@@ -1243,7 +1438,7 @@ monobin,
 monobid,
 monobigc,
 monougc {
-    font-family: var(--mono);
+    font-family: var(--mono)
 }
 
 display1,
@@ -1251,7 +1446,7 @@ displayb1,
 displayi1,
 displaybi1,
 displayu1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 display2,
@@ -1259,7 +1454,7 @@ displayb2,
 displayi2,
 displaybi2,
 displayu2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 display3,
@@ -1267,7 +1462,7 @@ displayb3,
 displayi3,
 displaybi3,
 displayu3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 displayn,
@@ -1275,7 +1470,7 @@ displaybn,
 displayin,
 displaybin,
 displayun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 displayd,
@@ -1283,7 +1478,7 @@ displaybd,
 displayid,
 displaybid,
 displayud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 displaygc,
@@ -1291,7 +1486,7 @@ displaybgc,
 displayigc,
 displaybigc,
 displayugc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 lab1,
@@ -1299,7 +1494,7 @@ labb1,
 labi1,
 labbi1,
 labu1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 lab2,
@@ -1307,7 +1502,7 @@ labb2,
 labi2,
 labbi2,
 labu2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 lab3,
@@ -1315,7 +1510,7 @@ labb3,
 labi3,
 labbi3,
 labu3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 labn,
@@ -1323,7 +1518,7 @@ labbn,
 labin,
 labbin,
 labun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 labd,
@@ -1331,7 +1526,7 @@ labbd,
 labid,
 labbid,
 labud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 labgc,
@@ -1339,7 +1534,7 @@ labbgc,
 labigc,
 labbigc,
 labugc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 mono1,
@@ -1347,7 +1542,7 @@ monob1,
 monoi1,
 monobi1,
 monou1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 mono2,
@@ -1355,7 +1550,7 @@ monob2,
 monoi2,
 monobi2,
 monou2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 mono3,
@@ -1363,7 +1558,7 @@ monob3,
 monoi3,
 monobi3,
 monou3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 monon,
@@ -1371,7 +1566,7 @@ monobn,
 monoin,
 monobin,
 monoun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 monod,
@@ -1379,7 +1574,7 @@ monobd,
 monoid,
 monobid,
 monoud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 monogc,
@@ -1387,7 +1582,7 @@ monobgc,
 monoigc,
 monobigc,
 monougc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 under1,
@@ -1397,7 +1592,7 @@ underbi1 {
     box-shadow: inset 0 -8px 0 var(--co1-50);
     letter-spacing: 1x;
     padding-left: 1px;
-    color: var(--co1-600);
+    color: var(--co1-600)
 }
 
 under2,
@@ -1407,7 +1602,7 @@ underbi2 {
     box-shadow: inset 0 -8px 0 var(--co2-50);
     letter-spacing: 1x;
     padding-left: 1px;
-    color: var(--co2-600);
+    color: var(--co2-600)
 }
 
 under3,
@@ -1417,7 +1612,7 @@ underbi3 {
     box-shadow: inset 0 -8px 0 var(--co3-50);
     letter-spacing: 1x;
     padding-left: 1px;
-    color: var(--co3-600);
+    color: var(--co3-600)
 }
 
 undern,
@@ -1427,7 +1622,7 @@ underbin {
     box-shadow: inset 0 -8px 0 var(--darklight);
     letter-spacing: 1x;
     padding-left: 1px;
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 underd,
@@ -1436,7 +1631,7 @@ underid,
 underbid {
     box-shadow: inset 0 -8px 0 var(--white);
     letter-spacing: 1x;
-    padding-left: 1px;
+    padding-left: 1px
 }
 
 undergc,
@@ -1446,7 +1641,7 @@ underbigc {
     box-shadow: inset 0 -8px 0 var(--group-color-50);
     letter-spacing: 1x;
     padding-left: 1px;
-    color: var(--group-color-600);
+    color: var(--group-color-600)
 }
 
 main1,
@@ -1454,7 +1649,7 @@ mainb1,
 maini1,
 mainbi1,
 mainu1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 main2,
@@ -1462,7 +1657,7 @@ mainb2,
 maini2,
 mainbi2,
 mainu2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 main3,
@@ -1470,7 +1665,7 @@ mainb3,
 maini3,
 mainbi3,
 mainu3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 mainn,
@@ -1478,7 +1673,7 @@ mainbn,
 mainin,
 mainbin,
 mainun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 maind,
@@ -1486,7 +1681,7 @@ mainbd,
 mainid,
 mainbid,
 mainud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 maingc,
@@ -1494,7 +1689,7 @@ mainbgc,
 mainigc,
 mainbigc,
 mainugc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 upp1,
@@ -1502,7 +1697,7 @@ uppb1,
 uppi1,
 uppbi1,
 uppu1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 upp2,
@@ -1510,7 +1705,7 @@ uppb2,
 uppi2,
 uppbi2,
 uppu2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 upp3,
@@ -1518,7 +1713,7 @@ uppb3,
 uppi3,
 uppbi3,
 uppu3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 uppn,
@@ -1526,7 +1721,7 @@ uppbn,
 uppin,
 uppbin,
 uppun {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 uppd,
@@ -1534,7 +1729,7 @@ uppbd,
 uppid,
 uppbid,
 uppud {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 uppgc,
@@ -1542,7 +1737,7 @@ uppbgc,
 uppigc,
 uppbigc,
 uppugc {
-    color: var(--group-color, var(--lightdark));
+    color: var(--group-color, var(--lightdark))
 }
 
 lbackb1,
@@ -1570,6 +1765,20 @@ gradb23,
 gradb5,
 gradb6,
 gradbgc,
+gborderb123,
+gborderb12,
+gborderb13,
+gborderb23,
+gborderb5,
+gborderb6,
+gborderbgc,
+lgborderb123,
+lgborderb12,
+lgborderb13,
+lgborderb23,
+lgborderb5,
+lgborderb6,
+lgborderbgc,
 bgradb123,
 bgradb12,
 bgradb13,
@@ -1663,7 +1872,7 @@ underb3,
 underbn,
 underbd,
 underbgc {
-    font-weight: 700;
+    font-weight: 700
 }
 
 lbacku1,
@@ -1784,7 +1993,7 @@ underu3,
 underun,
 underud,
 underugc {
-    border-bottom: 0.5px solid;
+    border-bottom: 0.5px solid
 }
 
 lbacki1,
@@ -1812,6 +2021,20 @@ gradi23,
 gradi5,
 gradi6,
 gradigc,
+gborderi123,
+gborderi12,
+gborderi13,
+gborderi23,
+gborderi5,
+gborderi6,
+gborderigc,
+lgborderi123,
+lgborderi12,
+lgborderi13,
+lgborderi23,
+lgborderi5,
+lgborderi6,
+lgborderigc,
 bgradi123,
 bgradi12,
 bgradb13,
@@ -1905,7 +2128,7 @@ underi3,
 underin,
 underid,
 underigc {
-    font-style: italic;
+    font-style: italic
 }
 
 lbackbi1,
@@ -1926,14 +2149,27 @@ mbackbi3,
 mbackbin,
 mbackbid,
 mbackbigc,
+gradbi123,
 gradbi12,
 gradbi13,
 gradbi23,
 gradbigc,
+gborderbi123,
+gborderbi12,
+gborderbi13,
+gborderbi23,
+gborderbigc,
+lgborderbi123,
+lgborderbi12,
+lgborderbi13,
+lgborderbi23,
+lgborderbigc,
+bgradbi123,
 bgradbi12,
 bgradbi13,
 bgradbi23,
 bgradbigc,
+lbgradbi123,
 lbgradbi12,
 lbgradbi13,
 lbgradbi23,
@@ -2016,7 +2252,7 @@ underbin,
 underbid,
 underbigc {
     font-weight: 700;
-    font-style: italic;
+    font-style: italic
 }
 
 tit1,
@@ -2028,37 +2264,37 @@ titgc {
     font-size: var(--2xlarge);
     letter-spacing: 2.5px;
     color: transparent;
-    font-weight: 900;
+    font-weight: 900
 }
 
 tit1 {
     -webkit-text-stroke: 0.5px var(--co1);
-    color: var(--co1-200);
+    color: var(--co1-200)
 }
 
 tit2 {
     -webkit-text-stroke: 0.5px var(--co2);
-    color: var(--co2-200);
+    color: var(--co2-200)
 }
 
 tit3 {
     -webkit-text-stroke: 0.5px var(--co3);
-    color: var(--co3-200);
+    color: var(--co3-200)
 }
 
 titn {
     -webkit-text-stroke: 0.5px var(--darkneutral);
-    color: var(--neutral);
+    color: var(--neutral)
 }
 
 titd {
     -webkit-text-stroke: 0.5px var(--dark);
-    color: var(--lighterdark);
+    color: var(--lighterdark)
 }
 
 titgc {
     -webkit-text-stroke: 0.5px var(--group-color, var(--lightdark));
-    color: var(--group-color-200, var(--neutral));
+    color: var(--group-color-200, var(--neutral))
 }
 
 sstit1,
@@ -2071,31 +2307,31 @@ sstitgc {
     letter-spacing: 1px;
     color: var(--white);
     font-weight: 900;
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 sstit1 {
-    -webkit-text-stroke: 0.5px var(--co1);
+    -webkit-text-stroke: 0.5px var(--co1)
 }
 
 sstit2 {
-    -webkit-text-stroke: 0.5px var(--co2);
+    -webkit-text-stroke: 0.5px var(--co2)
 }
 
 sstit3 {
-    -webkit-text-stroke: 0.5px var(--co3);
+    -webkit-text-stroke: 0.5px var(--co3)
 }
 
 sstitn {
-    -webkit-text-stroke: 0.5px var(--darkneutral);
+    -webkit-text-stroke: 0.5px var(--darkneutral)
 }
 
 sstitd {
-    -webkit-text-stroke: 0.5px var(--dark);
+    -webkit-text-stroke: 0.5px var(--dark)
 }
 
 sstitgc {
-    -webkit-text-stroke: 0.5px var(--group-color, var(--darkneutral));
+    -webkit-text-stroke: 0.5px var(--group-color, var(--darkneutral))
 }
 
 spe1,
@@ -2107,37 +2343,37 @@ spegc {
     font-family: var(--spe);
     font-weight: 100;
     font-size: var(--large);
-    letter-spacing: 1px;
+    letter-spacing: 1px
 }
 
 maj1,
 spe1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 maj2,
 spe2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 maj3,
 spe3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 majn,
 spen {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 majd,
 sped {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 majgc,
 spegc {
-    color: var(--group-color, var(--darkneutral));
+    color: var(--group-color, var(--darkneutral))
 }
 
 blsp1,
@@ -2149,35 +2385,35 @@ blspgc {
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 5px;
-    padding-left: 5px;
+    padding-left: 5px
 }
 
 blsp1 {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 blsp2 {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 blsp3 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 blsp4 {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 blspn {
-    color: var(--darkneutral);
+    color: var(--darkneutral)
 }
 
 blspd {
-    color: var(--dark);
+    color: var(--dark)
 }
 
 blspgc {
-    color: var(--group-color, var(--darkneutral));
+    color: var(--group-color, var(--darkneutral))
 }
 
 maj1,
@@ -2188,7 +2424,7 @@ majd,
 majgc {
     font-weight: 300;
     text-transform: uppercase;
-    display: inline-block;
+    display: inline-block
 }
 
 maj1::first-letter,
@@ -2199,5 +2435,5 @@ majd::first-letter,
 majgc::first-letter {
     font-size: var(--xlarge) !important;
     text-transform: lowercase !important;
-    font-family: var(--spe);
+    font-family: var(--spe)
 }

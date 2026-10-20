@@ -249,14 +249,14 @@
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    width: 100vh;
+    width: 100%;
     font-size: var(--medium);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 0 !important;
     background-image: url("Images/tcodar-body.png");
+    padding: 0 !important;
     margin: 0px !important
 }
 

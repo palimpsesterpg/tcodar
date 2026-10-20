@@ -249,19 +249,19 @@
 @media (width < 1000px) {
 
     body {
-        width: calc(100vh - 3rem);
+        width: 100vh;
     }
 
     #categories {
         gap: var(--large) !important;
-        margin-left: 0px !important;
-        width: 100% !important
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 
     #page-content,
     #page-home,
     #page-footer {
-        width: 90% !important
+        width: 90% !important;
     }
 
 }
@@ -610,16 +610,14 @@ x2large,
     flex-direction: column
 }
 
-#page-navbar .inside {}
-
-#page-navbar .inside div {
+#page-navbar div {
     display: flex;
     align-items: center;
     gap: var(--large);
     flex-direction: column
 }
 
-#page-navbar .inside div+div {
+#page-navbar div+div {
     border-top: 2.5px solid var(--neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;

@@ -710,8 +710,8 @@ x2large,
 #categories {
     display: flex;
     gap: var(--3xlarge);
-    width: calc(100% + 12rem);
-    margin-left: -6rem;
+    width: calc(100% + 14rem);
+    margin-left: -7rem;
     align-items: center
 }
 
@@ -1290,7 +1290,7 @@ x2large,
 
 .forum-admin .forum-posts span,
 .forum-admin .forum-topics span {
-    color: var(--co1)
+    color: var(--co3)
 }
 
 .forum-admin .forum-posts:after,
@@ -1762,7 +1762,7 @@ x2large,
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--darkneutral)
+    border: 0.5px solid var(--white)
 }
 
 .button-modal {

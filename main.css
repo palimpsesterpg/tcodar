@@ -269,7 +269,7 @@
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    flex: 100%;
+    width: 100%;
     font-size: var(--medium);
     background-size: cover;
     background-position: center;
@@ -570,25 +570,32 @@ x2large,
 }
 
 #page-navbar {
-    height: 100vh;
+    height: -webkit-fill-available;
     width: 3rem;
+    position: relative;
     box-sizing: border-box;
     display: flex;
     background-color: var(--darklight);
     padding: var(--large);
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column
+    flex-direction: column;
 }
 
-#page-navbar>div {
+#page-navbar .inside {
+    position: asbolute;
+    top: 0;
+    left: 0;
+}
+
+#page-navbar .inside div {
     display: flex;
     align-items: center;
     gap: var(--large);
     flex-direction: column
 }
 
-#page-navbar>div+div {
+#page-navbar .inside div+div {
     border-top: 2.5px solid var(--neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;

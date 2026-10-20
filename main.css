@@ -1281,7 +1281,6 @@ x2large,
 .forum-off .forum-topics {
     background-color: var(--white);
     padding: var(--3xsmall);
-    border-radius: var(--xsmall);
     gap: var(--3xsmall);
     justify-content: space-between;
     width: -webkit-fill-available
@@ -1297,8 +1296,12 @@ x2large,
     background-color: var(--co3);
     color: var(--white);
     border-radius: 100%;
-    padding: var(--xsmall);
-    font-size: var(--small)
+    height: var(--xlarge);
+    width: var(--xlarge);
+    display: flex;
+    font-size: var(--small);
+    align-items: center;
+    justify-content: center
 }
 
 .forum-admin:nth-of-type(even) .forum-posts span,

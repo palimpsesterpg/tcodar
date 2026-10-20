@@ -60,7 +60,6 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   if (tabs) {
     tabs.insertAdjacentHTML('beforeend', `
             <div class="tab" data-tab="c11">
-                <i class="fi fi-ts-circle-small"></i>
                 <span>queendom</span>
             </div>
         `);

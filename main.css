@@ -625,6 +625,16 @@ x2large,
     border-right: 0.5px solid var(--co3)
 }
 
+#page-home {
+    padding-bottom: 0px;
+    margin-bottom: -0.5rem;
+    padding-top: var(--large)
+}
+
+#page-footer {
+    padding-top: 0px
+}
+
 #page-footer>div:first-of-type {
     text-align: center;
     text-transform: uppercase;
@@ -699,9 +709,9 @@ x2large,
 
 #categories {
     display: flex;
-    gap: var(--2xlarge);
-    width: calc(100% + 10rem);
-    margin-left: -5rem;
+    gap: var(--3xlarge);
+    width: calc(100% + 12rem);
+    margin-left: -6rem;
     align-items: center
 }
 
@@ -799,18 +809,13 @@ x2large,
 }
 
 .category {
-    display: flex;
     flex-direction: column;
     gap: var(--large);
     width: 100%
 }
 
-.tabsystem .category.active {
+.category.active {
     display: flex !important
-}
-
-.category-content {
-    width: -webkit-fill-available
 }
 
 .category-title h2 {
@@ -1275,7 +1280,7 @@ x2large,
 .forum-admin .forum-topics,
 .forum-off .forum-posts,
 .forum-off .forum-topics {
-    background-color: var(--white);
+    border: 0.5px solid var(--white);
     padding: var(--3xsmall);
     gap: var(--3xsmall);
     justify-content: space-between;

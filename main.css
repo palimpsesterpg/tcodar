@@ -440,7 +440,7 @@ x2large,
 #page-header {
     background-image: url(Images/tcodar-header-light.png);
     height: 100vh;
-    width: calc(100% - 3rem);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,7 +460,8 @@ x2large,
 }
 
 #page-header .tabsystem {
-    gap: var(--large)
+    gap: var(--large);
+    margin-left: 3rem
 }
 
 #page-header .tabsystem-tabs {

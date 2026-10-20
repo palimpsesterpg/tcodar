@@ -798,12 +798,12 @@ x2large,
     outline: 0.5px solid var(--white)
 }
 
-#categories .tabsystem-tabs.off .tab.active,
+#categories .tabsystem-tabs.off .tab.active:hover,
 #categories .tabsystem-tabs.off .tab:hover {
     background-color: var(--co2)
 }
 
-#categories .tabsystem-tabs.loc .tab.active,
+#categories .tabsystem-tabs.loc .tab.active:hover,
 #categories .tabsystem-tabs.loc .tab:hover {
     background-color: var(--co3)
 }

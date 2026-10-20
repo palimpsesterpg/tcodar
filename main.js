@@ -25,9 +25,9 @@ function HeaderNav() {
     headerTab.addEventListener('click', () => {
       const key = headerTab.id;
 
-      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
+      categories.querySelector(`.tab[data-tab="${key}"]`) ? .click();
 
-      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
+      categories.querySelector(`.category[data-tab="${key}"]`) ? .scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -52,6 +52,19 @@ function ClockWall() {
     city.querySelector("hour").textContent = h;
     city.querySelector("min").textContent = m;
   });
+}
+
+if ([1, 2, 3].includes(Number(_userdata.user_id))) {
+  const tabs = document.querySelector('.tabsystem-tabs.off');
+
+  if (tabs) {
+    tabs.insertAdjacentHTML('beforeend', `
+            <div class="tab" data-tab="c11">
+                <i class="fi fi-ts-circle-small"></i>
+                <span>queendom</span>
+            </div>
+        `);
+  }
 }
 
 Tabs();

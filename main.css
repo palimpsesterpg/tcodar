@@ -614,6 +614,7 @@ x2large,
 }
 
 #page-body,
+#page-home,
 #page-footer {
     padding: var(--large);
     width: 70%;
@@ -672,7 +673,7 @@ x2large,
 .forumlist:after,
 .post:after,
 #hub:after,
-#page-home:after,
+#reception:after,
 .memberlist:after {
     position: absolute;
     content: "";
@@ -689,7 +690,7 @@ x2large,
 .forumlist:hover:after,
 .post:hover:after,
 #hub:hover:after,
-#page-home:hover:after,
+#reception:hover:after,
 .memberlist:hover:after {
     box-shadow: 0 0 0.25rem 0.15rem var(--co1-50);
     border: 1px solid var(--co1-100);
@@ -1671,7 +1672,7 @@ x2large,
     text-shadow: 2px 2px var(--white)
 }
 
-#page-home .seven {
+#reception .seven {
     display: grid;
     width: 100%;
     gap: var(--xsmall);
@@ -1679,21 +1680,21 @@ x2large,
     grid-template-columns: repeat(6, 1fr)
 }
 
-#page-home .five,
-#page-home .one {
+#reception .five,
+#reception .one {
     height: 150px;
     background-color: var(--white);
     padding: var(--large)
 }
 
-#page-home .one {
+#reception .one {
     background-image: url(Images/tcodar-body.png);
     background-size: cover;
     background-position: center center;
     grid-area: 1 / 1 / 2 / 4
 }
 
-#page-home .four {
+#reception .four {
     grid-area: 2 / 1 / 3 / 3;
     width: 100%;
     display: flex;
@@ -1702,7 +1703,7 @@ x2large,
     gap: var(--xsmall)
 }
 
-#page-home .two {
+#reception .two {
     grid-area: 3 / 1 / 4 / 3;
     height: 118px;
     padding: var(--large);
@@ -1711,7 +1712,7 @@ x2large,
     color: var(--co1-100)
 }
 
-#page-home .two span {
+#reception .two span {
     font-family: var(--serif);
     text-transform: lowercase;
     color: var(--white);
@@ -1719,16 +1720,16 @@ x2large,
     padding: var(--xsmall)
 }
 
-#page-home .six {
+#reception .six {
     grid-area: 4 / 1 / 4 / 4
 }
 
-#page-home .eight {
+#reception .eight {
     grid-area: 4 / 4 / 5 / 6
 }
 
-#page-home .three strong,
-#page-home .three i {
+#reception .three strong,
+#reception .three i {
     width: 100%;
     height: 52px;
     padding: var(--xsmall);
@@ -1738,20 +1739,20 @@ x2large,
     align-items: center
 }
 
-#page-home .three strong {
+#reception .three strong {
     background-color: var(--co2-50);
     color: var(--co2);
     font-family: var(--mono)
 }
 
-#page-home .three i {
+#reception .three i {
     background-color: var(--co3-50);
     color: var(--co3);
     text-align: right;
     font-family: var(--serif)
 }
 
-#page-home .three {
+#reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
     border: 0.5px solid var(--darkneutral)
@@ -1896,11 +1897,11 @@ x2large,
     border-radius: var(--xsmall)
 }
 
-#page-home .five {
+#reception .five {
     grid-area: 1 / 4 / 2 / 6
 }
 
-#page-home .four {
+#reception .four {
     grid-area: 2 / 1 / 3 / 3;
     height: calc(75px + var(--2xlarge));
     width: 100%;
@@ -1914,7 +1915,7 @@ x2large,
     box-sizing: border-box
 }
 
-#page-home .one div {
+#reception .one div {
     background-color: var(--whiteop75);
     height: -webkit-fill-available;
     width: -webkit-fill-available;
@@ -1922,49 +1923,49 @@ x2large,
     border: var(--large) solid var(--white)
 }
 
-#page-home .one span {
+#reception .one span {
     text-align: justify;
     line-height: 1.5
 }
 
-#page-home .five div {
+#reception .five div {
     display: flex;
     flex-direction: column;
     align-items: flex-start
 }
 
-#page-home .five div,
-#page-home .three div,
-#page-home .two div,
-#page-home .one span {
+#reception .five div,
+#reception .three div,
+#reception .two div,
+#reception .one span {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: block;
     overflow: auto
 }
 
-#page-home .two div {
+#reception .two div {
     text-align: justify;
     line-height: 1.45;
     font-weight: 300
 }
 
-#page-home .three div {
+#reception .three div {
     display: flex;
     flex-direction: column
 }
 
-#page-home .five span {
+#reception .five span {
     color: var(--co1);
     display: flex;
     align-items: center
 }
 
-#page-home .five intel:hover {
+#reception .five intel:hover {
     font-size: var(--medium)
 }
 
-#page-home .five date {
+#reception .five date {
     text-transform: lowercase;
     font-weight: 700;
     padding-right: var(--large);
@@ -1977,7 +1978,7 @@ x2large,
     align-items: center
 }
 
-#page-home .five intel {
+#reception .five intel {
     text-transform: uppercase;
     font-weight: 300;
     height: 37.5px;
@@ -1988,7 +1989,7 @@ x2large,
     flex: 1
 }
 
-#page-home .five intel:before {
+#reception .five intel:before {
     content: '';
     background-color: var(--co1);
     border-radius: 100%;
@@ -1999,19 +2000,19 @@ x2large,
     width: 5px
 }
 
-#page-home .five .ipt {
+#reception .five .ipt {
     color: var(--black)
 }
 
-#page-home .five .ipt intel:before {
+#reception .five .ipt intel:before {
     background-color: var(--black)
 }
 
-#page-home .five .ipt intel {
+#reception .five .ipt intel {
     font-weight: 500
 }
 
-#page-home {
+#reception {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto auto auto auto;
@@ -2086,7 +2087,7 @@ x2large,
 }
 
 #hub>div,
-#page-home>div {
+#reception>div {
     z-index: 99
 }
 

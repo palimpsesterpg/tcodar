@@ -624,10 +624,6 @@ x2large,
     border-right: 0.5px solid var(--co3)
 }
 
-#page-body:has(#page-home) {
-    padding-bottom: 0px !important
-}
-
 #page-footer>div:first-of-type {
     text-align: center;
     text-transform: uppercase;
@@ -675,7 +671,7 @@ x2large,
 
 .forumlist:after,
 .post:after,
-#page-qeel:after,
+#hub:after,
 #page-home:after,
 .memberlist:after {
     position: absolute;
@@ -692,7 +688,7 @@ x2large,
 
 .forumlist:hover:after,
 .post:hover:after,
-#page-qeel:hover:after,
+#hub:hover:after,
 #page-home:hover:after,
 .memberlist:hover:after {
     box-shadow: 0 0 0.25rem 0.15rem var(--co1-50);
@@ -2075,7 +2071,7 @@ x2large,
     padding: var(--3xsmall) 0
 }
 
-#page-qeel {
+#hub {
     display: flex;
     position: relative;
     padding: var(--large);
@@ -2089,12 +2085,12 @@ x2large,
     margin-top: var(--2xlarge)
 }
 
-#page-qeel>div,
+#hub>div,
 #page-home>div {
     z-index: 99
 }
 
-#page-qeel .one {
+#hub .one {
     flex: 1;
     border: 1px solid var(--neutral);
     outline: 2.5px solid var(--white);
@@ -2115,17 +2111,17 @@ x2large,
     overflow: auto
 }
 
-#page-qeel .one a {
+#hub .one a {
     text-transform: uppercase;
     letter-spacing: .5px;
     padding-left: .5px
 }
 
-#page-qeel .one a strong {
+#hub .one a strong {
     font-weight: 700
 }
 
-#page-qeel .two {
+#hub .two {
     width: 100%;
     height: auto;
     display: flex;
@@ -2133,7 +2129,7 @@ x2large,
     gap: var(--large)
 }
 
-#page-qeel .two div {
+#hub .two div {
     background-color: var(--group-color-50);
     color: var(--group-color);
     padding: var(--large);
@@ -2146,20 +2142,20 @@ x2large,
     margin: 2.5px
 }
 
-#page-qeel .three {
+#hub .three {
     display: flex;
     gap: var(--large);
     flex-direction: column
 }
 
-#page-qeel .four {
+#hub .four {
     display: flex;
     gap: var(--large);
     height: auto;
     width: 100%
 }
 
-#page-qeel .four div {
+#hub .four div {
     display: flex;
     align-items: center;
     flex: 1;
@@ -2175,7 +2171,7 @@ x2large,
     padding-left: 2.5px
 }
 
-#page-qeel .four strong {
+#hub .four strong {
     color: var(--white)
 }
 

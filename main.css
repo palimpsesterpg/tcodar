@@ -751,8 +751,8 @@ x2large,
 }
 
 #categories .tab:before {
-    height: var(--large);
-    width: var(--large);
+    height: var(--xsmall);
+    width: var(--xsmall);
     outline: 0.5px solid;
     border-radius: 100%;
     content: ''
@@ -789,12 +789,16 @@ x2large,
 
 #categories .tabsystem-tabs.off .tab.active,
 #categories .tabsystem-tabs.off .tab:hover {
-    background-color: var(--co2)
+    background-color: var(--co2);
+    height: var(--large);
+    width: var(--large)
 }
 
 #categories .tabsystem-tabs.loc .tab.active,
 #categories .tabsystem-tabs.loc .tab:hover {
-    background-color: var(--co3)
+    background-color: var(--co3);
+    height: var(--large);
+    width: var(--large)
 }
 
 .category {

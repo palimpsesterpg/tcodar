@@ -266,29 +266,45 @@
 
 }
 
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    width: 100%;
     font-size: var(--medium);
     display: flex;
+    background-image: url("Images/tcodar-body.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url("Images/tcodar-body.png");
-    padding: 0 !important;
-    margin: 0px !important
 }
 
 #page-body {
-    flex: 1
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
 }
 
 #page-flex {
     display: flex;
-    height: max-content;
-    width: 1000px
+    width: 100%;         
+    min-height: 100vh;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#page-content {
+    flex: 1 1 0;         
+    min-width: 0;        
+    box-sizing: border-box;
 }
 
 a,

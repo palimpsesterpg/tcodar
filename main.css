@@ -1738,11 +1738,10 @@ x2large,
 #reception .three strong,
 #reception .three i {
     width: 100%;
-    height: 52px;
+    height: 3.5rem;
     padding: var(--xsmall);
     display: flex;
     box-sizing: border-box;
-    color: var(--white);
     align-items: center
 }
 
@@ -1762,17 +1761,20 @@ x2large,
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--white)
+    border: var(--3xsmall) solid var(--white)
 }
 
 .button-modal {
     flex: 1;
     aspect-ratio: 1 / 1;
+    cursor: pointer;
     overflow: hidden
 }
 
 .button-modal img {
     width: 100%;
+    object-fit: cover;
+    filter: grayscale(0.5);
     height: 100%
 }
 

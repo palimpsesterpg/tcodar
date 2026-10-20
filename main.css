@@ -792,7 +792,7 @@ x2large,
     left: 2.5rem
 }
 
-#categories .tab:before.active {
+#categories .tab.active:before {
     height: var(--large);
     width: var(--large);
     outline: 0.5px solid var(--white)
@@ -1811,6 +1811,11 @@ x2large,
     color: inherit;
     border: 0px;
     padding: 0px
+}
+
+.close-modal:before {
+    font-family: uicons-thin-straight !important;
+    content: "\e5e8"
 }
 
 .inside-modal {

@@ -692,8 +692,7 @@ x2large,
 
 #categories {
     display: flex;
-    gap: var(--2xlarge);
-    margin-left: calc(-5rem - 2px);
+    gap: var(--large);
     align-items: center
 }
 
@@ -736,6 +735,18 @@ x2large,
     align-items: center;
     justify-content: center;
     cursor: pointer
+}
+
+#categories .tab i {
+    display: none
+}
+
+#categories .tab:before {
+    height: var(--large);
+    width: var(--large);
+    border: 0.5px solid;
+    border-radius: 100%;
+    content: ''
 }
 
 #categories .tab:hover span {
@@ -781,7 +792,7 @@ x2large,
     display: flex;
     flex-direction: column;
     gap: var(--large);
-    width: 968px
+    width: 100%
 }
 
 .tabsystem .category.active {

@@ -1785,7 +1785,7 @@ x2large,
 .admin-modal[open] {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 50%;
     border: 0px;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--whiteop75);
@@ -1817,14 +1817,14 @@ x2large,
     display: flex;
     gap: var(--large);
     align-items: center;
-    width: 75%;
+    width: 95%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
     padding: var(--large)
 }
 
 .details-modal {
-    width: 85%;
+    width: 100%;
     margin: var(--large) auto;
     display: flex;
     align-items: center;

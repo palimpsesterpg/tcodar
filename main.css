@@ -1783,21 +1783,20 @@ x2large,
 }
 
 .admin-modal[open] {
-    display: flex;
-    flex-direction: column;
-    aspect-ratio: 1 / 1;
     width: 50%;
     border: 0px;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--whiteop75);
     box-sizing: border-box;
-    background: var(--white);
-    font-size: var(--medium);
-    color: var(--lightdark)
+    background: var(--white)
 }
 
 .admin-modal[open]>div {
-    position: relative
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--large)
 }
 
 .close-modal {
@@ -1814,19 +1813,19 @@ x2large,
     padding: 0px
 }
 
-.admin-modal .inside-modal {
+.inside-modal {
     display: flex;
     gap: var(--large);
     align-items: center;
     width: 95%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
+    box-sizing: border-box;
     padding: var(--large)
 }
 
 .details-modal {
     width: 100%;
-    margin: var(--large) auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1906,7 +1905,7 @@ x2large,
 
 .admin-modal .inside-modal img {
     width: 150px;
-    height: 75px;
+    height: 100px;
     object-fit: cover;
     border-radius: var(--xsmall)
 }

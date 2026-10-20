@@ -269,8 +269,9 @@
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    width: calc(100% - 3rem);
+    width: 100%;
     font-size: var(--medium);
+    display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -281,7 +282,7 @@ body {
 }
 
 #page-body {
-    width: calc(-webkit-fill-available - 3rem)
+    flex: 1
 }
 
 a,
@@ -662,7 +663,7 @@ x2large,
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-left: calc(var(--large) + 1px);
+    padding-left: calc(var(--large) + 1px) !important;
     padding: var(--large);
     background: var(--light);
     border: 0.5px solid var(--neutral)

@@ -466,7 +466,7 @@ x2large,
     outline: 0.5px solid var(--white);
     height: var(--large);
     width: var(--large);
-    border-radius: 50%;
+    border-radius: 100%;
     backdrop-filter: blur(2px)
 }
 
@@ -517,9 +517,17 @@ x2large,
     color: var(--white)
 }
 
-.header-tab:hover i,
-.header-tab.active i {
+.header-tab:before {
+    content: '';
+    height: var(--xsmall);
+    width: var(--xsmall);
+    display: block;
+    border-radius: 100%;
     color: var(--co2)
+}
+
+.header-tab:before:hover {
+    color: var(--co3)
 }
 
 #c3.header-tab {
@@ -961,7 +969,7 @@ x2large,
     z-index: 2;
     width: 25px;
     background-color: var(--white);
-    border-radius: 50%;
+    border-radius: 100%;
     color: var(--co3);
     align-items: center;
     justify-content: center;
@@ -1280,7 +1288,7 @@ x2large,
 .forum-admin .forum-topics:after {
     background-color: var(--co3);
     color: var(--white);
-    border-radius: 50%;
+    border-radius: 100%;
     padding: var(--xsmall);
     font-size: var(--small)
 }
@@ -1978,7 +1986,7 @@ x2large,
 #page-home .five intel:before {
     content: '';
     background-color: var(--co1);
-    border-radius: 50%;
+    border-radius: 100%;
     display: block;
     position: absolute;
     left: -1.15rem;
@@ -2453,7 +2461,7 @@ x2large,
     width: 3.25rem;
     height: 3.25rem;
     color: var(--group-color, var(--co1));
-    border-radius: 50%;
+    border-radius: 100%;
     cursor: pointer;
     transition: border-radius 128ms var(--ease);
     background-color: var(--group-color-100, var(--co1-100))
@@ -2484,7 +2492,7 @@ x2large,
     height: 3rem;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
+    border-radius: 100%;
     transition: border-radius 128ms var(--ease);
     position: relative;
     filter: grayscale(1)
@@ -2503,7 +2511,7 @@ x2large,
     position: absolute;
     width: 15px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: var(--group-color, var(--co1));
     transform: scale(0);
     opacity: 1;
@@ -2633,7 +2641,7 @@ x2large,
     border: 0;
     outline: none;
     background: var(--co2);
-    border-radius: 50%;
+    border-radius: 100%;
     align-items: center;
     justify-content: center;
     padding: 0 !important

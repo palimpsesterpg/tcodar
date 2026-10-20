@@ -248,6 +248,10 @@
 
 @media (width < 1000px) {
 
+    body {
+        width: 100vh
+    }
+
     #categories {
         gap: var(--large) !important;
         margin-left: 0px !important;
@@ -265,7 +269,7 @@
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    flex: 1;
+    flex: 100%;
     font-size: var(--medium);
     background-size: cover;
     background-position: center;
@@ -274,6 +278,10 @@ body {
     background-image: url("Images/tcodar-body.png");
     padding: 0 !important;
     margin: 0px !important
+}
+
+#page-body {
+    flex: 1
 }
 
 a,

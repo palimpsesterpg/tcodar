@@ -571,19 +571,18 @@ x2large,
 
 #page-navbar {
     height: -webkit-fill-available;
-    width: 3rem;
     position: relative;
     box-sizing: border-box;
     display: flex;
     background-color: var(--darklight);
-    padding: var(--large);
+    padding: var(--xlarge);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
 }
 
 #page-navbar .inside {
-    position: asbolute;
+    position: fixed;
     top: 0;
     left: 0;
 }

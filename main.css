@@ -248,11 +248,11 @@
 
 @media (width < 1000px) {
     body {
-        width: 100vh;
+        width: 100vh !important;
     }
 
     #page-header {
-        width: calc(100vh - 3rem);
+        width: 100vh !important;
     }
 }
 
@@ -447,6 +447,7 @@ x2large,
     background-position: center center;
     box-sizing: border-box;
     background-size: cover;
+    flex-direction: row-reverse;
     position: relative
 }
 
@@ -457,11 +458,6 @@ x2large,
 [data-color-scheme="dark"] #page-header div {
     -webkit-text-stroke: .5px var(--black);
     text-shadow: 0 0 5px var(--blackop50)
-}
-
-#page-header .tabsystem {
-    gap: var(--large);
-    margin-left: 3rem
 }
 
 #page-header .tabsystem-tabs {

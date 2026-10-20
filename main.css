@@ -298,7 +298,8 @@ a:visited {
 }
 
 a:hover {
-    color: var(--darkneutral)
+    color: var(--darkneutral);
+    border-bottom: 0.5px dashed var(--neutral)
 }
 
 h1,

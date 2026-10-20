@@ -437,7 +437,7 @@ x2large,
     background-position: center center;
     box-sizing: border-box;
     background-size: cover;
-    position: relative;
+    position: relative
 }
 
 [data-color-scheme="dark"] #page-header {
@@ -463,6 +463,7 @@ x2large,
 
 #page-header .tab:before {
     content: '';
+    display: block;
     outline: 0.5px solid var(--white);
     height: var(--large);
     width: var(--large);
@@ -523,7 +524,7 @@ x2large,
     width: var(--xsmall);
     display: block;
     border-radius: 100%;
-    color: var(--co2)
+    background-color: var(--co2)
 }
 
 .header-tab:before:hover {
@@ -697,10 +698,14 @@ x2large,
 
 #categories {
     display: flex;
-    gap: var(--large);
+    gap: var(--2xlarge);
     width: calc(100% + 10rem);
     margin-left: -5rem;
     align-items: center
+}
+
+#categories .tabsystem-contents {
+    flex: 1
 }
 
 #categories .tabsystem-tabs {
@@ -1189,13 +1194,17 @@ x2large,
 }
 
 .forum-admin .forum-content {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 75px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100px 1fr;
     gap: var(--large)
 }
 
+.forum-admin .forum-content:has(.forum-links) {
+    grid-template-rows: auto auto auto
+}
+
 .forum-admin:nth-of-type(even) .forum-content {
-    grid-template-columns: 1fr 75px !important
+    grid-template-columns: 1fr 100px !important
 }
 
 .forum-admin .forum-title {

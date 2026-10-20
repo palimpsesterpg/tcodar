@@ -281,7 +281,7 @@ body {
 }
 
 #page-body {
-    width: -webkit-fill-available
+    width: calc(-webkit-fill-available - 3rem)
 }
 
 a,
@@ -578,13 +578,13 @@ x2large,
     padding: var(--xlarge);
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-navbar .inside {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: var(--large);
+    left: var(--large)
 }
 
 #page-navbar .inside div {
@@ -734,7 +734,7 @@ x2large,
     gap: var(--3xlarge);
     width: calc(100% + 12rem);
     margin-left: -6rem;
-    align-items: center;
+    align-items: center
 }
 
 #categories .tabsystem-contents {

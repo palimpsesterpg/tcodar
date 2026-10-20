@@ -1197,13 +1197,9 @@ x2large,
 }
 
 .forum-admin .forum-content {
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-columns: 100px 1fr;
     gap: var(--large)
-}
-
-.forum-admin .forum-content:has(.forum-links) {
-    grid-template-rows: auto auto auto
 }
 
 .forum-admin:nth-of-type(even) .forum-content {

@@ -285,6 +285,11 @@ body {
     flex: 1
 }
 
+#page-flex {
+    display: flex;
+    width: 100%
+}
+
 a,
 a:visited,
 a:hover {

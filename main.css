@@ -683,7 +683,7 @@ x2large,
     top: -0.55rem;
     left: -0.55rem;
     padding: var(--xsmall);
-    box-shadow: 0 0 0.25rem 0.15rem var(--neutral);
+    box-shadow: 0 0 var(--3xsmall) 0.15rem var(--neutral);
     transition-duration: 2.5s
 }
 
@@ -692,7 +692,7 @@ x2large,
 #hub:hover:after,
 #reception:hover:after,
 .memberlist:hover:after {
-    box-shadow: 0 0 0.25rem 0.15rem var(--co1-50);
+    box-shadow: 0 0 var(--3xsmall) 0.15rem var(--co1-50);
     border: 1px solid var(--co1-100);
     transition-duration: 2.5s
 }
@@ -758,7 +758,7 @@ x2large,
     content: ''
 }
 
-#categories .tab:hover span {
+#categories .tab:before:hover span {
     display: flex
 }
 
@@ -782,23 +782,20 @@ x2large,
     left: 2.5rem
 }
 
-#categories .tab.active,
-#categories .tab:hover {
-    border-radius: 50%
+#categories .tab.active {
+    height: var(--large);
+    width: var(--large);
+    outline: 0.5px solid var(--white)
 }
 
 #categories .tabsystem-tabs.off .tab.active,
 #categories .tabsystem-tabs.off .tab:hover {
-    background-color: var(--co2);
-    height: var(--large);
-    width: var(--large)
+    background-color: var(--co2)
 }
 
 #categories .tabsystem-tabs.loc .tab.active,
 #categories .tabsystem-tabs.loc .tab:hover {
-    background-color: var(--co3);
-    height: var(--large);
-    width: var(--large)
+    background-color: var(--co3)
 }
 
 .category {
@@ -827,7 +824,7 @@ x2large,
     height: var(--5xlarge);
     padding-left: var(--2xsmall);
     display: flex;
-    text-shadow: 0 0 0.25rem var(--co1-200);
+    text-shadow: 0 0 var(--3xsmall) var(--co1-200);
     -webkit-text-stroke: 1px var(--co1-50);
     align-items: center;
     justify-content: center
@@ -841,7 +838,7 @@ x2large,
     padding: var(--2xlarge);
     background-color: var(--light);
     border: 1px solid var(--neutral);
-    outline: 0.25rem solid var(--darklight);
+    outline: var(--3xsmall) solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
     width: -webkit-fill-available
@@ -1546,7 +1543,7 @@ x2large,
     padding: var(--large);
     background-color: var(--light);
     border: 1px solid var(--neutral);
-    outline: 0.25rem solid var(--darklight);
+    outline: var(--3xsmall) solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall)
 }
@@ -1607,7 +1604,7 @@ x2large,
     position: relative;
     background-color: var(--light);
     border: 1px solid var(--neutral);
-    outline: 0.25rem solid var(--darklight);
+    outline: var(--3xsmall) solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall)
 }
@@ -2026,7 +2023,7 @@ x2large,
     padding: var(--large);
     background-color: var(--light);
     border: 1px solid var(--neutral);
-    outline: 0.25rem solid var(--darklight);
+    outline: var(--3xsmall) solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
     width: -webkit-fill-available
@@ -2085,7 +2082,7 @@ x2large,
     flex-wrap: wrap;
     background-color: var(--light);
     border: 1px solid var(--neutral);
-    outline: 0.25rem solid var(--darklight);
+    outline: var(--3xsmall) solid var(--darklight);
     box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
     margin: var(--xsmall);
     margin-top: 2.5rem

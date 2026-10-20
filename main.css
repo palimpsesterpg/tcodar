@@ -247,13 +247,6 @@
 }
 
 @media (width < 1000px) {
-    body {
-        width: 100vh !important;
-    }
-
-    #page-header {
-        width: 100vh !important;
-    }
 
     #categories {
         gap: var(--large) !important;
@@ -272,8 +265,7 @@
 body {
     font-family: var(--main);
     color: var(--lighterdark);
-    width: 100%;
-    margin-left: 3rem !important;
+    flex: 1;
     font-size: var(--medium);
     background-size: cover;
     background-position: center;

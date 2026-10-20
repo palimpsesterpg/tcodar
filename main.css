@@ -799,12 +799,12 @@ x2large,
 }
 
 #categories .tabsystem-tabs.off .tab.active:before,
-#categories .tabsystem-tabs.off .tab:hover {
+#categories .tabsystem-tabs.off .tab:hover:before {
     background-color: var(--co2)
 }
 
 #categories .tabsystem-tabs.loc .tab.active:before,
-#categories .tabsystem-tabs.loc .tab:hover {
+#categories .tabsystem-tabs.loc .tab:hover:before {
     background-color: var(--co3)
 }
 

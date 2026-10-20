@@ -248,9 +248,31 @@
 
 @media (width < 1000px) {
 
+    html, body {
+        width: 100%;
+        height: auto;
+        overflow: visible;            
+    }
+
     body {
-        width: 100vh !important;
-        height: 100vh !important;
+        background-attachment: scroll;
+    }
+
+    #page-flex {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #page-navbar {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    #page-body {
+        width: 100%;
+        height: auto;
+        overflow: visible;
     }
 
     #categories {
@@ -264,7 +286,6 @@
     #page-footer {
         width: 90% !important;
     }
-
 }
 
 html,

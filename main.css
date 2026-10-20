@@ -610,7 +610,7 @@ x2large,
 #page-body,
 #page-footer {
     padding: var(--large);
-    width: 1000px;
+    width: 70%;
     box-sizing: border-box;
     margin: 0 auto;
     background-color: var(--darklight);

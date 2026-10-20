@@ -694,7 +694,8 @@ x2large,
 #sub-page-header {
     background-color: var(--darklight);
     padding: var(--large) 0;
-    border-bottom-width: 0.5px;
+    border-width: 0px;
+    border-bottom-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradient23) 1;
     box-sizing: border-box;

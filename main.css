@@ -249,7 +249,8 @@
 @media (width < 1000px) {
 
     body {
-        width: 100vh;
+        width: 100vh !important;
+        height: 100vh !important;
     }
 
     #categories {

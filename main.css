@@ -256,7 +256,8 @@
     }
 
     #categories {
-        gap: var(--large);
+        gap: var(--large) !important;
+        margin-left: 0px !important;
         width: 100% !important
     }
 
@@ -569,16 +570,12 @@ x2large,
 }
 
 #page-navbar {
-    top: 0;
-    left: 0;
-    height: 100%;
+    height: 100vh;
     width: 3rem;
     box-sizing: border-box;
     display: flex;
     background-color: var(--darklight);
     padding: var(--large);
-    position: fixed;
-    z-index: 999;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column

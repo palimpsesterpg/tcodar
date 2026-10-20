@@ -1284,6 +1284,7 @@ x2large,
     padding: var(--3xsmall);
     gap: var(--3xsmall);
     justify-content: space-between;
+    background-color: var(--whiteop50);
     width: -webkit-fill-available
 }
 

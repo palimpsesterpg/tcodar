@@ -427,15 +427,17 @@ x2large,
 }
 
 #page-header {
-    background-image: url("Images/tcodar-header-light.png");
+    background-image: url(Images/tcodar-header-light.png);
     height: 100vh;
-    width: 100vh;
+    width: 100%;
+    padding-left: var(--4xlarge);
     display: flex;
     align-items: center;
     justify-content: center;
     background-position: center center;
+    box-sizing: border-box;
     background-size: cover;
-    position: relative
+    position: relative;
 }
 
 [data-color-scheme="dark"] #page-header {
@@ -464,13 +466,12 @@ x2large,
     outline: 0.5px solid var(--white);
     height: var(--large);
     width: var(--large);
-    text-shadow: 0 0 5px var(--whiteop50);
     border-radius: 50%;
     backdrop-filter: blur(2px)
 }
 
 #page-header .tab.active:before {
-    text-shadow: 0 0 5px var(--whiteop75)
+    background-color: var(--whiteop50)
 }
 
 #page-header .tabsystem-contents {

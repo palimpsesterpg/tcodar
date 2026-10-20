@@ -744,10 +744,6 @@ x2large,
     cursor: pointer
 }
 
-#categories .tab i {
-    display: none
-}
-
 #categories .tab:before {
     height: var(--large);
     width: var(--large);

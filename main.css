@@ -246,10 +246,21 @@
     --gradient23-50: linear-gradient(to left, var(--co2-50), var(--co3-50))
 }
 
+@media (width < 1000px) {
+    body {
+        width: 100vh;
+    }
+
+    #page-header {
+        width: 100vh;
+    }
+}
+
 body {
     font-family: var(--main);
     color: var(--lighterdark);
     width: 100%;
+    margin-left: 3rem !important;
     font-size: var(--medium);
     background-size: cover;
     background-position: center;

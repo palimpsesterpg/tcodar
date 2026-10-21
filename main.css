@@ -268,6 +268,7 @@
 
     #page-header {
         width: 100vh !important;
+        height: 450px !important;
         padding: 0 !important
     }
 

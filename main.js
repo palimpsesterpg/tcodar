@@ -3,9 +3,9 @@ const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 const adminsIds = [1, 2, 3];
 const camIds = [2];
 const leaIds = [3];
-const isAdmin = (id = _userdata.user_id) => admins.includes(Number(id));
-const isCam = (id = _userdata.user_id) => cam.includes(Number(id));
-const isLea = (id = _userdata.user_id) => lea.includes(Number(id));
+const isAdmin = (id = _userdata.user_id) => adminsIds.includes(Number(id));
+const isCam = (id = _userdata.user_id) => camIds.includes(Number(id));
+const isLea = (id = _userdata.user_id) => leaIds.includes(Number(id));
 
 function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {

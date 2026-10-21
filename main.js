@@ -77,8 +77,16 @@ function updateSpan() {
   const count = countEl ? countEl.textContent.trim() : '';
   const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
 
-  const text = username + (count ? ' ' + count : '');
-  if (span.textContent !== text) span.textContent = text;
+  const sig = username + '|' + count;
+  if (span.dataset.sig === sig) return;
+  span.dataset.sig = sig;
+
+  span.textContent = username;
+  if (count) {
+    const c = document.createElement('count');
+    c.textContent = count;
+    span.append(' ', c);
+  }
 }
 
 function initNotifSpan() {

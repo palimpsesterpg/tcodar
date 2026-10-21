@@ -260,6 +260,17 @@
     #page-footer {
         width: 95% !important
     }
+
+    #page-navbar {
+        width: 100% !important;
+        height: 3rem !important;
+        justify-content: center !important;
+        flex-direction: row !important
+    }
+
+    #page-navbar {
+        flex-direction: row !important
+    }
 }
 
 body {
@@ -562,6 +573,7 @@ x2large,
 }
 
 #page-navbar {
+    top: 0;
     height: 100%;
     width: 3rem;
     z-index: 99;

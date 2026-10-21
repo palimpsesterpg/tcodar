@@ -1,19 +1,18 @@
+const user = (typeof _userdata !== 'undefined' && _userdata) || {};
+
 function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {
     const tabs = system.querySelectorAll('.tab');
     const contents = system.querySelectorAll('.tab-content');
 
     const activate = tab => {
+      if (!tab) return;
       tabs.forEach(t => t.classList.toggle('active', t === tab));
-      contents.forEach(content => {
-        content.classList.toggle('active', content.dataset.tab === tab.dataset.tab);
-      });
+      contents.forEach(c => c.classList.toggle('active', c.dataset.tab === tab.dataset.tab));
     };
 
     tabs.forEach(tab => tab.addEventListener('click', () => activate(tab)));
-
-    const initial = system.querySelector('.tab.active') || tabs[0];
-    if (initial) activate(initial);
+    activate(system.querySelector('.tab.active') || tabs[0]);
   });
 }
 
@@ -23,56 +22,49 @@ function HeaderNav() {
 
   document.querySelectorAll('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
-      const key = headerTab.id;
-
-      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
-
-      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const key = CSS.escape(headerTab.id);
+      categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
+      categories.querySelector(`.category[data-tab="${key}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 }
 
-const cities = document.querySelectorAll("#page-home .seven .phseven-city");
-
 function ClockWall() {
-  const maintenant = new Date();
-  cities.forEach((city) => {
-    const [h, m] = maintenant
-      .toLocaleTimeString("fr-FR", {
-        timeZone: city.dataset.tz,
-        hour: "2-digit",
-        minute: "2-digit",
-        hourCycle: "h23",
-      })
-      .split(":");
+  const now = new Date();
+  document.querySelectorAll('#page-home .seven .phseven-city').forEach(city => {
+    const hour = city.querySelector('hour');
+    const min = city.querySelector('min');
+    if (!hour || !min) return;
 
-    city.querySelector("hour").textContent = h;
-    city.querySelector("min").textContent = m;
+    let time;
+    try {
+      time = now.toLocaleTimeString('fr-FR', {
+        timeZone: city.dataset.tz,
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23',
+      });
+    } catch {
+      time = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+    }
+
+    [hour.textContent, min.textContent] = time.split(':');
   });
 }
 
-if ([1, 2, 3].includes(Number(_userdata.user_id))) {
-  const tabs = document.querySelector('.tabsystem-tabs.off');
-
-  if (tabs) {
-    tabs.insertAdjacentHTML('beforeend', `
-            <div class="tab" data-tab="c11">
-                <span>queendom</span>
-            </div>
-        `);
-  }
+function addQueendomTab() {
+  if (![1, 2, 3].includes(Number(user.user_id))) return;
+  document
+    .querySelector('#categories .tabsystem-tabs.off')
+    ?.insertAdjacentHTML('beforeend', '<div class="tab" data-tab="c11"><span>queendom</span></div>');
 }
 
 function addUsernameToNotiffiButton() {
-  const div = document.querySelector('#notiffi_button');
-  pseudo = div.querySelector('.notif_username');
-
-  pseudo.textContent = _userdata.username;
+  const pseudo = document.querySelector('#notiffi_button .notif_username');
+  if (pseudo) pseudo.textContent = user.username ?? '';
 }
 
+addQueendomTab();
 Tabs();
 HeaderNav();
 ClockWall();

@@ -262,7 +262,8 @@
     }
 
     #page-header {
-        width: 100vh !important
+        width: 100vh !important;
+        padding: 0 !important
     }
 
     #page-navbar {
@@ -289,13 +290,21 @@
         padding-left: var(--2xlarge)
     }
 
-    #page-header {
-        padding: 0 !important
-    }
-
     #page-header .tabsystem-tabs,
     .map-header {
         display: none !important
+    }
+
+    #f1.forum:before,
+    #f80.forum:after {
+        font-size: var(--small) !important
+    }
+
+    .copyright {
+        top: var(--large) !important;
+        right: var(--large) !important;
+        bottom: auto !important;
+        left: auto !important
     }
 }
 
@@ -325,8 +334,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--darkneutral);
-    border-bottom: 0.5px dashed var(--neutral)
+    color: var(--darkneutral)
 }
 
 h1,
@@ -472,7 +480,7 @@ x2large,
     position: fixed;
     bottom: var(--large);
     left: var(--large);
-    z-index: 999
+    z-index: 9999
 }
 
 .copyright br {
@@ -496,11 +504,6 @@ x2large,
 
 [data-color-scheme="dark"] #page-header {
     background-image: url("Images/tcodar-header-dark.png")
-}
-
-[data-color-scheme="dark"] #page-header div {
-    -webkit-text-stroke: .5px var(--black);
-    text-shadow: 0 0 5px var(--blackop50)
 }
 
 #page-header .tabsystem-tabs {
@@ -530,12 +533,13 @@ x2large,
 }
 
 .main-header {
-    height: 100vh;
     align-items: center;
     justify-content: center
 }
 
 .main-header a {
+    width: 90%;
+    text-align: center;
     -webkit-text-stroke: .5px var(--white);
     font-size: var(--6xlarge);
     font-weight: 900;
@@ -603,7 +607,7 @@ x2large,
     top: 0;
     height: 100%;
     width: 3rem;
-    z-index: 99;
+    z-index: 999;
     position: fixed;
     box-sizing: border-box;
     display: flex;
@@ -1026,10 +1030,10 @@ x2large,
 
 .forum-icon {
     position: absolute;
-    height:var(--xlarge);
+    height: var(--xlarge);
     display: flex;
     z-index: 2;
-    width:var(--xlarge);
+    width: var(--xlarge);
     background-color: var(--white);
     border-radius: 100%;
     color: var(--co3);
@@ -1194,8 +1198,8 @@ x2large,
 }
 
 .forum-loc .forum-lastpost-avatar img {
-    height:var(--xlarge);
-    width:var(--xlarge);
+    height: var(--xlarge);
+    width: var(--xlarge);
     object-fit: cover;
     border-radius: 50%
 }
@@ -1205,34 +1209,6 @@ x2large,
     backdrop-filter: blur(2px);
     padding: var(--large);
     width: 50%
-}
-
-.forum-admin:nth-of-type(1) {
-    border-top: 0.5px solid var(--white);
-    border-left: 0.5px solid var(--white);
-    border-radius: var(--large) 0 0 0;
-    box-shadow: -5px -5px 5px var(--neutral)
-}
-
-.forum-admin:nth-of-type(2) {
-    border-top: 0.5px solid var(--white);
-    border-right: 0.5px solid var(--white);
-    border-radius: 0 var(--large) 0 0;
-    box-shadow: 5px -5px 5px var(--neutral)
-}
-
-.forum-admin:nth-of-type(3) {
-    border-bottom: 0.5px solid var(--white);
-    border-left: 0.5px solid var(--white);
-    border-radius: 0 0 0 var(--large);
-    box-shadow: -5px 5px 5px var(--neutral)
-}
-
-.forum-admin:nth-of-type(4) {
-    border-bottom: 0.5px solid var(--white);
-    border-right: 0.5px solid var(--white);
-    border-radius: 0 0 var(--large) 0;
-    box-shadow: 5px 5px 5px var(--neutral)
 }
 
 .forum-admin:nth-of-type(even) .forum-icon,
@@ -1475,7 +1451,7 @@ x2large,
     font-family: var(--mono);
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding-left:var(--small);
+    padding-left: var(--small);
     font-weight: 100;
     font-size: var(--2xlarge)
 }
@@ -1526,7 +1502,7 @@ x2large,
     height: 35px;
     width: 35px;
     object-fit: cover;
-    border-radius:var(--small)
+    border-radius: var(--small)
 }
 
 .forum-archives {
@@ -2347,8 +2323,8 @@ x2large,
     overflow: auto;
     max-height: 100%;
     background: var(--neutralDark);
-    padding:var(--small);
-    border-radius:var(--small);
+    padding: var(--small);
+    border-radius: var(--small);
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -2407,9 +2383,9 @@ x2large,
 
 .notification {
     display: flex;
-    gap:var(--large);
+    gap: var(--large);
     margin-bottom: 5px;
-    padding:var(--small);
+    padding: var(--small);
     border-radius: 5px;
     border: 1px solid transparent;
     transition: border 0.2s;
@@ -2439,8 +2415,8 @@ x2large,
     width: 400px;
     align-items: center;
     z-index: 99;
-    bottom:var(--small);
-    right:var(--small);
+    bottom: var(--small);
+    right: var(--small);
     background: var(--neutralDarker);
     transform: translateY(100%);
     opacity: 0;
@@ -2480,12 +2456,12 @@ x2large,
     bottom: -5px;
     right: -5px;
     background: var(--neutral);
-    width:var(--large);
+    width: var(--large);
     aspect-ratio: 1;
     display: grid;
     place-items: center;
-    border-radius:var(--large);
-    font-size:var(--small)
+    border-radius: var(--large);
+    font-size: var(--small)
 }
 
 .notification.unread .notif_icon {
@@ -2506,7 +2482,7 @@ x2large,
 .notif_close {
     background: transparent;
     align-self: start;
-    font-size:var(--large);
+    font-size: var(--large);
     line-height: 0;
     opacity: 0;
     border-radius: 100px;
@@ -2521,7 +2497,7 @@ x2large,
 
 .alert_close {
     background: var(--neutral);
-    font-size:var(--large);
+    font-size: var(--large);
     line-height: 0;
     border-radius: 100px;
     aspect-ratio: 1;
@@ -2600,8 +2576,8 @@ x2large,
     top: -5px;
     right: -5px;
     position: absolute;
-    width:var(--large);
-    height:var(--large);
+    width: var(--large);
+    height: var(--large);
     border-radius: 100%;
     background-color: var(--group-color, var(--co1));
     transform: scale(0);
@@ -2721,11 +2697,11 @@ x2large,
     font-size: var(--2xlarge);
     display: flex;
     place-items: center;
-    width:var(--xlarge);
-    height:var(--xlarge);
+    width: var(--xlarge);
+    height: var(--xlarge);
     position: absolute;
-    top:var(--large);
-    right:var(--large);
+    top: var(--large);
+    right: var(--large);
     padding: var(--xsmall);
     cursor: pointer;
     color: var(--white);

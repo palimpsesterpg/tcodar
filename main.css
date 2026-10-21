@@ -1588,6 +1588,10 @@ x2large,
     margin: var(--xsmall)
 }
 
+.post#0 {
+    display: none !important
+}
+
 .post+.post {
     margin-top: var(--2xlarge)
 }

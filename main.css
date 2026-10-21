@@ -2350,7 +2350,7 @@ x2large,
     color: var(--white)
 }
 
-.unread_count:before {
+.unread_count:not(:empty):before {
     content: '｜';
     padding-right: 2.5px
 }

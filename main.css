@@ -1607,13 +1607,19 @@ x2large,
 }
 
 .postprofile {
-    width: 200px;
+    width: 300px;
+    padding: var(--large);
+    box-sizing: border-box;
     z-index: 99
 }
 
 .postprofile-avatar img {
-    height: 300px;
-    width: 200px;
+    height: auto;
+    padding: var(--large);
+    outline: 0.5px solid var(--group-color);
+    border: var(--xsmall) solid var(--white);
+    box-sizing: border-box;
+    width: 300px;
     object-fit: cover
 }
 

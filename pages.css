@@ -84,10 +84,6 @@
     position: relative
 }
 
-#directory .item {
-    border-radius: 50%;
-}
-
 .item>* {
     cursor: pointer;
 }

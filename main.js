@@ -66,7 +66,7 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   }
 }
 
-function () {
+function NotiffiFill() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
@@ -86,4 +86,5 @@ function () {
 Tabs();
 HeaderNav();
 ClockWall();
+NotiffiFill();
 setInterval(ClockWall, 1000);

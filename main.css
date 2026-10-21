@@ -2322,6 +2322,7 @@ x2large,
 }
 
 #notiffi_button:has(.unread_count:not(:empty)):before {
+    content: '';
     position: absolute;
     font-size: 0;
     top: -0.5rem;

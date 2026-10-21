@@ -66,20 +66,36 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   }
 }
 
-function AddUsernameToNotiffiButton() {
+function addUsernameToNotiffiButton() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
-  const div = btn.querySelector('.unread_count');
-  if (!div) return;
+  const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
+  if (!username) return;
 
-  const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';
+  let span = btn.querySelector(':scope > span.notif_username');
+  if (!span) {
+    span = document.createElement('span');
+    span.className = 'notif_username';
+    btn.appendChild(span);
+  }
+  if (span.textContent !== username) span.textContent = username;
+}
 
-  div.textContent = username;
-};
+function initNotifButton() {
+  const btn = document.getElementById('notiffi_button');
+  if (!btn) return;
+  addUsernameToNotiffiButton();
+  new MutationObserver(addUsernameToNotiffiButton).observe(btn, { childList: true });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNotifButton);
+} else {
+  initNotifButton();
+}
 
 Tabs();
 HeaderNav();
 ClockWall();
-AddUsernameToNotiffiButton()
 setInterval(ClockWall, 1000);

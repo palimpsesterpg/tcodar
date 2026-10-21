@@ -67,33 +67,18 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
 }
 
 function addUsernameToNotiffiButton() {
-  const btn = document.getElementById('notiffi_button');
-  if (!btn) return;
+  const div = document.querySelector('#notiffi_button .unread_count');
+  if (!div || div.querySelector('.notif_username')) return;
 
-  const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
-  if (!username) return;
+  div.classList.toggle('has_count', div.textContent.trim() !== '');
 
-  let span = btn.querySelector(':scope > span.notif_username');
-  if (!span) {
-    span = document.createElement('span');
-    span.className = 'notif_username';
-    btn.appendChild(span);
-  }
-  if (span.textContent !== username) span.textContent = username;
+  const span = document.createElement('span');
+  span.className = 'notif_username';
+  span.textContent = _userdata.username;
+  div.append(span);
 }
 
-function initNotifButton() {
-  const btn = document.getElementById('notiffi_button');
-  if (!btn) return;
-  addUsernameToNotiffiButton();
-  new MutationObserver(addUsernameToNotiffiButton).observe(btn, { childList: true });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initNotifButton);
-} else {
-  initNotifButton();
-}
+window.addEventListener('load', addUsernameToNotiffiButton);
 
 Tabs();
 HeaderNav();

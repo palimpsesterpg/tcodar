@@ -645,7 +645,8 @@ x2large,
     font-size: var(--large)
 }
 
-.mainmenu span, .unread_count {
+.mainmenu span,
+.unread_count {
     position: absolute;
     left: calc(2rem + 0.5px);
     padding: var(--large);
@@ -664,7 +665,8 @@ x2large,
     color: var(--black)
 }
 
-.mainmenu:hover span, .mainmenu:hover .unread_count {
+.mainmenu:hover span,
+.mainmenu:hover .unread_count {
     display: block
 }
 
@@ -2321,7 +2323,7 @@ x2large,
     z-index: 9999
 }
 
-#notiffi_button:has(.unread_count:not(:empty)):before {
+#notiffi_button:has(.unread_count.has_count)::before {
     content: '';
     position: absolute;
     font-size: 0;
@@ -2333,7 +2335,7 @@ x2large,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white)
+    color: var(--white);
 }
 
 .unread_count:before {

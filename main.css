@@ -622,18 +622,18 @@ x2large,
     flex-direction: column
 }
 
-#page-navbar div:first-of-type {
+#page-navbar>div:first-of-type {
     padding-top: var(--large)
 }
 
-#page-navbar div {
+#page-navbar>div {
     display: flex;
     align-items: center;
     gap: var(--large);
     flex-direction: column
 }
 
-#page-navbar div+div {
+#page-navbar>div+div {
     border-top: 2.5px solid var(--neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;
@@ -675,8 +675,6 @@ x2large,
     align-items: center;
     gap: var(--large)
 }
-
-
 
 #page-content,
 #page-home,
@@ -2324,7 +2322,16 @@ x2large,
 }
 
 .unread_count.abso {
-    position: absolute
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: var(--black);
+    border-radius: 100%;
+    height: var(--large);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white)
 }
 
 .unread_count {

@@ -647,6 +647,7 @@ x2large,
 
 .mainmenu span {
     position: absolute;
+    align-items: center;
     left: calc(2rem + 0.5px);
     padding: var(--large);
     letter-spacing: 2.5px;
@@ -2334,16 +2335,16 @@ x2large,
     background-color: var(--black);
     border-radius: 100%;
     height: var(--xsmall);
+    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--white)
 }
 
 .unread_count:before {
     content: '｜';
-    padding-left: var(--small);
-    margin-left: var(--xsmall)
+    padding-right: 2.5px
 }
 
 .all_notifications {

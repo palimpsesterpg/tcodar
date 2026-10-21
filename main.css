@@ -229,7 +229,7 @@
     --group-color-700: #6A4013;
     --group-color-800: #50300F;
     --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .reverse {
@@ -323,7 +323,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed
 }
 
 a,
@@ -2317,7 +2317,7 @@ x2large,
 #notiffi_button_close {
     position: absolute;
     right: var(--large);
-    z-index: 9999;
+    z-index: 9999
 }
 
 .unread_count {
@@ -2740,14 +2740,14 @@ x2large,
     background-color: var(--co1);
     color: var(--white);
     text-transform: uppercase;
-    width: 200px;
+    width: 250px;
     height: 25px;
     font-weight: 700;
     border-radius: var(--small);
     box-sizing: border-box;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 #presentation-form input,
@@ -2763,19 +2763,19 @@ x2large,
 
 #presentation-form input:required,
 #presentation-form select:required {
-    background-color: var(--co1-50);
+    background-color: var(--co1-50)
 }
 
 #presentation-form {
     display: grid;
     gap: var(--xsmall);
-    grid-template-columns: 200px 1fr
+    grid-template-columns: 250px 1fr
 }
 
 #presentation-form desc,
 #presentation-form button,
 #presentation-form formtitle {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1
 }
 
 #presentation-form desc {
@@ -2800,5 +2800,5 @@ x2large,
     font-family: var(--spe);
     font-size: var(--2xlarge);
     text-transform: lowercase;
-    margin: 0 auto;
+    margin: 0 auto
 }

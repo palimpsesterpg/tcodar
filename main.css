@@ -1607,7 +1607,7 @@ x2large,
 }
 
 .postprofile {
-    width: 300px;
+    width: cacl(250px + var(--2xlarge));
     padding: var(--large);
     box-sizing: border-box;
     z-index: 99
@@ -1615,11 +1615,12 @@ x2large,
 
 .postprofile-avatar img {
     height: auto;
-    padding: var(--large);
+    padding: var(--xsmall);
+    background-color: var(--white);
     outline: 0.5px solid var(--group-color);
-    border: var(--xsmall) solid var(--white);
+    border: var(--3xsmall) solid var(--light);
     box-sizing: border-box;
-    width: 300px;
+    width: 250px;
     object-fit: cover
 }
 
@@ -2732,28 +2733,30 @@ x2large,
 }
 
 #presentation-form label {
-    padding-left: 10px;
     background-color: var(--co1);
     color: var(--white);
     text-transform: uppercase;
     width: 200px;
     height: 25px;
-    display: inline-flex;
     font-weight: 700;
-    border-radius: var(--xlarge);
+    border-radius: var(--small);
+    box-sizing: border-box;
     align-items: center
 }
 
 #presentation-form input,
 #presentation-form select {
-    padding: 0 10px;
+    padding: 0 var(--xsmall);
+    border: 0.5px solid var(--co1);
+    background-color: var(--co1-50);
+    color: var(--co1);
     height: 25px;
-    display: inline-flex;
     font-weight: 300;
     align-items: center
 }
 
 #presentation-form {
     display: grid;
+    gap: var(--large);
     grid-template-columns: 200px 1fr
 }

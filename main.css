@@ -243,6 +243,12 @@
 
 @media (width < 1000px) {
 
+    html,
+    body {
+        overflow: auto !important;
+        width: 100vh;
+    }
+
     #categories {
         gap: var(--large) !important;
         margin-left: 0 !important;

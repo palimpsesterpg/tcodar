@@ -645,7 +645,7 @@ x2large,
     font-size: var(--large)
 }
 
-.mainmenu span {
+.mainmenu span, .unread_count {
     position: absolute;
     left: calc(2rem + 0.5px);
     padding: var(--large);
@@ -664,7 +664,7 @@ x2large,
     color: var(--black)
 }
 
-.mainmenu:hover span {
+.mainmenu:hover span, .mainmenu:hover .unread_count {
     display: block
 }
 
@@ -2339,20 +2339,6 @@ x2large,
     content: '｜';
     padding-left: var(--xsmall);
     margin-left: var(--xsmall)
-}
-
-.unread_count {
-    scale: 1;
-    opacity: 1;
-    aspect-ratio: 1;
-    transition: scale ease-out 0.2s
-}
-
-.unread_count:empty {
-    scale: 0;
-    opacity: 0;
-    display: none;
-    transition: all ease-out 0.2s
 }
 
 .all_notifications {

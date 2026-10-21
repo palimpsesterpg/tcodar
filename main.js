@@ -66,6 +66,23 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   }
 }
 
+function () {
+  const btn = document.getElementById('notiffi_button');
+  if (!btn) return;
+
+  const span = btn.querySelector('span');
+  if (!span) return;
+
+  const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';
+
+  const countEl = btn.querySelector('.unread_count');
+  const count = countEl ? countEl.textContent.trim() : '';
+
+  const hasCount = count && count !== '[count]';
+
+  span.textContent = username + (hasCount ? ' ' + count : '');
+};
+
 Tabs();
 HeaderNav();
 ClockWall();

@@ -70,7 +70,7 @@ function AddUsernameToNotiffiButton() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
-  const div = btn.querySelector('unread_count');
+  const div = btn.querySelector('.unread_count');
   if (!div) return;
 
   const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';

@@ -664,7 +664,7 @@ x2large,
     color: var(--black)
 }
 
-.mainmenu:hover span {
+.mainmenu:hover span, .mainmenu:hover .unread_count {
     display: block
 }
 

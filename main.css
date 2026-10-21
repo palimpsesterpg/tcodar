@@ -1612,6 +1612,11 @@ x2large,
     z-index: 99
 }
 
+.postprofile-avatar {
+    width: 250px;
+    box-sizing: border-box
+}
+
 .postprofile-avatar img {
     height: auto;
     padding: var(--xsmall);
@@ -2740,7 +2745,9 @@ x2large,
     font-weight: 700;
     border-radius: var(--small);
     box-sizing: border-box;
-    align-items: center
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 #presentation-form input,
@@ -2756,6 +2763,12 @@ x2large,
 
 #presentation-form {
     display: grid;
-    gap: var(--large);
+    gap: var(--xsmall);
     grid-template-columns: 200px 1fr
+}
+
+#presentation-form desc,
+#presentation-form button,
+#presentation-form title {
+    grid-column: 1 / -1;
 }

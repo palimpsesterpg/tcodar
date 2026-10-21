@@ -1026,10 +1026,10 @@ x2large,
 
 .forum-icon {
     position: absolute;
-    height: 25px;
+    height:var(--xlarge);
     display: flex;
     z-index: 2;
-    width: 25px;
+    width:var(--xlarge);
     background-color: var(--white);
     border-radius: 100%;
     color: var(--co3);
@@ -1194,8 +1194,8 @@ x2large,
 }
 
 .forum-loc .forum-lastpost-avatar img {
-    height: 25px;
-    width: 25px;
+    height:var(--xlarge);
+    width:var(--xlarge);
     object-fit: cover;
     border-radius: 50%
 }
@@ -1475,7 +1475,7 @@ x2large,
     font-family: var(--mono);
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding-left: 10px;
+    padding-left:var(--small);
     font-weight: 100;
     font-size: var(--2xlarge)
 }
@@ -1526,7 +1526,7 @@ x2large,
     height: 35px;
     width: 35px;
     object-fit: cover;
-    border-radius: 10px
+    border-radius:var(--small)
 }
 
 .forum-archives {
@@ -1866,7 +1866,10 @@ x2large,
     padding: 0px
 }
 
-.close-modal:before {
+.close-modal:before,
+#notiffi_button_close:before,
+.alert_close:before,
+.notif_close:before {
     font-family: uicons-thin-straight !important;
     content: "\e5e8"
 }
@@ -2319,6 +2322,12 @@ x2large,
     opacity: 1
 }
 
+#notiffi_button_close {
+    position: absolute;
+    right: var(--large);
+    z-index: 9999;
+}
+
 .unread_count {
     scale: 1;
     opacity: 1;
@@ -2338,8 +2347,8 @@ x2large,
     overflow: auto;
     max-height: 100%;
     background: var(--neutralDark);
-    padding: 10px;
-    border-radius: 10px;
+    padding:var(--small);
+    border-radius:var(--small);
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -2365,7 +2374,7 @@ x2large,
     gap: 5px;
 
     button {
-        padding: 2px 10px;
+        padding: 2pxvar(--small);
         background: var(--neutralDark);
         border-radius: 5px;
 
@@ -2398,9 +2407,9 @@ x2large,
 
 .notification {
     display: flex;
-    gap: 15px;
+    gap:var(--large);
     margin-bottom: 5px;
-    padding: 10px;
+    padding:var(--small);
     border-radius: 5px;
     border: 1px solid transparent;
     transition: border 0.2s;
@@ -2430,8 +2439,8 @@ x2large,
     width: 400px;
     align-items: center;
     z-index: 99;
-    bottom: 10px;
-    right: 10px;
+    bottom:var(--small);
+    right:var(--small);
     background: var(--neutralDarker);
     transform: translateY(100%);
     opacity: 0;
@@ -2471,12 +2480,12 @@ x2large,
     bottom: -5px;
     right: -5px;
     background: var(--neutral);
-    width: 18px;
+    width:var(--large);
     aspect-ratio: 1;
     display: grid;
     place-items: center;
-    border-radius: 20px;
-    font-size: 10px
+    border-radius:var(--large);
+    font-size:var(--small)
 }
 
 .notification.unread .notif_icon {
@@ -2497,7 +2506,7 @@ x2large,
 .notif_close {
     background: transparent;
     align-self: start;
-    font-size: 18px;
+    font-size:var(--large);
     line-height: 0;
     opacity: 0;
     border-radius: 100px;
@@ -2512,7 +2521,7 @@ x2large,
 
 .alert_close {
     background: var(--neutral);
-    font-size: 18px;
+    font-size:var(--large);
     line-height: 0;
     border-radius: 100px;
     aspect-ratio: 1;
@@ -2591,8 +2600,8 @@ x2large,
     top: -5px;
     right: -5px;
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width:var(--large);
+    height:var(--large);
     border-radius: 100%;
     background-color: var(--group-color, var(--co1));
     transform: scale(0);
@@ -2712,11 +2721,11 @@ x2large,
     font-size: var(--2xlarge);
     display: flex;
     place-items: center;
-    width: 25px;
-    height: 25px;
+    width:var(--xlarge);
+    height:var(--xlarge);
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top:var(--large);
+    right:var(--large);
     padding: var(--xsmall);
     cursor: pointer;
     color: var(--white);

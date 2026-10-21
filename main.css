@@ -2724,3 +2724,30 @@ x2large,
     color: var(--co2);
     border: 0 !important
 }
+
+#presentation-form label {
+    padding-left: 10px;
+    background-color: var(--co1);
+    color: var(--white);
+    text-transform: uppercase;
+    width: 200px;
+    height: 25px;
+    display: inline-flex;
+    font-weight: 700;
+    border-radius: var(--xlarge);
+    align-items: center
+}
+
+#presentation-form input,
+#presentation-form select {
+    padding: 0 10px;
+    height: 25px;
+    display: inline-flex;
+    font-weight: 300;
+    align-items: center
+}
+
+#presentation-form {
+    display: grid;
+    grid-template-columns: 200px 1fr
+}

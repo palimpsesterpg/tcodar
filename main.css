@@ -2323,13 +2323,12 @@ x2large,
 
 .unread_count.abso {
     position: absolute;
-    font-family: var(--display);
-    font-size: var(--small);
+    font-size: 0;
     top: -0.5rem;
     right: -0.5rem;
     background-color: var(--black);
     border-radius: 100%;
-    height: var(--large);
+    height: var(--xsmall);
     display: flex;
     align-items: center;
     justify-content: center;

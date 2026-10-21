@@ -73,13 +73,12 @@ function updateSpan() {
   const span = btn.querySelector('span');
   if (!span) return;
 
-  // on ignore le <template> d'origine, on ne prend que le div rendu
   const countEl = btn.querySelector('div.unread_count');
   const count = countEl ? countEl.textContent.trim() : '';
   const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
 
   const text = username + (count ? ' ' + count : '');
-  if (span.textContent !== text) span.textContent = text; // évite la boucle infinie
+  if (span.textContent !== text) span.textContent = text;
 }
 
 function initNotifSpan() {

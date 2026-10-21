@@ -281,6 +281,10 @@
         padding-left: var(--2xlarge)
     }
 
+    #page-header {
+        padding: 0 !important
+    }
+
     #page-header .tabsystem-tabs,
     .map-header {
         display: none !important

@@ -170,10 +170,13 @@
     --group-color-700: #3b6a87;
     --group-color-800: #2c4f65;
     --group-color-900: #1e3543;
-    --group-color-950: #0f1a22
+    --group-color-950: #0f1a22;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-3 {
+    --group-color-50: #fbd1d4;
     --group-color-100: #f6a3a9;
     --group-color-200: #f2757e;
     --group-color-300: #ee4753;
@@ -184,37 +187,49 @@
     --group-color-700: #800c14;
     --group-color-800: #60090f;
     --group-color-900: #40060a;
-    --group-color-950: #200305
+    --group-color-950: #200305;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-4 {
     --group-color-50: #dddddd;
     --group-color: #333333;
-    --group-colorop50: #33333380
+    --group-colorop50: #33333380;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-5 {
     --group-color-50: #d5f1e7;
     --group-color: #2c8063;
-    --group-colorop50: #2C806380
+    --group-colorop50: #2C806380;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-6 {
     --group-color-50: #ffcccc;
     --group-color: #cd0000;
-    --group-colorop50: #cd000080
+    --group-colorop50: #cd000080;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-7 {
     --group-color-50: #dde0ee;
     --group-color: #424f8a;
-    --group-colorop50: #424f8a80
+    --group-colorop50: #424f8a80;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-8 {
     --group-color-50: #ffefd0;
     --group-color: #e59700;
-    --group-colorop50: #e5970080
+    --group-colorop50: #e5970080;
+    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
+    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
 
 .group-test {

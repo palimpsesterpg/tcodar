@@ -66,25 +66,40 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   }
 }
 
-function NotiffiFill() {
+function updateSpan() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
   const span = btn.querySelector('span');
   if (!span) return;
 
-  const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';
-
-  const countEl = btn.querySelector('.unread_count');
+  // on ignore le <template> d'origine, on ne prend que le div rendu
+  const countEl = btn.querySelector('div.unread_count');
   const count = countEl ? countEl.textContent.trim() : '';
+  const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
 
-  const hasCount = count && count !== '[count]';
+  const text = username + (count ? ' ' + count : '');
+  if (span.textContent !== text) span.textContent = text; // évite la boucle infinie
+}
 
-  span.textContent = username + (hasCount ? ' ' + count : '');
-};
+function initNotifSpan() {
+  const btn = document.getElementById('notiffi_button');
+  if (!btn) return;
+  updateSpan();
+  new MutationObserver(updateSpan).observe(btn, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNotifSpan);
+} else {
+  initNotifSpan();
+}
 
 Tabs();
 HeaderNav();
 ClockWall();
-NotiffiFill();
 setInterval(ClockWall, 1000);

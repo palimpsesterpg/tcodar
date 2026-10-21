@@ -280,6 +280,11 @@
         margin-left: var(--2xlarge);
         padding-left: var(--2xlarge)
     }
+
+    #page-header .tabsystem-tabs,
+    .map-header {
+        display: none !important
+    }
 }
 
 body {
@@ -2241,7 +2246,7 @@ x2large,
 #newest-user-avatar img {
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
     border: 5px solid var(--white);
-    height: -webkit-fill-available;
+    height: 224px;
     position: relative;
     width: 140px
 }

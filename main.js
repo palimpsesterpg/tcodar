@@ -25,9 +25,9 @@ function HeaderNav() {
     headerTab.addEventListener('click', () => {
       const key = headerTab.id;
 
-      categories.querySelector(`.tab[data-tab="${key}"]`) ? .click();
+      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
 
-      categories.querySelector(`.category[data-tab="${key}"]`) ? .scrollIntoView({
+      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });

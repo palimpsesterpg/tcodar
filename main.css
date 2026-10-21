@@ -2335,7 +2335,7 @@ x2large,
     color: var(--white)
 }
 
-#notiffi_button count:before {
+.unread_count:before {
     content: '｜';
     padding-left: var(--xsmall);
     margin-left: var(--xsmall)

@@ -562,7 +562,9 @@ x2large,
 }
 
 #page-navbar {
-    height: 3rem;
+    height: 100%;
+    width: 3rem;
+    z-index: 99;
     position: fixed;
     box-sizing: border-box;
     display: flex;

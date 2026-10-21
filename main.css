@@ -2349,14 +2349,16 @@ x2large,
 }
 
 .all_notifications {
-    width: 100%;
+    width: -webkit-fill-available;
     overflow: auto;
+    display: flex;
+    gap: var(--large);
     max-height: 100%;
-    background: var(--neutralDark);
+    background: var(--white);
     padding: var(--small);
-    border-radius: var(--small);
     -ms-overflow-style: none;
     scrollbar-width: none;
+    flex-direction: column;
 
     &::-webkit-scrollbar {
         display: none
@@ -2414,10 +2416,9 @@ x2large,
 .notification {
     display: flex;
     gap: var(--large);
-    margin-bottom: 5px;
-    padding: var(--small);
+    padding: var(--large);
     border-radius: 5px;
-    border: 1px solid transparent;
+    border: 0.5px solid transparent;
     transition: border 0.2s;
     animation: notiffiFadeIn 0.3s ease-in-out;
 
@@ -2437,17 +2438,17 @@ x2large,
 }
 
 .notification.unread {
-    background-color: var(--neutral)
+    border: 0.5px solid var(--group-color);
 }
 
 .notification.alert {
     position: fixed;
-    width: 400px;
+    width: 50%;
     align-items: center;
     z-index: 99;
-    bottom: var(--small);
-    right: var(--small);
-    background: var(--neutralDarker);
+    bottom: var(--large);
+    right: var(--large);
+    background: var(--black);
     transform: translateY(100%);
     opacity: 0;
     filter: blur(5px);
@@ -2467,17 +2468,16 @@ x2large,
 }
 
 .notif_avatar {
-    background: var(--neutral);
-    height: 35px;
+    height: 50px;
     border-radius: 5px;
     aspect-ratio: 1;
+    overflow: hidden;
 
     & img {
         width: 100%;
         aspect-ratio: 1;
         object-fit: cover;
         object-position: center;
-        border-radius: 5px
     }
 }
 
@@ -2485,18 +2485,17 @@ x2large,
     position: absolute;
     bottom: -5px;
     right: -5px;
-    background: var(--neutral);
     width: var(--large);
     aspect-ratio: 1;
     display: grid;
     place-items: center;
     border-radius: var(--large);
+    color: var(--white);
     font-size: var(--small)
 }
 
 .notification.unread .notif_icon {
-    color: var(--neutral);
-    background: var(--accentClr)
+    color: var(--group-color);
 }
 
 .notif_content {
@@ -2504,7 +2503,7 @@ x2large,
 }
 
 .notif_time {
-    font-size: var(--little-size);
+    font-size: var(--small);
     opacity: 0.8;
     margin-top: 5px
 }

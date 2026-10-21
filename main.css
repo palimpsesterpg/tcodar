@@ -2769,6 +2769,19 @@ x2large,
 
 #presentation-form desc,
 #presentation-form button,
-#presentation-form title {
+#presentation-form formtitle {
     grid-column: 1 / -1;
+}
+
+#presentation-form desc {
+    font-family: var(--mono);
+    text-transform: lowercase;
+    color: var(--co2)
+}
+
+#presentation-form formtitle {
+    font-family: var(--serif);
+    text-transform: uppercase;
+    font-size: var(--large);
+    color: var(--co3)
 }

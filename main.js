@@ -70,12 +70,12 @@ function AddUsernameToNotiffiButton() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
-  const span = btn.querySelector('span');
-  if (!span) return;
+  const div = btn.querySelector('unread_count');
+  if (!div) return;
 
   const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';
 
-  span.textContent = username;
+  div.textContent = username;
 };
 
 Tabs();

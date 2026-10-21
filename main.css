@@ -243,7 +243,6 @@
 
 @media (width < 1000px) {
 
-    html,
     body {
         overflow: auto !important;
         width: 100vh;
@@ -258,11 +257,10 @@
     #page-content,
     #page-home,
     #page-footer {
-        width: 90% !important;
+        width: 95% !important;
     }
 }
 
-html,
 body {
     margin: 0 !important;
     padding: 0 !important;

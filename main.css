@@ -2490,20 +2490,24 @@ x2large,
 
 .notif_icon {
     position: absolute;
-    bottom: -5px;
-    right: -5px;
-}
-
-.notif_icon i:before {
-    width: var(--large);
-    aspect-ratio: 1;
+    bottom: -0.5rem;
+    right: -0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
+    width: var(--large);
+    aspect-ratio: 1;
     border-radius: 100%;
+    background-color: var(--light)
+}
+
+.notification.unread .notif_icon {
+    background-color: var(--white)
+}
+
+.notif_icon i:before {
     color: var(--neutral);
-    font-size: var(--small)
+    font-size: var(--xsmall)
 }
 
 .notification.unread .notif_icon i:before {
@@ -2515,6 +2519,16 @@ x2large,
     display: flex;
     flex-direction: column;
     gap: var(--xsmall);
+}
+
+.notif_text {
+    text-transform: lowercase;
+    font-weight: 300
+}
+
+.notif_text a {
+    font-weight: 700;
+    color: var(--group-color)
 }
 
 .notif_time {
@@ -2533,6 +2547,10 @@ x2large,
 
 .notification:hover .notif_close {
     opacity: 1
+}
+
+.notification.unread .notif_close {
+    color: var(--group-color)
 }
 
 .alert_close {

@@ -2321,7 +2321,7 @@ x2large,
     z-index: 9999
 }
 
-.unread_count.abso {
+#notiffi_button:has(.unread_count:not(:empty)):before {
     position: absolute;
     font-size: 0;
     top: -0.5rem;

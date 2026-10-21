@@ -25,9 +25,9 @@ function HeaderNav() {
     headerTab.addEventListener('click', () => {
       const key = headerTab.id;
 
-      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
+      categories.querySelector(`.tab[data-tab="${key}"]`) ? .click();
 
-      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
+      categories.querySelector(`.category[data-tab="${key}"]`) ? .scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -66,47 +66,20 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
   }
 }
 
-function updateSpan() {
+function AddUsernameToNotiffiButton() {
   const btn = document.getElementById('notiffi_button');
   if (!btn) return;
 
   const span = btn.querySelector('span');
   if (!span) return;
 
-  const countEl = btn.querySelector('div.unread_count');
-  const count = countEl ? countEl.textContent.trim() : '';
-  const username = (typeof _userdata !== 'undefined' && _userdata.username) || '';
-
-  const sig = username + '|' + count;
-  if (span.dataset.sig === sig) return;
-  span.dataset.sig = sig;
+  const username = (typeof _userdata !== 'undefined' && _userdata.username) ? _userdata.username : '';
 
   span.textContent = username;
-  if (count) {
-    const c = document.createElement('count');
-    c.textContent = count;
-    span.append(' ', c);
-  }
-}
-
-function initNotifSpan() {
-  const btn = document.getElementById('notiffi_button');
-  if (!btn) return;
-  updateSpan();
-  new MutationObserver(updateSpan).observe(btn, {
-    childList: true,
-    subtree: true,
-    characterData: true
-  });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initNotifSpan);
-} else {
-  initNotifSpan();
-}
+};
 
 Tabs();
 HeaderNav();
 ClockWall();
+AddUsernameToNotiffiButton()
 setInterval(ClockWall, 1000);

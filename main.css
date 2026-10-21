@@ -278,15 +278,15 @@
         flex-direction: row !important
     }
 
-    #page-navbar div {
+    #page-navbar>div {
         flex-direction: row !important
     }
 
-    #page-navbar div:first-of-type {
+    #page-navbar>div:first-of-type {
         padding-top: 0 !important
     }
 
-    #page-navbar div+div {
+    #page-navbar>div+div {
         border-top: 0 !important;
         margin-top: 0 !important;
         padding-top: 0 !important;
@@ -670,10 +670,13 @@ x2large,
 
 .mainmenu#notiffi_button {
     cursor: pointer;
+    position: relative;
     display: flex;
     align-items: center;
     gap: var(--large)
 }
+
+
 
 #page-content,
 #page-home,
@@ -2318,6 +2321,10 @@ x2large,
     position: absolute;
     right: var(--large);
     z-index: 9999
+}
+
+.unread_count.abso {
+    position: absolute
 }
 
 .unread_count {

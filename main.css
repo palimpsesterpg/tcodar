@@ -1607,8 +1607,7 @@ x2large,
 }
 
 .postprofile {
-    width: cacl(250px + var(--2xlarge));
-    padding: var(--large);
+    width: 250px;
     box-sizing: border-box;
     z-index: 99
 }

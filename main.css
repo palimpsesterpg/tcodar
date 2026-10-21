@@ -2420,6 +2420,7 @@ x2large,
     border-radius: 5px;
     border: 0.5px solid transparent;
     transition: border 0.2s;
+    align-items: center;
     animation: notiffiFadeIn 0.3s ease-in-out;
 
     &:hover {
@@ -2463,8 +2464,7 @@ x2large,
 }
 
 .notif_details {
-    position: relative;
-    align-self: start
+    position: relative
 }
 
 .notif_avatar {
@@ -2499,24 +2499,25 @@ x2large,
 }
 
 .notif_content {
-    width: 100%
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--xsmall);
 }
 
 .notif_time {
     font-size: var(--small);
-    opacity: 0.8;
-    margin-top: 5px
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .notif_close {
     background: transparent;
-    align-self: start;
+    border: 0 !important;
     font-size: var(--large);
     line-height: 0;
     opacity: 0;
-    border-radius: 100px;
     aspect-ratio: 1;
-    padding: 2px;
     transition: all 0.3s
 }
 

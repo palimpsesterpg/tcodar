@@ -665,7 +665,7 @@ x2large,
 }
 
 .mainmenu:hover span {
-    display: block
+    display: flex
 }
 
 .mainmenu#notiffi_button {
@@ -2321,7 +2321,7 @@ x2large,
     z-index: 9999
 }
 
-#notiffi_button:has(.unread_count.has_count)::before {
+#notiffi_button:has(.unread_count:not(:empty)):before {
     content: '';
     position: absolute;
     font-size: 0;

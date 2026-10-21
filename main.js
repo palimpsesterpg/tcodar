@@ -1,5 +1,12 @@
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 
+const adminsIds = [1, 2, 3];
+const camIds = [2];
+const leaIds = [3];
+const isAdmin = (id = user.user_id) => admins.includes(Number(id));
+const isCam = (id = user.user_id) => cam.includes(Number(id));
+const isLea = (id = user.user_id) => lea.includes(Number(id));
+
 function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {
     const tabs = system.querySelectorAll('.tab');
@@ -23,8 +30,11 @@ function HeaderNav() {
   document.querySelectorAll('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
       const key = CSS.escape(headerTab.id);
-      categories.querySelector(`.tab[data-tab="${key}"]`)?.click();
-      categories.querySelector(`.category[data-tab="${key}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
+      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 }
@@ -45,7 +55,11 @@ function ClockWall() {
         hourCycle: 'h23',
       });
     } catch {
-      time = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+      time = now.toLocaleTimeString('fr-FR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23'
+      });
     }
 
     [hour.textContent, min.textContent] = time.split(':');
@@ -53,10 +67,8 @@ function ClockWall() {
 }
 
 function addQueendomTab() {
-  if (![1, 2, 3].includes(Number(user.user_id))) return;
-  document
-    .querySelector('#categories .tabsystem-tabs.off')
-    ?.insertAdjacentHTML('beforeend', '<div class="tab" data-tab="c11"><span>queendom</span></div>');
+  if (!isAdmin()) return;
+  document.querySelector('#categories .tabsystem-tabs.off') ?.insertAdjacentHTML('beforeend', '<div class="tab" data-tab="c11"><span>queendom</span></div>');
 }
 
 function addUsernameToNotiffiButton() {

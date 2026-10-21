@@ -2754,11 +2754,16 @@ x2large,
 #presentation-form select {
     padding: 0 var(--xsmall);
     border: 0.5px solid var(--co1);
-    background-color: var(--co1-50);
+    background-color: var(--darklight);
     color: var(--co1);
     height: 25px;
     font-weight: 300;
     align-items: center
+}
+
+#presentation-form input:required,
+#presentation-form select:required {
+    background-color: var(--co1-50);
 }
 
 #presentation-form {
@@ -2783,5 +2788,17 @@ x2large,
     font-family: var(--serif);
     text-transform: uppercase;
     font-size: var(--large);
+    text-align: center;
+    padding: var(--xsmall);
     color: var(--co3)
+}
+
+#presentation-form button {
+    width: fit-content;
+    border: 0 !important;
+    background: transparent !important;
+    font-family: var(--spe);
+    font-size: var(--2xlarge);
+    text-transform: lowercase;
+    margin: 0 auto;
 }

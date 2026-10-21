@@ -268,8 +268,17 @@
         flex-direction: row !important
     }
 
-    #page-navbar {
+    #page-navbar div {
         flex-direction: row !important
+    }
+
+    #page-navbar div+div {
+        border-top: 0 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        border-left: 2.5px solid var(--neutral);
+        margin-left: var(--2xlarge);
+        padding-left: var(--2xlarge)
     }
 }
 
@@ -695,11 +704,11 @@ x2large,
 
 @keyframes defilement {
     from {
-        transform: translateX(0);
+        transform: translateX(0)
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-100%)
     }
 }
 
@@ -2314,7 +2323,7 @@ x2large,
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
-        display: none;
+        display: none
     }
 }
 
@@ -2377,17 +2386,17 @@ x2large,
     animation: notiffiFadeIn 0.3s ease-in-out;
 
     &:hover {
-        border-color: var(--neutralDarker);
+        border-color: var(--neutralDarker)
     }
 }
 
 @keyframes notiffiFadeIn {
     from {
-        opacity: 0;
+        opacity: 0
     }
 
     to {
-        opacity: 1;
+        opacity: 1
     }
 }
 
@@ -2432,7 +2441,7 @@ x2large,
         aspect-ratio: 1;
         object-fit: cover;
         object-position: center;
-        border-radius: 5px;
+        border-radius: 5px
     }
 }
 

@@ -255,6 +255,11 @@
         width: 100% !important
     }
 
+    #categories .tabsystem-tabs {
+        padding: var(--xsmall) !important;
+        gap: var(--xsmall) !important;
+    }
+
     #page-content,
     #page-home,
     #page-footer {

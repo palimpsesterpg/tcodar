@@ -645,8 +645,7 @@ x2large,
     font-size: var(--large)
 }
 
-.mainmenu span,
-.unread_count {
+.mainmenu span {
     position: absolute;
     left: calc(2rem + 0.5px);
     padding: var(--large);
@@ -665,8 +664,7 @@ x2large,
     color: var(--black)
 }
 
-.mainmenu:hover span,
-.mainmenu:hover .unread_count {
+.mainmenu:hover span {
     display: block
 }
 

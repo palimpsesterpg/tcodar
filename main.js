@@ -67,20 +67,14 @@ if ([1, 2, 3].includes(Number(_userdata.user_id))) {
 }
 
 function addUsernameToNotiffiButton() {
-  const div = document.querySelector('#notiffi_button .unread_count');
-  if (!div || div.querySelector('.notif_username')) return;
+  const div = document.querySelector('#notiffi_button');
+  pseudo = div.querySelector('.notif_username');
 
-  div.classList.toggle('has_count', div.textContent.trim() !== '');
-
-  const span = document.createElement('span');
-  span.className = 'notif_username';
-  span.textContent = _userdata.username;
-  div.append(span);
+  pseudo.textContent = _userdata.username;
 }
-
-window.addEventListener('load', addUsernameToNotiffiButton);
 
 Tabs();
 HeaderNav();
 ClockWall();
+addUsernameToNotiffiButton();
 setInterval(ClockWall, 1000);

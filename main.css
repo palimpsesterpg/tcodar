@@ -2830,7 +2830,12 @@ a:hover {
     background-color: var(--white);
     align-items: center;
     gap: var(--large);
+    border: 0.5px solid var(--neutral);
     justify-content: center
+}
+
+.topic_new {
+    border: 0.5px solid var(--co1-100);
 }
 
 .topic-lastpost-avatar img {

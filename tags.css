@@ -1,3 +1,121 @@
+h1,
+.h1 {
+    font-size: var(--2xlarge) !important
+}
+
+h2,
+.h2 {
+    font-size: var(--xlarge) !important
+}
+
+h3,
+.h3 {
+    font-size: var(--large) !important
+}
+
+h4,
+.h4 {
+    font-size: var(--medium) !important
+}
+
+h5,
+.h5 {
+    font-size: var(--small) !important
+}
+
+h6,
+.h6 {
+    font-size: var(--xsmall) !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    text-transform: lowercase;
+    text-align: center;
+    display: block;
+    color: var(--black) !important;
+    margin: 0 !important;
+    font-family: var(--spe)
+}
+
+upp,
+.upp {
+    text-transform: uppercase
+}
+
+low,
+.low {
+    text-transform: lowercase
+}
+
+x2small,
+.x2small {
+    font-size: var(--2xsmall)
+}
+
+xsmall,
+.xsmall {
+    font-size: var(--xsmall)
+}
+
+small,
+.small {
+    font-size: var(--small)
+}
+
+medium,
+.medium {
+    font-size: var(--medium)
+}
+
+large,
+.large {
+    font-size: var(--large)
+}
+
+xlarge,
+.xlarge {
+    font-size: var(--xlarge)
+}
+
+x2large,
+.x2large {
+    font-size: var(--2xlarge)
+}
+
+.d-flex {
+    display: flex !important
+}
+
+.d-none {
+    display: none !important
+}
+
+.d-block {
+    display: block !important
+}
+
+.d-grid {
+    display: grid !important
+}
+
+.invisible {
+    display: none;
+    visibility: hidden
+}
+
+
+
 upp1,
 upp2,
 upp3,

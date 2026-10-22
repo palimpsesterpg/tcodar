@@ -2834,8 +2834,12 @@ a:hover {
     justify-content: center
 }
 
-.topic_new {
+.folder_new {
     border: 0.5px solid var(--co1-100);
+}
+
+.topic:not(.folder_no_new) {
+    border: 0.5px solid var(--co2-100);
 }
 
 .topic-lastpost-avatar img {
@@ -2868,9 +2872,13 @@ a:hover {
     color: var(--white)
 }
 
-.post_new .topictitle {
+.folder_new .topictitle {
     font-weight: 700;
     color: var(--co1)
+}
+
+.topic:not(.folder_no_new) .topictitle {
+    color: var(--co2)
 }
 
 .topictitle {

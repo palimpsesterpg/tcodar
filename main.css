@@ -1034,7 +1034,7 @@ x2large,
 
 #f1.forum:before {
     content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher. ";
-    width: 80%;
+    width: 90%;
     margin-bottom: var(--large)
 }
 
@@ -1053,7 +1053,7 @@ x2large,
     font-style: italic;
     text-shadow: 0.5px 0.5px var(--darklight);
     color: var(--darkneutral);
-    font-size: var(--xlarge);
+    font-size: var(--large);
     font-weight: 100
 }
 
@@ -2855,4 +2855,11 @@ x2large,
     font-size: var(--2xlarge);
     text-transform: lowercase;
     margin: 0 auto
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: clip;
+  display: inline-block;
 }

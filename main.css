@@ -2780,9 +2780,11 @@ a:hover {
 }
 
 .topiclist {
+    position: relative;
     display: flex;
     gap: var(--large);
-    padding: var(--2xlarge);
+    flex-direction: column;
+    padding: var(--large);
     background-color: var(--light);
     border: 1px solid var(--neutral);
     outline: var(--3xsmall) solid var(--darklight);
@@ -2792,10 +2794,10 @@ a:hover {
 
 .topic {
     display: flex;
+    z-index: 99;
     padding: var(--large);
     align-items: center;
-    justify-content: center;
-    gap: var(--large)
+    justify-content: center
 }
 
 .topic-lastpost-avatar img {
@@ -2816,8 +2818,8 @@ a:hover {
 }
 
 .topic-icon {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background: var(--white);
     border-radius: 100%;
     border: 0.5px solid var(--neutral);
@@ -2835,6 +2837,7 @@ a:hover {
 .topic-lastpost {
     display: flex;
     gap: var(--large);
+    width: 220px;
     align-items: center
 }
 

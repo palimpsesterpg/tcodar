@@ -908,6 +908,7 @@ a:hover {
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
+    align-items: center;
     z-index: 99
 }
 
@@ -957,10 +958,10 @@ a:hover {
 
 .forum-icon {
     position: absolute;
-    height: var(--xlarge);
+    height: var(--2xlarge);
     display: flex;
     z-index: 2;
-    width: var(--xlarge);
+    aspect-ratio: 1;
     background-color: var(--white);
     border-radius: 100%;
     color: var(--co3);
@@ -1039,8 +1040,8 @@ a:hover {
 
 .forum-divers .forum-icon {
     position: relative;
-    top: 50%;
-    right: 0
+    top: auto;
+    right: auto
 }
 
 .forum-divers .forums-posts,
@@ -1074,7 +1075,17 @@ a:hover {
 
 .forum-divers .forum-links {
     width: 100%;
-    order: 3
+    order: 3;
+    font-size: 0;
+    padding-right: var(--3xlarge)
+}
+
+.forum-divers a {
+    text-transform: lowercase;
+    background-color: var(--co2);
+    color: var(--large);
+    font-size: var(--medium);
+    padding: var(--4xsmall) var(--xsmall)
 }
 
 .forum-divers .forum-statistics {

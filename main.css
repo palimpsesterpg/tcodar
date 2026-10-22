@@ -2856,7 +2856,9 @@ a:hover {
 }
 
 .topic-content {
-    flex: 1
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .topic-icon {
@@ -2908,8 +2910,9 @@ a:hover {
     align-items: center
 }
 
-.topic:not(.folder_no_new) .topic-lastpost {
-    display: flex;
+.topic:not(.folder_no_new) .topic-lastpost,
+.topic:not(.folder_no_new) .topic-statistics {
+    display: none;
 }
 
 .forum-divers .forum-statistics div,

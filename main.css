@@ -973,12 +973,6 @@ a:hover {
     content: "\e688"
 }
 
-.forums-divers .forum-icon {
-    position: relative;
-    top: 50%;
-    right: 0;
-}
-
 .forum-description br,
 .forum-description:empty {
     display: none
@@ -1016,7 +1010,9 @@ a:hover {
 }
 
 .forum-topics:after,
-.forum-posts:after {
+.forum-posts:after,
+.topic-posts:after,
+.topic-views:after {
     font-family: uicons-thin-straight !important
 }
 
@@ -1024,8 +1020,13 @@ a:hover {
     content: "\e8d6"
 }
 
-.forum-posts:after {
+.forum-posts:after,
+.topic-posts:after {
     content: "\e6de"
+}
+
+.forum-views:after {
+    content: "\e7bb"
 }
 
 .forum-divers {
@@ -1034,21 +1035,51 @@ a:hover {
     gap: var(--large)
 }
 
+.forum-divers .forum-icon {
+    position: relative;
+    top: 50%;
+    right: 0;
+}
+
+.forum-divers .forums-posts,
+.forum-divers .forums-views {
+    display: flex;
+    gap: var(--xsmall)
+}
+
 .forum-divers .forum-content {
     width: 100%;
     display: flex;
+    gap: var(--large);
+    flex-wrap: wrap
 }
 
 .forum-divers .forum-title {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    text-transform: lowercase;
+    flex-direction: column
+}
+
+.forum-divers .forumtitle {
+    font-family: var(--spe);
+    text-transform: lowercase;
+    font-size: var(--2xlarge)
 }
 
 .forum-divers .forum-links {
     width: 100%;
+    order: 3
 }
 
 .forum-divers .forum-statistics {
-    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
 }
 
 .forum-divers .forum-lastpost {
@@ -1479,27 +1510,6 @@ a:hover {
 
 .forum-archives .forum-links a+a {
     margin-left: var(--large)
-}
-
-.topic {
-    display: flex;
-    padding: var(--large);
-    align-items: center;
-    justify-content: center;
-    gap: var(--large)
-}
-
-.topic-lastpost-avatar img {
-    height: 45px;
-    width: 45px;
-    object-fit: cover;
-    border-radius: 2.5px
-}
-
-.f27.topiclist .topic-lastpost,
-.f27.topiclist .topic-author,
-.f27.topiclist .topic-statistics {
-    display: none
 }
 
 .post {
@@ -2765,4 +2775,58 @@ a:hover {
     white-space: nowrap;
     overflow: clip;
     display: inline-block;
+}
+
+.topic {
+    display: flex;
+    padding: var(--large);
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+.topic-lastpost-avatar img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 2.5px
+}
+
+.f27.topiclist .topic-lastpost,
+.f27.topiclist .topic-author,
+.f27.topiclist .topic-statistics {
+    display: none
+}
+
+.topic-content {
+    flex: 1;
+}
+
+.topic-icon {
+    height: 50px;
+    width: 50px;
+    background: var(--white);
+    border-radius: 100%;
+    border: 0.5px solid var(--neutral);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral)
+}
+
+.topic-icon:before {
+    content: 'o'
+}
+
+.topic-lastpost {
+    display: flex;
+    gap: var(--large);
+    align-items: center;
+}
+
+.topic-posts,
+.topic-views {
+    display: flex;
+    gap: var(--xsmall)
 }

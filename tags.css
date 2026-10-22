@@ -109,6 +109,10 @@ x2large,
     display: grid !important
 }
 
+.d-inline {
+    display: inline !important
+}
+
 .invisible {
     display: none;
     visibility: hidden

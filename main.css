@@ -2913,7 +2913,13 @@ a:hover {
 .folder_global .topic-type,
 .folder_announce .topic-type,
 .folder_sticky .topic-type {
-    display: block
+    display: block !important
+}
+
+.folder_global .topic-content,
+.folder_announce .topic-content,
+.folder_sticky .topic-content {
+    align-items: center;
 }
 
 .folder_global .topic-type:before,

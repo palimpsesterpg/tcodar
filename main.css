@@ -2910,17 +2910,29 @@ a:hover {
     align-items: center
 }
 
+.folder_global .topic-type,
+.folder_announce .topic-type,
+.folder_sticky .topic-type {
+    display: block
+}
+
 .folder_global .topic-type:before,
-.announce .topic-type:before {
-    font-family: uicons-thin-straight !important
+.folder_announce .topic-type:before,
+.folder_sticky .topic-type:before {
+    font-family: uicons-thin-straight !important;
+    color: var(--co2)
 }
 
 .folder_global .topic-type:before {
-    content: "\ed61"
+    content: "\e449"
 }
 
-.folder_global .topic-type:before {
-    content: "\ed61"
+.folder_announce .topic-type:before {
+    content: "\e442"
+}
+
+.folder_sticky .topic-type:before {
+    content: "\e444"
 }
 
 .topic-type:empty,

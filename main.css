@@ -608,7 +608,7 @@ a:hover {
 }
 
 #page-home {
-    padding-bottom: 0px;
+    padding-bottom: 0.5rem;
     margin-bottom: -0.5rem
 }
 
@@ -622,6 +622,7 @@ a:hover {
     letter-spacing: 1px;
     padding-left: calc(var(--large) + 1px) !important;
     padding: var(--large);
+    font-size: var(--small);
     background: var(--light);
     border: 0.5px solid var(--neutral)
 }
@@ -1606,11 +1607,15 @@ a:hover {
 }
 
 .quick-nav-topics {
-    padding: var(--large);
+    padding: var(--xsmall) 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large)
+}
+
+.postlit .quick-nav-topics:last-of-type {
+    display: none
 }
 
 .memberlist {
@@ -2822,6 +2827,7 @@ a:hover {
     display: flex;
     z-index: 99;
     padding: var(--large);
+    background-color: var(--white);
     align-items: center;
     gap: var(--large);
     justify-content: center

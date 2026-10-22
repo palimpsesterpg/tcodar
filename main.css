@@ -2900,7 +2900,7 @@ a:hover {
 }
 
 .post_new .topic-icon {
-    background: var(--co1-200);
+    background: var(--group-color-200, var(--co1-200));
     border: 0.5px solid var(--co1)
 }
 

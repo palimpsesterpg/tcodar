@@ -666,7 +666,8 @@ a:hover {
 .post:after,
 #hub:after,
 #reception:after,
-.memberlist:after {
+.memberlist:after,
+.topiclist:after {
     position: absolute;
     content: "";
     border: 1px solid var(--co1-50);
@@ -683,7 +684,8 @@ a:hover {
 .post:hover:after,
 #hub:hover:after,
 #reception:hover:after,
-.memberlist:hover:after {
+.memberlist:hover:after,
+.topiclist:hover:after {
     box-shadow: 0 0 var(--3xsmall) 0.15rem var(--co1-50);
     border: 1px solid var(--co1-100);
     transition-duration: 2.5s

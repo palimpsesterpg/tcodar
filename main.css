@@ -1077,7 +1077,7 @@ a:hover {
     font-weight: 300;
     text-transform: uppercase;
     color: var(--darkneutral);
-    letter-spacing: var(--3xlarge);
+    letter-spacing: var(--3xsmall);
     padding-left: var(--3xsmall)
 }
 
@@ -2853,18 +2853,28 @@ a:hover {
 .topic-icon {
     height: 25px;
     width: 25px;
-    background: var(--white);
+    background: var(--darklight);
     border-radius: 100%;
     border: 0.5px solid var(--neutral);
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--neutral)
+    color: var(--white)
+}
+
+.topic-icon.post_new {
+    background: var(--co1-200);
+    border: 0.5px solid var(--co1)
 }
 
 .topic-icon:before {
-    content: 'o'
+    content: "\ed4f";
+    font-family: uicons-thin-straight !important
+}
+
+.topic-icon.post_new:before {
+    content: "\ed61"
 }
 
 .topic-lastpost {

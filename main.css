@@ -1077,15 +1077,23 @@ a:hover {
     width: 100%;
     order: 3;
     font-size: 0;
-    padding-right: var(--3xlarge)
+    display: flex;
+    margin-right: var(--3xlarge);
+    align-items: center;
+    justify-content: center;
+    gap: var(--xsmall)
 }
 
-.forum-divers a {
+.forum-divers .forum-links a {
     text-transform: lowercase;
-    background-color: var(--co2);
+    background-color: var(--co2-50);
+    border: 0.5px solid var(--co2);
+    box-sizing: border-box;
     color: var(--large);
+    color: var(--co2);
     font-size: var(--medium);
-    padding: var(--4xsmall) var(--xsmall)
+    border-radius: var(--small);
+    padding: var(--3xsmall) var(--xsmall)
 }
 
 .forum-divers .forum-statistics {
@@ -2856,5 +2864,8 @@ a:hover {
 .forum-divers .forum-statistics div,
 .topic-statistics div {
     display: flex;
-    gap: var(--xsmall)
+    gap: var(--xsmall);
+    width: 50px;
+    justify-content: space-between;
+    align-items: center
 }

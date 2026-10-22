@@ -1027,7 +1027,7 @@ a:hover {
     content: "\e6de"
 }
 
-.forum-views:after {
+.topic-views:after {
     content: "\e7bb"
 }
 
@@ -2797,6 +2797,7 @@ a:hover {
     z-index: 99;
     padding: var(--large);
     align-items: center;
+    gap: var(--large);
     justify-content: center
 }
 
@@ -2841,8 +2842,8 @@ a:hover {
     align-items: center
 }
 
-.topic-posts,
-.topic-views {
+.forum-divers .forum-statistics div,
+.topic-statistics div {
     display: flex;
     gap: var(--xsmall)
 }

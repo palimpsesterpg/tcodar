@@ -113,6 +113,18 @@ x2large,
     display: inline !important
 }
 
+.flex-row-reverse {
+    flex-direction: row-reverse
+}
+
+.flex-column {
+    flex-direction: column
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse
+}
+
 .invisible {
     display: none;
     visibility: hidden

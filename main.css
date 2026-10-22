@@ -2863,7 +2863,18 @@ a:hover {
     color: var(--white)
 }
 
-.topic-icon.post_new {
+.post_new .topictitle {
+    font-weight: 700;
+    color: var(--co1)
+}
+
+.topictitle {
+    font-family: var(--serif);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.post_new .topic-icon {
     background: var(--co1-200);
     border: 0.5px solid var(--co1)
 }
@@ -2873,7 +2884,7 @@ a:hover {
     font-family: uicons-solid-straight !important
 }
 
-.topic-icon.post_new:before {
+.post_new .topic-icon:before {
     content: "\ed61"
 }
 
@@ -2882,6 +2893,10 @@ a:hover {
     gap: var(--large);
     width: 220px;
     align-items: center
+}
+
+.topic:not(.folder_no_new) .topic-lastpost {
+    display: flex;
 }
 
 .forum-divers .forum-statistics div,

@@ -2835,11 +2835,16 @@ a:hover {
 }
 
 .folder_new {
-    border: 0.5px solid var(--co1-100);
+    border: 0.5px solid var(--group-color-100, var(--co1-100));
 }
 
-.topic:not(.folder_no_new) {
+.folder_global {
     border: 0.5px solid var(--co2-100);
+}
+
+.folder_announce,
+.folder_sticky {
+    border: 0.5px solid var(--co3-100);
 }
 
 .topic-lastpost-avatar img {
@@ -2876,11 +2881,16 @@ a:hover {
 
 .folder_new .topictitle {
     font-weight: 700;
-    color: var(--co1)
+    color: var(--group-color, var(--co2))
 }
 
-.topic:not(.folder_no_new) .topictitle {
+.folder_global .topictitle {
     color: var(--co2)
+}
+
+.folder_announce .topictitle,
+.folder_sticky .topictitle {
+    color: var(--co3)
 }
 
 .topictitle {
@@ -2950,6 +2960,10 @@ a:hover {
 .topic:not(.folder_no_new) .topic-lastpost,
 .topic:not(.folder_no_new) .topic-statistics {
     display: none;
+}
+
+.topic-participate {
+    color: var(--group-color-200, var(--neutral))
 }
 
 .forum-divers .forum-statistics div,

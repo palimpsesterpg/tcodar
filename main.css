@@ -1040,7 +1040,7 @@ a:hover {
 .forum-divers .forum-icon {
     position: relative;
     top: 50%;
-    right: 0;
+    right: 0
 }
 
 .forum-divers .forums-posts,
@@ -2376,7 +2376,7 @@ a:hover {
 }
 
 .notification.unread {
-    border: 0.5px solid var(--group-color);
+    border: 0.5px solid var(--group-color)
 }
 
 .notification.alert {
@@ -2441,14 +2441,14 @@ a:hover {
 }
 
 .notification.unread .notif_icon i:before {
-    color: var(--group-color);
+    color: var(--group-color)
 }
 
 .notif_content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--xsmall);
+    gap: var(--xsmall)
 }
 
 .notif_text {
@@ -2486,7 +2486,7 @@ a:hover {
 .alert_close {
     background: transparent;
     border: 0 !important;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .switcheroo {
@@ -2776,7 +2776,18 @@ a:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: clip;
-    display: inline-block;
+    display: inline-block
+}
+
+.topiclist {
+    display: flex;
+    gap: var(--large);
+    padding: var(--2xlarge);
+    background-color: var(--light);
+    border: 1px solid var(--neutral);
+    outline: var(--3xsmall) solid var(--darklight);
+    box-shadow: 0rem 0rem 0rem var(--xsmall) var(--white);
+    margin: var(--xsmall)
 }
 
 .topic {
@@ -2801,7 +2812,7 @@ a:hover {
 }
 
 .topic-content {
-    flex: 1;
+    flex: 1
 }
 
 .topic-icon {
@@ -2824,7 +2835,7 @@ a:hover {
 .topic-lastpost {
     display: flex;
     gap: var(--large);
-    align-items: center;
+    align-items: center
 }
 
 .topic-posts,

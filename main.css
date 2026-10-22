@@ -2870,7 +2870,7 @@ a:hover {
 
 .topic-icon:before {
     content: "\ed4f";
-    font-family: uicons-thin-straight !important
+    font-family: uicons-solid-straight !important
 }
 
 .topic-icon.post_new:before {

@@ -2929,7 +2929,7 @@ a:hover {
 .folder_global .topic-content,
 .folder_announce .topic-content,
 .folder_sticky .topic-content {
-    align-items: center;
+    align-items: flex-end;
 }
 
 .folder_global .topic-type:before,

@@ -2834,7 +2834,7 @@ a:hover {
     justify-content: center
 }
 
-.folder_new {
+.post_new {
     border: 0.5px solid var(--group-color-100, var(--co1-100));
 }
 
@@ -2879,7 +2879,7 @@ a:hover {
     color: var(--white)
 }
 
-.folder_new .topictitle {
+.post_new .topictitle {
     font-weight: 700;
     color: var(--group-color, var(--co2))
 }

@@ -598,7 +598,7 @@ a:hover {
 #page-content,
 #page-home,
 #page-footer {
-    padding: var(--2xlarge);
+    padding: var(--large);
     width: 70%;
     box-sizing: border-box;
     margin: 0 auto;
@@ -609,8 +609,7 @@ a:hover {
 
 #page-home {
     padding-bottom: 0px;
-    margin-bottom: -0.5rem;
-    padding-top: var(--large)
+    margin-bottom: -0.5rem
 }
 
 #page-footer {
@@ -1073,6 +1072,14 @@ a:hover {
     font-size: var(--2xlarge)
 }
 
+.forum-divers .forum-description {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--darkneutral);
+    letter-spacing: var(--3xlarge);
+    padding-left: var(--3xsmall)
+}
+
 .forum-divers .forum-links {
     width: 100%;
     order: 3;
@@ -1089,9 +1096,9 @@ a:hover {
     background-color: var(--co2-50);
     border: 0.5px solid var(--co2);
     box-sizing: border-box;
-    color: var(--large);
     color: var(--co2);
-    font-size: var(--medium);
+    font-weight: 700;
+    font-size: var(--small);
     border-radius: var(--small);
     padding: var(--3xsmall) var(--xsmall)
 }

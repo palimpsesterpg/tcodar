@@ -2910,6 +2910,25 @@ a:hover {
     align-items: center
 }
 
+.folder_global .topic-type:before,
+.announce .topic-type:before {
+    font-family: uicons-thin-straight !important
+}
+
+.folder_global .topic-type:before {
+    content: "\ed61"
+}
+
+.folder_global .topic-type:before {
+    content: "\ed61"
+}
+
+.topic-type:empty,
+.topic-participate:empty,
+.topic:not(.folder_no_new) .topic-icon,
+.topic:not(.folder_no_new) .topic-participate,
+.topic:not(.folder_no_new) .topic-author,
+.topic:not(.folder_no_new) .topic-nav,
 .topic:not(.folder_no_new) .topic-lastpost,
 .topic:not(.folder_no_new) .topic-statistics {
     display: none;

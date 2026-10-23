@@ -129,14 +129,29 @@ function sortItems() {
     .forEach(item => itemsContainer.appendChild(item));
 }
 
+const groupOf = new Map();
+filterGroups.forEach((group, i) =>
+  group.querySelectorAll(':scope > div').forEach(btn => groupOf.set(filterClass(btn), i))
+);
+
 function updateFilters() {
-  const activeByGroup = [...filterGroups]
-    .map(group => [...group.querySelectorAll(':scope > div.active')].map(filterClass))
-    .filter(classes => classes.length > 0);
+  const active = [...filterGroups].map(group =>
+    new Set([...group.querySelectorAll(':scope > div.active')].map(filterClass))
+  );
+
+  const matches = (item, c, gi) =>
+    item.classList.contains(c) ||
+    [...item.classList].some(cls => {
+      const parts = cls.split('-');
+      if (parts.length !== 2 || !parts.includes(c)) return false;
+      const d = parts[0] === c ? parts[1] : parts[0];
+      const dg = groupOf.get(d);
+      return dg === undefined || dg === gi || !active[dg].size || active[dg].has(d);
+    });
 
   items.forEach(item => {
-    const visible = activeByGroup.every(classes =>
-      classes.some(c => item.classList.contains(c))
+    const visible = active.every((set, gi) =>
+      !set.size || [...set].some(c => matches(item, c, gi))
     );
     item.style.display = visible ? 'flex' : 'none';
   });

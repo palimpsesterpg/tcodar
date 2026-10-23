@@ -46,6 +46,9 @@ body {
 
 .families div {
     background-color: var(--co1-100);
+    text-shadow: 1px 1px var(--white);
+    letter-spacing: 1px;
+    padding-left: 1px;
     text-transform: lowercase;
 }
 

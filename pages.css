@@ -13,13 +13,13 @@ body {
 .page-filters {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 115px;
     overflow: auto;
     gap: var(--xsmall)
 }
 
-.page-filters:first-of-type {
-    width: 125px;
+.page-filters:nth-of-type(1) {
+    width: 100px;
     padding-right: var(--xsmall);
     margin-right: -0.5rem;
     border-right: 0.5px solid var(--neutral)
@@ -44,15 +44,19 @@ body {
     border-radius: var(--large)
 }
 
-.families div {
+.page-filters:nth-of-type(2) .filter div {
     background-color: var(--co1-100);
     letter-spacing: 1px;
     padding-left: 1px;
     text-transform: lowercase
 }
 
-.families div:not(.active, .sans) {
+.page-filters:nth-of-type(2) .filter div:not(.active, .sans) {
     text-shadow: 0.5px 0.5px var(--darklight);
+}
+
+.page-filters:nth-of-type(2) .filter .active {
+    background-color: var(--co1)
 }
 
 .filter .sans {

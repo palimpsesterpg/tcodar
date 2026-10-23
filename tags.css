@@ -130,6 +130,12 @@ x2large,
     visibility: hidden
 }
 
+hr {
+    margin: var(--xsmall);
+    border: 0;
+    border-bottom: 0.5px solid var(--darkneutral) !important;
+}
+
 .order-0 {
     order: 0
 }

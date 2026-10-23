@@ -51,7 +51,7 @@ body {
     text-transform: lowercase
 }
 
-.families div:not(.active) {
+.families div:not(.active, .sans) {
     text-shadow: 0.5px 0.5px var(--darklight);
 }
 

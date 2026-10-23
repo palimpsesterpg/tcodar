@@ -46,10 +46,13 @@ body {
 
 .families div {
     background-color: var(--co1-100);
-    text-shadow: 0.5px 0.5px var(--darklight);
     letter-spacing: 1px;
     padding-left: 1px;
     text-transform: lowercase
+}
+
+.families div:not(.active) {
+    text-shadow: 0.5px 0.5px var(--darklight);
 }
 
 .filter .sans {

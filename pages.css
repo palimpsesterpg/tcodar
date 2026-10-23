@@ -1,6 +1,6 @@
 body {
     margin: 0px !important;
-    padding: 0px !important;
+    padding: 0px !important
 }
 
 .page-content {
@@ -29,7 +29,7 @@ body {
     display: flex;
     gap: var(--3xsmall);
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: stretch
 }
 
 .filter div {
@@ -49,7 +49,7 @@ body {
     text-shadow: 0.5px 0.5px var(--darklight);
     letter-spacing: 1px;
     padding-left: 1px;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .filter .sans {
@@ -100,7 +100,7 @@ body {
 }
 
 .item>* {
-    cursor: pointer;
+    cursor: pointer
 }
 
 .item-title {
@@ -233,7 +233,7 @@ body {
 #masterlist .content-credits {
     background-color: var(--group-colorop50);
     text-shadow: 1px 1px var(--group-color);
-    outline: var(--large) solid var(--group-colorop50);
+    outline: var(--large) solid var(--group-colorop50)
 }
 
 .content-families {
@@ -241,8 +241,9 @@ body {
     flex-direction: column;
     flex: 1;
     height: 100%;
+    width: 100%;
     min-height: 0;
-    overflow: auto;
+    overflow: auto
 }
 
 .content-families .tabsystem-contents {
@@ -250,6 +251,7 @@ body {
     height: 100%;
     min-height: 0;
     overflow: auto;
+    margin: 0 auto
 }
 
 .content-credits {
@@ -518,5 +520,5 @@ fam {
 #masterlist .item {
     outline: 0.5px solid var(--group-color);
     margin: 0.5px;
-    border: var(--3xsmall) solid var(--light);
+    border: var(--3xsmall) solid var(--light)
 }

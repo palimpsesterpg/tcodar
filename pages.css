@@ -20,7 +20,8 @@ body {
 
 .page-filters:first-of-type {
     width: 125px;
-    padding-right: var(--large);
+    padding-right: var(xsmall);
+    margin-right: -0.5rem;
     border-right: 0.5px solid var(--neutral)
 }
 

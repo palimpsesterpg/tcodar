@@ -322,14 +322,20 @@ body {
     content: 'réservé.e'
 }
 
-.played.item:before,
-.played .item-content:before {
+.played.item:before {
     background-color: red
 }
 
-.booked.item:before,
-.booked .item-content:before {
+.played .item-content:before {
+    color: red
+}
+
+.booked.item:before {
     background-color: orange
+}
+
+.booked .item-content:before {
+    color: orange
 }
 
 .content-head {

@@ -362,10 +362,6 @@ body {
     padding-left: 1px
 }
 
-.tabsystem {
-    width: 50%
-}
-
 .tabsystem-tabs {
     display: flex;
     align-items: center;
@@ -389,6 +385,7 @@ body {
 }
 
 .tabsystem-contents {
+    width: 50%;
     margin-top: var(--large);
     padding-left: var(--large);
     border-left: var(--xsmall) solid var(--co2)

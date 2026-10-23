@@ -158,40 +158,6 @@
     --co3-50: #0f1a22
 }
 
-.group-2 {
-    --group-color-50: #e6eef4;
-    --group-color-100: #ccdee9;
-    --group-color-200: #b3cdde;
-    --group-color-300: #99bdd2;
-    --group-color-400: #80acc7;
-    --group-color: #669bbc;
-    --group-colorop50: #669bbc80;
-    --group-color-600: #4a84a8;
-    --group-color-700: #3b6a87;
-    --group-color-800: #2c4f65;
-    --group-color-900: #1e3543;
-    --group-color-950: #0f1a22;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
-}
-
-.group-3 {
-    --group-color-50: #fbd1d4;
-    --group-color-100: #f6a3a9;
-    --group-color-200: #f2757e;
-    --group-color-300: #ee4753;
-    --group-color-400: #ea1a27;
-    --group-color: #c1121f;
-    --group-colorop50: #c1121f80;
-    --group-color-600: #9f0f18;
-    --group-color-700: #800c14;
-    --group-color-800: #60090f;
-    --group-color-900: #40060a;
-    --group-color-950: #200305;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
-}
-
 .group-4 {
     --group-color-50: #dddddd;
     --group-color: #333333;
@@ -233,16 +199,18 @@
 }
 
 .group-test {
-    --group-color-50: #F7E5D2;
-    --group-color-100: #EECBA5;
-    --group-color-200: #E6B177;
-    --group-color-300: #DE964A;
-    --group-color-400: #CD7C26;
-    --group-color: #9E5F1D;
-    --group-colorop50: #9f611d80;
-    --group-color-600: #855018;
-    --group-color-700: #6A4013;
-    --group-color-800: #50300F;
+    --group-color-50: #EEE2E7;
+    --group-color-100: #DDC5CE;
+    --group-color-200: #CCA8B6;
+    --group-color-300: #BB8B9E;
+    --group-color-400: #AA6E85;
+    --group-color: #94576E;
+    --group-colorop50: #94576E80;
+    --group-color-600: #7B485C;
+    --group-color-700: #633A49;
+    --group-color-800: #4A2B37;
+    --group-color-900: #311D25;
+    --group-color-950: #190E12;
     --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
     --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
@@ -382,6 +350,10 @@ a:hover {
 
 .tabsystem .tab-content.active {
     display: block
+}
+
+.tabsystem .tab {
+    cursor: pointer
 }
 
 .color-scheme-toggle {

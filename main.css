@@ -1577,13 +1577,13 @@ a:hover {
 }
 
 .postprofile {
-    width: 250px;
+    width: 232px;
     box-sizing: border-box;
     z-index: 99
 }
 
 .postprofile-avatar {
-    width: 250px;
+    width: 232px;
     box-sizing: border-box
 }
 
@@ -1594,7 +1594,7 @@ a:hover {
     outline: 0.5px solid var(--group-color);
     border: var(--small) solid var(--light);
     box-sizing: border-box;
-    width: 200px;
+    width: 232px;
     object-fit: cover
 }
 

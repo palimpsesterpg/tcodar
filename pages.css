@@ -15,19 +15,19 @@ body {
     flex-direction: column;
     width: 115px;
     overflow: auto;
-    gap: var(--xsmall)
+    gap: var(--2xsmall)
 }
 
 .page-filters:nth-of-type(1) {
     width: 100px;
-    padding-right: var(--xsmall);
+    padding-right: var(--2xsmall);
     margin-right: -0.5rem;
     border-right: 0.5px solid var(--neutral)
 }
 
 .filter {
     display: flex;
-    gap: var(--3xsmall);
+    gap: var(--4xsmall);
     flex-direction: column;
     justify-content: stretch
 }
@@ -38,7 +38,7 @@ body {
     background-color: var(--co1-50);
     color: var(--co1);
     border: 0.5px solid var(--co1);
-    padding: 0 var(--3xsmall);
+    padding: 0 var(--4xsmall);
     font-size: var(--small);
     text-align: center;
     border-radius: var(--large)
@@ -74,7 +74,7 @@ body {
     display: grid;
     grid-auto-rows: max-content;
     align-content: start;
-    gap: var(--xsmall);
+    gap: var(--2xsmall);
     flex: 1;
     min-height: 0;
     overflow: auto
@@ -98,7 +98,7 @@ body {
 
 .item {
     width: 100%;
-    border-radius: var(--xsmall);
+    border-radius: var(--2xsmall);
     box-sizing: border-box;
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -304,7 +304,7 @@ body {
     height: 4.5px;
     width: 4.5px;
     position: absolute;
-    bottom: var(--3xsmall);
+    bottom: var(--4xsmall);
     left: 50%;
     border: 0.5px solid var(--white);
     z-index: 99;
@@ -375,7 +375,7 @@ body {
 
 .content-origines {
     font-family: var(--display);
-    font-size: var(--xlarge);
+    font-size: var(--large);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px
@@ -394,7 +394,7 @@ body {
     border: 0.5px solid var(--co2);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: var(--xsmall) var(--large);
+    padding: var(--2xsmall) var(--large);
     border-radius: var(--large)
 }
 
@@ -407,7 +407,7 @@ body {
     width: 50%;
     margin-top: var(--large);
     padding-left: var(--large);
-    border-left: var(--xsmall) solid var(--co2)
+    border-left: var(--2xsmall) solid var(--co2)
 }
 
 .tabsystem .tab-content {
@@ -434,7 +434,7 @@ body {
     border: 0px;
     color: var(--co1);
     font-family: var(--mono);
-    padding: var(--3xsmall) var(--xsmall)
+    padding: var(--4xsmall) var(--2xsmall)
 }
 
 .page-search button {
@@ -443,7 +443,7 @@ body {
     border: 0px;
     font-family: var(--mono);
     text-transform: uppercase;
-    padding: var(--3xsmall) var(--xsmall)
+    padding: var(--4xsmall) var(--2xsmall)
 }
 
 .page-body {
@@ -451,7 +451,7 @@ body {
     gap: var(--large);
     width: auto;
     height: calc(100vh - var(--2xlarge));
-    border-radius: var(--xsmall);
+    border-radius: var(--2xsmall);
     box-sizing: border-box;
     margin: var(--large);
     background-color: var(--light);
@@ -501,7 +501,7 @@ body {
 .content-player img {
     height: 50px;
     width: 50px;
-    border-radius: var(--xsmall);
+    border-radius: var(--2xsmall);
     object-fit: cover
 }
 
@@ -520,12 +520,12 @@ fam {
     color: var(--group-color);
     font-family: var(--mono);
     text-transform: lowercase;
-    padding: var(--3xsmall) var(--xsmall);
+    padding: var(--4xsmall) var(--2xsmall);
     border-radius: var(--large)
 }
 
 #masterlist .item {
     outline: 0.5px solid var(--group-color);
     margin: 0.5px;
-    border: var(--3xsmall) solid var(--light)
+    border: var(--4xsmall) solid var(--light)
 }

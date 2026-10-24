@@ -1,11 +1,11 @@
 h1,
 .h1 {
-    font-size: var(--2xlarge) !important
+    font-size: var(--3xlarge) !important
 }
 
 h2,
 .h2 {
-    font-size: var(--xlarge) !important
+    font-size: var(--2xlarge) !important
 }
 
 h3,
@@ -25,7 +25,7 @@ h5,
 
 h6,
 .h6 {
-    font-size: var(--xsmall) !important
+    font-size: var(--2xsmall) !important
 }
 
 h1,
@@ -56,41 +56,6 @@ upp,
 low,
 .low {
     text-transform: lowercase
-}
-
-x2small,
-.x2small {
-    font-size: var(--2xsmall)
-}
-
-xsmall,
-.xsmall {
-    font-size: var(--xsmall)
-}
-
-small,
-.small {
-    font-size: var(--small)
-}
-
-medium,
-.medium {
-    font-size: var(--medium)
-}
-
-large,
-.large {
-    font-size: var(--large)
-}
-
-xlarge,
-.xlarge {
-    font-size: var(--xlarge)
-}
-
-x2large,
-.x2large {
-    font-size: var(--2xlarge)
 }
 
 .d-flex {
@@ -131,7 +96,7 @@ x2large,
 }
 
 hr {
-    margin: var(--xsmall);
+    margin: var(--2xsmall);
     border: 0;
     border-bottom: 0.5px solid var(--darkneutral) !important;
 }
@@ -240,7 +205,7 @@ borderbid,
 borderbigc {
     border: 0.5px solid;
     font-weight: 300;
-    padding: var(--3xsmall) var(--large)
+    padding: var(--4xsmall) var(--large)
 }
 
 gborder123,
@@ -285,7 +250,7 @@ lgborderbi23,
 lgborderbigc {
     border: 0.5px solid;
     font-family: var(--display);
-    padding: var(--3xsmall)
+    padding: var(--4xsmall)
 }
 
 gborder123,
@@ -383,7 +348,7 @@ bborderbin,
 bborderbid,
 bborderbigc {
     border-bottom: 0.5px solid;
-    padding: var(--3xsmall) var(--small) 0;
+    padding: var(--4xsmall) var(--small) 0;
     font-family: var(--serif);
     background-color: var(--white)
 }
@@ -414,7 +379,7 @@ mborderbid,
 mborderbigc {
     border: 0.5px solid;
     background-color: var(--white);
-    padding: 0.1rem var(--xsmall);
+    padding: 0.1rem var(--2xsmall);
     font-family: var(--mono)
 }
 
@@ -1007,7 +972,7 @@ lbgradb12,
 lbgradb13,
 lbgradb23,
 lbgradbgc {
-    padding: 0 var(--xsmall)
+    padding: 0 var(--2xsmall)
 }
 
 lback1,
@@ -1093,8 +1058,8 @@ mbackgc,
 mbackbgc,
 mbackigc,
 mbackbigc {
-    padding-left: calc(var(--2xsmall) + 5px);
-    padding-right: var(--2xsmall);
+    padding-left: calc(var(--32xsmall) + 5px);
+    padding-right: var(--32xsmall);
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;
@@ -2445,6 +2410,7 @@ titd,
 titgc {
     font-size: var(--2xlarge);
     letter-spacing: 2.5px;
+    padding-left: 2.5px;
     color: transparent;
     font-weight: 900
 }
@@ -2615,7 +2581,7 @@ maj3::first-letter,
 majn::first-letter,
 majd::first-letter,
 majgc::first-letter {
-    font-size: var(--xlarge) !important;
+    font-size: var(--large) !important;
     text-transform: lowercase !important;
     font-family: var(--spe)
 }
@@ -2663,7 +2629,7 @@ majgc::first-letter {
     text-decoration-line: line-through;
     text-decoration-style: wavy;
     text-decoration-thickness: 2.5px;
-    letter-spacing: var(--xsmall);
+    letter-spacing: var(--2xsmall);
     color: var(--co1);
     margin: var(--large) 0;
 }
@@ -2853,8 +2819,8 @@ majgc::first-letter {
     width: fit-content;
     color: var(--co1);
     display: block;
-    letter-spacing: var(--xsmall);
-    padding-left: var(--xsmall);
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall);
 }
 
 .br71:before,

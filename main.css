@@ -21,8 +21,6 @@
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
 
-    --fam-icon: "\E049";
-
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
 
@@ -172,9 +170,18 @@
 }
 
 .group-5 {
-    --group-color-50: #d5f1e7;
-    --group-color: #2c8063;
-    --group-colorop50: #2C806380;
+    --group-color-50: #DFEADE;
+    --group-color-100: #BFD5BD;
+    --group-color-200: #9FBF9B;
+    --group-color-300: #7FAA7A;
+    --group-color-400: #62915D;
+    --group-color: #4C7048;
+    --group-colorop50: #4C704880;
+    --group-color-600: #3F5D3C;
+    --group-color-700: #324B30;
+    --group-color-800: #263824;
+    --group-color-900: #192518;
+    --group-color-950: #0D130C;
     --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
     --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
 }
@@ -2950,4 +2957,16 @@ a:hover {
     width: 50px;
     justify-content: space-between;
     align-items: center
+}
+
+.title-toggle {
+    cursor: pointer
+}
+
+.content-toggle {
+    display: none
+}
+
+.content-toggle.open {
+    display: block
 }

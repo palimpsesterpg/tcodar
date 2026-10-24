@@ -1058,8 +1058,8 @@ mbackgc,
 mbackbgc,
 mbackigc,
 mbackbigc {
-    padding-left: calc(var(--32xsmall) + 5px);
-    padding-right: var(--32xsmall);
+    padding-left: calc(var(--2xsmall) + 5px);
+    padding-right: var(--2xsmall);
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;

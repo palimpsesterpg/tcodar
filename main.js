@@ -10,10 +10,15 @@ const isAdmin = hasId(adminsIds);
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
+const own = (system, selector) =>
+  [...system.querySelectorAll(selector)].filter(
+    el => el.parentElement.closest('.tabsystem, .tabinline') === system
+  );
+
 function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {
-    const tabs = system.querySelectorAll('.tab');
-    const contents = system.querySelectorAll('.tab-content');
+    const tabs = own(system, '.tab');
+    const contents = own(system, '.tab-content');
 
     const activate = tab => {
       if (!tab) return;
@@ -22,7 +27,27 @@ function Tabs() {
     };
 
     tabs.forEach(tab => tab.addEventListener('click', () => activate(tab)));
-    activate(system.querySelector('.tab.active') || tabs[0]);
+    activate(tabs.find(t => t.classList.contains('active')) || tabs[0]);
+  });
+}
+
+function TabsInline() {
+  document.querySelectorAll('.tabinline').forEach(system => {
+    const contents = own(system, '.tab-content');
+    const prev = own(system, '.tab.prev')[0];
+    const next = own(system, '.tab.next')[0];
+    if (!prev || !next || !contents.length) return;
+
+    let index = Math.max(0, contents.findIndex(c => c.classList.contains('active')));
+
+    const activate = i => {
+      index = (i + contents.length) % contents.length;
+      contents.forEach((c, n) => c.classList.toggle('active', n === index));
+    };
+
+    prev.addEventListener('click', () => activate(index - 1));
+    next.addEventListener('click', () => activate(index + 1));
+    activate(index);
   });
 }
 
@@ -79,8 +104,51 @@ function addUsernameToNotiffiButton() {
   if (pseudo) pseudo.textContent = user.username ?? '';
 }
 
+function fillCard(root, data) {
+  root.querySelectorAll("[data-field]").forEach((el) => {
+    const field = el.dataset.field;
+    const value = data[field];
+    if (value === undefined || value === null) return;
+
+    if (field === "img") {
+      el.innerHTML = value ? `<img src="${value}">` : "";
+    } else {
+      el.textContent = Array.isArray(value) ? value.join(", ") : value;
+    }
+  });
+
+  root.style.setProperty("--fam-color", data.color || "transparent");
+  root.style.setProperty("--fam-colorop50", data.colorOp50 || "transparent");
+  root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "")));
+  root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? ""));
+  root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "")));
+
+  const fam = String(data.id ?? "");
+  root.querySelectorAll('.tab-content[data-tab="tree"] .node').forEach((node, i) => {
+    node.querySelector(':scope > .node-num')?.remove();
+    node.dataset.id = i + 1;
+    node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-family]").forEach((el) => {
+    const data = FAMILIES[el.dataset.family];
+    if (data) fillCard(el, {
+      ...FAMILIES.default,
+      ...data
+    });
+  });
+
+  document.querySelectorAll("[data-character]").forEach((el) => {
+    const data = CARACTERS[el.dataset.character];
+    if (data) fillCard(el, data);
+  });
+});
+
 addQueendomTab();
 Tabs();
+TabsInline();
 HeaderNav();
 ClockWall();
 addUsernameToNotiffiButton();

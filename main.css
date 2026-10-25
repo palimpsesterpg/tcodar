@@ -356,15 +356,15 @@ a:hover {
     -moz-osx-font-smoothing: grayscale
 }
 
-.tabsystem .tab-content {
+.tabsystem .tab-content, .tabinline .tab-content  {
     display: none
 }
 
-.tabsystem .tab-content.active {
+.tabsystem .tab-content.active, .tabinline .tab-content.active {
     display: block
 }
 
-.tabsystem .tab {
+.tabsystem .tab, .tabinline .tab {
     cursor: pointer
 }
 

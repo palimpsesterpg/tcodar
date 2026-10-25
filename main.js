@@ -117,11 +117,13 @@ function fillCard(root, data) {
     }
   });
 
-  root.style.setProperty("--fam-color", data.color || "#000000");
-  root.style.setProperty("--fam-colorFade", data.colorFade || "#00000040");
-  root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "Nom")));
-  root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? "\uE049"));
-  root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "null")));
+  if (root.hasAttribute("data-family")) {
+    root.style.setProperty("--fam-color", data.color || "#000000");
+    root.style.setProperty("--fam-colorFade", data.colorFade || "#00000040");
+    root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "Nom")));
+    root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? "\uE049"));
+    root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "null")));
+  }
 
   const fam = String(data.id ?? "");
   root.querySelectorAll('.tab-content[data-tab="tree"] .node').forEach((node, i) => {
@@ -147,8 +149,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("click", (e) => {
-    const title = e.target.closest(".title-toggle");
-    if (title) title.closest(".bloc-toggle").classList.toggle("open");
+    const bloc = e.target.closest(".bloc-toggle");
+    if (bloc) bloc.classList.toggle("open");
 });
 
 addQueendomTab();

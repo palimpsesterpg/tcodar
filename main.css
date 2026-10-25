@@ -356,15 +356,18 @@ a:hover {
     -moz-osx-font-smoothing: grayscale
 }
 
-.tabsystem .tab-content, .tabinline .tab-content  {
+.tabsystem .tab-content,
+.tabinline .tab-content {
     display: none
 }
 
-.tabsystem .tab-content.active, .tabinline .tab-content.active {
+.tabsystem .tab-content.active,
+.tabinline .tab-content.active {
     display: block
 }
 
-.tabsystem .tab, .tabinline .tab {
+.tabsystem .tab,
+.tabinline .tab {
     cursor: pointer
 }
 
@@ -2967,6 +2970,6 @@ a:hover {
     display: none
 }
 
-.content-toggle.open {
+.bloc-toggle.open .content-toggle {
     display: block
 }

@@ -117,11 +117,11 @@ function fillCard(root, data) {
     }
   });
 
-  root.style.setProperty("--fam-color", data.color || "transparent");
-  root.style.setProperty("--fam-colorop50", data.colorOp50 || "transparent");
-  root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "")));
-  root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? ""));
-  root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "")));
+  root.style.setProperty("--fam-color", data.color || "#000000");
+  root.style.setProperty("--fam-colorFade", data.colorFade || "#00000040");
+  root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "Nom")));
+  root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? "\uE049"));
+  root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "null")));
 
   const fam = String(data.id ?? "");
   root.querySelectorAll('.tab-content[data-tab="tree"] .node').forEach((node, i) => {
@@ -144,6 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = CARACTERS[el.dataset.character];
     if (data) fillCard(el, data);
   });
+});
+
+document.addEventListener("click", (e) => {
+    const title = e.target.closest(".title-toggle");
+    if (title) title.closest(".bloc-toggle").classList.toggle("open");
 });
 
 addQueendomTab();

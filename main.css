@@ -2926,6 +2926,10 @@ dl {
     font-weight: 300
 }
 
+.listings .tab-content.active {
+    display: flex !important
+}
+
 .listings .tabsystem-tabs {
     display: flex;
     justify-content: space-evenly;
@@ -3034,6 +3038,6 @@ dl {
     border: 0 !important
 }
 
-.postlist#267 .quick-nav-topics {
+#267.postlist .quick-nav-topics {
     display: none;
 }

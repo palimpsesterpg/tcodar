@@ -163,7 +163,7 @@ if (topiclist && forumId) topiclist.id = forumId;
 if (postlist && topicId) postlist.id = topicId;
 
 if (topicId === '267') {
-  postlist.classList.add('tabsystem listings');
+  postlist.classList.add('tabsystem', 'listings');
   postlist.querySelectorAll('.post').forEach(post => post.classList.add('tab-content'));
   postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('d-none'));
 

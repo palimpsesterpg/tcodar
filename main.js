@@ -10,10 +10,9 @@ const isAdmin = hasId(adminsIds);
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
-const own = (system, selector) =>
-  [...system.querySelectorAll(selector)].filter(
-    el => el.parentElement.closest('.tabsystem, .tabinline') === system
-  );
+const own = (system, selector) => [...system.querySelectorAll(selector)].filter(
+  el => el.parentElement.closest('.tabsystem, .tabinline') === system
+);
 
 function Tabs() {
   document.querySelectorAll('.tabsystem').forEach(system => {
@@ -127,7 +126,7 @@ function fillCard(root, data) {
 
   const fam = String(data.id ?? "");
   root.querySelectorAll('.tab-content[data-tab="tree"] .node').forEach((node, i) => {
-    node.querySelector(':scope > .node-num')?.remove();
+    node.querySelector(':scope > .node-num') ?.remove();
     node.dataset.id = i + 1;
     node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
   });
@@ -149,9 +148,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("click", (e) => {
-    const bloc = e.target.closest(".bloc-toggle");
-    if (bloc) bloc.classList.toggle("open");
+  const bloc = e.target.closest(".bloc-toggle");
+  if (bloc) bloc.classList.toggle("open");
 });
+
+const pageContent = document.querySelector('#page-content');
+if (!pageContent) return;
+
+function getId(el, prefix) {
+  const m = el && el.getAttribute('href').match(new RegExp('/(' + prefix + '\\d+)(?:-|\\?|#|$)'));
+  return m ? m[1] : null;
+}
+
+const forumLinks = pageContent.querySelectorAll('.sub-header-path a.nav');
+const forumId = getId(forumLinks[forumLinks.length - 1], 'f');
+const topicId = getId(pageContent.querySelector('.page-title a'), 't');
+
+const topiclist = pageContent.querySelector('.topiclist');
+const postlist = pageContent.querySelector('.postlist');
+const topic = pageContent.querySelector('.post');
+
+if (forumId && topiclist) topiclist.classList.add(forumId);
+if (topicId && postlist) {
+  postlist.classList.add(topicId);
+  if (topicId === 't267') postlist.classList.add('tabsystem');
+}
 
 addQueendomTab();
 Tabs();

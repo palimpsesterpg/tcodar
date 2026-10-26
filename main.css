@@ -3032,3 +3032,7 @@ dl {
 .list-row span:last-of-type {
     border: 0 !important
 }
+
+.postlist#267 .quick-nav-topics {
+    display: none;
+}

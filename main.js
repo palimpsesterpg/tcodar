@@ -172,8 +172,14 @@ if (topicId === '267') {
   post691?.classList.add('tabsystem-tabs');
   post691?.classList.remove('tab-content');
 
-  const post693 = document.getElementById('693');
-  if (post693) post693.dataset.tab = 'faces';
+  const tabs = { 693: 'faces', 694: 'jobs', 695: 'addresses' };
+ 
+  for (const id in tabs) {
+    const post = document.getElementById(id);
+    if (!post) continue;
+    post.dataset.tab = tabs[id];
+    post.querySelector('.postbody .content')?.classList.add('listing-table');
+  }
 }
 
 if (topicId === '272') {

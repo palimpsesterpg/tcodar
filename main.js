@@ -152,8 +152,7 @@ document.addEventListener("click", (e) => {
   if (bloc) bloc.classList.toggle("open");
 });
 
-const pageContent = document.querySelector('#page-content');
-if (!pageContent) return;
+const pageContent = document.getElementById('page-content');
 
 function getId(el, prefix) {
   const m = el && el.getAttribute('href').match(new RegExp('/(' + prefix + '\\d+)(?:-|\\?|#|$)'));
@@ -168,8 +167,8 @@ const topiclist = pageContent.querySelector('.topiclist');
 const postlist = pageContent.querySelector('.postlist');
 const topic = pageContent.querySelector('.post');
 
-if (forumId && topiclist) topiclist.classList.add(forumId);
-if (topicId && postlist) {
+if (topiclist) topiclist.classList.add(forumId);
+if (postlist) {
   postlist.classList.add(topicId);
   if (topicId === 't267') postlist.classList.add('tabsystem');
 }

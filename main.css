@@ -1479,7 +1479,7 @@ a:hover {
     object-fit: cover
 }
 
-.mini .post {
+.mini {
     flex-direction: column;
 }
 

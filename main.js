@@ -168,10 +168,9 @@ const postlist = pageContent.querySelector('.postlist');
 const topic = pageContent.querySelector('.post');
 
 if (topiclist) topiclist.classList.add(forumId);
-if (postlist) {
-  postlist.classList.add(topicId);
-  if (topicId === 't267') postlist.classList.add('tabsystem');
-}
+if (postlist) postlist.classList.add(topicId);
+
+if (topicId === 't267') postlist.classList.add('tabsystem');
 
 addQueendomTab();
 Tabs();

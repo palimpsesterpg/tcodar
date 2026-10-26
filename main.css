@@ -1191,7 +1191,7 @@ a:hover {
 
 .forum-off,
 .forum-archives {
-    flex: 1
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-off {

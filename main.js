@@ -1,3 +1,7 @@
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const sep = () => document.createElement('sep');
+
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 
 const adminsIds = [1, 2, 3];
@@ -10,22 +14,68 @@ const isAdmin = hasId(adminsIds);
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
-const toolsAdmin = document.querySelectorAll('.post.u1 .postbody-icons .postbody .head');
+const own = (system, selector) =>
+  $$(selector, system).filter(
+    el => el.parentElement.closest('.tabsystem, .tabinline') === system
+  );
 
-if (!isAdmin) {
-  toolsAdmin.forEach(el => el.remove());
+const CARACTERS = {
+  pippaJennings: {
+    face: 'Jodie Comer',
+    pseudo: 'Pippa Jennings',
+    firstNames: 'Philippa, Pippa',
+    lastNames: ['Jennings', 'de Vaucelles'],
+    families: ['Durham', 'de Ferrières'],
+    dateOfBirth: '07.02.1993',
+    address: ['blablabla'],
+    job: 'ceo de Vinea Regina',
+    gender: 'femme cis',
+    player: ['palimpseste', 'cam', 'elle'],
+    status: 'célibataire'
+  }
+};
+
+const TAB_FIELDS = {
+  faces: 'face,pseudo',
+  jobs: 'job,pseudo',
+  addresses: 'address,pseudo'
+};
+
+const ICONS = [
+  { selector: '.copyright a', icon: 'fi fi-ts-crown' },
+  { selector: 'a[href="#top"]', icon: 'fi fi-ts-angle-up' },
+  { selector: 'a[href="#bottom"]', icon: 'fi fi-ts-angle-down' },
+  { selector: 'img[src*="modernbb/arrow_right.png"]', icon: 'fi fi-ts-angle-right', replace: true },
+  { selector: 'img[src*="modernbb/arrow_left.png"]', icon: 'fi fi-ts-angle-left', replace: true },
+  { selector: '.sprite-icon_topic_newest, .sprite-icon_topic_latest', icon: 'fi fi-ts-sparkles', replace: true },
+  { selector: 'a.last-post-icon', icon: 'fi fi-ts-sparkles' },
+  { selector: '.topic-participate img', icon: 'fi fi-ss-star', replace: true },
+  { selector: '#i_icon_profile, .i_icon_profile', icon: 'fi fi-ts-user', replace: true },
+  { selector: '.memberlistmp img, .i_icon_pm, #i_icon_pm', icon: 'fi fi-ts-envelope', replace: true },
+  { selector: '#i_msg_inbox', icon: 'fi fi-ts-mailbox', replace: true },
+  { selector: '#i_msg_sentbox', icon: 'fi fi-ts-paper-plane-top', replace: true },
+  { selector: '#i_msg_outbox', icon: 'fi fi-ts-envelope', replace: true },
+  { selector: '#i_msg_savebox', icon: 'fi fi-ts-archive', replace: true },
+  { selector: '.ajax-profil_valid, .ajax-profil_edit', icon: 'fi fi-ts-check', replace: true },
+  { selector: 'img[src*="folder_new.gif"]', icon: 'fi fi-ts-exclamation', replace: true }
+];
+
+function applyIcons(map) {
+  map.forEach(({ selector, icon, replace }) => {
+    const html = `<i class="${icon}"></i>`;
+
+    $$(selector).forEach(el => {
+      if (replace) {
+        el.outerHTML = html;
+      } else {
+        el.innerHTML = html;
+      }
+    });
+  });
 }
 
-const $ = (s, r = document) => r.querySelector(s);
-const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const sep = () => document.createElement('sep');
-
-const own = (system, selector) => [...system.querySelectorAll(selector)].filter(
-  el => el.parentElement.closest('.tabsystem, .tabinline') === system
-);
-
 function Tabs() {
-  document.querySelectorAll('.tabsystem').forEach(system => {
+  $$('.tabsystem').forEach(system => {
     const tabs = own(system, '.tab');
     const contents = own(system, '.tab-content');
 
@@ -41,7 +91,7 @@ function Tabs() {
 }
 
 function TabsInline() {
-  document.querySelectorAll('.tabinline').forEach(system => {
+  $$('.tabinline').forEach(system => {
     const contents = own(system, '.tab-content');
     const prev = own(system, '.tab.prev')[0];
     const next = own(system, '.tab.next')[0];
@@ -61,14 +111,14 @@ function TabsInline() {
 }
 
 function HeaderNav() {
-  const categories = document.querySelector('#categories');
+  const categories = $('#categories');
   if (!categories) return;
 
-  document.querySelectorAll('.header-tab').forEach(headerTab => {
+  $$('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
       const key = CSS.escape(headerTab.id);
-      categories.querySelector(`.tab[data-tab="${key}"]`) ?.click();
-      categories.querySelector(`.category[data-tab="${key}"]`) ?.scrollIntoView({
+      $(`.tab[data-tab="${key}"]`, categories)?.click();
+      $(`.category[data-tab="${key}"]`, categories)?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -78,25 +128,18 @@ function HeaderNav() {
 
 function ClockWall() {
   const now = new Date();
-  document.querySelectorAll('#page-home .seven .phseven-city').forEach(city => {
-    const hour = city.querySelector('hour');
-    const min = city.querySelector('min');
+  const options = { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
+
+  $$('#page-home .seven .phseven-city').forEach(city => {
+    const hour = $('hour', city);
+    const min = $('min', city);
     if (!hour || !min) return;
 
     let time;
     try {
-      time = now.toLocaleTimeString('fr-FR', {
-        timeZone: city.dataset.tz,
-        hour: '2-digit',
-        minute: '2-digit',
-        hourCycle: 'h23',
-      });
+      time = now.toLocaleTimeString('fr-FR', { ...options, timeZone: city.dataset.tz });
     } catch {
-      time = now.toLocaleTimeString('fr-FR', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hourCycle: 'h23'
-      });
+      time = now.toLocaleTimeString('fr-FR', options);
     }
 
     [hour.textContent, min.textContent] = time.split(':');
@@ -105,137 +148,121 @@ function ClockWall() {
 
 function addQueendomTab() {
   if (!isAdmin()) return;
-  document.querySelector('#categories .tabsystem-tabs.off') ?.insertAdjacentHTML('beforeend', '<div class="tab" data-tab="c11"><span>queendom</span></div>');
+  $('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
+    'beforeend',
+    '<div class="tab" data-tab="c11"><span>queendom</span></div>'
+  );
 }
 
 function addUsernameToNotiffiButton() {
-  const pseudo = document.querySelector('#notiffi_button .notif_username');
+  const pseudo = $('#notiffi_button .notif_username');
   if (pseudo) pseudo.textContent = user.username ?? '';
 }
 
 function fillCard(root, data) {
-  root.querySelectorAll("[data-field]").forEach((el) => {
+  $$('[data-field]', root).forEach(el => {
     const field = el.dataset.field;
     const value = data[field];
     if (value === undefined || value === null) return;
 
-    if (field === "img") {
-      el.innerHTML = value ? `<img src="${value}">` : "";
+    if (field === 'img') {
+      el.innerHTML = value ? `<img src="${value}">` : '';
     } else {
-      el.textContent = Array.isArray(value) ? value.join(", ") : value;
+      el.textContent = Array.isArray(value) ? value.join(', ') : value;
     }
   });
 
-  if (root.hasAttribute("data-family")) {
-    root.style.setProperty("--fam-color", data.color || "#000000");
-    root.style.setProperty("--fam-colorFade", data.colorFade || "#00000040");
-    root.style.setProperty("--fam-name", JSON.stringify(String(data.name ?? "Nom")));
-    root.style.setProperty("--fam-icon", JSON.stringify(data.icon ?? "\uE049"));
-    root.style.setProperty("--fam-id", JSON.stringify(String(data.id ?? "null")));
+  if (root.hasAttribute('data-family')) {
+    root.style.setProperty('--fam-color', data.color || '#000000');
+    root.style.setProperty('--fam-colorFade', data.colorFade || '#00000040');
+    root.style.setProperty('--fam-name', JSON.stringify(String(data.name ?? 'Nom')));
+    root.style.setProperty('--fam-icon', JSON.stringify(data.icon ?? '\uE049'));
+    root.style.setProperty('--fam-id', JSON.stringify(String(data.id ?? 'null')));
   }
 
-  const fam = String(data.id ?? "");
-  root.querySelectorAll('.tab-content[data-tab="tree"] .node').forEach((node, i) => {
-    node.querySelector(':scope > .node-num') ?.remove();
+  const fam = String(data.id ?? '');
+  $$('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
+    $(':scope > .node-num', node)?.remove();
     node.dataset.id = i + 1;
     node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-family]").forEach((el) => {
-    const data = FAMILIES[el.dataset.family];
-    if (data) fillCard(el, {
-      ...FAMILIES.default,
-      ...data
-    });
-  });
-
-  document.querySelectorAll("[data-character]").forEach((el) => {
-    const data = CARACTERS[el.dataset.character];
-    if (data) fillCard(el, data);
-  });
-});
-
-document.addEventListener("click", (e) => {
-  const bloc = e.target.closest(".bloc-toggle");
-  if (bloc) bloc.classList.toggle("open");
-});
-
-const page = document.getElementById('page-content');
-const links = page.querySelectorAll('.topic-header-path a.nav');
-const forumId = links[links.length - 1] ?.href.match(/\/f(\d+)/) ?. [1];
-const topicId = page.querySelector('.page-title a') ?.href.match(/\/t(\d+)/) ?. [1];
-const topiclist = page.querySelector('.topiclist');
-const postlist = page.querySelector('.postlist');
-
-if (topiclist && forumId) topiclist.id = forumId;
-if (postlist && topicId) postlist.id = topicId;
-
-if (topicId === '267') {
-  postlist.classList.add('tabsystem', 'listings');
-  postlist.querySelectorAll('.post').forEach(post => post.classList.add('tab-content'));
-  postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('d-none'));
-
-  const post691 = document.getElementById('691');
-  post691 ?.classList.add('tabsystem-tabs');
-  post691 ?.classList.remove('tab-content');
-
-  const tabs = {
-    693: 'faces',
-    694: 'jobs',
-    695: 'addresses'
-  };
-
-  for (const id in tabs) {
-    const post = document.getElementById(id);
-    if (!post) continue;
-    post.dataset.tab = tabs[id];
-    post.querySelector('.message') ?.classList.add('listings-table');
-  }
-}
-
-if (topicId === '272') {
-  postlist.querySelectorAll('.post').forEach(p => p.classList.add('mini'));
-}
-
-const CARACTERS = {
-
-  pippaJennings: {
-    face: "Jodie Comer",
-    pseudo: "Pippa Jennings",
-    firstNames: "Philippa, Pippa",
-    lastNames: ["Jennings", "de Vaucelles"],
-    families: ["Durham", "de Ferrières"],
-    dateOfBirth: "07.02.1993",
-    address: ["blablabla"],
-    job: "ceo de Vinea Regina",
-    gender: "femme cis",
-    player: ["palimpseste", "cam", "elle"],
-    status: "célibataire"
-  }
-
-};
-
-const TAB_FIELDS = {
-  faces: "face,pseudo",
-  jobs: "job,pseudo",
-  addresses: "address,pseudo"
-};
-
 function buildRow(el) {
-  const fields = TAB_FIELDS[el.closest(".tab-content").dataset.tab].split(",");
-  el.innerHTML = fields.map((f) => `<span data-field="${f}"></span>`).join("");
+  const fields = TAB_FIELDS[el.closest('.tab-content').dataset.tab].split(',');
+  el.innerHTML = fields.map(f => `<span data-field="${f}"></span>`).join('');
   fillCard(el, CARACTERS[el.dataset.character]);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".list-row[data-character]").forEach(buildRow);
+function hideAdminTools() {
+  if (isAdmin()) return;
+  $$('.post.u1 .postbody-icons .postbody .head').forEach(el => el.remove());
+}
+
+function initPageContext() {
+  const page = $('#page-content');
+  const links = $$('.topic-header-path a.nav', page);
+  const forumId = links.at(-1)?.href.match(/\/f(\d+)/)?.[1];
+  const topicId = $('.page-title a', page)?.href.match(/\/t(\d+)/)?.[1];
+  const topiclist = $('.topiclist', page);
+  const postlist = $('.postlist', page);
+
+  if (topiclist && forumId) topiclist.id = forumId;
+  if (postlist && topicId) postlist.id = topicId;
+
+  if (topicId === '267') {
+    postlist.classList.add('tabsystem', 'listings');
+    $$('.post', postlist).forEach(post => post.classList.add('tab-content'));
+    $$('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
+
+    const tabsPost = document.getElementById('691');
+    tabsPost?.classList.add('tabsystem-tabs');
+    tabsPost?.classList.remove('tab-content');
+
+    const tabIds = {
+      693: 'faces',
+      694: 'jobs',
+      695: 'addresses'
+    };
+
+    Object.entries(tabIds).forEach(([id, tab]) => {
+      const post = document.getElementById(id);
+      if (!post) return;
+      post.dataset.tab = tab;
+      $('.message', post)?.classList.add('listings-table');
+    });
+  }
+
+  if (topicId === '272') {
+    $$('.post', postlist).forEach(p => p.classList.add('mini'));
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  $$('[data-family]').forEach(el => {
+    const data = FAMILIES[el.dataset.family];
+    if (data) fillCard(el, { ...FAMILIES.default, ...data });
+  });
+
+  $$('[data-character]').forEach(el => {
+    const data = CARACTERS[el.dataset.character];
+    if (data) fillCard(el, data);
+  });
+
+  $$('.list-row[data-character]').forEach(buildRow);
 });
+
+document.addEventListener('click', e => {
+  e.target.closest('.bloc-toggle')?.classList.toggle('open');
+});
+
+hideAdminTools();
+initPageContext();
 
 $$('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
 $$('.postprofile').forEach(p => p.after(sep()));
 
+applyIcons(ICONS);
 addQueendomTab();
 Tabs();
 TabsInline();

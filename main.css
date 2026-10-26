@@ -12,20 +12,16 @@
     --4xlarge: 4rem;
     --5xlarge: 5rem;
     --6xlarge: 6rem;
-
     --main: "Open Sans";
     --mono: "Inconsolata";
     --serif: "Editorial";
     --display: "Bebas";
     --spe: "Acma";
-
     --icons-thin: "uicons-thin-straight";
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
-
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
-
     --co1-50: #dedfea;
     --co1-100: #bdbfd5;
     --co1-200: #9ba0bf;
@@ -38,7 +34,6 @@
     --co1-800: #242638;
     --co1-900: #181925;
     --co1-950: #0c0d13;
-
     --co2-50: #fbd1d4;
     --co2-100: #f6a3a9;
     --co2-200: #f2757e;
@@ -51,7 +46,6 @@
     --co2-800: #60090f;
     --co2-900: #40060a;
     --co2-950: #200305;
-
     --co3-50: #e6eef4;
     --co3-100: #ccdee9;
     --co3-200: #b3cdde;
@@ -64,14 +58,12 @@
     --co3-800: #2c4f65;
     --co3-900: #1e3543;
     --co3-950: #0f1a22;
-
     --whiteop50: #ffffff80;
     --whiteop75: #ffffffbf;
     --whiteop90: #ffffffe6;
     --blackop50: #00000080;
     --blackop75: #000000bf;
     --blackop90: #000000e6;
-
     --white: #fff;
     --black: #000;
     --light: #fafafa;
@@ -83,7 +75,6 @@
     --dark: #191919;
     --lightdark: #333;
     --lighterdark: #4c4c4c;
-
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
@@ -103,29 +94,23 @@
 
 [data-color-scheme="dark"] {
     color-scheme: dark;
-
     --white: #191919;
     --black: #fafafa;
-
     --blackop50: #ffffff80;
     --blackop75: #ffffffbf;
     --blackop90: #ffffffe6;
     --whiteop50: #00000080;
     --whiteop75: #000000bf;
     --whiteop90: #000000e6;
-
     --light: #292929;
     --darklight: #1c1c1c;
     --darkerlight: #242424;
-
     --neutral: #2b2b2b;
     --darkneutral: #4d4d4d;
     --darkerneutral: #8c8c8c;
-
     --dark: #e6e6e6;
     --lightdark: #cccccc;
     --lighterdark: #b3b3b3;
-
     --co1-950: #dedfea;
     --co1-900: #bdbfd5;
     --co1-800: #9ba0bf;
@@ -137,7 +122,6 @@
     --co1-200: #242638;
     --co1-100: #181925;
     --co1-50: #0c0d13;
-
     --co2-950: #fbd1d4;
     --co2-900: #f6a3a9;
     --co2-800: #f2757e;
@@ -149,7 +133,6 @@
     --co2-200: #60090f;
     --co2-100: #40060a;
     --co2-50: #200305;
-
     --co3-950: #e6eef4;
     --co3-900: #ccdee9;
     --co3-800: #b3cdde;
@@ -409,7 +392,7 @@ a:hover {
     flex-wrap: wrap;
     align-content: center;
     gap: var(--large);
-    padding: var(--3xlarge);
+    padding: var(--3xlarge)
 }
 
 #page-header a {
@@ -432,7 +415,7 @@ a:hover {
     justify-content: center;
     padding: var(--xsmall);
     font-weight: 100;
-    background-color: var(--co1-300);
+    background-color: var(--co1-300)
 }
 
 #page-navbar {
@@ -693,10 +676,8 @@ a:hover {
     gap: var(--large);
     padding: var(--2xlarge);
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall);
+    border: 0.5px solid var(--neutral);
+    ;
     width: -webkit-fill-available
 }
 
@@ -1000,7 +981,7 @@ a:hover {
     background: var(--whiteop50);
     height: -webkit-fill-available;
     padding: var(--large);
-    border: 1px solid var(--white);
+    border: 0.5px solid var(--white);
     backdrop-filter: blur(2px);
     border-radius: var(--large);
     gap: var(--large)
@@ -1413,10 +1394,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall)
+    border: 0.5px solid var(--neutral);
+    box-sizing: border-box
 }
 
 .post+.post {
@@ -1426,9 +1405,8 @@ a:hover {
 .posticons {
     position: absolute;
     flex-direction: column;
-    top: 0;
-    left: calc(100% + var(--large));
-    width: 100%;
+    top: var(--2xsmall);
+    left: calc(100% + var(--2xsmall));
     padding: var(--large);
     box-sizing: border-box;
     gap: var(--large);
@@ -1444,21 +1422,19 @@ a:hover {
     background-color: var(--whiteop50)
 }
 
-.posticons>* span {
-    display: flex;
+.posticons i:hover span {
+    display: flex
 }
 
 .postbody {
-    flex: 1;
-
+    flex: 1
 }
 
 .postprofile {
     width: 232px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column
 }
 
 .postprofile-avatar {
@@ -1478,13 +1454,13 @@ a:hover {
 }
 
 .mini {
-    width: 100%;
+    width: 100%
 }
 
 .mini .postprofile-info,
 .mini .postprofile-contact {
     display: none;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .message {
@@ -1512,17 +1488,13 @@ a:hover {
     padding: var(--large);
     position: relative;
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall)
+    border: 0.5px solid var(--neutral)
 }
 
 .memberrow {
     gap: var(--large);
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column
 }
 
 .memberrow-avatar img {
@@ -1570,10 +1542,7 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: 0.75rem solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--large) var(--white);
-    margin: var(--large)
+    border: 0.5px solid var(--neutral)
 }
 
 .profile-pseudo {
@@ -1946,10 +1915,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall);
+    border: 0.5px solid var(--neutral);
+    ;
     width: -webkit-fill-available
 }
 
@@ -2010,10 +1977,8 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall);
+    border: 0.5px solid var(--neutral);
+    ;
     margin-top: 2.5rem
 }
 
@@ -2022,7 +1987,7 @@ a:hover {
 
 #hub .one {
     flex: 1;
-    border: 1px solid var(--neutral);
+    border: 0.5px solid var(--neutral);
     outline: 2.5px solid var(--white);
     margin: 2.5px;
     padding: var(--large);
@@ -2297,7 +2262,6 @@ a:hover {
     position: fixed;
     width: 50%;
     align-items: center;
-
     bottom: var(--large);
     right: var(--large);
     background: var(--black);
@@ -2700,15 +2664,11 @@ a:hover {
     flex-direction: column;
     padding: var(--large);
     background-color: var(--light);
-    border: 1px solid var(--neutral);
-    outline: var(--4xsmall) solid var(--darklight);
-    box-shadow: 0rem 0rem 0rem var(--2xsmall) var(--white);
-    margin: var(--2xsmall)
+    border: 0.5px solid var(--neutral)
 }
 
 .topic {
     display: flex;
-
     padding: var(--large);
     background-color: var(--white);
     align-items: center;
@@ -2718,16 +2678,16 @@ a:hover {
 }
 
 .post_new {
-    border: 0.5px solid var(--group-color-100, var(--co1-100));
+    border: 0.5px solid var(--group-color-100, var(--co1-100))
 }
 
 .folder_global {
-    border: 0.5px solid var(--co2-100);
+    border: 0.5px solid var(--co2-100)
 }
 
 .folder_announce,
 .folder_sticky {
-    border: 0.5px solid var(--co3-100);
+    border: 0.5px solid var(--co3-100)
 }
 
 .topic-lastpost-avatar img {
@@ -2746,7 +2706,7 @@ a:hover {
 .topic-content {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .topic-icon {
@@ -2779,7 +2739,7 @@ a:hover {
 .topictitle {
     font-family: var(--serif);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .post_new .topic-icon {
@@ -2812,7 +2772,7 @@ a:hover {
 .folder_global .topic-content,
 .folder_announce .topic-content,
 .folder_sticky .topic-content {
-    align-items: flex-end;
+    align-items: flex-end
 }
 
 .folder_global .topic-type:before,
@@ -2842,7 +2802,7 @@ a:hover {
 .topic:not(.folder_no_new) .topic-nav,
 .topic:not(.folder_no_new) .topic-lastpost,
 .topic:not(.folder_no_new) .topic-statistics {
-    display: none;
+    display: none
 }
 
 .topic-participate {
@@ -2886,7 +2846,7 @@ dl {
 
 .fields1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .fields1 dl {
@@ -2912,17 +2872,20 @@ dl {
 .listings .tabsystem-tabs .message {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: var(--large);
     font-family: var(--display);
     font-weight: 900;
     font-size: var(--xlarge);
     color: var(--black)
 }
 
+.listings .tabsystem-tabs {
+    margin-bottom: var(--large) !important
+}
+
 .list-row,
 .listings-table .bloc-toggle {
     display: flex;
-    --border-row: var(--darkneutral);
+    --border-row: var(--darkneutral)
 }
 
 .listings-table .bloc-toggle .title-toggle {
@@ -2941,7 +2904,7 @@ dl {
 }
 
 .listings-table .bloc-toggle {
-    flex-direction: column;
+    flex-direction: column
 }
 
 .fam-row {
@@ -3019,5 +2982,5 @@ dl {
 
 [id="267"].postlist .quick-nav-topics,
 [id="0"].post {
-    display: none;
+    display: none
 }

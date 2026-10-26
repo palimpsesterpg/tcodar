@@ -183,7 +183,7 @@ if (topicId === '267') {
     const post = document.getElementById(id);
     if (!post) continue;
     post.dataset.tab = tabs[id];
-    post.querySelector('.postbody .content')?.classList.add('listings-table');
+    post.querySelector('.message')?.classList.add('listings-table');
   }
 }
 

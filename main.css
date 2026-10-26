@@ -1510,6 +1510,12 @@ a:hover {
     display: none
 }
 
+.post sep {
+    height: 100%;
+    width: 0.5px;
+    background-color: var(--neutral)
+}
+
 .mini sep {
     flex: 1;
     height: 0.5px;

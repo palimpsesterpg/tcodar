@@ -152,35 +152,45 @@ document.addEventListener("click", (e) => {
   if (bloc) bloc.classList.toggle("open");
 });
 
-const pageContent = document.getElementById('page-content');
+document.addEventListener('DOMContentLoaded', function () {
+  const pageContent = document.getElementById('page-content');
+  if (!pageContent) return;
 
-function getId(el, prefix) {
-  const m = el && el.getAttribute('href').match(new RegExp('/(' + prefix + '\\d+)(?:-|\\?|#|$)'));
-  return m ? m[1] : null;
-}
+  function getId(el, prefix) {
+    const m = el && el.getAttribute('href').match(new RegExp('/' + prefix + '(\\d+)(?:-|\\?|#|$)'));
+    return m ? m[1] : null;
+  }
 
-const forumLinks = pageContent.querySelectorAll('.sub-header-path a.nav');
-const forumId = getId(forumLinks[forumLinks.length - 1]);
-const topicId = getId(pageContent.querySelector('.page-title a'));
+  const forumLinks = pageContent.querySelectorAll('.sub-header-path a.nav');
+  const forumId = getId(forumLinks[forumLinks.length - 1]);
+  const topicId = getId(pageContent.querySelector('.page-title a'));
 
-const topiclist = pageContent.querySelector('.topiclist');
-const postlist = pageContent.querySelector('.postlist');
-const topic = pageContent.querySelector('.post');
-const postId = topic.getId;
+  const topiclist = pageContent.querySelector('.topiclist');
+  const postlist = pageContent.querySelector('.postlist');
 
-if (topiclist) topiclist.id = forumId;
-if (postlist) postlist.id = topicId;
+  if (topiclist && forumId) topiclist.id = forumId;
+  if (postlist && topicId) postlist.id = topicId;
 
-if (topicId === '267') postlist.classList.add('tabsystem');
-if (topicId === '267') postlist.id = 'listings';
-if (topicId === '267') postlist.forEach(post => {
-  post.classList.add('tab-content');
+  if (postlist && topicId === '267') {
+    postlist.classList.add('tabsystem');
+    postlist.id = 'listings';
+
+    postlist.querySelectorAll('.post').forEach(function (post) {
+      const postId = (post.id.match(/\d+/) || [])[0];
+
+      post.classList.add('tab-content');
+
+      if (postId === '691') {
+        post.classList.add('tabsystem-tabs');
+        post.classList.remove('tab-content');
+      }
+
+      if (postId === '693') {
+        post.dataset.tab = 'faces';
+      }
+    });
+  }
 });
-
-if (postId === '691') post.classList.add('tabsystem-tabs')
-if (postId === '691') post.classList.remove('tab-content')
-
-if (postId === '693') post.dataset.tab('faces')
 
 const CARACTERS = {
 

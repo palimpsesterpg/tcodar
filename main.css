@@ -1419,25 +1419,33 @@ a:hover {
     margin: var(--2xsmall)
 }
 
-.post#0 {
-    display: none !important
-}
-
 .post+.post {
     margin-top: var(--large)
 }
 
-.postbody .head {
+.posticons {
     position: absolute;
     flex-direction: column;
-    right: 100%;
+    top: 0;
+    left: calc(100% + var(--large));
     width: 100%;
     padding: var(--large);
     box-sizing: border-box;
     gap: var(--large);
-    justify-content: space-between;
+    justify-content: center;
     background: var(--white);
-    display: flex
+    display: flex;
+    align-items: flex-start
+}
+
+.posticons span {
+    display: none;
+    position: absolute;
+    background-color: var(--whiteop50)
+}
+
+.posticons>* span {
+    display: flex;
 }
 
 .postbody {
@@ -1479,7 +1487,7 @@ a:hover {
     flex-direction: row;
 }
 
-.content {
+.message {
     padding: var(--large)
 }
 
@@ -3009,6 +3017,7 @@ dl {
     border: 0 !important
 }
 
-div#267.postlist .quick-nav-topics {
+[id="267"].postlist .quick-nav-topics,
+[id="0"].post {
     display: none;
 }

@@ -293,11 +293,6 @@
         padding-left: var(--2xlarge)
     }
 
-    #page-header .tabsystem-tabs,
-    .map-header {
-        display: none !important
-    }
-
     #f1.forum:before,
     #f80.forum:after {
         font-size: var(--small) !important
@@ -410,13 +405,12 @@ a:hover {
     background-position: center center;
     box-sizing: border-box;
     background-size: cover;
-    flex-direction: row-reverse;
     padding: var(--large);
     position: relative
 }
 
 #page-header a {
-    width: 90%;
+    width: 100%;
     text-align: center;
     -webkit-text-stroke: .5px var(--white);
     font-size: var(--6xlarge);
@@ -427,7 +421,8 @@ a:hover {
 }
 
 .header-tab {
-    color: var(--white)
+    color: var(--white);
+    flex: 1
 }
 
 #page-navbar {

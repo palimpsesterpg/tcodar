@@ -1389,7 +1389,6 @@ a:hover {
 }
 
 .post {
-    flex-wrap: wrap;
     display: flex;
     position: relative;
     gap: var(--large);
@@ -1443,16 +1442,22 @@ a:hover {
 
 .postprofile .online-icon {
     position: absolute;
+    top: -0.5rem;
+    left: -0.5rem
 }
 
 .post.online .postprofile .online-icon:before {
-    content: '.';
+    content: '•';
     background-color: var(--darkerlight);
     color: var(--group-color, var(--co1));
-    padding: var(--large);
     display: flex;
     align-items: center;
-    justify-content: center
+    font-size: var(--small);
+    justify-content: center;
+    height: var(--large);
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 100%
 }
 
 .postprofile {
@@ -1474,23 +1479,22 @@ a:hover {
     object-fit: cover
 }
 
-.mini {
-    width: 100%;
+.mini .post {
+    flex-direction: column;
+}
+
+.mini .postprofile {
+    flex: 1;
+    height: 50px;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.mini {
+.mini .postprofile-name {
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: var(--2xlarge);
     font-family: var(--spe);
-}
-
-.mini .postprofile,
-.mini .postprofile-avatar {
-    height: 50px;
 }
 
 .mini .postprofile-avatar img {
@@ -1504,6 +1508,12 @@ a:hover {
 .mini .postprofile-info,
 .mini .postprofile-contact {
     display: none
+}
+
+.mini sep {
+    flex: 1;
+    height: 0.5px;
+    background-color: var(--neutral)
 }
 
 .message {

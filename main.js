@@ -196,7 +196,7 @@ if (topicId === '267') {
 }
 
 if (topicId === '272') {
-  postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('mini'));
+  postlist.querySelectorAll('.post').forEach(p => p.classList.add('mini'));
 }
 
 const CARACTERS = {

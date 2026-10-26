@@ -177,7 +177,10 @@ if (topicId === '267') postlist.forEach(post => {
   post.classList.add('tab-content');
 });
 
-if (postId === '267') post.classList.add('tabsystem-tabs')
+if (postId === '691') post.classList.add('tabsystem-tabs')
+if (postId === '691') post.classList.remove('tab-content')
+
+if (postId === '693') post.dataset.tab('faces')
 
 addQueendomTab();
 Tabs();

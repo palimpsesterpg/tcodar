@@ -189,6 +189,10 @@ document.addEventListener('DOMContentLoaded', function () {
         post.dataset.tab = 'faces';
       }
     });
+
+    postlist.querySelectorAll('.postprofile').forEach(function (profile) {
+      profile.classList.add('d-none');
+    });
   }
 
   if (postlist && topicId === '272') {

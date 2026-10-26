@@ -1433,7 +1433,8 @@ a:hover {
     font-weight: 300
 }
 
-.posticons>*:hover span {
+.posticons a:hover span,
+.posticons div:hover span {
     display: flex
 }
 
@@ -1516,7 +1517,7 @@ a:hover {
 }
 
 .post sep {
-    height: 100%;
+    height: auto;
     width: 0.5px;
     background-color: var(--neutral)
 }

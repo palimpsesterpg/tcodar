@@ -2906,6 +2906,6 @@ dl {
     width: 100%
 }
 
-.fields1 .message-box {
+.fields1 #message-box {
     flex: 1
 }

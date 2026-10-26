@@ -1389,6 +1389,7 @@ a:hover {
 }
 
 .post {
+    flex-wrap: wrap;
     display: flex;
     position: relative;
     gap: var(--large);
@@ -1440,16 +1441,26 @@ a:hover {
     flex: 1
 }
 
+.postprofile .online-icon {
+    position: absolute;
+}
+
+.post.online .postprofile .online-icon:before {
+    content: '.';
+    background-color: var(--darkerlight);
+    color: var(--group-color, var(--co1));
+    padding: var(--large);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 .postprofile {
+    position: relative;
     width: 200px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column
-}
-
-.postprofile-avatar {
-    width: 200px;
-    box-sizing: border-box
 }
 
 .postprofile-avatar img {
@@ -1467,6 +1478,14 @@ a:hover {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--2xlarge);
+    font-family: var(--spe);
 }
 
 .mini .postprofile,

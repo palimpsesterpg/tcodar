@@ -16,6 +16,10 @@ if (!isAdmin) {
   toolsAdmin.forEach(el => el.remove());
 }
 
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const sep = () => document.createElement('sep');
+
 const own = (system, selector) => [...system.querySelectorAll(selector)].filter(
   el => el.parentElement.closest('.tabsystem, .tabinline') === system
 );
@@ -159,9 +163,9 @@ document.addEventListener("click", (e) => {
 });
 
 const page = document.getElementById('page-content');
-const links = page.querySelectorAll('.sub-header-path a.nav');
-const forumId = links[links.length - 1]?.href.match(/\/f(\d+)/)?.[1];
-const topicId = page.querySelector('.page-title a')?.href.match(/\/t(\d+)/)?.[1];
+const links = page.querySelectorAll('.topic-header-path a.nav');
+const forumId = links[links.length - 1] ?.href.match(/\/f(\d+)/) ?. [1];
+const topicId = page.querySelector('.page-title a') ?.href.match(/\/t(\d+)/) ?. [1];
 const topiclist = page.querySelector('.topiclist');
 const postlist = page.querySelector('.postlist');
 
@@ -174,16 +178,20 @@ if (topicId === '267') {
   postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('d-none'));
 
   const post691 = document.getElementById('691');
-  post691?.classList.add('tabsystem-tabs');
-  post691?.classList.remove('tab-content');
+  post691 ?.classList.add('tabsystem-tabs');
+  post691 ?.classList.remove('tab-content');
 
-  const tabs = { 693: 'faces', 694: 'jobs', 695: 'addresses' };
- 
+  const tabs = {
+    693: 'faces',
+    694: 'jobs',
+    695: 'addresses'
+  };
+
   for (const id in tabs) {
     const post = document.getElementById(id);
     if (!post) continue;
     post.dataset.tab = tabs[id];
-    post.querySelector('.message')?.classList.add('listings-table');
+    post.querySelector('.message') ?.classList.add('listings-table');
   }
 }
 
@@ -224,6 +232,9 @@ function buildRow(el) {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".list-row[data-character]").forEach(buildRow);
 });
+
+$$('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
+$$('.postprofile').forEach(p => p.after(sep()));
 
 addQueendomTab();
 Tabs();

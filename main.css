@@ -400,7 +400,8 @@ a:hover {
 }
 
 #page-header {
-    background-image: url(Images/tcodar-header-light.png);
+    /*background-image: url(Images/tcodar-header-light.png);*/
+    background-color: var(--co1);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -414,42 +415,7 @@ a:hover {
     position: relative
 }
 
-[data-color-scheme="dark"] #page-header {
-    background-image: url("Images/tcodar-header-dark.png")
-}
-
-#page-header .tabsystem-tabs {
-    font-size: var(--large);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    gap: var(--large)
-}
-
-#page-header .tab:before {
-    content: '';
-    display: block;
-    outline: 0.5px solid var(--white);
-    height: var(--large);
-    width: var(--large);
-    border-radius: 100%;
-    backdrop-filter: blur(2px)
-}
-
-#page-header .tab.active:before {
-    background-color: var(--whiteop50)
-}
-
-#page-header .tabsystem-contents {
-    flex: 1
-}
-
-.main-header {
-    align-items: center;
-    justify-content: center
-}
-
-.main-header a {
+#page-header a {
     width: 90%;
     text-align: center;
     -webkit-text-stroke: .5px var(--white);
@@ -460,59 +426,8 @@ a:hover {
     text-shadow: 0 0 5px var(--whiteop50)
 }
 
-.main-header a:hover {
-    -webkit-text-stroke: .5px var(--white);
-    color: #fff0;
-    text-shadow: 0 0 5px var(--whiteop50)
-}
-
-.main-header.active {
-    display: flex !important
-}
-
-.map-header {
-    background-image: url("Images/tcodar-map.png");
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    background-size: cover;
-    background-position: center center
-}
-
 .header-tab {
-    position: relative;
-    width: fit-content;
     color: var(--white)
-}
-
-.header-tab:before {
-    content: '';
-    height: var(--2xsmall);
-    width: var(--2xsmall);
-    display: block;
-    border-radius: 100%;
-    background-color: var(--co2)
-}
-
-.header-tab:before:hover {
-    color: var(--co3)
-}
-
-#c3.header-tab {
-    top: 10%;
-    left: 46%
-}
-
-.header-tab span {
-    display: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    left: 0
-}
-
-.header-tab:hover span {
-    display: flex
 }
 
 #page-navbar {

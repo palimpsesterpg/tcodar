@@ -387,7 +387,7 @@ a:hover {
     position: fixed;
     bottom: var(--large);
     left: var(--large);
-    z-index: 9999
+    z-index: 999
 }
 
 .copyright br {
@@ -556,35 +556,6 @@ a:hover {
     font-weight: 100;
     white-space: nowrap;
     margin-bottom: -1px
-}
-
-.forumlist:after,
-.post:after,
-#hub:after,
-#reception:after,
-.memberlist:after,
-.topiclist:after {
-    position: absolute;
-    content: "";
-    border: 1px solid var(--co1-50);
-    width: 100%;
-    height: 100%;
-    top: -0.55rem;
-    left: -0.55rem;
-    padding: var(--2xsmall);
-    box-shadow: 0 0 var(--4xsmall) 0.15rem var(--neutral);
-    transition-duration: 2.5s
-}
-
-.forumlist:hover:after,
-.post:hover:after,
-#hub:hover:after,
-#reception:hover:after,
-.memberlist:hover:after,
-.topiclist:hover:after {
-    box-shadow: 0 0 var(--4xsmall) 0.15rem var(--co1-50);
-    border: 1px solid var(--co1-100);
-    transition-duration: 2.5s
 }
 
 #categories {
@@ -804,8 +775,7 @@ a:hover {
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
-    align-items: center;
-    z-index: 99
+    align-items: center
 }
 
 .forum-content {
@@ -1454,10 +1424,13 @@ a:hover {
 }
 
 .post+.post {
-    margin-top: var(--2xlarge)
+    margin-top: var(--large)
 }
 
-.post-head {
+.postbody .head {
+    position: absolute;
+    flex-direction: column;
+    right: 100%;
     width: 100%;
     padding: var(--large);
     box-sizing: border-box;
@@ -1469,7 +1442,7 @@ a:hover {
 
 .postbody {
     flex: 1;
-    z-index: 99
+
 }
 
 .postprofile {
@@ -1477,7 +1450,7 @@ a:hover {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    z-index: 99
+
 }
 
 .postprofile-avatar {
@@ -1541,7 +1514,7 @@ a:hover {
     gap: var(--large);
     display: flex;
     flex-direction: column;
-    z-index: 99
+
 }
 
 .memberrow-avatar img {
@@ -2037,9 +2010,7 @@ a:hover {
 }
 
 #hub>div,
-#reception>div {
-    z-index: 99
-}
+#reception>div {}
 
 #hub .one {
     flex: 1;
@@ -2318,7 +2289,7 @@ a:hover {
     position: fixed;
     width: 50%;
     align-items: center;
-    z-index: 99;
+
     bottom: var(--large);
     right: var(--large);
     background: var(--black);
@@ -2729,7 +2700,7 @@ a:hover {
 
 .topic {
     display: flex;
-    z-index: 99;
+
     padding: var(--large);
     background-color: var(--white);
     align-items: center;

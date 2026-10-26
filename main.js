@@ -10,6 +10,12 @@ const isAdmin = hasId(adminsIds);
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
+const toolsAdmin = document.querySelectorAll('.post.u1 .postbody-icons .postbody .head');
+
+if (!isAdmin) {
+  toolsAdmin.forEach(el => el.remove());
+}
+
 const own = (system, selector) => [...system.querySelectorAll(selector)].filter(
   el => el.parentElement.closest('.tabsystem, .tabinline') === system
 );

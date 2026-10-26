@@ -1421,14 +1421,15 @@ a:hover {
 }
 
 .posticons span {
-    display: none;
+display: flex;
     position: absolute;
-    left: calc(100% + var(--2xsmall));
-    top: 0;
+    left: calc(100% + var(--xlarge));
+    top: -1rem;
+    color: var(--black);
     background-color: var(--whiteop75);
     padding: var(--large);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .posticons>*:hover span {

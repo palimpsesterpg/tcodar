@@ -1,4 +1,5 @@
-
+const queSel = (selector, root = document) => root.querySelector(selector);
+const queAll = (selector, root = document) => [...root.querySelectorAll(selector)];
 const sep = () => document.createElement('sep');
 
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
@@ -14,7 +15,7 @@ const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
 const own = (system, selector) =>
-  $$(selector, system).filter(
+  queAll(selector, system).filter(
     el => el.parentElement.closest('.tabsystem, .tabinline') === system
   );
 
@@ -61,9 +62,9 @@ const ICONS = [
 
 function applyIcons(map) {
   map.forEach(({ selector, icon, replace }) => {
-    const html = `<i class="${icon}"></i>`;
+    const html = `<i class="queSel{icon}"></i>`;
 
-    $$(selector).forEach(el => {
+    queAll(selector).forEach(el => {
       if (replace) {
         el.outerHTML = html;
       } else {
@@ -74,7 +75,7 @@ function applyIcons(map) {
 }
 
 function Tabs() {
-  $$('.tabsystem').forEach(system => {
+  queAll('.tabsystem').forEach(system => {
     const tabs = own(system, '.tab');
     const contents = own(system, '.tab-content');
 
@@ -90,7 +91,7 @@ function Tabs() {
 }
 
 function TabsInline() {
-  $$('.tabinline').forEach(system => {
+  queAll('.tabinline').forEach(system => {
     const contents = own(system, '.tab-content');
     const prev = own(system, '.tab.prev')[0];
     const next = own(system, '.tab.next')[0];
@@ -110,14 +111,14 @@ function TabsInline() {
 }
 
 function HeaderNav() {
-  const categories = $('#categories');
+  const categories = queSel('#categories');
   if (!categories) return;
 
-  $$('.header-tab').forEach(headerTab => {
+  queAll('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
       const key = CSS.escape(headerTab.id);
-      $(`.tab[data-tab="${key}"]`, categories)?.click();
-      $(`.category[data-tab="${key}"]`, categories)?.scrollIntoView({
+      queSel(`.tab[data-tab="queSel{key}"]`, categories)?.click();
+      queSel(`.category[data-tab="queSel{key}"]`, categories)?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -129,9 +130,9 @@ function ClockWall() {
   const now = new Date();
   const options = { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
 
-  $$('#page-home .seven .phseven-city').forEach(city => {
-    const hour = $('hour', city);
-    const min = $('min', city);
+  queAll('#page-home .seven .phseven-city').forEach(city => {
+    const hour = queSel('hour', city);
+    const min = queSel('min', city);
     if (!hour || !min) return;
 
     let time;
@@ -147,25 +148,25 @@ function ClockWall() {
 
 function addQueendomTab() {
   if (!isAdmin()) return;
-  $('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
+  queSel('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
     'beforeend',
     '<div class="tab" data-tab="c11"><span>queendom</span></div>'
   );
 }
 
 function addUsernameToNotiffiButton() {
-  const pseudo = $('#notiffi_button .notif_username');
+  const pseudo = queSel('#notiffi_button .notif_username');
   if (pseudo) pseudo.textContent = user.username ?? '';
 }
 
 function fillCard(root, data) {
-  $$('[data-field]', root).forEach(el => {
+  queAll('[data-field]', root).forEach(el => {
     const field = el.dataset.field;
     const value = data[field];
     if (value === undefined || value === null) return;
 
     if (field === 'img') {
-      el.innerHTML = value ? `<img src="${value}">` : '';
+      el.innerHTML = value ? `<img src="queSel{value}">` : '';
     } else {
       el.textContent = Array.isArray(value) ? value.join(', ') : value;
     }
@@ -180,39 +181,39 @@ function fillCard(root, data) {
   }
 
   const fam = String(data.id ?? '');
-  $$('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
-    $(':scope > .node-num', node)?.remove();
+  queAll('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
+    queSel(':scope > .node-num', node)?.remove();
     node.dataset.id = i + 1;
-    node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
+    node.insertAdjacentHTML('afterbegin', `<span class="node-num">queSel{fam}queSel{i + 1}.</span>`);
   });
 }
 
 function buildRow(el) {
   const fields = TAB_FIELDS[el.closest('.tab-content').dataset.tab].split(',');
-  el.innerHTML = fields.map(f => `<span data-field="${f}"></span>`).join('');
+  el.innerHTML = fields.map(f => `<span data-field="queSel{f}"></span>`).join('');
   fillCard(el, CARACTERS[el.dataset.character]);
 }
 
 function hideAdminTools() {
   if (isAdmin()) return;
-  $$('.post.u1 .postbody-icons .postbody .head').forEach(el => el.remove());
+  queAll('.post.u1 .postbody-icons .postbody .head').forEach(el => el.remove());
 }
 
 function initPageContext() {
-  const page = $('#page-content');
-  const links = $$('.topic-header-path a.nav', page);
+  const page = queSel('#page-content');
+  const links = queAll('.topic-header-path a.nav', page);
   const forumId = links.at(-1)?.href.match(/\/f(\d+)/)?.[1];
-  const topicId = $('.page-title a', page)?.href.match(/\/t(\d+)/)?.[1];
-  const topiclist = $('.topiclist', page);
-  const postlist = $('.postlist', page);
+  const topicId = queSel('.page-title a', page)?.href.match(/\/t(\d+)/)?.[1];
+  const topiclist = queSel('.topiclist', page);
+  const postlist = queSel('.postlist', page);
 
   if (topiclist && forumId) topiclist.id = forumId;
   if (postlist && topicId) postlist.id = topicId;
 
   if (topicId === '267') {
     postlist.classList.add('tabsystem', 'listings');
-    $$('.post', postlist).forEach(post => post.classList.add('tab-content'));
-    $$('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
+    queAll('.post', postlist).forEach(post => post.classList.add('tab-content'));
+    queAll('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
 
     const tabsPost = document.getElementById('691');
     tabsPost?.classList.add('tabsystem-tabs');
@@ -228,27 +229,27 @@ function initPageContext() {
       const post = document.getElementById(id);
       if (!post) return;
       post.dataset.tab = tab;
-      $('.message', post)?.classList.add('listings-table');
+      queSel('.message', post)?.classList.add('listings-table');
     });
   }
 
   if (topicId === '272') {
-    $$('.post', postlist).forEach(p => p.classList.add('mini'));
+    queAll('.post', postlist).forEach(p => p.classList.add('mini'));
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $$('[data-family]').forEach(el => {
+  queAll('[data-family]').forEach(el => {
     const data = FAMILIES[el.dataset.family];
     if (data) fillCard(el, { ...FAMILIES.default, ...data });
   });
 
-  $$('[data-character]').forEach(el => {
+  queAll('[data-character]').forEach(el => {
     const data = CARACTERS[el.dataset.character];
     if (data) fillCard(el, data);
   });
 
-  $$('.list-row[data-character]').forEach(buildRow);
+  queAll('.list-row[data-character]').forEach(buildRow);
 });
 
 document.addEventListener('click', e => {
@@ -258,8 +259,8 @@ document.addEventListener('click', e => {
 hideAdminTools();
 initPageContext();
 
-$$('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
-$$('.postprofile').forEach(p => p.after(sep()));
+queAll('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
+queAll('.postprofile').forEach(p => p.after(sep()));
 
 applyIcons(ICONS);
 addQueendomTab();

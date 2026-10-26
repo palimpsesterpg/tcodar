@@ -152,55 +152,33 @@ document.addEventListener("click", (e) => {
   if (bloc) bloc.classList.toggle("open");
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const pageContent = document.getElementById('page-content');
-  if (!pageContent) return;
+const page = document.getElementById('page-content');
+const links = page.querySelectorAll('.sub-header-path a.nav');
+const forumId = links[links.length - 1]?.href.match(/\/f(\d+)/)?.[1];
+const topicId = page.querySelector('.page-title a')?.href.match(/\/t(\d+)/)?.[1];
+const topiclist = page.querySelector('.topiclist');
+const postlist = page.querySelector('.postlist');
 
-  function getId(el, prefix) {
-    const m = el && el.getAttribute('href').match(new RegExp('/' + prefix + '(\\d+)(?:-|\\?|#|$)'));
-    return m ? m[1] : null;
-  }
+if (topiclist && forumId) topiclist.id = forumId;
+if (postlist && topicId) postlist.id = topicId;
 
-  const forumLinks = pageContent.querySelectorAll('.sub-header-path a.nav');
-  const forumId = getId(forumLinks[forumLinks.length - 1]);
-  const topicId = getId(pageContent.querySelector('.page-title a'));
+if (topicId === '267') {
+  postlist.classList.add('tabsystem');
+  postlist.id = 'listings';
+  postlist.querySelectorAll('.post').forEach(post => post.classList.add('tab-content'));
+  postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('d-none'));
 
-  const topiclist = pageContent.querySelector('.topiclist');
-  const postlist = pageContent.querySelector('.postlist');
+  const post691 = document.getElementById('p691');
+  post691?.classList.add('tabsystem-tabs');
+  post691?.classList.remove('tab-content');
 
-  if (topiclist && forumId) topiclist.id = forumId;
-  if (postlist && topicId) postlist.id = topicId;
+  const post693 = document.getElementById('p693');
+  if (post693) post693.dataset.tab = 'faces';
+}
 
-  if (postlist && topicId === '267') {
-    postlist.classList.add('tabsystem');
-    postlist.id = 'listings';
-
-    postlist.querySelectorAll('.post').forEach(function (post) {
-      const postId = (post.id.match(/\d+/) || [])[0];
-
-      post.classList.add('tab-content');
-
-      if (postId === '691') {
-        post.classList.add('tabsystem-tabs');
-        post.classList.remove('tab-content');
-      }
-
-      if (postId === '693') {
-        post.dataset.tab = 'faces';
-      }
-    });
-
-    postlist.querySelectorAll('.postprofile').forEach(function (profile) {
-      profile.classList.add('d-none');
-    });
-  }
-
-  if (postlist && topicId === '272') {
-    postlist.querySelectorAll('.postprofile').forEach(function (profile) {
-      profile.classList.add('mini');
-    });
-  }
-});
+if (topicId === '272') {
+  postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('mini'));
+}
 
 const CARACTERS = {
 

@@ -543,7 +543,7 @@ a:hover {
     max-width: 100%;
     min-width: 0;
     overflow: hidden;
-    text-align:center;
+    text-align: center;
     padding-left: 1px;
     text-transform: uppercase;
     font-size: var(--xsmall);
@@ -2876,4 +2876,31 @@ a:hover {
 
 .bloc-toggle.open .content-toggle {
     display: block
+}
+
+fieldset {
+    margin: 0;
+    margin-inline: 0;
+    padding: var(--large);
+    padding-inline: 0;
+    border: 0px;
+    background-color: var(--darklight)
+}
+
+dl {
+    margin: 0;
+    margin-inline: 0
+}
+
+.fields1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fields1 dl {
+    width: 100%
+}
+
+.fields1 .message-box {
+    flex: 1
 }

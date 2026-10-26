@@ -1421,7 +1421,7 @@ a:hover {
 }
 
 .posticons span {
-display: flex;
+    display: flex;
     position: absolute;
     left: calc(100% + var(--xlarge));
     top: -1rem;
@@ -1441,14 +1441,14 @@ display: flex;
 }
 
 .postprofile {
-    width: 232px;
+    width: 200px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column
 }
 
 .postprofile-avatar {
-    width: 232px;
+    width: 200px;
     box-sizing: border-box
 }
 
@@ -1456,21 +1456,35 @@ display: flex;
     height: auto;
     padding: var(--4xsmall);
     background-color: var(--white);
-    outline: 0.5px solid var(--group-color);
-    border: var(--small) solid var(--light);
+    outline: 0.5px solid var(--group-color-50, var(--co1));
+    border: var(--2xsmall) solid var(--light);
     box-sizing: border-box;
-    width: 232px;
+    width: 200px;
     object-fit: cover
 }
 
 .mini {
-    width: 100%
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mini .postprofile,
+.mini .postprofile-avatar {
+    height: 50px;
+}
+
+.mini .postprofile-avatar img {
+    width: 50px;
+    aspect-ratio: 1;
+    border: 0;
+    outline: 0;
+    padding: 0
 }
 
 .mini .postprofile-info,
 .mini .postprofile-contact {
-    display: none;
-    flex-direction: row
+    display: none
 }
 
 .message {
@@ -1478,7 +1492,7 @@ display: flex;
 }
 
 .quick-nav-topics {
-    padding: var(--2xsmall) 0;
+    padding: var(--large) 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1487,6 +1501,13 @@ display: flex;
 
 .postlit .quick-nav-topics:last-of-type {
     display: none
+}
+
+.topic-actions {
+    display: flex;
+    padding: var(--large);
+    align-items: center;
+    justify-content: space-between
 }
 
 .memberlist {

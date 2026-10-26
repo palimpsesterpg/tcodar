@@ -533,7 +533,7 @@ a:hover {
 
 #sub-page-header {
     background-color: var(--darklight);
-    padding: var(--large);
+    padding: var(--large) 0;
     border-width: 0px;
     border-bottom-width: 0.5px !important;
     border-style: solid;
@@ -543,7 +543,8 @@ a:hover {
     max-width: 100%;
     min-width: 0;
     overflow: hidden;
-    padding-left: calc(3rem + var(--xsmall + 1px));
+    text-align:center;
+    padding-left: 1px;
     text-transform: uppercase;
     font-size: var(--xsmall);
     letter-spacing: 1px;

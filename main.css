@@ -293,6 +293,10 @@
         border: 0;
         top: 3rem
     }
+
+    .forum-off .forum-lastpost-avatar img {
+        width: 50px;
+    }
 }
 
 body {
@@ -1186,16 +1190,14 @@ a:hover {
 
 .forum-off,
 .forum-archives {
-    width: calc(50% - var(--large))
+    flex: 1
 }
 
 .forum-off {
-    flex: 1 1 calc(50% - var(--2xsmall));
     padding: var(--large);
     background-color: var(--whiteop50);
     backdrop-filter: blur(2px);
     border: 0.5px solid var(--white);
-    border-radius: var(--large);
     align-items: flex-end
 }
 
@@ -1250,8 +1252,7 @@ a:hover {
     left: 0;
     object-fit: cover;
     top: 0;
-    position: absolute;
-    border-radius: var(--large) 0 0 var(--large)
+    position: absolute
 }
 
 .forum-media {
@@ -1347,12 +1348,9 @@ a:hover {
 
 .forum-archives {
     padding: var(--large);
-    background-color: var(--co1op50);
+    background-color: var(--blackop75);
     border: 0.5px solid var(--white);
-    outline: var(--2xsmall) solid var(--co1op50);
     backdrop-filter: blur(2px);
-    border-radius: var(--2xsmall);
-    margin: var(--2xsmall);
     align-items: center
 }
 
@@ -1380,7 +1378,7 @@ a:hover {
 }
 
 .forum-archives .forum-links a {
-    color: var(--co1-100);
+    color: var(--darkneutral);
     font-size: var(--medium);
     text-transform: uppercase
 }

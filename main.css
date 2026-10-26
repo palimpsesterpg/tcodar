@@ -1422,7 +1422,7 @@ a:hover {
 }
 
 .posticons span {
-    display: flex;
+    display: none;
     position: absolute;
     left: calc(100% + var(--xlarge));
     top: -1rem;

@@ -1416,13 +1416,22 @@ a:hover {
     align-items: flex-start
 }
 
+.posticons>* {
+    position: relative
+}
+
 .posticons span {
     display: none;
     position: absolute;
-    background-color: var(--whiteop50)
+    left: calc(100% + var(--2xsmall));
+    top: 0;
+    background-color: var(--whiteop75);
+    padding: var(--large);
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
-.posticons i:hover span {
+.posticons>*:hover span {
     display: flex
 }
 

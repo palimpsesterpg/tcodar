@@ -2909,7 +2909,7 @@ dl {
     display: flex !important
 }
 
-.listings .tabsystem-tabs {
+.listings .tabsystem-tabs .message {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--large);

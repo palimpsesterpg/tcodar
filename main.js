@@ -182,6 +182,40 @@ if (postId === '691') post.classList.remove('tab-content')
 
 if (postId === '693') post.dataset.tab('faces')
 
+const CARACTERS = {
+
+  pippaJennings: {
+    face: "Jodie Comer",
+    pseudo: "Pippa Jennings",
+    firstNames: "Philippa, Pippa",
+    lastNames: ["Jennings", "de Vaucelles"],
+    families: ["Durham", "de Ferrières"],
+    dateOfBirth: "07.02.1993",
+    address: ["blablabla"],
+    job: "ceo de Vinea Regina",
+    gender: "femme cis",
+    player: ["palimpseste", "cam", "elle"],
+    status: "célibataire"
+  }
+
+};
+
+      const TAB_FIELDS = {
+        faces: "face,pseudo",
+        jobs: "job,pseudo",
+        addresses: "address,pseudo"
+    };
+
+    function buildRow(el) {
+        const fields = TAB_FIELDS[el.closest(".tab-content").dataset.tab].split(",");
+        el.innerHTML = fields.map((f) => `<span data-field="${f}"></span>`).join("");
+        fillCard(el, CARACTERS[el.dataset.character]);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".list-row[data-character]").forEach(buildRow);
+    });
+
 addQueendomTab();
 Tabs();
 TabsInline();

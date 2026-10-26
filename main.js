@@ -190,6 +190,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  if (postlist && topicId === '272') {
+    postlist.querySelectorAll('.postprofile').forEach(function (profile) {
+      profile.classList.add('mini');
+    });
+  }
 });
 
 const CARACTERS = {
@@ -210,21 +216,21 @@ const CARACTERS = {
 
 };
 
-      const TAB_FIELDS = {
-        faces: "face,pseudo",
-        jobs: "job,pseudo",
-        addresses: "address,pseudo"
-    };
+const TAB_FIELDS = {
+  faces: "face,pseudo",
+  jobs: "job,pseudo",
+  addresses: "address,pseudo"
+};
 
-    function buildRow(el) {
-        const fields = TAB_FIELDS[el.closest(".tab-content").dataset.tab].split(",");
-        el.innerHTML = fields.map((f) => `<span data-field="${f}"></span>`).join("");
-        fillCard(el, CARACTERS[el.dataset.character]);
-    }
+function buildRow(el) {
+  const fields = TAB_FIELDS[el.closest(".tab-content").dataset.tab].split(",");
+  el.innerHTML = fields.map((f) => `<span data-field="${f}"></span>`).join("");
+  fillCard(el, CARACTERS[el.dataset.character]);
+}
 
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".list-row[data-character]").forEach(buildRow);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".list-row[data-character]").forEach(buildRow);
+});
 
 addQueendomTab();
 Tabs();

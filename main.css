@@ -1475,6 +1475,8 @@ a:hover {
 .postprofile {
     width: 232px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     z-index: 99
 }
 
@@ -1494,8 +1496,14 @@ a:hover {
     object-fit: cover
 }
 
-.t272 .postprofile div:not(.postprofile-name) {
-    display: none
+.mini {
+    width: 100%;
+}
+
+.mini .postprofile-info,
+.mini .postprofile-contact {
+    display: none;
+    flex-direction: row;
 }
 
 .content {

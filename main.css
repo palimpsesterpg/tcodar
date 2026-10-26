@@ -2917,3 +2917,118 @@ dl {
 .fields1 #message-box {
     flex: 1
 }
+
+.families-table,
+.listings-table {
+    border: 0.5px solid var(--darkneutral);
+    text-transform: uppercase;
+    font-weight: 300
+}
+
+.listings .tabsystem-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--large);
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: var(--xlarge);
+    color: var(--black)
+}
+
+.list-row,
+.listings-table .bloc-toggle {
+    display: flex;
+    --border-row: var(--darkneutral);
+}
+
+.listings-table .bloc-toggle .title-toggle {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    padding: 0 var(--large);
+    font-size: var(--large);
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--black)
+}
+
+.listings-table .bloc-toggle {
+    flex-direction: column;
+}
+
+.fam-row {
+    display: grid;
+    grid-template-columns: 50px repeat(5, minmax(0, 1fr)) 50px;
+    --border-row: var(--darkneutral);
+    color: var(--fam-color)
+}
+
+.fam-row:first-of-type {
+    font-weight: 900;
+    font-size: var(--medium)
+}
+
+.fam-row:not(:last-of-type),
+.list-row:not(:last-of-type),
+.listings-table .bloc-toggle:not(:last-of-type) .title-toggle,
+.listings-table .bloc-toggle.open .title-toggle {
+    border-bottom: 0.5px solid var(--border-row)
+}
+
+.fam-row span,
+.list-row span {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    padding: 0 var(--large);
+    font-size: var(--small);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid var(--border-row)
+}
+
+.fam-row:nth-of-type(2n),
+.list-row:nth-of-type(2n) {
+    background-color: var(--darklight)
+}
+
+.fam-row.open .content-toggle {
+    display: flex !important;
+    border-top: 0.5px solid;
+    grid-area: 2 / 1 / 3 / 8
+}
+
+.fam-row.open .content-toggle span {
+    flex: 1
+}
+
+.fam-row.open {
+    background-color: var(--fam-colorFade);
+    --border-row: var(--fam-color)
+}
+
+.fam-row.open [data-field="name"] {
+    font-weight: 700
+}
+
+.fam-row [data-field="name"] {
+    font-family: var(--spe);
+    font-size: var(--large)
+}
+
+.fam-row [data-field="played"]:before {
+    content: "en jeu: ";
+    padding-right: var(--large)
+}
+
+.fam-row span:last-of-type,
+.list-row span:last-of-type {
+    border: 0 !important
+}

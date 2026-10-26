@@ -164,15 +164,15 @@ if (postlist && topicId) postlist.id = topicId;
 
 if (topicId === '267') {
   postlist.classList.add('tabsystem');
-  postlist.id = 'listings';
+  postlist.classList.add = 'listings';
   postlist.querySelectorAll('.post').forEach(post => post.classList.add('tab-content'));
   postlist.querySelectorAll('.postprofile').forEach(p => p.classList.add('d-none'));
 
-  const post691 = document.getElementById('p691');
+  const post691 = document.getElementById('691');
   post691?.classList.add('tabsystem-tabs');
   post691?.classList.remove('tab-content');
 
-  const post693 = document.getElementById('p693');
+  const post693 = document.getElementById('693');
   if (post693) post693.dataset.tab = 'faces';
 }
 

@@ -405,8 +405,11 @@ a:hover {
     background-position: center center;
     box-sizing: border-box;
     background-size: cover;
-    padding: var(--large);
-    position: relative
+    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: var(--large);
+    padding: var(--3xlarge);
 }
 
 #page-header a {
@@ -417,12 +420,19 @@ a:hover {
     font-weight: 900;
     font-family: var(--spe);
     color: #fff0;
+    flex-wrap: wrap;
     text-shadow: 0 0 5px var(--whiteop50)
 }
 
 .header-tab {
     color: var(--white);
-    flex: 1
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--xsmall);
+    font-weight: 100;
+    background-color: var(--co1-300);
 }
 
 #page-navbar {

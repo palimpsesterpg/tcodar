@@ -301,7 +301,8 @@ body {
     font-family: var(--main);
     color: var(--lighterdark);
     font-size: var(--medium);
-    background-image: url("Images/tcodar-body.png");
+    /*background-image: url(Images/tcodar-body.png);*/
+    background-color: var(--co1-200);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -392,7 +393,7 @@ a:hover {
     flex-wrap: wrap;
     align-content: center;
     gap: var(--large);
-    padding: var(--3xlarge)
+    padding: 0 var(--large) 0 var(--4xlarge)
 }
 
 #page-header a {

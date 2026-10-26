@@ -160,17 +160,24 @@ function getId(el, prefix) {
 }
 
 const forumLinks = pageContent.querySelectorAll('.sub-header-path a.nav');
-const forumId = getId(forumLinks[forumLinks.length - 1], 'f');
-const topicId = getId(pageContent.querySelector('.page-title a'), 't');
+const forumId = getId(forumLinks[forumLinks.length - 1]);
+const topicId = getId(pageContent.querySelector('.page-title a'));
 
 const topiclist = pageContent.querySelector('.topiclist');
 const postlist = pageContent.querySelector('.postlist');
 const topic = pageContent.querySelector('.post');
+const postId = topic.getId;
 
-if (topiclist) topiclist.classList.add(forumId);
-if (postlist) postlist.classList.add(topicId);
+if (topiclist) topiclist.id = forumId;
+if (postlist) postlist.id = topicId;
 
-if (topicId === 't267') postlist.classList.add('tabsystem');
+if (topicId === '267') postlist.classList.add('tabsystem');
+if (topicId === '267') postlist.id = 'listings';
+if (topicId === '267') postlist.forEach(post => {
+  post.classList.add('tab-content');
+});
+
+if (postId === '267') post.classList.add('tabsystem-tabs')
 
 addQueendomTab();
 Tabs();

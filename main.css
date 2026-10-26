@@ -2922,6 +2922,7 @@ dl {
 .listings-table {
     border: 0.5px solid var(--darkneutral);
     text-transform: uppercase;
+    padding: 0px !important;
     font-weight: 300
 }
 

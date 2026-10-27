@@ -27,7 +27,7 @@ const own = (system, selector) =>
 const TAB_FIELDS = {
   faces: 'face,pseudo',
   jobs: 'job,pseudo',
-  addresses: 'address,pseudo'
+  addresses: 'player[1],pseudo'
 };
 
 const ICONS = [

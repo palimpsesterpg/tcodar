@@ -3103,7 +3103,11 @@ span[data-field="face"] {
 
 .fam-row [data-field="played"]:before {
     content: "en jeu: ";
-    padding-right: var(--large)
+    padding-right: var(--2xsmall)
+}
+
+.fam-row [data-field="rank"]:after {
+    content: "/26"
 }
 
 .fam-row span:last-of-type,

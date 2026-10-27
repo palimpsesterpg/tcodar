@@ -30,6 +30,11 @@ const TAB_FIELDS = {
   addresses: 'player[1],pseudo'
 };
 
+const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
+const FAMILY_FIELDS_HIDDEN = ['rank', 'city1', 'city2', 'ethnies', 'color', 'played'];
+
+const fieldSpan = f => `<span data-field="${f}"></span>`;
+
 const ICONS = [
   { selector: '.copyright a', icon: 'fi fi-ts-crown' },
   { selector: 'a[href="#top"]', icon: 'fi fi-ts-angle-up' },
@@ -148,12 +153,27 @@ function addUsernameToNotiffiButton() {
   if (pseudo) pseudo.textContent = user.username ?? '';
 }
 
-function fillCard(root, data) {
+function resolveValue(field, data, index) {
+  const m = field.match(/^(\w+)\[(\d+)\]$/);
+  if (m) {
+    const arr = data[m[1]];
+    return Array.isArray(arr) ? arr[Number(m[2])] : arr;
+  }
+
+  const value = data[field];
+
+  if (Array.isArray(value) && index !== undefined && index !== '') {
+    return value[Number(index)];
+  }
+  return value;
+}
+
+function fillCard(root, data, index) {
   if (!root || !data) return;
 
   qq('[data-field]', root).forEach(el => {
     const field = el.dataset.field;
-    const value = data[field];
+    const value = resolveValue(field, data, index);
     if (value === undefined || value === null) return;
 
     if (field === 'img') {
@@ -188,7 +208,26 @@ function buildRow(el) {
     .split(',')
     .map(f => `<span data-field="${f}"></span>`)
     .join('');
-  fillCard(el, data);
+
+  fillCard(el, data, el.dataset.index);
+}
+
+function buildFamilyRow(el) {
+  el.innerHTML =
+    FAMILY_FIELDS.map(fieldSpan).join('') +
+    `<div class="content-toggle">${FAMILY_FIELDS_HIDDEN.map(fieldSpan).join('')}</div>`;
+
+  const data = {
+    ...FAMILIES.default,
+    ...FAMILIES[el.dataset.family]
+  };
+  const [city1, city2] = Object.values(data.cities ?? {});
+
+  fillCard(el, {
+    ...data,
+    city1,
+    city2
+  });
 }
 
 function prefixPseudos() {
@@ -304,6 +343,8 @@ onReady(() => {
   qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
   qq('.postprofile').forEach(p => p.after(sep()));
   qq('.fcmainad-title-main').forEach(p => p.after(sep()));
+
+  qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 
   qq('[data-family]').forEach(el => {
     const fams = typeof FAMILIES !== 'undefined' ? FAMILIES : {};

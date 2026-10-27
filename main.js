@@ -27,7 +27,8 @@ const own = (system, selector) =>
 const TAB_FIELDS = {
   faces: 'face,pseudo',
   jobs: 'job,pseudo',
-  addresses: 'player[1],pseudo'
+  addresses: 'address,pseudo',
+  players: 'player[0],pseudo'
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

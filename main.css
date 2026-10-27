@@ -1428,8 +1428,8 @@ a:hover {
     position: relative
 }
 
-.posticons a > span,
-.posticons div > span {
+.posticons a>span,
+.posticons div>span {
     display: none;
     position: absolute;
     left: calc(100% + var(--xlarge));
@@ -2917,13 +2917,28 @@ fieldset {
     background-color: var(--darklight)
 }
 
-button, p {
+button,
+p {
     margin: 0;
     margin-inline: 0;
     padding: 0;
     padding-inline: 0;
     border: 0;
     background-color: transparent
+}
+
+button2,
+.button2 {
+    margin: 0;
+    margin-inline: 0;
+    padding: var(--2xsmall);
+    padding-inline: 0;
+    border: 0;
+    background-color: var(--co1-50);
+    color: var(--co1);
+    text-shadow: 1px 1px var(--white);
+    font-family: var(--display);
+    text-transform: uppercase
 }
 
 dl {

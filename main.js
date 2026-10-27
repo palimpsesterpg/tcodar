@@ -250,7 +250,7 @@ function prefixPseudos() {
     a.href = `/u${data.id}`;
     a.rel = 'nofollow';
     a.dataset.id = data.id;
-    a.className = 'mentiontag rose-bottin-member';
+    a.className = 'mentiontag';
     a.title = `Voir le profil : ${name}`;
     a.textContent = `@${name}`;
     el.replaceChildren(a);

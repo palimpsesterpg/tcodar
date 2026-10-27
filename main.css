@@ -2947,9 +2947,8 @@ dl {
     flex: 1
 }
 
-.families-table,
 .listings-table {
-    border: 0.5px solid var(--darkneutral);
+    border: 0.5px solid var(--neutral);
     padding: 0px !important;
     font-weight: 300
 }
@@ -2996,9 +2995,9 @@ dl {
 }
 
 .list-row,
-.listings-table .bloc-toggle {
+.listings-table:has(.list-row) .bloc-toggle {
     display: flex;
-    --border-row: var(--darkneutral)
+    --border-row: var(--neutral)
 }
 
 .list-row.title {
@@ -3006,7 +3005,7 @@ dl {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    background-color: var(--white);
+    background-color: var(--darklight);
     font-size: var(--large);
     font-weight: 700;
     align-items: center;
@@ -3016,30 +3015,32 @@ dl {
     color: var(--black)
 }
 
-.List-row.title span {
+.list-row.title span {
     text-transform: uppercase !important
 }
 
-.listings-table .bloc-toggle {
+.listings-table:has(.list-row) .bloc-toggle {
     flex-direction: column
 }
 
 .fam-row {
     display: grid;
     grid-template-columns: 50px repeat(5, minmax(0, 1fr)) 50px;
-    --border-row: var(--darkneutral);
+    --border-row: var(--neutral);
     color: var(--fam-color)
 }
 
-.fam-row:first-of-type {
-    font-weight: 900;
-    font-size: var(--medium)
+.fam-row:first-of-type span {
+    text-transform: uppercase;
+    font-family: var(--display);
+    font-size: var(--large);
+    font-weight: 700
 }
 
-.fam-row:not(:last-of-type),
-.list-row:not(:last-of-type),
-.list-row.title:not(:last-of-type) {
-    border-bottom: 0.5px solid var(--border-row)
+.fam-row:not(:first-of-type),
+.list-row:not(:first-of-type),
+.list-row.title:not(:first-of-type) {
+    border-top: 0.5px solid var(--border-row)
 }
 
 .fam-row span,
@@ -3048,7 +3049,7 @@ dl {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    height: 2.5rem;
+    height: 2rem;
     padding: 0 var(--large);
     font-size: var(--small);
     text-align: center;
@@ -3058,13 +3059,16 @@ dl {
     border-right: 0.5px solid var(--border-row)
 }
 
-span[data-field="pseudo"] {
-    text-transform: capitalize;
-    color: var(--style)
+.fam-row span {
+    height: 3rem !important
 }
 
-.fam-row:nth-of-type(2n),
-.list-row:nth-of-type(2n):not(.title) {
+span[data-field="pseudo"],
+span[data-field="face"] {
+    text-transform: capitalize;
+}
+
+.fam-row:nth-of-type(2n) {
     background-color: var(--darklight)
 }
 
@@ -3080,6 +3084,7 @@ span[data-field="pseudo"] {
 
 .fam-row.open {
     background-color: var(--fam-colorFade);
+    border: 0.5px solid;
     --border-row: var(--fam-color)
 }
 

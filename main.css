@@ -1462,6 +1462,10 @@ a:hover {
     width: 100%
 }
 
+.message {
+    text-align: justify
+}
+
 .postprofile .online-icon {
     position: absolute;
     top: -0.5rem;

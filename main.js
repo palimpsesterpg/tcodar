@@ -235,9 +235,10 @@ function buildRow(el) {
 
 function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
-    if (el.dataset.prefixed) return;
-    el.textContent = `@"${el.textContent}"`;
-    el.dataset.prefixed = '1';
+    if (q('mentiontag', el)) return;
+    const tag = document.createElement('mentiontag');
+    tag.textContent = `@"${el.textContent}"`;
+    el.replaceChildren(tag);
   });
 }
 
@@ -264,6 +265,16 @@ function sortListRows() {
 
     marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
   });
+}
+
+function cloneMemberPseudo() {
+  const pm = q('.fcmember-pseudo');
+  const cm = q('.fcmember-content');
+  if (!pm || !cm || q('.fcmember-pseudo-content', cm)) return;
+
+  const c = pm.cloneNode(true);
+  c.classList.replace('fcmember-pseudo', 'fcmember-pseudo-content');
+  cm.prepend(c);
 }
 
 function hideAdminTools() {
@@ -316,13 +327,16 @@ onReady(() => {
   hideAdminTools();
   initPageContext();
 
+  cloneMemberPseudo();
+
   qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
   qq('.postprofile').forEach(p => p.after(sep()));
   qq('.fcmainad-title-main').forEach(p => p.after(sep()));
 
   qq('[data-family]').forEach(el => {
-    const data = FAMILIES[el.dataset.family];
-    if (data) fillCard(el, { ...FAMILIES.default, ...data });
+    const fams = typeof FAMILIES !== 'undefined' ? FAMILIES : {};
+    const data = fams[el.dataset.family];
+    if (data) fillCard(el, { ...fams.default, ...data });
   });
 
   qq('[data-character]').forEach(el => {

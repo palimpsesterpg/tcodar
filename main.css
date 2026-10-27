@@ -1414,27 +1414,35 @@ a:hover {
     flex-direction: column;
     top: var(--2xsmall);
     left: calc(100% + var(--large));
-    padding: var(--large);
     box-sizing: border-box;
     gap: var(--large);
     justify-content: center;
-    background: var(--white);
+    background: var(--light);
     display: flex;
     align-items: flex-start
 }
 
 .posticons a,
 .posticons div {
-    position: relative
+    position: relative;
+    width: var(--2xlarge);
+    height: var(--2xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posticons a,
+.posticons div:not(:last-of-type) {
+    border-bottom: 0.5px solid var(--neutral)
 }
 
 .posticons a>span,
 .posticons div>span {
-    display: none;
+    display: flex;
     position: absolute;
     left: calc(100% + var(--xlarge));
-    top: 50%;
-    transform: translateY(50%);
+    top: -50%;
     font-size: var(--small);
     color: var(--black);
     width: max-content;
@@ -1442,7 +1450,9 @@ a:hover {
     padding: var(--2xsmall);
     text-transform: uppercase;
     align-items: center;
-    font-weight: 300
+    font-weight: 300;
+    height: var(--2xlarge);
+    box-sizing: border-box
 }
 
 .posticons a:hover span,
@@ -1450,15 +1460,14 @@ a:hover {
     display: flex
 }
 
-.fa_like_div span {
-    bottom: -5rem;
-    left: 50%;
+.fa_like_div>span {
+    left: 50% !important;
     transform: translateX(-50%);
-    top: auto;
-    gap: var(--large)
+    top: 2.5rem !important;
+    gap: var(--2xsmall)
 }
 
-.fa_liked i:before {
+.fa_liked i[class*=" fi-ts-"]:before {
     font-family: var(--icons-solid)
 }
 

@@ -89,7 +89,6 @@
             var(--co1-100),
             var(--co2-100),
             var(--co3-100));
-    --gradient23op50: linear-gradient(to right, var(--co2op50), var(--co3op50));
     color-scheme: light
 }
 
@@ -322,8 +321,7 @@ body {
     font-family: var(--main);
     color: var(--lighterdark);
     font-size: var(--medium);
-    /*background-image: url(Images/tcodar-body.png);*/
-    background: var(--gradient23op50);
+    background: var(--gradient23-50);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1656,7 +1654,7 @@ a:hover {
 }
 
 #reception .one {
-    background-image: url(Images/tcodar-body.png);
+    background: var(--gradient23-50);
     background-size: cover;
     background-position: center center;
     grid-area: 1 / 1 / 2 / 4
@@ -1903,7 +1901,7 @@ a:hover {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     padding: var(--large);
-    border: var(--large) solid var(--white)
+    border: 0.5px solid var(--white)
 }
 
 #reception .one span {

@@ -338,6 +338,14 @@ function initPageContext() {
   }
 }
 
+  function numberSpans() {
+  qq('.fcmainps-content .tab-content:not([data-tab="carac"])').forEach(tab => {
+    qq(':scope > span', tab).forEach((span, i) => {
+      span.dataset.n = i + 1;
+    });
+  });
+}
+
 onReady(() => {
   hideAdminTools();
   initPageContext();
@@ -361,6 +369,8 @@ onReady(() => {
   });
 
   qq('.list-row[data-character]').forEach(buildRow);
+
+  numberSpans()
 
   prefixPseudos();
   sortListRows();

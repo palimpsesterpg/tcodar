@@ -1423,11 +1423,13 @@ a:hover {
     align-items: flex-start
 }
 
-.posticons>* {
+.posticons a,
+.posticons div {
     position: relative
 }
 
-.posticons span {
+.posticons a > span,
+.posticons div > span {
     display: none;
     position: absolute;
     left: calc(100% + var(--xlarge));
@@ -2915,7 +2917,7 @@ fieldset {
     background-color: var(--darklight)
 }
 
-button {
+button, p {
     margin: 0;
     margin-inline: 0;
     padding: 0;

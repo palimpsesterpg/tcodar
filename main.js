@@ -28,7 +28,7 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
-    job: 'ceo de Vinea Regina',
+    job: 'co-fondatrice et président de la branche française de Jennings Consulting (finance)',
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
@@ -288,21 +288,32 @@ initPageContext();
 qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
 qq('.postprofile').forEach(p => p.after(sep()));
 
-function trierListRows(container) {
-  const rows = Array.from(container.querySelectorAll(':scope > .list-row'));
+function trierTousLesListRows() {
+  const groupes = new Map();
+  document.querySelectorAll('.list-row').forEach(row => {
+    const parent = row.parentElement;
+    if (!groupes.has(parent)) groupes.set(parent, []);
+    groupes.get(parent).push(row);
+  });
 
-  const cle = row => {
-    const premierSpan = row.querySelector(':scope > span:first-of-type');
-    return premierSpan ? premierSpan.textContent.trim() : '';
-  };
+  const cle = row => (row.querySelector(':scope > span')?.textContent ?? '').trim();
 
-  rows.sort((a, b) => cle(a).localeCompare(cle(b), 'fr', { sensitivity: 'base' }));
+  groupes.forEach(rows => {
+    const marqueurs = rows.map(row => {
+      const m = document.createComment('');
+      row.replaceWith(m);
+      return m;
+    });
 
-  rows.forEach(row => container.appendChild(row));
+    const tries = [...rows].sort((a, b) =>
+      cle(a).localeCompare(cle(b), 'fr', { sensitivity: 'base' })
+    );
+
+    marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
+  });
 }
 
-const parent = document.querySelector('.list-row').parentElement;
-trierListRows(parent);
+document.addEventListener('DOMContentLoaded', trierTousLesListRows);
 
 applyIcons(ICONS);
 addQueendomTab();

@@ -3016,7 +3016,8 @@ dl {
 }
 
 .list-row.title span {
-    text-transform: uppercase !important
+    text-transform: uppercase !important;
+    font-size: var(--large)
 }
 
 .listings-table:has(.list-row) .bloc-toggle {
@@ -3039,8 +3040,18 @@ dl {
 
 .fam-row:not(:first-of-type),
 .list-row:not(:first-of-type),
-.fam-row:not(:first-of-type) .list-row.title {
+.bloc-toggle:not(:first-of-type) .list-row {
     border-top: 0.5px solid var(--border-row)
+}
+
+.bloc-toggle:nth-of-type(even) .title,
+.title:nth-of-type(even) {
+    color: var(--co2)
+}
+
+.bloc-toggle:nth-of-type(odd) .title,
+.title:nth-of-type(odd) {
+    color: var(--co3)
 }
 
 .fam-row span,

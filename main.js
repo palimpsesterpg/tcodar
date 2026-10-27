@@ -34,7 +34,7 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
-    job: 'co-fondatrice et présidente de la londonienne de Jennings Consulting (finance)',
+    job: 'co-fondatrice et présidente de la branche londonienne de Jennings Consulting',
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'

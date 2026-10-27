@@ -2072,17 +2072,12 @@ a:hover {
     margin-top: 2.5rem
 }
 
-#hub>div,
-#reception>div {}
-
 #hub .one {
     flex: 1;
+    background-color: var(--white);
     border: 0.5px solid var(--neutral);
-    outline: 2.5px solid var(--white);
-    margin: 2.5px;
     padding: var(--large);
-    box-sizing: border-box;
-    border-radius: var(--large)
+    box-sizing: border-box
 }
 
 #logged-in-user-list,

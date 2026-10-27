@@ -2998,7 +2998,7 @@ dl {
 }
 
 .list-row.title {
-    display: flex;
+    height: 3rem;
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
@@ -3010,6 +3010,10 @@ dl {
     font-family: var(--display);
     text-transform: uppercase;
     color: var(--black)
+}
+
+.List-row.title span {
+    text-transform: uppercase !important
 }
 
 .listings-table .bloc-toggle {

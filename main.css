@@ -3019,7 +3019,7 @@ dl {
 
 .fam-row {
     display: grid;
-    grid-template-columns: 50px repeat(5, minmax(0, 1fr)) 50px;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
     --border-row: var(--neutral);
     color: var(--fam-color)
 }
@@ -3053,7 +3053,6 @@ dl {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    height: 2rem;
     padding: 0 var(--large);
     font-size: var(--small);
     text-align: center;
@@ -3063,8 +3062,12 @@ dl {
     border-right: 0.5px solid var(--border-row)
 }
 
+.list-row span {
+    height: 2rem
+}
+
 .fam-row span {
-    height: 3rem !important
+    height: 4rem !important
 }
 
 span[data-field="pseudo"],
@@ -3077,13 +3080,10 @@ span[data-field="face"] {
 }
 
 .fam-row.open .content-toggle {
-    display: flex !important;
     border-top: 0.5px solid;
-    grid-area: 2 / 1 / 3 / 8
-}
-
-.fam-row.open .content-toggle span {
-    flex: 1
+    grid-area: 2 / 1 / 3 / 7;
+    display: grid;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
 }
 
 .fam-row.open {

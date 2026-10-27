@@ -3051,6 +3051,11 @@ dl {
     border-right: 0.5px solid var(--border-row)
 }
 
+span[data-field="pseudo"] {
+    text-transform: capitalize;
+    color: var(--style)
+}
+
 .fam-row:nth-of-type(2n),
 .list-row:nth-of-type(2n):not(.title) {
     background-color: var(--darklight)

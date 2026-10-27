@@ -1433,18 +1433,46 @@ a:hover {
     display: none;
     position: absolute;
     left: calc(100% + var(--xlarge));
-    top: -1rem;
+    top: 50%;
+    transform: translateY(50%);
+    font-size: var(--small);
     color: var(--black);
     width: max-content;
     background-color: var(--whiteop75);
-    padding: var(--large);
+    padding: var(--2xsmall);
     text-transform: uppercase;
+    align-items: center;
     font-weight: 300
 }
 
 .posticons a:hover span,
 .posticons div:hover span {
     display: flex
+}
+
+.fa_like_div span {
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    gap: var(--large)
+}
+
+.fa_liked i:before {
+    font-family: var(--icons-solid)
+}
+
+.rep-nb {
+    height: var(--large);
+    width: var(--large);
+    background-color: var(--neutral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa_like_list:empty {
+    display: none
 }
 
 .postbody {

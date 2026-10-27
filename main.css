@@ -2946,7 +2946,6 @@ dl {
 .families-table,
 .listings-table {
     border: 0.5px solid var(--darkneutral);
-    text-transform: uppercase;
     padding: 0px !important;
     font-weight: 300
 }
@@ -3003,14 +3002,13 @@ dl {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    height: 50px;
-    padding: 0 var(--large);
     background-color: var(--white);
     font-size: var(--large);
     font-weight: 700;
-    text-align: center;
     align-items: center;
     justify-content: center;
+    font-family: var(--display);
+    text-transform: uppercase;
     color: var(--black)
 }
 
@@ -3043,17 +3041,18 @@ dl {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    height: 50px;
+    height: 2.5rem;
     padding: 0 var(--large);
     font-size: var(--small);
     text-align: center;
     align-items: center;
     justify-content: center;
+    text-transform: lowercase;
     border-right: 0.5px solid var(--border-row)
 }
 
 .fam-row:nth-of-type(2n),
-.list-row:nth-of-type(2n) {
+.list-row:nth-of-type(2n):not(.title) {
     background-color: var(--darklight)
 }
 

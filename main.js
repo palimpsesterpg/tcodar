@@ -315,6 +315,12 @@ function trierTousLesListRows() {
 
 document.addEventListener('DOMContentLoaded', trierTousLesListRows);
 
+document.querySelectorAll('span[data-field="pseudo"]').forEach(el => {
+  if (!el.textContent.startsWith('@"')) {
+    el.textContent = `@"${el.textContent}"`;
+  }
+});
+
 applyIcons(ICONS);
 addQueendomTab();
 Tabs();

@@ -311,14 +311,17 @@ function initPageContext() {
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
     qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
 
-    const tabsPost = document.getElementById('691');
+    const tabsPost = document.getElementById('340');
     tabsPost?.classList.add('tabsystem-tabs');
     tabsPost?.classList.remove('tab-content');
 
     const tabIds = {
-      693: 'faces',
-      694: 'jobs',
-      695: 'addresses'
+      675: 'faces',
+      691: 'addresses',
+      692: 'jobs',
+      693: 'players',
+      694: 'tabone',
+      695: 'tabtwo'
     };
 
     Object.entries(tabIds).forEach(([id, tab]) => {

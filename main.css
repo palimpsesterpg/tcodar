@@ -1437,7 +1437,6 @@ a:hover {
     background-color: var(--whiteop75);
     padding: var(--large);
     text-transform: uppercase;
-    width: 100%;
     font-weight: 300
 }
 

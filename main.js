@@ -32,6 +32,32 @@ const CARACTERS = {
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
+  },
+    johnDoe: {
+    face: 'Jacob Elordi',
+    pseudo: 'John Doe',
+    firstNames: 'Philippa, Pippa',
+    lastNames: ['Jennings', 'de Vaucelles'],
+    families: ['Durham', 'de Ferrières'],
+    dateOfBirth: '07.02.1993',
+    address: ['blablabla'],
+    job: 'ceo de Vinea Regina',
+    gender: 'femme cis',
+    player: ['palimpseste', 'cam', 'elle'],
+    status: 'célibataire'
+  },
+    janeDoe: {
+    face: 'Ella Purnell',
+    pseudo: 'Jane Doe',
+    firstNames: 'Philippa, Pippa',
+    lastNames: ['Jennings', 'de Vaucelles'],
+    families: ['Durham', 'de Ferrières'],
+    dateOfBirth: '07.02.1993',
+    address: ['blablabla'],
+    job: 'ceo de Vinea Regina',
+    gender: 'femme cis',
+    player: ['palimpseste', 'cam', 'elle'],
+    status: 'célibataire'
   }
 };
 
@@ -261,6 +287,22 @@ initPageContext();
 
 qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
 qq('.postprofile').forEach(p => p.after(sep()));
+
+function trierListRows(container) {
+  const rows = Array.from(container.querySelectorAll(':scope > .list-row'));
+
+  const cle = row => {
+    const premierSpan = row.querySelector(':scope > span:first-of-type');
+    return premierSpan ? premierSpan.textContent.trim() : '';
+  };
+
+  rows.sort((a, b) => cle(a).localeCompare(cle(b), 'fr', { sensitivity: 'base' }));
+
+  rows.forEach(row => container.appendChild(row));
+}
+
+const parent = document.querySelector('.list-row').parentElement;
+trierListRows(parent);
 
 applyIcons(ICONS);
 addQueendomTab();

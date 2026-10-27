@@ -698,8 +698,8 @@ a:hover {
     gap: var(--large);
     padding: var(--2xlarge);
     background-color: var(--light);
-    border: 0.5px solid var(--neutral);
-    ;
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
     width: -webkit-fill-available
 }
 
@@ -1410,7 +1410,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
     box-sizing: border-box
 }
 
@@ -1998,7 +1999,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
     ;
     width: -webkit-fill-available
 }
@@ -2060,7 +2062,8 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
     ;
     margin-top: 2.5rem
 }
@@ -2971,6 +2974,11 @@ dl {
     flex-direction: column;
     align-items: flex-start;
     height: auto
+}
+
+.listings .tabsystem-tabs .posticons {
+    right: calc(100% + var(--2xsmall));
+    left: auto
 }
 
 .listings .tabsystem-tabs .message .active {

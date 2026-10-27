@@ -288,7 +288,7 @@ initPageContext();
 qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
 qq('.postprofile').forEach(p => p.after(sep()));
 
-function trierTousLesListRows() {
+function sortListRows() {
   const groupes = new Map();
   document.querySelectorAll('.list-row').forEach(row => {
     const parent = row.parentElement;
@@ -296,7 +296,7 @@ function trierTousLesListRows() {
     groupes.get(parent).push(row);
   });
 
-  const cle = row => (row.querySelector(':scope > span')?.textContent ?? '').trim();
+  const key = row => (row.querySelector(':scope > span')?.textContent ?? '').trim();
 
   groupes.forEach(rows => {
     const marqueurs = rows.map(row => {
@@ -306,19 +306,17 @@ function trierTousLesListRows() {
     });
 
     const tries = [...rows].sort((a, b) =>
-      cle(a).localeCompare(cle(b), 'fr', { sensitivity: 'base' })
+      key(a).localeCompare(key(b), 'fr', { sensitivity: 'base' })
     );
 
     marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
   });
 }
 
-document.addEventListener('DOMContentLoaded', trierTousLesListRows);
+q('DOMContentLoaded', sortListRows);
 
-document.querySelectorAll('span[data-field="pseudo"]').forEach(el => {
-  if (!el.textContent.startsWith('@"')) {
+qq('span[data-field="pseudo"] span').forEach(el => {
     el.textContent = `@"${el.textContent}"`;
-  }
 });
 
 applyIcons(ICONS);

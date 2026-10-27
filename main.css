@@ -3034,8 +3034,7 @@ dl {
 
 .fam-row:not(:last-of-type),
 .list-row:not(:last-of-type),
-.listings-table .bloc-toggle:not(:last-of-type) .title-toggle,
-.listings-table .bloc-toggle.open .title-toggle {
+.list-row.title:not(:last-of-type) {
     border-bottom: 0.5px solid var(--border-row)
 }
 

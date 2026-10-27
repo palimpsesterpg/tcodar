@@ -26,6 +26,7 @@ const own = (system, selector) =>
 
 const CARACTERS = {
   pippaJennings: {
+    id: '2',
     face: 'Jodie Comer',
     pseudo: 'Pippa Jennings',
     firstNames: 'Philippa, Pippa',
@@ -235,10 +236,24 @@ function buildRow(el) {
 
 function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
-    if (q('mentiontag', el)) return;
-    const tag = document.createElement('mentiontag');
-    tag.textContent = `@"${el.textContent}"`;
-    el.replaceChildren(tag);
+    if (q('a.mentiontag', el)) return;
+
+    const data = CARACTERS[el.closest('.list-row')?.dataset.character];
+    const name = el.textContent.trim();
+
+    if (!data?.id) {
+      el.textContent = `@${name}`;
+      return;
+    }
+
+    const a = document.createElement('a');
+    a.href = `/u${data.id}`;
+    a.rel = 'nofollow';
+    a.dataset.id = data.id;
+    a.className = 'mentiontag rose-bottin-member';
+    a.title = `Voir le profil : ${name}`;
+    a.textContent = `@${name}`;
+    el.replaceChildren(a);
   });
 }
 

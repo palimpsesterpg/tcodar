@@ -28,7 +28,7 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
-    job: 'co-fondatrice et président de la branche française de Jennings Consulting (finance)',
+    job: 'co-fondatrice et présidente de la londonienne de Jennings Consulting (finance)',
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
@@ -41,8 +41,8 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
-    job: 'ceo de Vinea Regina',
-    gender: 'femme cis',
+    job: 'homme de chambre au Carlton',
+    gender: 'homme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
   },
@@ -54,7 +54,7 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
-    job: 'ceo de Vinea Regina',
+    job: 'héritière',
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'

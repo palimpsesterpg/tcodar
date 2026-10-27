@@ -1423,7 +1423,7 @@ a:hover {
     position: absolute;
     flex-direction: column;
     top: var(--2xsmall);
-    left: calc(100% + var(--2xsmall));
+    left: calc(100% + var(--large));
     padding: var(--large);
     box-sizing: border-box;
     gap: var(--large);
@@ -2977,7 +2977,7 @@ dl {
 }
 
 .listings .tabsystem-tabs .posticons {
-    right: calc(100% + var(--2xsmall));
+    right: calc(100% + var(--large));
     left: auto
 }
 

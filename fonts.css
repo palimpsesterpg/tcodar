@@ -1,195 +1,195 @@
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Thin.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Thin.ttf') format('opentype');
 	font-weight: 100;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Light.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Light.ttf') format('opentype');
 	font-weight: 200;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Book.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Book.ttf') format('opentype');
 	font-weight: 300;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Middle.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Middle.ttf') format('opentype');
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Regular.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Regular.ttf') format('opentype');
 	font-weight: 500;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Bold.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Bold.ttf') format('opentype');
 	font-weight: 600;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ExtraBold.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-ExtraBold.ttf') format('opentype');
 	font-weight: 700;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ThinItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-ThinItalic.ttf') format('opentype');
 	font-weight: 100;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-LightItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-LightItalic.ttf') format('opentype');
 	font-weight: 200;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-BookItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-BookItalic.ttf') format('opentype');
 	font-weight: 300;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-MiddleItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-MiddleItalic.ttf') format('opentype');
 	font-weight: 400;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-Italic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-Italic.ttf') format('opentype');
 	font-weight: 500;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-BoldItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-BoldItalic.ttf') format('opentype');
 	font-weight: 600;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Bebas';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/BebasNeuePro-ExtraBoldItalic.ttf') format('opentype');
+	src: url('../fonts/BebasNeuePro-ExtraBoldItalic.ttf') format('opentype');
 	font-weight: 700;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-Ultralight.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-Ultralight.otf') format('opentype');
 	font-weight: 100;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-Regular.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-Regular.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-Ultrabold.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-Ultrabold.otf') format('opentype');
 	font-weight: 700;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-UltralightItalic.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
 	font-weight: 100;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-Italic.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-Italic.otf') format('opentype');
 	font-weight: 400;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Editorial';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPEditorialNew-UltraboldItalic.otf') format('opentype');
+	src: url('../fonts/PPEditorialNew-UltraboldItalic.otf') format('opentype');
 	font-weight: 700;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Thin.otf') format('opentype');
+	src: url('../fonts/PPAcma-Thin.otf') format('opentype');
 	font-weight: 100;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Light.otf') format('opentype');
+	src: url('../fonts/PPAcma-Light.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Semibold.otf') format('opentype');
+	src: url('../fonts/PPAcma-Semibold.otf') format('opentype');
 	font-weight: 700;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-Black.otf') format('opentype');
+	src: url('../fonts/PPAcma-Black.otf') format('opentype');
 	font-weight: 1000;
 	font-style: normal
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-ThinItalic.otf') format('opentype');
+	src: url('../fonts/PPAcma-ThinItalic.otf') format('opentype');
 	font-weight: 100;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-LightItalic.otf') format('opentype');
+	src: url('../fonts/PPAcma-LightItalic.otf') format('opentype');
 	font-weight: 400;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-SemiboldItalic.otf') format('opentype');
+	src: url('../fonts/PPAcma-SemiboldItalic.otf') format('opentype');
 	font-weight: 700;
 	font-style: italic
 }
 
 @font-face {
 	font-family: 'Acma';
-	src: url('https://cdn.jsdelivr.net/gh/palimpsesterpg/fonts@main/PPAcma-BlackItalic.otf') format('opentype');
+	src: url('../fonts/PPAcma-BlackItalic.otf') format('opentype');
 	font-weight: 1000;
 	font-style: italic
 }

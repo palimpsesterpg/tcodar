@@ -2,6 +2,11 @@ const q = (selector, root = document) => root.querySelector(selector);
 const qq = (selector, root = document) => [...root.querySelectorAll(selector)];
 const sep = () => document.createElement('sep');
 
+const onReady = fn =>
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', fn)
+    : fn();
+
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 
 const adminsIds = [1, 2, 3];
@@ -16,7 +21,7 @@ const isLea = hasId(leaIds);
 
 const own = (system, selector) =>
   qq(selector, system).filter(
-    el => el.parentElement.closest('.tabsystem, .tabinline') === system
+    el => el.parentElement?.closest('.tabsystem, .tabinline') === system
   );
 
 const CARACTERS = {
@@ -33,26 +38,26 @@ const CARACTERS = {
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
   },
-    johnDoe: {
+  johnDoe: {
     face: 'Jacob Elordi',
     pseudo: 'John Doe',
-    firstNames: 'Philippa, Pippa',
-    lastNames: ['Jennings', 'de Vaucelles'],
-    families: ['Durham', 'de Ferrières'],
-    dateOfBirth: '07.02.1993',
+    firstNames: 'John',
+    lastNames: ['Doe'],
+    families: [],
+    dateOfBirth: '00.00.0000',
     address: ['blablabla'],
     job: 'homme de chambre au Carlton',
     gender: 'homme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire'
   },
-    janeDoe: {
+  janeDoe: {
     face: 'Ella Purnell',
     pseudo: 'Jane Doe',
-    firstNames: 'Philippa, Pippa',
-    lastNames: ['Jennings', 'de Vaucelles'],
-    families: ['Durham', 'de Ferrières'],
-    dateOfBirth: '07.02.1993',
+    firstNames: 'Jane',
+    lastNames: ['Doe'],
+    families: [],
+    dateOfBirth: '00.00.0000',
     address: ['blablabla'],
     job: 'héritière',
     gender: 'femme cis',
@@ -186,6 +191,8 @@ function addUsernameToNotiffiButton() {
 }
 
 function fillCard(root, data) {
+  if (!root || !data) return;
+
   qq('[data-field]', root).forEach(el => {
     const field = el.dataset.field;
     const value = data[field];
@@ -215,9 +222,48 @@ function fillCard(root, data) {
 }
 
 function buildRow(el) {
-  const fields = TAB_FIELDS[el.closest('.tab-content').dataset.tab].split(',');
-  el.innerHTML = fields.map(f => `<span data-field="${f}"></span>`).join('');
-  fillCard(el, CARACTERS[el.dataset.character]);
+  const tab = el.closest('.tab-content')?.dataset.tab;
+  const data = CARACTERS[el.dataset.character];
+  if (!TAB_FIELDS[tab] || !data) return;
+
+  el.innerHTML = TAB_FIELDS[tab]
+    .split(',')
+    .map(f => `<span data-field="${f}"></span>`)
+    .join('');
+  fillCard(el, data);
+}
+
+function prefixPseudos() {
+  qq('.list-row [data-field="pseudo"]').forEach(el => {
+    if (el.dataset.prefixed) return;
+    el.textContent = `@"${el.textContent}"`;
+    el.dataset.prefixed = '1';
+  });
+}
+
+function sortListRows() {
+  const groupes = new Map();
+  qq('.list-row').forEach(row => {
+    const parent = row.parentElement;
+    if (!groupes.has(parent)) groupes.set(parent, []);
+    groupes.get(parent).push(row);
+  });
+
+  const key = row => (q(':scope > span', row)?.textContent ?? '').trim();
+
+  groupes.forEach(rows => {
+    const marqueurs = rows.map(row => {
+      const m = document.createComment('');
+      row.replaceWith(m);
+      return m;
+    });
+
+    const tries = [...rows].sort((a, b) =>
+      key(a).localeCompare(key(b), 'fr', { sensitivity: 'base' })
+    );
+
+    marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
+  });
 }
 
 function hideAdminTools() {
@@ -227,6 +273,8 @@ function hideAdminTools() {
 
 function initPageContext() {
   const page = q('#page-content');
+  if (!page) return;
+
   const links = qq('.topic-header-path a.nav', page);
   const forumId = links.at(-1)?.href.match(/\/f(\d+)/)?.[1];
   const topicId = q('.page-title a', page)?.href.match(/\/t(\d+)/)?.[1];
@@ -236,7 +284,7 @@ function initPageContext() {
   if (topiclist && forumId) topiclist.id = forumId;
   if (postlist && topicId) postlist.id = topicId;
 
-  if (topicId === '267') {
+  if (postlist && topicId === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
     qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
@@ -259,71 +307,43 @@ function initPageContext() {
     });
   }
 
-  if (topicId === '272') {
+  if (postlist && topicId === '272') {
     qq('.post', postlist).forEach(p => p.classList.add('mini'));
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+onReady(() => {
+  hideAdminTools();
+  initPageContext();
+
+  qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
+  qq('.postprofile').forEach(p => p.after(sep()));
+  qq('.fcmainad-title-main').forEach(p => p.after(sep()));
+
   qq('[data-family]').forEach(el => {
     const data = FAMILIES[el.dataset.family];
     if (data) fillCard(el, { ...FAMILIES.default, ...data });
   });
 
   qq('[data-character]').forEach(el => {
-    const data = CARACTERS[el.dataset.character];
-    if (data) fillCard(el, data);
+    fillCard(el, CARACTERS[el.dataset.character]);
   });
 
   qq('.list-row[data-character]').forEach(buildRow);
+
+  prefixPseudos();
+  sortListRows();
+
+  applyIcons(ICONS);
+  addQueendomTab();
+  Tabs();
+  TabsInline();
+  HeaderNav();
+  ClockWall();
+  addUsernameToNotiffiButton();
+  setInterval(ClockWall, 1000);
 });
 
 document.addEventListener('click', e => {
   e.target.closest('.bloc-toggle')?.classList.toggle('open');
 });
-
-hideAdminTools();
-initPageContext();
-
-qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
-qq('.postprofile').forEach(p => p.after(sep()));
-
-function sortListRows() {
-  const groupes = new Map();
-  document.querySelectorAll('.list-row').forEach(row => {
-    const parent = row.parentElement;
-    if (!groupes.has(parent)) groupes.set(parent, []);
-    groupes.get(parent).push(row);
-  });
-
-  const key = row => (row.querySelector(':scope > span')?.textContent ?? '').trim();
-
-  groupes.forEach(rows => {
-    const marqueurs = rows.map(row => {
-      const m = document.createComment('');
-      row.replaceWith(m);
-      return m;
-    });
-
-    const tries = [...rows].sort((a, b) =>
-      key(a).localeCompare(key(b), 'fr', { sensitivity: 'base' })
-    );
-
-    marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
-  });
-}
-
-q('DOMContentLoaded', sortListRows);
-
-qq('span[data-field="pseudo"] span').forEach(el => {
-    el.textContent = `@"${el.textContent}"`;
-});
-
-applyIcons(ICONS);
-addQueendomTab();
-Tabs();
-TabsInline();
-HeaderNav();
-ClockWall();
-addUsernameToNotiffiButton();
-setInterval(ClockWall, 1000);

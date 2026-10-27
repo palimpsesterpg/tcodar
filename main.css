@@ -3039,7 +3039,7 @@ dl {
 
 .fam-row:not(:first-of-type),
 .list-row:not(:first-of-type),
-.list-row.title:not(:first-of-type) {
+.fam-row:not(:first-of-type) .list-row.title {
     border-top: 0.5px solid var(--border-row)
 }
 

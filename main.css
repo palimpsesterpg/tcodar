@@ -97,7 +97,7 @@
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
 
-    --gradient1light: linear-gradient(var(--white-op75), var(--co1));
+    --gradient1light: linear-gradient(var(--white-op75), var(--co1-op75));
 
     --gradientAll: linear-gradient(to right,
             var(--co1),
@@ -194,7 +194,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-2 {
@@ -213,7 +213,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-3,
@@ -233,7 +233,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-4,
@@ -253,7 +253,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-5,
@@ -273,7 +273,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-6,
@@ -293,7 +293,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-7 {
@@ -312,7 +312,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 .group-8,
@@ -332,7 +332,7 @@
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color))
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75))
 }
 
 @media (width < 1000px) {

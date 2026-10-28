@@ -292,28 +292,28 @@ lgborder123,
 lgborderb123,
 lgborderi123,
 lgborderbi123 {
-    border-image: var(--gradientAll-50) 1;
+    border-image: var(--gradientAll-100) 1;
 }
 
 lgborder12,
 lgborderb12,
 lgborderi12,
 lgborderbi12 {
-    border-image: var(--gradient12-50) 1;
+    border-image: var(--gradient12-100) 1;
 }
 
 lgborder13,
 lgborderb13,
 lgborderi13,
 lgborderbi13 {
-    border-image: var(--gradient13-50) 1;
+    border-image: var(--gradient13-100) 1;
 }
 
 lgborder23,
 lgborderb23,
 lgborderi23,
 lgborderbi23 {
-    border-image: var(--gradient23-50) 1;
+    border-image: var(--gradient23-100) 1;
 }
 
 lgbordergc,
@@ -519,21 +519,21 @@ lback1,
 lbackb1,
 lbacki1,
 lbackbi1 {
-    background-color: var(--co1-50)
+    background-color: var(--co1-100)
 }
 
 lback2,
 lbackb2,
 lbacki2,
 lbackbi2 {
-    background-color: var(--co2-50)
+    background-color: var(--co2-100)
 }
 
 lback3,
 lbackb3,
 lbacki3,
 lbackbi3 {
-    background-color: var(--co3-50)
+    background-color: var(--co3-100)
 }
 
 lbackn,
@@ -554,7 +554,7 @@ lbackgc,
 lbackbgc,
 lbackigc,
 lbackbigc {
-    background-color: var(--group-color-50)
+    background-color: var(--group-color-100)
 }
 
 dback1,
@@ -1153,7 +1153,7 @@ lgborder123,
 lgborderb123,
 lgborderi123,
 lgborderbi123 {
-    background: var(--gradientAll-50)
+    background: var(--gradientAll-100)
 }
 
 lbgrad12,
@@ -1168,7 +1168,7 @@ lgrad12,
 lgradb12,
 lgradi12,
 lgradbi12 {
-    background: var(--gradient12-50)
+    background: var(--gradient12-100)
 }
 
 lbgrad13,
@@ -1183,7 +1183,7 @@ lgborder13,
 lgborderb13,
 lgborderi13,
 lgborderbi13 {
-    background: var(--gradient13-50)
+    background: var(--gradient13-100)
 }
 
 lbgrad23,
@@ -1198,7 +1198,7 @@ lgborder23,
 lgborderb23,
 lgborderi23,
 lgborderbi23 {
-    background: var(--gradient23-50)
+    background: var(--gradient23-100)
 }
 
 lbgradgc,
@@ -1736,7 +1736,7 @@ under1,
 underb1,
 underi1,
 underbi1 {
-    box-shadow: inset 0 -8px 0 var(--co1-50);
+    box-shadow: inset 0 -8px 0 var(--co1-100);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
     color: var(--co1)
@@ -1746,7 +1746,7 @@ under2,
 underb2,
 underi2,
 underbi2 {
-    box-shadow: inset 0 -8px 0 var(--co2-50);
+    box-shadow: inset 0 -8px 0 var(--co2-100);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
     color: var(--co2)
@@ -1756,7 +1756,7 @@ under3,
 underb3,
 underi3,
 underbi3 {
-    box-shadow: inset 0 -8px 0 var(--co3-50);
+    box-shadow: inset 0 -8px 0 var(--co3-100);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
     color: var(--co3)
@@ -1786,7 +1786,7 @@ undergc,
 underbgc,
 underigc,
 underbigc {
-    box-shadow: inset 0 -8px 0 var(--group-color-50);
+    box-shadow: inset 0 -8px 0 var(--group-color-100);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
     color: var(--group-color)
@@ -2883,17 +2883,17 @@ majgc::first-letter {
 .br8d,
 .br8gc,
 .br8w {
-    background-color: var(--co1-50);
+    background-color: var(--co1-100);
     width: 35%;
     height: 2.5px;
 }
 
 .br82 {
-    background-color: var(--co2-50);
+    background-color: var(--co2-100);
 }
 
 .br83 {
-    background-color: var(--co3-50);
+    background-color: var(--co3-100);
 }
 
 .br8n {
@@ -2905,5 +2905,5 @@ majgc::first-letter {
 }
 
 .br8gc {
-    background-color: var(--group-color-50);
+    background-color: var(--group-color-100);
 }

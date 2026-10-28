@@ -39,33 +39,29 @@
     --co1-900: #181925;
     --co1-950: #0c0d13;
 
-    --co2-50: #fbd1d4;
-    --co2-100: #f6a3a9;
-    --co2-200: #f2757e;
-    --co2-300: #ee4753;
-    --co2-400: #ea1a27;
-    --co2: #c1121f;
-    --co2op50: #c1121f80;
-    --co2-600: #9f0f18;
-    --co2-700: #800c14;
-    --co2-800: #60090f;
-    --co2-900: #40060a;
-    --co2-950: #200305;
-
-    --co3-50: #e6eef4;
-    --co3-100: #ccdee9;
-    --co3-200: #b3cdde;
-    --co3-300: #99bdd2;
-    --co3-400: #80acc7;
-    --co3: #669bbc;
-    --co3op50: #669bbc80;
-    --co3-600: #4a84a8;
-    --co3-700: #3b6a87;
-    --co3-800: #2c4f65;
-    --co3-900: #1e3543;
-    --co3-950: #0f1a22;
-
-    --whiteop50: #ffffff80;
+    --co2-50: #FFC3CD;
+    --co2-100: #FF869A;
+    --co2-200: #FF4A68;
+    --co2-300: #FF0E36;
+    --co2-400: #D00023;
+    --co2: #960018;
+    --co2op50: #96001880;
+    --co2-600: #7B0015;
+    --co2-700: #630010;
+    --co2-800: #4A000C;
+    --co2-900: #310008;
+    --co2-950: #190004 --co3-50: #E5E2F9;
+    --co3-100: #CAC5F3;
+    --co3-200: #B0A8EE;
+    --co3-300: #958BE8;
+    --co3-400: #7B6EE2;
+    --co3: #6050DC;
+    --co3op50: #6050DC80;
+    --co3-600: #3D29D1;
+    --co3-700: #3121A8;
+    --co3-800: #25197E;
+    --co3-900: #181154;
+    --co3-950: #0C082A --whiteop50: #ffffff80;
     --whiteop75: #ffffffbf;
     --whiteop90: #ffffffe6;
 
@@ -147,28 +143,41 @@
     --co1-200: #242638;
     --co1-100: #181925;
     --co1-50: #0c0d13;
-    --co2-950: #fbd1d4;
-    --co2-900: #f6a3a9;
-    --co2-800: #f2757e;
-    --co2-700: #ee4753;
-    --co2-600: #ea1a27;
-    --co2: #c1121f;
-    --co2-400: #9f0f18;
-    --co2-300: #800c14;
-    --co2-200: #60090f;
-    --co2-100: #40060a;
-    --co2-50: #200305;
-    --co3-950: #e6eef4;
-    --co3-900: #ccdee9;
-    --co3-800: #b3cdde;
-    --co3-700: #99bdd2;
-    --co3-600: #80acc7;
-    --co3: #669bbc;
-    --co3-400: #4a84a8;
-    --co3-300: #3b6a87;
-    --co3-200: #2c4f65;
-    --co3-100: #1e3543;
-    --co3-50: #0f1a22
+
+    --co2-950: #FFC3CD;
+    --co2-900: #FF869A;
+    --co2-800: #FF4A68;
+    --co2-700: #FF0E36;
+    --co2-600: #D00023;
+    --co2: #960018;
+    --co2op50: #96001880;
+    --co2-400: #7B0015;
+    --co2-300: #630010;
+    --co2-200: #4A000C;
+    --co2-100: #310008;
+    --co2-50: #190004 --co3-950: #E5E2F9;
+    --co3-900: #CAC5F3;
+    --co3-800: #B0A8EE;
+    --co3-700: #958BE8;
+    --co3-600: #7B6EE2;
+    --co3: #6050DC;
+    --co3op50: #6050DC80;
+    --co3-400: #3D29D1;
+    --co3-300: #3121A8;
+    --co3-200: #25197E;
+    --co3-100: #181154;
+    --co3-50: #0C082A --group-color-950: #EEE2E7;
+    --group-color-900: #DDC5CE;
+    --group-color-800: #CCA8B6;
+    --group-color-700: #BB8B9E;
+    --group-color-600: #AA6E85;
+    --group-color: #94576E;
+    --group-colorop50: #94576E80;
+    --group-color-400: #7B485C;
+    --group-color-300: #633A49;
+    --group-color-200: #4A2B37;
+    --group-color-100: #311D25;
+    --group-color-50: #190E12;
 }
 
 .group-3,
@@ -352,6 +361,104 @@
 
     .forum-off .forum-lastpost-avatar img {
         width: 50px;
+    }
+}
+
+[data-color-scheme="dark"] {
+
+    .group-3,
+    .crimson {
+        --group-color-950: #FFC3CD;
+        --group-color-900: #FF869A;
+        --group-color-800: #FF4A68;
+        --group-color-700: #FF0E36;
+        --group-color-600: #D00023;
+        --group-color: #960018;
+        --group-colorop50: #96001880;
+        --group-color-400: #7B0015;
+        --group-color-300: #630010;
+        --group-color-200: #4A000C;
+        --group-color-100: #310008;
+        --group-color-50: #190004
+    }
+
+    .group-4,
+    .bronze {
+        --group-color-950: #FFE1CC;
+        --group-color-900: #FFC499;
+        --group-color-800: #FFA666;
+        --group-color-700: #FF8833;
+        --group-color-600: #FF6A00;
+        --group-color: #CD5700;
+        --group-colorop50: #CD570080;
+        --group-color-400: #AA4700;
+        --group-color-300: #883900;
+        --group-color-200: #662B00;
+        --group-color-100: #441C00;
+        --group-color-50: #220E00
+    }
+
+    .group-5,
+    .saffron {
+        --group-color-950: #FCF3D6;
+        --group-color-900: #F9E6AC;
+        --group-color-800: #F6DA83;
+        --group-color-700: #F4CD5A;
+        --group-color-600: #F1C130;
+        --group-color: #E6B110;
+        --group-colorop50: #E6B11080;
+        --group-color-400: #BF920D;
+        --group-color-300: #99750B;
+        --group-color-200: #725808;
+        --group-color-100: #4C3B05;
+        --group-color-50: #261D03
+    }
+
+    .group-6,
+    .emerald {
+        --group-color-950: #DFEADE;
+        --group-color-900: #BFD5BD;
+        --group-color-800: #9FBF9B;
+        --group-color-700: #7FAA7A;
+        --group-color-600: #62915D;
+        --group-color: #4C7048;
+        --group-colorop50: #4C704880;
+        --group-color-400: #3F5D3C;
+        --group-color-300: #324B30;
+        --group-color-200: #263824;
+        --group-color-100: #192518;
+        --group-color-50: #0D130C
+    }
+
+    .group-7 {
+        --group-color-950: #E5E2F9;
+        --group-color-900: #CAC5F3;
+        --group-color-800: #B0A8EE;
+        --group-color-700: #958BE8;
+        --group-color-600: #7B6EE2;
+        --group-color: #6050DC;
+        --group-colorop50: #6050DC80;
+        --group-color-400: #3D29D1;
+        --group-color-300: #3121A8;
+        --group-color-200: #25197E;
+        --group-color-100: #181154;
+        --group-color-50: #0C082A
+    }
+
+    .group-8,
+    .heliotrope {
+        --group-color-950: #EDDDF3;
+        --group-color-900: #DBBCE6;
+        --group-color-800: #C99ADA;
+        --group-color-700: #B779CD;
+        --group-color-600: #A557C1;
+        --group-color: #8E3FAB;
+        --group-colorop50: #8E3FAB80;
+        --group-color-400: #77358F;
+        --group-color-300: #5F2A72;
+        --group-color-200: #472056;
+        --group-color-100: #2F1539;
+        --group-color-50: #180B1D
     }
 }
 

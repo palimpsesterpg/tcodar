@@ -96,6 +96,9 @@
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
+
+    --gradient1light: linear-gradient(var(--light), var(--co1));
+
     --gradientAll: linear-gradient(to right,
             var(--co1),
             var(--co2),
@@ -1903,7 +1906,7 @@ a:hover {
     box-sizing: border-box;
     border-width: 0.5px !important;
     border-style: solid;
-    border-image: var(--gradientgc3) 1
+    border-image: var(--gradientgc3, var(--gradient1light)) 1
 }
 
 .member-avatar img {
@@ -1929,10 +1932,10 @@ a:hover {
     flex-direction: column;
     display: none;
     position: absolute;
-    background: var(--group-color-100, var(--co1-100));
+    background: var(--gradientgc3, var(--gradient1light));
     box-sizing: border-box;
     top: 0;
-    right: 0
+    right: 0;
 }
 
 .member-bloc:hover .member-infos {
@@ -1941,8 +1944,16 @@ a:hover {
 
 .member-infos>div {
     padding: var(--2xsmall);
+    font-size: var(--small);
     flex: 1;
-    background-color: var(--light)
+    display: flex;
+    background-color: var(--light);
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    color: var(--group-color, var(--co1))
 }
 
 .member-pseudo {

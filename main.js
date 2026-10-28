@@ -346,6 +346,29 @@ function initPageContext() {
   });
 }
 
+function groupPlayers() {
+  const parents = new Map();
+
+  qq('.list-row[data-character]').forEach(row => {
+    const name = q(':scope > [data-field^="player"]', row)?.textContent.trim().toLowerCase();
+    if (!name) return;
+
+    if (!parents.has(row.parentElement)) parents.set(row.parentElement, new Map());
+    const groups = parents.get(row.parentElement);
+    if (!groups.has(name)) groups.set(name, []);
+    groups.get(name).push(row);
+  });
+
+  parents.forEach(groups => {
+    groups.forEach(([first, ...others]) => {
+      others.forEach(row => {
+        qq(':scope > [data-field="pseudo"]', row).forEach(p => first.append(p));
+        row.remove();
+      });
+    });
+  });
+}
+
 onReady(() => {
   hideAdminTools();
   initPageContext();
@@ -373,6 +396,7 @@ onReady(() => {
   numberSpans()
 
   prefixPseudos();
+  groupPlayers();
   sortListRows();
 
   applyIcons(ICONS);

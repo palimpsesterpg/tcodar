@@ -2355,10 +2355,12 @@ a:hover {
 
 #reception .title-toggle {
     width: 100%;
+    font-size: var(--3xlarge);
+    text-align: center;
     font-family: var(--spe)
 }
 
-#reception .content-toggle {
+#reception.open .content-toggle {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 182px 100px 160px 100px 91px;

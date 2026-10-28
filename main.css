@@ -3114,7 +3114,7 @@ dl {
     border-right: 0.5px solid var(--border-row)
 }
 
-.list-row span {
+.list-row:not(.title) span {
     height: 2rem;
     color: var(--group-color)
 }
@@ -3128,7 +3128,7 @@ span[data-field="face"] {
     text-transform: capitalize
 }
 
-.list-row span:first-of-type {
+.list-row:not(.title) span:first-of-type {
     font-family: var(--serif)
 }
 

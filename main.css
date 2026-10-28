@@ -85,7 +85,7 @@
     --neutral: #e6e6e6;
     --darkneutral: #b8b8b8;
     --darkerneutral: #737373;
-    
+
     --dark: #191919;
     --lightdark: #333;
     --lighterdark: #4c4c4c;
@@ -990,7 +990,7 @@ a:hover {
 }
 
 .forum-content {
-    display: grid
+    display: flex
 }
 
 .forum-img {
@@ -1145,7 +1145,6 @@ a:hover {
 
 .forum-divers .forum-content {
     width: 100%;
-    display: flex;
     gap: var(--large);
     flex-wrap: wrap
 }
@@ -1225,6 +1224,7 @@ a:hover {
 
 .forum-loc .forum-content {
     width: 100%;
+    flex-direction: column;
     box-sizing: border-box;
     background: var(--whiteop50);
     flex: 1;
@@ -1322,11 +1322,8 @@ a:hover {
     text-align: right
 }
 
-.forum-admin .forum-content:has(.forum-links a) {
-    grid-template-rows: auto auto auto;
-}
-
 .forum-admin .forum-content {
+    display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 100px 1fr;
     gap: var(--large)
@@ -1336,9 +1333,17 @@ a:hover {
     grid-template-columns: 1fr 100px !important
 }
 
+.forum-admin .forum-content:has(.forum-links a) {
+    grid-template-rows: auto auto auto;
+}
+
 .forum-admin .forum-title {
     display: flex;
     flex-direction: column;
+    grid-area: 1 / 1 / 2 / 2
+}
+
+.forum-admin:has(.forum-links a) .forum-title {
     grid-area: 1 / 1 / 2 / 3
 }
 
@@ -1457,6 +1462,7 @@ a:hover {
     width: calc(100% - 100px);
     grid-template-columns: auto 75px;
     row-gap: var(--large);
+    display: grif;
     grid-template-rows: auto auto auto
 }
 
@@ -1530,7 +1536,6 @@ a:hover {
 .forum-media .forum-content {
     align-items: center;
     column-gap: var(--large);
-    display: flex;
     flex: 1
 }
 

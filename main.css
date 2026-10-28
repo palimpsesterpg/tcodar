@@ -1860,19 +1860,19 @@ a:hover {
     border: 0.5px solid var(--neutral)
 }
 
-.memberrow {
+.member {
     gap: var(--large);
     display: flex;
     flex-direction: column
 }
 
-.memberrow-avatar img {
+.member-avatar img {
     height: 250px;
     width: -webkit-fill-available;
     object-fit: cover
 }
 
-.memberrow-bloc {
+.member-bloc {
     height: 250px;
     width: -webkit-fill-available;
     display: flex;
@@ -1881,7 +1881,7 @@ a:hover {
     position: relative
 }
 
-.memberrow-infos {
+.member-infos {
     height: 250px;
     width: -webkit-fill-available;
     gap: var(--large);
@@ -1895,11 +1895,11 @@ a:hover {
     right: 0
 }
 
-.memberrow-bloc:hover .memberrow-infos {
+.member-bloc:hover .member-infos {
     display: flex
 }
 
-.memberrow-pseudo {
+.member-pseudo {
     text-align: center;
     font-family: var(--spe);
     font-size: var(--large)

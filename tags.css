@@ -1550,8 +1550,8 @@ labun,
 labud,
 labugc {
     text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-left: 1px
+    letter-spacing: 0.5px;
+    padding-left: 0.5px
 }
 
 mono1,
@@ -1737,9 +1737,9 @@ underb1,
 underi1,
 underbi1 {
     box-shadow: inset 0 -8px 0 var(--co1-50);
-    letter-spacing: 1x;
-    padding-left: 1px;
-    color: var(--co1-600)
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
+    color: var(--co1)
 }
 
 under2,
@@ -1747,9 +1747,9 @@ underb2,
 underi2,
 underbi2 {
     box-shadow: inset 0 -8px 0 var(--co2-50);
-    letter-spacing: 1x;
-    padding-left: 1px;
-    color: var(--co2-600)
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
+    color: var(--co2)
 }
 
 under3,
@@ -1757,9 +1757,9 @@ underb3,
 underi3,
 underbi3 {
     box-shadow: inset 0 -8px 0 var(--co3-50);
-    letter-spacing: 1x;
-    padding-left: 1px;
-    color: var(--co3-600)
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
+    color: var(--co3)
 }
 
 undern,
@@ -1767,8 +1767,8 @@ underbn,
 underin,
 underbin {
     box-shadow: inset 0 -8px 0 var(--darklight);
-    letter-spacing: 1x;
-    padding-left: 1px;
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
     color: var(--darkneutral)
 }
 
@@ -1777,8 +1777,9 @@ underbd,
 underid,
 underbid {
     box-shadow: inset 0 -8px 0 var(--white);
-    letter-spacing: 1x;
-    padding-left: 1px
+    letter-spacing: 0.5px;
+    color: var(--dark);
+    padding-left: 0.5px
 }
 
 undergc,
@@ -1786,9 +1787,9 @@ underbgc,
 underigc,
 underbigc {
     box-shadow: inset 0 -8px 0 var(--group-color-50);
-    letter-spacing: 1x;
-    padding-left: 1px;
-    color: var(--group-color-600)
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
+    color: var(--group-color)
 }
 
 main1,
@@ -2452,7 +2453,7 @@ sstitn,
 sstitd,
 sstitgc {
     font-size: var(--2xlarge);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--white);
     font-weight: 900;
     font-family: var(--serif)

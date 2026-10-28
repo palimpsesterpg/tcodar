@@ -12,7 +12,7 @@ const CARACTERS = {
     job: ['co-fondatrice et présidente de la branche londonienne de Jennings Consulting', 'un autre truc'],
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
-    groupId: 5
+    groupId: 6
   },
   johnDoe: {
     face: 'Jacob Elordi',
@@ -26,7 +26,7 @@ const CARACTERS = {
     gender: 'homme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire',
-    groupId: 7
+    groupId: 4
   },
   janeDoe: {
     face: 'Ella Purnell',
@@ -40,6 +40,6 @@ const CARACTERS = {
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
     status: 'célibataire',
-    groupId: 6
+    groupId: 3
   }
 };

@@ -12,16 +12,20 @@
     --4xlarge: 4rem;
     --5xlarge: 5rem;
     --6xlarge: 6rem;
+
     --main: "Open Sans";
     --mono: "Inconsolata";
     --serif: "Editorial";
     --display: "Bebas";
     --spe: "Acma";
+
     --icons-thin: "uicons-thin-straight";
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
+
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+
     --co1-50: #dedfea;
     --co1-100: #bdbfd5;
     --co1-200: #9ba0bf;
@@ -34,6 +38,7 @@
     --co1-800: #242638;
     --co1-900: #181925;
     --co1-950: #0c0d13;
+
     --co2-50: #fbd1d4;
     --co2-100: #f6a3a9;
     --co2-200: #f2757e;
@@ -46,6 +51,7 @@
     --co2-800: #60090f;
     --co2-900: #40060a;
     --co2-950: #200305;
+
     --co3-50: #e6eef4;
     --co3-100: #ccdee9;
     --co3-200: #b3cdde;
@@ -58,14 +64,18 @@
     --co3-800: #2c4f65;
     --co3-900: #1e3543;
     --co3-950: #0f1a22;
+
     --whiteop50: #ffffff80;
     --whiteop75: #ffffffbf;
     --whiteop90: #ffffffe6;
+
     --blackop50: #00000080;
     --blackop75: #000000bf;
     --blackop90: #000000e6;
+
     --white: #fff;
     --black: #000;
+
     --light: #fafafa;
     --darklight: #f2f2f2;
     --darkerlight: #ebebeb;
@@ -75,6 +85,7 @@
     --dark: #191919;
     --lightdark: #333;
     --lighterdark: #4c4c4c;
+
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
@@ -89,6 +100,20 @@
             var(--co1-100),
             var(--co2-100),
             var(--co3-100));
+
+    --group-color-50: #EEE2E7;
+    --group-color-100: #DDC5CE;
+    --group-color-200: #CCA8B6;
+    --group-color-300: #BB8B9E;
+    --group-color-400: #AA6E85;
+    --group-color: #94576E;
+    --group-colorop50: #94576E80;
+    --group-color-600: #7B485C;
+    --group-color-700: #633A49;
+    --group-color-800: #4A2B37;
+    --group-color-900: #311D25;
+    --group-color-950: #190E12;
+
     color-scheme: light
 }
 
@@ -146,15 +171,56 @@
     --co3-50: #0f1a22
 }
 
-.group-4 {
-    --group-color-50: #dddddd;
-    --group-color: #333333;
-    --group-colorop50: #33333380;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
+.group-3,
+.crimson {
+    --group-color-50: #FFC3CD;
+    --group-color-100: #FF869A;
+    --group-color-200: #FF4A68;
+    --group-color-300: #FF0E36;
+    --group-color-400: #D00023;
+    --group-color: #960018;
+    --group-colorop50: #96001880;
+    --group-color-600: #7B0015;
+    --group-color-700: #630010;
+    --group-color-800: #4A000C;
+    --group-color-900: #310008;
+    --group-color-950: #190004
 }
 
-.group-5 {
+.group-4,
+.bronze {
+    --group-color-50: #FFE1CC;
+    --group-color-100: #FFC499;
+    --group-color-200: #FFA666;
+    --group-color-300: #FF8833;
+    --group-color-400: #FF6A00;
+    --group-color: #CD5700;
+    --group-colorop50: #CD570080;
+    --group-color-600: #AA4700;
+    --group-color-700: #883900;
+    --group-color-800: #662B00;
+    --group-color-900: #441C00;
+    --group-color-950: #220E00
+}
+
+.group-5,
+.saffron {
+    --group-color-50: #FCF3D6;
+    --group-color-100: #F9E6AC;
+    --group-color-200: #F6DA83;
+    --group-color-300: #F4CD5A;
+    --group-color-400: #F1C130;
+    --group-color: #E6B110;
+    --group-colorop50: #E6B11080;
+    --group-color-600: #BF920D;
+    --group-color-700: #99750B;
+    --group-color-800: #725808;
+    --group-color-900: #4C3B05;
+    --group-color-950: #261D03
+}
+
+.group-6,
+.emerald {
     --group-color-50: #DFEADE;
     --group-color-100: #BFD5BD;
     --group-color-200: #9FBF9B;
@@ -166,59 +232,38 @@
     --group-color-700: #324B30;
     --group-color-800: #263824;
     --group-color-900: #192518;
-    --group-color-950: #0D130C;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
-}
-
-.group-6 {
-    --group-color-50: #ffcccc;
-    --group-color: #cd0000;
-    --group-colorop50: #cd000080;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
+    --group-color-950: #0D130C
 }
 
 .group-7 {
-    --group-color-50: #dde0ee;
-    --group-color: #424f8a;
-    --group-colorop50: #424f8a80;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
+    --group-color-50: #E5E2F9;
+    --group-color-100: #CAC5F3;
+    --group-color-200: #B0A8EE;
+    --group-color-300: #958BE8;
+    --group-color-400: #7B6EE2;
+    --group-color: #6050DC;
+    --group-colorop50: #6050DC80;
+    --group-color-600: #3D29D1;
+    --group-color-700: #3121A8;
+    --group-color-800: #25197E;
+    --group-color-900: #181154;
+    --group-color-950: #0C082A
 }
 
-.group-8 {
-    --group-color-50: #ffefd0;
-    --group-color: #e59700;
-    --group-colorop50: #e5970080;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
-}
-
-.group-test {
-    --group-color-50: #EEE2E7;
-    --group-color-100: #DDC5CE;
-    --group-color-200: #CCA8B6;
-    --group-color-300: #BB8B9E;
-    --group-color-400: #AA6E85;
-    --group-color: #94576E;
-    --group-colorop50: #94576E80;
-    --group-color-600: #7B485C;
-    --group-color-700: #633A49;
-    --group-color-800: #4A2B37;
-    --group-color-900: #311D25;
-    --group-color-950: #190E12;
-    --gradientgc1: linear-gradient(to right, var(--group-color-100), var(--group-color-200));
-    --gradientgc2: linear-gradient(to right, var(--group-color-400), var(--group-color))
-}
-
-.reverse {
-    --gradient12: linear-gradient(to left, var(--co1), var(--co2));
-    --gradient13: linear-gradient(to left, var(--co1), var(--co3));
-    --gradient23: linear-gradient(to left, var(--co2), var(--co3));
-    --gradient12-50: linear-gradient(to left, var(--co1-100), var(--co2-100));
-    --gradient13-50: linear-gradient(to left, var(--co1-100), var(--co3-100));
-    --gradient23-50: linear-gradient(to left, var(--co2-100), var(--co3-100))
+.group-8,
+.heliotrope {
+    --group-color-50: #EDDDF3;
+    --group-color-100: #DBBCE6;
+    --group-color-200: #C99ADA;
+    --group-color-300: #B779CD;
+    --group-color-400: #A557C1;
+    --group-color: #8E3FAB;
+    --group-colorop50: #8E3FAB80;
+    --group-color-600: #77358F;
+    --group-color-700: #5F2A72;
+    --group-color-800: #472056;
+    --group-color-900: #2F1539;
+    --group-color-950: #180B1D
 }
 
 @media (width < 1000px) {

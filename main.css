@@ -1,4 +1,6 @@
 :root {
+    color-scheme: light;
+
     --4xsmall: 0.25rem;
     --3xsmall: 0.375rem;
     --2xsmall: 0.5rem;
@@ -50,7 +52,9 @@
     --co2-700: #630010;
     --co2-800: #4A000C;
     --co2-900: #310008;
-    --co2-950: #190004 --co3-50: #E5E2F9;
+    --co2-950: #190004;
+
+    --co3-50: #E5E2F9;
     --co3-100: #CAC5F3;
     --co3-200: #B0A8EE;
     --co3-300: #958BE8;
@@ -61,7 +65,9 @@
     --co3-700: #3121A8;
     --co3-800: #25197E;
     --co3-900: #181154;
-    --co3-950: #0C082A --whiteop50: #ffffff80;
+    --co3-950: #0C082A;
+
+    --whiteop50: #ffffff80;
     --whiteop75: #ffffffbf;
     --whiteop90: #ffffffe6;
 
@@ -95,34 +101,23 @@
     --gradientAll-50: linear-gradient(to right,
             var(--co1-100),
             var(--co2-100),
-            var(--co3-100));
-
-    --group-color-50: #EEE2E7;
-    --group-color-100: #DDC5CE;
-    --group-color-200: #CCA8B6;
-    --group-color-300: #BB8B9E;
-    --group-color-400: #AA6E85;
-    --group-color: #94576E;
-    --group-colorop50: #94576E80;
-    --group-color-600: #7B485C;
-    --group-color-700: #633A49;
-    --group-color-800: #4A2B37;
-    --group-color-900: #311D25;
-    --group-color-950: #190E12;
-
-    color-scheme: light
+            var(--co3-100))
 }
 
 [data-color-scheme="dark"] {
     color-scheme: dark;
+
     --white: #191919;
     --black: #fafafa;
+
     --blackop50: #ffffff80;
     --blackop75: #ffffffbf;
     --blackop90: #ffffffe6;
+
     --whiteop50: #00000080;
     --whiteop75: #000000bf;
     --whiteop90: #000000e6;
+
     --light: #292929;
     --darklight: #1c1c1c;
     --darkerlight: #242424;
@@ -132,6 +127,7 @@
     --dark: #e6e6e6;
     --lightdark: #cccccc;
     --lighterdark: #b3b3b3;
+
     --co1-950: #dedfea;
     --co1-900: #bdbfd5;
     --co1-800: #9ba0bf;
@@ -155,7 +151,9 @@
     --co2-300: #630010;
     --co2-200: #4A000C;
     --co2-100: #310008;
-    --co2-50: #190004 --co3-950: #E5E2F9;
+    --co2-50: #190004;
+
+    --co3-950: #E5E2F9;
     --co3-900: #CAC5F3;
     --co3-800: #B0A8EE;
     --co3-700: #958BE8;
@@ -166,20 +164,22 @@
     --co3-300: #3121A8;
     --co3-200: #25197E;
     --co3-100: #181154;
-    --co3-50: #0C082A;
+    --co3-50: #0C082A
+}
 
-    --group-color-950: #EEE2E7;
-    --group-color-900: #DDC5CE;
-    --group-color-800: #CCA8B6;
-    --group-color-700: #BB8B9E;
-    --group-color-600: #AA6E85;
+.group-test {
+    --group-color-50: #EEE2E7;
+    --group-color-100: #DDC5CE;
+    --group-color-200: #CCA8B6;
+    --group-color-300: #BB8B9E;
+    --group-color-400: #AA6E85;
     --group-color: #94576E;
     --group-colorop50: #94576E80;
-    --group-color-400: #7B485C;
-    --group-color-300: #633A49;
-    --group-color-200: #4A2B37;
-    --group-color-100: #311D25;
-    --group-color-50: #190E12;
+    --group-color-600: #7B485C;
+    --group-color-700: #633A49;
+    --group-color-800: #4A2B37;
+    --group-color-900: #311D25;
+    --group-color-950: #190E12
 }
 
 .group-3,
@@ -243,7 +243,7 @@
     --group-color-700: #00472A;
     --group-color-800: #00361F;
     --group-color-900: #002415;
-    --group-color-950: #00120A;
+    --group-color-950: #00120A
 }
 
 .group-7 {
@@ -367,6 +367,21 @@
 }
 
 [data-color-scheme="dark"] {
+
+    .group-test {
+        --group-color-950: #EEE2E7;
+        --group-color-900: #DDC5CE;
+        --group-color-800: #CCA8B6;
+        --group-color-700: #BB8B9E;
+        --group-color-600: #AA6E85;
+        --group-color: #94576E;
+        --group-colorop50: #94576E80;
+        --group-color-400: #7B485C;
+        --group-color-300: #633A49;
+        --group-color-200: #4A2B37;
+        --group-color-100: #311D25;
+        --group-color-50: #190E12
+    }
 
     .group-3,
     .carmine {

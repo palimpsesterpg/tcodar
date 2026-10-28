@@ -2294,7 +2294,7 @@ a:hover {
 }
 
 #hub .two div {
-    background-color: var(--group-color-50);
+    background-color: var(--group-colorop50);
     color: var(--group-color);
     padding: var(--large);
     border: .5px solid var(--group-color);
@@ -2325,14 +2325,16 @@ a:hover {
     flex: 1;
     padding: var(--2xsmall) 0;
     justify-content: center;
-    color: var(--co1-50);
-    background-color: var(--co1);
+    color: var(--co1);
+    background-color: var(--co1op50);
     gap: var(--2xsmall);
     font-family: var(--display);
     text-transform: lowercase;
     font-weight: 700;
     letter-spacing: 2.5px;
-    padding-left: 2.5px
+    padding-left: 2.5px;
+    outline: 2.5px solid var(--co1);
+    margin: 2.5px
 }
 
 #hub .four strong {

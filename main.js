@@ -248,6 +248,23 @@ function buildFamilyRow(el) {
   });
 }
 
+const toCharacterKey = name =>
+  name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .split(/[^a-zA-Z0-9]+/)
+    .filter(Boolean)
+    .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
+    .join('');
+
+function setMemberCharacters() {
+  qq('.member').forEach(el => {
+    const name = q('.member-pseudo', el)?.textContent.trim();
+    if (!name) return;
+    el.dataset.character = toCharacterKey(name);
+  });
+}
+
 function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
     if (q('a.mentiontag', el)) return;
@@ -408,6 +425,8 @@ onReady(() => {
     const data = fams[el.dataset.family];
     if (data) fillCard(el, { ...fams.default, ...data });
   });
+
+  setMemberCharacters();
 
   qq('[data-character]').forEach(el => {
     fillCard(el, CHARACTERS[el.dataset.character]);

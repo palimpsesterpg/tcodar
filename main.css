@@ -353,12 +353,6 @@
         --6xlarge: 5rem
     }
 
-    body {
-        overflow: auto !important;
-        width: 100vh !important;
-        height: 100vh !important
-    }
-
     #categories {
         gap: var(--large) !important;
         margin-left: 0 !important;
@@ -750,7 +744,7 @@ a:hover {
 #page-home,
 #page-footer {
     padding: var(--large);
-    width: 70%;
+    width: 75%;
     box-sizing: border-box;
     margin: 0 auto;
     background-color: var(--darklight);

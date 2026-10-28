@@ -1412,10 +1412,11 @@ a:hover {
 .posticons {
     position: absolute;
     flex-direction: column;
-    top: var(--2xsmall);
+    top: calc(-0.5rem - 0.5px);
+    border: 0.5px solid var(--neutral);
     left: calc(100% + var(--large));
     box-sizing: border-box;
-    padding: var(--large);
+    padding: 0 var(--2xsmall);
     justify-content: center;
     background: var(--light);
     display: flex;
@@ -1441,8 +1442,7 @@ a:hover {
 .posticons div>span {
     display: none;
     position: absolute;
-    left: calc(100% + var(--xlarge));
-    top: -50%;
+    left: calc(100% + var(--large));
     font-size: var(--small);
     color: var(--black);
     width: max-content;

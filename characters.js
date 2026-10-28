@@ -1,4 +1,4 @@
-const CARACTERS = {
+const CHARACTERS = {
   pippaJennings: {
     id: '2',
     face: 'Jodie Comer',

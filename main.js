@@ -219,7 +219,7 @@ function fillCard(root, data, index) {
 
 function buildRow(el) {
   const tab = el.closest('.tab-content')?.dataset.tab;
-  const data = CARACTERS[el.dataset.character];
+  const data = CHARACTERS[el.dataset.character];
   if (!TAB_FIELDS[tab] || !data) return;
 
   el.innerHTML = TAB_FIELDS[tab]
@@ -252,7 +252,7 @@ function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
     if (q('a.mentiontag', el)) return;
 
-    const data = CARACTERS[el.closest('.list-row')?.dataset.character];
+    const data = CHARACTERS[el.closest('.list-row')?.dataset.character];
     const name = el.textContent.trim();
 
     if (!data?.id) {
@@ -410,7 +410,7 @@ onReady(() => {
   });
 
   qq('[data-character]').forEach(el => {
-    fillCard(el, CARACTERS[el.dataset.character]);
+    fillCard(el, CHARACTERS[el.dataset.character]);
   });
 
   qq('.list-row[data-character]').forEach(buildRow);

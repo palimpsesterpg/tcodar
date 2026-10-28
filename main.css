@@ -109,11 +109,7 @@
             var(--co2-100),
             var(--co3-100));
 
-    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50));
-
-    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
-    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
-    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color));
+    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50))
 }
 
 [data-color-scheme="dark"] {
@@ -191,7 +187,11 @@
 
     --group-color-op25: #94576E40;
     --group-color-op50: #94576E80;
-    --group-color-op75: #94576Ebf
+    --group-color-op75: #94576Ebf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-2 {
@@ -204,10 +204,13 @@
     --group-color-200: #adadad;
     --group-color-100: #d6d6d6;
 
-
     --group-color-op25: #33333340;
     --group-color-op50: #33333380;
-    --group-color-op75: #333333bf
+    --group-color-op75: #333333bf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-3,
@@ -223,7 +226,11 @@
 
     --group-color-op25: #96001840;
     --group-color-op50: #96001880;
-    --group-color-op75: #960018bf
+    --group-color-op75: #960018bf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-4,
@@ -239,7 +246,11 @@
 
     --group-color-op25: #CD570040;
     --group-color-op50: #CD570080;
-    --group-color-op75: #CD5700bf
+    --group-color-op75: #CD5700bf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-5,
@@ -255,7 +266,11 @@
 
     --group-color-op25: #bf920d40;
     --group-color-op50: #bf920d80;
-    --group-color-op75: #bf920dbf
+    --group-color-op75: #bf920dbf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-6,
@@ -271,7 +286,11 @@
 
     --group-color-op25: #2c7e6540;
     --group-color-op50: #2c7e6580;
-    --group-color-op75: #2c7e65bf
+    --group-color-op75: #2c7e65bf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-7 {
@@ -286,7 +305,11 @@
 
     --group-color-op25: #6050DC40;
     --group-color-op50: #6050DC80;
-    --group-color-op75: #6050DCbf
+    --group-color-op75: #6050DCbf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 .group-8,
@@ -302,7 +325,11 @@
 
     --group-color-op25: #8E3FAB40;
     --group-color-op50: #8E3FAB80;
-    --group-color-op75: #8E3FABbf
+    --group-color-op75: #8E3FABbf;
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color))
 }
 
 @media (width < 1000px) {
@@ -1609,7 +1636,7 @@ a:hover {
 }
 
 .forum-archives .forum-content {
-    flex-direction: column;
+    flex-direction: column
 }
 
 .forum-archives {
@@ -1872,11 +1899,11 @@ a:hover {
     gap: var(--large);
     display: flex;
     flex-direction: column;
-    padding: var(--large);
+    padding: var(--2xsmall);
     box-sizing: border-box;
     border-width: 0.5px !important;
     border-style: solid;
-    border-image: var(--gradientgc3) 1;
+    border-image: var(--gradientgc3) 1
 }
 
 .member-avatar img {

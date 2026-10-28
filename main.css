@@ -1944,6 +1944,7 @@ a:hover {
 
 .member-infos>div {
     padding: var(--4xsmall);
+    gap: var(--2xsmall);
     font-size: var(--small);
     flex: 1;
     display: flex;

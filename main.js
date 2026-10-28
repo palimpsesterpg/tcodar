@@ -65,7 +65,8 @@ const ICONS = [
   { selector: '#i_msg_outbox', icon: 'fi fi-ts-envelope', replace: true },
   { selector: '#i_msg_savebox', icon: 'fi fi-ts-archive', replace: true },
   { selector: '.ajax-profil_valid, .ajax-profil_edit', icon: 'fi fi-ts-check', replace: true },
-  { selector: 'img[src*="folder_new.gif"]', icon: 'fi fi-ts-exclamation', replace: true }
+  { selector: 'img[src*="folder_new.gif"]', icon: 'fi fi-ts-exclamation', replace: true },
+  { selector: 'img[src*="icon_contact_www.png"]', icon: 'fi fi-ts-exclamation', replace: true }
 ];
 
 function applyIcons(map) {

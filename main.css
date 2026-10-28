@@ -952,8 +952,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    justify-content: center;
-    align-items: center
+    justify-content: center
 }
 
 .forum-content {
@@ -1289,10 +1288,13 @@ a:hover {
     text-align: right
 }
 
-.forum-admin .forum-content {
+.forum-admin .forum-content:has(.forum-links a) {
     grid-template-rows: auto auto auto;
+}
+
+.forum-admin .forum-content {
+    grid-template-rows: auto auto;
     grid-template-columns: 100px 1fr;
-    align-self: normal;
     gap: var(--large)
 }
 

@@ -2964,17 +2964,18 @@ p {
     background-color: transparent
 }
 
+button1,
+.button1,
 button2,
 .button2 {
-    margin: 0;
-    margin-inline: 0;
-    padding: var(--2xsmall);
-    padding-inline: 0;
-    border: 0;
+    padding: var(--2xsmall) var(--2xsmall);
+    border: 0.5px solid var(--co1-200);
     background-color: var(--co1-50);
     color: var(--co1);
-    text-shadow: 1px 1px var(--white);
+    text-shadow: 0.5px 0.5px var(--white);
     font-family: var(--display);
+    font-weight: 700;
+    font-size: var(--large);
     text-transform: uppercase
 }
 

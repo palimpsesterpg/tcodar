@@ -976,13 +976,27 @@ a:hover {
 }
 
 #f1.forum:before {
-    content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher. ";
+    content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher.";
     width: 90%;
     margin-bottom: var(--large)
 }
 
 #f80.forum:after {
-    content: "Dans ces batailles de l’argent, sourdes et lâches, où l’on éventre les faibles, sans bruit, il n’y a plus de liens, plus de parenté, plus d’amitié";
+    content: "Dans ces batailles de l’argent, sourdes et lâches, où l’on éventre les faibles, sans bruit, il n’y a plus de liens, plus de parenté, plus d’amitié.";
+    width: 90%;
+    text-align: right;
+    align-self: flex-end;
+    margin-top: var(--large)
+}
+
+#f10.forum:before {
+    content: "C’est drôle, les hommes riches s’imaginent qu’ils peuvent tout avoir pour leur argent... Eh bien, et si je ne veux pas ?";
+    width: 90%;
+    margin-bottom: var(--large)
+}
+
+#f45.forum:after {
+    content: "Ah ! l'argent, cet argent pourrisseur, empoisonneur, qui desséchait les âmes, en chassait la bonté, la tendresse, l'amour des autres !";
     width: 90%;
     text-align: right;
     align-self: flex-end;
@@ -990,7 +1004,9 @@ a:hover {
 }
 
 #f1.forum:before,
-#f80.forum:after {
+#f80.forum:after,
+#f10.forum:before,
+#f45.forum:after {
     font-family: var(--serif);
     display: block;
     font-style: italic;
@@ -1171,12 +1187,14 @@ a:hover {
 }
 
 .forum-loc {
-    flex: 1 1 calc(50% - var(--large))
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-loc .forum-content {
+    width: 100%;
+    box-sizing: border-box;
     background: var(--whiteop50);
-    height: -webkit-fill-available;
+    flex: 1;
     padding: var(--large);
     border: 0.5px solid var(--white);
     backdrop-filter: blur(2px);
@@ -1201,6 +1219,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
+    height: max-content;
     order: 3
 }
 
@@ -1233,9 +1252,13 @@ a:hover {
     font-size: var(--medium) !important
 }
 
+.forum-loc .forum-lastpost {
+    gap: var(--large)
+}
+
 .forum-loc .forum-lastpost-avatar img {
-    height: var(--large);
-    width: var(--large);
+    height: var(--3xlarge);
+    width: var(--3xlarge);
     object-fit: cover;
     border-radius: 50%
 }
@@ -1269,6 +1292,7 @@ a:hover {
 .forum-admin .forum-content {
     grid-template-rows: auto auto auto;
     grid-template-columns: 100px 1fr;
+    align-self: normal;
     gap: var(--large)
 }
 
@@ -1401,11 +1425,12 @@ a:hover {
 }
 
 .forum-off .forumtitle {
-    font-size: var(--2xlarge);
+    font-size: var(--xlarge);
     font-family: var(--spe);
     grid-area: 1 / 1 / 2 / 3;
     color: var(--co2);
     text-transform: lowercase;
+    font-weight: 300;
     text-shadow: 1px 1px var(--white)
 }
 
@@ -1480,10 +1505,10 @@ a:hover {
 .forum-media .forumtitle {
     font-family: var(--mono);
     text-transform: uppercase;
-    letter-spacing: 5px;
-    padding-left: var(--small);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     font-weight: 100;
-    font-size: var(--2xlarge)
+    font-size: var(--xlarge)
 }
 
 .forum-media:nth-of-type(odd) .forumtitle {

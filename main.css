@@ -34,7 +34,9 @@
     --co1-300: #7a80aa;
     --co1-400: #5d6391;
     --co1: #474c6f;
-    --co1op50: #474c6f80;
+    --co1-op25: #474c6f40;
+    --co1-op50: #474c6f80;
+    --co1-op75: #474c6fbf;
     --co1-600: #3c405d;
     --co1-700: #30334b;
     --co1-800: #242638;
@@ -47,7 +49,9 @@
     --co2-300: #FF0E36;
     --co2-400: #D00023;
     --co2: #960018;
-    --co2op50: #96001880;
+    --co2-op25: #96001840;
+    --co2-op50: #96001880;
+    --co2-op75: #960018bf;
     --co2-600: #7B0015;
     --co2-700: #630010;
     --co2-800: #4A000C;
@@ -60,20 +64,24 @@
     --co3-300: #958BE8;
     --co3-400: #7B6EE2;
     --co3: #6050DC;
-    --co3op50: #6050DC80;
+    --co3-op25: #6050DC40;
+    --co3-op50: #6050DC80;
+    --co3-op75: #6050DCbf;
     --co3-600: #3D29D1;
     --co3-700: #3121A8;
     --co3-800: #25197E;
     --co3-900: #181154;
     --co3-950: #0C082A;
 
-    --whiteop50: #ffffff80;
-    --whiteop75: #ffffffbf;
-    --whiteop90: #ffffffe6;
+    --white-op25: #ffffff40;
+    --white-op50: #ffffff80;
+    --white-op75: #ffffffbf;
+    --white-op90: #ffffffe6;
 
-    --blackop50: #00000080;
-    --blackop75: #000000bf;
-    --blackop90: #000000e6;
+    --black-op25: #00000040;
+    --black-op50: #00000080;
+    --black-op75: #000000bf;
+    --black-op90: #000000e6;
 
     --white: #fff;
     --black: #000;
@@ -112,13 +120,13 @@
     --white: #191919;
     --black: #fafafa;
 
-    --blackop50: #ffffff80;
-    --blackop75: #ffffffbf;
-    --blackop90: #ffffffe6;
+    --black-op50: #ffffff80;
+    --black-op75: #ffffffbf;
+    --black-op90: #ffffffe6;
 
-    --whiteop50: #00000080;
-    --whiteop75: #000000bf;
-    --whiteop90: #000000e6;
+    --white-op50: #00000080;
+    --white-op75: #000000bf;
+    --white-op90: #000000e6;
 
     --light: #292929;
     --darklight: #1c1c1c;
@@ -137,6 +145,8 @@
     --co1-800: #9ba0bf;
     --co1-700: #7a80aa;
     --co1-600: #5d6391;
+    --co1-op75: #474c6f40;
+    --co1-op25: #474c6fbf;
     --co1: #474c6f;
     --co1-400: #3c405d;
     --co1-300: #30334b;
@@ -149,8 +159,9 @@
     --co2-800: #FF4A68;
     --co2-700: #FF0E36;
     --co2-600: #D00023;
+    --co2-op75: #96001840;
+    --co2-op25: #960018bf;
     --co2: #960018;
-    --co2op50: #96001880;
     --co2-400: #7B0015;
     --co2-300: #630010;
     --co2-200: #4A000C;
@@ -162,8 +173,9 @@
     --co3-800: #B0A8EE;
     --co3-700: #958BE8;
     --co3-600: #7B6EE2;
+    --co3-op75: #6050DC40;
+    --co3-op25: #6050DCbf;
     --co3: #6050DC;
-    --co3op50: #6050DC80;
     --co3-400: #3D29D1;
     --co3-300: #3121A8;
     --co3-200: #25197E;
@@ -178,7 +190,7 @@
     --group-color-300: #BB8B9E;
     --group-color-400: #AA6E85;
     --group-color: #94576E;
-    --group-colorop50: #94576E80;
+    --group-color-op50: #94576E80;
     --group-color-600: #7B485C;
     --group-color-700: #633A49;
     --group-color-800: #4A2B37;
@@ -193,7 +205,7 @@
     --group-color-300: #555555;
     --group-color-400: #2A2A2A;
     --group-color: #000000;
-    --group-colorop50: #00000080;
+    --group-color-op50: #00000080;
     --group-color-600: #000000;
     --group-color-700: #000000;
     --group-color-800: #000000;
@@ -209,7 +221,7 @@
     --group-color-300: #FF0E36;
     --group-color-400: #D00023;
     --group-color: #960018;
-    --group-colorop50: #96001880;
+    --group-color-op50: #96001880;
     --group-color-600: #7B0015;
     --group-color-700: #630010;
     --group-color-800: #4A000C;
@@ -225,7 +237,7 @@
     --group-color-300: #FF8833;
     --group-color-400: #FF6A00;
     --group-color: #CD5700;
-    --group-colorop50: #CD570080;
+    --group-color-op50: #CD570080;
     --group-color-600: #AA4700;
     --group-color-700: #883900;
     --group-color-800: #662B00;
@@ -241,7 +253,7 @@
     --group-color-300: #F4CD5A;
     --group-color-400: #F1C130;
     --group-color: #E6B110;
-    --group-colorop50: #E6B11080;
+    --group-color-op50: #E6B11080;
     --group-color-600: #BF920D;
     --group-color-700: #99750B;
     --group-color-800: #725808;
@@ -257,7 +269,7 @@
     --group-color-300: #00F18D;
     --group-color-400: #00AE66;
     --group-color: #00693E;
-    --group-colorop50: #00693E80;
+    --group-color-op50: #00693E80;
     --group-color-600: #005934;
     --group-color-700: #00472A;
     --group-color-800: #00361F;
@@ -272,7 +284,7 @@
     --group-color-300: #958BE8;
     --group-color-400: #7B6EE2;
     --group-color: #6050DC;
-    --group-colorop50: #6050DC80;
+    --group-color-op50: #6050DC80;
     --group-color-600: #3D29D1;
     --group-color-700: #3121A8;
     --group-color-800: #25197E;
@@ -288,7 +300,7 @@
     --group-color-300: #B779CD;
     --group-color-400: #A557C1;
     --group-color: #8E3FAB;
-    --group-colorop50: #8E3FAB80;
+    --group-color-op50: #8E3FAB80;
     --group-color-600: #77358F;
     --group-color-700: #5F2A72;
     --group-color-800: #472056;
@@ -394,7 +406,7 @@
         --group-color-700: #BB8B9E;
         --group-color-600: #AA6E85;
         --group-color: #94576E;
-        --group-colorop50: #94576E80;
+        --group-color-op50: #94576E80;
         --group-color-400: #7B485C;
         --group-color-300: #633A49;
         --group-color-200: #4A2B37;
@@ -409,7 +421,7 @@
         --group-color-300: #000000;
         --group-color-400: #000000;
         --group-color: #000000;
-        --group-colorop50: #00000080;
+        --group-color-op50: #00000080;
         --group-color-600: #2A2A2A;
         --group-color-700: #555555;
         --group-color-800: #808080;
@@ -425,7 +437,7 @@
         --group-color-700: #FF0E36;
         --group-color-600: #D00023;
         --group-color: #960018;
-        --group-colorop50: #96001880;
+        --group-color-op50: #96001880;
         --group-color-400: #7B0015;
         --group-color-300: #630010;
         --group-color-200: #4A000C;
@@ -441,7 +453,7 @@
         --group-color-700: #FF8833;
         --group-color-600: #FF6A00;
         --group-color: #CD5700;
-        --group-colorop50: #CD570080;
+        --group-color-op50: #CD570080;
         --group-color-400: #AA4700;
         --group-color-300: #883900;
         --group-color-200: #662B00;
@@ -457,7 +469,7 @@
         --group-color-700: #F4CD5A;
         --group-color-600: #F1C130;
         --group-color: #E6B110;
-        --group-colorop50: #E6B11080;
+        --group-color-op50: #E6B11080;
         --group-color-400: #BF920D;
         --group-color-300: #99750B;
         --group-color-200: #725808;
@@ -473,7 +485,7 @@
         --group-color-300: #00472A;
         --group-color-400: #005934;
         --group-color: #00693E;
-        --group-colorop50: #00693E80;
+        --group-color-op50: #00693E80;
         --group-color-600: #00AE66;
         --group-color-700: #00F18D;
         --group-color-800: #36FFAB;
@@ -488,7 +500,7 @@
         --group-color-700: #958BE8;
         --group-color-600: #7B6EE2;
         --group-color: #6050DC;
-        --group-colorop50: #6050DC80;
+        --group-color-op50: #6050DC80;
         --group-color-400: #3D29D1;
         --group-color-300: #3121A8;
         --group-color-200: #25197E;
@@ -504,7 +516,7 @@
         --group-color-700: #B779CD;
         --group-color-600: #A557C1;
         --group-color: #8E3FAB;
-        --group-colorop50: #8E3FAB80;
+        --group-color-op50: #8E3FAB80;
         --group-color-400: #77358F;
         --group-color-300: #5F2A72;
         --group-color-200: #472056;
@@ -629,7 +641,7 @@ a:hover {
     font-family: var(--spe);
     color: #fff0;
     flex-wrap: wrap;
-    text-shadow: 0 0 5px var(--whiteop50)
+    text-shadow: 0 0 5px var(--white-op50)
 }
 
 .header-tab {
@@ -789,7 +801,7 @@ a:hover {
     align-items: center;
     gap: var(--large);
     justify-content: space-between;
-    background-color: var(--whiteop75);
+    background-color: var(--white-op75);
     flex-direction: column;
     padding: var(--large)
 }
@@ -840,7 +852,7 @@ a:hover {
     display: none;
     position: absolute;
     padding: var(--small) var(--large);
-    background-color: var(--whiteop75);
+    background-color: var(--white-op75);
     border: 0.5px solid;
     align-items: center;
     width: max-content;
@@ -1226,7 +1238,7 @@ a:hover {
     width: 100%;
     flex-direction: column;
     box-sizing: border-box;
-    background: var(--whiteop50);
+    background: var(--white-op50);
     flex: 1;
     padding: var(--large);
     border: 0.5px solid var(--white);
@@ -1297,7 +1309,7 @@ a:hover {
 }
 
 .forum-admin {
-    background-color: var(--whiteop50);
+    background-color: var(--white-op50);
     backdrop-filter: blur(2px);
     padding: var(--large);
     width: 50%
@@ -1394,7 +1406,8 @@ a:hover {
 }
 
 .forum-admin:has(.forum-links a) .forum-statistics {
-    grid-area: 3 / 1 / 4 / 2;}
+    grid-area: 3 / 1 / 4 / 2;
+}
 
 .forum-admin .forum-lastpost,
 .forum-admin:nth-of-type(even) .forum-statistics {
@@ -1417,7 +1430,7 @@ a:hover {
     padding: var(--4xsmall);
     gap: var(--4xsmall);
     justify-content: space-between;
-    background-color: var(--whiteop50);
+    background-color: var(--white-op50);
     width: -webkit-fill-available
 }
 
@@ -1455,7 +1468,7 @@ a:hover {
 
 .forum-off {
     padding: var(--large);
-    background-color: var(--whiteop50);
+    background-color: var(--white-op50);
     backdrop-filter: blur(2px);
     border: 0.5px solid var(--white);
     align-items: flex-end
@@ -1521,7 +1534,7 @@ a:hover {
     flex: 1 1 100%;
     padding: var(--large);
     gap: var(--large);
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
@@ -1606,7 +1619,7 @@ a:hover {
 
 .forum-archives {
     padding: var(--large);
-    background-color: var(--blackop75);
+    background-color: var(--black-op75);
     border: 0.5px solid var(--white);
     backdrop-filter: blur(2px);
     align-items: center
@@ -1697,7 +1710,7 @@ a:hover {
     font-size: var(--small);
     color: var(--black);
     width: max-content;
-    background-color: var(--whiteop75);
+    background-color: var(--white-op75);
     padding: var(--2xsmall);
     text-transform: uppercase;
     align-items: center;
@@ -2028,7 +2041,7 @@ a:hover {
     width: 50%;
     border: 0px;
     padding: var(--2xlarge);
-    outline: var(--2xlarge) solid var(--whiteop75);
+    outline: var(--2xlarge) solid var(--white-op75);
     box-sizing: border-box;
     background: var(--white)
 }
@@ -2180,7 +2193,7 @@ a:hover {
 }
 
 #reception .one div {
-    background-color: var(--whiteop75);
+    background-color: var(--white-op75);
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     padding: var(--large);
@@ -2309,7 +2322,7 @@ a:hover {
 }
 
 .phseven-city>* {
-    background-color: var(--whiteop75);
+    background-color: var(--white-op75);
     width: -webkit-fill-available;
     text-align: center;
     backdrop-filter: blur(2px)
@@ -2908,7 +2921,7 @@ a:hover {
     width: 100%;
     height: 100%;
     transition: 0.2s opacity ease;
-    background: var(--whiteop75)
+    background: var(--white-op75)
 }
 
 .monomer-modal {

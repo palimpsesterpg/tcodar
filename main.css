@@ -771,6 +771,7 @@ a:hover {
     text-align: center;
     padding: var(--large);
     background: var(--light);
+    font-size: var(--xsmall);
     border: 0.5px solid var(--neutral)
 }
 
@@ -1884,6 +1885,15 @@ a:hover {
     padding: var(--large);
     align-items: center;
     justify-content: space-between
+}
+
+.memberpanel div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .memberlist {
@@ -3257,6 +3267,15 @@ a:hover {
 
 .bloc-toggle.open .content-toggle {
     display: block
+}
+
+input,
+select {
+    background-color: var(--darkerlight);
+    font-family: var(--mono);
+    font-weight: 300;
+    border: 0;
+    padding: var(--4xsmall)
 }
 
 fieldset {

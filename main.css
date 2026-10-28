@@ -1384,7 +1384,7 @@ a:hover {
 }
 
 .forum-admin .forum-statistics {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 4 / 2;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1392,6 +1392,9 @@ a:hover {
     gap: var(--4xsmall);
     width: 100%
 }
+
+.forum-admin:has(.forum-links a) .forum-statistics {
+    grid-area: 3 / 1 / 4 / 2;}
 
 .forum-admin .forum-lastpost,
 .forum-admin:nth-of-type(even) .forum-statistics {

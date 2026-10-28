@@ -166,7 +166,9 @@
     --co3-300: #3121A8;
     --co3-200: #25197E;
     --co3-100: #181154;
-    --co3-50: #0C082A --group-color-950: #EEE2E7;
+    --co3-50: #0C082A;
+
+    --group-color-950: #EEE2E7;
     --group-color-900: #DDC5CE;
     --group-color-800: #CCA8B6;
     --group-color-700: #BB8B9E;
@@ -181,7 +183,7 @@
 }
 
 .group-3,
-.crimson {
+.carmine {
     --group-color-50: #FFC3CD;
     --group-color-100: #FF869A;
     --group-color-200: #FF4A68;
@@ -230,18 +232,18 @@
 
 .group-6,
 .emerald {
-    --group-color-50: #DFEADE;
-    --group-color-100: #BFD5BD;
-    --group-color-200: #9FBF9B;
-    --group-color-300: #7FAA7A;
-    --group-color-400: #62915D;
-    --group-color: #4C7048;
-    --group-colorop50: #4C704880;
-    --group-color-600: #3F5D3C;
-    --group-color-700: #324B30;
-    --group-color-800: #263824;
-    --group-color-900: #192518;
-    --group-color-950: #0D130C
+    --group-color-50: #BCFFE3;
+    --group-color-100: #79FFC7;
+    --group-color-200: #36FFAB;
+    --group-color-300: #00F18D;
+    --group-color-400: #00AE66;
+    --group-color: #00693E;
+    --group-colorop50: #00693E80;
+    --group-color-600: #005934;
+    --group-color-700: #00472A;
+    --group-color-800: #00361F;
+    --group-color-900: #002415;
+    --group-color-950: #00120A;
 }
 
 .group-7 {
@@ -367,7 +369,7 @@
 [data-color-scheme="dark"] {
 
     .group-3,
-    .crimson {
+    .carmine {
         --group-color-950: #FFC3CD;
         --group-color-900: #FF869A;
         --group-color-800: #FF4A68;
@@ -416,18 +418,18 @@
 
     .group-6,
     .emerald {
-        --group-color-950: #DFEADE;
-        --group-color-900: #BFD5BD;
-        --group-color-800: #9FBF9B;
-        --group-color-700: #7FAA7A;
-        --group-color-600: #62915D;
-        --group-color: #4C7048;
-        --group-colorop50: #4C704880;
-        --group-color-400: #3F5D3C;
-        --group-color-300: #324B30;
-        --group-color-200: #263824;
-        --group-color-100: #192518;
-        --group-color-50: #0D130C
+        --group-color-50: #00120A;
+        --group-color-100: #002415;
+        --group-color-200: #00361F;
+        --group-color-300: #00472A;
+        --group-color-400: #005934;
+        --group-color: #00693E;
+        --group-colorop50: #00693E80;
+        --group-color-600: #00AE66;
+        --group-color-700: #00F18D;
+        --group-color-800: #36FFAB;
+        --group-color-900: #79FFC7;
+        --group-color-950: #BCFFE3;
     }
 
     .group-7 {

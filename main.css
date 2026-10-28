@@ -367,13 +367,13 @@
     #page-content,
     #page-home,
     #page-footer {
-        width: 95% !important
+        width: 100% !important;
+        border: 0
     }
 
     #page-header {
         width: 100vh !important;
-        height: 500px !important;
-        padding: 0 !important
+        height: 500px !important
     }
 
     #page-navbar {

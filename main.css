@@ -479,11 +479,11 @@
     }
 }
 
-#hub a.lea:before {
+#hub a.lea strong:before {
     content: '⭒';
 }
 
-#hub a.cam:before {
+#hub a.cam strong:before {
     content: '✻';
 }
 

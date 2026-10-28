@@ -3061,7 +3061,7 @@ dl {
     justify-content: center;
     font-family: var(--display);
     text-transform: uppercase;
-    color: var(--black)
+    color: var(--co2)
 }
 
 .list-row.title span {
@@ -3093,13 +3093,8 @@ dl {
     border-top: 0.5px solid var(--border-row)
 }
 
-.bloc-toggle:nth-of-type(even) .title,
-.title:nth-of-type(even) {
-    color: var(--co2)
-}
-
-.bloc-toggle:nth-of-type(odd) .title,
-.title:nth-of-type(odd) {
+.bloc-toggle:nth-of-type(2n) .title,
+.list-row.title:nth-of-type(2n) {
     color: var(--co3)
 }
 

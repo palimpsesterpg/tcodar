@@ -3177,7 +3177,8 @@ dl {
 .listings-table {
     border: 0.5px solid var(--neutral);
     padding: 0px !important;
-    font-weight: 300
+    font-weight: 300;
+    rule: 0.5px solid var(--neutral);
 }
 
 .listings .tab-content.active {
@@ -3255,7 +3256,12 @@ dl {
     display: grid;
     grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
     --border-row: var(--neutral);
+    rule: 0.5px solid var(--border-row);
     color: var(--fam-color)
+}
+
+.list-row {
+    rule: 0.5px solid var(--neutral);
 }
 
 .fam-row:first-of-type span {
@@ -3263,12 +3269,6 @@ dl {
     font-family: var(--display);
     font-size: var(--large);
     font-weight: 700
-}
-
-.fam-row:not(:first-of-type),
-.list-row:not(:first-of-type),
-.bloc-toggle:not(:first-of-type) .list-row {
-    border-top: 0.5px solid var(--border-row)
 }
 
 .bloc-toggle:nth-of-type(2n) .title,
@@ -3287,8 +3287,7 @@ dl {
     text-align: center;
     align-items: center;
     justify-content: center;
-    text-transform: lowercase;
-    border-right: 0.5px solid var(--border-row)
+    text-transform: lowercase
 }
 
 .list-row:not(.title) span {
@@ -3317,12 +3316,12 @@ span[data-field="face"] {
     border-top: 0.5px solid;
     grid-area: 2 / 1 / 3 / 7;
     display: grid;
-    grid-template-columns: 4rem repeat(5, minmax(0, 1fr))
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+    rule: 0.5px solid var(--border-row)
 }
 
 .fam-row.open {
     background-color: var(--fam-colorFade);
-    border: 0.5px solid;
     --border-row: var(--fam-color)
 }
 

@@ -19,6 +19,19 @@ const isAdmin = hasId(adminsIds);
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
+const classes = {
+  ...Object.fromEntries(camIds.map(id => [`u${id}`, 'cam'])),
+  ...Object.fromEntries(leaIds.map(id => [`u${id}`, 'lea'])),
+};
+
+const highlight = () => {
+  for (const [id, cls] of Object.entries(classes)) {
+    document
+      .querySelectorAll(`#${id}, .${id}, a[href="/${id}"]`)
+      .forEach(el => el.classList.add(cls));
+  }
+};
+
 const own = (system, selector) =>
   qq(selector, system).filter(
     el => el.parentElement?.closest('.tabsystem, .tabinline') === system
@@ -373,6 +386,11 @@ function groupPlayers() {
   });
 }
 
+new MutationObserver(highlight).observe(document.body, {
+  childList: true,
+  subtree: true,
+});
+
 onReady(() => {
   hideAdminTools();
   initPageContext();
@@ -403,6 +421,7 @@ onReady(() => {
   groupPlayers();
   sortListRows();
 
+  highlight();
   applyIcons(ICONS);
   addQueendomTab();
   Tabs();

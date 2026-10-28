@@ -100,6 +100,7 @@
             var(--co1),
             var(--co2),
             var(--co3));
+
     --gradient12-100: linear-gradient(to right, var(--co1-100), var(--co2-100));
     --gradient13-100: linear-gradient(to right, var(--co1-100), var(--co3-100));
     --gradient23-100: linear-gradient(to right, var(--co2-100), var(--co3-100));
@@ -107,7 +108,12 @@
             var(--co1-100),
             var(--co2-100),
             var(--co3-100));
-    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50))
+
+    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50));
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400));
+    --gradientgc3: linear-gradient(to right, var(--light), var(--group-color));
 }
 
 [data-color-scheme="dark"] {
@@ -1602,7 +1608,9 @@ a:hover {
     border-radius: var(--small)
 }
 
-.forum-archives .forum-content {    flex-direction: column;}
+.forum-archives .forum-content {
+    flex-direction: column;
+}
 
 .forum-archives {
     padding: var(--large);
@@ -1863,18 +1871,23 @@ a:hover {
 .member {
     gap: var(--large);
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    padding: var(--large);
+    box-sizing: border-box;
+    border-width: 0.5px !important;
+    border-style: solid;
+    border-image: var(--gradientgc3) 1;
 }
 
 .member-avatar img {
     height: 250px;
-    width: -webkit-fill-available;
+    width: 100%;
     object-fit: cover
 }
 
 .member-bloc {
     height: 250px;
-    width: -webkit-fill-available;
+    width: 100%;
     display: flex;
     gap: var(--large);
     flex-direction: column;
@@ -1883,13 +1896,13 @@ a:hover {
 
 .member-infos {
     height: 250px;
-    width: -webkit-fill-available;
-    gap: var(--large);
-    padding: var(--large);
+    width: 100%;
+    gap: var(--2xsmall);
+    padding: var(--2xsmall);
     flex-direction: column;
     display: none;
     position: absolute;
-    background: var(--light);
+    background: var(--group-color-100, var(--co1-100));
     box-sizing: border-box;
     top: 0;
     right: 0
@@ -1897,6 +1910,12 @@ a:hover {
 
 .member-bloc:hover .member-infos {
     display: flex
+}
+
+.member-infos>div {
+    padding: var(--2xsmall);
+    flex: 1;
+    background-color: var(--light)
 }
 
 .member-pseudo {

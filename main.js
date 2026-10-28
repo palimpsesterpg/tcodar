@@ -184,6 +184,10 @@ function fillCard(root, data, index) {
     }
   });
 
+    if (root.classList.contains('list-row') && data.groupId != null) {
+    root.classList.add(`group-${data.groupId}`);
+  }
+
   if (root.hasAttribute('data-family')) {
     root.style.setProperty('--fam-color', data.color || '#000000');
     root.style.setProperty('--fam-colorFade', data.colorFade || '#00000040');

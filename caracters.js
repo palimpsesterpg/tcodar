@@ -8,10 +8,11 @@ const CARACTERS = {
     families: ['Durham', 'de Ferrières'],
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
+    status: 'célibataire',
     job: ['co-fondatrice et présidente de la branche londonienne de Jennings Consulting', 'un autre truc'],
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
-    status: 'célibataire'
+    groupId: 5
   },
   johnDoe: {
     face: 'Jacob Elordi',
@@ -24,7 +25,8 @@ const CARACTERS = {
     job: 'homme de chambre au Carlton',
     gender: 'homme cis',
     player: ['palimpseste', 'cam', 'elle'],
-    status: 'célibataire'
+    status: 'célibataire',
+    groupId: 7
   },
   janeDoe: {
     face: 'Ella Purnell',
@@ -37,6 +39,7 @@ const CARACTERS = {
     job: 'héritière',
     gender: 'femme cis',
     player: ['palimpseste', 'cam', 'elle'],
-    status: 'célibataire'
+    status: 'célibataire',
+    groupId: 6
   }
 };

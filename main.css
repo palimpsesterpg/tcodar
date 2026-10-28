@@ -689,7 +689,7 @@ a:hover {
     background-color: var(--white);
     top: 50%;
     border-left: 0.5px solid;
-    transform: translate(-0.5px, -100%);
+    transform: translate(-0.5px, -50%);
     font-weight: 700;
     font-family: var(--display);
     width: max-content;

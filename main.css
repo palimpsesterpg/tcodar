@@ -984,9 +984,9 @@ a:hover {
     font-family: var(--serif);
     display: block;
     font-style: italic;
-    text-shadow: 0.5px 0.5px var(--darklight);
-    color: var(--darkneutral);
-    font-size: var(--small);
+    text-shadow: 0.5px 0.5px var(--white);
+    color: var(--dark);
+    font-size: var(--medium);
     font-weight: 100
 }
 

@@ -2345,17 +2345,26 @@ a:hover {
 }
 
 #reception {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 182px 100px 160px 100px 91px;
-    position: relative;
-    gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--darklight);
     outline: 0.5px solid var(--neutral);
     width: 100%;
     box-sizing: border-box
+}
+
+#reception .title-toggle {
+    width: 100%;
+    font-family: var(--spe)
+}
+
+#reception .content-toggle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 182px 100px 160px 100px 91px;
+    gap: var(--large);
+    width: 100%;
+    height: 100%
 }
 
 .phseven-city {

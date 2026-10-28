@@ -2337,7 +2337,7 @@ a:hover {
 #reception {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 182px 100px 158px 100px 91px;
+    grid-template-rows: 182px 100px 160px 100px 91px;
     position: relative;
     gap: var(--large);
     padding: var(--large);

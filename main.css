@@ -1874,8 +1874,8 @@ a:hover {
     gap: var(--large)
 }
 
-.postlit .quick-nav-topics:last-of-type {
-    display: none
+.postlist .quick-nav-topics:last-of-type {
+    display: none !important
 }
 
 .topic-actions {

@@ -419,12 +419,13 @@ function initPageContext() {
 
   const links = qq('.topic-header-path a.nav', page);
   const forumId = links.at(-1) ?.href.match(/\/f(\d+)/) ?. [1];
-  const topicId = q('.page-title a', page) ?.href.match(/\/t(\d+)/) ?. [1];
+  const topicId = q('.page-title', page) ?.href.match(/\/t(\d+)/) ?. [1];
   const topiclist = q('.topiclist', page);
   const postlist = q('.postlist', page);
 
   if (topiclist && forumId) topiclist.id = forumId;
   if (postlist && topicId) postlist.id = topicId;
+  if (postlist && forumId) forumId.dataset.forum = topicId;
 
   if (postlist && topicId === '267') {
     postlist.classList.add('tabsystem', 'listings');

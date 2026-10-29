@@ -3563,9 +3563,27 @@ a.nav {
     background-color: var(--co2)
 }
 
-.topic-header-buttons {
+.topic-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large);
+}
+
+.quickreply .h3,
+.quickreply br {
+    display: none
+}
+
+.topic-watch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    font-family: var(--serif)
+}
+
+.topic-watch a {
+    color: var(--co2) !important;
+    font-weight: 300 !important
 }

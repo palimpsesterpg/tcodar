@@ -258,9 +258,17 @@ const toCharacterKey = name =>
     .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
     .join('');
 
-function setMemberCharacters() {
+function setMemberCharacter() {
   qq('.member').forEach(el => {
     const name = q('.member-pseudo', el)?.textContent.trim();
+    if (!name) return;
+    el.dataset.character = toCharacterKey(name);
+  });
+}
+
+function setPostCharacter() {
+  qq('.post').forEach(el => {
+    const name = q('.postprofile-name', el)?.textContent.trim();
     if (!name) return;
     el.dataset.character = toCharacterKey(name);
   });
@@ -315,12 +323,12 @@ function sortListRows() {
 }
 
 function cloneMemberPseudo() {
-  const pm = q('.fcmember-pseudo');
-  const cm = q('.fcmember-content');
-  if (!pm || !cm || q('.fcmember-pseudo-content', cm)) return;
+  const pm = q('.fcplayer-pseudo');
+  const cm = q('.fcplayer-content');
+  if (!pm || !cm || q('.fcplayer-pseudo-content', cm)) return;
 
   const c = pm.cloneNode(true);
-  c.classList.replace('fcmember-pseudo', 'fcmember-pseudo-content');
+  c.classList.replace('fcplayer-pseudo', 'fcplayer-pseudo-content');
   cm.prepend(c);
 }
 
@@ -427,7 +435,8 @@ onReady(() => {
     if (data) fillCard(el, { ...fams.default, ...data });
   });
 
-  setMemberCharacters();
+  setMemberCharacter();
+  setPostCharacter();
 
   qq('[data-character]').forEach(el => {
     fillCard(el, CHARACTERS[el.dataset.character]);

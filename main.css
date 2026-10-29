@@ -1430,11 +1430,11 @@ a:hover {
 }
 
 .forum-admin .forum-lastpost,
-.forum-admin:nth-of-type(even) .forum-statistics {
+.forum-admin:nth-of-type(even):has(.forum-links a) .forum-statistics {
     grid-area: 3 / 2 / 4 / 3
 }
 
-.forum-admin:nth-of-type(even) .forum-lastpost {
+.forum-admin:nth-of-type(even):has(.forum-links a) .forum-lastpost {
     grid-area: 3 / 1 / 4 / 2
 }
 

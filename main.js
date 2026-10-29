@@ -3,9 +3,9 @@ const qq = (selector, root = document) => [...root.querySelectorAll(selector)];
 const sep = () => document.createElement('sep');
 
 const onReady = fn =>
-  document.readyState === 'loading'
-    ? document.addEventListener('DOMContentLoaded', fn)
-    : fn();
+  document.readyState === 'loading' ?
+  document.addEventListener('DOMContentLoaded', fn) :
+  fn();
 
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 
@@ -34,7 +34,7 @@ const highlight = () => {
 
 const own = (system, selector) =>
   qq(selector, system).filter(
-    el => el.parentElement?.closest('.tabsystem, .tabinline') === system
+    el => el.parentElement ?.closest('.tabsystem, .tabinline') === system
   );
 
 const TAB_FIELDS = {
@@ -49,28 +49,95 @@ const FAMILY_FIELDS_HIDDEN = ['rank', 'city1', 'city2', 'ethnies', 'color', 'pla
 
 const fieldSpan = f => `<span data-field="${f}"></span>`;
 
-const ICONS = [
-  { selector: '.copyright a', icon: 'fi fi-ts-crown' },
-  { selector: 'a[href="#top"]', icon: 'fi fi-ts-angle-up' },
-  { selector: 'a[href="#bottom"]', icon: 'fi fi-ts-angle-down' },
-  { selector: 'img[src*="modernbb/arrow_right.png"]', icon: 'fi fi-ts-angle-right', replace: true },
-  { selector: 'img[src*="modernbb/arrow_left.png"]', icon: 'fi fi-ts-angle-left', replace: true },
-  { selector: '.sprite-icon_topic_newest, .sprite-icon_topic_latest', icon: 'fi fi-ts-sparkles', replace: true },
-  { selector: 'a.last-post-icon', icon: 'fi fi-ts-sparkles' },
-  { selector: '.topic-participate img', icon: 'fi fi-ss-star', replace: true },
-  { selector: '#i_icon_profile, .i_icon_profile', icon: 'fi fi-ts-user', replace: true },
-  { selector: '.memberlistmp img, .i_icon_pm, #i_icon_pm', icon: 'fi fi-ts-envelope', replace: true },
-  { selector: '#i_msg_inbox', icon: 'fi fi-ts-mailbox', replace: true },
-  { selector: '#i_msg_sentbox', icon: 'fi fi-ts-paper-plane-top', replace: true },
-  { selector: '#i_msg_outbox', icon: 'fi fi-ts-envelope', replace: true },
-  { selector: '#i_msg_savebox', icon: 'fi fi-ts-archive', replace: true },
-  { selector: '.ajax-profil_valid, .ajax-profil_edit', icon: 'fi fi-ts-check', replace: true },
-  { selector: 'img[src*="folder_new.gif"]', icon: 'fi fi-ts-exclamation', replace: true },
-  { selector: 'img[src*="icon_contact_www.png"]', icon: 'fi fi-ts-exclamation', replace: true }
+const ICONS = [{
+    selector: '.copyright a',
+    icon: 'fi fi-ts-crown'
+  },
+  {
+    selector: 'a[href="#top"]',
+    icon: 'fi fi-ts-angle-up'
+  },
+  {
+    selector: 'a[href="#bottom"]',
+    icon: 'fi fi-ts-angle-down'
+  },
+  {
+    selector: 'img[src*="modernbb/arrow_right.png"]',
+    icon: 'fi fi-ts-angle-right',
+    replace: true
+  },
+  {
+    selector: 'img[src*="modernbb/arrow_left.png"]',
+    icon: 'fi fi-ts-angle-left',
+    replace: true
+  },
+  {
+    selector: '.sprite-icon_topic_newest, .sprite-icon_topic_latest',
+    icon: 'fi fi-ts-sparkles',
+    replace: true
+  },
+  {
+    selector: 'a.last-post-icon',
+    icon: 'fi fi-ts-sparkles'
+  },
+  {
+    selector: '.topic-participate img',
+    icon: 'fi fi-ss-star',
+    replace: true
+  },
+  {
+    selector: '#i_icon_profile, .i_icon_profile',
+    icon: 'fi fi-ts-user',
+    replace: true
+  },
+  {
+    selector: '.memberlistmp img, .i_icon_pm, #i_icon_pm',
+    icon: 'fi fi-ts-envelope',
+    replace: true
+  },
+  {
+    selector: '#i_msg_inbox',
+    icon: 'fi fi-ts-mailbox',
+    replace: true
+  },
+  {
+    selector: '#i_msg_sentbox',
+    icon: 'fi fi-ts-paper-plane-top',
+    replace: true
+  },
+  {
+    selector: '#i_msg_outbox',
+    icon: 'fi fi-ts-envelope',
+    replace: true
+  },
+  {
+    selector: '#i_msg_savebox',
+    icon: 'fi fi-ts-archive',
+    replace: true
+  },
+  {
+    selector: '.ajax-profil_valid, .ajax-profil_edit',
+    icon: 'fi fi-ts-check',
+    replace: true
+  },
+  {
+    selector: 'img[src*="folder_new.gif"]',
+    icon: 'fi fi-ts-exclamation',
+    replace: true
+  },
+  {
+    selector: 'img[src*="icon_contact_www.png"]',
+    icon: 'fi fi-ts-envelope-plus',
+    replace: true
+  }
 ];
 
 function applyIcons(map) {
-  map.forEach(({ selector, icon, replace }) => {
+  map.forEach(({
+    selector,
+    icon,
+    replace
+  }) => {
     const html = `<i class="${icon}"></i>`;
 
     qq(selector).forEach(el => {
@@ -126,8 +193,8 @@ function HeaderNav() {
   qq('.header-tab').forEach(headerTab => {
     headerTab.addEventListener('click', () => {
       const key = CSS.escape(headerTab.id);
-      q(`.tab[data-tab="${key}"]`, categories)?.click();
-      q(`.category[data-tab="${key}"]`, categories)?.scrollIntoView({
+      q(`.tab[data-tab="${key}"]`, categories) ?.click();
+      q(`.category[data-tab="${key}"]`, categories) ?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -137,7 +204,11 @@ function HeaderNav() {
 
 function ClockWall() {
   const now = new Date();
-  const options = { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  };
 
   qq('#page-home .seven .phseven-city').forEach(city => {
     const hour = q('hour', city);
@@ -146,7 +217,10 @@ function ClockWall() {
 
     let time;
     try {
-      time = now.toLocaleTimeString('fr-FR', { ...options, timeZone: city.dataset.tz });
+      time = now.toLocaleTimeString('fr-FR', {
+        ...options,
+        timeZone: city.dataset.tz
+      });
     } catch {
       time = now.toLocaleTimeString('fr-FR', options);
     }
@@ -157,7 +231,7 @@ function ClockWall() {
 
 function addQueendomTab() {
   if (!isAdmin()) return;
-  q('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
+  q('#categories .tabsystem-tabs.off') ?.insertAdjacentHTML(
     'beforeend',
     '<div class="tab" data-tab="c11"><span>queendom</span></div>'
   );
@@ -198,7 +272,7 @@ function fillCard(root, data, index) {
     }
   });
 
-    if (root.classList.contains('list-row') && data.groupId != null) {
+  if (root.classList.contains('list-row') && data.groupId != null) {
     root.classList.add(`group-${data.groupId}`);
   }
 
@@ -212,14 +286,14 @@ function fillCard(root, data, index) {
 
   const fam = String(data.id ?? '');
   qq('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
-    q(':scope > .node-num', node)?.remove();
+    q(':scope > .node-num', node) ?.remove();
     node.dataset.id = i + 1;
     node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
   });
 }
 
 function buildRow(el) {
-  const tab = el.closest('.tab-content')?.dataset.tab;
+  const tab = el.closest('.tab-content') ?.dataset.tab;
   const data = CHARACTERS[el.dataset.character];
   if (!TAB_FIELDS[tab] || !data) return;
 
@@ -251,24 +325,24 @@ function buildFamilyRow(el) {
 
 const toCharacterKey = name =>
   name
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .split(/[^a-zA-Z0-9]+/)
-    .filter(Boolean)
-    .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
-    .join('');
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .split(/[^a-zA-Z0-9]+/)
+  .filter(Boolean)
+  .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
+  .join('');
 
 function setMemberCharacter() {
   qq('.member').forEach(el => {
-    const name = q('.member-pseudo', el)?.textContent.trim();
+    const name = q('.member-pseudo', el) ?.textContent.trim();
     if (!name) return;
     el.dataset.character = toCharacterKey(name);
   });
 }
 
 function setPostCharacter() {
-  qq('.post').forEach(el => {
-    const name = q('.postprofile-name', el)?.textContent.trim();
+  qq('.postprofile').forEach(el => {
+    const name = q('.postprofile-name', el) ?.textContent.trim();
     if (!name) return;
     el.dataset.character = toCharacterKey(name);
   });
@@ -278,10 +352,10 @@ function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
     if (q('a.mentiontag', el)) return;
 
-    const data = CHARACTERS[el.closest('.list-row')?.dataset.character];
+    const data = CHARACTERS[el.closest('.list-row') ?.dataset.character];
     const name = el.textContent.trim();
 
-    if (!data?.id) {
+    if (!data ?.id) {
       el.textContent = `@${name}`;
       return;
     }
@@ -305,7 +379,7 @@ function sortListRows() {
     groupes.get(parent).push(row);
   });
 
-  const key = row => (q(':scope > span', row)?.textContent ?? '').trim();
+  const key = row => (q(':scope > span', row) ?.textContent ?? '').trim();
 
   groupes.forEach(rows => {
     const marqueurs = rows.map(row => {
@@ -315,7 +389,9 @@ function sortListRows() {
     });
 
     const tries = [...rows].sort((a, b) =>
-      key(a).localeCompare(key(b), 'fr', { sensitivity: 'base' })
+      key(a).localeCompare(key(b), 'fr', {
+        sensitivity: 'base'
+      })
     );
 
     marqueurs.forEach((m, i) => m.replaceWith(tries[i]));
@@ -342,8 +418,8 @@ function initPageContext() {
   if (!page) return;
 
   const links = qq('.topic-header-path a.nav', page);
-  const forumId = links.at(-1)?.href.match(/\/f(\d+)/)?.[1];
-  const topicId = q('.page-title a', page)?.href.match(/\/t(\d+)/)?.[1];
+  const forumId = links.at(-1) ?.href.match(/\/f(\d+)/) ?. [1];
+  const topicId = q('.page-title a', page) ?.href.match(/\/t(\d+)/) ?. [1];
   const topiclist = q('.topiclist', page);
   const postlist = q('.postlist', page);
 
@@ -356,8 +432,8 @@ function initPageContext() {
     qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
 
     const tabsPost = document.getElementById('340');
-    tabsPost?.classList.add('tabsystem-tabs');
-    tabsPost?.classList.remove('tab-content');
+    tabsPost ?.classList.add('tabsystem-tabs');
+    tabsPost ?.classList.remove('tab-content');
 
     const tabIds = {
       675: 'faces',
@@ -372,7 +448,7 @@ function initPageContext() {
       const post = document.getElementById(id);
       if (!post) return;
       post.dataset.tab = tab;
-      q('.message', post)?.classList.add('listings-table');
+      q('.message', post) ?.classList.add('listings-table');
     });
   }
 
@@ -381,7 +457,7 @@ function initPageContext() {
   }
 }
 
-  function numberSpans() {
+function numberSpans() {
   qq('.fcmainps-content .tab-content:not([data-tab="carac"])').forEach(tab => {
     qq(':scope > span', tab).forEach((span, i) => {
       span.dataset.n = i + 1;
@@ -393,7 +469,7 @@ function groupPlayers() {
   const parents = new Map();
 
   qq('.list-row[data-character]').forEach(row => {
-    const name = q(':scope > [data-field^="player"]', row)?.textContent.trim().toLowerCase();
+    const name = q(':scope > [data-field^="player"]', row) ?.textContent.trim().toLowerCase();
     if (!name) return;
 
     if (!parents.has(row.parentElement)) parents.set(row.parentElement, new Map());
@@ -432,7 +508,10 @@ onReady(() => {
   qq('[data-family]').forEach(el => {
     const fams = typeof FAMILIES !== 'undefined' ? FAMILIES : {};
     const data = fams[el.dataset.family];
-    if (data) fillCard(el, { ...fams.default, ...data });
+    if (data) fillCard(el, {
+      ...fams.default,
+      ...data
+    });
   });
 
   setMemberCharacter();
@@ -462,5 +541,5 @@ onReady(() => {
 });
 
 document.addEventListener('click', e => {
-  e.target.closest('.bloc-toggle')?.classList.toggle('open');
+  e.target.closest('.bloc-toggle') ?.classList.toggle('open');
 });

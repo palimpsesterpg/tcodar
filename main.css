@@ -3489,7 +3489,7 @@ dl {
     height: 4rem !important
 }
 
-span[data-field="pseudo"] {
+span[data-field="pseudo"] a {
     color: var(--group-color);
     font-weight: 700
 }

@@ -3367,7 +3367,9 @@ dl {
     border: 0.5px solid var(--neutral);
     padding: 0px !important;
     font-weight: 300;
-    rule: 0.5px solid var(--neutral)
+    rule: 0.5px solid var(--neutral);
+    display: flex;
+    flex-direction: column
 }
 
 .listings .tab-content.active {
@@ -3472,7 +3474,6 @@ dl {
     width: 100%;
     min-width: 0;
     padding: 0 var(--4xsmall);
-    font-size: var(--small);
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -3480,12 +3481,17 @@ dl {
 }
 
 .list-row:not(.title) span {
-    height: 2rem;
+    height: 2.5rem;
     color: var(--group-color)
 }
 
 .fam-row span {
     height: 4rem !important
+}
+
+span[data-field="pseudo"] {
+    color: var(--group-color);
+    font-weight: 700
 }
 
 span[data-field="pseudo"],

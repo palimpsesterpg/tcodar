@@ -453,7 +453,7 @@ function initPageContext() {
     });
   }
 
-  if (postlist && topicId === '272') {
+  if (postlist.id === '272') {
     qq('.post', postlist).forEach(p => p.classList.add('mini'));
   }
 }

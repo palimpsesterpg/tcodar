@@ -1,5 +1,3 @@
-/* ---------- Helpers ---------- */
-
 const q = (selector, root = document) => root.querySelector(selector);
 const qq = (selector, root = document) => [...root.querySelectorAll(selector)];
 const sep = () => document.createElement('sep');
@@ -9,11 +7,8 @@ const onReady = fn =>
     ? document.addEventListener('DOMContentLoaded', fn)
     : fn();
 
-// Globals defined by other scripts: always read safely
 const getCharacters = () => (typeof CHARACTERS !== 'undefined' && CHARACTERS) || {};
 const getFamilies = () => (typeof FAMILIES !== 'undefined' && FAMILIES) || {};
-
-/* ---------- Users ---------- */
 
 const user = (typeof _userdata !== 'undefined' && _userdata) || {};
 
@@ -39,8 +34,6 @@ const highlight = () => {
     });
   }
 };
-
-/* ---------- Config ---------- */
 
 const TAB_FIELDS = {
   faces: 'face,pseudo',
@@ -74,8 +67,6 @@ const ICONS = [
   { selector: 'img[src*="icon_contact_www.png"]', icon: 'fi fi-ts-envelope-plus', replace: true },
 ];
 
-/* ---------- Utils ---------- */
-
 const fieldSpan = f => `<span data-field="${f}"></span>`;
 
 const own = (system, selector) =>
@@ -107,8 +98,6 @@ function resolveValue(field, data, index) {
   return value;
 }
 
-/* ---------- Icons ---------- */
-
 function applyIcons(map) {
   map.forEach(({ selector, icon, replace }) => {
     const html = `<i class="${icon}"></i>`;
@@ -119,8 +108,6 @@ function applyIcons(map) {
     });
   });
 }
-
-/* ---------- Tabs ---------- */
 
 function initTabs() {
   qq('.tabsystem').forEach(system => {
@@ -174,8 +161,6 @@ function initHeaderNav() {
   });
 }
 
-/* ---------- Clock ---------- */
-
 function updateClockWall() {
   const now = new Date();
   const options = { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
@@ -196,8 +181,6 @@ function updateClockWall() {
   });
 }
 
-/* ---------- Header / admin ---------- */
-
 function addQueendomTab() {
   if (!isAdmin()) return;
   q('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
@@ -215,8 +198,6 @@ function hideAdminTools() {
   if (isAdmin()) return;
   qq('.post.u1 .postbody-icons .postbody .head').forEach(el => el.remove());
 }
-
-/* ---------- Cards / rows ---------- */
 
 function fillCard(root, data, index) {
   if (!root || !data) return;
@@ -381,8 +362,6 @@ function numberSpans() {
   });
 }
 
-/* ---------- Page context ---------- */
-
 function initPageContext() {
   const page = q('#page-content');
   if (!page) return;
@@ -399,7 +378,7 @@ function initPageContext() {
 
   if (!postlist) return;
 
-  if (postlist.id === '267') {
+  if (postlist?.id === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
     qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
@@ -425,15 +404,12 @@ function initPageContext() {
     });
   }
 
-  if (postlist.id === '272') {
+  if (postlist?.id === '272') {
     qq('.post', postlist).forEach(p => p.classList.add('mini'));
   }
 }
 
-/* ---------- Init ---------- */
-
 onReady(() => {
-  // Re-apply highlight on DOM changes (throttled to one run per frame)
   let highlightQueued = false;
   new MutationObserver(() => {
     if (highlightQueued) return;

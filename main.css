@@ -377,7 +377,8 @@
 
     #page-header {
         width: 100vh !important;
-        height: 500px !important
+        height: 500px !important;
+        padding: var(--large) !important;
     }
 
     #page-navbar {
@@ -669,10 +670,10 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--xsmall);
-    font-weight: 100;
+    padding: var(--2xsmall) var(--large);
+    font-weight: 900;
     font-family: var(--display);
-    background-color: var(--co1-300)
+    background-color: var(--co1)
 }
 
 #page-navbar {

@@ -363,12 +363,16 @@
         padding: var(--2xsmall) !important;
         gap: var(--2xsmall) !important
     }
+    
+    body {
+        width: 100vh !important
+    }
 
     #page-content,
     #page-home,
     #page-footer {
         width: 100% !important;
-        border: 0
+        border: 0 !important
     }
 
     #page-header {

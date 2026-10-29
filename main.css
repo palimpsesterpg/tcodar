@@ -1816,7 +1816,7 @@ a:hover {
     height: auto;
     padding: 0.125rem;
     background-color: var(--white);
-    border: 0.475rem solid var(--group-color-100, var(--co1));
+    border: 0.475rem solid var(--group-color-100, var(--co1-100));
     box-sizing: border-box;
     width: 200px;
     object-fit: cover

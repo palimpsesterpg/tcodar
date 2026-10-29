@@ -425,9 +425,9 @@ function initPageContext() {
 
   if (topiclist && forumId) topiclist.id = forumId;
   if (postlist && topicId) postlist.id = topicId;
-  if (postlist && forumId) forumId.dataset.forum = topicId;
+  if (postlist && forumId) postlist.dataset.forum = forumId;
 
-  if (postlist && topicId === '267') {
+  if (postlist.id === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
     qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));

@@ -1814,10 +1814,9 @@ a:hover {
 
 .postprofile-avatar img {
     height: auto;
-    padding: var(--4xsmall);
+    padding: 0.125rem;
     background-color: var(--white);
-    outline: 0.5px solid var(--group-color-100, var(--co1));
-    border: var(--2xsmall) solid var(--light);
+    border: 0.475rem solid var(--group-color-100, var(--co1));
     box-sizing: border-box;
     width: 200px;
     object-fit: cover

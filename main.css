@@ -365,7 +365,8 @@
     }
 
     body {
-        width: 100vh !important
+        width: 100vh !important;
+        height: 100vh !important
     }
 
     #page-content,
@@ -378,7 +379,7 @@
     #page-header {
         width: 100vh !important;
         height: 500px !important;
-        padding: var(--large) !important;
+        padding: var(--large) !important
     }
 
     #page-navbar {

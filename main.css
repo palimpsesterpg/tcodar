@@ -3329,16 +3329,19 @@ button3,
     align-items: center;
     justify-self: center;
     text-transform: uppercase;
-    color: var(--black)
+    color: var(--co3);
+    font-size: var(--xlarge)
 }
 
 button3 span,
 .button3 span {
-    background-color: var(--black);
-    padding: var(--4xsmall) var(--2xsmall);
+    background-color: var(--co3);
+    padding: var(--4xsmall) 0;
+    padding-left: var(--2xsmall);
     color: var(--white);
+    font-size: var(--large);
     text-transform: lowercase;
-    letter-spacing: var(--4xsmall)
+    letter-spacing: var(--2xsmall)
 }
 
 dl {
@@ -3536,4 +3539,33 @@ span[data-field="face"] {
 [id="267"].postlist .quick-nav-topics,
 [id="0"].post {
     display: none
+}
+
+.topic-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large);
+}
+
+.topic-header-path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    gap: var(--large);
+}
+
+a.nav {
+    font-size: var(--small);
+    padding: var(--4xsmall) var(--2xsmall);
+    border-radius: var(--large);
+    color: var(--white) !important;
+    background-color: var(--co2)
+}
+
+.topic-header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
 }

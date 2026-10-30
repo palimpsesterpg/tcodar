@@ -1,3 +1,18 @@
+:root {
+    --group-color: #333333;
+    --group-color-600: #292929;
+    --group-color-700: #1f1f1f;
+    --group-color-800: #141414;
+    --group-color-400: #5c5c5c;
+    --group-color-300: #858585;
+    --group-color-200: #adadad;
+    --group-color-100: #d6d6d6;
+
+    --group-color-op25: #33333340;
+    --group-color-op50: #33333380;
+    --group-color-op75: #333333bf;
+}
+
 body {
     margin: 0px !important;
     padding: 0px !important
@@ -37,34 +52,21 @@ body {
     color: var(--co1);
     border: 0.5px solid var(--co1);
     font-size: var(--small);
-    text-align: center;
-    border-radius: var(--large)
+    text-align: center
 }
 
 .page-filters:nth-of-type(2) .filter div {
-    background-color: var(--co1-100);
+    background-color: var(--co1-300);
     letter-spacing: 1px;
     padding-left: 1px;
+    color: var(--light);
     text-transform: lowercase
-}
-
-.page-filters:nth-of-type(2) .filter div:not(.active, .sans) {
-    text-shadow: 0.5px 0.5px var(--darklight);
-}
-
-.page-filters:nth-of-type(2) .filter .active {
-    background-color: var(--co1)
-}
-
-.filter .sans {
-    background-color: var(--co1-200);
-    color: var(--white)
 }
 
 .filter .active {
     font-weight: 700;
-    background-color: var(--co1);
-    color: var(--white)
+    background-color: var(--co1) !important;
+    color: var(--light)
 }
 
 .page-items {
@@ -113,7 +115,7 @@ body {
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
-    text-shadow: 1px 1px var(--white);
+    color: var(--white);
     display: none;
     top: 0;
     left: 0;
@@ -123,8 +125,8 @@ body {
 
 .item-name {
     font-family: var(--spe);
-    font-size: var(--4xlarge);
-    color: var(--co1)
+    font-size: var(--3xlarge);
+    text-align: center;
 }
 
 #masterlist .item-name {
@@ -132,13 +134,11 @@ body {
 }
 
 #directory .item-title {
-    font-size: var(--large);
-    color: var(--co1)
+    font-size: var(--medium)
 }
 
 #masterlist .item-title {
-    font-size: var(--2xlarge);
-    color: var(--group-color) !important
+    font-size: var(--2xlarge)
 }
 
 .item:hover .item-title {
@@ -166,7 +166,7 @@ body {
     position: relative;
     padding: var(--2xlarge);
     gap: var(--large);
-    border: 0.5px solid var(--group-color, var(--neutral));
+    border: 0.5px solid var(--group-color);
     background-color: var(--light);
     display: flex;
     flex-direction: column;
@@ -358,7 +358,7 @@ body {
 }
 
 .content-head span {
-    background-color: var(--group-color, var(--co3));
+    background-color: var(--group-color);
     color: var(--white);
     text-transform: lowercase;
     font-weight: 700;

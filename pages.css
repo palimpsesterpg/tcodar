@@ -198,6 +198,8 @@ body {
     filter: grayscale(0.5)
 }
 
+.item:hover>img,
+.content-image:hover img,
 .item.played img {
     filter: grayscale(1)
 }
@@ -214,25 +216,18 @@ body {
     display: none;
     position: absolute;
     color: var(--white);
-    text-shadow: 1px 1px var(--co1);
+    background-color: var(--group-color-op50);
+    outline: var(--large) solid var(--group-color-op50);
     font-family: var(--mono);
     text-transform: lowercase;
     backdrop-filter: blur(2px);
     border: 1px solid var(--white);
-    outline: var(--large) solid var(--co1-op50);
     top: 25px;
     left: 25px;
     z-index: 10;
-    background-color: var(--co1-op50);
     align-items: center;
     justify-content: center;
     border-radius: 50%
-}
-
-#masterlist .content-credits {
-    background-color: var(--group-color-op50);
-    text-shadow: 1px 1px var(--group-color);
-    outline: var(--large) solid var(--group-color-op50)
 }
 
 .content-families {
@@ -493,6 +488,10 @@ body {
     width: 50px;
     border-radius: var(--2xsmall);
     object-fit: cover
+}
+
+.content-player img:hover {
+    filter: grayscale(1)
 }
 
 .content-player a {

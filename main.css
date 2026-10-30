@@ -874,8 +874,7 @@ a:hover {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
-    cursor: pointer
+    justify-content: center
 }
 
 #categories .tab:before {
@@ -886,11 +885,7 @@ a:hover {
     content: ''
 }
 
-#categories .tab:hover span {
-    display: flex
-}
-
-#categories .tabsystem-tabs .tab span {
+#categories .tab span {
     display: none;
     position: absolute;
     padding: var(--small) var(--large);
@@ -900,6 +895,10 @@ a:hover {
     width: max-content;
     font-family: var(--display);
     font-size: var(--large)
+}
+
+#categories .tab:hover span {
+    display: flex !important
 }
 
 #categories .tabsystem-tabs.off .tab span {

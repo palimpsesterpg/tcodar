@@ -356,12 +356,25 @@
     #categories {
         gap: var(--large) !important;
         margin-left: 0 !important;
+        grid-template-columns: auto auto !important;
+        grid-template-rows: auto auto;
         width: 100% !important
     }
 
     #categories .tabsystem-tabs {
-        padding: var(--2xsmall) !important;
-        gap: var(--2xsmall) !important
+        grid-area: 1 / 2 / 3 / 3
+    }
+
+    #categories .tabsystem-tabs.off {
+        align-self: end;
+    }
+
+    #categories .tabsystem-tabs.loc {
+        align-self: start;
+    }
+
+    #categories .tabsystem-tabs.loc>i {
+        order: 3;
     }
 
     body {
@@ -554,6 +567,12 @@
     padding-right: var(--4xsmall)
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box !important;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -644,7 +663,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     background-position: center center;
-    box-sizing: border-box;
+    
     background-size: cover;
     position: relative;
     flex-wrap: wrap;
@@ -683,7 +702,7 @@ a:hover {
     width: 3rem;
     z-index: 999;
     position: fixed;
-    box-sizing: border-box;
+    
     display: flex;
     background-color: var(--darklight);
     align-items: center;
@@ -751,7 +770,7 @@ a:hover {
 #page-footer {
     padding: var(--large);
     width: 75%;
-    box-sizing: border-box;
+    
     margin: 0 auto;
     background-color: var(--darklight);
     border-left: 0.5px solid var(--co2);
@@ -790,7 +809,7 @@ a:hover {
     border-bottom-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradient23) 1;
-    box-sizing: border-box;
+    
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -806,15 +825,11 @@ a:hover {
 }
 
 #categories {
-    display: flex;
-    gap: var(--3xlarge);
+    display: grid;
+    grid-template-columns: auto auto auto;
     width: calc(100% + 12rem);
     margin-left: -6rem;
     align-items: center
-}
-
-#categories .tabsystem-contents {
-    flex: 1
 }
 
 #categories .tabsystem-tabs {
@@ -1019,7 +1034,7 @@ a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    
     justify-content: center
 }
 
@@ -1215,7 +1230,7 @@ a:hover {
     text-transform: lowercase;
     background-color: var(--co2-100);
     border: 0.5px solid var(--co2);
-    box-sizing: border-box;
+    
     color: var(--co2);
     font-weight: 700;
     font-size: var(--small);
@@ -1252,7 +1267,7 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-    box-sizing: border-box;
+    
     background: var(--white-op50);
     flex: 1;
     padding: var(--large);
@@ -1692,8 +1707,7 @@ a:hover {
     padding: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
-    box-sizing: border-box
+    outline: 0.5px solid var(--neutral)
 }
 
 .post+.post {
@@ -1706,7 +1720,7 @@ a:hover {
     top: calc(-0.5rem - 0.5px);
     border: 0.5px solid var(--neutral);
     left: calc(100% + var(--large));
-    box-sizing: border-box;
+    
     padding: 0 var(--2xsmall);
     justify-content: center;
     background: var(--light);
@@ -1742,8 +1756,7 @@ a:hover {
     text-transform: uppercase;
     align-items: center;
     font-weight: 300;
-    height: var(--2xlarge);
-    box-sizing: border-box
+    height: var(--2xlarge)
 }
 
 .posticons a:hover span,
@@ -1803,14 +1816,14 @@ a:hover {
     justify-content: center;
     height: var(--large);
     aspect-ratio: 1;
-    box-sizing: border-box;
+    
     border-radius: 100%
 }
 
 .postprofile {
     position: relative;
     width: 200px;
-    box-sizing: border-box;
+    
     display: flex;
     flex-direction: column
 }
@@ -1820,7 +1833,7 @@ a:hover {
     padding: 0.125rem;
     background-color: var(--white);
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
-    box-sizing: border-box;
+    
     width: 200px;
     object-fit: cover
 }
@@ -1930,7 +1943,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding: var(--2xsmall);
-    box-sizing: border-box;
+    
     border-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradientgc3, var(--gradient1light)) 1
@@ -1960,7 +1973,7 @@ a:hover {
     display: none;
     position: absolute;
     background: var(--gradientgc3, var(--gradient1light));
-    box-sizing: border-box;
+    
     top: 0;
     right: 0
 }
@@ -2041,7 +2054,7 @@ a:hover {
     grid-area: 3 / 1 / 4 / 3;
     height: 100%;
     padding: var(--large);
-    box-sizing: border-box;
+    
     background-color: var(--co1);
     color: var(--co1-100)
 }
@@ -2068,7 +2081,7 @@ a:hover {
     flex: 1;
     padding: var(--2xsmall);
     display: flex;
-    box-sizing: border-box;
+    
     align-items: center
 }
 
@@ -2114,7 +2127,7 @@ a:hover {
     border: 0px;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--white-op75);
-    box-sizing: border-box;
+    
     background: var(--white)
 }
 
@@ -2156,7 +2169,7 @@ a:hover {
     width: 95%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
-    box-sizing: border-box;
+    
     padding: var(--large)
 }
 
@@ -2260,8 +2273,7 @@ a:hover {
     gap: var(--large);
     margin: 0 auto;
     padding: var(--large);
-    background-color: var(--white);
-    box-sizing: border-box
+    background-color: var(--white)
 }
 
 #reception .one div {
@@ -2321,7 +2333,7 @@ a:hover {
     border-right: 0.5px solid var(--neutral);
     margin-right: var(--large);
     height: 37.5px;
-    box-sizing: border-box;
+    
     width: 75px;
     display: flex;
     align-items: center
@@ -2366,8 +2378,7 @@ a:hover {
     background-color: var(--light);
     border: var(--2xsmall) solid var(--darklight);
     outline: 0.5px solid var(--neutral);
-    width: 100%;
-    box-sizing: border-box
+    width: 100%
 }
 
 #reception .title-toggle {
@@ -2399,7 +2410,7 @@ a:hover {
     flex-direction: column;
     padding: var(--2xsmall);
     filter: grayscale(0.75);
-    box-sizing: border-box;
+    
     text-transform: uppercase
 }
 
@@ -2451,8 +2462,7 @@ a:hover {
     flex: 1;
     background-color: var(--white);
     border: 0.5px solid var(--neutral);
-    padding: var(--large);
-    box-sizing: border-box
+    padding: var(--large)
 }
 
 #logged-in-user-list,
@@ -2487,7 +2497,7 @@ a:hover {
 #hub .two div {
     height: var(--3xlarge);
     display: flex;
-    box-sizing: border-box;
+    
     background-color: var(--group-color-100);
     color: var(--group-color);
     border: .5px solid var(--group-color);
@@ -2516,7 +2526,7 @@ a:hover {
 #hub .four div {
     height: var(--3xlarge);
     display: flex;
-    box-sizing: border-box;
+    
     padding: 0 var(--large);
     align-items: center;
     flex: 1;
@@ -3058,7 +3068,7 @@ a:hover {
     height: 25px;
     font-weight: 700;
     border-radius: var(--small);
-    box-sizing: border-box;
+    
     align-items: center;
     display: flex;
     justify-content: center
@@ -3182,7 +3192,7 @@ a:hover {
     background: var(--darklight);
     border-radius: 100%;
     border: 0.5px solid var(--neutral);
-    box-sizing: border-box;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3304,7 +3314,7 @@ select {
     text-transform: lowercase;
     font-family: var(--mono);
     font-weight: 300;
-    box-sizing: border-box;
+    
     padding: var(--4xsmall);
     width: 150px
 }
@@ -3444,7 +3454,7 @@ dl {
 
 .list-row.title {
     height: 3rem;
-    box-sizing: border-box;
+    
     width: 100%;
     min-width: 0;
     background-color: var(--darklight);
@@ -3493,7 +3503,7 @@ dl {
 .fam-row span,
 .list-row span {
     display: flex;
-    box-sizing: border-box;
+    
     width: 100%;
     min-width: 0;
     padding: 0 var(--4xsmall);
@@ -3673,7 +3683,7 @@ a.nav {
 }
 
 #textarea_content {
-    box-sizing: border-box !important;
+    
     width: 100% !important
 }
 
@@ -3686,7 +3696,7 @@ a.nav {
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     outline: 0.5px solid var(--neutral) !important;
-    box-sizing: border-box !important;
+    
     font-weight: 500 !important;
 }
 
@@ -3752,7 +3762,7 @@ div.sceditor-group {
     font-size: var(--medium) !important;
     padding: var(--large) !important;
     border-top: var(--2xsmall) solid var(--darklight) !important;
-    box-sizing: border-box !important;
+    
     width: 100% !important;
     margin: 0 !important;
 }

@@ -398,8 +398,7 @@
 
     #page-header {
         width: 100vh !important;
-        height: 500px !important;
-        padding: var(--large) !important
+        height: 500px !important
     }
 
     #page-navbar {
@@ -675,13 +674,12 @@ a:hover {
     align-items: center;
     justify-content: center;
     background-position: center center;
-
     background-size: cover;
     position: relative;
     flex-wrap: wrap;
     align-content: center;
     gap: var(--large);
-    padding: 0 var(--large) 0 var(--4xlarge)
+    padding: var(--large)
 }
 
 #page-header a {

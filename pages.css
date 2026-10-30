@@ -35,7 +35,7 @@ body {
 .filter div {
     text-transform: uppercase;
     font-weight: 300;
-    background-color: var(--co1-50);
+    background-color: var(--co1-100);
     color: var(--co1);
     border: 0.5px solid var(--co1);
     padding: 0 var(--4xsmall);
@@ -105,16 +105,13 @@ body {
     position: relative
 }
 
-.item>* {
+.item >* {
     cursor: pointer
 }
 
 .item-title {
-    font-family: var(--spe)
-}
-
-.item-name {
     position: absolute;
+    font-family: var(--spe);
     width: 100%;
     height: 100%;
     padding: var(--large);
@@ -130,11 +127,11 @@ body {
     text-transform: capitalize
 }
 
-#directory .item-name {
+#directory .item-title {
     font-size: var(--large) !important
 }
 
-#masterlist .item-name {
+#masterlist .item-title {
     font-size: var(--2xlarge)
 }
 
@@ -146,7 +143,7 @@ body {
     color: var(--group-color) !important
 }
 
-.item:hover .item-name {
+.item:hover .item-title {
     display: flex
 }
 
@@ -426,7 +423,7 @@ body {
 }
 
 .page-search input {
-    background-color: var(--co1-50);
+    background-color: var(--co1-100);
     border: 0px;
     color: var(--co1);
     font-family: var(--mono);
@@ -467,7 +464,7 @@ body {
 .content-desc {
     padding: var(--large);
     background-color: var(--white);
-    border: 0.5px solid var(--group-color-50);
+    border: 0.5px solid var(--group-color-100);
     flex: 1;
     min-height: 0
 }
@@ -510,7 +507,7 @@ body {
 }
 
 fam {
-    background-color: var(--group-color-50);
+    background-color: var(--group-color-100);
     border: 0.5px solid var(--group-color);
     color: var(--group-color);
     font-family: var(--mono);

@@ -1895,6 +1895,7 @@ a:hover {
     flex-wrap: wrap;
     padding: var(--large);
     text-transform: uppercase;
+    text-align: center;
     font-weight: 300
 }
 
@@ -3288,9 +3289,9 @@ select {
     text-transform: lowercase;
     font-family: var(--mono);
     font-weight: 300;
-    border: 0;
     box-sizing: border-box;
-    padding: var(--4xsmall)
+    padding: var(--4xsmall);
+    width: 150px
 }
 
 fieldset {
@@ -3325,6 +3326,7 @@ button2,
     font-family: var(--display);
     font-weight: 700;
     font-size: var(--large);
+    width: fit-content;
     text-transform: uppercase
 }
 

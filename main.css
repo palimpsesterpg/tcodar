@@ -935,11 +935,11 @@ a:hover {
     font-family: var(--display);
     text-transform: uppercase;
     font-size: var(--6xlarge) !important;
-    letter-spacing: var(--3xsmall);
-    height: var(--6xlarge);
+    letter-spacing: var(--2xsmall);
+    height: var(--5xlarge);
     font-style: italic;
     text-shadow: 0 0 15px var(--white);
-    padding-left: var(--3xsmall);
+    padding-left: var(--2xsmall);
     display: flex;
     -webkit-text-stroke: 0.5px var(--co1);
     align-items: center;

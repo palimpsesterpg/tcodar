@@ -2365,8 +2365,7 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 182px 100px 160px 100px 91px;
     gap: var(--large);
-    width: 100%;
-    height: 100%
+    width: 100%
 }
 
 .phseven-city {

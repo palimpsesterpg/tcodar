@@ -1691,7 +1691,9 @@ a:hover {
     gap: var(--large)
 }
 
-.forum-archives .forum-icon {
+.forum-archives .forum-icon,
+.forum-archives .forum-statistics,
+.forum-archives .forum-lastpost {
     display: none
 }
 

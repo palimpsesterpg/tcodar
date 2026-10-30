@@ -303,7 +303,7 @@ function addTranslateButton() {
     btn.innerHTML = '<div unselectable="on"></div>';
 
     btn.addEventListener('click', () => {
-      const textarea = document.querySelector('sceditor-container textarea');
+      const textarea = q('.sceditor-container textarea');
       if (!textarea) return;
       sceditor.instance(textarea) ?.insertText(
         '<span class="trad"><vo>texte en vo</vo><vf>texte en fr</vf></span>'

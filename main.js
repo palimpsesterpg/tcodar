@@ -161,8 +161,8 @@ const ICONS = [{
 ];
 
 const COPY_ICONS = {
-  copy: '<i class="fi fi-ts-clipboard"></i>',
-  copied: '<i class="fi fi-ts-clipboard-check"></i>',
+    copy: '<i class="fi fi-ts-clipboard"></i>',
+    copied: '<i class="fi fi-ts-clipboard-check"></i>',
 };
 
 const COPY_RESET_DELAY = 5000;
@@ -244,14 +244,14 @@ const GROUP_COLORS = {
 };
 
 const isMention = el => Boolean(el.closest('.mentiontag'));
-const hasMentionNear = el => isMention(el) || Boolean(el.parentElement?.querySelector(':scope > .mentiontag'));
+const hasMentionNear = el => isMention(el) || Boolean(el.parentElement ?.querySelector(':scope > .mentiontag'));
 
 
 const fieldSpan = f => `<span data-field="${f}"></span>`;
 
 const own = (system, selector) =>
     qq(selector, system).filter(
-        el => el.parentElement?.closest('.tabsystem, .tabinline') === system
+        el => el.parentElement ?.closest('.tabsystem, .tabinline') === system
     );
 
 const toCharacterKey = name =>
@@ -325,16 +325,16 @@ function addTranslateButton() {
         btn.addEventListener('click', () => {
             const container = fahide.closest('.sceditor-container');
             const textarea =
-                container?.nextElementSibling?.matches('textarea') ?
+                container ?.nextElementSibling ?.matches('textarea') ?
                 container.nextElementSibling :
                 document.getElementById('text_editor_textarea');
             if (!textarea) return;
 
             const instance =
-                window.sceditor?.instance?.(textarea) ??
-                window.jQuery?.(textarea).sceditor?.('instance');
+                window.sceditor ?.instance ?.(textarea) ??
+                window.jQuery ?.(textarea).sceditor ?.('instance');
 
-            instance?.insertText(
+            instance ?.insertText(
                 '<span class="trad"><vo>texte en vo</vo><vf>texte en fr</vf></span>'
             );
         });
@@ -403,8 +403,8 @@ function initHeaderNav() {
     qq('.header-tab').forEach(headerTab => {
         headerTab.addEventListener('click', () => {
             const key = CSS.escape(headerTab.id);
-            q(`.tab[data-tab="${key}"]`, categories)?.click();
-            q(`.category[data-tab="${key}"]`, categories)?.scrollIntoView({
+            q(`.tab[data-tab="${key}"]`, categories) ?.click();
+            q(`.category[data-tab="${key}"]`, categories) ?.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',
             });
@@ -441,7 +441,7 @@ function updateClockWall() {
 
 function addQueendomTab() {
     if (!isAdmin()) return;
-    q('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
+    q('#categories .tabsystem-tabs.off') ?.insertAdjacentHTML(
         'beforeend',
         '<div class="tab" data-tab="c11"><span>queendom</span></div>'
     );
@@ -476,8 +476,7 @@ function observeGroupContainers() {
     new MutationObserver(mutations => {
         for (const {
                 addedNodes
-            }
-            of mutations) {
+            } of mutations) {
             for (const node of addedNodes) {
                 if (node.nodeType !== 1 || !node.classList.contains('tooltipster-base')) continue;
                 applyGroupClasses(q('.tooltipster-content', node));
@@ -493,8 +492,7 @@ function observeGroupContainers() {
     new MutationObserver(mutations => {
         for (const {
                 addedNodes
-            }
-            of mutations) {
+            } of mutations) {
             for (const node of addedNodes) {
                 if (node.nodeType !== 1) continue;
                 if (node.matches('.notification')) applyGroupClasses(node);
@@ -547,14 +545,14 @@ function fillCard(root, data, index) {
 
     const fam = String(data.id ?? '');
     qq('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
-        q(':scope > .node-num', node)?.remove();
+        q(':scope > .node-num', node) ?.remove();
         node.dataset.id = i + 1;
         node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
     });
 }
 
 function buildRow(el) {
-    const tab = el.closest('.tab-content')?.dataset.tab;
+    const tab = el.closest('.tab-content') ?.dataset.tab;
     const data = getCharacters()[el.dataset.character];
     if (!TAB_FIELDS[tab] || !data) return;
 
@@ -583,7 +581,7 @@ function buildFamilyRow(el) {
 
 function setMemberCharacter() {
     qq('.member').forEach(el => {
-        const name = q('.member-pseudo', el)?.textContent.trim();
+        const name = q('.member-pseudo', el) ?.textContent.trim();
         if (!name) return;
         el.dataset.character = toCharacterKey(name);
     });
@@ -591,7 +589,7 @@ function setMemberCharacter() {
 
 function setPostCharacter() {
     qq('.postprofile').forEach(el => {
-        const name = q('.postprofile-name', el)?.textContent.trim();
+        const name = q('.postprofile-name', el) ?.textContent.trim();
         if (!name) return;
         el.dataset.character = toCharacterKey(name);
     });
@@ -603,10 +601,10 @@ function prefixPseudos() {
     qq('.list-row [data-field="pseudo"]').forEach(el => {
         if (q('a.mentiontag', el)) return;
 
-        const data = characters[el.closest('.list-row')?.dataset.character];
+        const data = characters[el.closest('.list-row') ?.dataset.character];
         const name = el.textContent.trim();
 
-        if (!data?.id) {
+        if (!data ?.id) {
             el.textContent = `@${name}`;
             return;
         }
@@ -630,7 +628,7 @@ function sortListRows() {
         groups.get(parent).push(row);
     });
 
-    const key = row => (q(':scope > span', row)?.textContent ?? '').trim();
+    const key = row => (q(':scope > span', row) ?.textContent ?? '').trim();
 
     groups.forEach(rows => {
         const markers = rows.map(row => {
@@ -653,7 +651,7 @@ function groupPlayers() {
     const parents = new Map();
 
     qq('.list-row[data-character]').forEach(row => {
-        const name = q(':scope > [data-field^="player"]', row)?.textContent.trim().toLowerCase();
+        const name = q(':scope > [data-field^="player"]', row) ?.textContent.trim().toLowerCase();
         if (!name) return;
 
         if (!parents.has(row.parentElement)) parents.set(row.parentElement, new Map());
@@ -691,70 +689,70 @@ function numberSpans() {
 }
 
 async function copyText(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-    return true;
-  } catch {
-    const area = document.createElement('textarea');
-    area.value = text;
-    area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
-    document.body.append(area);
-    area.select();
-    const ok = document.execCommand('copy');
-    area.remove();
-    return ok;
-  }
+    try {
+        await navigator.clipboard.writeText(text);
+        return true;
+    } catch {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+        document.body.append(area);
+        area.select();
+        const ok = document.execCommand('copy');
+        area.remove();
+        return ok;
+    }
 }
 
 function initQuotes() {
-  qq('blockquote').forEach(blockquote => {
-    const cite = q(':scope > div > cite', blockquote);
-    if (!cite) return;
+    qq('blockquote').forEach(blockquote => {
+        const cite = q(':scope > div > cite', blockquote);
+        if (!cite) return;
 
-    cite.textContent = cite.textContent.replace(/\s*a écrit\s*:\s*$/i, '');
-    blockquote.before(cite);
-  });
+        cite.textContent = cite.textContent.replace(/\s*a écrit\s*:\s*$/i, '');
+        blockquote.before(cite);
+    });
 }
 
 function initCodeBoxes() {
-  qq('.codebox dt').forEach(dt => {
-    dt.textContent = dt.textContent.replace(/\s*:\s*$/, '');
-  });
-
-  qq('dl.codebox').forEach(box => {
-    if (q('code', box)) box.classList.add('code');
-  });
-
-  qq('dl.codebox.code').forEach(box => {
-    const code = q('dd code', box);
-    const title = q('dt', box);
-    if (title) title.style.display = 'none';
-    if (!code || q('.copy-code', code)) return;
-
-    const btn = document.createElement('span');
-    btn.className = 'copy-code';
-    btn.innerHTML = COPY_ICONS.copy;
-    code.prepend(btn);
-
-    let timer;
-    btn.addEventListener('click', async () => {
-      if (btn.classList.contains('copied')) return;
-
-      const clone = code.cloneNode(true);
-      q('.copy-code', clone)?.remove();
-
-      if (!(await copyText(clone.textContent))) return;
-
-      btn.innerHTML = COPY_ICONS.copied;
-      btn.classList.add('copied');
-
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        btn.innerHTML = COPY_ICONS.copy;
-        btn.classList.remove('copied');
-      }, COPY_RESET_DELAY);
+    qq('.codebox dt').forEach(dt => {
+        dt.textContent = dt.textContent.replace(/\s*:\s*$/, '');
     });
-  });
+
+    qq('dl.codebox').forEach(box => {
+        if (q('code', box)) box.classList.add('code');
+    });
+
+    qq('dl.codebox.code').forEach(box => {
+        const code = q('dd code', box);
+        const title = q('dt', box);
+        if (title) title.style.display = 'none';
+        if (!code || q('.copy-code', code)) return;
+
+        const btn = document.createElement('span');
+        btn.className = 'copy-code';
+        btn.innerHTML = COPY_ICONS.copy;
+        code.prepend(btn);
+
+        let timer;
+        btn.addEventListener('click', async () => {
+            if (btn.classList.contains('copied')) return;
+
+            const clone = code.cloneNode(true);
+            q('.copy-code', clone) ?.remove();
+
+            if (!(await copyText(clone.textContent))) return;
+
+            btn.innerHTML = COPY_ICONS.copied;
+            btn.classList.add('copied');
+
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                btn.innerHTML = COPY_ICONS.copy;
+                btn.classList.remove('copied');
+            }, COPY_RESET_DELAY);
+        });
+    });
 }
 
 function initPageContext() {
@@ -762,16 +760,16 @@ function initPageContext() {
     if (!page) return;
 
     const links = qq('.topic-header-path a.nav', page);
-    const forumHref = links.at(-1)?.href ?? '';
-    const forumId = forumHref.match(/\/f(\d+)/)?.[1];
+    const forumHref = links.at(-1) ?.href ?? '';
+    const forumId = forumHref.match(/\/f(\d+)/) ?. [1];
 
     const titleEl = q('.page-title', page);
     const titleHref =
-        titleEl?.href ??
-        q('a', titleEl ?? document.createElement('div'))?.href ??
-        titleEl?.closest('a')?.href ??
+        titleEl ?.href ??
+        q('a', titleEl ?? document.createElement('div')) ?.href ??
+        titleEl ?.closest('a') ?.href ??
         '';
-    const topicId = titleHref.match(/\/t(\d+)/)?.[1];
+    const topicId = titleHref.match(/\/t(\d+)/) ?. [1];
     const topiclist = q('.topiclist', page);
     const postlist = q('.postlist', page);
 
@@ -781,14 +779,14 @@ function initPageContext() {
 
     if (!postlist) return;
 
-    if (postlist?.id === '267') {
+    if (postlist ?.id === '267') {
         postlist.classList.add('tabsystem', 'listings');
         qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
         qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
 
         const tabsPost = document.getElementById('340');
-        tabsPost?.classList.add('tabsystem-tabs');
-        tabsPost?.classList.remove('tab-content');
+        tabsPost ?.classList.add('tabsystem-tabs');
+        tabsPost ?.classList.remove('tab-content');
 
         const tabIds = {
             675: 'faces',
@@ -803,11 +801,11 @@ function initPageContext() {
             const post = document.getElementById(id);
             if (!post) return;
             post.dataset.tab = tab;
-            q('.message', post)?.classList.add('listings-table');
+            q('.message', post) ?.classList.add('listings-table');
         });
     }
 
-    if (postlist?.id === '272') {
+    if (postlist ?.id === '272') {
         qq('.post', postlist).forEach(p => p.classList.add('mini'));
     }
 }
@@ -832,8 +830,7 @@ onReady(() => {
     cloneMemberPseudo();
 
     qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
-    qq('.post').forEach(p => p.before(sep()));
-    qq('.post').forEach(p => p.after(sep()));
+    qq('.post').forEach(p => (p.before(sep()), p.after(sep())));
     qq('.fcmainad-title-main').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
@@ -880,7 +877,7 @@ onReady(() => {
 });
 
 document.addEventListener('click', e => {
-    e.target.closest('.bloc-toggle')?.classList.toggle('open');
+    e.target.closest('.bloc-toggle') ?.classList.toggle('open');
 });
 
 if (document.readyState === 'complete') initGroupClasses();

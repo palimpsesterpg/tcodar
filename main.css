@@ -1461,7 +1461,6 @@ a:hover {
 .forum-off .forum-topics {
     border: 0.5px solid var(--white);
     padding: var(--4xsmall);
-    gap: var(--4xsmall);
     justify-content: space-between;
     background-color: var(--white-op50);
     width: -webkit-fill-available
@@ -1538,7 +1537,7 @@ a:hover {
     font-family: var(--spe);
     color: var(--co2);
     text-transform: lowercase;
-    font-weight: 300;
+    font-weight: 700;
     text-shadow: 1px 1px var(--white)
 }
 
@@ -1571,8 +1570,10 @@ a:hover {
 
 .forum-off .forum-posts,
 .forum-off .forum-topics {
-    background-color: var(--co3);
-    color: var(--white)
+    background-color: var(--co3-100);
+    color: var(--co3);
+    font-weight: 300;
+    border-color: var(--co3)
 }
 
 .forum-off .forum-lastpost-avatar img {

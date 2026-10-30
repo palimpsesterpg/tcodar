@@ -100,7 +100,8 @@ function cloneContent() {
     const clones = [...item.querySelectorAll(':scope > img, :scope > .item-title')]
       .map(el => {
         const clone = el.cloneNode(true);
-        clone.classList.remove('item-name');
+        clone.classList.remove('item-title');
+        clone.classList.add('item-name');
         return clone;
       });
 

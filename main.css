@@ -601,8 +601,7 @@ a:hover {
 
 a,
 a:visited {
-    color: var(--lightdark);
-    font-weight: 600
+    color: var(--lightdark)
 }
 
 a:hover {
@@ -2589,7 +2588,7 @@ a:hover {
 }
 
 #newest-user span {
-    color: var(--lightdark) !important
+    color: var(--lighterdark) !important
 }
 
 #newest-user span:hover {
@@ -3702,7 +3701,7 @@ a.nav {
     background-clip: padding-box !important;
     border: var(--2xsmall) solid var(--darklight) !important;
     border-radius: 0 !important;
-    color: var(--lightdark) !important;
+    color: var(--lighterdark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     outline: 0.5px solid var(--neutral) !important;
@@ -3767,7 +3766,7 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    color: var(--lightdark) !important;
+    color: var(--lighterdark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     padding: var(--large) !important;

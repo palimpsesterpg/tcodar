@@ -102,11 +102,8 @@ body {
     position: relative
 }
 
-.item>* {
-    cursor: pointer
-}
-
 .item-title {
+    cursor: pointer;
     position: absolute;
     font-family: var(--spe);
     width: 100%;
@@ -124,13 +121,13 @@ body {
     text-transform: capitalize
 }
 
-.item-title {
+.item-name {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--co1)
 }
 
-#masterlist {
+#masterlist .item-name {
     color: var(--group-color) !important
 }
 
@@ -166,6 +163,7 @@ body {
 }
 
 .item-content {
+    position: relative;
     padding: var(--2xlarge);
     gap: var(--large);
     border: 0.5px solid var(--group-color, var(--neutral));
@@ -244,6 +242,7 @@ body {
     height: 100%;
     width: 100%;
     min-height: 0;
+    gap: var(--large);
     overflow: auto
 }
 
@@ -275,8 +274,8 @@ body {
 .nores .item-content:after {
     text-transform: uppercase;
     font-weight: 300;
-    top: var(--3xlarge);
-    left: var(--3xlarge);
+    top: var(--large);
+    left: var(--large);
     position: absolute;
     font-family: var(--mono)
 }
@@ -316,8 +315,8 @@ body {
 .played .item-content:before,
 .free .item-content:before {
     position: absolute;
-    top: var(--3xlarge);
-    right: var(--3xlarge);
+    top: var(--large);
+    right: var(--large);
     text-transform: uppercase;
     font-family: var(--mono);
     z-index: 99
@@ -398,8 +397,7 @@ body {
 }
 
 .tabsystem-contents {
-    width: 50%;
-    margin-top: var(--large);
+    width: 65%;
     padding-left: var(--large);
     border-left: var(--2xsmall) solid var(--co2)
 }
@@ -520,4 +518,16 @@ fam {
     outline: 0.5px solid var(--group-color);
     margin: 0.5px;
     border: var(--4xsmall) solid var(--light)
+}
+
+.item-close {
+    position: absolute;
+    bottom: var(--large);
+    right: var(--large)
+}
+
+.item-close:before {
+    font-family: var(--icons-thin) !important;
+    content: "\e5e8";
+    cursor: pointer
 }

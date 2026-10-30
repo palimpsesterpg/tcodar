@@ -2,23 +2,54 @@ const normalize = str =>
   str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 const getTitle = item =>
-  q(':scope > .item-title', item)?.textContent.trim() || '';
+  q(':scope > .item-title', item) ?.textContent.trim() || '';
 
 const filterClass = el => [...el.classList].find(c => c !== 'active');
 
 const GENDERS = {
-  cismale: { label: 'homme cis', feminine: false },
-  cisfemale: { label: 'femme cis', feminine: true },
-  transmale: { label: 'homme trans', feminine: false },
-  transfemale: { label: 'femme trans', feminine: true },
-  nonbinary: { label: 'personne non-binaire', nby: true },
+  cismale: {
+    label: 'homme cis',
+    feminine: false
+  },
+  cisfemale: {
+    label: 'femme cis',
+    feminine: true
+  },
+  transmale: {
+    label: 'homme trans',
+    feminine: false
+  },
+  transfemale: {
+    label: 'femme trans',
+    feminine: true
+  },
+  nonbinary: {
+    label: 'personne non-binaire',
+    nby: true
+  },
 };
 
 const JOBS = {
-  acting: { masculine: 'acteur', feminine: 'actrice', nby: 'acteur.ice' },
-  music: { masculine: 'musicien', feminine: 'musicienne', nby: 'musicien.ne' },
-  modeling: { masculine: 'mannequin', feminine: 'mannequin', nby: 'mannequin' },
-  influence: { masculine: 'influenceur', feminine: 'influenceuse', nby: 'influenceur.euse' },
+  acting: {
+    masculine: 'acteur',
+    feminine: 'actrice',
+    nby: 'acteur.ice'
+  },
+  music: {
+    masculine: 'musicien',
+    feminine: 'musicienne',
+    nby: 'musicien.ne'
+  },
+  modeling: {
+    masculine: 'mannequin',
+    feminine: 'mannequin',
+    nby: 'mannequin'
+  },
+  influence: {
+    masculine: 'influenceur',
+    feminine: 'influenceuse',
+    nby: 'influenceur.euse'
+  },
 };
 
 let filterGroups = [];
@@ -32,7 +63,7 @@ const groupOf = new Map();
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
+  const form = gender ?.nby ? 'nby' : gender ?.feminine ? 'feminine' : 'masculine';
 
   const jobs = [...item.classList]
     .filter(c => c in JOBS)
@@ -41,8 +72,8 @@ function buildContentHead(item) {
   const head = document.createElement('div');
   head.className = 'content-head';
 
-  [gender?.label, item.dataset.year, ...jobs]
-    .filter(Boolean)
+  [gender ?.label, item.dataset.year, ...jobs]
+  .filter(Boolean)
     .forEach(text => {
       const span = document.createElement('span');
       span.textContent = text;
@@ -95,8 +126,10 @@ function sortItems() {
   if (!itemsContainer) return;
 
   [...items]
-    .sort((a, b) =>
-      getTitle(a).localeCompare(getTitle(b), 'fr', { sensitivity: 'base' })
+  .sort((a, b) =>
+      getTitle(a).localeCompare(getTitle(b), 'fr', {
+        sensitivity: 'base'
+      })
     )
     .forEach(item => itemsContainer.appendChild(item));
 }
@@ -107,8 +140,7 @@ function updateFilters() {
   );
 
   const matches = (item, c, gi) =>
-    item.classList.contains(c) ||
-    [...item.classList].some(cls => {
+    item.classList.contains(c) || [...item.classList].some(cls => {
       const parts = cls.split('-');
       if (parts.length !== 2 || !parts.includes(c)) return false;
 
@@ -157,19 +189,21 @@ function initSearch() {
   if (!searchInput) return;
 
   searchInput.addEventListener('input', updateSearch);
-  searchButton?.addEventListener('click', updateSearch);
+  searchButton ?.addEventListener('click', updateSearch);
 }
 
 function initItemPanels() {
   document.addEventListener('click', e => {
+    const closeBtn = e.target.closest('.item-close');
+    if (closeBtn) {
+      closeBtn.closest('.item')?.classList.remove('open');
+      return;
+    }
+
     if (e.target.closest('.item-content')) return;
 
     const item = e.target.closest('.page-items .item');
     if (item) item.classList.add('open');
-  });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeAllItems();
   });
 }
 

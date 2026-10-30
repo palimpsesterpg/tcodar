@@ -2191,7 +2191,8 @@ a:hover {
 .close-modal:before,
 #notiffi_button_close:before,
 .alert_close:before,
-.notif_close:before {
+.notif_close:before,
+.item-close {
     font-family: var(--icons-thin) !important;
     content: "\e5e8";
     cursor: pointer

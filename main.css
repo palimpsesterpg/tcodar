@@ -3585,7 +3585,7 @@ a.nav {
     display: none
 }
 
-.quickreply form div:nth-of-type(2) {
+.quickreply form>div:nth-of-type(2) {
     text-align: center;
     margin-top: var(--large);
     display: flex;
@@ -3629,4 +3629,70 @@ a.nav {
     display: flex;
     align-items: center;
     justify-content: center
+}
+
+.textarea_content {
+    box-sizing: border-box;
+    width: 100%
+}
+
+.sceditor-container {
+    background: var(--light);
+    background-clip: padding-box;
+    border: var(--2xsmall) solid var(--darklight);
+    border-radius: 0;
+    color: var(--lightdark);
+    font-family: var(--main);
+    font-size: var(--medium);
+    outline: 0.5px solid var(--neutral);
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.div.sceditor-toolbar {
+    background: transparent;
+    background-clip: padding-box;
+    border-bottom: 0;
+    border-radius: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+div.sceditor-group {
+    background: transparent;
+    background-clip: padding-box;
+    border-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: var(--4xsmall);
+    justify-content: center
+}
+
+.sceditor-button {
+    background-clip: padding-box;
+    border-radius: 0;
+    cursor: pointer;
+    float: none;
+    display: flex !important;
+    height: var(--2xlarge);
+    padding: 0;
+    text-indent: -9999px;
+    width: var(--xlarge);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--co1-100)
+}
+
+.sceditor-button div {
+    color: var(--co1);
+    margin: 0
 }

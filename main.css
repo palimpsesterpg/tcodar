@@ -3299,7 +3299,8 @@ fieldset {
 }
 
 button,
-p {
+p,
+form {
     margin: 0;
     margin-inline: 0;
     padding: 0;
@@ -3582,6 +3583,16 @@ a.nav {
 .quickreply .h3,
 .quickreply br {
     display: none
+}
+
+.quickreply form div:nth-of-type(2) {
+    text-align: center;
+    margin-top: var(--large);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    font-size: 0
 }
 
 .topic-watch {

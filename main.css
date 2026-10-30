@@ -1108,6 +1108,7 @@ a:hover {
 }
 
 .forum-description br,
+.forum-links:empty,
 .forum-description:empty {
     display: none
 }
@@ -1677,10 +1678,6 @@ a:hover {
     border-radius: var(--small)
 }
 
-.forum-archives .forum-content {
-    flex-direction: column
-}
-
 .forum-archives {
     padding: var(--large);
     background-color: var(--black-op75);
@@ -1689,8 +1686,11 @@ a:hover {
     align-items: center
 }
 
-.forum-archives .forum-lastpost,
-.forum-archives .forum-statistics,
+.forum-archives .forum-content {
+    flex-direction: column;
+    gap: var(--large)
+}
+
 .forum-archives .forum-icon {
     display: none
 }
@@ -1703,6 +1703,7 @@ a:hover {
     font-family: var(--spe);
     color: var(--white);
     font-size: var(--3xlarge);
+    line-height: 1;
     font-weight: 100;
     text-transform: lowercase
 }
@@ -1715,6 +1716,7 @@ a:hover {
 .forum-archives .forum-links a {
     color: var(--darkneutral);
     font-size: var(--medium);
+    font-weight: 300;
     text-transform: uppercase
 }
 
@@ -1724,7 +1726,6 @@ a:hover {
 
 .post {
     display: flex;
-    position: relative;
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
@@ -1737,17 +1738,15 @@ a:hover {
 }
 
 .posticons {
-    position: absolute;
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
     top: calc(-0.5rem - 0.5px);
     border: 0.5px solid var(--neutral);
     left: calc(100% + var(--large));
-
     padding: 0 var(--2xsmall);
     justify-content: center;
-    background: var(--light);
-    display: flex;
-    align-items: flex-start
+    background: var(--light)
 }
 
 .posticons a,

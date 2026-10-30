@@ -687,8 +687,13 @@ a:hover {
     font-weight: 900;
     font-family: var(--spe);
     color: #fff0;
-    flex-wrap: wrap;
-    text-shadow: 0 0 5px var(--white-op50)
+    display: flex;
+    text-shadow: 0 0 5px var(--white-op50);
+    flex-direction: column;
+}
+
+#page-header a span {
+    font-style: italic
 }
 
 .header-tab {

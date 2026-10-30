@@ -3646,67 +3646,66 @@ a.nav {
 }
 
 .textarea_content {
-    box-sizing: border-box;
-    width: 100%
+    box-sizing: border-box !important;
+    width: 100% !important
 }
 
 .sceditor-container {
-    background: var(--light);
-    background-clip: padding-box;
-    border: var(--2xsmall) solid var(--darklight);
-    border-radius: 0;
-    color: var(--lightdark);
-    font-family: var(--main);
-    font-size: var(--medium);
-    outline: 0.5px solid var(--neutral);
-    box-sizing: border-box;
-    font-weight: 500;
+    background: var(--light) !important;
+    background-clip: padding-box !important;
+    border: var(--2xsmall) solid var(--darklight) !important;
+    border-radius: 0 !important;
+    color: var(--lightdark) !important;
+    font-family: var(--main) !important;
+    font-size: var(--medium) !important;
+    outline: 0.5px solid var(--neutral) !important;
+    box-sizing: border-box !important;
+    font-weight: 500 !important;
 }
 
 .div.sceditor-toolbar {
-    background: transparent;
-    background-clip: padding-box;
-    border-bottom: 0;
-    border-radius: 0;
-    line-height: 0;
-    overflow: hidden;
-    padding: 0;
-    user-select: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center
+    background: transparent !important;
+    background-clip: padding-box !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    user-select: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: var(--4xsmall) !important;
+    justify-content: center !important
 }
 
 div.sceditor-group {
-    background: transparent;
-    background-clip: padding-box;
-    border-bottom: 0;
-    border-radius: 0;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    gap: var(--4xsmall);
-    justify-content: center
+    background: transparent !important;
+    background-clip: padding-box !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+    gap: var(--4xsmall) !important;
+    justify-content: center !important
 }
 
 .sceditor-button {
-    background-clip: padding-box;
-    border-radius: 0;
-    cursor: pointer;
-    float: none;
+    background-clip: padding-box !important;
+    border-radius: 0 !important;
+    float: none !important;
     display: flex !important;
-    height: var(--2xlarge);
-    padding: 0;
-    text-indent: -9999px;
-    width: var(--xlarge);
-    align-items: center;
-    justify-content: center;
-    background-color: var(--co1-100)
+    height: var(--2xlarge) !important;
+    padding: 0 !important;
+    width: var(--xlarge) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--co1-100) !important
 }
 
 .sceditor-button div {
-    color: var(--co1);
-    margin: 0
+    color: var(--co1) !important;
+    margin: 0 !important
 }

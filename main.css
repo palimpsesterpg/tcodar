@@ -1508,6 +1508,11 @@ a:hover {
     justify-content: flex-end
 }
 
+.forum-off:nth-of-type(even) .forum-icon {
+    right: auto;
+    left: var(--large)
+}
+
 .forum-off:nth-of-type(odd) {
     flex-direction: row-reverse;
     justify-content: flex-start
@@ -1525,7 +1530,7 @@ a:hover {
     grid-area: 1 / 1 / 2 / 3;
 }
 
-.forum-off:nth-of-type(odd) .forum-title {
+.forum-off:nth-of-type(even) .forum-title {
     text-align: right
 }
 

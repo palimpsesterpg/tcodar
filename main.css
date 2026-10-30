@@ -1514,7 +1514,7 @@ a:hover {
 
 .forum-off .forum-content {
     width: calc(100% - 75px);
-    grid-template-columns: auto 50px;
+    grid-template-columns: auto 75px;
     row-gap: var(--large);
     display: grid;
     grid-template-rows: auto auto auto

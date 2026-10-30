@@ -1504,7 +1504,12 @@ a:hover {
     background-color: var(--white-op50);
     backdrop-filter: blur(2px);
     border: 0.5px solid var(--white);
-    align-items: flex-end
+    justify-content: flex-end
+}
+
+.forum-off:nth-of-type(even) {
+    flex-direction: row-reverse;
+    justify-content: flex-start
 }
 
 .forum-off .forum-content {
@@ -1561,6 +1566,11 @@ a:hover {
     object-fit: cover;
     top: 0;
     position: absolute
+}
+
+.forum-off:nth-of-type(even) .forum-lastpost-avatar img {
+    left: auto;
+    right: 0
 }
 
 .forum-media {
@@ -2517,7 +2527,6 @@ a:hover {
 #hub .four div {
     height: var(--3xlarge);
     display: flex;
-
     padding: 0 var(--large);
     align-items: center;
     flex: 1;
@@ -2526,7 +2535,7 @@ a:hover {
     background-color: var(--co1-100);
     font-family: var(--display);
     text-transform: lowercase;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 2.5px;
     padding-left: calc(var(--large) + 2.5px);
     border: 0.5px solid var(--co1);
@@ -2534,7 +2543,6 @@ a:hover {
 }
 
 #hub .four strong {
-    color: var(--co1-800);
     font-weight: 900
 }
 

@@ -379,6 +379,11 @@
         order: 3;
     }
 
+    .category-title h2 {
+        width: calc(100% + var(--5xlarge));
+        margin-left: -4rem !important
+    }
+
     body {
         width: 100vh !important;
         height: 100vh !important
@@ -935,11 +940,11 @@ a:hover {
     font-family: var(--display);
     text-transform: uppercase;
     font-size: var(--6xlarge) !important;
-    letter-spacing: var(--2xsmall);
+    letter-spacing: var(--3xsmall);
     height: var(--5xlarge);
     font-style: italic;
     text-shadow: 0 0 15px var(--white);
-    padding-left: var(--2xsmall);
+    padding-left: var(--3xsmall);
     display: flex;
     -webkit-text-stroke: 0.5px var(--co1);
     align-items: center;

@@ -475,17 +475,17 @@
 
     .group-3,
     .carmine {
-        --co2: #ab3346;
-        --co2-400: #960018;
-        --co2-300: #780013;
-        --co2-200: #5a000e;
-        --co2-100: #3c000a;
-        --co2-600: #c06674;
-        --co2-700: #d599a3;
-        --co2-800: #eaccd1;
+        --group-color: #ab3346;
+        --group-color-400: #960018;
+        --group-color-300: #780013;
+        --group-color-200: #5a000e;
+        --group-color-100: #3c000a;
+        --group-color-600: #c06674;
+        --group-color-700: #d599a3;
+        --group-color-800: #eaccd1;
 
-        --co2-op25: #ab3346bf;
-        --co2-op75: #ab334640
+        --group-color-op25: #ab3346bf;
+        --group-color-op75: #ab334640
     }
 
     .group-4,
@@ -535,17 +535,17 @@
 
     .group-7,
     .majorelle {
-        --co3: #8073e3;
-        --co3_400: #6050dc;
-        --co3-300: #4d40b0;
-        --co3-200: #3a3084;
-        --co3-100: #262058;
-        --co3-600: #a096ea;
-        --co3-700: #bfb9f1;
-        --co3-800: #dfdcf8;
+        --group-color: #8073e3;
+        --group-color: #6050dc;
+        --group-color-300: #4d40b0;
+        --group-color-200: #3a3084;
+        --group-color-100: #262058;
+        --group-color-600: #a096ea;
+        --group-color-700: #bfb9f1;
+        --group-color-800: #dfdcf8;
 
-        --co3-op25: #8073e3bf;
-        --co3-op75: #8073e340
+        --group-color-op25: #8073e3bf;
+        --group-color-op75: #8073e340
     }
 
     .group-8,

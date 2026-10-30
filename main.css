@@ -816,16 +816,13 @@ a:hover {
     border-bottom-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradient23) 1;
-
     width: 100%;
     max-width: 100%;
     min-width: 0;
     overflow: hidden;
     text-align: center;
-    padding-left: 1px;
     text-transform: uppercase;
     font-size: var(--xsmall);
-    letter-spacing: 1px;
     font-weight: 100;
     white-space: nowrap;
     margin-bottom: -1px
@@ -935,7 +932,6 @@ a:hover {
 
 .category-title h2 {
     color: var(--co1-100) !important;
-    margin: 0 !important;
     font-weight: 900 !important;
     font-family: var(--display);
     text-transform: uppercase;
@@ -2021,6 +2017,25 @@ a:hover {
     text-shadow: 2px 2px var(--white)
 }
 
+#reception {
+    padding: var(--large);
+    background-color: var(--light);
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
+    display: flex;
+    flex-direction: column;
+    gap: var(--large);
+    width: 100%
+}
+
+#reception.open .content-toggle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 182px 100px 160px 100px 91px;
+    gap: var(--large);
+    width: 100%
+}
+
 #reception .seven {
     display: grid;
     width: 100%;
@@ -2373,29 +2388,6 @@ a:hover {
 
 #reception .five .ipt intel {
     font-weight: 500
-}
-
-#reception {
-    padding: var(--large);
-    background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
-    width: 100%
-}
-
-#reception .title-toggle {
-    width: 100%;
-    font-size: var(--3xlarge);
-    text-align: center;
-    font-family: var(--spe)
-}
-
-#reception.open .content-toggle {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 182px 100px 160px 100px 91px;
-    gap: var(--large);
-    width: 100%
 }
 
 .phseven-city {

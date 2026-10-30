@@ -356,7 +356,7 @@
     #categories {
         gap: var(--large) !important;
         margin-left: 0 !important;
-        grid-template-columns: auto auto !important;
+        grid-template-columns: var(--2xlarge) auto !important;
         grid-template-rows: auto auto;
         width: 100% !important
     }
@@ -827,10 +827,10 @@ a:hover {
 
 #categories {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: var(--2xlarge) auto var(--2xlarge);
     gap: var(--2xlarge);
-    width: calc(100% + 10rem);
-    margin-left: -5rem;
+    width: calc(100% + 8rem);
+    margin-left: -4rem;
     align-items: center
 }
 
@@ -842,6 +842,7 @@ a:hover {
     justify-content: space-between;
     background-color: var(--white-op75);
     flex-direction: column;
+    width: var(--2xlarge);
     padding: var(--large)
 }
 

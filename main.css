@@ -3605,7 +3605,10 @@ a.nav {
 
 .topic-watch a {
     color: var(--co2) !important;
-    font-weight: 300 !important
+    font-weight: 300 !important;
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall);
+    text-shadow: 1px 1px var(--white)
 }
 
 .topic-admin {

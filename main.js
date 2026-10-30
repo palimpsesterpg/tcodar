@@ -303,9 +303,18 @@ function addTranslateButton() {
     btn.innerHTML = '<div unselectable="on"></div>';
 
     btn.addEventListener('click', () => {
-      const textarea = q('.sceditor-container textarea');
+      const container = fahide.closest('.sceditor-container');
+      const textarea =
+        container?.nextElementSibling?.matches('textarea')
+          ? container.nextElementSibling
+          : document.getElementById('text_editor_textarea');
       if (!textarea) return;
-      sceditor.instance(textarea) ?.insertText(
+
+      const instance =
+        window.sceditor?.instance?.(textarea) ??
+        window.jQuery?.(textarea).sceditor?.('instance');
+
+      instance?.insertText(
         '<span class="trad"><vo>texte en vo</vo><vf>texte en fr</vf></span>'
       );
     });

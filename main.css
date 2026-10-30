@@ -1743,10 +1743,6 @@ a:hover {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    top: calc(-0.5rem - 0.5px);
-    border: 0.5px solid var(--neutral);
-    left: calc(100% + var(--large));
-    padding: 0 var(--2xsmall);
     justify-content: center;
     background: var(--light)
 }

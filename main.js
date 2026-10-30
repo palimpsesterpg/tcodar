@@ -832,7 +832,8 @@ onReady(() => {
     cloneMemberPseudo();
 
     qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
-    qq('.postprofile').forEach(p => p.after(sep()));
+    qq('.post').forEach(p => p.before(sep()));
+    qq('.post').forEach(p => p.after(sep()));
     qq('.fcmainad-title-main').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);

@@ -827,8 +827,9 @@ a:hover {
 #categories {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: calc(100% + 12rem);
-    margin-left: -6rem;
+    gap: var(--2xlarge);
+    width: calc(100% + 10rem);
+    margin-left: -5rem;
     align-items: center
 }
 
@@ -881,7 +882,7 @@ a:hover {
     content: ''
 }
 
-#categories .tab:before:hover span {
+#categories .tab:hover span {
     display: flex
 }
 
@@ -903,12 +904,6 @@ a:hover {
 
 #categories .tabsystem-tabs.loc .tab span {
     left: 2.5rem
-}
-
-#categories .tab.active:before {
-    height: var(--large);
-    width: var(--large);
-    outline: 0.5px solid var(--white)
 }
 
 #categories .tabsystem-tabs.off .tab.active:before,

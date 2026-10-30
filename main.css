@@ -1829,6 +1829,20 @@ a:hover {
     flex-direction: column
 }
 
+.post:has(#presentation-form) .postprofile {
+    display: none
+}
+
+.sms .postprofile {
+    width: 100px
+}
+
+.compact .postprofile {
+    width: 100%;
+    height: 100px;
+    flex-direction: row
+}
+
 .mini .postprofile {
     width: 100%;
     height: 50px;

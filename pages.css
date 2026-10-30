@@ -13,15 +13,13 @@ body {
 .page-filters {
     display: flex;
     flex-direction: column;
-    width: 115px;
+    width: 125px;
     overflow: auto;
     gap: var(--2xsmall)
 }
 
 .page-filters:nth-of-type(1) {
-    width: 100px;
-    padding-right: var(--2xsmall);
-    margin-right: -0.5rem;
+    padding-right: var(--large);
     border-right: 0.5px solid var(--neutral)
 }
 
@@ -38,7 +36,6 @@ body {
     background-color: var(--co1-100);
     color: var(--co1);
     border: 0.5px solid var(--co1);
-    padding: 0 var(--4xsmall);
     font-size: var(--small);
     text-align: center;
     border-radius: var(--large)
@@ -444,10 +441,9 @@ body {
     gap: var(--large);
     width: auto;
     height: calc(100vh - var(--2xlarge));
-    border-radius: var(--2xsmall);
     margin: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--darkneutral);
+    border: 0.5px solid var(--neutral);
     display: flex;
     flex-direction: column
 }

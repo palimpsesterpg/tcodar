@@ -1,68 +1,38 @@
-const filterGroups = document.querySelectorAll('.page-filters .filter');
-const itemsContainer = document.querySelector('.page-items');
-const items = document.querySelectorAll('.page-items .item');
-const searchInput = document.querySelector('#site-search');
-const searchButton = document.querySelector('.page-search button');
-const isDirectory = document.body.id === 'directory';
-
 const normalize = str =>
   str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 const getTitle = item =>
-  item.querySelector(':scope > .item-title') ?.textContent.trim() || '';
+  q(':scope > .item-title', item)?.textContent.trim() || '';
 
 const filterClass = el => [...el.classList].find(c => c !== 'active');
 
 const GENDERS = {
-  cismale: {
-    label: 'homme cis',
-    feminine: false
-  },
-  cisfemale: {
-    label: 'femme cis',
-    feminine: true
-  },
-  transmale: {
-    label: 'homme trans',
-    feminine: false
-  },
-  transfemale: {
-    label: 'femme trans',
-    feminine: true
-  },
-  nonbinary: {
-    label: 'personne non-binaire',
-    nby: true
-  }
+  cismale: { label: 'homme cis', feminine: false },
+  cisfemale: { label: 'femme cis', feminine: true },
+  transmale: { label: 'homme trans', feminine: false },
+  transfemale: { label: 'femme trans', feminine: true },
+  nonbinary: { label: 'personne non-binaire', nby: true },
 };
 
 const JOBS = {
-  acting: {
-    masculine: 'acteur',
-    feminine: 'actrice',
-    nby: 'acteur.ice'
-  },
-  music: {
-    masculine: 'musicien',
-    feminine: 'musicienne',
-    nby: 'musicien.ne'
-  },
-  modeling: {
-    masculine: 'mannequin',
-    feminine: 'mannequin',
-    nby: 'mannequin'
-  },
-  influence: {
-    masculine: 'influenceur',
-    feminine: 'influenceuse',
-    nby: 'influenceur.euse'
-  }
+  acting: { masculine: 'acteur', feminine: 'actrice', nby: 'acteur.ice' },
+  music: { masculine: 'musicien', feminine: 'musicienne', nby: 'musicien.ne' },
+  modeling: { masculine: 'mannequin', feminine: 'mannequin', nby: 'mannequin' },
+  influence: { masculine: 'influenceur', feminine: 'influenceuse', nby: 'influenceur.euse' },
 };
+
+let filterGroups = [];
+let itemsContainer = null;
+let items = [];
+let searchInput = null;
+let searchButton = null;
+let isDirectory = false;
+const groupOf = new Map();
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
   const gender = genderClass ? GENDERS[genderClass] : null;
-  const form = gender ?.nby ? 'nby' : gender ?.feminine ? 'feminine' : 'masculine';
+  const form = gender?.nby ? 'nby' : gender?.feminine ? 'feminine' : 'masculine';
 
   const jobs = [...item.classList]
     .filter(c => c in JOBS)
@@ -71,8 +41,8 @@ function buildContentHead(item) {
   const head = document.createElement('div');
   head.className = 'content-head';
 
-  [gender ?.label, item.dataset.year, ...jobs]
-  .filter(Boolean)
+  [gender?.label, item.dataset.year, ...jobs]
+    .filter(Boolean)
     .forEach(text => {
       const span = document.createElement('span');
       span.textContent = text;
@@ -85,7 +55,7 @@ function buildContentHead(item) {
 function addDecadeClasses() {
   items.forEach(item => {
     const year = parseInt(item.dataset.year, 10);
-    if (isNaN(year)) return;
+    if (Number.isNaN(year)) return;
 
     const d = Math.floor(year / 10) % 10;
     item.classList.add(`${d}0${d}9`);
@@ -94,10 +64,10 @@ function addDecadeClasses() {
 
 function cloneContent() {
   items.forEach(item => {
-    const content = item.querySelector('.item-content');
+    const content = q('.item-content', item);
     if (!content) return;
 
-    const title = item.querySelector(':scope > .item-title');
+    const title = q(':scope > .item-title', item);
     let nameClone = null;
     if (title) {
       nameClone = title.cloneNode(true);
@@ -105,10 +75,10 @@ function cloneContent() {
       nameClone.classList.add('item-name');
     }
 
-    const img = item.querySelector(':scope > img');
+    const img = q(':scope > img', item);
     let imageClone = null;
     if (img) {
-      const credits = content.querySelector(':scope > .content-credits');
+      const credits = q(':scope > .content-credits', content);
       imageClone = document.createElement('div');
       imageClone.className = 'content-image';
       imageClone.append(img.cloneNode(true), ...(credits ? [credits] : []));
@@ -125,22 +95,15 @@ function sortItems() {
   if (!itemsContainer) return;
 
   [...items]
-  .sort((a, b) =>
-      getTitle(a).localeCompare(getTitle(b), 'fr', {
-        sensitivity: 'base'
-      })
+    .sort((a, b) =>
+      getTitle(a).localeCompare(getTitle(b), 'fr', { sensitivity: 'base' })
     )
     .forEach(item => itemsContainer.appendChild(item));
 }
 
-const groupOf = new Map();
-filterGroups.forEach((group, i) =>
-  group.querySelectorAll(':scope > div').forEach(btn => groupOf.set(filterClass(btn), i))
-);
-
 function updateFilters() {
-  const active = [...filterGroups].map(group =>
-    new Set([...group.querySelectorAll(':scope > div.active')].map(filterClass))
+  const active = filterGroups.map(group =>
+    new Set(qq(':scope > div.active', group).map(filterClass))
   );
 
   const matches = (item, c, gi) =>
@@ -148,22 +111,30 @@ function updateFilters() {
     [...item.classList].some(cls => {
       const parts = cls.split('-');
       if (parts.length !== 2 || !parts.includes(c)) return false;
-      const d = parts[0] === c ? parts[1] : parts[0];
-      const dg = groupOf.get(d);
-      return dg === undefined || dg === gi || !active[dg].size || active[dg].has(d);
+
+      const other = parts[0] === c ? parts[1] : parts[0];
+      const otherGroup = groupOf.get(other);
+      return (
+        otherGroup === undefined ||
+        otherGroup === gi ||
+        !active[otherGroup].size ||
+        active[otherGroup].has(other)
+      );
     });
 
   items.forEach(item => {
-    const visible = active.every((set, gi) =>
-      !set.size || [...set].some(c => matches(item, c, gi))
+    const visible = active.every(
+      (set, gi) => !set.size || [...set].some(c => matches(item, c, gi))
     );
     item.style.display = visible ? 'flex' : 'none';
   });
 }
 
 function initFilters() {
-  filterGroups.forEach(group => {
-    group.querySelectorAll(':scope > div').forEach(btn => {
+  filterGroups.forEach((group, i) => {
+    qq(':scope > div', group).forEach(btn => {
+      groupOf.set(filterClass(btn), i);
+
       btn.addEventListener('click', () => {
         btn.classList.toggle('active');
         updateFilters();
@@ -186,12 +157,11 @@ function initSearch() {
   if (!searchInput) return;
 
   searchInput.addEventListener('input', updateSearch);
-  searchButton ?.addEventListener('click', updateSearch);
+  searchButton?.addEventListener('click', updateSearch);
 }
 
 function closeAllItems() {
-  document.querySelectorAll('.page-items .item.open')
-    .forEach(item => item.classList.remove('open'));
+  qq('.page-items .item.open').forEach(item => item.classList.remove('open'));
 }
 
 function initItemPanels() {
@@ -209,10 +179,18 @@ function initItemPanels() {
   });
 }
 
+onReady(() => {
+  filterGroups = qq('.page-filters .filter');
+  itemsContainer = q('.page-items');
+  items = qq('.page-items .item');
+  searchInput = q('#site-search');
+  searchButton = q('.page-search button');
+  isDirectory = document.body.id === 'directory';
 
-addDecadeClasses();
-cloneContent();
-sortItems();
-initFilters();
-initSearch();
-initItemPanels();
+  addDecadeClasses();
+  cloneContent();
+  sortItems();
+  initFilters();
+  initSearch();
+  initItemPanels();
+});

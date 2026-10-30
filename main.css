@@ -3552,6 +3552,7 @@ span[data-field="face"] {
 .topic-header {
     display: flex;
     flex-direction: column;
+    padding: var(--large);
     gap: var(--large)
 }
 

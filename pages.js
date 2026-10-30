@@ -97,24 +97,27 @@ function cloneContent() {
     const content = item.querySelector('.item-content');
     if (!content) return;
 
-    const clones = [...item.querySelectorAll(':scope > img, :scope > .item-title')]
-      .map(el => {
-        const clone = el.cloneNode(true);
-        clone.classList.remove('item-title');
-        clone.classList.add('item-name');
-        return clone;
-      });
-
-    const credits = content.querySelector(':scope > .content-credits');
-    const imgClone = clones.find(el => el.tagName === 'IMG');
-    if (imgClone) {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'content-image';
-      wrapper.append(imgClone, ...(credits ? [credits] : []));
-      clones[clones.indexOf(imgClone)] = wrapper;
+    const title = item.querySelector(':scope > .item-title');
+    let nameClone = null;
+    if (title) {
+      nameClone = title.cloneNode(true);
+      nameClone.classList.remove('item-title');
+      nameClone.classList.add('item-name');
     }
 
-    content.prepend(...clones, ...(isDirectory ? [buildContentHead(item)] : []));
+    const img = item.querySelector(':scope > img');
+    let imageClone = null;
+    if (img) {
+      const credits = content.querySelector(':scope > .content-credits');
+      imageClone = document.createElement('div');
+      imageClone.className = 'content-image';
+      imageClone.append(img.cloneNode(true), ...(credits ? [credits] : []));
+    }
+
+    content.prepend(
+      ...[imageClone, nameClone].filter(Boolean),
+      ...(isDirectory ? [buildContentHead(item)] : [])
+    );
   });
 }
 

@@ -160,6 +160,13 @@ const ICONS = [{
     }
 ];
 
+const COPY_ICONS = {
+  copy: '<i class="fi fi-ts-clipboard"></i>',
+  copied: '<i class="fi fi-ts-clipboard-check"></i>',
+};
+
+const COPY_RESET_DELAY = 5000;
+
 const EDITOR_ICONS = {
     'sceditor-button-bold': '<i class="fi fi-ts-bold"></i>',
     'sceditor-button-italic': '<i class="fi fi-ts-italic"></i>',
@@ -683,6 +690,73 @@ function numberSpans() {
     });
 }
 
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+    document.body.append(area);
+    area.select();
+    const ok = document.execCommand('copy');
+    area.remove();
+    return ok;
+  }
+}
+
+function initQuotes() {
+  qq('blockquote').forEach(blockquote => {
+    const cite = q(':scope > div > cite', blockquote);
+    if (!cite) return;
+
+    cite.textContent = cite.textContent.replace(/\s*a écrit\s*:\s*$/i, '');
+    blockquote.before(cite);
+  });
+}
+
+function initCodeBoxes() {
+  qq('.codebox dt').forEach(dt => {
+    dt.textContent = dt.textContent.replace(/\s*:\s*$/, '');
+  });
+
+  qq('dl.codebox').forEach(box => {
+    if (q('code', box)) box.classList.add('code');
+  });
+
+  qq('dl.codebox.code').forEach(box => {
+    const code = q('dd code', box);
+    const title = q('dt', box);
+    if (title) title.style.display = 'none';
+    if (!code || q('.copy-code', code)) return;
+
+    const btn = document.createElement('span');
+    btn.className = 'copy-code';
+    btn.innerHTML = COPY_ICONS.copy;
+    code.prepend(btn);
+
+    let timer;
+    btn.addEventListener('click', async () => {
+      if (btn.classList.contains('copied')) return;
+
+      const clone = code.cloneNode(true);
+      q('.copy-code', clone)?.remove();
+
+      if (!(await copyText(clone.textContent))) return;
+
+      btn.innerHTML = COPY_ICONS.copied;
+      btn.classList.add('copied');
+
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        btn.innerHTML = COPY_ICONS.copy;
+        btn.classList.remove('copied');
+      }, COPY_RESET_DELAY);
+    });
+  });
+}
+
 function initPageContext() {
     const page = q('#page-content');
     if (!page) return;
@@ -792,6 +866,8 @@ onReady(() => {
     replaceTopicLabels();
     addTranslateButton();
     removeSpacers();
+    initQuotes();
+    initCodeBoxes();
     setTimeout(applyEditorIcons, 500);
     addQueendomTab();
     initTabs();

@@ -3631,6 +3631,20 @@ a.nav {
     justify-content: center
 }
 
+.trad vf {
+	display: none
+}
+
+.trad:hover vo {
+	display: none;
+	transition: 0.5s
+}
+
+.trad:hover vf {
+	display: inline;
+	transition: 0.5s
+}
+
 .textarea_content {
     box-sizing: border-box;
     width: 100%

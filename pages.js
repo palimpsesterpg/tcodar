@@ -85,7 +85,7 @@ function cloneContent() {
     }
 
     content.prepend(
-      ...[imageClone, nameClone].filter(Boolean),
+      ...[nameClone, imageClone].filter(Boolean),
       ...(isDirectory ? [buildContentHead(item)] : [])
     );
   });
@@ -160,15 +160,9 @@ function initSearch() {
   searchButton?.addEventListener('click', updateSearch);
 }
 
-function closeAllItems() {
-  qq('.page-items .item.open').forEach(item => item.classList.remove('open'));
-}
-
 function initItemPanels() {
   document.addEventListener('click', e => {
     if (e.target.closest('.item-content')) return;
-
-    closeAllItems();
 
     const item = e.target.closest('.page-items .item');
     if (item) item.classList.add('open');

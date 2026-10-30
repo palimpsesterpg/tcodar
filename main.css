@@ -3717,7 +3717,7 @@ div.sceditor-group {
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     padding: var(--large) !important;
-    border-top: 0.5px solid var(--darkerlight) !important;
+    border-top: var(--2xsmall) solid var(--darkerlight) !important;
     box-sizing: border-box !important;
     width: 100% !important;
 }

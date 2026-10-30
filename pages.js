@@ -85,7 +85,7 @@ function cloneContent() {
     }
 
     content.prepend(
-      ...[nameClone, imageClone].filter(Boolean),
+      ...[imageClone, nameClone].filter(Boolean),
       ...(isDirectory ? [buildContentHead(item)] : [])
     );
   });

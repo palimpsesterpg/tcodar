@@ -512,7 +512,7 @@ function initGroupClasses() {
     observeGroupContainers();
 
     const color = String(user.groupcolor ?? '').replace('#', '').toUpperCase();
-    const groupClass = GROUP_COLORS[color] ?? 'group-7';
+    const groupClass = GROUP_COLORS[color] ?? 'group-2';
     qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }
 
@@ -532,6 +532,10 @@ function fillCard(root, data, index) {
     });
 
     if (root.classList.contains('list-row') && data.groupId != null) {
+        root.classList.add(`group-${data.groupId}`);
+    }
+
+    if (root.classList.contains('item') && data.groupId != null) {
         root.classList.add(`group-${data.groupId}`);
     }
 

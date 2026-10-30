@@ -102,7 +102,7 @@ body {
     position: relative
 }
 
-.item >* {
+.item>* {
     cursor: pointer
 }
 
@@ -124,19 +124,23 @@ body {
     text-transform: capitalize
 }
 
+.item-title {
+    font-family: var(--spe);
+    font-size: var(--4xlarge);
+    color: var(--co1)
+}
+
+#masterlist {
+    color: var(--group-color) !important
+}
+
 #directory .item-title {
-    font-size: var(--large) !important
+    font-size: var(--large);
+    color: var(--co1)
 }
 
 #masterlist .item-title {
-    font-size: var(--2xlarge)
-}
-
-#masterlist .item-title {
-    color: var(--co1) !important
-}
-
-#masterlist .item-title {
+    font-size: var(--2xlarge);
     color: var(--group-color) !important
 }
 

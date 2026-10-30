@@ -366,10 +366,12 @@
     }
 
     #categories .tabsystem-tabs.off {
+        grid-area: 1 / 1 / 2 / 2;
         align-self: end;
     }
 
     #categories .tabsystem-tabs.loc {
+        grid-area: 2 / 1 / 3 / 3;
         align-self: start;
     }
 

@@ -1903,9 +1903,9 @@ a:hover {
     justify-content: center;
     gap: var(--large);
     padding: var(--large);
-    position: relative;
     background-color: var(--light);
-    border: 0.5px solid var(--neutral)
+    border: var(--2xsmall) solid var(--darklight);
+    outline: 0.5px solid var(--neutral);
 }
 
 .member {

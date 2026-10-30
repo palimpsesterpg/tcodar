@@ -1892,6 +1892,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
+    flex-wrap: wrap;
+    padding: var(--large);
     text-transform: uppercase;
     font-weight: 300
 }
@@ -3285,6 +3287,7 @@ select {
     font-family: var(--mono);
     font-weight: 300;
     border: 0;
+    box-sizing: border-box;
     padding: var(--4xsmall)
 }
 
@@ -3312,8 +3315,8 @@ button1,
 .button1,
 button2,
 .button2 {
-    padding: var(--2xsmall) var(--2xsmall);
-    border: 0.5px solid var(--co1-200);
+    padding: var(--4xsmall) var(--2xsmall);
+    outline: 0.5px solid var(--co1);
     background-color: var(--co1-100);
     color: var(--co1);
     text-shadow: 0.5px 0.5px var(--white);

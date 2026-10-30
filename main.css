@@ -663,7 +663,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     background-position: center center;
-    
+
     background-size: cover;
     position: relative;
     flex-wrap: wrap;
@@ -702,7 +702,7 @@ a:hover {
     width: 3rem;
     z-index: 999;
     position: fixed;
-    
+
     display: flex;
     background-color: var(--darklight);
     align-items: center;
@@ -770,7 +770,7 @@ a:hover {
 #page-footer {
     padding: var(--large);
     width: 75%;
-    
+
     margin: 0 auto;
     background-color: var(--darklight);
     border-left: 0.5px solid var(--co2);
@@ -809,7 +809,7 @@ a:hover {
     border-bottom-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradient23) 1;
-    
+
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -1029,7 +1029,7 @@ a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    
+
     justify-content: center
 }
 
@@ -1225,7 +1225,7 @@ a:hover {
     text-transform: lowercase;
     background-color: var(--co2-100);
     border: 0.5px solid var(--co2);
-    
+
     color: var(--co2);
     font-weight: 700;
     font-size: var(--small);
@@ -1262,7 +1262,7 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-    
+
     background: var(--white-op50);
     flex: 1;
     padding: var(--large);
@@ -1715,7 +1715,7 @@ a:hover {
     top: calc(-0.5rem - 0.5px);
     border: 0.5px solid var(--neutral);
     left: calc(100% + var(--large));
-    
+
     padding: 0 var(--2xsmall);
     justify-content: center;
     background: var(--light);
@@ -1811,14 +1811,14 @@ a:hover {
     justify-content: center;
     height: var(--large);
     aspect-ratio: 1;
-    
+
     border-radius: 100%
 }
 
 .postprofile {
     position: relative;
     width: 200px;
-    
+
     display: flex;
     flex-direction: column
 }
@@ -1828,7 +1828,7 @@ a:hover {
     padding: 0.125rem;
     background-color: var(--white);
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
-    
+
     width: 200px;
     object-fit: cover
 }
@@ -1938,7 +1938,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding: var(--2xsmall);
-    
+
     border-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradientgc3, var(--gradient1light)) 1
@@ -1968,7 +1968,7 @@ a:hover {
     display: none;
     position: absolute;
     background: var(--gradientgc3, var(--gradient1light));
-    
+
     top: 0;
     right: 0
 }
@@ -2049,7 +2049,7 @@ a:hover {
     grid-area: 3 / 1 / 4 / 3;
     height: 100%;
     padding: var(--large);
-    
+
     background-color: var(--co1);
     color: var(--co1-100)
 }
@@ -2076,7 +2076,7 @@ a:hover {
     flex: 1;
     padding: var(--2xsmall);
     display: flex;
-    
+
     align-items: center
 }
 
@@ -2122,7 +2122,7 @@ a:hover {
     border: 0px;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--white-op75);
-    
+
     background: var(--white)
 }
 
@@ -2164,7 +2164,7 @@ a:hover {
     width: 95%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
-    
+
     padding: var(--large)
 }
 
@@ -2328,7 +2328,7 @@ a:hover {
     border-right: 0.5px solid var(--neutral);
     margin-right: var(--large);
     height: 37.5px;
-    
+
     width: 75px;
     display: flex;
     align-items: center
@@ -2405,7 +2405,7 @@ a:hover {
     flex-direction: column;
     padding: var(--2xsmall);
     filter: grayscale(0.75);
-    
+
     text-transform: uppercase
 }
 
@@ -2492,7 +2492,7 @@ a:hover {
 #hub .two div {
     height: var(--3xlarge);
     display: flex;
-    
+
     background-color: var(--group-color-100);
     color: var(--group-color);
     border: .5px solid var(--group-color);
@@ -2521,7 +2521,7 @@ a:hover {
 #hub .four div {
     height: var(--3xlarge);
     display: flex;
-    
+
     padding: 0 var(--large);
     align-items: center;
     flex: 1;
@@ -2551,18 +2551,17 @@ a:hover {
 
 #newest-user-avatar img {
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    border: 5px solid var(--white);
-    height: 224px;
+    border: var(--4xsmall) solid var(--white);
     position: relative;
-    width: 140px
+    height: 234px;
+    width: 149px;
 }
 
 #newest-user-avatar:before {
     content: '';
-    width: 151px;
+    width: 150px;
     height: 235px;
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    padding: .5px;
     position: absolute;
     background: var(--gradient23)
 }
@@ -3063,7 +3062,7 @@ a:hover {
     height: 25px;
     font-weight: 700;
     border-radius: var(--small);
-    
+
     align-items: center;
     display: flex;
     justify-content: center
@@ -3187,7 +3186,7 @@ a:hover {
     background: var(--darklight);
     border-radius: 100%;
     border: 0.5px solid var(--neutral);
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3309,7 +3308,7 @@ select {
     text-transform: lowercase;
     font-family: var(--mono);
     font-weight: 300;
-    
+
     padding: var(--4xsmall);
     width: 150px
 }
@@ -3449,7 +3448,7 @@ dl {
 
 .list-row.title {
     height: 3rem;
-    
+
     width: 100%;
     min-width: 0;
     background-color: var(--darklight);
@@ -3498,7 +3497,7 @@ dl {
 .fam-row span,
 .list-row span {
     display: flex;
-    
+
     width: 100%;
     min-width: 0;
     padding: 0 var(--4xsmall);
@@ -3678,7 +3677,7 @@ a.nav {
 }
 
 #textarea_content {
-    
+
     width: 100% !important
 }
 
@@ -3691,7 +3690,7 @@ a.nav {
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     outline: 0.5px solid var(--neutral) !important;
-    
+
     font-weight: 500 !important;
 }
 
@@ -3757,7 +3756,7 @@ div.sceditor-group {
     font-size: var(--medium) !important;
     padding: var(--large) !important;
     border-top: var(--2xsmall) solid var(--darklight) !important;
-    
+
     width: 100% !important;
     margin: 0 !important;
 }

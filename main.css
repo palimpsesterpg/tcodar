@@ -811,21 +811,13 @@ a:hover {
 
 #sub-page-header {
     background-color: var(--darklight);
-    padding: var(--large) 0;
+    padding-top: var(--large);
     border-width: 0px;
     border-bottom-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradient23) 1;
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: var(--xsmall);
-    font-weight: 100;
-    white-space: nowrap;
-    margin-bottom: -1px
+    margin-bottom: -17px
 }
 
 #categories {

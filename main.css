@@ -3675,7 +3675,8 @@ div.sceditor-toolbar {
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    gap: var(--4xsmall) !important;
+    gap: var(--2xsmall) !important;
+    padding: var(--large);
     justify-content: center !important
 }
 
@@ -3688,7 +3689,7 @@ div.sceditor-group {
     margin: 0 !important;
     padding: 0 !important;
     align-items: center !important;
-    gap: var(--4xsmall) !important;
+    gap: var(--2xsmall) !important;
     justify-content: center !important
 }
 
@@ -3699,11 +3700,24 @@ div.sceditor-group {
     display: flex !important;
     height: var(--2xlarge) !important;
     padding: 0 !important;
-    width: var(--xlarge) !important;
+    width: var(--2xlarge) !important;
     align-items: center !important;
     justify-content: center !important;
     text-indent: 0 !important;
     background-color: var(--co1-100) !important;
     color: var(--co1) !important;
     margin: 0 !important
+}
+
+.sceditor-container iframe,
+.sceditor-container textarea {
+    background: var(--light) !important;
+    border: 0 !important;
+    color: var(--lightdark) !important;
+    font-family: var(--main) !important;
+    font-size: var(--medium) !important;
+    padding: var(--large) !important;
+    border-top: 0.5px solid var(--darkerlight) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
 }

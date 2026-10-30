@@ -3645,6 +3645,12 @@ a.nav {
     transition: 0.5s
 }
 
+.fi-ts-align-right:before {
+    content: "\e07a";
+    display: inline-block;
+    transform: scaleX(-1)
+}
+
 #textarea_content {
     box-sizing: border-box !important;
     width: 100% !important
@@ -3707,6 +3713,13 @@ div.sceditor-group {
     background-color: var(--co1-100) !important;
     color: var(--co1) !important;
     margin: 0 !important
+}
+
+.sceditor-button:hover {
+    background-color: var(--co1) !important;
+    color: var(--white) !important;
+    box-shadow: 0 !important;
+    border: 0 !important
 }
 
 .sceditor-container iframe,

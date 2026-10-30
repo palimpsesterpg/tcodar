@@ -3595,3 +3595,21 @@ a.nav {
     color: var(--co2) !important;
     font-weight: 300 !important
 }
+
+.topic-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+.topic-admin i:before {
+    color: var(--white);
+    background-color: var(--dark);
+    border-radius: 100%;
+    height: var(--xlarge);
+    width: var(--xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

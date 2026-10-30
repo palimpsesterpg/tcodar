@@ -129,32 +129,32 @@ const ICONS = [{
         replace: true
     },
         {
-        selector: ".button-topic-admin a[href*='/modcp?mode=delete'] img",
+        selector: ".topic-admin a[href*='/modcp?mode=delete'] img",
         icon: 'fi fi-ts-trash',
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/modcp?mode=move'] img",
+        selector: ".topic-admin a[href*='/modcp?mode=move'] img",
         icon: 'fi fi-ts-expand-arrows-alt',
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/modcp?mode=lock'] img",
+        selector: ".topic-admin a[href*='/modcp?mode=lock'] img",
         icon: 'fi fi-ts-lock',
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/modcp?mode=unlock'] img",
+        selector: ".topic-admin a[href*='/modcp?mode=unlock'] img",
         icon: 'fi fi-ts-lock-open-alt',
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/modcp?mode=split'] img",
+        selector: ".topic-admin a[href*='/modcp?mode=split'] img",
         icon: 'fi fi-ts-split',
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/merge'] img",
+        selector: ".topic-admin a[href*='/merge'] img",
         icon: 'fi fi-ts-code-merge',
         replace: true
     }

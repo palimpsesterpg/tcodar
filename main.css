@@ -609,6 +609,10 @@ a:hover {
     color: var(--darkneutral)
 }
 
+.usr_grp_clr {
+    color: var(--group-color) !important
+}
+
 [class^="fi-ts-"]:before,
 [class*="fi-ts-"]:before {
     font-family: var(--icons-thin) !important;
@@ -976,10 +980,6 @@ a:hover {
     opacity: 0.75
 }
 
-[data-color-scheme="dark"] .forumlist:before {
-    filter: grayscale(1) invert(1)
-}
-
 [data-tab="c1"] .forumlist:before,
 [data-tab="c11"] .forumlist:before {
     background-image: url("Images/tcodar-admin.jpg")
@@ -1264,13 +1264,11 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-
     background: var(--white-op50);
     flex: 1;
     padding: var(--large);
     border: 0.5px solid var(--white);
     backdrop-filter: blur(2px);
-    border-radius: var(--large);
     gap: var(--large)
 }
 

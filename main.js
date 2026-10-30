@@ -154,7 +154,7 @@ const ICONS = [{
         replace: true
     },
     {
-        selector: ".button-topic-admin a[href*='/modcp?mode=merge'] img",
+        selector: ".button-topic-admin a[href*='/merge'] img",
         icon: 'fi fi-ts-code-merge',
         replace: true
     }

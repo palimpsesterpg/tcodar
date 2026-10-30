@@ -3601,6 +3601,7 @@ a.nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0;
     gap: var(--large)
 }
 
@@ -3608,6 +3609,7 @@ a.nav {
     color: var(--white);
     background-color: var(--dark);
     border-radius: 100%;
+    font-size: var(--small);
     height: var(--xlarge);
     width: var(--xlarge);
     display: flex;

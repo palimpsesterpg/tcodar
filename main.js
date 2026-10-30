@@ -129,35 +129,60 @@ const ICONS = [{
         replace: true
     },
         {
-        selector: '#i_msg_sentbox',
-        icon: 'fi fi-ts-paper-plane-top',
+        selector: ".button-topic-admin a[href*='/modcp?mode=delete'] img",
+        icon: 'fi fi-ts-trash',
         replace: true
     },
     {
-        selector: '#i_msg_outbox',
-        icon: 'fi fi-ts-envelope',
+        selector: ".button-topic-admin a[href*='/modcp?mode=move'] img",
+        icon: 'fi fi-ts-expand-arrows-alt',
         replace: true
     },
     {
-        selector: '#i_msg_savebox',
-        icon: 'fi fi-ts-archive',
+        selector: ".button-topic-admin a[href*='/modcp?mode=lock'] img",
+        icon: 'fi fi-ts-lock',
         replace: true
     },
     {
-        selector: '.ajax-profil_valid, .ajax-profil_edit',
-        icon: 'fi fi-ts-check',
+        selector: ".button-topic-admin a[href*='/modcp?mode=unlock'] img",
+        icon: 'fi fi-ts-lock-open-alt',
         replace: true
     },
     {
-        selector: 'img[src*="folder_new.gif"]',
-        icon: 'fi fi-ts-exclamation',
+        selector: ".button-topic-admin a[href*='/modcp?mode=split'] img",
+        icon: 'fi fi-ts-split',
         replace: true
     },
     {
-        selector: 'img[src*="icon_contact_www.png"]',
-        icon: 'fi fi-ts-envelope-plus',
+        selector: ".button-topic-admin a[href*='/modcp?mode=merge'] img",
+        icon: 'fi fi-ts-code-merge',
         replace: true
     }
+];
+
+const ZODIAC_SIGNS = [
+  'aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo',
+  'libra', 'pisces', 'sagittarius', 'scorpio', 'taurus', 'virgo',
+];
+
+const TOPIC_LABELS = [
+  ['default2', 'rp libre'],
+  ['default3', 'rp solo'],
+  ['default4', 'fiche terminée'],
+  ['default5', 'délai dépassé'],
+  ['default6', 'important'],
+  ['default7', 'à archiver'],
+  ['default8', 'rp terminé'],
+  ['default9', 'analepse'],
+  ['default10', 'prolepse'],
+  ['default11', 'sms'],
+  ['default14', 'appels'],
+  ['default15', 'mails'],
+  ['default32', 'lettres'],
+  ['default16', 'pris'],
+  ['default17', 'tenté'],
+  ['default18', 'reservé'],
+  ['default35', 'délai supplémentaire'],
 ];
 
 const fieldSpan = f => `<span data-field="${f}"></span>`;
@@ -204,6 +229,27 @@ function applyIcons(map) {
             else el.innerHTML = html;
         });
     });
+}
+
+function replaceZodiacIcons() {
+  ZODIAC_SIGNS.forEach(sign => {
+    qq(`img[src*="icon_zodiac_${sign}_2.gif"]`).forEach(img => {
+      const span = document.createElement('span');
+      span.className = `tes-${sign}`;
+      img.replaceWith(span);
+    });
+  });
+}
+
+function replaceTopicLabels() {
+  TOPIC_LABELS.forEach(([gif, label]) => {
+    qq(`topicinfo[style*="${gif}.gif"]`).forEach(el => {
+      el.removeAttribute('style');
+      el.textContent = label;
+    });
+
+    qq(`img[src*="${gif}.gif"]`).forEach(img => img.replaceWith(label));
+  });
 }
 
 function initTabs() {
@@ -580,6 +626,8 @@ onReady(() => {
 
     highlight();
     applyIcons(ICONS);
+    replaceZodiacIcons();
+    replaceTopicLabels();
     addQueendomTab();
     initTabs();
     initTabsInline();

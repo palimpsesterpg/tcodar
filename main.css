@@ -3632,20 +3632,20 @@ a.nav {
 }
 
 .trad vf {
-	display: none
+    display: none
 }
 
 .trad:hover vo {
-	display: none;
-	transition: 0.5s
+    display: none;
+    transition: 0.5s
 }
 
 .trad:hover vf {
-	display: inline;
-	transition: 0.5s
+    display: inline;
+    transition: 0.5s
 }
 
-.textarea_content {
+#textarea_content {
     box-sizing: border-box !important;
     width: 100% !important
 }
@@ -3663,7 +3663,7 @@ a.nav {
     font-weight: 500 !important;
 }
 
-.div.sceditor-toolbar {
+div.sceditor-toolbar {
     background: transparent !important;
     background-clip: padding-box !important;
     border-bottom: 0 !important;
@@ -3702,10 +3702,8 @@ div.sceditor-group {
     width: var(--xlarge) !important;
     align-items: center !important;
     justify-content: center !important;
-    background-color: var(--co1-100) !important
-}
-
-.sceditor-button div {
+    text-indent: 0 !important;
+    background-color: var(--co1-100) !important;
     color: var(--co1) !important;
     margin: 0 !important
 }

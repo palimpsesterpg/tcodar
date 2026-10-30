@@ -361,7 +361,7 @@
         width: 100% !important
     }
 
-    #categories .tabsystem-tabs {
+    #categories .tabsystem-contents {
         grid-area: 1 / 2 / 3 / 3
     }
 
@@ -371,7 +371,7 @@
     }
 
     #categories .tabsystem-tabs.loc {
-        grid-area: 2 / 1 / 3 / 3;
+        grid-area: 2 / 1 / 3 / 2;
         align-self: start;
     }
 

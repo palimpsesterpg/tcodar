@@ -144,10 +144,7 @@ html body {
     font-family: var(--spe);
     font-size: var(--3xlarge);
     text-align: center;
-}
-
-#masterlist .item-name {
-    color: var(--group-color) !important
+    text-transform: capitalize
 }
 
 #directory .item-title {

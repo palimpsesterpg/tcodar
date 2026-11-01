@@ -3549,7 +3549,7 @@ span[data-field="face"] {
 
 .fam-row.open .content-toggle {
     border-top: 0.5px solid;
-    grid-area: 2 / 1 / 3 / 7;
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
     rule: 0.5px solid var(--border-row)

@@ -286,7 +286,7 @@ html body {
 .nores .item-content:after {
     text-transform: uppercase;
     font-weight: 300;
-    top: var(--large);
+    bottom: var(--large);
     left: var(--large);
     position: absolute;
     font-family: var(--mono)
@@ -325,10 +325,11 @@ html body {
 }
 
 .played .item-content:before,
+.booked .item-content:before,
 .free .item-content:before {
     position: absolute;
     top: var(--large);
-    right: var(--large);
+    left: var(--large);
     text-transform: uppercase;
     font-family: var(--mono);
     z-index: 99
@@ -526,7 +527,7 @@ fam {
 
 .item-close {
     position: absolute;
-    bottom: var(--large);
+    top: var(--large);
     right: var(--large)
 }
 

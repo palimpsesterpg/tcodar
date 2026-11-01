@@ -729,7 +729,10 @@ function initAdminPanels() {
     if (e.target.closest('.modal-content')) return;
 
     const item = e.target.closest('.admin-modal');
-    if (item) item.classList.add('open');
+    document.querySelectorAll('.admin-modal.open').forEach(m => {
+      if (m !== item) m.classList.remove('open');
+    });
+    if (item && item.querySelector('.modal-content')) item.classList.add('open');
   });
 }
 

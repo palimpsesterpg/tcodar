@@ -2095,7 +2095,6 @@ a:hover {
     grid-area: 3 / 1 / 4 / 3;
     height: 100%;
     padding: var(--large);
-
     background-color: var(--co1);
     color: var(--co1-100)
 }
@@ -2120,9 +2119,8 @@ a:hover {
 #reception .three i {
     width: 100%;
     flex: 1;
-    padding: var(--2xsmall);
+    padding: var(--4xsmall);
     display: flex;
-
     align-items: center
 }
 
@@ -2142,7 +2140,7 @@ a:hover {
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: var(--4xsmall) solid var(--white)
+    border: 0.5px solid var(--white)
 }
 
 .admin-modal {
@@ -2159,27 +2157,26 @@ a:hover {
     height: 100%
 }
 
-.admin-modal>div {
-    display: none
-}
-
-.admin-modal.open .modal-content {
-    width: 50%;
-    display: flex;
-    position: fixed;
-    z-index: 999;
-    border: 0px;
-    padding: var(--2xlarge);
-    outline: var(--2xlarge) solid var(--white-op75);
-    background: var(--white)
-}
-
-.modal-content {
+.admin-modal > .modal-content {
+    display: none;
     position: relative;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--large)
+    gap: var(--large);
+}
+
+.admin-modal.open > .modal-content {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: 999;
+    border: 0;
+    padding: var(--2xlarge);
+    outline: var(--2xlarge) solid var(--white-op75);
+    background: var(--white);
 }
 
 .admin-close {
@@ -2187,6 +2184,8 @@ a:hover {
     top: 0;
     right: 0
 }
+
+.admin-modal.open { overflow: visible; }
 
 .admin-modal,
 .admin-close {
@@ -2435,10 +2434,15 @@ a:hover {
 }
 
 .phseven-city div {
+    display: flex;
+    height: 100%;
+    width: 100%;
     background-color: var(--white-op75);
-    width: -webkit-fill-available;
     text-align: center;
-    backdrop-filter: blur(2px)
+    backdrop-filter: blur(2px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
 }
 
 .phseven-city .time>* {

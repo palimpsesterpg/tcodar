@@ -15,7 +15,23 @@
 
 body {
     margin: 0px !important;
-    padding: 0px !important
+    padding: 0px !important;
+    background: var(--neutral)
+}
+
+html body {
+    padding-left: 0 !important;
+}
+
+.wrap {
+    padding: var(--large);
+    gap: var(--large);
+    width: auto;
+    height: calc(100vh - var(--2xlarge));
+    margin: var(--large);
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column
 }
 
 .page-content {
@@ -431,18 +447,6 @@ body {
     font-family: var(--mono);
     text-transform: uppercase;
     padding: var(--4xsmall) var(--2xsmall)
-}
-
-.wrap {
-    padding: var(--large);
-    gap: var(--large);
-    width: auto;
-    height: calc(100vh - var(--2xlarge));
-    margin: var(--large);
-    background-color: var(--light);
-    border: 0.5px solid var(--neutral);
-    display: flex;
-    flex-direction: column
 }
 
 .content-fam,

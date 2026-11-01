@@ -3459,7 +3459,6 @@ dl {
 
 .list-row.title {
     height: 3rem;
-
     width: 100%;
     min-width: 0;
     background-color: var(--darklight);
@@ -3691,7 +3690,6 @@ a.nav {
 }
 
 #textarea_content {
-
     width: 100% !important
 }
 

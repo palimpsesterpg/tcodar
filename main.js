@@ -718,6 +718,21 @@ function initQuotes() {
     });
 }
 
+function initAdminPanels() {
+  document.addEventListener('click', e => {
+    const closeBtn = e.target.closest('.admin-close');
+    if (closeBtn) {
+      closeBtn.closest('.admin-modal')?.classList.remove('open');
+      return;
+    }
+
+    if (e.target.closest('.modal-content')) return;
+
+    const item = e.target.closest('.admin-modal');
+    if (item) item.classList.add('open');
+  });
+}
+
 function initCodeBoxes() {
     qq('.codebox dt').forEach(dt => {
         dt.textContent = dt.textContent.replace(/\s*:\s*$/, '');
@@ -876,16 +891,13 @@ onReady(() => {
     initTabsInline();
     initHeaderNav();
     updateClockWall();
+    initAdminPanels();
     addUsernameToNotiffiButton();
     setInterval(updateClockWall, 1000);
 });
 
 document.addEventListener('click', e => {
     e.target.closest('.bloc-toggle') ?.classList.toggle('open');
-});
-
-document.addEventListener('click', e => {
-    e.target.closest('.button-modal') ?.classList.toggle('open');
 });
 
 if (document.readyState === 'complete') initGroupClasses();

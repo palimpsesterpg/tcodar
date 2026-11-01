@@ -2145,34 +2145,36 @@ a:hover {
     border: var(--4xsmall) solid var(--white)
 }
 
-.button-modal {
+.button-admin {
     flex: 1;
     aspect-ratio: 1 / 1;
     cursor: pointer;
     overflow: hidden
 }
 
-.button-modal img {
+.button-admin img {
     width: 100%;
     object-fit: cover;
     filter: grayscale(0.5);
     height: 100%
 }
 
-.button-modal.other img {
-    filter: grayscale(1)
+.button-admin>div {
+    display: none
 }
 
-.admin-modal[open] {
+.button-admin.open .admin-modal {
     width: 50%;
+    display: flex;
+    position: fixed;
+    z-index: 999;
     border: 0px;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--white-op75);
-
     background: var(--white)
 }
 
-.admin-modal[open]>div {
+.admin-modal {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2186,7 +2188,7 @@ a:hover {
     right: 0
 }
 
-.button-modal,
+.button-admin,
 .close-modal {
     background-color: transparent;
     color: inherit;
@@ -2433,36 +2435,18 @@ a:hover {
     text-transform: uppercase
 }
 
-.phseven-city>* {
+.phseven-city div {
     background-color: var(--white-op75);
     width: -webkit-fill-available;
     text-align: center;
     backdrop-filter: blur(2px)
 }
 
-.phseven-city span:first-of-type {
-    padding-top: var(--4xsmall)
-}
-
-.phseven-city .time {
-    padding-bottom: var(--4xsmall)
-}
-
-.phseven-city .meteo {
-    padding: var(--4xsmall) 0
-}
-
-
 .phseven-city .time>* {
     background-color: var(--dark);
     color: var(--white);
     padding: 0 var(--4xsmall);
-    font-weight: 900;
-    margin: 0 var(--4xsmall)
-}
-
-.phseven-city .season {
-    padding: var(--4xsmall) 0
+    font-weight: 900
 }
 
 #hub {

@@ -884,5 +884,9 @@ document.addEventListener('click', e => {
     e.target.closest('.bloc-toggle') ?.classList.toggle('open');
 });
 
+document.addEventListener('click', e => {
+    e.target.closest('.button-modal') ?.classList.toggle('open');
+});
+
 if (document.readyState === 'complete') initGroupClasses();
 else window.addEventListener('load', initGroupClasses);

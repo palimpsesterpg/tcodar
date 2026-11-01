@@ -566,7 +566,7 @@ function buildRow(el) {
 
 function buildFamilyRow(el) {
     el.innerHTML =
-        FAMILY_FIELDS.map(fieldSpan).join('') +
+        `<div class="title-toggle">${FAMILY_FIELDS.map(fieldSpan).join('')}</div>` +
         `<div class="content-toggle">${FAMILY_FIELDS_HIDDEN.map(fieldSpan).join('')}</div>`;
 
     const families = getFamilies();
@@ -900,7 +900,9 @@ onReady(() => {
 });
 
 document.addEventListener('click', e => {
-    e.target.closest('.bloc-toggle') ?.classList.toggle('open');
+    const title = e.target.closest('.title-toggle');
+    if (!title) return;
+    title.closest('.bloc-toggle')?.classList.toggle('open');
 });
 
 if (document.readyState === 'complete') initGroupClasses();

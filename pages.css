@@ -306,11 +306,11 @@ html body {
 .booked.item:before,
 .free.item:before {
     content: '';
-    height: 4.5px;
-    width: 4.5px;
+    height: 5px;
+    width: 5px;
     position: absolute;
-    bottom: var(--4xsmall);
-    left: 50%;
+    left: var(--2xsmall);
+    top: var(--2xsmall);
     border: 0.5px solid var(--white);
     z-index: 99;
     border-radius: 100%

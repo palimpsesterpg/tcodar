@@ -2145,25 +2145,25 @@ a:hover {
     border: var(--4xsmall) solid var(--white)
 }
 
-.button-admin {
+.admin-modal {
     flex: 1;
     aspect-ratio: 1 / 1;
     cursor: pointer;
     overflow: hidden
 }
 
-.button-admin img {
+.admin-modal img {
     width: 100%;
     object-fit: cover;
     filter: grayscale(0.5);
     height: 100%
 }
 
-.button-admin>div {
+.admin-modal>div {
     display: none
 }
 
-.button-admin.open .admin-modal {
+.admin-modal.open .modal-content {
     width: 50%;
     display: flex;
     position: fixed;
@@ -2174,7 +2174,7 @@ a:hover {
     background: var(--white)
 }
 
-.admin-modal {
+.modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2182,21 +2182,21 @@ a:hover {
     gap: var(--large)
 }
 
-.close-modal {
+.admin-close {
     position: absolute;
     top: 0;
     right: 0
 }
 
-.button-admin,
-.close-modal {
+.admin-modal,
+.admin-close {
     background-color: transparent;
     color: inherit;
     border: 0px;
     padding: 0px
 }
 
-.close-modal:before,
+.admin-close:before,
 #notiffi_button_close:before,
 .alert_close:before,
 .notif_close:before,
@@ -2261,7 +2261,7 @@ a:hover {
     padding-right: 0px !important
 }
 
-.admin-modal .inside-modal div {
+.modal-content .inside-modal div {
     display: flex;
     flex-direction: column;
     gap: var(--2xsmall);
@@ -2296,7 +2296,7 @@ a:hover {
     padding: var(--2xsmall)
 }
 
-.admin-modal .inside-modal img {
+.modal-content .inside-modal img {
     width: 150px;
     height: 100px;
     object-fit: cover;

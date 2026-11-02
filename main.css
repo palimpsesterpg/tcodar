@@ -580,11 +580,11 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box !important;
+    box-sizing: border-box !important
 }
 
 html body {
-    padding-left: 3rem !important;
+    padding-left: 3rem !important
 }
 
 body {
@@ -698,7 +698,7 @@ a:hover {
     color: #fff0;
     display: flex;
     text-shadow: 0 0 5px var(--white-op50);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-header a span {
@@ -1529,7 +1529,7 @@ a:hover {
 }
 
 .forum-off .forum-title {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3
 }
 
 .forum-off:nth-of-type(even) .forum-title {
@@ -1957,7 +1957,7 @@ a:hover {
     padding: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
+    outline: 0.5px solid var(--neutral)
 }
 
 .member {
@@ -2162,7 +2162,7 @@ a:hover {
     position: relative;
     flex-direction: column;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .admin-modal.open>.modal-content {
@@ -2176,7 +2176,7 @@ a:hover {
     border: 0;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--white-op75);
-    background: var(--white);
+    background: var(--white)
 }
 
 .admin-close {
@@ -2186,7 +2186,7 @@ a:hover {
 }
 
 .admin-modal.open {
-    overflow: visible;
+    overflow: visible
 }
 
 .admin-modal,
@@ -2565,7 +2565,7 @@ a:hover {
     border: var(--4xsmall) solid var(--white);
     position: relative;
     height: 234px;
-    width: 149px;
+    width: 149px
 }
 
 #newest-user-avatar:before {
@@ -3703,7 +3703,7 @@ a.nav {
     font-size: var(--medium) !important;
     outline: 0.5px solid var(--neutral) !important;
 
-    font-weight: 500 !important;
+    font-weight: 500 !important
 }
 
 div.sceditor-toolbar {
@@ -3769,5 +3769,5 @@ div.sceditor-group {
     padding: var(--large) !important;
     border-top: var(--2xsmall) solid var(--darklight) !important;
     width: 100% !important;
-    margin: 0 !important;
+    margin: 0 !important
 }

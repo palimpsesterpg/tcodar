@@ -10,7 +10,7 @@
 
     --group-color-op25: #33333340;
     --group-color-op50: #33333380;
-    --group-color-op75: #333333bf;
+    --group-color-op75: #333333bf
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 }
 
 html body {
-    padding-left: 0 !important;
+    padding-left: 0 !important
 }
 
 .wrap {
@@ -114,11 +114,20 @@ html body {
 
 .item {
     width: 100%;
-    border-radius: var(--2xsmall);
     aspect-ratio: 1 / 1;
     overflow: hidden;
     gap: var(--large);
     position: relative
+}
+
+#directory .item {
+    border-radius: var(--2xsmall)
+}
+
+#masterlist .item {
+    outline: 0.5px solid var(--group-color);
+    margin: 0.5px;
+    border: var(--4xsmall) solid var(--darklight)
 }
 
 .item-title {
@@ -144,6 +153,7 @@ html body {
     font-family: var(--spe);
     font-size: var(--3xlarge);
     text-align: center;
+    color: var(--group-color);
     text-transform: capitalize
 }
 
@@ -372,8 +382,9 @@ html body {
     color: var(--white);
     text-transform: lowercase;
     font-weight: 700;
-    padding: 0 var(--large);
-    border-radius: var(--small)
+    padding: 0 var(--2xsmall);
+    border-radius: var(--small);
+    text-align: center
 }
 
 .content-origines {
@@ -516,12 +527,6 @@ fam {
     border-radius: var(--large)
 }
 
-#masterlist .item {
-    outline: 0.5px solid var(--group-color);
-    margin: 0.5px;
-    border: var(--4xsmall) solid var(--light)
-}
-
 .item-close {
     position: absolute;
     top: var(--large);
@@ -531,5 +536,6 @@ fam {
 .item-close:before {
     font-family: var(--icons-thin) !important;
     content: "\e5e8";
+    color: var(--group-color);
     cursor: pointer
 }

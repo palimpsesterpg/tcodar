@@ -387,8 +387,8 @@
     }
 
     body {
-        width: 100vh !important;
-        height: 100vh !important
+        min-height: 100vh;
+        height: auto
     }
 
     html body {

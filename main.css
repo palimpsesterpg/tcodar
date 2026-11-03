@@ -1920,14 +1920,16 @@ a:hover {
 }
 
 .post sep {
-    height: 90%;
+    height: 100%;
     width: 0.5px;
+    margin: auto 0;
     background: var(--gradientNeutral)
 }
 
 .mini sep {
-    width: 90%;
+    width: 100%;
     height: 0.5px;
+    margin: 0 auto;
     background: var(--gradientNeutral)
 }
 

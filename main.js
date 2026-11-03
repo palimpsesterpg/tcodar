@@ -757,18 +757,14 @@ function transformDiceMessage(el) {
   if (!dice.length) return;
 
   const title = document.createElement('div');
-  title.className = 'de-titre';
-  title.append(strongEl(player.textContent), ' a lancé le dé');
-
-  const kind = document.createElement('div');
-  kind.className = 'de-case';
-  kind.textContent = `${type}`;
+  title.className = 'dice-title';
+  title.append(strongEl(player.textContent), ' a lancé le dé', type);
 
   const list = document.createElement('ul');
-  list.className = 'de-resultats';
+  list.className = 'dice-results';
   dice.forEach(value => {
     const li = document.createElement('li');
-    li.append('Dé ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
+    li.append('Face ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
     list.append(li);
   });
 

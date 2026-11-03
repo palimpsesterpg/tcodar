@@ -1794,6 +1794,10 @@ a:hover {
     border-bottom: 0
 }
 
+.mini .posticons a>span, .compact .posticons a>span, .sms .posticons a>span,
+.mini .posticons div>span, .compact .posticons div>span, .sms .posticons div>span {    position: absolute;
+    left: auto;}
+
 .fa_like_div>span {
     left: 50% !important;
     transform: translateX(-100%);
@@ -3376,7 +3380,8 @@ button3,
     align-items: center;
     justify-self: center;
     text-transform: uppercase;
-    color: var(--co3);
+    color: var(--co3) !important;
+    font-weight: 700;
     font-size: var(--xlarge)
 }
 

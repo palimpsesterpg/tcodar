@@ -790,7 +790,7 @@ a:hover {
 #page-home,
 #page-footer {
     padding: var(--large);
-    width: 75%;
+    width: 1000px;
     margin: 0 auto;
     background-color: var(--darklight);
     border-left: 0.5px solid var(--co2);
@@ -1784,6 +1784,14 @@ a:hover {
 .posticons a:hover span,
 .posticons div:hover span {
     display: flex
+}
+
+.mini .posticons, .compact .posticons, .sms .posticons {    flex-direction: row;}
+
+.mini .posticons a, .compact .posticons a, .sms .posticons a,
+.mini .posticons div:not(:last-of-type), .compact .posticons div:not(:last-of-type), .sms .posticons div:not(:last-of-type) {
+    border-right: 0.5px solid var(--neutral);
+    border-bottom: 0
 }
 
 .fa_like_div>span {

@@ -93,6 +93,8 @@
     --lightdark: #333;
     --lighterdark: #4c4c4c;
 
+    --gradientNeutral: linear-gradient(to right, var(--light), var(--neutral), var(--light);
+
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
@@ -1918,15 +1920,15 @@ a:hover {
 }
 
 .post sep {
-    height: auto;
+    height: 90%;
     width: 0.5px;
-    background-color: var(--neutral)
+    background: var(--gradientNeutral)
 }
 
 .mini sep {
-    width: 100%;
+    width: 90%;
     height: 0.5px;
-    background-color: var(--neutral)
+    background: var(--gradientNeutral)
 }
 
 .quick-nav-topics {

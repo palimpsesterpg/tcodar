@@ -263,6 +263,23 @@ const toCharacterKey = name =>
     .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
     .join('');
 
+const DICE_RULES = {
+  'caisse de communauté': {
+    1: '+20 points',
+    2: 'Banqueroute',
+    3: 'Va en prison',
+  },
+  'chance': {},
+};
+
+const DICE_DEFAULT = 'Aucun effet';
+
+const strongEl = text => {
+  const el = document.createElement('strong');
+  el.textContent = text;
+  return el;
+};
+
 function resolveValue(field, data, index) {
     const m = field.match(/^(\w+)\[(\d+)\]$/);
     if (m) {
@@ -692,6 +709,43 @@ function numberSpans() {
     });
 }
 
+function transformDiceMessage(el) {
+  if (el.dataset.dice) return;
+
+  const strongs = qq(':scope > strong', el);
+  const [player, action] = strongs;
+  const hr = q(':scope > hr', el);
+  if (!player || !hr || action?.textContent.trim() !== 'Lancer de dés') return;
+
+  const type = hr.nextSibling?.textContent.match(/'(.*)'/)?.[1]?.trim().toLowerCase() ?? '';
+  const rules = DICE_RULES[type];
+
+  const dice = strongs
+    .filter(s => hr.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING)
+    .map(s => parseInt(s.textContent, 10))
+    .filter(value => !Number.isNaN(value));
+  if (!dice.length) return;
+
+  const title = document.createElement('div');
+  title.className = 'de-titre';
+  title.append(strongEl(player.textContent), ' a lancé le dé');
+
+  const kind = document.createElement('div');
+  kind.className = 'de-case';
+  kind.textContent = `${type}`;
+
+  const list = document.createElement('ul');
+  list.className = 'de-resultats';
+  dice.forEach(value => {
+    const li = document.createElement('li');
+    li.append('Dé ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
+    list.append(li);
+  });
+
+  el.dataset.dice = 'done';
+  el.replaceChildren(title, kind, document.createElement('hr'), list);
+}
+
 async function copyText(text) {
     try {
         await navigator.clipboard.writeText(text);
@@ -865,6 +919,8 @@ onReady(() => {
             ...data
         });
     });
+
+      qq('.message').forEach(transformDiceMessage);
 
     setMemberCharacter();
     setPostCharacter();

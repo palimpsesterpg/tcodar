@@ -758,18 +758,18 @@ function transformDiceMessage(el) {
 
   const title = document.createElement('div');
   title.className = 'dice-title';
-  title.append(strongEl(player.textContent), ' a lancé le dé', type);
+  title.append(strongEl(player.textContent), ' a lancé le dé', type ? ` (${type})` : '');
 
-  const list = document.createElement('ul');
+  const list = document.createElement('div');
   list.className = 'dice-results';
   dice.forEach(value => {
-    const li = document.createElement('li');
-    li.append('Face ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
-    list.append(li);
+    const span = document.createElement('div');
+    span.append('Face ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
+    list.append(span);
   });
 
+  el.replaceChildren(title, list);
   el.dataset.dice = 'done';
-  el.replaceChildren(title, kind, document.createElement('hr'), list);
 }
 
 async function copyText(text) {

@@ -758,13 +758,13 @@ function transformDiceMessage(el) {
 
   const title = document.createElement('div');
   title.className = 'dice-title';
-  title.append(strongEl(player.textContent), ' a lancé le dé', type ? ` (${type})` : '');
+  title.append(strongEl(player.textContent), ' a lancé le dé <strong>', type ? `${type}` : '</strong>');
 
   const list = document.createElement('div');
   list.className = 'dice-results';
   dice.forEach(value => {
     const span = document.createElement('div');
-    span.append('Face ', strongEl(value), rules ? ` → ${rules[value] ?? DICE_DEFAULT}` : '');
+    span.append('Face ', strongEl(value), rules ? `: ${rules[value] ?? DICE_DEFAULT}` : '');
     list.append(span);
   });
 

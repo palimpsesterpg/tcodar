@@ -93,7 +93,7 @@
     --lightdark: #333;
     --lighterdark: #4c4c4c;
 
-    --gradientNeutral: linear-gradient(to right, var(--light), var(--neutral), var(--light);
+    --gradientNeutral: linear-gradient(to right, var(--light), var(--neutral), var(--light));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));

@@ -1788,17 +1788,31 @@ a:hover {
     display: flex
 }
 
-.mini .posticons, .compact .posticons, .sms .posticons {    flex-direction: row;}
+.mini .posticons,
+.compact .posticons,
+.sms .posticons {
+    flex-direction: row;
+}
 
-.mini .posticons a, .compact .posticons a, .sms .posticons a,
-.mini .posticons div:not(:last-of-type), .compact .posticons div:not(:last-of-type), .sms .posticons div:not(:last-of-type) {
+.mini .posticons a,
+.compact .posticons a,
+.sms .posticons a,
+.mini .posticons div:not(:last-of-type),
+.compact .posticons div:not(:last-of-type),
+.sms .posticons div:not(:last-of-type) {
     border-right: 0.5px solid var(--neutral);
     border-bottom: 0
 }
 
-.mini .posticons a>span, .compact .posticons a>span, .sms .posticons a>span,
-.mini .posticons div>span, .compact .posticons div>span, .sms .posticons div>span {    position: absolute;
-    left: auto;}
+.mini .posticons a>span,
+.compact .posticons a>span,
+.sms .posticons a>span,
+.mini .posticons div>span,
+.compact .posticons div>span,
+.sms .posticons div>span {
+    position: absolute;
+    left: auto;
+}
 
 .fa_like_div>span {
     left: 50% !important;
@@ -1919,14 +1933,14 @@ a:hover {
     display: none
 }
 
-.post sep {
+.post>sep {
     height: 100%;
     width: 0.5px;
     margin: auto 0;
     background: var(--gradientNeutral)
 }
 
-.mini sep {
+.mini>sep {
     width: 100%;
     height: 0.5px;
     margin: 0 auto;
@@ -3436,7 +3450,7 @@ dl {
     display: flex
 }
 
-.listings sep {
+.listings>sep {
     display: none
 }
 

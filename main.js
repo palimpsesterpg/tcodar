@@ -264,51 +264,59 @@ const toCharacterKey = name =>
     .join('');
 
 const DICE_RULES = {
-  'caisse de communauté': {
-    1: "votre prêt immobilier vous rapporte = + 150 points",
-    2: "vous avez été élu président du CA = - 200 points",
-    3: "amende pour excès de vitesse = - 50 points",
-    4: "frais d'hospitalisation = - 100 points",
-    5: "honoraires de consultation = + 25 points",
-    6: "votre assurance vie vous rapporte = + 100 points",
-    7: "remboursement des impôts sur le revenu = + 20 points",
-    8: "la vente de vos actions vous rapporte = + 50 points",
-    9: "votre caisse de vacances vous rapporte = + 100 points",
-    10: "frais de scolarité = - 50 points",
-    11: "erreur de la banque en votre faveur = + 200 points",
-    12: "c'est votre anniversaire = + 10 points x nombre de membres (pnj compris)",
-    13: "honoraires du médecin = - 50 points",
-    14: "vous héritez = + 100 points",
-    15: "vous avez gagné le deuxième prix du concours de beauté = + 10 points",
-  },
-  'chance': {
-    1: "compte supplémentaire à -50%",
-    2: "compte supplémentaire gratuit",
-    3: "publicité d'un pré-lien sur la PA à -50%",
-    4: "publicité d'un pré-lien sur la PA gratuite",
-    5: "création d'un gif personnalisé à -50%",
-    6: "création d'un gif personnalisé gratuite",
-    7: "réservation de la célébrité de votre pré-lien à -50%",
-    8: "réservation de la célébrité de votre pré-lien gratuite",
-    9: "réservation de la célébrité de votre prochain compte à -50%",
-    10: "réservation de la célébrité de votre prochain compte gratuite",
-    11: "création d'un rang personnalisé à -50%",
-    12: "création d'un rang personnalisé gratuite",
-    13: "création d'un lieu à -50%",
-    14: "création d'un lieu gratuite",
-    15: "rejouez immédiatement (relancez le dé)",
-    16: "échangez une de vos récompenses contre celle d'un autre joueur",
-    17: "votre prochain achat est à -25%",
-  },
+    'caisse de communauté': {
+        1: "votre prêt immobilier vous rapporte = + 150 points",
+        2: "vous avez été élu président du CA = - 200 points",
+        3: "amende pour excès de vitesse = - 50 points",
+        4: "frais d'hospitalisation = - 100 points",
+        5: "honoraires de consultation = + 25 points",
+        6: "votre assurance vie vous rapporte = + 100 points",
+        7: "remboursement des impôts sur le revenu = + 20 points",
+        8: "la vente de vos actions vous rapporte = + 50 points",
+        9: "votre caisse de vacances vous rapporte = + 100 points",
+        10: "frais de scolarité = - 50 points",
+        11: "erreur de la banque en votre faveur = + 200 points",
+        12: "c'est votre anniversaire = + 10 points x nombre de membres (pnj compris)",
+        13: "honoraires du médecin = - 50 points",
+        14: "vous héritez = + 100 points",
+        15: "vous avez gagné le deuxième prix du concours de beauté = + 10 points",
+    },
+    'chance': {
+        1: "compte supplémentaire à -50%",
+        2: "compte supplémentaire gratuit",
+        3: "publicité d'un pré-lien sur la PA à -50%",
+        4: "publicité d'un pré-lien sur la PA gratuite",
+        5: "création d'un gif personnalisé à -50%",
+        6: "création d'un gif personnalisé gratuite",
+        7: "réservation de la célébrité de votre pré-lien à -50%",
+        8: "réservation de la célébrité de votre pré-lien gratuite",
+        9: "réservation de la célébrité de votre prochain compte à -50%",
+        10: "réservation de la célébrité de votre prochain compte gratuite",
+        11: "création d'un rang personnalisé à -50%",
+        12: "création d'un rang personnalisé gratuite",
+        13: "création d'un lieu à -50%",
+        14: "création d'un lieu gratuite",
+        15: "rejouez immédiatement (relancez le dé)",
+        16: "échangez une de vos récompenses contre celle d'un autre joueur",
+        17: "votre prochain achat est à -25%",
+    },
 };
 
 const DICE_DEFAULT = 'Aucun effet';
 
 const strongEl = text => {
-  const el = document.createElement('strong');
-  el.textContent = text;
-  return el;
+    const el = document.createElement('strong');
+    el.textContent = text;
+    return el;
 };
+
+const editHtml = (selector, ...replacers) =>
+    qq(selector).forEach(el => {
+        el.innerHTML = replacers.reduce(
+            (html, [pattern, value]) => html.replace(pattern, value),
+            el.innerHTML
+        );
+    });
 
 function resolveValue(field, data, index) {
     const m = field.match(/^(\w+)\[(\d+)\]$/);
@@ -722,17 +730,17 @@ function groupPlayers() {
 }
 
 function cloneMemberPseudo() {
-    const pm = q('.fcplayer-pseudo');
-    const cm = q('.fcplayer-content');
-    if (!pm || !cm || q('.fcplayer-pseudo-content', cm)) return;
+    const pm = q('.fc-player-pseudo');
+    const cm = q('.fc-player-content');
+    if (!pm || !cm || q('.fc-player-pseudo-content', cm)) return;
 
     const clone = pm.cloneNode(true);
-    clone.classList.replace('fcplayer-pseudo', 'fcplayer-pseudo-content');
+    clone.classList.replace('fc-player-pseudo', 'fc-player-pseudo-content');
     cm.prepend(clone);
 }
 
 function numberSpans() {
-    qq('.fcmainps-content .tab-content:not([data-tab="carac"])').forEach(tab => {
+    qq('.fc-pres-content .tab-content:not([data-tab="carac"])').forEach(tab => {
         qq(':scope > span', tab).forEach((span, i) => {
             span.dataset.n = i + 1;
         });
@@ -740,36 +748,111 @@ function numberSpans() {
 }
 
 function transformDiceMessage(el) {
-  if (el.dataset.dice) return;
+    if (el.dataset.dice) return;
 
-  const strongs = qq(':scope > strong', el);
-  const [player, action] = strongs;
-  const hr = q(':scope > hr', el);
-  if (!player || !hr || action?.textContent.trim() !== 'Lancer de dés') return;
+    const strongs = qq(':scope > strong', el);
+    const [player, action] = strongs;
+    const hr = q(':scope > hr', el);
+    if (!player || !hr || action ?.textContent.trim() !== 'Lancer de dés') return;
 
-  const type = hr.nextSibling?.textContent.match(/'(.*)'/)?.[1]?.trim().toLowerCase() ?? '';
-  const rules = DICE_RULES[type];
+    const type = hr.nextSibling ?.textContent.match(/'(.*)'/) ?. [1] ?.trim().toLowerCase() ?? '';
+    const rules = DICE_RULES[type];
 
-  const dice = strongs
-    .filter(s => hr.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING)
-    .map(s => parseInt(s.textContent, 10))
-    .filter(value => !Number.isNaN(value));
-  if (!dice.length) return;
+    const dice = strongs
+        .filter(s => hr.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING)
+        .map(s => parseInt(s.textContent, 10))
+        .filter(value => !Number.isNaN(value));
+    if (!dice.length) return;
 
-  const title = document.createElement('div');
-  title.className = 'dice-title';
-  title.append(strongEl(player.textContent), ' a lancé le dé <strong>', type ? `${type}` : '</strong>');
+    const title = document.createElement('div');
+    title.className = 'dice-title';
+    title.append(strongEl(player.textContent), ' a lancé le dé <strong>', type ? `${type}` : '</strong>');
 
-  const list = document.createElement('div');
-  list.className = 'dice-results';
-  dice.forEach(value => {
-    const span = document.createElement('div');
-    span.append('Face ', strongEl(value), rules ? `: ${rules[value] ?? DICE_DEFAULT}` : '');
-    list.append(span);
-  });
+    const list = document.createElement('div');
+    list.className = 'dice-results';
+    dice.forEach(value => {
+        const span = document.createElement('div');
+        span.append('Face ', strongEl(value), rules ? `: ${rules[value] ?? DICE_DEFAULT}` : '');
+        list.append(span);
+    });
 
-  el.replaceChildren(title, list);
-  el.dataset.dice = 'done';
+    el.replaceChildren(title, list);
+    el.dataset.dice = 'done';
+}
+
+function getAge(birthDate) {
+    const [day, month, year] = birthDate.split('.').map(Number);
+    if (!day || !month || !year) return null;
+
+    const today = new Date();
+    const monthNow = today.getMonth() + 1;
+    const birthdayPassed = monthNow > month || (monthNow === month && today.getDate() >= day);
+
+    return today.getFullYear() - year - (birthdayPassed ? 0 : 1);
+}
+
+function initAges() {
+    qq('.age-perso').forEach(el => {
+        if (el.dataset.age) return;
+
+        const birthDate = el.textContent.trim();
+        const age = getAge(birthDate);
+        if (age === null) return;
+
+        el.dataset.age = age;
+        el.textContent = `${age} ans (${birthDate})`;
+    });
+}
+
+function buildCount(count, label) {
+    const div = document.createElement('div');
+    div.append(strongEl(count), `${label}${count > 1 ? 's' : ''}`);
+    return div;
+}
+
+async function loadNewestUserAvatar() {
+    const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
+    const target = q('#newest-user-avatar');
+    if (!href || !target) return;
+
+    try {
+        const response = await fetch(href);
+        const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+        const avatar = q('.profile-avatar img', doc);
+        if (avatar) target.replaceChildren(avatar);
+    } catch {}
+}
+
+function initBoardStats() {
+    q('#logged-in-user-list div br') ?.remove();
+
+    editHtml('#logged-in-user-list', [/Utilisateurs enregistrés\s*:\s*/i, '']);
+    editHtml('#total-posts', [/^Nos membres ont posté un total de\s*/i, '']);
+    editHtml('#l-connected-members div', [/Membres connectés au cours des 192 dernières heures\s*:\s*/i, '']);
+    editHtml('#newest-user', [/^L'utilisateur enregistré le plus récent est\s*/i, '']);
+    editHtml(
+        '#total-users',
+        [/Nous avons\s*/i, ''],
+        [/\s*membres enregistrés/i, 'membres'],
+        [/:\s*$/, '']
+    );
+
+    const online = q('#total-users-online');
+    const hub = q('#hub .four');
+
+    if (online && hub) {
+        const text = online.textContent.replace(/\d+\s*Invisible\s*,?\s*/g, '');
+        const count = pattern => parseInt(text.match(pattern) ?. [1], 10) || 0;
+
+        hub.append(
+            buildCount(count(/Il y a en tout (\d+)/), 'connecté.e'),
+            buildCount(count(/(\d+)\s*Enregistré/), 'enregistré.e'),
+            buildCount(count(/(\d+)\s*Invité/), 'invité.e')
+        );
+    }
+    online ?.remove();
+
+    editHtml('#l-connected-members, #logged-in-user-list', [/,\s+/g, ' · ']);
 }
 
 async function copyText(text) {
@@ -799,21 +882,21 @@ function initQuotes() {
 }
 
 function initAdminPanels() {
-  document.addEventListener('click', e => {
-    const closeBtn = e.target.closest('.admin-close');
-    if (closeBtn) {
-      closeBtn.closest('.admin-modal')?.classList.remove('open');
-      return;
-    }
+    document.addEventListener('click', e => {
+        const closeBtn = e.target.closest('.admin-close');
+        if (closeBtn) {
+            closeBtn.closest('.admin-modal') ?.classList.remove('open');
+            return;
+        }
 
-    if (e.target.closest('.modal-content')) return;
+        if (e.target.closest('.modal-content')) return;
 
-    const item = e.target.closest('.admin-modal');
-    document.querySelectorAll('.admin-modal.open').forEach(m => {
-      if (m !== item) m.classList.remove('open');
+        const item = e.target.closest('.admin-modal');
+        document.querySelectorAll('.admin-modal.open').forEach(m => {
+            if (m !== item) m.classList.remove('open');
+        });
+        if (item && item.querySelector('.modal-content')) item.classList.add('open');
     });
-    if (item && item.querySelector('.modal-content')) item.classList.add('open');
-  });
 }
 
 function initCodeBoxes() {
@@ -931,9 +1014,9 @@ onReady(() => {
 
     cloneMemberPseudo();
 
-    qq('.fcmainps-pseudo prenom').forEach(p => p.after(sep()));
+    qq('.fc-pres-pseudo prenom').forEach(p => p.after(sep()));
     qq('.postbody').forEach(p => (p.before(sep()), p.after(sep())));
-    qq('.fcmainad-title-main').forEach(p => p.after(sep()));
+    qq('.fc-main-title-main').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 
@@ -946,7 +1029,7 @@ onReady(() => {
         });
     });
 
-      qq('.message').forEach(transformDiceMessage);
+    qq('.message').forEach(transformDiceMessage);
 
     setMemberCharacter();
     setPostCharacter();
@@ -955,6 +1038,10 @@ onReady(() => {
     qq('[data-character]').forEach(el => fillCard(el, characters[el.dataset.character]));
 
     qq('.list-row[data-character]').forEach(buildRow);
+
+    initAges();
+    initBoardStats();
+    loadNewestUserAvatar();
 
     numberSpans();
 
@@ -984,7 +1071,7 @@ onReady(() => {
 document.addEventListener('click', e => {
     const title = e.target.closest('.title-toggle');
     if (!title) return;
-    title.closest('.bloc-toggle')?.classList.toggle('open');
+    title.closest('.bloc-toggle') ?.classList.toggle('open');
 });
 
 if (document.readyState === 'complete') initGroupClasses();

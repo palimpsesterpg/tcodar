@@ -131,9 +131,9 @@
     --co2-base: #960018;
     --co3-base: #6050dc;
 
-    --co1: color-mix(in srgb, var(--co1-base) 80%, var(--white));
-    --co2: color-mix(in srgb, var(--co2-base) 80%, var(--white));
-    --co3: color-mix(in srgb, var(--co3-base) 80%, var(--white));
+    --co1: color-mix(in srgb, var(--co1-base) 80%, var(--black-base));
+    --co2: color-mix(in srgb, var(--co2-base) 80%, var(--black-base));
+    --co3: color-mix(in srgb, var(--co3-base) 80%, var(--black-base));
 
     --co1-400: var(--co1-base);
     --co2-400: var(--co1-base);
@@ -166,7 +166,6 @@
 .majorelle,
 .group-8,
 .heliotrope {
-
     --group-color: var(--group-base);
 
     --group-color-100: color-mix(in srgb, var(--group-color) 20%, var(--white));
@@ -186,45 +185,45 @@
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
 
-    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light));
+    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
 }
 
 .group-test {
-    --group-base: #94576e;
+    --group-base: #94576e
 }
 
 .group-2 {
-    --group-base: #333333;
+    --group-base: #333333
 }
 
 .group-3,
 .carmine {
-    --group-base: #960018;
+    --group-base: #960018
 }
 
 .group-4,
 .bronze {
-    --group-base: #cd5700;
+    --group-base: #cd5700
 }
 
 .group-5,
 .saffron {
-    --group-base: #bf920d;
+    --group-base: #bf920d
 }
 
 .group-6,
 .emerald {
-    --group-base: #2c7e65;
+    --group-base: #2c7e65
 }
 
 .group-7,
 .majorelle {
-    --group-base: #6050dc;
+    --group-base: #6050dc
 }
 
 .group-8,
 .heliotrope {
-    --group-base: #8e3fab;
+    --group-base: #8e3fab
 }
 
 @media (max-width: 800px) {
@@ -343,13 +342,13 @@
 [data-color-scheme="dark"] :is(.group-test, .group-2, .group-3, .carmine, .group-4, .bronze,
     .group-5, .saffron, .group-6, .emerald, .group-7, .majorelle,
     .group-8, .heliotrope) {
-    --group-color: color-mix(in srgb, var(--group-base) 80%, var(--white));
+    --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
 
     --group-color-400: var(--group-base);
 
     --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
     --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent)
 }
 
 #hub a.lea strong:before {
@@ -1574,7 +1573,7 @@ a:hover {
 .mini .posticons,
 .compact .posticons,
 .sms .posticons {
-    flex-direction: row;
+    flex-direction: row
 }
 
 .mini .posticons a,
@@ -1594,7 +1593,7 @@ a:hover {
 .compact .posticons div>span,
 .sms .posticons div>span {
     position: absolute;
-    left: auto;
+    left: auto
 }
 
 .fa_like_div>span {

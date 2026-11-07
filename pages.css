@@ -1,17 +1,17 @@
 :root {
-    --group-color-100: color-mix(in srgb, var(--co1) 20%, var(--white));
-    --group-color-200: color-mix(in srgb, var(--co1) 40%, var(--white));
-    --group-color-300: color-mix(in srgb, var(--co1) 60%, var(--white));
-    --group-color-400: color-mix(in srgb, var(--co1) 80%, var(--white));
-    --group-color: var(--co1);
-    --group-color-600: color-mix(in srgb, var(--co1) 80%, var(--black));
-    --group-color-700: color-mix(in srgb, var(--co1) 60%, var(--black));
-    --group-color-800: color-mix(in srgb, var(--co1) 40%, var(--black));
-    --group-color-900: color-mix(in srgb, var(--co1) 20%, var(--black));
+    --group-color-100: color-mix(in srgb, var(--co3) 20%, var(--white));
+    --group-color-200: color-mix(in srgb, var(--co3) 40%, var(--white));
+    --group-color-300: color-mix(in srgb, var(--co3) 60%, var(--white));
+    --group-color-400: color-mix(in srgb, var(--co3) 80%, var(--white));
+    --group-color: var(--co3);
+    --group-color-600: color-mix(in srgb, var(--co3) 80%, var(--black));
+    --group-color-700: color-mix(in srgb, var(--co3) 60%, var(--black));
+    --group-color-800: color-mix(in srgb, var(--co3) 40%, var(--black));
+    --group-color-900: color-mix(in srgb, var(--co3) 20%, var(--black));
 
-    --group-color-op25: color-mix(in srgb, var(--co1) 25%, transparent);
-    --group-color-op50: color-mix(in srgb, var(--co1) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--co1) 75%, transparent);
+    --group-color-op25: color-mix(in srgb, var(--co3) 25%, transparent);
+    --group-color-op50: color-mix(in srgb, var(--co3) 50%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--co3) 75%, transparent);
 
     --red: #800020;
     --orange: #b38718;

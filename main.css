@@ -272,7 +272,7 @@
 }
 
 [class^="group-"],
-.carmine,
+[class*=" group-"] .carmine,
 .bronze,
 .saffron,
 .emerald,
@@ -340,6 +340,7 @@
 }
 
 [data-color-scheme="dark"] :is([class^="group-"],
+    [class*=" group-"],
     .carmine,
     .bronze,
     .saffron,

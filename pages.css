@@ -181,7 +181,7 @@ html body {
     position: relative;
     padding: var(--2xlarge);
     gap: var(--large);
-    border: 0.5px solid var(--group-color, var(--co3));
+    border: 0.5px solid var(--group-color, var(--neutral));
     background-color: var(--light);
     display: flex;
     flex-direction: column;
@@ -527,6 +527,6 @@ fam {
 .item-close:before {
     font-family: var(--icons-thin) !important;
     content: "\e5e8";
-    color: var(--group-color, var(--co3));
+    color: var(--group-color, var(--dark));
     cursor: pointer
 }

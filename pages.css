@@ -1,16 +1,20 @@
 :root {
-    --group-color: #333333;
-    --group-color-600: #292929;
-    --group-color-700: #1f1f1f;
-    --group-color-800: #141414;
-    --group-color-400: #5c5c5c;
-    --group-color-300: #858585;
-    --group-color-200: #adadad;
-    --group-color-100: #d6d6d6;
+    --group-color-100: color-mix(in srgb, var(--co1) 20%, var(--white));
+    --group-color-200: color-mix(in srgb, var(--co1) 40%, var(--white));
+    --group-color-300: color-mix(in srgb, var(--co1) 60%, var(--white));
+    --group-color-400: color-mix(in srgb, var(--co1) 80%, var(--white));
+    --group-color-600: color-mix(in srgb, var(--co1) 80%, var(--black));
+    --group-color-700: color-mix(in srgb, var(--co1) 60%, var(--black));
+    --group-color-800: color-mix(in srgb, var(--co1) 40%, var(--black));
+    --group-color-900: color-mix(in srgb, var(--co1) 20%, var(--black));
 
-    --group-color-op25: #33333340;
-    --group-color-op50: #33333380;
-    --group-color-op75: #333333bf
+    --group-color-op25: color-mix(in srgb, var(--co1) 25%, transparent);
+    --group-color-op50: color-mix(in srgb, var(--co1) 50%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--co1) 75%, transparent);
+
+    --red: #800020;
+    --orange: #806d00;
+    --green: #00801e
 }
 
 body {
@@ -301,12 +305,12 @@ html body {
 
 .fewres .item-content:after {
     content: '! peu de ressources';
-    color: orange
+    color: var(--orange)
 }
 
 .nores .item-content:after {
     content: '! aucune ressource';
-    color: red
+    color: var(--red)
 }
 
 .played.item:before,
@@ -324,11 +328,11 @@ html body {
 }
 
 .free.item:before {
-    background-color: green
+    background-color: var(--green)
 }
 
 .free .item-content:before {
-    color: green
+    color: var(--green)
 }
 
 .played .item-content:before,
@@ -355,19 +359,19 @@ html body {
 }
 
 .played.item:before {
-    background-color: red
+    background-color: var(--red)
 }
 
 .played .item-content:before {
-    color: red
+    color: var(--red)
 }
 
 .booked.item:before {
-    background-color: orange
+    background-color: var(--orange)
 }
 
 .booked .item-content:before {
-    color: orange
+    color: var(--orange)
 }
 
 .content-head {

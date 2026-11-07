@@ -19,6 +19,7 @@ const leaIds = [3];
 const hasId = ids => (id = user.user_id) => ids.includes(Number(id));
 
 const isAdmin = hasId(adminsIds);
+
 const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 

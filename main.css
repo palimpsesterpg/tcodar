@@ -36,6 +36,15 @@
     --white: #ffffff;
     --black: #000000;
 
+    --admin: #333333;
+    --test: #94576e;
+    --carmine: #960018;
+    --bronze: #cd5700;
+    --saffron: #bf920d;
+    --emerald: #2c7e65;
+    --majorelle: #6050dc;
+    --heliotrope: #8e3fab;
+
     --co1-100: color-mix(in srgb, var(--co1) 20%, var(--white));
     --co1-200: color-mix(in srgb, var(--co1) 40%, var(--white));
     --co1-300: color-mix(in srgb, var(--co1) 60%, var(--white));
@@ -293,46 +302,50 @@
 }
 
 .group-test {
-    --group-base: #94576e
+    --group-base: var(--test)
 }
 
 .group-2 {
-    --group-base: #333333
+    --group-base: var(--admin)
 }
 
 .group-3,
 .carmine {
-    --group-base: #960018
+    --group-base: var(--carmine)
 }
 
 .group-4,
 .bronze {
-    --group-base: #cd5700
+    --group-base: var(--bronze)
 }
 
 .group-5,
 .saffron {
-    --group-base: #bf920d
+    --group-base: var(--saffron)
 }
 
 .group-6,
 .emerald {
-    --group-base: #2c7e65
+    --group-base: var(--emerald)
 }
 
 .group-7,
 .majorelle {
-    --group-base: #6050dc
+    --group-base: var(--majorelle)
 }
 
 .group-8,
 .heliotrope {
-    --group-base: #8e3fab
+    --group-base: var(--heliotrope)
 }
 
-[data-color-scheme="dark"] :is(.group-test, .group-2, .group-3, .carmine, .group-4, .bronze,
-    .group-5, .saffron, .group-6, .emerald, .group-7, .majorelle,
-    .group-8, .heliotrope) {
+[data-color-scheme="dark"] :is([class^="group-"],
+    .carmine,
+    .bronze,
+    .saffron,
+    .emerald,
+    .majorelle,
+    .heliotrope) {
 
     --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
 

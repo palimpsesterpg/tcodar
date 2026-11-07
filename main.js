@@ -1121,6 +1121,7 @@ onReady(() => {
     qq('.postbody').forEach(p => (p.before(sep()), p.after(sep())));
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
+    qq('.page-filters:first-of-type').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 

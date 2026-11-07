@@ -304,6 +304,26 @@ const DICE_RULES = {
 
 const DICE_DEFAULT = 'Aucun effet';
 
+const SUB_TITLE = 'the curses of diamonds and rings';
+
+const FORUM_TAB_CLASSES = {
+    'forum-admin': ['c1', 'c11'],
+    'forum-off': ['c2', 'c9'],
+    'forum-loc': ['c3', 'c4', 'c5', 'c6', 'c7', 'c10', 'c13'],
+    'forum-media': ['c8'],
+    'forum-archives': ['c12'],
+};
+
+const FORUM_LINK_ICONS = {
+    '/f82-sms': 'fi fi-ss-message-sms',
+    '/f83-appels': 'fi fi-ss-phone-call',
+    '/f84-mails': 'fi fi-ss-envelope',
+    '/f85-whatsapp': 'fi fi-brands-whatsapp',
+    '/f86-raya': 'fi fi-ss-heart-partner-handshake',
+    '/f87-instagram': 'fi fi-brands-instagram',
+    '/f88-linkedin': 'fi fi-brands-linkedin',
+};
+
 const strongEl = text => {
     const el = document.createElement('strong');
     el.textContent = text;
@@ -317,6 +337,26 @@ const editHtml = (selector, ...replacers) =>
             el.innerHTML
         );
     });
+
+const removeAdBlock = () =>
+    qq('div[style*="min-width: 728px"]').forEach(el => el.remove());
+
+function initAdBlockRemoval() {
+    removeAdBlock();
+
+    let queued = false;
+    new MutationObserver(() => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => {
+            queued = false;
+            removeAdBlock();
+        });
+    }).observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+}
 
 function resolveValue(field, data, index) {
     const m = field.match(/^(\w+)\[(\d+)\]$/);
@@ -995,6 +1035,69 @@ function initPageContext() {
     }
 }
 
+function replaceEmojis() {
+    qq('img.emojione').forEach(img => img.replaceWith(img.alt));
+}
+
+function initTitles() {
+    const pageTitle = q('.page-title') ?.textContent;
+    if (pageTitle) qq('.fc-main-title-main').forEach(el => (el.textContent = pageTitle));
+    qq('.fc-second-title-main').forEach(el => (el.textContent = pageTitle));
+    qq('.fc-second-title-sub, .fc-main-title-sub').forEach(el => (el.textContent = SUB_TITLE));
+}
+
+function initForumList() {
+    qq('.forum-links:empty').forEach(el => el.remove());
+
+    qq('.forum').forEach(el => {
+        if (el.id) el.id = el.id.split('-')[0].replace('/', '').trim();
+    });
+
+    Object.entries(FORUM_TAB_CLASSES).forEach(([cls, tabs]) => {
+        tabs.forEach(tab => {
+            qq(`[data-tab="${tab}"] .forum`).forEach(forum => {
+                forum.classList.remove('forum-divers');
+                forum.classList.add(cls);
+            });
+        });
+    });
+
+    qq('.forumrow-description, .forumrow-lastpost').forEach(el => {
+        const visible = el.textContent.trim() !== '' || Boolean(q('img, svg, i', el));
+        el.style.display = visible ? '' : 'none';
+    });
+
+    Object.entries(FORUM_LINK_ICONS).forEach(([href, icon]) => {
+        qq(`a[href="${href}"]`).forEach(a => {
+            a.innerHTML = `<i class="${icon}"></i>`;
+        });
+    });
+
+    qq('.forum-admin').forEach(forum => {
+        const images = qq('.forum-description img', forum);
+        images.forEach(img => img.classList.add('forum-img'));
+        forum.prepend(...images);
+    });
+
+    qq('.forum-off').forEach(forum => {
+        forum.prepend(...qq('.forum-lastpost-avatar', forum));
+    });
+
+    qq('.forum-loc').forEach(forum => {
+        const list = forum.closest('.forumlist');
+        if (!list) return;
+
+        forum.addEventListener('mouseenter', () => {
+            const src = q('.forum-description img', forum) ?.getAttribute('src');
+            if (src) list.style.setProperty('--forum-bg', `url("${src}")`);
+        });
+
+        forum.addEventListener('mouseleave', () => {
+            list.style.removeProperty('--forum-bg');
+        });
+    });
+}
+
 onReady(() => {
     let highlightQueued = false;
     new MutationObserver(() => {
@@ -1043,6 +1146,13 @@ onReady(() => {
     initAges();
     initBoardStats();
     loadNewestUserAvatar();
+
+    replaceEmojis();
+    initTitles();
+
+    initForumList();
+
+    initAdBlockRemoval();
 
     numberSpans();
 

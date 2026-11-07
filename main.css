@@ -344,7 +344,7 @@
 [data-color-scheme="dark"] :is(.group-test, .group-2, .group-3, .carmine, .group-4, .bronze,
     .group-5, .saffron, .group-6, .emerald, .group-7, .majorelle,
     .group-8, .heliotrope) {
-        
+
     --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
 
     --group-color-400: var(--group-base);
@@ -836,6 +836,10 @@ a:hover {
     margin: 0 auto
 }
 
+[data-color-scheme="dark"] :is(.forum-img, .forumlist:before) {
+    filter: grayscale(1) brightness(0.35)
+}
+
 #f16 .forum-img,
 #f11 .forum-img {
     order: 3
@@ -914,7 +918,8 @@ a:hover {
     align-items: center;
     font-size: var(--large);
     font-family: var(--display);
-    letter-spacing: 1px;
+    padding-left: 0.5px;
+    letter-spacing: 0.5px;
     text-transform: lowercase
 }
 

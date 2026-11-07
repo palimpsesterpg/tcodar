@@ -1,18 +1,4 @@
 :root {
-    --group-color-100: color-mix(in srgb, var(--co3) 20%, var(--white));
-    --group-color-200: color-mix(in srgb, var(--co3) 40%, var(--white));
-    --group-color-300: color-mix(in srgb, var(--co3) 60%, var(--white));
-    --group-color-400: color-mix(in srgb, var(--co3) 80%, var(--white));
-    --group-color: var(--co3);
-    --group-color-600: color-mix(in srgb, var(--co3) 80%, var(--black));
-    --group-color-700: color-mix(in srgb, var(--co3) 60%, var(--black));
-    --group-color-800: color-mix(in srgb, var(--co3) 40%, var(--black));
-    --group-color-900: color-mix(in srgb, var(--co3) 20%, var(--black));
-
-    --group-color-op25: color-mix(in srgb, var(--co3) 25%, transparent);
-    --group-color-op50: color-mix(in srgb, var(--co3) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--co3) 75%, transparent);
-
     --red: #800020;
     --orange: #b38718;
     --green: #0c6521;
@@ -130,7 +116,7 @@ html body {
 }
 
 #masterlist .item {
-    outline: 0.5px solid var(--group-color);
+    outline: 0.5px solid var(--group-color, var(--neutral));
     margin: 0.5px;
     border: var(--4xsmall) solid var(--darklight)
 }
@@ -158,7 +144,7 @@ html body {
     font-family: var(--spe);
     font-size: var(--3xlarge);
     text-align: center;
-    color: var(--group-color);
+    color: var(--group-color, var(--co3));
     text-transform: capitalize
 }
 
@@ -195,7 +181,7 @@ html body {
     position: relative;
     padding: var(--2xlarge);
     gap: var(--large);
-    border: 0.5px solid var(--group-color);
+    border: 0.5px solid var(--group-color, var(--neutral));
     background-color: var(--light);
     display: flex;
     flex-direction: column;
@@ -216,7 +202,7 @@ html body {
 }
 
 #masterlist .item-content .item-title {
-    color: var(--group-color) !important
+    color: var(--group-color, var(--co3)) !important
 }
 
 .item img {
@@ -245,8 +231,8 @@ html body {
     display: none;
     position: absolute;
     color: var(--white);
-    background-color: var(--group-color-op50);
-    outline: var(--large) solid var(--group-color-op50);
+    background-color: var(--group-color-op50, var(--co3-100));
+    outline: var(--large) solid var(--group-color-op50, var(--co3-100));
     font-family: var(--mono);
     text-transform: lowercase;
     backdrop-filter: blur(2px);
@@ -383,7 +369,7 @@ html body {
 }
 
 .content-head span {
-    background-color: var(--group-color);
+    background-color: var(--group-color, var(--co3));
     color: var(--white);
     text-transform: lowercase;
     font-weight: 700;
@@ -476,7 +462,7 @@ html body {
 .content-desc {
     padding: var(--large);
     background-color: var(--white);
-    border: 0.5px solid var(--group-color-100);
+    border: 0.5px solid var(--group-color-100, var(--co3-100));
     flex: 1;
     min-height: 0
 }
@@ -492,12 +478,12 @@ html body {
     font-family: var(--serif);
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--group-color)
+    color: var(--group-color, var(--co3))
 }
 
 .content-player div {
     font-family: var(--spe);
-    color: var(--group-color);
+    color: var(--group-color, var(--co3));
     font-size: var(--2xlarge);
     font-weight: 300
 }
@@ -519,13 +505,13 @@ html body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px;
-    color: var(--group-color)
+    color: var(--group-color, var(--co3))
 }
 
 fam {
-    background-color: var(--group-color-100);
-    border: 0.5px solid var(--group-color);
-    color: var(--group-color);
+    background-color: var(--group-color-100, var(--co3-100));
+    border: 0.5px solid var(--group-color, var(--co3));
+    color: var(--group-color, var(--co3));
     font-family: var(--mono);
     text-transform: lowercase;
     padding: var(--4xsmall) var(--2xsmall);
@@ -541,6 +527,6 @@ fam {
 .item-close:before {
     font-family: var(--icons-thin) !important;
     content: "\e5e8";
-    color: var(--group-color);
+    color: var(--group-color, var(--dark));
     cursor: pointer
 }

@@ -1041,8 +1041,9 @@ function replaceEmojis() {
 
 function initTitles() {
     const pageTitle = q('.page-title') ?.textContent;
-    if (pageTitle) qq('.fcmainad-title-main').forEach(el => (el.textContent = pageTitle));
-    qq('.fcmainad-title-sub').forEach(el => (el.textContent = SUB_TITLE));
+    if (pageTitle) qq('.fc-main-title-main').forEach(el => (el.textContent = pageTitle));
+    qq('.fc-second-title-main').forEach(el => (el.textContent = pageTitle));
+    qq('.fc-second-title-sub, .fc-main-title-sub').forEach(el => (el.textContent = SUB_TITLE));
 }
 
 function initForumList() {

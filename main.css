@@ -121,8 +121,11 @@
 [data-color-scheme="dark"] {
     color-scheme: dark;
 
-    --white: #333333;
-    --black: #fcfcfc;
+    --white-base: #000;
+    --black-base: #fff;
+
+    --white: color-mix(in srgb, var(--white-base) 80%, var(--black));
+    --black: color-mix(in srgb, var(--black-base) 80%, var(--white));
 
     --co1-base: #474c6f;
     --co2-base: #960018;
@@ -146,17 +149,7 @@
 
     --co3-op25: color-mix(in srgb, var(--co3) 75%, transparent);
     --co3-op50: color-mix(in srgb, var(--co3) 50%, transparent);
-    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent);
-
-    --black-op25: color-mix(in srgb, var(--white) 25%, transparent);
-    --black-op50: color-mix(in srgb, var(--white) 50%, transparent);
-    --black-op75: color-mix(in srgb, var(--white) 75%, transparent);
-    --black-op90: color-mix(in srgb, var(--white) 90%, transparent);
-
-    --white-op25: color-mix(in srgb, var(--black) 25%, transparent);
-    --white-op50: color-mix(in srgb, var(--black) 50%, transparent);
-    --white-op75: color-mix(in srgb, var(--black) 75%, transparent);
-    --white-op90: color-mix(in srgb, var(--black) 90%, transparent);
+    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent)
 }
 
 .group-test,

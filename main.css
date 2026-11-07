@@ -262,19 +262,12 @@
     }
 }
 
-.group-test,
-.group-2,
-.group-3,
+[class^="group-"],
 .carmine,
-.group-4,
 .bronze,
-.group-5,
 .saffron,
-.group-6,
 .emerald,
-.group-7,
 .majorelle,
-.group-8,
 .heliotrope {
     --group-color: var(--group-base);
 

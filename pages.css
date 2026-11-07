@@ -3,6 +3,7 @@
     --group-color-200: color-mix(in srgb, var(--co1) 40%, var(--white));
     --group-color-300: color-mix(in srgb, var(--co1) 60%, var(--white));
     --group-color-400: color-mix(in srgb, var(--co1) 80%, var(--white));
+    --group-color: var(--co1);
     --group-color-600: color-mix(in srgb, var(--co1) 80%, var(--black));
     --group-color-700: color-mix(in srgb, var(--co1) 60%, var(--black));
     --group-color-800: color-mix(in srgb, var(--co1) 40%, var(--black));
@@ -13,8 +14,8 @@
     --group-color-op75: color-mix(in srgb, var(--co1) 75%, transparent);
 
     --red: #800020;
-    --orange: #806d00;
-    --green: #00801e
+    --orange: #b38718;
+    --green: #0c6521;
 }
 
 body {

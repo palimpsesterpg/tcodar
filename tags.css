@@ -466,10 +466,10 @@ bbordergc,
 bborderbgc,
 bborderigc,
 bborderbigc,
-mborgcergc,
-mborgcerbgc,
-mborgcerigc,
-mborgcerbigc {
+mbordergc,
+mborderbgc,
+mborderigc,
+mborderbigc {
     color: var(--group-color, var(--lightdark))
 }
 

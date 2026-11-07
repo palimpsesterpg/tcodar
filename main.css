@@ -204,12 +204,8 @@
 
     body {
         min-height: 100vh !important;
-        width: 100vw !important;
+        width: 100vh !important;
         height: auto !important
-    }
-
-    html body {
-        padding-left: 0 !important
     }
 
     #page-content,
@@ -370,8 +366,10 @@
     box-sizing: border-box !important
 }
 
-html body {
-    padding-left: 3rem !important
+@media (min-width: 800px) {
+    html body {
+        padding-left: 3rem !important
+    }
 }
 
 body {

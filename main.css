@@ -124,8 +124,8 @@
     --white-base: #000;
     --black-base: #fff;
 
-    --white: color-mix(in srgb, var(--white-base) 80%, var(--black));
-    --black: color-mix(in srgb, var(--black-base) 80%, var(--white));
+    --white: color-mix(in srgb, var(--white-base) 80%, var(--black-base));
+    --black: color-mix(in srgb, var(--black-base) 80%, var(--white-base));
 
     --co1-base: #474c6f;
     --co2-base: #960018;

@@ -33,6 +33,9 @@
     --co2: #960018;
     --co3: #6050dc;
 
+    --white: #ffffff;
+    --black: #000000;
+
     --co1-100: color-mix(in srgb, var(--co1) 20%, var(--white));
     --co1-200: color-mix(in srgb, var(--co1) 40%, var(--white));
     --co1-300: color-mix(in srgb, var(--co1) 60%, var(--white));
@@ -82,9 +85,6 @@
     --black-op75: color-mix(in srgb, var(--black) 75%, transparent);
     --black-op90: color-mix(in srgb, var(--black) 90%, transparent);
 
-    --white: #ffffff;
-    --black: #000000;
-
     --light: color-mix(in srgb, var(--white) 95%, var(--black));
     --darklight: color-mix(in srgb, var(--white) 90%, var(--black));
     --darkerlight: color-mix(in srgb, var(--white) 85%, var(--black));
@@ -122,15 +122,12 @@
 [data-color-scheme="dark"] {
     color-scheme: dark;
 
-    --white-base: #000000;
-    --black-base: #ffffff;
-
-    --white: color-mix(in srgb, var(--white-base) 80%, var(--black-base));
-    --black: color-mix(in srgb, var(--black-base) 80%, var(--white-base));
-
     --co1-base: #474c6f;
     --co2-base: #960018;
     --co3-base: #6050dc;
+
+    --white-base: #000000;
+    --black-base: #ffffff;
 
     --co1: color-mix(in srgb, var(--co1-base) 80%, var(--black-base));
     --co2: color-mix(in srgb, var(--co2-base) 80%, var(--black-base));
@@ -150,7 +147,10 @@
 
     --co3-op25: color-mix(in srgb, var(--co3) 75%, transparent);
     --co3-op50: color-mix(in srgb, var(--co3) 50%, transparent);
-    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent)
+    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent);
+
+    --white: color-mix(in srgb, var(--white-base) 80%, var(--black-base));
+    --black: color-mix(in srgb, var(--black-base) 80%, var(--white-base))
 }
 
 @media (max-width: 800px) {
@@ -364,6 +364,12 @@
 *:before,
 *:after {
     box-sizing: border-box !important
+}
+
+img {
+    max-height: 600px;
+    max-width: 600px;
+
 }
 
 @media (min-width: 800px) {
@@ -1060,7 +1066,7 @@ a:hover {
 .forum-divers .forum-lastpost-avatar img {
     height: 50px;
     width: 35px;
-    object-fit: cover;
+
     border-radius: 2.5px
 }
 
@@ -1136,7 +1142,7 @@ a:hover {
 .forum-loc .forum-lastpost-avatar img {
     height: var(--3xlarge);
     width: var(--3xlarge);
-    object-fit: cover;
+
     border-radius: 50%
 }
 
@@ -1387,7 +1393,7 @@ a:hover {
     height: 100%;
     width: 75px;
     left: 0;
-    object-fit: cover;
+
     top: 0;
     position: absolute
 }
@@ -1480,7 +1486,7 @@ a:hover {
 .forum-media .forum-lastpost-avatar img {
     height: 35px;
     width: 35px;
-    object-fit: cover;
+
     border-radius: var(--small)
 }
 
@@ -1689,9 +1695,7 @@ a:hover {
     padding: 0.125rem;
     background-color: var(--white);
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
-
     width: 200px;
-    object-fit: cover
 }
 
 .mini {
@@ -1810,7 +1814,7 @@ a:hover {
 .member-avatar img {
     height: 250px;
     width: 100%;
-    object-fit: cover
+
 }
 
 .member-bloc {
@@ -1988,7 +1992,7 @@ a:hover {
 
 .admin-modal img {
     width: 100%;
-    object-fit: cover;
+
     filter: grayscale(0.5);
     height: 100%
 }
@@ -2135,7 +2139,7 @@ a:hover {
 .modal-content .inside-modal img {
     width: 150px;
     height: 100px;
-    object-fit: cover;
+
     border-radius: var(--2xsmall)
 }
 
@@ -2537,7 +2541,7 @@ a:hover {
 .notiffi_head img {
     width: 150px;
     height: 200px;
-    object-fit: cover;
+
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 5px solid var(--white);
     outline: 0.5px solid var(--group-color)
@@ -2609,7 +2613,7 @@ a:hover {
     & img {
         width: 100%;
         aspect-ratio: 1;
-        object-fit: cover;
+
         object-position: center
     }
 }
@@ -2738,7 +2742,7 @@ a:hover {
 .switcheroo__avatar img {
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
+
     object-position: center;
     border-radius: 100%;
     transition: border-radius 128ms var(--ease);
@@ -3011,7 +3015,7 @@ a:hover {
 .topic-lastpost-avatar img {
     height: 45px;
     width: 45px;
-    object-fit: cover;
+
     border-radius: 2.5px
 }
 

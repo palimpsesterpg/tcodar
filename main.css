@@ -204,12 +204,8 @@
 
     body {
         min-height: 100vh !important;
-        width: 100vw !important;
+        width: 100vh !important;
         height: auto !important
-    }
-
-    html body {
-        padding-left: 0 !important
     }
 
     #page-content,
@@ -370,8 +366,10 @@
     box-sizing: border-box !important
 }
 
-html body {
-    padding-left: 3rem !important
+@media (min-width: 800px) {
+    html body {
+        padding-left: 3rem !important
+    }
 }
 
 body {
@@ -488,8 +486,13 @@ a:hover {
     flex-direction: column
 }
 
+[data-color-scheme="dark"] #page-header a {
+    -webkit-text-stroke: .5px var(--black);
+    text-shadow: 0 0 5px var(--black-op50);
+}
+
 #page-header a span {
-    font-style: italic
+    text-transform: uppercase
 }
 
 .header-tab {
@@ -771,6 +774,10 @@ a:hover {
     opacity: 0.75
 }
 
+[data-color-scheme="dark"] .forumlist:before {
+    filter: grayscale(1) brightness(0.35)
+}
+
 [data-tab="c1"] .forumlist:before,
 [data-tab="c11"] .forumlist:before {
     background-image: url("Images/tcodar-admin.jpg")
@@ -836,8 +843,8 @@ a:hover {
     margin: 0 auto
 }
 
-[data-color-scheme="dark"] :is(.forum-img, .forumlist:before) {
-    filter: grayscale(1) brightness(0.35)
+[data-color-scheme="dark"] .forum-img {
+    filter: grayscale(1) brightness(0.5)
 }
 
 #f16 .forum-img,

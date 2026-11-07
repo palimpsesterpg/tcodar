@@ -85,20 +85,18 @@
     --white: #fff;
     --black: #000;
 
-    --light: color-mix(in srgb, var(--white) 20%, var(--black));
-    --darklight: #f2f2f2;
-    --darkerlight: #ebebeb;
+    --light: color-mix(in srgb, var(--white) 95%, var(--black));
+    --darklight: color-mix(in srgb, var(--white) 90%, var(--black));
+    --darkerlight: color-mix(in srgb, var(--white) 85%, var(--black));
+    --neutral: color-mix(in srgb, var(--white) 80%, var(--black));
+    --darkneutral: #b8b8color-mix(in srgb, var(--white) 75%, var(--black))b8;
+    --darkerneutral: color-mix(in srgb, var(--white) 70%, var(--black));
 
-    --neutral: #e6e6e6;
-    --darkneutral: #b8b8b8;
-    --darkerneutral: #737373;
-
-    --dark: #191919;
-    --lightdark: #333;
-    --lighterdark: #4c4c4c;
+    --dark: color-mix(in srgb, var(--black) 95%, var(--white));
+    --lightdark: color-mix(in srgb, var(--black) 90%, var(--white));
+    --lighterdark: color-mix(in srgb, var(--black) 85%, var(--white));
 
     --gradientNeutral: linear-gradient(to right, var(--light), var(--neutral), var(--light));
-    --gradientLight: linear-gradient(var(--white-op75), var(--co1-op75));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
@@ -123,28 +121,8 @@
 [data-color-scheme="dark"] {
     color-scheme: dark;
 
-    --white: #191919;
-    --black: #fafafa;
-
-    --black-op50: #ffffff80;
-    --black-op75: #ffffffbf;
-    --black-op90: #ffffffe6;
-
-    --white-op50: #00000080;
-    --white-op75: #000000bf;
-    --white-op90: #000000e6;
-
-    --light: #292929;
-    --darklight: #1c1c1c;
-    --darkerlight: #242424;
-
-    --neutral: #2b2b2b;
-    --darkneutral: #4d4d4d;
-    --darkerneutral: #8c8c8c;
-
-    --dark: #e6e6e6;
-    --lightdark: #cccccc;
-    --lighterdark: #b3b3b3;
+    --white: #333333;
+    --black: #fcfcfc;
 
     --co1-base: #474c6f;
     --co2-base: #960018;
@@ -215,7 +193,7 @@
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
 
-    --gradientNeutral: linear-gradient(to right, var(--light), var(--group-color), var(--light));
+    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light));
 }
 
 .group-test {

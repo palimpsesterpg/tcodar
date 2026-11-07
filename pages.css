@@ -61,14 +61,16 @@ html body {
     color: var(--co1);
     border: 0.5px solid var(--co1);
     font-size: var(--small);
+    font-family: var(--mono);
     text-align: center
 }
 
 .page-filters:nth-of-type(2) .filter div {
     background-color: var(--co1-300);
-    letter-spacing: 1px;
-    padding-left: 1px;
+    letter-spacing: 0.5px;
+    padding-left: 0.5px;
     color: var(--light);
+    font-family: var(--serif);
     text-transform: lowercase
 }
 

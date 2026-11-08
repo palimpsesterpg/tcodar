@@ -257,62 +257,61 @@
 .emerald,
 .majorelle,
 .heliotrope {
-    --group-color: var(--group-base);
+	--group-color: var(--group-base);
 
-    --group-color-100: color-mix(in srgb, var(--group-color) 20%, white);
-    --group-color-200: color-mix(in srgb, var(--group-color) 40%, white);
-    --group-color-300: color-mix(in srgb, var(--group-color) 60%, white);
-    --group-color-400: color-mix(in srgb, var(--group-color) 80%, white);
-    --group-color-600: color-mix(in srgb, var(--group-color) 80%, black);
-    --group-color-700: color-mix(in srgb, var(--group-color) 60%, black);
-    --group-color-800: color-mix(in srgb, var(--group-color) 40%, black);
-    --group-color-900: color-mix(in srgb, var(--group-color) 20%, black);
+	--group-color-100: color-mix(in srgb, var(--group-color) 20%, white);
+	--group-color-200: color-mix(in srgb, var(--group-color) 40%, white);
+	--group-color-300: color-mix(in srgb, var(--group-color) 60%, white);
+	--group-color-400: color-mix(in srgb, var(--group-color) 80%, white);
+	--group-color-600: color-mix(in srgb, var(--group-color) 80%, black);
+	--group-color-700: color-mix(in srgb, var(--group-color) 60%, black);
+	--group-color-800: color-mix(in srgb, var(--group-color) 40%, black);
+	--group-color-900: color-mix(in srgb, var(--group-color) 20%, black);
 
-    --group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
-    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
-    --group-color-op90: color-mix(in srgb, var(--group-color) 90%, transparent);
+	--group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
+	--group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
+	--group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
+	--group-color-op90: color-mix(in srgb, var(--group-color) 90%, transparent);
 
-    --gradientgc1: linear-gradient(to right,
-            var(--group-color-400),
-            var(--group-color-600),
-            var(--group-color-400));
-    --gradientgc2: linear-gradient(to right,
-            var(--group-color-200),
-            var(--group-color-400),
-            var(--group-color-200));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
+	--gradientgc1: linear-gradient(to right,
+			var(--group-color-400),
+			var(--group-color-600),
+			var(--group-color-400));
+	--gradientgc2: linear-gradient(to right,
+			var(--group-color-200),
+			var(--group-color-400),
+			var(--group-color-200));
+	--gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
 
-    --gradientLight: linear-gradient(to right,
-            var(--light),
-            var(--group-color),
-            var(--light))
+	--gradientLight: linear-gradient(to right,
+			var(--light),
+			var(--group-color),
+			var(--light))
 }
 
 [data-color-scheme="dark"] :is([class^="group-"],
-    [class*=" group-"],
-    .carmine,
-    .bronze,
-    .saffron,
-    .emerald,
-    .majorelle,
-    .heliotrope) {
-    --group-color: color-mix(in srgb, var(--group-base) 80%, white);
+	[class*=" group-"],
+	.carmine,
+	.bronze,
+	.saffron,
+	.emerald,
+	.majorelle,
+	.heliotrope) {
+	--group-color: color-mix(in srgb, var(--group-base) 80%, white);
 
-    --group-color-400: var(--group-base);
+	--group-color-400: var(--group-base);
 
-    --group-color-100: color-mix(in srgb, var(--group-color) 20%, black);
-    --group-color-200: color-mix(in srgb, var(--group-color) 40%, black);
-    --group-color-300: color-mix(in srgb, var(--group-color) 60%, black);
-    --group-color-400: color-mix(in srgb, var(--group-color) 80%, black);
-    --group-color-600: color-mix(in srgb, var(--group-color) 80%, white);
-    --group-color-700: color-mix(in srgb, var(--group-color) 60%, white);
-    --group-color-800: color-mix(in srgb, var(--group-color) 40%, white);
-    --group-color-900: color-mix(in srgb, var(--group-color) 20%, white);
+	--group-color-100: color-mix(in srgb, var(--group-color) 20%, black);
+	--group-color-200: color-mix(in srgb, var(--group-color) 40%, black);
+	--group-color-300: color-mix(in srgb, var(--group-color) 60%, black);
+	--group-color-600: color-mix(in srgb, var(--group-color) 80%, white);
+	--group-color-700: color-mix(in srgb, var(--group-color) 60%, white);
+	--group-color-800: color-mix(in srgb, var(--group-color) 40%, white);
+	--group-color-900: color-mix(in srgb, var(--group-color) 20%, white);
 
-    --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 10%, transparent)
+	--group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
+	--group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
+	--group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent)
 }
 
 @media (max-width: 800px) {

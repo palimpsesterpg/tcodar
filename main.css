@@ -1560,7 +1560,6 @@ a:hover {
 .forum-media .forum-lastpost-avatar img {
     height: 35px;
     width: 35px;
-
     border-radius: var(--small)
 }
 
@@ -2381,7 +2380,7 @@ a:hover {
 
 #hub .one {
     flex: 1;
-    background-color: var(--light);
+    background-color: var(--white-op50);
     border: 0.5px solid var(--neutral);
     padding: var(--large)
 }
@@ -2418,7 +2417,6 @@ a:hover {
 #hub .two div {
     height: var(--3xlarge);
     display: flex;
-
     background-color: var(--group-color-100);
     color: var(--group-color);
     border: 0.5px solid var(--group-color);
@@ -2426,7 +2424,7 @@ a:hover {
     text-align: center;
     font-family: var(--serif);
     font-style: italic;
-    outline: 2.5px solid var(--white-op90);
+    outline: 2.5px solid var(--white-op50);
     align-items: center;
     justify-content: center
 }
@@ -2459,7 +2457,7 @@ a:hover {
     letter-spacing: 2.5px;
     padding-left: calc(var(--large) + 2.5px);
     border: 0.5px solid var(--co1);
-    outline: 2.5px solid var(--white-op90)
+    outline: 2.5px solid var(--white-op50)
 }
 
 #hub .four strong {

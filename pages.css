@@ -234,8 +234,8 @@ html body {
     display: none;
     position: absolute;
     color: white;
-    background-color: var(--group-color-op50, var(--co3-100));
-    outline: var(--large) solid var(--group-color-op50, var(--co3-100));
+    background-color: var(--group-color-op50, var(--co3-op50));
+    outline: var(--large) solid var(--group-color-op50, var(--co3-op50));
     font-family: var(--mono);
     text-transform: lowercase;
     backdrop-filter: blur(2px);

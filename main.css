@@ -108,7 +108,11 @@
     --lightdark: color-mix(in srgb, white 30%, black);
     --lighterdark: color-mix(in srgb, white 35%, black);
 
-    --gradientNeutral: linear-gradient(to right,
+    --gradientNeutralVertical: linear-gradient(var(--light),
+            var(--neutral),
+            var(--light));
+
+    --gradientNeutralHorizontal: linear-gradient(to right,
             var(--light),
             var(--neutral),
             var(--light));
@@ -1826,17 +1830,15 @@ a:hover {
 }
 
 .post>sep {
-    height: 100%;
     width: 0.5px;
-    margin: auto 0;
-    background: var(--gradientNeutral)
+    background: var(--gradientNeutralVertical)
 }
 
 .mini>sep {
     width: 100%;
     height: 0.5px;
     margin: 0 auto;
-    background: var(--gradientNeutral)
+    background: var(--gradientNeutralHorizontal)
 }
 
 .quick-nav-topics {
@@ -3340,7 +3342,7 @@ dl {
     display: flex
 }
 
-.listings>sep {
+.listings .post>sep {
     display: none
 }
 

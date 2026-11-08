@@ -2102,10 +2102,21 @@ a:hover {
     background: var(--light)
 }
 
+.admin-modal.open>.modal-content div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large)
+}
+
+.admin-modal.open>.modal-content h1 {
+    height: var(--3xlarge) !important;
+    line-height: 1
+}
+
 .admin-close {
     position: absolute;
-    top: 0;
-    right: 0
+    top: var(--large);
+    right: var(--large)
 }
 
 .admin-modal.open {

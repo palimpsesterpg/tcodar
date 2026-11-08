@@ -162,6 +162,93 @@
     --black: color-mix(in srgb, var(--black-base) 80%, var(--white-base))
 }
 
+.group-test {
+    --group-base: var(--test)
+}
+
+.group-2 {
+    --group-base: var(--admin)
+}
+
+.group-3,
+.carmine {
+    --group-base: var(--carmine)
+}
+
+.group-4,
+.bronze {
+    --group-base: var(--bronze)
+}
+
+.group-5,
+.saffron {
+    --group-base: var(--saffron)
+}
+
+.group-6,
+.emerald {
+    --group-base: var(--emerald)
+}
+
+.group-7,
+.majorelle {
+    --group-base: var(--majorelle)
+}
+
+.group-8,
+.heliotrope {
+    --group-base: var(--heliotrope)
+}
+
+[class^="group-"],
+[class*=" group-"],
+.carmine,
+.bronze,
+.saffron,
+.emerald,
+.majorelle,
+.heliotrope {
+    --group-color: var(--group-base);
+
+    --group-color-100: color-mix(in srgb, var(--group-color) 20%, var(--white));
+    --group-color-200: color-mix(in srgb, var(--group-color) 40%, var(--white));
+    --group-color-300: color-mix(in srgb, var(--group-color) 60%, var(--white));
+    --group-color-400: color-mix(in srgb, var(--group-color) 80%, var(--white));
+
+    --group-color-600: color-mix(in srgb, var(--group-color) 80%, var(--black));
+    --group-color-700: color-mix(in srgb, var(--group-color) 60%, var(--black));
+    --group-color-800: color-mix(in srgb, var(--group-color) 40%, var(--black));
+    --group-color-900: color-mix(in srgb, var(--group-color) 20%, var(--black));
+
+    --group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
+    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
+
+    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
+    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
+    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
+
+    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
+}
+
+[data-color-scheme="dark"] :is([class^="group-"],
+    [class*=" group-"],
+    .carmine,
+    .bronze,
+    .saffron,
+    .emerald,
+    .majorelle,
+    .heliotrope) {
+
+    --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
+
+    --group-color-400: var(--group-base);
+
+    --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
+    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent)
+}
+
 @media (max-width: 800px) {
 
     :root {
@@ -271,98 +358,20 @@
     }
 }
 
-[class^="group-"],
-[class*=" group-"] .carmine,
-.bronze,
-.saffron,
-.emerald,
-.majorelle,
-.heliotrope {
-    --group-color: var(--group-base);
-
-    --group-color-100: color-mix(in srgb, var(--group-color) 20%, var(--white));
-    --group-color-200: color-mix(in srgb, var(--group-color) 40%, var(--white));
-    --group-color-300: color-mix(in srgb, var(--group-color) 60%, var(--white));
-    --group-color-400: color-mix(in srgb, var(--group-color) 80%, var(--white));
-
-    --group-color-600: color-mix(in srgb, var(--group-color) 80%, var(--black));
-    --group-color-700: color-mix(in srgb, var(--group-color) 60%, var(--black));
-    --group-color-800: color-mix(in srgb, var(--group-color) 40%, var(--black));
-    --group-color-900: color-mix(in srgb, var(--group-color) 20%, var(--black));
-
-    --group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
-    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
-
-    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
-    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
-    --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
-
-    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
+@media (min-width: 800px) {
+    html body {
+        padding-left: 3rem !important
+    }
 }
 
-.group-test {
-    --group-base: var(--test)
-}
-
-.group-2 {
-    --group-base: var(--admin)
-}
-
-.group-3,
-.carmine {
-    --group-base: var(--carmine)
-}
-
-.group-4,
-.bronze {
-    --group-base: var(--bronze)
-}
-
-.group-5,
-.saffron {
-    --group-base: var(--saffron)
-}
-
-.group-6,
-.emerald {
-    --group-base: var(--emerald)
-}
-
-.group-7,
-.majorelle {
-    --group-base: var(--majorelle)
-}
-
-.group-8,
-.heliotrope {
-    --group-base: var(--heliotrope)
-}
-
-[data-color-scheme="dark"] :is([class^="group-"],
-    [class*=" group-"],
-    .carmine,
-    .bronze,
-    .saffron,
-    .emerald,
-    .majorelle,
-    .heliotrope) {
-
-    --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
-
-    --group-color-400: var(--group-base);
-
-    --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
-    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
-    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent)
-}
-
-#hub a.lea strong:before {
+#hub a.lea strong:before,
+.member a.lea strong:before {
     content: '⭒';
     padding-right: var(--4xsmall)
 }
 
-#hub a.cam strong:before {
+#hub a.cam strong:before,
+.member a.cam strong:before {
     content: '✻';
     padding-right: var(--4xsmall)
 }
@@ -377,12 +386,6 @@ img {
     max-height: 600px;
     max-width: 600px;
     object-fit: cover
-}
-
-@media (min-width: 800px) {
-    html body {
-        padding-left: 3rem !important
-    }
 }
 
 [data-color-scheme="dark"] img {
@@ -1815,7 +1818,7 @@ a:hover {
 
     border-width: 0.5px !important;
     border-style: solid;
-    border-image: var(--gradientgc3, var(--gradient1light)) 1
+    border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
 .member-avatar img {
@@ -1841,7 +1844,7 @@ a:hover {
     flex-direction: column;
     display: none;
     position: absolute;
-    background: var(--gradientgc3, var(--gradient1light));
+    background: var(--gradientgc3, var(--gradientLight));
 
     top: 0;
     right: 0

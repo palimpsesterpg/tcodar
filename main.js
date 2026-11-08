@@ -368,7 +368,7 @@ function initColorScheme() {
     saved = localStorage.getItem('color-scheme');
   } catch {}
 
-  html.dataset.colorScheme = saved || 'light';
+  html.dataset.colorScheme = saved || 'dark';
 
   if (!toggle) return;
 

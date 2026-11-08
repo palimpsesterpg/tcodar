@@ -350,7 +350,7 @@ bborderbigc {
     border-bottom: 0.5px solid;
     padding: var(--4xsmall) var(--small) 0;
     font-family: var(--serif);
-    background-color: var(--white-op50)
+    background-color: var(--white-op75)
 }
 
 mborder1,
@@ -378,7 +378,7 @@ mborderbin,
 mborderbid,
 mborderbigc {
     border: 0.5px solid;
-    background-color: var(--white-op50);
+    background-color: var(--white-op75);
     padding: 0.1rem var(--2xsmall);
     font-family: var(--mono)
 }
@@ -854,7 +854,7 @@ wbackgc,
 wbackbgc,
 wbackigc,
 wbackbigc {
-    background-color: var(--white-op50)
+    background-color: var(--white-op75)
 }
 
 lback1,
@@ -1063,7 +1063,7 @@ mbackbigc {
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;
-    color: var(--white-op50)
+    color: var(--white-op75)
 }
 
 grad12,
@@ -1776,7 +1776,7 @@ underd,
 underbd,
 underid,
 underbid {
-    box-shadow: inset 0 -8px 0 var(--white-op50);
+    box-shadow: inset 0 -8px 0 var(--white-op75);
     letter-spacing: 0.5px;
     color: var(--dark);
     padding-left: 0.5px

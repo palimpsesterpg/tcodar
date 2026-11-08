@@ -359,6 +359,36 @@ function initAdBlockRemoval() {
     });
 }
 
+function initColorScheme() {
+  const html = document.documentElement;
+  const toggle = q('[data-theme-controls] .color-scheme-toggle');
+
+  let saved = null;
+  try {
+    saved = localStorage.getItem('color-scheme');
+  } catch {}
+
+  html.dataset.colorScheme = saved || 'light';
+
+  if (!toggle) return;
+
+  const updateLabel = () => {
+    const next = html.dataset.colorScheme === 'dark' ? 'clair' : 'sombre';
+    toggle.title = `Activer le mode ${next}`;
+  };
+
+  toggle.addEventListener('click', () => {
+    const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
+    html.dataset.colorScheme = scheme;
+    try {
+      localStorage.setItem('color-scheme', scheme);
+    } catch {}
+    updateLabel();
+  });
+
+  updateLabel();
+}
+
 function resolveValue(field, data, index) {
     const m = field.match(/^(\w+)\[(\d+)\]$/);
     if (m) {
@@ -1155,6 +1185,7 @@ onReady(() => {
     initForumList();
 
     initAdBlockRemoval();
+      initColorScheme();
 
     numberSpans();
 

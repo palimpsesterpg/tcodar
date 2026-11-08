@@ -560,19 +560,19 @@ a:hover {
 #page-header a {
     width: 100%;
     text-align: center;
-    -webkit-text-stroke: 0.5px var(--whiteop90);
+    -webkit-text-stroke: 0.5px var(--white-op90);
     font-size: var(--4xlarge);
     font-weight: 900;
     font-family: var(--spe);
     color: #fff0;
     display: flex;
-    text-shadow: 0 0 5px var(--var(--whiteop90)-op50);
+    text-shadow: 0 0 5px var(--var(--white-op90)-op50);
     flex-direction: column
 }
 
 [data-color-scheme="dark"] #page-header a {
-    -webkit-text-stroke: 0.5px var(--blackop90);
-    text-shadow: 0 0 5px var(--var(--blackop90)-op50)
+    -webkit-text-stroke: 0.5px var(--black-op90);
+    text-shadow: 0 0 5px var(--var(--black-op90)-op50)
 }
 
 #page-header a span {
@@ -580,7 +580,7 @@ a:hover {
 }
 
 .header-tab {
-    color: var(--whiteop90);
+    color: var(--white-op90);
     flex: 1;
     display: flex;
     align-items: center;
@@ -636,7 +636,7 @@ a:hover {
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding-left: calc(var(--large) + 2.5px);
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     top: 50%;
     border-left: 0.5px solid;
     transform: translate(-0.5px, -50%);
@@ -645,7 +645,7 @@ a:hover {
     width: max-content;
     display: none;
     z-index: 999;
-    color: var(--blackop90)
+    color: var(--black-op90)
 }
 
 .mainmenu:hover span {
@@ -723,7 +723,7 @@ a:hover {
     align-items: center;
     gap: var(--large);
     justify-content: space-between;
-    background-color: var(--var(--whiteop90)-op75);
+    background-color: var(--var(--white-op90)-op75);
     flex-direction: column;
     width: var(--2xlarge);
     padding: var(--large)
@@ -770,7 +770,7 @@ a:hover {
     display: none;
     position: absolute;
     padding: var(--small) var(--large);
-    background-color: var(--var(--whiteop90)-op75);
+    background-color: var(--var(--white-op90)-op75);
     border: 0.5px solid;
     align-items: center;
     width: max-content;
@@ -819,7 +819,7 @@ a:hover {
     letter-spacing: var(--3xsmall);
     height: var(--5xlarge);
     font-style: italic;
-    text-shadow: 0 0 15px var(--whiteop90);
+    text-shadow: 0 0 15px var(--white-op90);
     padding-left: var(--3xsmall);
     display: flex;
     -webkit-text-stroke: 0.5px var(--co1);
@@ -965,7 +965,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     font-style: italic;
-    text-shadow: 0.5px 0.5px var(--whiteop90);
+    text-shadow: 0.5px 0.5px var(--white-op90);
     color: var(--dark);
     font-size: var(--medium);
     width: 90%;
@@ -979,7 +979,7 @@ a:hover {
     display: flex;
     z-index: 2;
     aspect-ratio: 1;
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     border-radius: 100%;
     color: var(--co3);
     align-items: center;
@@ -1151,10 +1151,10 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-    background: var(--var(--whiteop90)-op50);
+    background: var(--var(--white-op90)-op50);
     flex: 1;
     padding: var(--large);
-    border: 0.5px solid var(--whiteop90);
+    border: 0.5px solid var(--white-op90);
     backdrop-filter: blur(2px);
     gap: var(--large)
 }
@@ -1191,7 +1191,7 @@ a:hover {
     height: 35px;
     border-radius: var(--2xsmall);
     background-color: var(--co2);
-    color: var(--whiteop90)
+    color: var(--white-op90)
 }
 
 .forum-loc .forum-topics:after,
@@ -1221,7 +1221,7 @@ a:hover {
 }
 
 .forum-admin {
-    background-color: var(--var(--whiteop90)-op50);
+    background-color: var(--var(--white-op90)-op50);
     backdrop-filter: blur(2px);
     padding: var(--large);
     justify-content: space-between;
@@ -1299,7 +1299,7 @@ a:hover {
     background-color: var(--co2);
     padding: 0px var(--small);
     border-radius: var(--2xlarge);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     font-size: var(--small);
     font-weight: 700;
     text-transform: lowercase
@@ -1346,10 +1346,10 @@ a:hover {
 .forum-admin .forum-topics,
 .forum-off .forum-posts,
 .forum-off .forum-topics {
-    border: 0.5px solid var(--whiteop90);
+    border: 0.5px solid var(--white-op90);
     padding: var(--4xsmall);
     justify-content: space-between;
-    background-color: var(--var(--whiteop90)-op50);
+    background-color: var(--var(--white-op90)-op50);
     width: -webkit-fill-available
 }
 
@@ -1361,7 +1361,7 @@ a:hover {
 .forum-admin .forum-posts:after,
 .forum-admin .forum-topics:after {
     background-color: var(--co3);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     border-radius: 100%;
     height: var(--large);
     width: var(--large);
@@ -1387,9 +1387,9 @@ a:hover {
 
 .forum-off {
     padding: var(--large);
-    background-color: var(--var(--whiteop90)-op50);
+    background-color: var(--var(--white-op90)-op50);
     backdrop-filter: blur(2px);
-    border: 0.5px solid var(--whiteop90);
+    border: 0.5px solid var(--white-op90);
     justify-content: flex-end
 }
 
@@ -1425,7 +1425,7 @@ a:hover {
     color: var(--co2);
     text-transform: lowercase;
     font-weight: 700;
-    text-shadow: 1px 1px var(--whiteop90)
+    text-shadow: 1px 1px var(--white-op90)
 }
 
 .forum-off .forum-links {
@@ -1481,7 +1481,7 @@ a:hover {
     flex: 1 1 100%;
     padding: var(--large);
     gap: var(--large);
-    background-color: var(--var(--whiteop90)-op90);
+    background-color: var(--var(--white-op90)-op90);
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
@@ -1566,15 +1566,15 @@ a:hover {
 
 .forum-archives {
     padding: var(--large);
-    background-color: var(--var(--blackop90)-op75);
-    border: 0.5px solid var(--whiteop90);
+    background-color: var(--var(--black-op90)-op75);
+    border: 0.5px solid var(--white-op90);
     backdrop-filter: blur(2px);
     align-items: center
 }
 
 [data-color-scheme="dark"] .forum-archives {
-    background-color: var(--var(--whiteop90)-op75);
-    border: 0.5px solid var(--blackop90)
+    background-color: var(--var(--white-op90)-op75);
+    border: 0.5px solid var(--black-op90)
 }
 
 .forum-archives .forum-content {
@@ -1594,7 +1594,7 @@ a:hover {
 
 .forum-archives .forumtitle {
     font-family: var(--spe);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     font-size: var(--3xlarge);
     line-height: 1;
     font-weight: 100;
@@ -1659,9 +1659,9 @@ a:hover {
     position: absolute;
     left: calc(100% + var(--large));
     font-size: var(--small);
-    color: var(--blackop90);
+    color: var(--black-op90);
     width: max-content;
-    background-color: var(--var(--whiteop90)-op75);
+    background-color: var(--var(--white-op90)-op75);
     padding: var(--2xsmall);
     text-transform: uppercase;
     align-items: center;
@@ -1767,7 +1767,7 @@ a:hover {
 .postprofile-avatar img {
     height: auto;
     padding: 0.125rem;
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
     width: 200px
 }
@@ -1951,7 +1951,7 @@ a:hover {
     font-family: var(--spe);
     text-align: center;
     font-size: var(--6xlarge);
-    text-shadow: 2px 2px var(--whiteop90)
+    text-shadow: 2px 2px var(--white-op90)
 }
 
 #reception {
@@ -1984,7 +1984,7 @@ a:hover {
 #reception .five,
 #reception .one {
     height: 150px;
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     padding: var(--large)
 }
 
@@ -2015,7 +2015,7 @@ a:hover {
 #reception .two span {
     font-family: var(--serif);
     text-transform: lowercase;
-    color: var(--whiteop90);
+    color: var(--white-op90);
     font-weight: 500;
     padding: var(--2xsmall)
 }
@@ -2053,7 +2053,7 @@ a:hover {
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--whiteop90)
+    border: 0.5px solid var(--white-op90)
 }
 
 .admin-modal {
@@ -2088,8 +2088,8 @@ a:hover {
     z-index: 999;
     border: 0;
     padding: var(--2xlarge);
-    outline: var(--2xlarge) solid var(--var(--whiteop90)-op75);
-    background: var(--whiteop90)
+    outline: var(--2xlarge) solid var(--var(--white-op90)-op75);
+    background: var(--white-op90)
 }
 
 .admin-close {
@@ -2150,7 +2150,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--large);
     text-transform: uppercase;
-    color: var(--blackop90)
+    color: var(--black-op90)
 }
 
 .details-modal div {
@@ -2196,7 +2196,7 @@ a:hover {
 
 .inside-modal dtls span {
     background-color: var(--group-color);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     font-weight: 900;
     padding: 0 var(--2xsmall);
     border-radius: var(--small);
@@ -2230,15 +2230,15 @@ a:hover {
     gap: var(--large);
     margin: 0 auto;
     padding: var(--large);
-    background-color: var(--whiteop90)
+    background-color: var(--white-op90)
 }
 
 #reception .one div {
-    background-color: var(--var(--whiteop90)-op75);
+    background-color: var(--var(--white-op90)-op75);
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     padding: var(--large);
-    border: 0.5px solid var(--whiteop90)
+    border: 0.5px solid var(--white-op90)
 }
 
 #reception .one span {
@@ -2319,11 +2319,11 @@ a:hover {
 }
 
 #reception .five .ipt {
-    color: var(--blackop90)
+    color: var(--black-op90)
 }
 
 #reception .five .ipt intel:before {
-    background-color: var(--blackop90)
+    background-color: var(--black-op90)
 }
 
 #reception .five .ipt intel {
@@ -2352,7 +2352,7 @@ a:hover {
     display: flex;
     height: 100%;
     width: 100%;
-    background-color: var(--var(--whiteop90)-op75);
+    background-color: var(--var(--white-op90)-op75);
     text-align: center;
     backdrop-filter: blur(2px);
     flex-direction: column;
@@ -2362,7 +2362,7 @@ a:hover {
 
 .phseven-city .time>* {
     background-color: var(--dark);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     padding: 0 var(--4xsmall);
     font-weight: 900
 }
@@ -2381,7 +2381,7 @@ a:hover {
 
 #hub .one {
     flex: 1;
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     border: 0.5px solid var(--neutral);
     padding: var(--large)
 }
@@ -2426,7 +2426,7 @@ a:hover {
     text-align: center;
     font-family: var(--serif);
     font-style: italic;
-    outline: 2.5px solid var(--whiteop90);
+    outline: 2.5px solid var(--white-op90);
     align-items: center;
     justify-content: center
 }
@@ -2459,7 +2459,7 @@ a:hover {
     letter-spacing: 2.5px;
     padding-left: calc(var(--large) + 2.5px);
     border: 0.5px solid var(--co1);
-    outline: 2.5px solid var(--whiteop90)
+    outline: 2.5px solid var(--white-op90)
 }
 
 #hub .four strong {
@@ -2475,7 +2475,7 @@ a:hover {
 
 #newest-user-avatar img {
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    border: var(--4xsmall) solid var(--whiteop90);
+    border: var(--4xsmall) solid var(--white-op90);
     position: relative;
     height: 234px;
     width: 149px
@@ -2544,14 +2544,14 @@ a:hover {
     font-size: 0;
     top: -0.5rem;
     right: -0.5rem;
-    background-color: var(--blackop90);
+    background-color: var(--black-op90);
     border-radius: 100%;
     height: var(--2xsmall);
     aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--whiteop90)
+    color: var(--white-op90)
 }
 
 .unread_count:not(:empty):before {
@@ -2563,7 +2563,7 @@ a:hover {
     width: -webkit-fill-available;
     overflow: auto;
     display: flex;
-    border: var(--large) solid var(--whiteop90);
+    border: var(--large) solid var(--white-op90);
     gap: var(--large);
     max-height: 100%;
     padding: var(--large);
@@ -2616,7 +2616,7 @@ a:hover {
     height: 200px;
 
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    border: 5px solid var(--whiteop90);
+    border: 5px solid var(--white-op90);
     outline: 0.5px solid var(--group-color)
 }
 
@@ -2632,7 +2632,7 @@ a:hover {
     transition: border 0.2s;
     align-items: center;
     animation: notiffiFadeIn 0.3s ease-in-out;
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
 
     &:hover {
         border-color: var(--neutral);
@@ -2659,7 +2659,7 @@ a:hover {
     align-items: center;
     bottom: var(--large);
     right: var(--large);
-    background: var(--blackop90);
+    background: var(--black-op90);
     transform: translateY(100%);
     opacity: 0;
     filter: blur(5px);
@@ -2705,7 +2705,7 @@ a:hover {
 }
 
 .notification.unread .notif_icon {
-    background-color: var(--whiteop90)
+    background-color: var(--white-op90)
 }
 
 .notif_icon i:before {
@@ -2764,7 +2764,7 @@ a:hover {
 
 .switcheroo {
     padding: var(--large);
-    background-color: var(--whiteop90)
+    background-color: var(--white-op90)
 }
 
 .switcheroo__squircles {
@@ -2842,7 +2842,7 @@ a:hover {
     opacity: 1;
     transition: transform 128ms var(--ease), opacity 64ms var(--ease);
     cursor: pointer;
-    color: var(--whiteop90);
+    color: var(--white-op90);
     justify-content: center
 }
 
@@ -2853,7 +2853,7 @@ a:hover {
 
 .switcheroo__popper {
     background-color: var(--group-color, var(--co1));
-    color: var(--whiteop90);
+    color: var(--white-op90);
     padding: var(--3xsmall);
     position: absolute;
     width: -webkit-max-content;
@@ -2932,7 +2932,7 @@ a:hover {
     width: 100%;
     height: 100%;
     transition: 0.2s opacity ease;
-    background: var(--var(--whiteop90)-op75)
+    background: var(--var(--white-op90)-op75)
 }
 
 .monomer-modal {
@@ -2962,7 +2962,7 @@ a:hover {
     right: var(--large);
     padding: var(--2xsmall);
     cursor: pointer;
-    color: var(--whiteop90);
+    color: var(--white-op90);
     border: 0;
     outline: none;
     background: var(--co2);
@@ -2973,14 +2973,14 @@ a:hover {
 }
 
 .monomer-close:hover {
-    background: var(--whiteop90);
+    background: var(--white-op90);
     color: var(--co2);
     border: 0 !important
 }
 
 #presentation-form label {
     background-color: var(--co1);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     text-transform: uppercase;
     width: 250px;
     height: 25px;
@@ -3047,7 +3047,7 @@ a:hover {
 
 .ellipsis {
     text-overflow: ellipsis;
-    var(--whiteop90)-space: nowrap;
+    var(--white-op90)-space: nowrap;
     overflow: clip;
     display: inline-block
 }
@@ -3065,7 +3065,7 @@ a:hover {
 .topic {
     display: flex;
     padding: var(--large);
-    background-color: var(--whiteop90);
+    background-color: var(--white-op90);
     align-items: center;
     gap: var(--large);
     border: 0.5px solid var(--neutral);
@@ -3114,7 +3114,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--whiteop90)
+    color: var(--white-op90)
 }
 
 .post_new .topictitle {
@@ -3265,7 +3265,7 @@ button2,
     border: 0.5px solid var(--co1);
     background-color: var(--co1-100);
     color: var(--co1);
-    text-shadow: 0.5px 0.5px var(--whiteop90);
+    text-shadow: 0.5px 0.5px var(--white-op90);
     font-family: var(--display);
     font-weight: 700;
     font-size: var(--large);
@@ -3291,7 +3291,7 @@ button3 span,
     background-color: var(--co3);
     padding: var(--4xsmall) 0;
     padding-left: var(--2xsmall);
-    color: var(--whiteop90);
+    color: var(--white-op90);
     font-size: var(--large);
     text-transform: lowercase;
     letter-spacing: var(--2xsmall)
@@ -3521,7 +3521,7 @@ a.nav {
     font-size: var(--small);
     padding: var(--4xsmall) var(--2xsmall);
     border-radius: var(--large);
-    color: var(--whiteop90) !important;
+    color: var(--white-op90) !important;
     background-color: var(--co2)
 }
 
@@ -3560,7 +3560,7 @@ a.nav {
     font-weight: 300 !important;
     letter-spacing: var(--2xsmall);
     padding-left: var(--2xsmall);
-    text-shadow: 1px 1px var(--whiteop90)
+    text-shadow: 1px 1px var(--white-op90)
 }
 
 .topic-admin {
@@ -3572,7 +3572,7 @@ a.nav {
 }
 
 .topic-admin i:before {
-    color: var(--whiteop90);
+    color: var(--white-op90);
     background-color: var(--dark);
     border-radius: 100%;
     font-size: var(--small);
@@ -3668,7 +3668,7 @@ div.sceditor-group {
 
 .sceditor-button:hover {
     background-color: var(--co1) !important;
-    color: var(--whiteop90) !important;
+    color: var(--white-op90) !important;
     box-shadow: 0 !important;
     border: 0 !important
 }

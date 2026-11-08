@@ -135,7 +135,7 @@ html body {
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: white;
     display: none;
     top: 0;
     left: 0;
@@ -233,13 +233,13 @@ html body {
 .content-credits {
     display: none;
     position: absolute;
-    color: var(--white);
+    color: white;
     background-color: var(--group-color-op50, var(--co3-100));
     outline: var(--large) solid var(--group-color-op50, var(--co3-100));
     font-family: var(--mono);
     text-transform: lowercase;
     backdrop-filter: blur(2px);
-    border: 1px solid var(--white);
+    border: 1px solid white;
     top: 25px;
     left: 25px;
     z-index: 10;
@@ -312,7 +312,7 @@ html body {
     position: absolute;
     left: var(--2xsmall);
     top: var(--2xsmall);
-    border: 0.5px solid var(--white);
+    border: 0.5px solid white;
     z-index: 99;
     border-radius: 100%
 }
@@ -373,7 +373,7 @@ html body {
 
 .content-head span {
     background-color: var(--group-color, var(--co3));
-    color: var(--white);
+    color: white;
     text-transform: lowercase;
     font-weight: 700;
     padding: 0 var(--2xsmall);
@@ -397,7 +397,7 @@ html body {
 }
 
 .tabsystem .tab {
-    background-color: var(--white);
+    background-color: white;
     color: var(--co2);
     border: 0.5px solid var(--co2);
     font-family: var(--mono);
@@ -408,7 +408,7 @@ html body {
 
 .tabsystem .tab.active {
     background-color: var(--co2);
-    color: var(--white)
+    color: white
 }
 
 .tabsystem-contents {
@@ -446,7 +446,7 @@ html body {
 
 .page-search button {
     background-color: var(--co1);
-    color: var(--white);
+    color: white;
     border: 0px;
     font-family: var(--mono);
     text-transform: uppercase;
@@ -464,7 +464,7 @@ html body {
 
 .content-desc {
     padding: var(--large);
-    background-color: var(--white);
+    background-color: white;
     border: 0.5px solid var(--group-color-100, var(--co3-100));
     flex: 1;
     min-height: 0

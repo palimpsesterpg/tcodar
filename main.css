@@ -30,11 +30,8 @@
     --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
 
     --co1: #725794;
-    --co2: #6184D8;
-    --co3: #50C5B7;
-
-    --white: #ffffff;
-    --black: #000000;
+    --co2: #6184d8;
+    --co3: #50c5b7;
 
     --admin: #333333;
     --test: #94576e;
@@ -45,77 +42,82 @@
     --majorelle: #6050dc;
     --heliotrope: #8e3fab;
 
-    --co1-100: color-mix(in srgb, var(--co1) 20%, var(--white));
-    --co1-200: color-mix(in srgb, var(--co1) 40%, var(--white));
-    --co1-300: color-mix(in srgb, var(--co1) 60%, var(--white));
-    --co1-400: color-mix(in srgb, var(--co1) 80%, var(--white));
-    --co1-600: color-mix(in srgb, var(--co1) 80%, var(--black));
-    --co1-700: color-mix(in srgb, var(--co1) 60%, var(--black));
-    --co1-800: color-mix(in srgb, var(--co1) 40%, var(--black));
-    --co1-900: color-mix(in srgb, var(--co1) 20%, var(--black));
+    --co1-100: color-mix(in srgb, var(--co1) 20%, white);
+    --co1-200: color-mix(in srgb, var(--co1) 40%, white);
+    --co1-300: color-mix(in srgb, var(--co1) 60%, white);
+    --co1-400: color-mix(in srgb, var(--co1) 80%, white);
+    --co1-600: color-mix(in srgb, var(--co1) 80%, black);
+    --co1-700: color-mix(in srgb, var(--co1) 60%, black);
+    --co1-800: color-mix(in srgb, var(--co1) 40%, black);
+    --co1-900: color-mix(in srgb, var(--co1) 20%, black);
 
     --co1-op25: color-mix(in srgb, var(--co1) 25%, transparent);
     --co1-op50: color-mix(in srgb, var(--co1) 50%, transparent);
     --co1-op75: color-mix(in srgb, var(--co1) 75%, transparent);
+    --co1-op75: color-mix(in srgb, var(--co1) 90%, transparent);
 
-    --co2-100: color-mix(in srgb, var(--co2) 20%, var(--white));
-    --co2-200: color-mix(in srgb, var(--co2) 40%, var(--white));
-    --co2-300: color-mix(in srgb, var(--co2) 60%, var(--white));
-    --co2-400: color-mix(in srgb, var(--co2) 80%, var(--white));
-    --co2-600: color-mix(in srgb, var(--co2) 80%, var(--black));
-    --co2-700: color-mix(in srgb, var(--co2) 60%, var(--black));
-    --co2-800: color-mix(in srgb, var(--co2) 40%, var(--black));
-    --co2-800: color-mix(in srgb, var(--co2) 20%, var(--black));
+    --co2-100: color-mix(in srgb, var(--co2) 20%, white);
+    --co2-200: color-mix(in srgb, var(--co2) 40%, white);
+    --co2-300: color-mix(in srgb, var(--co2) 60%, white);
+    --co2-400: color-mix(in srgb, var(--co2) 80%, white);
+    --co2-600: color-mix(in srgb, var(--co2) 80%, black);
+    --co2-700: color-mix(in srgb, var(--co2) 60%, black);
+    --co2-800: color-mix(in srgb, var(--co2) 40%, black);
+    --co2-800: color-mix(in srgb, var(--co2) 20%, black);
 
     --co2-op25: color-mix(in srgb, var(--co2) 25%, transparent);
     --co2-op50: color-mix(in srgb, var(--co2) 50%, transparent);
     --co2-op75: color-mix(in srgb, var(--co2) 75%, transparent);
+    --co2-op90: color-mix(in srgb, var(--co2) 90%, transparent);
 
-    --co3-100: color-mix(in srgb, var(--co3) 20%, var(--white));
-    --co3-200: color-mix(in srgb, var(--co3) 40%, var(--white));
-    --co3-300: color-mix(in srgb, var(--co3) 60%, var(--white));
-    --co3-400: color-mix(in srgb, var(--co3) 80%, var(--white));
-    --co3-600: color-mix(in srgb, var(--co3) 80%, var(--black));
-    --co3-700: color-mix(in srgb, var(--co3) 60%, var(--black));
-    --co3-800: color-mix(in srgb, var(--co3) 40%, var(--black));
-    --co3-900: color-mix(in srgb, var(--co3) 20%, var(--black));
+    --co3-100: color-mix(in srgb, var(--co3) 20%, white);
+    --co3-200: color-mix(in srgb, var(--co3) 40%, white);
+    --co3-300: color-mix(in srgb, var(--co3) 60%, white);
+    --co3-400: color-mix(in srgb, var(--co3) 80%, white);
+    --co3-600: color-mix(in srgb, var(--co3) 80%, black);
+    --co3-700: color-mix(in srgb, var(--co3) 60%, black);
+    --co3-800: color-mix(in srgb, var(--co3) 40%, black);
+    --co3-900: color-mix(in srgb, var(--co3) 20%, black);
 
     --co3-op25: color-mix(in srgb, var(--co3) 25%, transparent);
     --co3-op50: color-mix(in srgb, var(--co3) 50%, transparent);
     --co3-op75: color-mix(in srgb, var(--co3) 75%, transparent);
+    --co3-op75: color-mix(in srgb, var(--co3) 90%, transparent);
 
-    --white-op25: color-mix(in srgb, var(--white) 25%, transparent);
-    --white-op50: color-mix(in srgb, var(--white) 50%, transparent);
-    --white-op75: color-mix(in srgb, var(--white) 75%, transparent);
-    --white-op90: color-mix(in srgb, var(--white) 90%, transparent);
+    --white-op25: color-mix(in srgb, white 25%, transparent);
+    --white-op50: color-mix(in srgb, white 50%, transparent);
+    --white-op75: color-mix(in srgb, white 75%, transparent);
+    --white-op90: color-mix(in srgb, white 90%, transparent);
 
-    --black-op25: color-mix(in srgb, var(--black) 25%, transparent);
-    --black-op50: color-mix(in srgb, var(--black) 50%, transparent);
-    --black-op75: color-mix(in srgb, var(--black) 75%, transparent);
-    --black-op90: color-mix(in srgb, var(--black) 90%, transparent);
+    --black-op25: color-mix(in srgb, black 25%, transparent);
+    --black-op50: color-mix(in srgb, black 50%, transparent);
+    --black-op75: color-mix(in srgb, black 75%, transparent);
+    --black-op90: color-mix(in srgb, black 90%, transparent);
 
-    --light: color-mix(in srgb, var(--white) 95%, var(--black));
-    --darklight: color-mix(in srgb, var(--white) 90%, var(--black));
-    --darkerlight: color-mix(in srgb, var(--white) 85%, var(--black));
+    --light: color-mix(in srgb, white 97.5%, black);
+    --darklight: color-mix(in srgb, white 95%, black);
+    --darkerlight: color-mix(in srgb, white 90%, black);
 
-    --neutral: color-mix(in srgb, var(--white) 80%, var(--black));
-    --darkneutral: color-mix(in srgb, var(--white) 75%, var(--black));
-    --darkerneutral: color-mix(in srgb, var(--white) 70%, var(--black));
+    --lightneutral: color-mix(in srgb, white 80%, black);
+    --lighterneutral: color-mix(in srgb, white 77.5%, black);
+    --neutral: color-mix(in srgb, white 75%, black);
+    --darkneutral: color-mix(in srgb, white 72.5%, black);
+    --darkerneutral: color-mix(in srgb, white 70%, black);
 
-    --dark: color-mix(in srgb, var(--black) 95%, var(--white));
-    --lightdark: color-mix(in srgb, var(--black) 90%, var(--white));
-    --lighterdark: color-mix(in srgb, var(--black) 85%, var(--white));
+    --dark: color-mix(in srgb, white 35%, black);
+    --lightdark: color-mix(in srgb, white 30%, black);
+    --lighterdark: color-mix(in srgb, white 25%, black);
 
-    --gradientNeutral: linear-gradient(to right, var(--light), var(--neutral), var(--light));
+    --gradientNeutral: linear-gradient(to right,
+            var(--light),
+            var(--neutral),
+            var(--light));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
     --gradient23: linear-gradient(to right, var(--co2), var(--co3));
 
-    --gradientAll: linear-gradient(to right,
-            var(--co1),
-            var(--co2),
-            var(--co3));
+    --gradientAll: linear-gradient(to right, var(--co1), var(--co2), var(--co3));
 
     --gradient12-100: linear-gradient(to right, var(--co1-100), var(--co2-100));
     --gradient13-100: linear-gradient(to right, var(--co1-100), var(--co3-100));
@@ -125,7 +127,9 @@
             var(--co2-100),
             var(--co3-100));
 
-    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50))
+    --gradient23-op50: linear-gradient(to right,
+            var(--co2-op50),
+            var(--co3-op50))
 }
 
 [data-color-scheme="dark"] {
@@ -135,12 +139,9 @@
     --co2-base: #960018;
     --co3-base: #6050dc;
 
-    --white-base: #000000;
-    --black-base: #ffffff;
-
-    --co1: color-mix(in srgb, var(--co1-base) 80%, var(--black-base));
-    --co2: color-mix(in srgb, var(--co2-base) 80%, var(--black-base));
-    --co3: color-mix(in srgb, var(--co3-base) 80%, var(--black-base));
+    --co1: color-mix(in srgb, var(--co1-base) 80%, white);
+    --co2: color-mix(in srgb, var(--co2-base) 80%, white);
+    --co3: color-mix(in srgb, var(--co3-base) 80%, white);
 
     --co1-400: var(--co1-base);
     --co2-400: var(--co1-base);
@@ -156,10 +157,7 @@
 
     --co3-op25: color-mix(in srgb, var(--co3) 75%, transparent);
     --co3-op50: color-mix(in srgb, var(--co3) 50%, transparent);
-    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent);
-
-    --white: color-mix(in srgb, var(--white-base) 80%, var(--black-base));
-    --black: color-mix(in srgb, var(--black-base) 80%, var(--white-base))
+    --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent)
 }
 
 .group-test {
@@ -210,25 +208,34 @@
 .heliotrope {
     --group-color: var(--group-base);
 
-    --group-color-100: color-mix(in srgb, var(--group-color) 20%, var(--white));
-    --group-color-200: color-mix(in srgb, var(--group-color) 40%, var(--white));
-    --group-color-300: color-mix(in srgb, var(--group-color) 60%, var(--white));
-    --group-color-400: color-mix(in srgb, var(--group-color) 80%, var(--white));
+    --group-color-100: color-mix(in srgb, var(--group-color) 20%, white);
+    --group-color-200: color-mix(in srgb, var(--group-color) 40%, white);
+    --group-color-300: color-mix(in srgb, var(--group-color) 60%, white);
+    --group-color-400: color-mix(in srgb, var(--group-color) 80%, white);
 
-    --group-color-600: color-mix(in srgb, var(--group-color) 80%, var(--black));
-    --group-color-700: color-mix(in srgb, var(--group-color) 60%, var(--black));
-    --group-color-800: color-mix(in srgb, var(--group-color) 40%, var(--black));
-    --group-color-900: color-mix(in srgb, var(--group-color) 20%, var(--black));
+    --group-color-600: color-mix(in srgb, var(--group-color) 80%, black);
+    --group-color-700: color-mix(in srgb, var(--group-color) 60%, black);
+    --group-color-800: color-mix(in srgb, var(--group-color) 40%, black);
+    --group-color-900: color-mix(in srgb, var(--group-color) 20%, black);
 
     --group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
     --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
     --group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
 
-    --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
-    --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
+    --gradientgc1: linear-gradient(to right,
+            var(--group-color-400),
+            var(--group-color-600),
+            var(--group-color-400));
+    --gradientgc2: linear-gradient(to right,
+            var(--group-color-200),
+            var(--group-color-400),
+            var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
 
-    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
+    --gradientLight: linear-gradient(to right,
+            var(--light),
+            var(--group-color),
+            var(--light))
 }
 
 [data-color-scheme="dark"] :is([class^="group-"],
@@ -239,8 +246,7 @@
     .emerald,
     .majorelle,
     .heliotrope) {
-
-    --group-color: color-mix(in srgb, var(--group-base) 80%, var(--black-base));
+    --group-color: color-mix(in srgb, var(--group-base) 80%, white);
 
     --group-color-400: var(--group-base);
 
@@ -250,7 +256,6 @@
 }
 
 @media (max-width: 800px) {
-
     :root {
         --4xsmall: 0.125rem;
         --3xsmall: 0.25rem;
@@ -264,7 +269,7 @@
         --3xlarge: 2rem;
         --4xlarge: 3rem;
         --5xlarge: 4rem;
-        --6xlarge: 5rem
+        --6xlarge: 5rem;
     }
 
     #categories {
@@ -272,63 +277,63 @@
         margin-left: 0 !important;
         grid-template-columns: var(--2xlarge) auto !important;
         grid-template-rows: auto auto !important;
-        width: 100% !important
+        width: 100% !important;
     }
 
     #categories .tabsystem-contents {
-        grid-area: 1 / 2 / 3 / 3 !important
+        grid-area: 1 / 2 / 3 / 3 !important;
     }
 
     #categories .tabsystem-tabs.off {
         grid-area: 1 / 1 / 2 / 2 !important;
-        align-self: end !important
+        align-self: end !important;
     }
 
     #categories .tabsystem-tabs.loc {
         grid-area: 2 / 1 / 3 / 2 !important;
-        align-self: start !important
+        align-self: start !important;
     }
 
     #categories .tabsystem-tabs.loc>i {
-        order: 3 !important
+        order: 3 !important;
     }
 
     .category-title h2 {
         width: calc(100% + var(--5xlarge)) !important;
-        margin-left: -4rem !important
+        margin-left: -4rem !important;
     }
 
     body {
         min-height: 100vh !important;
         width: 100vh !important;
-        height: auto !important
+        height: auto !important;
     }
 
     #page-content,
     #page-home,
     #page-footer {
         width: 100% !important;
-        border: 0 !important
+        border: 0 !important;
     }
 
     #page-header {
         width: 100vh !important;
-        height: 500px !important
+        height: 500px !important;
     }
 
     #page-navbar {
         width: 100vh !important;
         height: 3rem !important;
         justify-content: center !important;
-        flex-direction: row !important
+        flex-direction: row !important;
     }
 
     #page-navbar>div {
-        flex-direction: row !important
+        flex-direction: row !important;
     }
 
     #page-navbar>div:first-of-type {
-        padding-top: 0 !important
+        padding-top: 0 !important;
     }
 
     #page-navbar>div+div {
@@ -337,42 +342,42 @@
         padding-top: 0 !important;
         border-left: 2.5px solid var(--neutral) !important;
         margin-left: var(--2xlarge) !important;
-        padding-left: var(--2xlarge) !important
+        padding-left: var(--2xlarge) !important;
     }
 
     .copyright {
         top: var(--large) !important;
         right: var(--large) !important;
         bottom: auto !important;
-        left: auto !important
+        left: auto !important;
     }
 
     #notiffi_panel {
         width: 100vh !important;
         border: 0 !important;
-        top: 3rem !important
+        top: 3rem !important;
     }
 
     .forum-off .forum-lastpost-avatar img {
-        width: 50px !important
+        width: 50px !important;
     }
 }
 
 @media (min-width: 800px) {
     html body {
-        padding-left: 3rem !important
+        padding-left: 3rem !important;
     }
 }
 
 #hub a.lea strong:before,
 .member a.lea strong:before {
-    content: '⭒';
+    content: "⭒";
     padding-right: var(--4xsmall)
 }
 
 #hub a.cam strong:before,
 .member a.cam strong:before {
-    content: '✻';
+    content: "✻";
     padding-right: var(--4xsmall)
 }
 
@@ -496,7 +501,7 @@ a:hover {
 #page-header a {
     width: 100%;
     text-align: center;
-    -webkit-text-stroke: .5px var(--white);
+    -webkit-text-stroke: 0.5px white;
     font-size: var(--4xlarge);
     font-weight: 900;
     font-family: var(--spe);
@@ -507,8 +512,8 @@ a:hover {
 }
 
 [data-color-scheme="dark"] #page-header a {
-    -webkit-text-stroke: .5px var(--black);
-    text-shadow: 0 0 5px var(--black-op50);
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 0 0 5px var(--black-op50)
 }
 
 #page-header a span {
@@ -516,7 +521,7 @@ a:hover {
 }
 
 .header-tab {
-    color: var(--white);
+    color: white;
     flex: 1;
     display: flex;
     align-items: center;
@@ -572,7 +577,7 @@ a:hover {
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding-left: calc(var(--large) + 2.5px);
-    background-color: var(--white);
+    background-color: white;
     top: 50%;
     border-left: 0.5px solid;
     transform: translate(-0.5px, -50%);
@@ -581,7 +586,7 @@ a:hover {
     width: max-content;
     display: none;
     z-index: 999;
-    color: var(--black)
+    color: black
 }
 
 .mainmenu:hover span {
@@ -699,7 +704,7 @@ a:hover {
     width: var(--2xsmall);
     outline: 0.5px solid;
     border-radius: 100%;
-    content: ''
+    content: ""
 }
 
 #categories .tab span {
@@ -755,7 +760,7 @@ a:hover {
     letter-spacing: var(--3xsmall);
     height: var(--5xlarge);
     font-style: italic;
-    text-shadow: 0 0 15px var(--white);
+    text-shadow: 0 0 15px white;
     padding-left: var(--3xsmall);
     display: flex;
     -webkit-text-stroke: 0.5px var(--co1);
@@ -901,7 +906,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     font-style: italic;
-    text-shadow: 0.5px 0.5px var(--white);
+    text-shadow: 0.5px 0.5px white;
     color: var(--dark);
     font-size: var(--medium);
     width: 90%;
@@ -915,7 +920,7 @@ a:hover {
     display: flex;
     z-index: 2;
     aspect-ratio: 1;
-    background-color: var(--white);
+    background-color: white;
     border-radius: 100%;
     color: var(--co3);
     align-items: center;
@@ -1090,7 +1095,7 @@ a:hover {
     background: var(--white-op50);
     flex: 1;
     padding: var(--large);
-    border: 0.5px solid var(--white);
+    border: 0.5px solid white;
     backdrop-filter: blur(2px);
     gap: var(--large)
 }
@@ -1127,7 +1132,7 @@ a:hover {
     height: 35px;
     border-radius: var(--2xsmall);
     background-color: var(--co2);
-    color: var(--white)
+    color: white
 }
 
 .forum-loc .forum-topics:after,
@@ -1235,7 +1240,7 @@ a:hover {
     background-color: var(--co2);
     padding: 0px var(--small);
     border-radius: var(--2xlarge);
-    color: var(--white);
+    color: white;
     font-size: var(--small);
     font-weight: 700;
     text-transform: lowercase
@@ -1282,7 +1287,7 @@ a:hover {
 .forum-admin .forum-topics,
 .forum-off .forum-posts,
 .forum-off .forum-topics {
-    border: 0.5px solid var(--white);
+    border: 0.5px solid white;
     padding: var(--4xsmall);
     justify-content: space-between;
     background-color: var(--white-op50);
@@ -1297,7 +1302,7 @@ a:hover {
 .forum-admin .forum-posts:after,
 .forum-admin .forum-topics:after {
     background-color: var(--co3);
-    color: var(--white);
+    color: white;
     border-radius: 100%;
     height: var(--large);
     width: var(--large);
@@ -1325,7 +1330,7 @@ a:hover {
     padding: var(--large);
     background-color: var(--white-op50);
     backdrop-filter: blur(2px);
-    border: 0.5px solid var(--white);
+    border: 0.5px solid white;
     justify-content: flex-end
 }
 
@@ -1361,7 +1366,7 @@ a:hover {
     color: var(--co2);
     text-transform: lowercase;
     font-weight: 700;
-    text-shadow: 1px 1px var(--white)
+    text-shadow: 1px 1px white
 }
 
 .forum-off .forum-links {
@@ -1421,7 +1426,7 @@ a:hover {
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
-    border: .5px solid
+    border: 0.5px solid
 }
 
 .forum-media:nth-of-type(odd) {
@@ -1503,14 +1508,14 @@ a:hover {
 .forum-archives {
     padding: var(--large);
     background-color: var(--black-op75);
-    border: 0.5px solid var(--white);
+    border: 0.5px solid white;
     backdrop-filter: blur(2px);
     align-items: center
 }
 
 [data-color-scheme="dark"] .forum-archives {
     background-color: var(--white-op75);
-    border: 0.5px solid var(--black);
+    border: 0.5px solid black
 }
 
 .forum-archives .forum-content {
@@ -1530,7 +1535,7 @@ a:hover {
 
 .forum-archives .forumtitle {
     font-family: var(--spe);
-    color: var(--white);
+    color: white;
     font-size: var(--3xlarge);
     line-height: 1;
     font-weight: 100;
@@ -1595,7 +1600,7 @@ a:hover {
     position: absolute;
     left: calc(100% + var(--large));
     font-size: var(--small);
-    color: var(--black);
+    color: black;
     width: max-content;
     background-color: var(--white-op75);
     padding: var(--2xsmall);
@@ -1679,7 +1684,7 @@ a:hover {
 }
 
 .post.online .postprofile .online-icon:before {
-    content: '•';
+    content: "•";
     background-color: var(--darkerlight);
     color: var(--group-color, var(--co1));
     display: flex;
@@ -1703,9 +1708,9 @@ a:hover {
 .postprofile-avatar img {
     height: auto;
     padding: 0.125rem;
-    background-color: var(--white);
+    background-color: white;
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
-    width: 200px;
+    width: 200px
 }
 
 .mini {
@@ -1823,8 +1828,7 @@ a:hover {
 
 .member-avatar img {
     height: 250px;
-    width: 100%;
-
+    width: 100%
 }
 
 .member-bloc {
@@ -1888,7 +1892,7 @@ a:hover {
     font-family: var(--spe);
     text-align: center;
     font-size: var(--6xlarge);
-    text-shadow: 2px 2px var(--white)
+    text-shadow: 2px 2px white
 }
 
 #reception {
@@ -1921,7 +1925,7 @@ a:hover {
 #reception .five,
 #reception .one {
     height: 150px;
-    background-color: var(--white);
+    background-color: white;
     padding: var(--large)
 }
 
@@ -1952,7 +1956,7 @@ a:hover {
 #reception .two span {
     font-family: var(--serif);
     text-transform: lowercase;
-    color: var(--white);
+    color: white;
     font-weight: 500;
     padding: var(--2xsmall)
 }
@@ -1990,7 +1994,7 @@ a:hover {
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--white)
+    border: 0.5px solid white
 }
 
 .admin-modal {
@@ -2026,7 +2030,7 @@ a:hover {
     border: 0;
     padding: var(--2xlarge);
     outline: var(--2xlarge) solid var(--white-op75);
-    background: var(--white)
+    background: white
 }
 
 .admin-close {
@@ -2079,7 +2083,7 @@ a:hover {
 .details-modal>* {
     width: 30%;
     text-align: center;
-    flex: 1 1 calc(100%/3 - var(--small))
+    flex: 1 1 calc(100% / 3 - var(--small))
 }
 
 .details-modal a {
@@ -2087,7 +2091,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--large);
     text-transform: uppercase;
-    color: var(--black)
+    color: black
 }
 
 .details-modal div {
@@ -2133,7 +2137,7 @@ a:hover {
 
 .inside-modal dtls span {
     background-color: var(--group-color);
-    color: var(--white);
+    color: white;
     font-weight: 900;
     padding: 0 var(--2xsmall);
     border-radius: var(--small);
@@ -2167,7 +2171,7 @@ a:hover {
     gap: var(--large);
     margin: 0 auto;
     padding: var(--large);
-    background-color: var(--white)
+    background-color: white
 }
 
 #reception .one div {
@@ -2175,7 +2179,7 @@ a:hover {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     padding: var(--large);
-    border: 0.5px solid var(--white)
+    border: 0.5px solid white
 }
 
 #reception .one span {
@@ -2245,7 +2249,7 @@ a:hover {
 }
 
 #reception .five intel:before {
-    content: '';
+    content: "";
     background-color: var(--co1);
     border-radius: 100%;
     display: block;
@@ -2256,11 +2260,11 @@ a:hover {
 }
 
 #reception .five .ipt {
-    color: var(--black)
+    color: black
 }
 
 #reception .five .ipt intel:before {
-    background-color: var(--black)
+    background-color: black
 }
 
 #reception .five .ipt intel {
@@ -2299,7 +2303,7 @@ a:hover {
 
 .phseven-city .time>* {
     background-color: var(--dark);
-    color: var(--white);
+    color: white;
     padding: 0 var(--4xsmall);
     font-weight: 900
 }
@@ -2318,7 +2322,7 @@ a:hover {
 
 #hub .one {
     flex: 1;
-    background-color: var(--white);
+    background-color: white;
     border: 0.5px solid var(--neutral);
     padding: var(--large)
 }
@@ -2336,8 +2340,8 @@ a:hover {
 
 #hub .one a {
     text-transform: uppercase;
-    letter-spacing: .5px;
-    padding-left: .5px
+    letter-spacing: 0.5px;
+    padding-left: 0.5px
 }
 
 #hub .one a strong {
@@ -2358,12 +2362,12 @@ a:hover {
 
     background-color: var(--group-color-100);
     color: var(--group-color);
-    border: .5px solid var(--group-color);
+    border: 0.5px solid var(--group-color);
     flex: 1;
     text-align: center;
     font-family: var(--serif);
     font-style: italic;
-    outline: 2.5px solid var(--white);
+    outline: 2.5px solid white;
     align-items: center;
     justify-content: center
 }
@@ -2396,7 +2400,7 @@ a:hover {
     letter-spacing: 2.5px;
     padding-left: calc(var(--large) + 2.5px);
     border: 0.5px solid var(--co1);
-    outline: 2.5px solid var(--white)
+    outline: 2.5px solid white
 }
 
 #hub .four strong {
@@ -2412,14 +2416,14 @@ a:hover {
 
 #newest-user-avatar img {
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    border: var(--4xsmall) solid var(--white);
+    border: var(--4xsmall) solid white;
     position: relative;
     height: 234px;
     width: 149px
 }
 
 #newest-user-avatar:before {
-    content: '';
+    content: "";
     width: 150px;
     height: 235px;
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
@@ -2476,23 +2480,23 @@ a:hover {
 }
 
 #notiffi_button:has(.unread_count:not(:empty)):before {
-    content: '';
+    content: "";
     position: absolute;
     font-size: 0;
     top: -0.5rem;
     right: -0.5rem;
-    background-color: var(--black);
+    background-color: black;
     border-radius: 100%;
     height: var(--2xsmall);
     aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white)
+    color: white
 }
 
 .unread_count:not(:empty):before {
-    content: '｜';
+    content: "｜";
     padding-right: 2.5px
 }
 
@@ -2500,7 +2504,7 @@ a:hover {
     width: -webkit-fill-available;
     overflow: auto;
     display: flex;
-    border: var(--large) solid var(--white);
+    border: var(--large) solid white;
     gap: var(--large);
     max-height: 100%;
     padding: var(--large);
@@ -2509,7 +2513,7 @@ a:hover {
     flex-direction: column;
 
     &::-webkit-scrollbar {
-        display: none
+        display: none;
     }
 }
 
@@ -2530,7 +2534,7 @@ a:hover {
     gap: 5px;
 
     button {
-        padding: 2pxvar(--small);
+        padding: 2pxvar (--small);
         background: var(--neutralDark);
         border-radius: 5px;
 
@@ -2553,7 +2557,7 @@ a:hover {
     height: 200px;
 
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    border: 5px solid var(--white);
+    border: 5px solid white;
     outline: 0.5px solid var(--group-color)
 }
 
@@ -2569,20 +2573,20 @@ a:hover {
     transition: border 0.2s;
     align-items: center;
     animation: notiffiFadeIn 0.3s ease-in-out;
-    background-color: var(--white);
+    background-color: white;
 
     &:hover {
-        border-color: var(--neutral)
+        border-color: var(--neutral);
     }
 }
 
 @keyframes notiffiFadeIn {
     from {
-        opacity: 0
+        opacity: 0;
     }
 
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -2596,7 +2600,7 @@ a:hover {
     align-items: center;
     bottom: var(--large);
     right: var(--large);
-    background: var(--black);
+    background: black;
     transform: translateY(100%);
     opacity: 0;
     filter: blur(5px);
@@ -2624,7 +2628,7 @@ a:hover {
         width: 100%;
         aspect-ratio: 1;
 
-        object-position: center
+        object-position: center;
     }
 }
 
@@ -2642,7 +2646,7 @@ a:hover {
 }
 
 .notification.unread .notif_icon {
-    background-color: var(--white)
+    background-color: white
 }
 
 .notif_icon i:before {
@@ -2701,7 +2705,7 @@ a:hover {
 
 .switcheroo {
     padding: var(--large);
-    background-color: var(--white)
+    background-color: white
 }
 
 .switcheroo__squircles {
@@ -2779,7 +2783,7 @@ a:hover {
     opacity: 1;
     transition: transform 128ms var(--ease), opacity 64ms var(--ease);
     cursor: pointer;
-    color: var(--white);
+    color: white;
     justify-content: center
 }
 
@@ -2790,7 +2794,7 @@ a:hover {
 
 .switcheroo__popper {
     background-color: var(--group-color, var(--co1));
-    color: var(--white);
+    color: white;
     padding: var(--3xsmall);
     position: absolute;
     width: -webkit-max-content;
@@ -2899,7 +2903,7 @@ a:hover {
     right: var(--large);
     padding: var(--2xsmall);
     cursor: pointer;
-    color: var(--white);
+    color: white;
     border: 0;
     outline: none;
     background: var(--co2);
@@ -2910,14 +2914,14 @@ a:hover {
 }
 
 .monomer-close:hover {
-    background: var(--white);
+    background: white;
     color: var(--co2);
     border: 0 !important
 }
 
 #presentation-form label {
     background-color: var(--co1);
-    color: var(--white);
+    color: white;
     text-transform: uppercase;
     width: 250px;
     height: 25px;
@@ -3002,7 +3006,7 @@ a:hover {
 .topic {
     display: flex;
     padding: var(--large);
-    background-color: var(--white);
+    background-color: white;
     align-items: center;
     gap: var(--large);
     border: 0.5px solid var(--neutral);
@@ -3051,7 +3055,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white)
+    color: white
 }
 
 .post_new .topictitle {
@@ -3202,7 +3206,7 @@ button2,
     border: 0.5px solid var(--co1);
     background-color: var(--co1-100);
     color: var(--co1);
-    text-shadow: 0.5px 0.5px var(--white);
+    text-shadow: 0.5px 0.5px white;
     font-family: var(--display);
     font-weight: 700;
     font-size: var(--large);
@@ -3228,7 +3232,7 @@ button3 span,
     background-color: var(--co3);
     padding: var(--4xsmall) 0;
     padding-left: var(--2xsmall);
-    color: var(--white);
+    color: white;
     font-size: var(--large);
     text-transform: lowercase;
     letter-spacing: var(--2xsmall)
@@ -3458,7 +3462,7 @@ a.nav {
     font-size: var(--small);
     padding: var(--4xsmall) var(--2xsmall);
     border-radius: var(--large);
-    color: var(--white) !important;
+    color: white !important;
     background-color: var(--co2)
 }
 
@@ -3497,7 +3501,7 @@ a.nav {
     font-weight: 300 !important;
     letter-spacing: var(--2xsmall);
     padding-left: var(--2xsmall);
-    text-shadow: 1px 1px var(--white)
+    text-shadow: 1px 1px white
 }
 
 .topic-admin {
@@ -3509,7 +3513,7 @@ a.nav {
 }
 
 .topic-admin i:before {
-    color: var(--white);
+    color: white;
     background-color: var(--dark);
     border-radius: 100%;
     font-size: var(--small);
@@ -3605,7 +3609,7 @@ div.sceditor-group {
 
 .sceditor-button:hover {
     background-color: var(--co1) !important;
-    color: var(--white) !important;
+    color: white !important;
     box-shadow: 0 !important;
     border: 0 !important
 }

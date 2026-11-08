@@ -98,7 +98,7 @@ low,
 hr {
     margin: var(--2xsmall);
     border: 0;
-    border-bottom: 0.5px solid var(--darkneutral) !important;
+    border-bottom: 0.5px solid var(--neutral) !important;
 }
 
 .order-0 {
@@ -350,7 +350,7 @@ bborderbigc {
     border-bottom: 0.5px solid;
     padding: var(--4xsmall) var(--small) 0;
     font-family: var(--serif);
-    background-color: var(--white-op90)
+    background-color: var(--white-op50)
 }
 
 mborder1,
@@ -378,7 +378,7 @@ mborderbin,
 mborderbid,
 mborderbigc {
     border: 0.5px solid;
-    background-color: var(--white-op90);
+    background-color: var(--white-op50);
     padding: 0.1rem var(--2xsmall);
     font-family: var(--mono)
 }
@@ -440,7 +440,7 @@ mbordern,
 mborderbn,
 mborderin,
 mborderbin {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 borderd,
@@ -498,7 +498,7 @@ backn,
 backbn,
 backin,
 backbin {
-    background-color: var(--darkneutral)
+    background-color: var(--neutral)
 }
 
 backd,
@@ -582,7 +582,7 @@ dbackn,
 dbackbn,
 dbackin,
 dbackbin {
-    background-color: var(--darkneutral)
+    background-color: var(--neutral)
 }
 
 dbackd,
@@ -682,7 +682,7 @@ lbackn,
 lbackbn,
 lbackin,
 lbackbin {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 wbackd,
@@ -854,7 +854,7 @@ wbackgc,
 wbackbgc,
 wbackigc,
 wbackbigc {
-    background-color: var(--white-op90)
+    background-color: var(--white-op50)
 }
 
 lback1,
@@ -1063,7 +1063,7 @@ mbackbigc {
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;
-    color: var(--white-op90)
+    color: var(--white-op50)
 }
 
 grad12,
@@ -1411,7 +1411,7 @@ serifbn,
 serifin,
 serifbin,
 serifun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 serifd,
@@ -1617,7 +1617,7 @@ displaybn,
 displayin,
 displaybin,
 displayun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 displayd,
@@ -1665,7 +1665,7 @@ labbn,
 labin,
 labbin,
 labun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 labd,
@@ -1713,7 +1713,7 @@ monobn,
 monoin,
 monobin,
 monoun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 monod,
@@ -1769,14 +1769,14 @@ underbin {
     box-shadow: inset 0 -8px 0 var(--darklight);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 underd,
 underbd,
 underid,
 underbid {
-    box-shadow: inset 0 -8px 0 var(--white-op90);
+    box-shadow: inset 0 -8px 0 var(--white-op50);
     letter-spacing: 0.5px;
     color: var(--dark);
     padding-left: 0.5px
@@ -1821,7 +1821,7 @@ mainbn,
 mainin,
 mainbin,
 mainun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 maind,
@@ -1869,7 +1869,7 @@ uppbn,
 uppin,
 uppbin,
 uppun {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 uppd,
@@ -2418,21 +2418,21 @@ titgc {
 
 tit1 {
     -webkit-text-stroke: 0.5px var(--co1);
-    color: var(--co1-200)
+    color: var(--co1-100)
 }
 
 tit2 {
     -webkit-text-stroke: 0.5px var(--co2);
-    color: var(--co2-200)
+    color: var(--co2-100)
 }
 
 tit3 {
     -webkit-text-stroke: 0.5px var(--co3);
-    color: var(--co3-200)
+    color: var(--co3-100)
 }
 
 titn {
-    -webkit-text-stroke: 0.5px var(--darkneutral);
+    -webkit-text-stroke: 0.5px var(--neutral);
     color: var(--neutral)
 }
 
@@ -2443,7 +2443,7 @@ titd {
 
 titgc {
     -webkit-text-stroke: 0.5px var(--group-color, var(--lightdark));
-    color: var(--group-color-200, var(--neutral))
+    color: var(--group-color-100, var(--neutral))
 }
 
 sstit1,
@@ -2454,7 +2454,7 @@ sstitd,
 sstitgc {
     font-size: var(--2xlarge);
     letter-spacing: 0.5px;
-    color: var(--light);
+    color: var(--white-op90);
     font-weight: 900;
     font-family: var(--serif)
 }
@@ -2472,7 +2472,7 @@ sstit3 {
 }
 
 sstitn {
-    -webkit-text-stroke: 0.5px var(--darkneutral)
+    -webkit-text-stroke: 0.5px var(--neutral)
 }
 
 sstitd {
@@ -2480,7 +2480,7 @@ sstitd {
 }
 
 sstitgc {
-    -webkit-text-stroke: 0.5px var(--group-color, var(--darkneutral))
+    -webkit-text-stroke: 0.5px var(--group-color, var(--neutral))
 }
 
 spe1,
@@ -2512,7 +2512,7 @@ spe3 {
 
 majn,
 spen {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 majd,
@@ -2522,7 +2522,7 @@ sped {
 
 majgc,
 spegc {
-    color: var(--group-color, var(--darkneutral))
+    color: var(--group-color, var(--neutral))
 }
 
 blsp1,
@@ -2554,7 +2554,7 @@ blsp4 {
 }
 
 blspn {
-    color: var(--darkneutral)
+    color: var(--neutral)
 }
 
 blspd {
@@ -2562,7 +2562,7 @@ blspd {
 }
 
 blspgc {
-    color: var(--group-color, var(--darkneutral))
+    color: var(--group-color, var(--neutral))
 }
 
 maj1,
@@ -2587,30 +2587,30 @@ majgc::first-letter {
     font-family: var(--spe)
 }
 
-.br11,
-.br12,
-.br13,
-.br1n,
-.br1d,
-.br1gc,
-.br21,
-.br22,
-.br23,
-.br2n,
-.br2d,
-.br2gc,
-.br71,
-.br72,
-.br73,
-.br7n,
-.br7d,
-.br7gc,
-.br51,
-.br52,
-.br53,
-.br5n,
-.br5d,
-.br5gc {
+hr11,
+hr12,
+hr13,
+hr1n,
+hr1d,
+hr1gc,
+hr21,
+hr22,
+hr23,
+hr2n,
+hr2d,
+hr2gc,
+hr71,
+hr72,
+hr73,
+hr7n,
+hr7d,
+hr7gc,
+hr51,
+hr52,
+hr53,
+hr5n,
+hr5d,
+hr5gc {
     margin: var(--large) var(--5xlarge);
     display: flex;
     position: relative;
@@ -2621,12 +2621,12 @@ majgc::first-letter {
     background-color: var(--co1);
 }
 
-.br61,
-.br62,
-.br63,
-.br6n,
-.br6d,
-.br6gc {
+hr61,
+hr62,
+hr63,
+hr6n,
+hr6d,
+hr6gc {
     text-decoration-line: line-through;
     text-decoration-style: wavy;
     text-decoration-thickness: 2.5px;
@@ -2635,23 +2635,23 @@ majgc::first-letter {
     margin: var(--large) 0;
 }
 
-.br61:before,
-.br62:before,
-.br63:before,
-.br6n:before,
-.br6d:before,
-.br6gc:before {
+hr61:before,
+hr62:before,
+hr63:before,
+hr6n:before,
+hr6d:before,
+hr6gc:before {
     content: '....................';
     color: transparent !important
 }
 
-.brf2:before,
-.br11:before,
-.br12:before,
-.br13:before,
-.br1n:before,
-.br1d:before,
-.br1gc:before {
+hrf2:before,
+hr11:before,
+hr12:before,
+hr13:before,
+hr1n:before,
+hr1d:before,
+hr1gc:before {
     content: "☆";
     position: absolute;
     background: var(--light);
@@ -2659,29 +2659,29 @@ majgc::first-letter {
     color: var(--co1);
 }
 
-.br21,
-.br22,
-.br23,
-.br2n,
-.br2d,
-.br2gc,
-.br71,
-.br72,
-.br73,
-.br7n,
-.br7d,
-.br7gc {
+hr21,
+hr22,
+hr23,
+hr2n,
+hr2d,
+hr2gc,
+hr71,
+hr72,
+hr73,
+hr7n,
+hr7d,
+hr7gc {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, var(--light), var(--co1), var(--light));
 }
 
-.br51:before,
-.br52:before,
-.br53:before,
-.br5n:before,
-.br5d:before,
-.br5gc:before {
+hr51:before,
+hr52:before,
+hr53:before,
+hr5n:before,
+hr5d:before,
+hr5gc:before {
     content: "⊹";
     position: absolute;
     background: var(--light);
@@ -2689,133 +2689,133 @@ majgc::first-letter {
     color: var(--co1);
 }
 
-.br12,
-.br52 {
+hr12,
+hr52 {
     background-color: var(--co2) !important;
 }
 
-.br62,
-.br12:before,
-.br32:before,
-.br42:before,
-.br52:before,
-.br72:before,
-.br92:before {
+hr62,
+hr12:before,
+hr32:before,
+hr42:before,
+hr52:before,
+hr72:before,
+hr92:before {
     color: var(--co2) !important;
 }
 
-.br13,
-.br53 {
+hr13,
+hr53 {
     background-color: var(--co3) !important;
 }
 
-.br63,
-.br13:before,
-.br33:before,
-.br43:before,
-.br53:before,
-.br73:before,
-.br93:before {
+hr63,
+hr13:before,
+hr33:before,
+hr43:before,
+hr53:before,
+hr73:before,
+hr93:before {
     color: var(--co3) !important;
 }
 
-.br1n,
-.br5n {
-    background-color: var(--darkneutral) !important;
+hr1n,
+hr5n {
+    background-color: var(--neutral) !important;
 }
 
-.br6n,
-.br1n:before,
-.br3n:before,
-.br4n:before,
-.br5n:before,
-.br7n:before,
-.br9n:before {
-    color: var(--darkneutral) !important;
+hr6n,
+hr1n:before,
+hr3n:before,
+hr4n:before,
+hr5n:before,
+hr7n:before,
+hr9n:before {
+    color: var(--neutral) !important;
 }
 
-.br1d,
-.br5d {
+hr1d,
+hr5d {
     background-color: var(--dark) !important;
 }
 
-.br6d,
-.br1d:before,
-.br3d:before,
-.br4d:before,
-.br5d:before,
-.br7d:before,
-.br9d:before {
+hr6d,
+hr1d:before,
+hr3d:before,
+hr4d:before,
+hr5d:before,
+hr7d:before,
+hr9d:before {
     color: var(--dark) !important;
 }
 
-.br1gc,
-.br5gc {
-    background-color: var(--group-color, var(--darkneutral)) !important;
+hr1gc,
+hr5gc {
+    background-color: var(--group-color, var(--neutral)) !important;
 }
 
-.br6gc,
-.br1gc:before,
-.br3gc:before,
-.br4gc:before,
-.br5gc:before,
-.br7gc:before,
-.br9gc:before {
-    color: var(--group-color, var(--darkneutral)) !important;
+hr6gc,
+hr1gc:before,
+hr3gc:before,
+hr4gc:before,
+hr5gc:before,
+hr7gc:before,
+hr9gc:before {
+    color: var(--group-color, var(--neutral)) !important;
 }
 
-.br22,
-.br72 {
+hr22,
+hr72 {
     background: linear-gradient(to right, var(--light), var(--co2), var(--light));
 }
 
-.br23,
-.br73 {
+hr23,
+hr73 {
     background: linear-gradient(to right, var(--light), var(--co3), var(--light));
 }
 
-.br2n,
-.br7n {
+hr2n,
+hr7n {
     background: linear-gradient(to right,
             var(--light),
-            var(--darkneutral),
+            var(--neutral),
             var(--light));
 }
 
-.br2d,
-.br7d {
+hr2d,
+hr7d {
     background: linear-gradient(to right,
             var(--light),
             var(--dark),
             var(--light));
 }
 
-.br2gc,
-.br7gc {
+hr2gc,
+hr7gc {
     background: linear-gradient(to right,
             var(--light),
-            var(--group-color, var(--darkneutral)),
+            var(--group-color, var(--neutral)),
             var(--light));
 }
 
-.br31,
-.br32,
-.br33,
-.br3n,
-.br3d,
-.br3gc,
-.br41,
-.br42,
-.br43,
-.br4n,
-.br4d,
-.br4gc,
-.br91,
-.br92,
-.br93,
-.br9n,
-.br9d,
-.br9gc {
+hr31,
+hr32,
+hr33,
+hr3n,
+hr3d,
+hr3gc,
+hr41,
+hr42,
+hr43,
+hr4n,
+hr4d,
+hr4gc,
+hr91,
+hr92,
+hr93,
+hr9n,
+hr9d,
+hr9gc {
     margin: 0 auto;
     width: fit-content;
     color: var(--co1);
@@ -2824,12 +2824,12 @@ majgc::first-letter {
     padding-left: var(--2xsmall);
 }
 
-.br71:before,
-.br72:before,
-.br73:before,
-.br7n:before,
-.br7d:before,
-.br7gc:before {
+hr71:before,
+hr72:before,
+hr73:before,
+hr7n:before,
+hr7d:before,
+hr7gc:before {
     content: "\f096";
     font-family: uicons-thin-straight !important;
     background: var(--light);
@@ -2837,73 +2837,73 @@ majgc::first-letter {
     color: var(--co1);
 }
 
-.br31:before,
-.br32:before,
-.br33:before,
-.br3n:before,
-.br3d:before,
-.br3gc:before {
+hr31:before,
+hr32:before,
+hr33:before,
+hr3n:before,
+hr3d:before,
+hr3gc:before {
     content: "——————————";
 }
 
-.br41,
-.br42,
-.br43,
-.br4n,
-.br4d,
-.br4gc {
+hr41,
+hr42,
+hr43,
+hr4n,
+hr4d,
+hr4gc {
     letter-spacing: var(--large);
     padding-left: var(--large);
 }
 
-.br41:before,
-.br42:before,
-.br43:before,
-.br4n:before,
-.br4d:before,
-.br4gc:before {
+hr41:before,
+hr42:before,
+hr43:before,
+hr4n:before,
+hr4d:before,
+hr4gc:before {
     content: "\e688 \e688 \e688 \e688 \e688";
     font-family: uicons-thin-straight !important;
 }
 
-.br91:before,
-.br92:before,
-.br93:before,
-.br9n:before,
-.br9d:before,
-.br9gc:before {
+hr91:before,
+hr92:before,
+hr93:before,
+hr9n:before,
+hr9d:before,
+hr9gc:before {
     content: "\ea5a \ea5a \ea5a \ea5a \ea5a";
     font-family: uicons-thin-straight !important;
 }
 
-.br81,
-.br82,
-.br83,
-.br8n,
-.br8d,
-.br8gc,
-.br8w {
+hr81,
+hr82,
+hr83,
+hr8n,
+hr8d,
+hr8gc,
+hr8w {
     background-color: var(--co1-100);
     width: 35%;
     height: 2.5px;
 }
 
-.br82 {
+hr82 {
     background-color: var(--co2-100);
 }
 
-.br83 {
+hr83 {
     background-color: var(--co3-100);
 }
 
-.br8n {
-    background-color: var(--darkneutral);
+hr8n {
+    background-color: var(--neutral);
 }
 
-.br8d {
+hr8d {
     background-color: var(--dark);
 }
 
-.br8gc {
+hr8gc {
     background-color: var(--group-color-100);
 }

@@ -43,7 +43,7 @@ h6,
     text-transform: lowercase;
     text-align: center;
     display: block;
-    color: black !important;
+    color: var(--dark) !important;
     margin: 0 !important;
     font-family: var(--spe)
 }
@@ -350,7 +350,7 @@ bborderbigc {
     border-bottom: 0.5px solid;
     padding: var(--4xsmall) var(--small) 0;
     font-family: var(--serif);
-    background-color: white
+    background-color: var(--white-op90)
 }
 
 mborder1,
@@ -378,7 +378,7 @@ mborderbin,
 mborderbid,
 mborderbigc {
     border: 0.5px solid;
-    background-color: white;
+    background-color: var(--white-op90);
     padding: 0.1rem var(--2xsmall);
     font-family: var(--mono)
 }
@@ -589,7 +589,7 @@ dbackd,
 dbackbd,
 dbackid,
 dbackbid {
-    background-color: black
+    background-color: var(--dark)
 }
 
 dbackgc,
@@ -631,7 +631,7 @@ mbackd,
 mbackbd,
 mbackid,
 mbackbid {
-    background-color: black
+    background-color: var(--dark)
 }
 
 mbackgc,
@@ -827,7 +827,7 @@ lbgradgc a,
 lbgradbgc a,
 lbgradigc a,
 lbgradbigc {
-    color: white !important
+    color: var(--light) !important
 }
 
 wback1,
@@ -854,7 +854,7 @@ wbackgc,
 wbackbgc,
 wbackigc,
 wbackbigc {
-    background-color: white
+    background-color: var(--white-op90)
 }
 
 lback1,
@@ -1031,7 +1031,7 @@ dbackbigc {
     letter-spacing: 2.5px;
     font-size: var(--small);
     text-transform: uppercase;
-    color: white
+    color: var(--light)
 }
 
 mback1,
@@ -1063,7 +1063,7 @@ mbackbigc {
     letter-spacing: 5px;
     font-size: var(--small);
     text-transform: lowercase;
-    color: white
+    color: var(--white-op90)
 }
 
 grad12,
@@ -1776,7 +1776,7 @@ underd,
 underbd,
 underid,
 underbid {
-    box-shadow: inset 0 -8px 0 white;
+    box-shadow: inset 0 -8px 0 var(--white-op90);
     letter-spacing: 0.5px;
     color: var(--dark);
     padding-left: 0.5px
@@ -2454,7 +2454,7 @@ sstitd,
 sstitgc {
     font-size: var(--2xlarge);
     letter-spacing: 0.5px;
-    color: white;
+    color: var(--light);
     font-weight: 900;
     font-family: var(--serif)
 }

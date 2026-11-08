@@ -2098,8 +2098,8 @@ a:hover {
     z-index: 999;
     border: 0;
     padding: var(--2xlarge);
-    outline: var(--2xlarge) solid var(--white-op75);
-    background: var(--white-op90)
+    outline: var(--4xlarge) solid var(--white-op75);
+    background: var(--light)
 }
 
 .admin-close {
@@ -2167,9 +2167,9 @@ a:hover {
     font-family: var(--mono);
     text-transform: uppercase;
     font-size: var(--large);
-    color: var(--darkerneutral);
+    color: var(--lighterdark);
     font-weight: 100;
-    border-bottom: 0.5px solid var(--neutral);
+    border-bottom: 0.5px solid var(--lighterdark);
     padding-bottom: var(--2xsmall)
 }
 
@@ -2177,8 +2177,8 @@ a:hover {
     font-family: var(--display);
     text-transform: lowercase;
     font-size: var(--small);
-    background-color: var(--neutral);
-    color: var(--darkerneutral);
+    background-color: var(--darkerlight);
+    color: var(--lighterdark);
     padding: var(--4xsmall);
     letter-spacing: var(--4xsmall);
     padding-right: 0px !important

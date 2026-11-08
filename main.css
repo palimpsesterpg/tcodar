@@ -196,19 +196,19 @@
     --black-op75: color-mix(in srgb, white 75%, transparent);
     --black-op90: color-mix(in srgb, white 90%, transparent);
 
-    --light: color-mix(in srgb, black 97.5%, white);
-    --darklight: color-mix(in srgb, black 95%, white);
-    --darkerlight: color-mix(in srgb, black 90%, white);
+	--light: color-mix(in srgb, black 87.5%, white);
+	--darklight: color-mix(in srgb, black 85%, white);
+	--darkerlight: color-mix(in srgb, black 80%, white);
 
-    --lightneutral: color-mix(in srgb, black 80%, white);
-    --lighterneutral: color-mix(in srgb, black 77.5%, white);
-    --neutral: color-mix(in srgb, black 75%, white);
-    --darkneutral: color-mix(in srgb, black 72.5%, white);
-    --darkerneutral: color-mix(in srgb, black 70%, white);
+	--lightneutral: color-mix(in srgb, black 70%, white);
+	--lighterneutral: color-mix(in srgb, black 67.5%, white);
+	--neutral: color-mix(in srgb, black 65%, white);
+	--darkneutral: color-mix(in srgb, black 62.5%, white);
+	--darkerneutral: color-mix(in srgb, black 60%, white);
 
-    --dark: color-mix(in srgb, black 35%, white);
-    --lightdark: color-mix(in srgb, black 30%, white);
-    --lighterdark: color-mix(in srgb, black 25%, white);
+	--dark: color-mix(in srgb, black 25%, white);
+	--lightdark: color-mix(in srgb, black 20%, white);
+	--lighterdark: color-mix(in srgb, black 15%, white);
 }
 
 .group-test {
@@ -3047,7 +3047,7 @@ a:hover {
 
 .ellipsis {
     text-overflow: ellipsis;
-    var(--white-op90)-space: nowrap;
+    white-space: nowrap;
     overflow: clip;
     display: inline-block
 }

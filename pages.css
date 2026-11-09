@@ -51,35 +51,45 @@ html body {
 
 .filter {
     display: flex;
-    gap: var(--4xsmall);
+    gap: var(--2xsmall);
     flex-direction: column;
     justify-content: stretch
 }
 
 .filter div {
-    text-transform: uppercase;
     font-weight: 300;
+    height: var(--xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.page-filters:nth-of-type(1) .filter div {
+    text-transform: uppercase;
     background-color: var(--co1-100);
     color: var(--co1);
-    border: 0.5px solid var(--co1);
-    font-size: var(--small);
-    font-family: var(--mono);
-    text-align: center
+    font-family: var(--mono)
 }
 
 .page-filters:nth-of-type(2) .filter div {
-    background-color: var(--co1-300);
-    letter-spacing: 0.5px;
-    padding-left: 0.5px;
-    color: var(--light);
+    background-color: var(--co1);
+    color: var(--co1-100);
     font-family: var(--serif);
     text-transform: lowercase
 }
 
+.page-filters:nth-of-type(2) .filter .active {
+    background-color: var(--co1-100);
+    color: var(--co1)
+}
+
+.page-filters:nth-of-type(1) .filter .active {
+    background-color: var(--co1);
+    color: var(--co1-100)
+}
+
 .filter .active {
-    font-weight: 700;
-    background-color: var(--co1) !important;
-    color: var(--light)
+    border-radius: var(--small)
 }
 
 .page-items {

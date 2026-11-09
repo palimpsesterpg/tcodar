@@ -98,15 +98,15 @@
     --dark-light: color-mix(in srgb, white 95%, black);
     --darker-light: color-mix(in srgb, white 90%, black);
 
-    --light-neutral: color-mix(in srgb, white 80%, black);
-    --lighter-neutral: color-mix(in srgb, white 77.5%, black);
-    --neutral: color-mix(in srgb, white 75%, black);
-    --dark-neutral: color-mix(in srgb, white 72.5%, black);
-    --darker-neutral: color-mix(in srgb, white 70%, black);
+    --lighter-neutral: color-mix(in srgb, white 75%, grey);
+    --light-neutral: color-mix(in srgb, white 67.5%, grey);
+    --neutral: color-mix(in srgb, white 50%, grey);
+    --dark-neutral: color-mix(in srgb, white 37.5%, grey);
+    --darker-neutral: color-mix(in srgb, white 25%, grey);
 
-    --dark: color-mix(in srgb, white 25%, black);
-    --light-dark: color-mix(in srgb, white 30%, black);
     --lighter-dark: color-mix(in srgb, white 35%, black);
+    --light-dark: color-mix(in srgb, white 30%, black);
+    --dark: color-mix(in srgb, white 25%, black);
 
     --gradientNeutralVertical: linear-gradient(var(--light),
             var(--neutral),
@@ -204,15 +204,15 @@
     --dark-light: color-mix(in srgb, black 85%, white);
     --darker-light: color-mix(in srgb, black 80%, white);
 
-    --light-neutral: color-mix(in srgb, black 70%, white);
-    --lighter-neutral: color-mix(in srgb, black 67.5%, white);
-    --neutral: color-mix(in srgb, black 65%, white);
-    --dark-neutral: color-mix(in srgb, black 62.5%, white);
-    --darker-neutral: color-mix(in srgb, black 60%, white);
+    --lighter-neutral: color-mix(in srgb, black 75%, grey);
+    --light-neutral: color-mix(in srgb, black 67.5%, grey);
+    --neutral: color-mix(in srgb, black 50%, grey);
+    --dark-neutral: color-mix(in srgb, black 37.5%, grey);
+    --darker-neutral: color-mix(in srgb, black 25%, grey);
 
-    --dark: color-mix(in srgb, black 15%, white);
-    --light-dark: color-mix(in srgb, black 20%, white);
-    --lighter-dark: color-mix(in srgb, black 25%, white);
+    --lighter-dark: color-mix(in srgb, black 45%, white);
+    --light-dark: color-mix(in srgb, black 40%, white);
+    --dark: color-mix(in srgb, black 35%, white);
 }
 
 .group-test {
@@ -456,10 +456,6 @@ img {
     object-fit: cover
 }
 
-[data-color-scheme="dark"] img {
-    filter: brightness(0.5)
-}
-
 body {
     width: 100%;
     height: 100%;
@@ -524,10 +520,18 @@ a:hover {
     display: none
 }
 
-#dark-light-mode {
+.pages-navbar {
     position: fixed;
-    top: var(--2xlarge);
-    left: var(--2xlarge);
+    top: var(--xlarge);
+    left: var(--xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    flex-direction: column
+}
+
+.pages-navbar i:before {
     height: var(--2xlarge);
     width: var(--2xlarge);
     display: flex;
@@ -2102,7 +2106,7 @@ a:hover {
     background: var(--light)
 }
 
-.admin-modal.open>.modal-content > div {
+.admin-modal.open>.modal-content>div {
     display: flex;
     flex-direction: column;
     gap: var(--large)

@@ -95,18 +95,18 @@
     --black-op90: color-mix(in srgb, black 90%, transparent);
 
     --light: color-mix(in srgb, white 97.5%, black);
-    --darklight: color-mix(in srgb, white 95%, black);
-    --darkerlight: color-mix(in srgb, white 90%, black);
+    --dark-light: color-mix(in srgb, white 95%, black);
+    --darker-light: color-mix(in srgb, white 90%, black);
 
-    --lightneutral: color-mix(in srgb, white 80%, black);
-    --lighterneutral: color-mix(in srgb, white 77.5%, black);
+    --light-neutral: color-mix(in srgb, white 80%, black);
+    --lighter-neutral: color-mix(in srgb, white 77.5%, black);
     --neutral: color-mix(in srgb, white 75%, black);
-    --darkneutral: color-mix(in srgb, white 72.5%, black);
-    --darkerneutral: color-mix(in srgb, white 70%, black);
+    --dark-neutral: color-mix(in srgb, white 72.5%, black);
+    --darker-neutral: color-mix(in srgb, white 70%, black);
 
     --dark: color-mix(in srgb, white 25%, black);
-    --lightdark: color-mix(in srgb, white 30%, black);
-    --lighterdark: color-mix(in srgb, white 35%, black);
+    --light-dark: color-mix(in srgb, white 30%, black);
+    --lighter-dark: color-mix(in srgb, white 35%, black);
 
     --gradientNeutralVertical: linear-gradient(var(--light),
             var(--neutral),
@@ -201,18 +201,18 @@
     --black-op90: color-mix(in srgb, white 90%, transparent);
 
     --light: color-mix(in srgb, black 87.5%, white);
-    --darklight: color-mix(in srgb, black 85%, white);
-    --darkerlight: color-mix(in srgb, black 80%, white);
+    --dark-light: color-mix(in srgb, black 85%, white);
+    --darker-light: color-mix(in srgb, black 80%, white);
 
-    --lightneutral: color-mix(in srgb, black 70%, white);
-    --lighterneutral: color-mix(in srgb, black 67.5%, white);
+    --light-neutral: color-mix(in srgb, black 70%, white);
+    --lighter-neutral: color-mix(in srgb, black 67.5%, white);
     --neutral: color-mix(in srgb, black 65%, white);
-    --darkneutral: color-mix(in srgb, black 62.5%, white);
-    --darkerneutral: color-mix(in srgb, black 60%, white);
+    --dark-neutral: color-mix(in srgb, black 62.5%, white);
+    --darker-neutral: color-mix(in srgb, black 60%, white);
 
     --dark: color-mix(in srgb, black 15%, white);
-    --lightdark: color-mix(in srgb, black 20%, white);
-    --lighterdark: color-mix(in srgb, black 25%, white);
+    --light-dark: color-mix(in srgb, black 20%, white);
+    --lighter-dark: color-mix(in srgb, black 25%, white);
 }
 
 .group-test {
@@ -403,7 +403,7 @@
         border-top: 0 !important;
         margin-top: 0 !important;
         padding-top: 0 !important;
-        border-left: 2.5px solid var(--neutral) !important;
+        border-left: 2.5px solid var(--lighter-neutral) !important;
         margin-left: var(--2xlarge) !important;
         padding-left: var(--2xlarge) !important;
     }
@@ -464,7 +464,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: var(--main);
-    color: var(--lighterdark);
+    color: var(--lighter-dark);
     font-size: var(--medium);
     background: var(--gradient23-100);
     background-size: cover;
@@ -481,11 +481,11 @@ a:hover {
 
 a,
 a:visited {
-    color: var(--lightdark)
+    color: var(--light-dark)
 }
 
 a:hover {
-    color: var(--darkneutral)
+    color: var(--dark-neutral)
 }
 
 .usr_grp_clr {
@@ -612,7 +612,7 @@ a:hover {
     z-index: 999;
     position: fixed;
     display: flex;
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column
@@ -630,7 +630,7 @@ a:hover {
 }
 
 #page-navbar>div+div {
-    border-top: 2.5px solid var(--neutral);
+    border-top: 2.5px solid var(--lighter-neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;
     padding-top: var(--2xlarge)
@@ -679,7 +679,7 @@ a:hover {
     padding: var(--large);
     width: 1000px;
     margin: 0 auto;
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     border-left: 0.5px solid var(--co2);
     border-right: 0.5px solid var(--co3)
 }
@@ -699,7 +699,7 @@ a:hover {
     padding: var(--large);
     background: var(--light);
     font-size: var(--xsmall);
-    border: 0.5px solid var(--neutral)
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 #page-footer>div:first-of-type a {
@@ -711,7 +711,7 @@ a:hover {
 }
 
 #sub-page-header {
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     padding-top: var(--large);
     border-width: 0px;
     border-bottom-width: 0.5px !important;
@@ -847,8 +847,8 @@ a:hover {
     gap: var(--large);
     padding: var(--2xlarge);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral);
     width: -webkit-fill-available
 }
 
@@ -1107,7 +1107,7 @@ a:hover {
 .forum-divers .forum-description {
     font-weight: 300;
     text-transform: uppercase;
-    color: var(--darkneutral);
+    color: var(--dark-neutral);
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall)
 }
@@ -1619,7 +1619,7 @@ a:hover {
 }
 
 .forum-archives .forum-links a {
-    color: var(--darkneutral);
+    color: var(--dark-neutral);
     font-size: var(--medium);
     font-weight: 300;
     text-transform: uppercase
@@ -1634,8 +1634,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral)
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral)
 }
 
 .post+.post {
@@ -1662,7 +1662,7 @@ a:hover {
 
 .posticons a,
 .posticons div:not(:last-of-type) {
-    border-bottom: 0.5px solid var(--neutral)
+    border-bottom: 0.5px solid var(--lighter-neutral)
 }
 
 .posticons a>span,
@@ -1698,7 +1698,7 @@ a:hover {
 .mini .posticons div:not(:last-of-type),
 .compact .posticons div:not(:last-of-type),
 .sms .posticons div:not(:last-of-type) {
-    border-right: 0.5px solid var(--neutral);
+    border-right: 0.5px solid var(--lighter-neutral);
     border-bottom: 0
 }
 
@@ -1756,7 +1756,7 @@ a:hover {
 
 .post.online .postprofile .online-icon:before {
     content: "•";
-    background-color: var(--darkerlight);
+    background-color: var(--darker-light);
     color: var(--group-color, var(--co1));
     display: flex;
     align-items: center;
@@ -1880,8 +1880,8 @@ a:hover {
     gap: var(--large);
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral)
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral)
 }
 
 .member {
@@ -1954,7 +1954,7 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: 0.5px solid var(--neutral)
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 .profile-pseudo {
@@ -1967,8 +1967,8 @@ a:hover {
 #reception {
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral);
     display: flex;
     flex-direction: column;
     gap: var(--large);
@@ -2178,9 +2178,9 @@ a:hover {
     font-family: var(--mono);
     text-transform: uppercase;
     font-size: var(--large);
-    color: var(--lighterdark);
+    color: var(--lighter-dark);
     font-weight: 100;
-    border-bottom: 0.5px solid var(--lighterdark);
+    border-bottom: 0.5px solid var(--lighter-dark);
     padding-bottom: var(--2xsmall)
 }
 
@@ -2188,8 +2188,8 @@ a:hover {
     font-family: var(--display);
     text-transform: lowercase;
     font-size: var(--small);
-    background-color: var(--darkerlight);
-    color: var(--lighterdark);
+    background-color: var(--darker-light);
+    color: var(--lighter-dark);
     padding: var(--4xsmall);
     letter-spacing: var(--4xsmall);
     padding-right: 0px !important
@@ -2308,7 +2308,7 @@ a:hover {
     text-transform: lowercase;
     font-weight: 700;
     padding-right: var(--large);
-    border-right: 0.5px solid var(--neutral);
+    border-right: 0.5px solid var(--lighter-neutral);
     margin-right: var(--large);
     height: 37.5px;
 
@@ -2395,15 +2395,15 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--darklight);
-    outline: 0.5px solid var(--neutral);
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral);
     margin-top: var(--large)
 }
 
 #hub .one {
     flex: 1;
     background-color: var(--white-op50);
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--lighter-neutral);
     padding: var(--large)
 }
 
@@ -2517,11 +2517,11 @@ a:hover {
 }
 
 #newest-user span {
-    color: var(--lighterdark) !important
+    color: var(--lighter-dark) !important
 }
 
 #newest-user span:hover {
-    color: var(--lighterdark) !important
+    color: var(--lighter-dark) !important
 }
 
 #newest-user strong {
@@ -3016,7 +3016,7 @@ a:hover {
 #presentation-form select {
     padding: 0 var(--2xsmall);
     border: 0.5px solid var(--co1);
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     color: var(--co1);
     height: 25px;
     font-weight: 300;
@@ -3079,7 +3079,7 @@ a:hover {
     flex-direction: column;
     padding: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--neutral)
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 .topic {
@@ -3088,7 +3088,7 @@ a:hover {
     background-color: var(--light);
     align-items: center;
     gap: var(--large);
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--lighter-neutral);
     justify-content: center
 }
 
@@ -3127,9 +3127,9 @@ a:hover {
 .topic-icon {
     height: 25px;
     width: 25px;
-    background: var(--darklight);
+    background: var(--dark-light);
     border-radius: 100%;
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--lighter-neutral);
 
     display: flex;
     align-items: center;
@@ -3247,8 +3247,8 @@ a:hover {
 
 input,
 select {
-    background-color: var(--darkerlight);
-    border: 0.5px solid var(--neutral);
+    background-color: var(--darker-light);
+    border: 0.5px solid var(--lighter-neutral);
     text-transform: lowercase;
     font-family: var(--mono);
     font-weight: 300;
@@ -3263,7 +3263,7 @@ fieldset {
     padding: var(--large);
     padding-inline: 0;
     border: 0;
-    background-color: var(--darklight)
+    background-color: var(--dark-light)
 }
 
 button,
@@ -3336,10 +3336,10 @@ dl {
 }
 
 .listings-table {
-    border: 0.5px solid var(--neutral);
+    border: 0.5px solid var(--lighter-neutral);
     padding: 0px !important;
     font-weight: 300;
-    rule: 0.5px solid var(--neutral);
+    rule: 0.5px solid var(--lighter-neutral);
     display: flex;
     flex-direction: column
 }
@@ -3395,7 +3395,7 @@ dl {
     height: 3rem;
     width: 100%;
     min-width: 0;
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     font-size: var(--large);
     font-weight: 700;
     align-items: center;
@@ -3427,7 +3427,7 @@ dl {
 }
 
 .list-row {
-    rule: 0.5px solid var(--neutral)
+    rule: 0.5px solid var(--lighter-neutral)
 }
 
 .fam-row:first-of-type span {
@@ -3478,7 +3478,7 @@ span[data-field="face"] {
 }
 
 .fam-row:nth-of-type(2n) {
-    background-color: var(--darklight)
+    background-color: var(--dark-light)
 }
 
 .fam-row.open .content-toggle {
@@ -3630,12 +3630,12 @@ a.nav {
 .sceditor-container {
     background: var(--light) !important;
     background-clip: padding-box !important;
-    border: var(--2xsmall) solid var(--darklight) !important;
+    border: var(--2xsmall) solid var(--dark-light) !important;
     border-radius: 0 !important;
-    color: var(--lighterdark) !important;
+    color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
-    outline: 0.5px solid var(--neutral) !important;
+    outline: 0.5px solid var(--lighter-neutral) !important;
 
     font-weight: 500 !important
 }
@@ -3697,11 +3697,11 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    color: var(--lighterdark) !important;
+    color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     padding: var(--large) !important;
-    border-top: var(--2xsmall) solid var(--darklight) !important;
+    border-top: var(--2xsmall) solid var(--dark-light) !important;
     width: 100% !important;
     margin: 0 !important
 }

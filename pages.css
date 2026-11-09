@@ -23,7 +23,7 @@ html body {
     width: auto;
     height: calc(100vh - var(--2xlarge));
     margin: var(--large);
-    background-color: var(--darklight);
+    background-color: var(--dark-light);
     display: flex;
     flex-direction: column
 }
@@ -123,7 +123,7 @@ html body {
 #masterlist .item {
     outline: 0.5px solid var(--group-color, var(--neutral));
     margin: 0.5px;
-    border: var(--4xsmall) solid var(--darklight)
+    border: var(--4xsmall) solid var(--dark-light)
 }
 
 .item-title {

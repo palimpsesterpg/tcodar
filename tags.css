@@ -98,7 +98,7 @@ low,
 hr {
     margin: var(--2xsmall);
     border: 0;
-    border-bottom: 0.5px solid var(--neutral) !important;
+    border-bottom: 0.5px solid var(--lighter-neutral) !important;
 }
 
 .order-0 {
@@ -470,7 +470,7 @@ mbordergc,
 mborderbgc,
 mborderigc,
 mborderbigc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 back1,
@@ -512,7 +512,7 @@ backgc,
 backbgc,
 backigc,
 backbigc {
-    background-color: var(--group-color, var(--lightdark))
+    background-color: var(--group-color, var(--light-dark))
 }
 
 lback1,
@@ -540,7 +540,7 @@ lbackn,
 lbackbn,
 lbackin,
 lbackbin {
-    background-color: var(--darklight)
+    background-color: var(--dark-light)
 }
 
 lbackd,
@@ -704,7 +704,7 @@ lbackgc,
 lbackbgc,
 lbackigc,
 lbackbigc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 back1,
@@ -1427,7 +1427,7 @@ serifbgc,
 serifigc,
 serifbigc,
 serifugc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 under1,
@@ -1633,7 +1633,7 @@ displaybgc,
 displayigc,
 displaybigc,
 displayugc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 lab1,
@@ -1681,7 +1681,7 @@ labbgc,
 labigc,
 labbigc,
 labugc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 mono1,
@@ -1729,7 +1729,7 @@ monobgc,
 monoigc,
 monobigc,
 monougc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 under1,
@@ -1766,7 +1766,7 @@ undern,
 underbn,
 underin,
 underbin {
-    box-shadow: inset 0 -8px 0 var(--darklight);
+    box-shadow: inset 0 -8px 0 var(--dark-light);
     letter-spacing: 0.5px;
     padding-left: 0.5px;
     color: var(--neutral)
@@ -1837,7 +1837,7 @@ mainbgc,
 mainigc,
 mainbigc,
 mainugc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 upp1,
@@ -1885,7 +1885,7 @@ uppbgc,
 uppigc,
 uppbigc,
 uppugc {
-    color: var(--group-color, var(--lightdark))
+    color: var(--group-color, var(--light-dark))
 }
 
 lbackb1,
@@ -2438,11 +2438,11 @@ titn {
 
 titd {
     -webkit-text-stroke: 0.5px var(--dark);
-    color: var(--lighterdark)
+    color: var(--lighter-dark)
 }
 
 titgc {
-    -webkit-text-stroke: 0.5px var(--group-color, var(--lightdark));
+    -webkit-text-stroke: 0.5px var(--group-color, var(--light-dark));
     color: var(--group-color-100, var(--neutral))
 }
 
@@ -2454,7 +2454,7 @@ sstitd,
 sstitgc {
     font-size: var(--2xlarge);
     letter-spacing: 0.5px;
-    color: var(--white-op90);
+    color: var(--white-op50);
     font-weight: 900;
     font-family: var(--serif)
 }

@@ -2102,7 +2102,7 @@ a:hover {
     background: var(--light)
 }
 
-.admin-modal.open>.modal-content div {
+.admin-modal.open>.modal-content > div {
     display: flex;
     flex-direction: column;
     gap: var(--large)

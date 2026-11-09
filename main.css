@@ -212,7 +212,7 @@
 
     --lighter-dark: color-mix(in srgb, black 45%, white);
     --light-dark: color-mix(in srgb, black 40%, white);
-    --dark: color-mix(in srgb, black 35%, white);
+    --dark: color-mix(in srgb, black 35%, white)
 }
 
 .group-test {
@@ -3708,4 +3708,23 @@ div.sceditor-group {
     border-top: var(--2xsmall) solid var(--dark-light) !important;
     width: 100% !important;
     margin: 0 !important
+}
+
+.has-credit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.has-credit:hover::after {
+    content: 'crédit:'attr(data-credit);
+    position: absolute;
+    background: var(--light-dark);
+    color: var(--light);
+    padding: var(--small);
+    text-transform: lowercase;
+    font-family: var(--mono);
+    font-size: var(--small);
+    z-index: 9999
 }

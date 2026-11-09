@@ -147,7 +147,7 @@ html body {
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--light);
     display: none;
     top: 0;
     left: 0;
@@ -181,13 +181,13 @@ html body {
 
 .page-items .item-body {
     padding: var(--2xlarge);
-    background-color: var(--white-op75);
+    background-color: var(--white-op50);
     backdrop-filter: blur(2px);
     position: fixed;
-    height: calc(100% - var(--4xlarge));
-    width: calc(100% - var(--4xlarge));
-    top: var(--2xlarge);
-    left: var(--2xlarge);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     display: none;
     z-index: 999
 }
@@ -197,7 +197,7 @@ html body {
     padding: var(--2xlarge);
     gap: var(--large);
     border: 0.5px solid var(--group-color, var(--neutral));
-    background-color: var(--light);
+    background-color: var(--dark-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,13 +245,13 @@ html body {
 .content-credits {
     display: none;
     position: absolute;
-    color: white;
+    color: var(--light);
     background-color: var(--group-color-op50, var(--co3-op50));
     outline: var(--large) solid var(--group-color-op50, var(--co3-op50));
     font-family: var(--mono);
     text-transform: lowercase;
     backdrop-filter: blur(2px);
-    border: 1px solid white;
+    border: 0.5px solid var(--light);
     top: 25px;
     left: 25px;
     z-index: 10;
@@ -324,7 +324,7 @@ html body {
     position: absolute;
     left: var(--2xsmall);
     top: var(--2xsmall);
-    border: 0.5px solid white;
+    border: 0.5px solid var(--light);
     z-index: 99;
     border-radius: 100%
 }
@@ -380,17 +380,23 @@ html body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large)
+    gap: var(--large);
+    flex-wrap: wrap
 }
 
 .content-head span {
     background-color: var(--group-color, var(--co3));
-    color: white;
+    color: var(--group-color-100, var(--co3-100));
+    text-shadow: 1px 1px var(--group-color-700, var(--co3-700));
     text-transform: lowercase;
     font-weight: 700;
-    padding: 0 var(--2xsmall);
+    padding: 0 var(--small);
     border-radius: var(--small);
-    text-align: center
+    text-align: center;
+    height: var(--xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content-origines {
@@ -409,7 +415,7 @@ html body {
 }
 
 .tabsystem .tab {
-    background-color: white;
+    background-color: var(--light);
     color: var(--co2);
     border: 0.5px solid var(--co2);
     font-family: var(--mono);
@@ -420,7 +426,7 @@ html body {
 
 .tabsystem .tab.active {
     background-color: var(--co2);
-    color: white
+    color: var(--light)
 }
 
 .tabsystem-contents {
@@ -458,7 +464,7 @@ html body {
 
 .page-search button {
     background-color: var(--co1);
-    color: white;
+    color: var(--light);
     border: 0px;
     font-family: var(--mono);
     text-transform: uppercase;
@@ -476,8 +482,8 @@ html body {
 
 .content-desc {
     padding: var(--large);
-    background-color: white;
-    border: 0.5px solid var(--group-color-100, var(--co3-100));
+    background-color: var(--light);
+    border: 0.5px solid var(--group-color-200, var(--co3-200));
     flex: 1;
     min-height: 0
 }

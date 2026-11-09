@@ -360,33 +360,33 @@ function initAdBlockRemoval() {
 }
 
 function initColorScheme() {
-  const html = document.documentElement;
-  const toggle = q('[data-theme-controls] .color-scheme-toggle');
+    const html = document.documentElement;
+    const toggle = q('[data-theme-controls] .color-scheme-toggle');
 
-  let saved = null;
-  try {
-    saved = localStorage.getItem('color-scheme');
-  } catch {}
-
-  html.dataset.colorScheme = saved || 'dark';
-
-  if (!toggle) return;
-
-  const updateLabel = () => {
-    const next = html.dataset.colorScheme === 'dark' ? 'clair' : 'sombre';
-    toggle.title = `Activer le mode ${next}`;
-  };
-
-  toggle.addEventListener('click', () => {
-    const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
-    html.dataset.colorScheme = scheme;
+    let saved = null;
     try {
-      localStorage.setItem('color-scheme', scheme);
+        saved = localStorage.getItem('color-scheme');
     } catch {}
-    updateLabel();
-  });
 
-  updateLabel();
+    html.dataset.colorScheme = saved || 'dark';
+
+    if (!toggle) return;
+
+    const updateLabel = () => {
+        const next = html.dataset.colorScheme === 'dark' ? 'clair' : 'sombre';
+        toggle.title = `Activer le mode ${next}`;
+    };
+
+    toggle.addEventListener('click', () => {
+        const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
+        html.dataset.colorScheme = scheme;
+        try {
+            localStorage.setItem('color-scheme', scheme);
+        } catch {}
+        updateLabel();
+    });
+
+    updateLabel();
 }
 
 function resolveValue(field, data, index) {
@@ -1068,6 +1068,7 @@ function initPageContext() {
 
 function replaceEmojis() {
     qq('img.emojione').forEach(img => img.replaceWith(img.alt));
+    qq('.sceditor-button-twemojifa').remove();
 }
 
 function initTitles() {
@@ -1177,22 +1178,16 @@ onReady(() => {
 
     initAges();
     initBoardStats();
-    loadNewestUserAvatar();
-
-    replaceEmojis();
     initTitles();
-
     initForumList();
-
     initAdBlockRemoval();
-      initColorScheme();
-
+    initColorScheme();
     numberSpans();
-
+    loadNewestUserAvatar();
+    replaceEmojis();
     prefixPseudos();
     groupPlayers();
     sortListRows();
-
     highlight();
     applyIcons(ICONS);
     replaceZodiacIcons();

@@ -293,6 +293,24 @@
             var(--light))
 }
 
+.family,
+.corporation,
+.fam-row {
+    --fam-color-100: color-mix(in srgb, var(--fam-color) 20%, white);
+    --fam-color-200: color-mix(in srgb, var(--fam-color) 40%, white);
+    --fam-color-300: color-mix(in srgb, var(--fam-color) 60%, white);
+    --fam-color-400: color-mix(in srgb, var(--fam-color) 80%, white);
+    --fam-color-600: color-mix(in srgb, var(--fam-color) 80%, black);
+    --fam-color-700: color-mix(in srgb, var(--fam-color) 60%, black);
+    --fam-color-800: color-mix(in srgb, var(--fam-color) 40%, black);
+    --fam-color-900: color-mix(in srgb, var(--fam-color) 20%, black);
+
+    --fam-color-op25: color-mix(in srgb, var(--fam-color) 25%, transparent);
+    --fam-color-op50: color-mix(in srgb, var(--fam-color) 50%, transparent);
+    --fam-color-op75: color-mix(in srgb, var(--fam-color) 75%, transparent);
+    --fam-color-op90: color-mix(in srgb, var(--fam-color) 90%, transparent);
+}
+
 [data-color-scheme="dark"] :is([class^="group-"],
     [class*=" group-"],
     .carmine,
@@ -316,6 +334,24 @@
     --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
     --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
     --group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent)
+}
+
+[data-color-scheme="dark"] :is(.family,
+    .corporation,
+    .fam-row) {
+
+    --fam-color-100: color-mix(in srgb, var(--fam-color) 20%, black);
+    --fam-color-200: color-mix(in srgb, var(--fam-color) 40%, black);
+    --fam-color-300: color-mix(in srgb, var(--fam-color) 60%, black);
+    --fam-color-400: color-mix(in srgb, var(--fam-color) 60%, black);
+    --fam-color-600: color-mix(in srgb, var(--fam-color) 80%, white);
+    --fam-color-700: color-mix(in srgb, var(--fam-color) 60%, white);
+    --fam-color-800: color-mix(in srgb, var(--fam-color) 40%, white);
+    --fam-color-900: color-mix(in srgb, var(--fam-color) 20%, white);
+
+    --fam-color-op25: color-mix(in srgb, var(--fam-color) 75%, transparent);
+    --fam-color-op75: color-mix(in srgb, var(--fam-color) 25%, transparent);
+    --fam-color-op90: color-mix(in srgb, var(--fam-color) 10%, transparent)
 }
 
 @media (max-width: 800px) {
@@ -432,6 +468,19 @@
     }
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--main);
+    color: var(--lighter-dark);
+    font-size: var(--medium);
+    background: var(--gradient23-100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
 #hub a.lea strong:before,
 .member a.lea strong:before,
 #hub a.cam strong:before,
@@ -471,17 +520,29 @@ img {
     object-fit: cover
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    font-family: var(--main);
-    color: var(--lighter-dark);
-    font-size: var(--medium);
-    background: var(--gradient23-100);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed
+.corners-top,
+.corners-bottom {
+    display: none
+}
+
+.invisible {
+    display: none;
+    visibility: hidden
+}
+
+.visible {
+    display: block;
+    visibility: visible
+}
+
+.panel {
+    margin: 0;
+    padding: 0
+}
+
+p {
+    line-height: inherit;
+    margin: 0
 }
 
 a,
@@ -3577,7 +3638,7 @@ span[data-field="face"] {
 }
 
 .fam-row.open {
-    background-color: var(--fam-colorFade);
+    background-color: var(--fam-color-100);
     --border-row: var(--fam-color) !important
 }
 

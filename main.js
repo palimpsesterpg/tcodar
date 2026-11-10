@@ -747,8 +747,7 @@ function fillCard(root, data, index) {
     }
 
     if (root.hasAttribute('data-family')) {
-        root.style.setProperty('--fam-color', data.color || '#000000');
-        root.style.setProperty('--fam-colorFade', data.colorFade || '#00000040');
+        root.style.setProperty('--fam-color', data.color || '#333333');
         root.style.setProperty('--fam-name', JSON.stringify(String(data.name ?? 'Nom')));
         root.style.setProperty('--fam-icon', JSON.stringify(data.icon ?? '\uE049'));
         root.style.setProperty('--fam-id', JSON.stringify(String(data.id ?? 'null')));

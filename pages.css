@@ -46,7 +46,7 @@ html body {
 .page-content sep {
     height: 100%;
     width: 0.5px;
-    background-color: var(--neutral)
+    background-color: var(--dark-light)
 }
 
 .filter {
@@ -131,7 +131,7 @@ html body {
 }
 
 #masterlist .item {
-    outline: 0.5px solid var(--group-color, var(--neutral));
+    outline: 0.5px solid var(--group-color, var(--darker-light));
     margin: 0.5px;
     border: var(--4xsmall) solid var(--dark-light)
 }
@@ -196,7 +196,7 @@ html body {
     position: relative;
     padding: var(--2xlarge);
     gap: var(--large);
-    border: 0.5px solid var(--group-color, var(--neutral));
+    border: 0.5px solid var(--group-color, var(--darker-light));
     background-color: var(--dark-light);
     display: flex;
     flex-direction: column;
@@ -324,7 +324,6 @@ html body {
     position: absolute;
     left: var(--2xsmall);
     top: var(--2xsmall);
-    border: 0.5px solid var(--light);
     z-index: 99;
     border-radius: 100%
 }

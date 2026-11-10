@@ -389,13 +389,15 @@ function applyColorScheme() {
 }
 
 function unwrapTabs() {
-    const list = q('#tabs ul');
-    if (!list) return;
+  const list = q('#tabs ul');
+  if (!list) return;
 
-    [...list.children].forEach(li => {
-        if (li.tagName === 'LI') li.replaceWith(...li.childNodes);
-    });
-    list.replaceWith(...list.childNodes);
+  list.parentElement.classList.add('registration-tabs');
+
+  [...list.children].forEach(li => {
+    if (li.tagName === 'LI') li.replaceWith(...li.childNodes);
+  });
+  list.replaceWith(...list.childNodes);
 }
 
 function initColorScheme() {

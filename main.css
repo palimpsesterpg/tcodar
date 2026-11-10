@@ -454,7 +454,9 @@
 
 *:empty,
 *:before:empty,
-*:after:empty {display: none}
+*:after:empty {
+    display: none
+}
 
 img {
     max-height: 600px;
@@ -3248,15 +3250,14 @@ a:hover {
 }
 
 input,
-select {
-    background-color: var(--darker-light);
-    border: 0.5px solid var(--lighter-neutral);
-    text-transform: lowercase;
+select,
+textarea {
+    background-color: var(--light);
+    border: 0.5px solid var(--darker-light);
     font-family: var(--mono);
     font-weight: 300;
-
     padding: var(--4xsmall);
-    width: 150px
+    width: -webkit-fill-available !important
 }
 
 fieldset {
@@ -3321,16 +3322,31 @@ button3 span,
 
 dl {
     margin: 0;
-    margin-inline: 0
+    margin-inline: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--large)
+}
+
+dt {
+    margin: 0;
+    margin-inline: 0;
+    width: 250px;
+    font-family: var(--mono);
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+dd {
+    flex: 1;
+    margin: 0;
+    margin-inline: 0;
 }
 
 .fields1 {
     display: flex;
     flex-wrap: wrap
-}
-
-.fields1 dl {
-    width: 100%
 }
 
 .fields1 #message-box {

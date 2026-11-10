@@ -433,15 +433,22 @@
 }
 
 #hub a.lea strong:before,
-.member a.lea strong:before {
-    content: "⭒";
-    padding-right: var(--4xsmall)
+.member a.lea strong:before,
+#hub a.cam strong:before,
+.member a.cam strong:before {
+    padding-right: var(--2xsmall)
+}
+
+#hub a.lea strong:before,
+.member a.lea strong:before,
+.lea .profile-pseudo:before {
+    content: "⭒"
 }
 
 #hub a.cam strong:before,
-.member a.cam strong:before {
-    content: "✻";
-    padding-right: var(--4xsmall)
+.member a.cam strong:before,
+.cam .profile-pseudo:before {
+    content: "✻"
 }
 
 *,
@@ -449,7 +456,7 @@
 *:after {
     box-sizing: border-box !important;
     scrollbar-width: thin;
-    scrollbar-color: var(--neutral) var(--dark-light);
+    scrollbar-color: var(--white-op50)
 }
 
 *:empty,
@@ -1954,6 +1961,10 @@ a:hover {
     font-size: var(--large)
 }
 
+.profile.en.ligne {
+    position: relative
+}
+
 .profile-body {
     display: flex;
     padding: var(--large);
@@ -1966,8 +1977,25 @@ a:hover {
 .profile-pseudo {
     font-family: var(--spe);
     text-align: center;
-    font-size: var(--6xlarge);
-    text-shadow: 2px 2px var(--white-op90)
+    font-size: var(--3xlarge);
+    color: var(--group-color, var(--co1));
+    position: relative;
+    text-shadow: 1px 1px var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.profile.en.ligne .profile-pseudo:before {
+    content: '.';
+    left: 0;
+    color: var(--light);
+    background-color: var(--group-color, var(--co1));
+    height: var(--2xlarge);
+    width: var(--2xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #reception {
@@ -3257,14 +3285,14 @@ textarea {
     font-family: var(--mono);
     font-weight: 300;
     padding: var(--4xsmall);
-    width: -webkit-fill-available !important
+    width: auto !important;
+    flex: 1
 }
 
 fieldset {
     margin: 0;
     margin-inline: 0;
     padding: var(--large);
-    padding-inline: 0;
     border: 0;
     background-color: var(--dark-light)
 }
@@ -3329,6 +3357,10 @@ dl {
     gap: var(--large)
 }
 
+dl+dl {
+    margin-top: var(--2xsmall)
+}
+
 dt {
     margin: 0;
     margin-inline: 0;
@@ -3340,8 +3372,11 @@ dt {
 
 dd {
     flex: 1;
+    display: flex;
     margin: 0;
     margin-inline: 0;
+    align-items: center;
+    flex-wrap: wrap
 }
 
 .fields1 {
@@ -3741,4 +3776,37 @@ div.sceditor-group {
     font-family: var(--mono);
     font-size: var(--small);
     z-index: 9999
+}
+
+.registration-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    flex-wrap: wrap;
+    margin: var(--large) 0;
+    width: 100%
+}
+
+.registration-tabs a {
+    color: var(--light);
+    background-color: var(--co1);
+    font-family: var(--serif);
+    text-transform: lowercase;
+    padding: var(--2xsmall) var(--large);
+    border-radius: var(--large)
+}
+
+.registration {
+    padding: var(--large);
+    gap: var(--large);
+    background-color: var(--light);
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral)
+}
+
+.registration-dtls {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300
 }

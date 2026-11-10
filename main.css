@@ -449,7 +449,7 @@
 *:after {
     box-sizing: border-box !important;
     scrollbar-width: thin;
-    scrollbar-color: var(--neutral) var(--dark-light);
+    scrollbar-color: var(--neutral) var(--dark-light)
 }
 
 *:empty,
@@ -3257,7 +3257,7 @@ textarea {
     font-family: var(--mono);
     font-weight: 300;
     padding: var(--4xsmall);
-    width: -webkit-fill-available !important
+    flex: 1
 }
 
 fieldset {
@@ -3344,8 +3344,9 @@ dt {
 
 dd {
     flex: 1;
+    display: flex;
     margin: 0;
-    margin-inline: 0;
+    margin-inline: 0
 }
 
 .fields1 {

@@ -450,6 +450,11 @@
     box-sizing: border-box !important
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--co1) var(--co1-100);
+}
+
 img {
     max-height: 600px;
     max-width: 600px;

@@ -452,7 +452,7 @@
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--co1) var(--co1-100);
+    scrollbar-color: var(--co1-200) var(--light);
 }
 
 img {

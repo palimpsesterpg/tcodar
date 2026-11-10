@@ -84,6 +84,20 @@
     --co3-op75: color-mix(in srgb, var(--co3) 75%, transparent);
     --co3-op90: color-mix(in srgb, var(--co3) 90%, transparent);
 
+    --fam-color-100: color-mix(in srgb, var(--fam-color) 20%, white);
+    --fam-color-200: color-mix(in srgb, var(--fam-color) 40%, white);
+    --fam-color-300: color-mix(in srgb, var(--fam-color) 60%, white);
+    --fam-color-400: color-mix(in srgb, var(--fam-color) 80%, white);
+    --fam-color-600: color-mix(in srgb, var(--fam-color) 80%, black);
+    --fam-color-700: color-mix(in srgb, var(--fam-color) 60%, black);
+    --fam-color-800: color-mix(in srgb, var(--fam-color) 40%, black);
+    --fam-color-900: color-mix(in srgb, var(--fam-color) 20%, black);
+
+    --fam-color-op25: color-mix(in srgb, var(--fam-color) 25%, transparent);
+    --fam-color-op50: color-mix(in srgb, var(--fam-color) 50%, transparent);
+    --fam-color-op75: color-mix(in srgb, var(--fam-color) 75%, transparent);
+    --fam-color-op90: color-mix(in srgb, var(--fam-color) 90%, transparent);
+
     --white-op25: color-mix(in srgb, white 25%, transparent);
     --white-op50: color-mix(in srgb, white 50%, transparent);
     --white-op75: color-mix(in srgb, white 75%, transparent);

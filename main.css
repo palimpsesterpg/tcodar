@@ -3286,7 +3286,7 @@ textarea {
     font-weight: 300;
     padding: var(--4xsmall);
     width: auto !important;
-    flex: 1
+    flex: 1 1 100%
 }
 
 fieldset {
@@ -3376,7 +3376,13 @@ dd {
     margin: 0;
     margin-inline: 0;
     align-items: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-weight: 300
+}
+
+dd br {
+    display: none
 }
 
 .fields1 {
@@ -3806,7 +3812,5 @@ div.sceditor-group {
 }
 
 .registration-dtls {
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 300
+    width: 100%
 }

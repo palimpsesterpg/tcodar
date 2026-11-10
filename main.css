@@ -441,13 +441,13 @@
 
 #hub a.lea strong:before,
 .member a.lea strong:before,
-.lea .profile-pseudo:before {
+.lea.profile.en.ligne .profile-pseudo:before {
     content: "⭒"
 }
 
 #hub a.cam strong:before,
 .member a.cam strong:before,
-.cam .profile-pseudo:before {
+.cam.profile.en.ligne .profile-pseudo:before {
     content: "✻"
 }
 
@@ -1987,7 +1987,12 @@ a:hover {
 }
 
 .profile.en.ligne .profile-pseudo:before {
-    content: '.';
+    content: "\e974";
+    font-family: var(--icons-thin);
+    font-size: var(--large);
+    text-shadow: 0 0;
+    border-radius: 100%;
+    position: absolute;
     left: 0;
     color: var(--light);
     background-color: var(--group-color, var(--co1));
@@ -1995,7 +2000,7 @@ a:hover {
     width: var(--2xlarge);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #reception {
@@ -3286,7 +3291,7 @@ textarea {
     font-weight: 300;
     padding: var(--4xsmall);
     width: auto !important;
-    flex: 1
+    flex: 1 1 100%
 }
 
 fieldset {
@@ -3376,7 +3381,36 @@ dd {
     margin: 0;
     margin-inline: 0;
     align-items: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-weight: 300
+}
+
+dd br {
+    display: none
+}
+
+dt required {
+    background-color: var(--co1-100);
+    color: var(--co1);
+    width: var(--large);
+    height: var(--large);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    border-radius: 100%;
+}
+
+.submit-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+h2+.panel {
+    padding: var(--large)
 }
 
 .fields1 {
@@ -3806,7 +3840,5 @@ div.sceditor-group {
 }
 
 .registration-dtls {
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 300
+    width: 100%
 }

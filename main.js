@@ -400,6 +400,18 @@ function unwrapTabs() {
   list.replaceWith(...list.childNodes);
 }
 
+function formatFieldLabels() {
+  qq('dt > label').forEach(label => {
+    if (q('required', label)) return;
+
+    label.innerHTML = label.innerHTML
+      .replace(/\s*&nbsp;/g, '')
+      .replace(/\s*:\s*$/, '')
+      .replace(/\s*\*/, ' <required>*</required>')
+      .trim();
+  });
+}
+
 function initColorScheme() {
     const html = document.documentElement;
     const toggle = q('[data-theme-controls] .color-scheme-toggle');
@@ -1010,6 +1022,13 @@ function buildCount(count, label) {
     return div;
 }
 
+function setProfileId() {
+  const id = location.pathname.match(/\/u(\d+)/)?.[1];
+  if (!id) return;
+
+  qq('.profile').forEach(el => (el.id = `u${id}`));
+}
+
 async function loadNewestUserAvatar() {
     const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
     const target = q('#newest-user-avatar');
@@ -1210,6 +1229,7 @@ onReady(() => {
     prefixPseudos();
     groupPlayers();
     sortListRows();
+    setProfileId();
     highlight();
     applyIcons(ICONS);
     replaceZodiacIcons();
@@ -1221,6 +1241,7 @@ onReady(() => {
     setTimeout(applyEditorIcons, 500);
     addQueendomTab();
     unwrapTabs();
+    formatFieldLabels();
     initTabs();
     initTabsInline();
     initHeaderNav();

@@ -448,11 +448,8 @@
 *:before,
 *:after {
     box-sizing: border-box !important
-}
-
-* {
     scrollbar-width: thin;
-    scrollbar-color: var(--co1-200) var(--light);
+    scrollbar-color: var(--neutral) var(--dark-light);
 }
 
 img {

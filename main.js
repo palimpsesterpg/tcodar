@@ -396,6 +396,8 @@ function unwrapTabs() {
         if (li.tagName === 'LI') li.replaceWith(...li.childNodes);
     });
     list.replaceWith(...list.childNodes);
+
+    list.classList.add('registration-tabs');
 }
 
 function initColorScheme() {

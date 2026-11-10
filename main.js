@@ -400,6 +400,17 @@ function unwrapTabs() {
   list.replaceWith(...list.childNodes);
 }
 
+function formatFieldLabels() {
+  qq('dt > label').forEach(label => {
+    if (q('required', label)) return;
+
+    label.innerHTML = label.innerHTML
+      .replace(/\s*:\s*$/, '')
+      .replace(/\s*\*/, ' <required>*</required>')
+      .trim();
+  });
+}
+
 function initColorScheme() {
     const html = document.documentElement;
     const toggle = q('[data-theme-controls] .color-scheme-toggle');
@@ -1221,6 +1232,7 @@ onReady(() => {
     setTimeout(applyEditorIcons, 500);
     addQueendomTab();
     unwrapTabs();
+    formatFieldLabels();
     initTabs();
     initTabsInline();
     initHeaderNav();

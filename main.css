@@ -3329,6 +3329,10 @@ dl {
     gap: var(--large)
 }
 
+dl+dl {
+    margin-top: var(--2xsmall)
+}
+
 dt {
     margin: 0;
     margin-inline: 0;

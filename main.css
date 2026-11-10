@@ -441,13 +441,13 @@
 
 #hub a.lea strong:before,
 .member a.lea strong:before,
-.lea .profile-pseudo:before {
+.lea.profile.en.ligne .profile-pseudo:before {
     content: "⭒"
 }
 
 #hub a.cam strong:before,
 .member a.cam strong:before,
-.cam .profile-pseudo:before {
+.cam.profile.en.ligne .profile-pseudo:before {
     content: "✻"
 }
 

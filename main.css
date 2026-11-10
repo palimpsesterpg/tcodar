@@ -447,7 +447,7 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box !important
+    box-sizing: border-box !important;
     scrollbar-width: thin;
     scrollbar-color: var(--neutral) var(--dark-light);
 }

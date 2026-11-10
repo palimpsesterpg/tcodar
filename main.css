@@ -3742,3 +3742,29 @@ div.sceditor-group {
     font-size: var(--small);
     z-index: 9999
 }
+
+.registration-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+    width: 100%
+}
+
+.registration-tabs span {
+    color: var(--light);
+    background-color: var(--co1);
+    font-family: var(--serif);
+    text-transform: lowercase;
+    padding: var(--2xsmall) var(--large);
+    border-radius: var(--large)
+}
+
+.registration {
+    padding: var(--large);
+    gap: var(--large);
+    background-color: var(--light);
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--lighter-neutral);
+    margin-top: var(--large)
+}

@@ -401,10 +401,11 @@ function unwrapTabs() {
 }
 
 function formatFieldLabels() {
-  qq('dt').forEach(dt => {
-    if (q('required', dt)) return;
+  qq('dt > label').forEach(label => {
+    if (q('required', label)) return;
 
-    dt.innerHTML = dt.innerHTML
+    label.innerHTML = label.innerHTML
+      .replace(/\s*&nbsp;/g, '')
       .replace(/\s*:\s*$/, '')
       .replace(/\s*\*/, ' <required>*</required>')
       .trim();

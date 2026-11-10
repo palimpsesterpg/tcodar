@@ -3386,7 +3386,26 @@ dd br {
 }
 
 dt required {
-    color: var(--co1)
+    background-color: var(--co1-100);
+    color: var(--co1);
+    width: var(--large);
+    height: var(--large);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    border-radius: 100%;
+}
+
+.submit-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+h2+.panel {
+    padding: var(--large)
 }
 
 .fields1 {

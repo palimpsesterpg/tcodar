@@ -3285,6 +3285,7 @@ textarea {
     font-family: var(--mono);
     font-weight: 300;
     padding: var(--4xsmall);
+    width: auto !important;
     flex: 1
 }
 
@@ -3292,7 +3293,6 @@ fieldset {
     margin: 0;
     margin-inline: 0;
     padding: var(--large);
-    padding-inline: 0;
     border: 0;
     background-color: var(--dark-light)
 }
@@ -3374,7 +3374,9 @@ dd {
     flex: 1;
     display: flex;
     margin: 0;
-    margin-inline: 0
+    margin-inline: 0;
+    align-items: center;
+    flex-wrap: wrap
 }
 
 .fields1 {
@@ -3781,10 +3783,12 @@ div.sceditor-group {
     align-items: center;
     justify-content: center;
     gap: var(--large);
+    flex-wrap: wrap;
+    margin: var(--large) 0;
     width: 100%
 }
 
-.registration-tabs span {
+.registration-tabs a {
     color: var(--light);
     background-color: var(--co1);
     font-family: var(--serif);
@@ -3798,6 +3802,11 @@ div.sceditor-group {
     gap: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--dark-light);
-    outline: 0.5px solid var(--lighter-neutral);
-    margin-top: var(--large)
+    outline: 0.5px solid var(--lighter-neutral)
+}
+
+.registration-dtls {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300
 }

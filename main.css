@@ -1586,14 +1586,14 @@ a:hover {
 
 .forum-archives {
     padding: var(--large);
-    background-color: var(--white-op75);
-    border: 0.5px solid var(--white-op90);
+    background-color: var(black-op50);
+    border: 0.5px solid var(--black-op90);
     backdrop-filter: blur(2px);
     align-items: center
 }
 
 [data-color-scheme="dark"] .forum-archives {
-    background-color: var(--white-op75);
+    background-color: var(--white-op50);
     border: 0.5px solid var(--black-op90)
 }
 

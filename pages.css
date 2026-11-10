@@ -46,7 +46,7 @@ html body {
 .page-content sep {
     height: 100%;
     width: 0.5px;
-    background-color: var(--dark-light)
+    background-color: var(--darker-light)
 }
 
 .filter {

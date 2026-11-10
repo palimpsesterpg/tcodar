@@ -447,13 +447,14 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box !important
+    box-sizing: border-box !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--neutral) var(--dark-light);
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--co1-200) var(--light);
-}
+*:empty,
+*:before:empty,
+*:after:empty {display: none}
 
 img {
     max-height: 600px;
@@ -1015,9 +1016,7 @@ a:hover {
     content: "\e688"
 }
 
-.forum-description br,
-.forum-links:empty,
-.forum-description:empty {
+.forum-description br {
     display: none
 }
 
@@ -1739,10 +1738,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center
-}
-
-.fa_like_list:empty {
-    display: none
 }
 
 .postbody {
@@ -3218,8 +3213,6 @@ a:hover {
     content: "\e444"
 }
 
-.topic-type:empty,
-.topic-participate:empty,
 .topic:not(.folder_no_new) .topic-icon,
 .topic:not(.folder_no_new) .topic-participate,
 .topic:not(.folder_no_new) .topic-author,

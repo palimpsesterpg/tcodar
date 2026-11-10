@@ -1022,6 +1022,13 @@ function buildCount(count, label) {
     return div;
 }
 
+function setProfileId() {
+  const id = location.pathname.match(/\/u(\d+)/)?.[1];
+  if (!id) return;
+
+  qq('.profile').forEach(el => (el.id = `u${id}`));
+}
+
 async function loadNewestUserAvatar() {
     const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
     const target = q('#newest-user-avatar');
@@ -1222,6 +1229,7 @@ onReady(() => {
     prefixPseudos();
     groupPlayers();
     sortListRows();
+    setProfileId();
     highlight();
     applyIcons(ICONS);
     replaceZodiacIcons();

@@ -2656,17 +2656,24 @@ season {
 }
 
 .all_notifications {
-    width: 100%;
-    overflow: auto;
+    width: calc(100% - 2rem);
+    height: calc(100vh - 2rem);
+    outline: var(--large) solid var(--white-op75);
+    border: 0.5px solid var(--group-color, var(--co1));
+    position: fixed;
+    z-index: 9999;
+    top: var(--large);
+    left: var(--large);
     display: flex;
-    border: var(--large) solid var(--white-op90);
-    gap: var(--large);
-    max-height: 100%;
-    padding: var(--large);
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     flex-direction: column;
-    -webkit-overflow-scrolling: touch
+    gap: var(--large);
+    align-items: flex-start;
+    background: var(--light);
+    padding: var(--large);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
 }
 
 .all_notifications::-webkit-scrollbar {

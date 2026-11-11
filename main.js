@@ -277,24 +277,54 @@ const DICE_RULES = {
 const DICE_DEFAULT = 'Aucun résultat';
 
 const SEASON_BY_MONTH = [
-  'winter', 'winter', 'spring', 'spring', 'spring', 'summer',
-  'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter',
+    'winter', 'winter', 'spring', 'spring', 'spring', 'summer',
+    'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter',
 ];
 
 const SEASON_LABELS = {
-  winter: 'hiver',
-  spring: 'printemps',
-  summer: 'été',
-  autumn: 'automne',
+    winter: 'hiver',
+    spring: 'printemps',
+    summer: 'été',
+    autumn: 'automne',
 };
 
 const CLIMATES = {
-  london: { winter: [5, 12], spring: [7, 21], summer: [15, 20], autumn: [5, 16] },
-  sydney: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  rio: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  singapore: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  marrakech: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  newyork: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+    london: {
+        winter: [5, 12],
+        spring: [7, 21],
+        summer: [15, 20],
+        autumn: [5, 16]
+    },
+    sydney: {
+        winter: [8, 17],
+        spring: [12, 23],
+        summer: [19, 27],
+        autumn: [14, 24]
+    },
+    rio: {
+        winter: [8, 17],
+        spring: [12, 23],
+        summer: [19, 27],
+        autumn: [14, 24]
+    },
+    singapore: {
+        winter: [8, 17],
+        spring: [12, 23],
+        summer: [19, 27],
+        autumn: [14, 24]
+    },
+    marrakech: {
+        winter: [8, 17],
+        spring: [12, 23],
+        summer: [19, 27],
+        autumn: [14, 24]
+    },
+    newyork: {
+        winter: [8, 17],
+        spring: [12, 23],
+        summer: [19, 27],
+        autumn: [14, 24]
+    },
 };
 
 const FORUM_TAB_CLASSES = {
@@ -410,27 +440,27 @@ function applyColorScheme() {
 }
 
 function unwrapTabs() {
-  const list = q('#tabs ul');
-  if (!list) return;
+    const list = q('#tabs ul');
+    if (!list) return;
 
-  list.parentElement.classList.add('registration-tabs');
+    list.parentElement.classList.add('registration-tabs');
 
-  [...list.children].forEach(li => {
-    if (li.tagName === 'LI') li.replaceWith(...li.childNodes);
-  });
-  list.replaceWith(...list.childNodes);
+    [...list.children].forEach(li => {
+        if (li.tagName === 'LI') li.replaceWith(...li.childNodes);
+    });
+    list.replaceWith(...list.childNodes);
 }
 
 function formatFieldLabels() {
-  qq('dt > label').forEach(label => {
-    if (q('required', label)) return;
+    qq('dt > label').forEach(label => {
+        if (q('required', label)) return;
 
-    label.innerHTML = label.innerHTML
-      .replace(/\s*&nbsp;/g, '')
-      .replace(/\s*:\s*$/, '')
-      .replace(/\s*\*/, ' <required>*</required>')
-      .trim();
-  });
+        label.innerHTML = label.innerHTML
+            .replace(/\s*&nbsp;/g, '')
+            .replace(/\s*:\s*$/, '')
+            .replace(/\s*\*/, ' <required>*</required>')
+            .trim();
+    });
 }
 
 function initColorScheme() {
@@ -641,66 +671,88 @@ const clockFormatters = new Map();
 const monthFormatters = new Map();
 
 function getFormatter(cache, options, timeZone) {
-  if (!cache.has(timeZone)) {
-    let formatter;
-    try {
-      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, { ...options, timeZone });
-    } catch {
-      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, options);
+    if (!cache.has(timeZone)) {
+        let formatter;
+        try {
+            formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, {
+                ...options,
+                timeZone
+            });
+        } catch {
+            formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, options);
+        }
+        cache.set(timeZone, formatter);
     }
-    cache.set(timeZone, formatter);
-  }
-  return cache.get(timeZone);
+    return cache.get(timeZone);
 }
 
 const getClockFormatter = timeZone =>
-  getFormatter(clockFormatters, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }, timeZone);
+    getFormatter(clockFormatters, {
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23'
+    }, timeZone);
 
 const getMonthFormatter = timeZone =>
-  getFormatter(monthFormatters, { month: 'numeric' }, timeZone);
+    getFormatter(monthFormatters, {
+        month: 'numeric'
+    }, timeZone);
 
 function getSeason(now, timeZone, hemisphere) {
-  const month = Number(getMonthFormatter(timeZone).format(now)) - 1;
-  return SEASON_BY_MONTH[hemisphere === 'south' ? (month + 6) % 12 : month];
+    const month = Number(getMonthFormatter(timeZone).format(now)) - 1;
+    return SEASON_BY_MONTH[hemisphere === 'south' ? (month + 6) % 12 : month];
 }
 
 function initClockWall() {
-  const cities = qq('#page-home .seven .phseven-city')
-    .map(city => ({
-      city,
-      hour: q('hour', city),
-      min: q('min', city),
-      season: q('season', city),
-      tempMin: q('tempmin', city),
-      tempMax: q('tempmax', city),
-      timeZone: city.dataset.tz,
-      hemisphere: city.dataset.hemisphere,
-      climate: CLIMATES[city.dataset.climate],
-    }))
-    .filter(({ hour, min }) => hour && min);
+    const cities = qq('#page-home .seven .phseven-city')
+        .map(city => ({
+            city,
+            hour: q('hour', city),
+            min: q('min', city),
+            season: q('season', city),
+            tempMin: q('tempmin', city),
+            tempMax: q('tempmax', city),
+            timeZone: city.dataset.tz,
+            hemisphere: city.dataset.hemisphere,
+            climate: CLIMATES[city.dataset.climate],
+        }))
+        .filter(({
+            hour,
+            min
+        }) => hour && min);
 
-  if (!cities.length) return;
+    if (!cities.length) return;
 
-  const update = () => {
-    const now = new Date();
+    const update = () => {
+        const now = new Date();
 
-    cities.forEach(({ city, hour, min, season, tempMin, tempMax, timeZone, hemisphere, climate }) => {
-      [hour.textContent, min.textContent] = getClockFormatter(timeZone).format(now).split(':');
+        cities.forEach(({
+            city,
+            hour,
+            min,
+            season,
+            tempMin,
+            tempMax,
+            timeZone,
+            hemisphere,
+            climate
+        }) => {
+            [hour.textContent, min.textContent] = getClockFormatter(timeZone).format(now).split(':');
 
-      const current = getSeason(now, timeZone, hemisphere);
-      if (city.dataset.season === current) return;
+            const current = getSeason(now, timeZone, hemisphere);
+            if (city.dataset.season === current) return;
 
-      city.dataset.season = current;
-      if (season) season.textContent = SEASON_LABELS[current];
+            city.dataset.season = current;
+            if (season) season.textContent = SEASON_LABELS[current];
 
-      const range = climate?.[current];
-      if (tempMin && range) tempMin.textContent = `${range[0]}°`;
-      if (tempMax && range) tempMax.textContent = `${range[1]}°`;
-    });
-  };
+            const range = climate ?. [current];
+            if (tempMin && range) tempMin.textContent = `${range[0]}°`;
+            if (tempMax && range) tempMax.textContent = `${range[1]}°`;
+        });
+    };
 
-  update();
-  setInterval(update, 1000);
+    update();
+    setInterval(update, 1000);
 }
 
 function applyGroupClasses(container, sourceSelector = '[class*="group-"]') {
@@ -1057,10 +1109,10 @@ function buildCount(count, label) {
 }
 
 function setProfileId() {
-  const id = location.pathname.match(/\/u(\d+)/)?.[1];
-  if (!id) return;
+    const id = location.pathname.match(/\/u(\d+)/) ?. [1];
+    if (!id) return;
 
-  qq('.profile').forEach(el => (el.id = `u${id}`));
+    qq('.profile').forEach(el => (el.id = `u${id}`));
 }
 
 async function loadNewestUserAvatar() {
@@ -1173,17 +1225,17 @@ function initTitles() {
 }
 
 function initCategoriesToggle() {
-  const categories = q('#categories');
-  if (!categories) return;
+    const categories = q('#categories');
+    if (!categories) return;
 
-  qq('[data-toggle-tabs]').forEach(btn => {
-    btn.setAttribute('aria-pressed', categories.classList.contains('tabsystem'));
+    qq('[data-toggle-tabs]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const active = categories.classList.contains('tabsystem');
 
-    btn.addEventListener('click', () => {
-      const active = categories.classList.toggle('tabsystem');
-      btn.setAttribute('aria-pressed', active);
+            categories.classList.toggle('tabsystem', !active);
+            categories.classList.toggle('notabs', active);
+        });
     });
-  });
 }
 
 function moveAdminLinks() {
@@ -1265,6 +1317,8 @@ onReady(() => {
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
     qq('.page-filters').forEach(p => p.after(sep()));
+    qq('.main-navbar > *').forEach(p => p.after(sep()));
+    qq('.random-navbar > *:not(:last-of-type)').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 

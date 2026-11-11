@@ -395,7 +395,7 @@
         flex-direction: row !important;
     }
 
-    #page-navbar > div + div {
+    #page-navbar sep {
         border-top: 0 !important;
         margin-top: 0 !important;
         padding-top: 0 !important;
@@ -419,18 +419,6 @@
 
     .forum-off .forum-lastpost-avatar img {
         width: 50px !important;
-    }
-
-    input,
-    select,
-    textarea {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 801px) {
-    html body {
-        padding-left: 3rem !important;
     }
 }
 
@@ -681,7 +669,7 @@ a:hover {
     flex-direction: column
 }
 
-#page-navbar > div + div {
+#page-navbar sep {
     border-top: 2.5px solid var(--lighter-neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;

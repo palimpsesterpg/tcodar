@@ -924,7 +924,7 @@ a:hover {
 }
 
 .forum-img {
-    height: 55px;
+    height: 43px;
     width: auto;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -970,12 +970,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     font-style: italic;
-    text-shadow: 0.5px 0.5px var(--white-op90);
-    color: var(--dark);
+    color: var(--dark-neutral);
     font-size: var(--medium);
     width: 90%;
-    height: 55px;
-    font-weight: 100
+    height: 43px;
+    font-weight: 300
 }
 
 .forum-icon {

@@ -226,7 +226,7 @@ const TOPIC_LABELS = [
     ['default35', 'délai supplémentaire'],
 ];
 
-const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .relation';
+const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .relation, .wombat-aside';
 
 const GROUP_COLORS = {
     '6A6A6A': 'group-7',
@@ -326,6 +326,11 @@ const CLIMATES = {
         autumn: [14, 24]
     },
 };
+
+const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
+
+const createDiv = (className, text) =>
+  Object.assign(document.createElement('div'), { className, textContent: text });
 
 const FORUM_TAB_CLASSES = {
     'forum-admin': ['c1', 'c11'],
@@ -519,6 +524,29 @@ function replaceTopicLabels() {
 
         qq(`img[src*="${gif}.gif"]`).forEach(img => img.replaceWith(label));
     });
+}
+
+function wrapNode(node, className) {
+  const div = document.createElement('div');
+  div.className = className;
+  node.replaceWith(div);
+  div.append(node);
+}
+
+function splitPseudonyme() {
+  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo').forEach(el => {
+    if (q('.prenom', el)) return;
+
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      const [, first, rest] = node.textContent.match(NAME_PATTERN) ?? [];
+      if (!first) continue;
+
+      node.replaceWith(createDiv('prenom', first), createDiv('nom', rest.trim()));
+      return;
+    }
+  });
 }
 
 function replaceEmojis() {
@@ -1317,7 +1345,7 @@ onReady(() => {
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
     qq('.page-filters').forEach(p => p.after(sep()));
-    qq('#page-navbar > *:not(:last-of-type)').forEach(p => p.after(sep()));
+    qq('#page-navbar > *:not(:last-child)').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 
@@ -1327,6 +1355,7 @@ onReady(() => {
     setCharacterKeys('.postprofile', '.postprofile-name');
     fillAllCards();
     qq('.list-row[data-character]').forEach(buildRow);
+    splitPseudonyme();
 
     initAges();
     initBoardStats();

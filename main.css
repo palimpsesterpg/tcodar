@@ -18,8 +18,8 @@
     --main: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --mono: "Inconsolata", ui-monospace, monospace;
     --serif: "Bodoni Moda", Georgia, serif;
-    --display: "Switzer", Impact, sans-serif;
-    --spe: "Valmist", serif;
+    --display: "Bebas", Impact, sans-serif;
+    --spe: "Frista", serif;
     --cursive: "Cedarville Cursive", cursive;
 
     --icons-thin: "uicons-thin-straight";
@@ -108,8 +108,8 @@
     --light-dark: color-mix(in srgb, white 30%, black);
     --dark: color-mix(in srgb, white 25%, black);
 
-    --gradientNeutralVertical: linear-gradient(var(--light), var(--neutral), var(--light));
-    --gradientNeutralHorizontal: linear-gradient(to right, var(--light), var(--neutral), var(--light));
+    --gradientNeutralVertical: linear-gradient(var(--light), var(--darker-light), var(--light));
+    --gradientNeutralHorizontal: linear-gradient(to right, var(--light), var(--darker-light), var(--light));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
@@ -396,12 +396,8 @@
     }
 
     #page-navbar sep {
-        border-top: 0 !important;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-        border-left: 2.5px solid var(--lighter-neutral) !important;
-        margin-left: var(--2xlarge) !important;
-        padding-left: var(--2xlarge) !important;
+        width: 2.5px;
+        height: auto
     }
 
     .copyright {
@@ -609,14 +605,13 @@ a:hover {
 #page-header a {
     width: 100%;
     text-align: center;
-    -webkit-text-stroke: 0.5px var(--white-op90);
+    -webkit-text-stroke: 0.5px var(--light);
     -webkit-text-fill-color: transparent;
-    font-size: var(--4xlarge);
-    font-weight: 900;
+    font-size: var(--5xlarge);
     font-family: var(--spe);
     color: transparent;
     display: flex;
-    text-shadow: 0 0 5px var(--white-op50);
+    text-shadow: 0 0 5px var(--white-op75);
     flex-direction: column
 }
 
@@ -649,14 +644,15 @@ a:hover {
 #page-navbar {
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 0 var(--large) var(--large) 0;
-    left: 0;
+    border-radius: var(--2xsmall);
+    left: var(--large);
     width: 3rem;
     padding: var(--large);
     z-index: 999;
     position: fixed;
     display: flex;
-    background-color: var(--dark-light);
+    background-color: var(--white-op50);
+    border: 0.5px solid var(--light);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -685,7 +681,6 @@ a:hover {
     text-transform: capitalize;
     background-color: var(--dark-light);
     top: 50%;
-    border-left: 0.5px solid;
     transform: translateY(-50%);
     font-family: var(--serif);
     font-style: italic;
@@ -697,14 +692,13 @@ a:hover {
 
 .mainmenu span:before {
     content: '';
-    height: var(--2xsmall);
-    width: var(--2xsmall);
+    height: var(--large);
+    width: var(--large);
     background-color: var(--dark-light);
-    transform: rotate(90deg);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    left: -0.125rem
+    transform: translateY(-50%) rotate(-90deg);
+    left: -0.5rem
 }
 
 .mainmenu:hover span {
@@ -775,7 +769,7 @@ a:hover {
 .registration {
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--lighter-neutral);
+    border: var(--2xsmall) solid var(--dark-light);
     outline: 0.5px solid var(--lighter-neutral)
 }
 
@@ -1809,13 +1803,11 @@ a:hover {
     justify-content: space-between
 }
 
-.memberpanel>div {
+.memberpanel {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    flex-wrap: wrap;
-    padding: var(--large);
     text-transform: uppercase;
     text-align: center;
     font-weight: 300
@@ -1826,57 +1818,81 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
-    gap: var(--large)
+    gap: var(--large);
+    transition: grid-template-columns 0.4s ease
 }
 
 .member {
     gap: var(--large);
     display: flex;
     flex-direction: column;
-    padding: var(--2xsmall);
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    padding: var(--large);
     border-width: 0.5px !important;
     border-style: solid;
+    transition-duration: 1s;
     border-image: var(--gradientgc3, var(--gradientLight)) 1
+}
+
+.memberlist:has(.member:nth-child(5n+1):hover) {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+2):hover) {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+3):hover) {
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+4):hover) {
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n):hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr
 }
 
 .member-avatar img {
     height: 250px;
-    width: 100%
+    width: 100%;
+    display: block
 }
 
 .member-bloc {
     height: 250px;
     width: 100%;
     display: flex;
-    gap: var(--large);
-    flex-direction: column;
-    position: relative
+    gap: var(--large)
+}
+
+.member:hover .member-avatar {
+    width: 30%;
+    transition-duration: 1s
 }
 
 .member-infos {
     height: 250px;
-    width: 100%;
-    gap: var(--2xsmall);
-    padding: var(--2xsmall);
+    flex: 1;
+    gap: var(--large);
+    padding: var(--large);
     flex-direction: column;
     display: none;
-    position: absolute;
-    background: var(--gradientgc3, var(--gradientLight));
-    top: 0;
-    right: 0
+    background: var(--group-color-100, var(--light))
 }
 
-.member-bloc:hover .member-infos {
-    display: flex
+.member:hover .member-infos {
+    display: flex;
+    transition-duration: 1s
 }
 
 .member-infos>div {
-    padding: var(--4xsmall);
-    gap: var(--2xsmall);
     font-size: var(--small);
     flex: 1;
     display: flex;
-    background-color: var(--light);
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
@@ -1885,17 +1901,38 @@ a:hover {
     color: var(--group-color, var(--co1))
 }
 
+.member-infos>div:not(:last-of-type) {
+    padding-bottom: var(--large);
+    border-bottom: 0.5px solid;
+}
+
 .member-pseudo {
     text-align: center;
-    font-family: var(--spe);
+    font-family: var(--spe)
+}
+
+.member-pseudo .prenom {
+    text-transform: lowercase;
+    font-size: var(--2xlarge)
+}
+
+.member-pseudo .nom {
+    text-transform: uppercase;
     font-size: var(--large)
 }
 
 #hub a.lea strong::before,
-.member a.lea strong::before,
+.member a.lea span::before,
 #hub a.cam strong::before,
-.member a.cam strong::before {
+.member a.cam span::before {
     padding-right: var(--2xsmall)
+}
+
+.member:has(.cam, .lea) span {
+    display: flex;
+    gap: var(--2xsmall);
+    align-items: center;
+    justify-content: center
 }
 
 #hub a.lea strong::before,
@@ -1959,20 +1996,51 @@ a:hover {
     width: 100%
 }
 
+#reception sep {
+    height: 0.5px;
+    width: 100%;
+    background: var(--gradientNeutralHorizontal)
+}
+
+#reception .tabsystem-tabs {
+    gap: var(--large);
+    display: flex;
+    align-items: center
+}
+
+#reception .tab {
+    cursor: pointer;
+    flex: 1;
+    background-color: var(--co1-100);
+    color: var(--co1);
+    padding: var(--2xsmall) var(--large);
+    font-family: var(--serif);
+    border-radius: var(--2xsmall)
+}
+
+#reception .tab.active {
+    flex: 1.5;
+    background-color: var(--co1);
+    color: var(--light)
+}
+
 #reception.open .content-toggle {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 150px 100px 150px 100px 150px;
+    display: flex;
     gap: var(--large);
     width: 100%
+}
+
+#reception .tab-content.active {
+    display: flex;
+    align-items: center;
+    gap: var(--large)
 }
 
 #reception .seven {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    gap: var(--large);
-    grid-area: 4 / 1 / 5 / 6
+    gap: var(--large)
 }
 
 #reception .five,
@@ -1985,8 +2053,7 @@ a:hover {
 #reception .one {
     background: var(--gradient23-100);
     background-size: cover;
-    background-position: center center;
-    grid-area: 1 / 1 / 2 / 4
+    background-position: center center
 }
 
 #reception .one div {
@@ -2003,7 +2070,6 @@ a:hover {
 }
 
 #reception .two {
-    grid-area: 3 / 1 / 4 / 3;
     height: 100%;
     padding: var(--large);
     background-color: var(--co1);
@@ -2022,12 +2088,6 @@ a:hover {
     text-align: justify;
     line-height: 1.45;
     font-weight: 300
-}
-
-#reception .three {
-    padding: var(--large);
-    grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--white-op90)
 }
 
 #reception .three strong,
@@ -2058,7 +2118,6 @@ a:hover {
 }
 
 #reception .four {
-    grid-area: 2 / 1 / 3 / 3;
     height: 100%;
     width: 100%;
     display: flex;
@@ -2068,10 +2127,6 @@ a:hover {
     margin: 0 auto;
     padding: var(--large);
     background-color: var(--white-op90)
-}
-
-#reception .five {
-    grid-area: 1 / 4 / 2 / 6
 }
 
 #reception .five div {
@@ -2092,14 +2147,6 @@ a:hover {
 #reception .one span,
 #reception .two div {
     display: block
-}
-
-#reception .six {
-    grid-area: 5 / 1 / 6 / 4
-}
-
-#reception .eight {
-    grid-area: 5 / 4 / 6 / 6
 }
 
 #reception .five span {
@@ -2331,7 +2378,7 @@ a:hover {
     background-position: center center;
     display: flex;
     color: var(--dark);
-    gap: var(--2xsmall);
+    gap: var(--large);
     font-weight: 700;
     align-items: center;
     justify-content: center;
@@ -2341,28 +2388,47 @@ a:hover {
     text-transform: uppercase
 }
 
-.phseven-city .city,
-.phseven-city .meteo {
+.phseven-city .city {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: var(--xlarge);
     gap: var(--large)
 }
 
-.phseven-city .city {
+.phseven-city .meteo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: var(--large);
+    gap: var(--large)
+}
+
+.phseven-city.brd {
+    padding: 0 var(--large);
+    border-left: 0.5px solid var(--darker-light);
+    border-right: 0.5px solid var(--darker-light)
+}
+
+season {
+    flex: 1
+}
+
+.phseven-city .city strong {
     font-size: var(--xlarge);
-    height: var(--xlarge)
+    flex: 1
 }
 
 .phseven-city .city img {
-    height: var(--xlarge)
+    height: var(--large)
 }
 
-.phseven-city .time>* {
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 0 var(--4xsmall);
-    font-weight: 900
+.phseven-city .time {
+    color: var(--dark);
+    font-family: var(--serif);
+    font-size: var(--2xlarge)
 }
 
 #hub {

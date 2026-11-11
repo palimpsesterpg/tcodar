@@ -2010,10 +2010,6 @@ a:hover {
     grid-area: 1 / 3 / 4 / 4
 }
 
-.profile-contact:div:not:has(a) {
-    display: none
-}
-
 .profile-presence {
     grid-area: 2 / 2 / 3 / 3
 }

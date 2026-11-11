@@ -396,12 +396,8 @@
     }
 
     #page-navbar sep {
-        border-top: 0 !important;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-        border-left: 2.5px solid var(--lighter-neutral) !important;
-        margin-left: var(--2xlarge) !important;
-        padding-left: var(--2xlarge) !important;
+        width: 2.5px;
+        height: auto
     }
 
     .copyright {
@@ -649,14 +645,15 @@ a:hover {
 #page-navbar {
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 0 var(--large) var(--large) 0;
-    left: 0;
+    border-radius: var(--2xsmall);
+    left: var(--large);
     width: 3rem;
     padding: var(--large);
     z-index: 999;
     position: fixed;
     display: flex;
-    background-color: var(--dark-light);
+    background-color: var(--white-op50);
+    border: 0.5px solid var(--light);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -685,7 +682,6 @@ a:hover {
     text-transform: capitalize;
     background-color: var(--dark-light);
     top: 50%;
-    border-left: 0.5px solid;
     transform: translateY(-50%);
     font-family: var(--serif);
     font-style: italic;
@@ -697,14 +693,13 @@ a:hover {
 
 .mainmenu span:before {
     content: '';
-    height: var(--2xsmall);
-    width: var(--2xsmall);
+    height: var(--large);
+    width: var(--large);
     background-color: var(--dark-light);
-    transform: rotate(90deg);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    left: -0.125rem
+    transform: translateY(-50%) rotate(-90deg);
+    left: -0.5rem
 }
 
 .mainmenu:hover span {
@@ -775,7 +770,7 @@ a:hover {
 .registration {
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--lighter-neutral);
+    border: var(--2xsmall) solid var(--dark-light);
     outline: 0.5px solid var(--lighter-neutral)
 }
 

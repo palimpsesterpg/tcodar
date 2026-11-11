@@ -1829,7 +1829,7 @@ a:hover {
     width: 100%;
     min-width: 0;
     overflow: hidden;
-    padding: var(--2xsmall);
+    padding: var(--large);
     border-width: 0.5px !important;
     border-style: solid;
     transition-duration: 1s;
@@ -1909,7 +1909,7 @@ a:hover {
 .member-pseudo {
     text-align: center;
     font-family: var(--spe);
-    font-size: var(--large)
+    font-size: var(--2xlarge)
 }
 
 #hub a.lea strong::before,

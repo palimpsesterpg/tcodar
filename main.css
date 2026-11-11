@@ -1908,15 +1908,31 @@ a:hover {
 
 .member-pseudo {
     text-align: center;
-    font-family: var(--spe);
+    font-family: var(--spe)
+}
+
+.member-pseudo .prenom {
+    text-transform: lowercase;
     font-size: var(--2xlarge)
 }
 
+.member-pseudo .nom {
+    text-transform: uppercase;
+    font-size: var(--large)
+}
+
 #hub a.lea strong::before,
-.member a.lea strong::before,
+.member a.lea span::before,
 #hub a.cam strong::before,
-.member a.cam strong::before {
+.member a.cam span::before {
     padding-right: var(--2xsmall)
+}
+
+.member:has(.cam, .lea) span {
+    display: flex;
+    gap: var(--2xsmall);
+    align-items: center;
+    justify-content: center
 }
 
 #hub a.lea strong::before,

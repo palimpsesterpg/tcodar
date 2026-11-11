@@ -764,6 +764,7 @@ a:hover {
 .forumlist,
 .post,
 .memberlist,
+.profile,
 #reception,
 #hub,
 .registration {
@@ -1953,11 +1954,8 @@ a:hover {
 
 .profile-body {
     display: flex;
-    padding: var(--large);
     gap: var(--large);
     flex-wrap: wrap;
-    background-color: var(--light);
-    border: 0.5px solid var(--lighter-neutral)
 }
 
 .profile-pseudo {

@@ -327,6 +327,11 @@ const CLIMATES = {
     },
 };
 
+const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
+
+const createDiv = (className, text) =>
+  Object.assign(document.createElement('div'), { className, textContent: text });
+
 const FORUM_TAB_CLASSES = {
     'forum-admin': ['c1', 'c11'],
     'forum-off': ['c2', 'c9'],
@@ -519,6 +524,29 @@ function replaceTopicLabels() {
 
         qq(`img[src*="${gif}.gif"]`).forEach(img => img.replaceWith(label));
     });
+}
+
+function wrapNode(node, className) {
+  const div = document.createElement('div');
+  div.className = className;
+  node.replaceWith(div);
+  div.append(node);
+}
+
+function splitPseudonyme() {
+  qq('.member-pseudo').forEach(el => {
+    if (q('.prenom', el)) return;
+
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      const [, first, rest] = node.textContent.match(NAME_PATTERN) ?? [];
+      if (!first) continue;
+
+      node.replaceWith(createDiv('prenom', first), createDiv('nom', rest.trim()));
+      return;
+    }
+  });
 }
 
 function replaceEmojis() {
@@ -1327,6 +1355,7 @@ onReady(() => {
     setCharacterKeys('.postprofile', '.postprofile-name');
     fillAllCards();
     qq('.list-row[data-character]').forEach(buildRow);
+    splitPseudonyme();
 
     initAges();
     initBoardStats();

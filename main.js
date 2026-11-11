@@ -226,7 +226,7 @@ const TOPIC_LABELS = [
     ['default35', 'délai supplémentaire'],
 ];
 
-const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .cam, .boxlien';
+const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .relation';
 
 const GROUP_COLORS = {
     '6A6A6A': 'group-7',

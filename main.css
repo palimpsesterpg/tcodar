@@ -108,8 +108,8 @@
     --light-dark: color-mix(in srgb, white 30%, black);
     --dark: color-mix(in srgb, white 25%, black);
 
-    --gradientNeutralVertical: linear-gradient(var(--light), var(--neutral), var(--light));
-    --gradientNeutralHorizontal: linear-gradient(to right, var(--light), var(--neutral), var(--light));
+    --gradientNeutralVertical: linear-gradient(var(--light), var(--darker-light), var(--light));
+    --gradientNeutralHorizontal: linear-gradient(to right, var(--light), var(--darker-light), var(--light));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
@@ -605,14 +605,13 @@ a:hover {
 #page-header a {
     width: 100%;
     text-align: center;
-    -webkit-text-stroke: 0.5px var(--white-op90);
+    -webkit-text-stroke: 0.5px var(--light);
     -webkit-text-fill-color: transparent;
-    font-size: var(--4xlarge);
-    font-weight: 900;
+    font-size: var(--5xlarge);
     font-family: var(--spe);
     color: transparent;
     display: flex;
-    text-shadow: 0 0 5px var(--white-op50);
+    text-shadow: 0 0 5px var(--white-op75);
     flex-direction: column
 }
 
@@ -2367,12 +2366,6 @@ a:hover {
     padding: 0 var(--large);
     border-left: 0.5px solid var(--darker-light);
     border-right: 0.5px solid var(--darker-light)
-}
-
-#reception .seven sep {
-    width: 100%;
-    height: 0.5px;
-    background-color: var(--darker-light)
 }
 
 season {

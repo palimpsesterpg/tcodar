@@ -274,7 +274,24 @@ const DICE_RULES = {
     },
 };
 
-const DICE_DEFAULT = 'Aucun effet';
+const DICE_DEFAULT = 'Aucun résultat';
+
+const SEASON_BY_MONTH = [
+  'winter', 'winter', 'spring', 'spring', 'spring', 'summer',
+  'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter',
+];
+
+const SEASON_LABELS = {
+  winter: 'hiver',
+  spring: 'printemps',
+  summer: 'été',
+  autumn: 'automne',
+};
+
+const CLIMATES = {
+  paris: { winter: [1, 7], spring: [6, 16], summer: [14, 25], autumn: [8, 16] },
+  sydney: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+};
 
 const FORUM_TAB_CLASSES = {
     'forum-admin': ['c1', 'c11'],
@@ -617,55 +634,69 @@ function hideAdminTools() {
 }
 
 const clockFormatters = new Map();
+const monthFormatters = new Map();
 
-function getClockFormatter(timeZone) {
-    if (!clockFormatters.has(timeZone)) {
-        const options = {
-            hour: '2-digit',
-            minute: '2-digit',
-            hourCycle: 'h23'
-        };
-        let formatter;
-        try {
-            formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, {
-                ...options,
-                timeZone
-            });
-        } catch {
-            formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, options);
-        }
-        clockFormatters.set(timeZone, formatter);
+function getFormatter(cache, options, timeZone) {
+  if (!cache.has(timeZone)) {
+    let formatter;
+    try {
+      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, { ...options, timeZone });
+    } catch {
+      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, options);
     }
-    return clockFormatters.get(timeZone);
+    cache.set(timeZone, formatter);
+  }
+  return cache.get(timeZone);
+}
+
+const getClockFormatter = timeZone =>
+  getFormatter(clockFormatters, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }, timeZone);
+
+const getMonthFormatter = timeZone =>
+  getFormatter(monthFormatters, { month: 'numeric' }, timeZone);
+
+function getSeason(now, timeZone, hemisphere) {
+  const month = Number(getMonthFormatter(timeZone).format(now)) - 1;
+  return SEASON_BY_MONTH[hemisphere === 'south' ? (month + 6) % 12 : month];
 }
 
 function initClockWall() {
-    const cities = qq('#page-home .seven .phseven-city')
-        .map(city => ({
-            hour: q('hour', city),
-            min: q('min', city),
-            timeZone: city.dataset.tz,
-        }))
-        .filter(({
-            hour,
-            min
-        }) => hour && min);
+  const cities = qq('#page-home .seven .phseven-city')
+    .map(city => ({
+      city,
+      hour: q('hour', city),
+      min: q('min', city),
+      season: q('season', city),
+      tempMin: q('tempmin', city),
+      tempMax: q('tempmax', city),
+      timeZone: city.dataset.tz,
+      hemisphere: city.dataset.hemisphere,
+      climate: CLIMATES[city.dataset.climate],
+    }))
+    .filter(({ hour, min }) => hour && min);
 
-    if (!cities.length) return;
+  if (!cities.length) return;
 
-    const update = () => {
-        const now = new Date();
-        cities.forEach(({
-            hour,
-            min,
-            timeZone
-        }) => {
-            [hour.textContent, min.textContent] = getClockFormatter(timeZone).format(now).split(':');
-        });
-    };
+  const update = () => {
+    const now = new Date();
 
-    update();
-    setInterval(update, 1000);
+    cities.forEach(({ city, hour, min, season, tempMin, tempMax, timeZone, hemisphere, climate }) => {
+      [hour.textContent, min.textContent] = getClockFormatter(timeZone).format(now).split(':');
+
+      const current = getSeason(now, timeZone, hemisphere);
+      if (city.dataset.season === current) return;
+
+      city.dataset.season = current;
+      if (season) season.textContent = SEASON_LABELS[current];
+
+      const range = climate?.[current];
+      if (tempMin && range) tempMin.textContent = `${range[0]}°`;
+      if (tempMax && range) tempMax.textContent = `${range[1]}°`;
+    });
+  };
+
+  update();
+  setInterval(update, 1000);
 }
 
 function applyGroupClasses(container, sourceSelector = '[class*="group-"]') {

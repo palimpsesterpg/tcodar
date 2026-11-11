@@ -1239,7 +1239,7 @@ function initCategoriesToggle() {
 }
 
 function moveAdminLinks() {
-    const target = q('#page-navbar .random-navbar > a[href="#bottom"]');
+    const target = q('#page-navbar > a[href="#bottom"]');
     if (!target) return;
 
     qq('a[href^="/admin/?part=admin"]').forEach(link => {

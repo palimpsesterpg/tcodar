@@ -1818,24 +1818,47 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
-    gap: var(--large)
+    gap: var(--large);
+    transition: grid-template-columns 0.4s ease
 }
 
 .member {
     gap: var(--large);
     display: flex;
+    flex-direction: column;
     width: 100%;
+    min-width: 0;
+    overflow: hidden;
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
-.member:hover {width: 150%}
+.memberlist:has(.member:nth-child(5n+1):hover) {
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+2):hover) {
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+3):hover) {
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+4):hover) {
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n):hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr
+}
 
 .member-avatar img {
     height: 250px;
-    width: 100%
+    width: 100%;
+    display: block
 }
 
 .member-bloc {
@@ -1954,13 +1977,13 @@ a:hover {
 #reception sep {
     height: 0.5px;
     width: 100%;
-    background: var(--gradientNeutralHorizontal);
+    background: var(--gradientNeutralHorizontal)
 }
 
 #reception .tabsystem-tabs {
     gap: var(--large);
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 #reception .tab {
@@ -1970,13 +1993,13 @@ a:hover {
     color: var(--co1);
     padding: var(--2xsmall) var(--large);
     font-family: var(--serif);
-    border-radius: var(--2xsmall);
+    border-radius: var(--2xsmall)
 }
 
 #reception .tab.active {
     flex: 1.5;
     background-color: var(--co1);
-    color: var(--light);
+    color: var(--light)
 }
 
 #reception.open .content-toggle {

@@ -15,11 +15,11 @@
     --5xlarge: 5rem;
     --6xlarge: 6rem;
 
-    --main: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-    --mono: "Inconsolata", ui-monospace, "SF Mono", Menlo, monospace;
+    --main: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: "Inconsolata", ui-monospace, monospace;
     --serif: "Editorial", Georgia, serif;
     --display: "Bebas", Impact, sans-serif;
-    --spe: "Acma", cursive;
+    --spe: "Valmist", serif;
     --cursive: "Cedarville Cursive", cursive;
 
     --icons-thin: "uicons-thin-straight";

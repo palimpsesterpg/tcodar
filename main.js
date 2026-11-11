@@ -1172,6 +1172,20 @@ function initTitles() {
     qq('.fc-main-title-sub, .fc-second-title-sub').forEach(el => (el.textContent = SUB_TITLE));
 }
 
+function initCategoriesToggle() {
+  const categories = q('#categories');
+  if (!categories) return;
+
+  qq('[data-toggle-tabs]').forEach(btn => {
+    btn.setAttribute('aria-pressed', categories.classList.contains('tabsystem'));
+
+    btn.addEventListener('click', () => {
+      const active = categories.classList.toggle('tabsystem');
+      btn.setAttribute('aria-pressed', active);
+    });
+  });
+}
+
 function initForumList() {
     qq('.forum-links:empty').forEach(el => el.remove());
 
@@ -1282,6 +1296,7 @@ onReady(() => {
     initClockWall();
     initBlockToggles();
     initAdminPanels();
+    initCategoriesToggle();
     addUsernameToNotiffiButton();
 });
 

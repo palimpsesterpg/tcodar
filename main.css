@@ -737,7 +737,7 @@ a:hover {
 #page-footer>div:first-of-type {
     text-align: center;
     padding: var(--large);
-    background: var(--light);
+    background-color: var(--light);
     font-size: var(--xsmall);
     border: 0.5px solid var(--lighter-neutral)
 }
@@ -2611,7 +2611,7 @@ season {
     flex-direction: column;
     gap: var(--large);
     align-items: flex-start;
-    background: var(--light);
+    background-color: var(--light);
     padding: var(--large);
     opacity: 0;
     visibility: hidden;
@@ -2664,7 +2664,7 @@ season {
     flex-direction: column;
     gap: var(--large);
     align-items: flex-start;
-    background: var(--light);
+    background-color: var(--light);
     padding: var(--large);
     opacity: 0;
     visibility: hidden;

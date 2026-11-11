@@ -1832,6 +1832,7 @@ a:hover {
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
+    transition-duration: 1s;
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
@@ -1869,7 +1870,8 @@ a:hover {
 }
 
 .member:hover .member-avatar {
-    width: 30%
+    width: 30%;
+    transition-duration: 1s
 }
 
 .member-infos {
@@ -1879,11 +1881,12 @@ a:hover {
     padding: var(--large);
     flex-direction: column;
     display: none;
-    background: var(--group-color, var(--light))
+    background: var(--group-color-100, var(--light))
 }
 
 .member:hover .member-infos {
-    display: flex
+    display: flex;
+    transition-duration: 1s
 }
 
 .member-infos>div {

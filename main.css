@@ -774,7 +774,7 @@ a:hover {
     outline: 0.5px solid var(--lighter-neutral)
 }
 
-#categories {
+#categories.tabsystem {
     display: grid;
     grid-template-columns: var(--2xlarge) auto var(--2xlarge);
     gap: var(--2xlarge);
@@ -783,7 +783,21 @@ a:hover {
     align-items: center
 }
 
-#categories .tabsystem-tabs {
+#categories.notabs {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+}
+
+#categories.notabs .category-title:not(:first-of-type) {
+    margin: var(--large) 0
+}
+
+#categories.notabs .tabsystem-tabs {
+    display: none
+}
+
+#categories.tabsystem .tabsystem-tabs {
     display: flex;
     border-radius: var(--2xlarge);
     align-items: center;
@@ -795,36 +809,36 @@ a:hover {
     padding: var(--large)
 }
 
-#categories .tabsystem-tabs.off {
+#categories.tabsystem .tabsystem-tabs.off {
     outline: 0.5px solid var(--co2-200);
     color: var(--co2)
 }
 
-#categories .tabsystem-tabs.off:has(.active) {
+#categories.tabsystem .tabsystem-tabs.off:has(.active) {
     outline: 0.5px solid var(--co2)
 }
 
-#categories .tabsystem-tabs.loc {
+#categories.tabsystem .tabsystem-tabs.loc {
     outline: 0.5px solid var(--co3-200);
     color: var(--co3)
 }
 
-#categories .tabsystem-tabs.loc:has(.active) {
+#categories.tabsystem .tabsystem-tabs.loc:has(.active) {
     outline: 0.5px solid var(--co3)
 }
 
-#categories .tabsystem-tabs i {
+#categories.tabsystem .tabsystem-tabs i {
     font-size: var(--large)
 }
 
-#categories .tab {
+#categories.tabsystem .tab {
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center
 }
 
-#categories .tab::before {
+#categories.tabsystem .tab::before {
     height: var(--2xsmall);
     width: var(--2xsmall);
     outline: 0.5px solid;
@@ -832,7 +846,7 @@ a:hover {
     content: ""
 }
 
-#categories .tab span {
+#categories.tabsystem .tab span {
     display: none;
     position: absolute;
     padding: var(--small) var(--large);
@@ -844,25 +858,25 @@ a:hover {
     font-size: var(--large)
 }
 
-#categories .tab:hover span {
+#categories.tabsystem .tab:hover span {
     display: flex !important
 }
 
-#categories .tabsystem-tabs.off .tab span {
+#categories.tabsystem .tabsystem-tabs.off .tab span {
     right: 2.5rem
 }
 
-#categories .tabsystem-tabs.loc .tab span {
+#categories.tabsystem .tabsystem-tabs.loc .tab span {
     left: 2.5rem
 }
 
-#categories .tabsystem-tabs.off .tab.active::before,
-#categories .tabsystem-tabs.off .tab:hover::before {
+#categories.tabsystem .tabsystem-tabs.off .tab.active::before,
+#categories.tabsystem .tabsystem-tabs.off .tab:hover::before {
     background-color: var(--co2)
 }
 
-#categories .tabsystem-tabs.loc .tab.active::before,
-#categories .tabsystem-tabs.loc .tab:hover::before {
+#categories.tabsystem .tabsystem-tabs.loc .tab.active::before,
+#categories.tabsystem .tabsystem-tabs.loc .tab:hover::before {
     background-color: var(--co3)
 }
 

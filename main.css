@@ -635,7 +635,7 @@ a:hover {
 }
 
 #page-header {
-    background-image: url(Images/tcodar-header-light.png);
+    background-image: url(Images/tcodar-header.png);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -662,6 +662,8 @@ a:hover {
     text-shadow: 0 0 5px var(--white-op50);
     flex-direction: column
 }
+
+[data-color-scheme="dark"] #page-header {backdrop-filter: brightness(0.35)}
 
 [data-color-scheme="dark"] #page-header a {
     -webkit-text-stroke: 0.5px var(--black-op90);
@@ -937,75 +939,10 @@ a:hover {
     gap: 0
 }
 
-.forumlist:before {
-    content: "";
-    background-position: center center;
-    top: 0;
-    margin: var(--large);
-    left: 0;
-    width: calc(100% - var(--2xlarge));
-    height: calc(100% - var(--2xlarge));
-    position: absolute;
-    background-size: cover;
-    filter: grayscale(1);
-    opacity: 0.75
-}
-
-[data-color-scheme="dark"] .forumlist:before {
-    filter: grayscale(1) brightness(0.35)
-}
-
-[data-tab="c1"] .forumlist:before,
-[data-tab="c11"] .forumlist:before {
-    background-image: url("Images/tcodar-admin.jpg")
-}
-
-[data-tab="c2"] .forumlist:before,
-[data-tab="c9"] .forumlist:before {
-    background-image: url("Images/tcodar-off.jpg")
-}
-
-[data-tab="c3"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-london.jpg"))
-}
-
-[data-tab="c4"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-marrakech.jpg"))
-}
-
-[data-tab="c5"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-new-york.jpg"))
-}
-
-[data-tab="c6"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-rio.jpg"))
-}
-
-[data-tab="c7"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-singapore.jpg"))
-}
-
-[data-tab="c8"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-media.jpg"))
-}
-
-[data-tab="c10"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-world.jpg"))
-}
-
-[data-tab="c12"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-archives.jpg"))
-}
-
-[data-tab="c13"] .forumlist:before {
-    background-image: var(--forum-bg, url("Images/tcodar-sydney.jpg"))
-}
-
 .forum {
     position: relative;
     display: flex;
     flex-direction: column;
-
     justify-content: center
 }
 

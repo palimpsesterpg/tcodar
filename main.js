@@ -435,7 +435,7 @@ function formatFieldLabels() {
 
 function initColorScheme() {
     const html = document.documentElement;
-    const toggle = q('[data-theme-controls] .color-scheme-toggle');
+    const toggle = q('.color-scheme-toggle');
     if (!toggle) return;
 
     const updateLabel = () => {
@@ -1187,10 +1187,12 @@ function initCategoriesToggle() {
 }
 
 function moveAdminLinks() {
-  const target = q('#page-navbar div:nth-of-type(2)');
-  if (!target) return;
+    const target = q('#page-navbar .random-navbar > a[href="#bottom"]');
+    if (!target) return;
 
-  target.append(...qq('a[href^="/admin/?part=admin"]'));
+    qq('a[href^="/admin/?part=admin"]').forEach(link => {
+        target.before(link);
+    });
 }
 
 function initForumList() {

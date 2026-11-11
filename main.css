@@ -936,11 +936,6 @@ a:hover {
     width: -webkit-fill-available
 }
 
-[data-tab="c1"] .forumlist,
-[data-tab="c11"] .forumlist {
-    gap: 0
-}
-
 .forum {
     position: relative;
     display: flex;
@@ -1016,8 +1011,8 @@ a:hover {
     color: var(--co3);
     align-items: center;
     justify-content: center;
-    top: var(--large);
-    right: var(--large)
+    top: 0;
+    right: 0
 }
 
 .forum-icon:before {
@@ -1252,8 +1247,8 @@ a:hover {
 
 .forum-admin {
     justify-content: space-between;
-    gap: var(--2xlarge);
-    flex: 1 1 calc(100% / 2)
+    gap: var(--large);
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-admin:nth-of-type(even) .forum-icon,
@@ -1411,6 +1406,7 @@ a:hover {
     display: none
 }
 
+.forum-admin,
 .forum-off,
 .forum-archives {
     flex: 1 1 calc(100% / 2.1)
@@ -1422,7 +1418,7 @@ a:hover {
 
 .forum-off:nth-of-type(even) .forum-icon {
     right: auto;
-    left: var(--large)
+    left: 0
 }
 
 .forum-off:nth-of-type(odd) {
@@ -1431,7 +1427,7 @@ a:hover {
 }
 
 .forum-off .forum-content {
-    width: calc(100% - 75px);
+    width: calc(100% - 75px - var(--large));
     grid-template-columns: auto 75px;
     row-gap: var(--large);
     display: grid;
@@ -1456,7 +1452,7 @@ a:hover {
 }
 
 .forum-off .forum-links {
-    grid-area: 2 / 1 / 3 / 3;
+    grid-area: 3 / 1 / 4 / 4;
     text-align: right
 }
 
@@ -1471,11 +1467,11 @@ a:hover {
 }
 
 .forum-off .forum-lastpost {
-    grid-area: 3 / 1 / 4 / 2
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .forum-off .forum-statistics {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 2 / 2 / 3 / 3;
     display: flex;
     gap: var(--3xsmall);
     flex-direction: column;
@@ -1538,7 +1534,7 @@ a:hover {
 
 .forum-media:nth-of-type(even) .forum-icon,
 .forum-media:nth-of-type(even) .forum-links a {
-    color: var(--co2)
+    color: var(--co1)
 }
 
 .forum-media .forum-links {
@@ -1603,7 +1599,7 @@ a:hover {
 }
 
 .forum-archives .forum-links a {
-    color: var(--dark-neutral);
+    color: var(--darker-neutral);
     font-size: var(--medium);
     font-weight: 300;
     text-transform: uppercase
@@ -2373,8 +2369,20 @@ a:hover {
     text-transform: uppercase
 }
 
+.phseven-city .city,
+.phseven-city .meteo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large)
+}
+
+.phseven-city .city {
+    font-size: var(--xlarge)
+}
+
 .phseven-city .city img {
-    height: var(--2xlarge)
+    height: var(--xlarge)
 }
 
 .phseven-city .time>* {

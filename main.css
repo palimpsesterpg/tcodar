@@ -1452,7 +1452,7 @@ a:hover {
 }
 
 .forum-off .forum-links {
-    grid-area: 3 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 3;
     text-align: right
 }
 

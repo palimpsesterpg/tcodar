@@ -289,8 +289,12 @@ const SEASON_LABELS = {
 };
 
 const CLIMATES = {
-  paris: { winter: [1, 7], spring: [6, 16], summer: [14, 25], autumn: [8, 16] },
+  london: { winter: [5, 12], spring: [7, 21], summer: [15, 20], autumn: [5, 16] },
   sydney: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+  rio: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+  singapore: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+  marrakech: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+  newyork: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
 };
 
 const FORUM_TAB_CLASSES = {

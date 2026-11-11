@@ -949,7 +949,7 @@ a:hover {
 
 .forum-img {
     height: 55px;
-    width: fit-content;
+    width: auto;
     filter: grayscale(1);
     margin: 0 auto
 }

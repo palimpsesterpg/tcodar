@@ -789,8 +789,8 @@ a:hover {
     margin-left: 0;
 }
 
-#categories.notabs .category-title:not(:first-of-type) {
-    margin: var(--large) 0
+#categories.notabs .category:not(:first-of-type) .category-title {
+    margin-top: var(--large)
 }
 
 #categories.notabs .tabsystem-tabs {
@@ -886,7 +886,7 @@ a:hover {
     width: 100%
 }
 
-.category.active {
+.category.active, .notabs .category {
     display: flex !important
 }
 

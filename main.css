@@ -1866,12 +1866,11 @@ a:hover {
 .member-bloc {
     height: 250px;
     width: 100%;
-    display: flex;
-    gap: var(--large)
+    display: flex
 }
 
 .member:hover .member-avatar {
-    width: 30%;
+    width: 25%;
     transition-duration: 1s
 }
 

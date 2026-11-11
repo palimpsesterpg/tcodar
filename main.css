@@ -1919,7 +1919,7 @@ a:hover {
 
 .member-pseudo .nom {
     text-transform: uppercase;
-    font-size: var(--large)
+    font-size: var(--xlarge)
 }
 
 #hub a.lea strong::before,
@@ -1961,14 +1961,9 @@ a:hover {
 .profile-pseudo {
     grid-area: 1 / 2 / 2 / 3;
     font-family: var(--spe);
-    text-align: center;
     font-size: var(--5xlarge);
     color: var(--group-color, var(--co1));
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
-}
-
-.profile-pseudo .prenom {
-    font-style: italic
 }
 
 .profile-pseudo .nom {
@@ -2005,6 +2000,7 @@ a:hover {
     grid-template-rows: auto auto auto;
     grid-template-columns: 200px 1fr 50px;
     align-items: center;
+    width: 100%;
     justify-items: center
 }
 
@@ -2606,8 +2602,10 @@ season {
 }
 
 #notiffi_panel {
-    width: calc(100% - 3rem);
+    width: calc(100% - 2rem);
+    height: calc(100vh - 2rem);
     border-left: 0.5px solid var(--group-color, var(--co1));
+    outline: var(--large) solid var(--white-op75);
     position: fixed;
     z-index: 999;
     top: 0;

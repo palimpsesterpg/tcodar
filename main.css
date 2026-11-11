@@ -663,7 +663,9 @@ a:hover {
     flex-direction: column
 }
 
-[data-color-scheme="dark"] #page-header {backdrop-filter: brightness(0.35)}
+[data-color-scheme="dark"] #page-header {
+    backdrop-filter: brightness(0.35)
+}
 
 [data-color-scheme="dark"] #page-header a {
     -webkit-text-stroke: 0.5px var(--black-op90);
@@ -2368,21 +2370,11 @@ a:hover {
     font-size: var(--large);
     flex-direction: column;
     padding: var(--2xsmall);
-    filter: grayscale(0.75);
-
     text-transform: uppercase
 }
 
-.phseven-city div {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: var(--white-op75);
-    text-align: center;
-    backdrop-filter: blur(2px);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
+.phseven-city .city img {
+    height: var(--2xlarge)
 }
 
 .phseven-city .time>* {

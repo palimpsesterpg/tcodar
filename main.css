@@ -475,8 +475,8 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: var(--3xsmall);
+    height: var(--3xsmall);
 }
 
 *::-webkit-scrollbar-track {
@@ -485,11 +485,7 @@ body {
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--white-op50);
-    border-radius: 3px;
-}
-
-*:empty {
-    display: none;
+    border-radius: 0 !important;
 }
 
 img {

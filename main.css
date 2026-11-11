@@ -1922,9 +1922,7 @@ a:hover {
 }
 
 #hub a.lea strong::before,
-.member a.lea span::before,
-#hub a.cam strong::before,
-.member a.cam span::before {
+#hub a.cam strong::before {
     padding-right: var(--2xsmall)
 }
 
@@ -1936,13 +1934,13 @@ a:hover {
 }
 
 #hub a.lea strong::before,
-.member a.lea strong::before,
+.member a.lea span::before,
 .lea.profile.en.ligne .profile-pseudo::before {
     content: "⭒"
 }
 
 #hub a.cam strong::before,
-.member a.cam strong::before,
+.member a.cam span::before,
 .cam.profile.en.ligne .profile-pseudo::before {
     content: "✻"
 }

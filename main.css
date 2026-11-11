@@ -763,7 +763,7 @@ a:hover {
 .registration {
     padding: var(--large);
     background-color: var(--light);
-    border: var(--2xsmall) solid var(--dark-light);
+    border: var(--2xsmall) solid var(--lighter-neutral);
     outline: 0.5px solid var(--lighter-neutral)
 }
 
@@ -1262,6 +1262,8 @@ a:hover {
 
 .forum-admin .forum-links {
     grid-area: 2 / 1 / 3 / 3;
+    padding-bottom: var(--large);
+    border-bottom: 0.5px solid var(--lighter-neutral);
     font-size: 0
 }
 
@@ -1276,9 +1278,7 @@ a:hover {
     color: var(--light);
     font-size: var(--small);
     font-weight: 700;
-    text-transform: lowercase;
-    padding-bottom: var(--large);
-    border-bottom: 0.5px solid var(--dark-light)
+    text-transform: lowercase
 }
 
 .forum-admin .forum-links a+a {
@@ -1300,15 +1300,15 @@ a:hover {
     grid-area: 2 / 2 / 3 / 3
 }
 
-.forum-admin:nth-of-type(odd) .forum-lastpost {
+.forum-admin:nth-of-type(even) .forum-lastpost {
     padding-right: var(--large);
-    border-right: 0.5px solid var(--dark-light)
+    border-right: 0.5px solid var(--lighter-neutral)
 }
 
-.forum-admin:nth-of-type(even) .forum-lastpost {
+.forum-admin:nth-of-type(odd) .forum-lastpost {
     grid-area: 2 / 1 / 3 / 2;
     padding-left: var(--large);
-    border-left: 0.5px solid var(--dark-light)
+    border-left: 0.5px solid var(--lighter-neutral)
 }
 
 .forum-admin:has(.forum-links a) .forum-lastpost,
@@ -3209,7 +3209,7 @@ input,
 select,
 textarea {
     background-color: var(--light);
-    border: 0.5px solid var(--darker-light);
+    border: 0.5px solid var(--lighter-neutral);
     border-radius: 0;
     font-family: var(--mono);
     font-weight: 300;
@@ -3445,8 +3445,12 @@ h2+.panel {
 }
 
 .fam-row {
-    --border-row: var(--neutral);
+    --border-row: var(--lighter-neutral);
     color: var(--fam-color)
+}
+
+.fam-row:not(:last-of-type) {
+    border-bottom: 0.5px solid var(--border-row)
 }
 
 .fam-row .title-toggle {
@@ -3459,6 +3463,10 @@ h2+.panel {
     font-family: var(--display);
     font-size: var(--large);
     font-weight: 700
+}
+
+.fam-row span:not(:last-of-type) {
+    border-right: 0.5px solid var(--border-row)
 }
 
 .fam-row span,
@@ -3502,6 +3510,9 @@ span[data-field="face"] {
 
 .fam-row.open {
     background-color: var(--fam-color-100);
+    border-left: 0.5px solid var(--border-row);
+    border-right: 0.5px solid var(--border-row);
+    border-top: 0.5px solid var(--border-row);
     --border-row: var(--fam-color) !important
 }
 
@@ -3649,7 +3660,7 @@ a.nav {
 .sceditor-container {
     background: var(--light) !important;
     background-clip: padding-box !important;
-    border: var(--2xsmall) solid var(--dark-light) !important;
+    border: var(--2xsmall) solid var(--lighter-neutral) !important;
     border-radius: 0 !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
@@ -3715,7 +3726,7 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    border-top: var(--2xsmall) solid var(--dark-light) !important;
+    border-top: var(--2xsmall) solid var(--lighter-neutral) !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;

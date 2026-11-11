@@ -18,8 +18,8 @@
     --main: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --mono: "Inconsolata", ui-monospace, monospace;
     --serif: "Bodoni Moda", Georgia, serif;
-    --display: "Switzer", Impact, sans-serif;
-    --spe: "Valmist", serif;
+    --display: "Bebas", Impact, sans-serif;
+    --spe: "Frista", serif;
     --cursive: "Cedarville Cursive", cursive;
 
     --icons-thin: "uicons-thin-straight";
@@ -1954,10 +1954,36 @@ a:hover {
     width: 100%
 }
 
+#reception sep {
+    height: 0.5px;
+    width: 100%;
+    background: var(--gradientNeutralHorizontal);
+}
+
+#reception .tabsystem-tabs {
+    gap: var(--large);
+    display: flex;
+    align-items: center;
+}
+
+#reception .tab {
+    cursor: pointer;
+    flex: 1;
+    background-color: var(--co1-100);
+    color: var(--co1);
+    padding: var(--2xsmall) var(--large);
+    font-family: var(--serif);
+    border-radius: var(--2xsmall);
+}
+
+#reception .tab.active {
+    flex: 1.5;
+    background-color: var(--co1);
+    color: var(--light);
+}
+
 #reception.open .content-toggle {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 150px 100px 150px 100px 150px;
+    display: flex;
     gap: var(--large);
     width: 100%
 }
@@ -1966,8 +1992,7 @@ a:hover {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    gap: var(--large);
-    grid-area: 4 / 1 / 5 / 6
+    gap: var(--large)
 }
 
 #reception .five,
@@ -1980,8 +2005,7 @@ a:hover {
 #reception .one {
     background: var(--gradient23-100);
     background-size: cover;
-    background-position: center center;
-    grid-area: 1 / 1 / 2 / 4
+    background-position: center center
 }
 
 #reception .one div {
@@ -1998,7 +2022,6 @@ a:hover {
 }
 
 #reception .two {
-    grid-area: 3 / 1 / 4 / 3;
     height: 100%;
     padding: var(--large);
     background-color: var(--co1);
@@ -2021,8 +2044,7 @@ a:hover {
 
 #reception .three {
     padding: var(--large);
-    grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--white-op90)
+    border: 0.5px solid var(--dark-light)
 }
 
 #reception .three strong,
@@ -2053,7 +2075,6 @@ a:hover {
 }
 
 #reception .four {
-    grid-area: 2 / 1 / 3 / 3;
     height: 100%;
     width: 100%;
     display: flex;
@@ -2063,10 +2084,6 @@ a:hover {
     margin: 0 auto;
     padding: var(--large);
     background-color: var(--white-op90)
-}
-
-#reception .five {
-    grid-area: 1 / 4 / 2 / 6
 }
 
 #reception .five div {
@@ -2087,14 +2104,6 @@ a:hover {
 #reception .one span,
 #reception .two div {
     display: block
-}
-
-#reception .six {
-    grid-area: 5 / 1 / 6 / 4
-}
-
-#reception .eight {
-    grid-area: 5 / 4 / 6 / 6
 }
 
 #reception .five span {

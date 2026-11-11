@@ -1987,6 +1987,12 @@ a:hover {
     width: 100%
 }
 
+#reception .tab-content.active {
+    display: flex;
+    align-items: center;
+    gap: var(--large)
+}
+
 #reception .seven {
     display: flex;
     width: 100%;
@@ -2039,11 +2045,6 @@ a:hover {
     text-align: justify;
     line-height: 1.45;
     font-weight: 300
-}
-
-#reception .three {
-    padding: var(--large);
-    border: 0.5px solid var(--dark-light)
 }
 
 #reception .three strong,

@@ -1974,14 +1974,14 @@ a:hover {
     width: 200px
 }
 
-.profile.en.ligne .profile-pseudo::before {
+.profile.en.ligne::before {
     content: "\e974";
     font-family: var(--icons-thin);
     font-size: var(--large);
-    text-shadow: 0 0;
     border-radius: 100%;
     position: absolute;
-    left: 0;
+    left: var(--large);
+    top: var(--large);
     color: var(--light);
     background-color: var(--group-color, var(--co1));
     height: var(--2xlarge);

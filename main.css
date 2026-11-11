@@ -1962,13 +1962,19 @@ a:hover {
     grid-area: 1 / 2 / 2 / 3;
     font-family: var(--spe);
     text-align: center;
-    font-size: var(--3xlarge);
+    font-size: var(--5xlarge);
     color: var(--group-color, var(--co1));
-    position: relative;
-    text-shadow: 1px 1px var(--light);
-    display: flex;
-    align-items: center;
-    justify-content: center
+    text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
+}
+
+.profile-pseudo .prenom {
+    font-style: italic
+}
+
+.profile-pseudo .nom {
+    margin-left: var(--2xlarge);
+    font-size: var(--5xlarge);
+    text-transform: uppercase
 }
 
 .profile-avatar img,
@@ -2011,7 +2017,13 @@ a:hover {
 }
 
 .profile-presence {
-    grid-area: 2 / 2 / 3 / 3
+    grid-area: 2 / 2 / 3 / 3;
+    color: var(--light);
+    background-color: var(--group-color);
+    border-radius: var(--2xsmall);
+    padding: var(--large);
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .profile-stats {

@@ -678,21 +678,33 @@ a:hover {
 .mainmenu span {
     position: absolute;
     align-items: center;
-    left: calc(2rem + 0.5px);
+    left: var(--3xlarge);
     padding: var(--large);
     padding-left: calc(var(--large) + 2.5px);
     letter-spacing: 2.5px;
-    text-transform: uppercase;
-    background-color: var(--light);
+    text-transform: capitalize;
+    background-color: var(--dark-light);
     top: 50%;
     border-left: 0.5px solid;
-    transform: translate(-0.5px, -50%);
-    font-weight: 700;
-    font-family: var(--display);
+    transform: translateY(-50%);
+    font-family: var(--serif);
+    font-style: italic;
     width: max-content;
     display: none;
     z-index: 999;
-    color: var(--black-op90)
+    color: var(--dark)
+}
+
+.mainmenu span:before {
+    content: '';
+    height: var(--2xsmall);
+    width: var(--2xsmall);
+    background-color: var(--dark-light);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.125rem
 }
 
 .mainmenu:hover span {

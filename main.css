@@ -1970,6 +1970,11 @@ a:hover {
     justify-content: center
 }
 
+.profile-avatar img,
+.profile-second-avatar img {
+    height: 200px
+}
+
 .profile.en.ligne .profile-pseudo::before {
     content: "\e974";
     font-family: var(--icons-thin);

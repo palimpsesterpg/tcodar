@@ -357,7 +357,7 @@
         align-self: start !important;
     }
 
-    #categories .tabsystem-tabs.loc > i {
+    #categories .tabsystem-tabs.loc>i {
         order: 3 !important;
     }
 
@@ -391,7 +391,7 @@
         flex-direction: row !important;
     }
 
-    #page-navbar > div {
+    #page-navbar>div {
         flex-direction: row !important;
     }
 
@@ -662,7 +662,7 @@ a:hover {
     flex-direction: column
 }
 
-#page-navbar > div {
+#page-navbar>div {
     display: flex;
     align-items: center;
     gap: var(--large);
@@ -734,7 +734,7 @@ a:hover {
     padding-top: 0
 }
 
-#page-footer > div:first-of-type {
+#page-footer>div:first-of-type {
     text-align: center;
     padding: var(--large);
     background: var(--light);
@@ -742,7 +742,7 @@ a:hover {
     border: 0.5px solid var(--lighter-neutral)
 }
 
-#page-footer > div:first-of-type a {
+#page-footer>div:first-of-type a {
     font-size: var(--xsmall);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1282,10 +1282,12 @@ a:hover {
     color: var(--light);
     font-size: var(--small);
     font-weight: 700;
-    text-transform: lowercase
+    text-transform: lowercase;
+    padding-bottom: var(--large);
+    border-bottom: 0.5px solid var(--dark-light)
 }
 
-.forum-admin .forum-links a + a {
+.forum-admin .forum-links a+a {
     margin-left: var(--large)
 }
 
@@ -1304,8 +1306,15 @@ a:hover {
     grid-area: 2 / 2 / 3 / 3
 }
 
+.forum-admin:nth-of-type(odd) .forum-lastpost {
+    padding-right: var(--large);
+    border-right: 0.5px solid var(--dark-light)
+}
+
 .forum-admin:nth-of-type(even) .forum-lastpost {
-    grid-area: 2 / 1 / 3 / 2
+    grid-area: 2 / 1 / 3 / 2;
+    padding-left: var(--large);
+    border-left: 0.5px solid var(--dark-light)
 }
 
 .forum-admin:has(.forum-links a) .forum-lastpost,
@@ -1505,7 +1514,7 @@ a:hover {
     color: var(--co3)
 }
 
-.forum-media .forum-links a + a {
+.forum-media .forum-links a+a {
     margin-left: var(--medium)
 }
 
@@ -1564,7 +1573,7 @@ a:hover {
     text-transform: uppercase
 }
 
-.forum-archives .forum-links a + a {
+.forum-archives .forum-links a+a {
     margin-left: var(--large)
 }
 
@@ -1573,7 +1582,7 @@ a:hover {
     gap: var(--large)
 }
 
-.post + .post {
+.post+.post {
     margin-top: var(--large)
 }
 
@@ -1600,8 +1609,8 @@ a:hover {
     border-bottom: 0.5px solid var(--lighter-neutral)
 }
 
-.posticons a > span,
-.posticons div > span {
+.posticons a>span,
+.posticons div>span {
     display: none;
     position: absolute;
     left: calc(100% + var(--large));
@@ -1637,17 +1646,17 @@ a:hover {
     border-bottom: 0
 }
 
-.mini .posticons a > span,
-.compact .posticons a > span,
-.sms .posticons a > span,
-.mini .posticons div > span,
-.compact .posticons div > span,
-.sms .posticons div > span {
+.mini .posticons a>span,
+.compact .posticons a>span,
+.sms .posticons a>span,
+.mini .posticons div>span,
+.compact .posticons div>span,
+.sms .posticons div>span {
     position: absolute;
     left: auto
 }
 
-.fa_like_div > span {
+.fa_like_div>span {
     left: 50% !important;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
@@ -1763,12 +1772,12 @@ a:hover {
     display: none
 }
 
-.post > sep {
+.post>sep {
     width: 0.5px;
     background: var(--gradientNeutralVertical)
 }
 
-.mini > sep {
+.mini>sep {
     width: 100%;
     height: 0.5px;
     margin: 0 auto;
@@ -1794,7 +1803,7 @@ a:hover {
     justify-content: space-between
 }
 
-.memberpanel > div {
+.memberpanel>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1855,7 +1864,7 @@ a:hover {
     display: flex
 }
 
-.member-infos > div {
+.member-infos>div {
     padding: var(--4xsmall);
     gap: var(--2xsmall);
     font-size: var(--small);
@@ -2161,7 +2170,7 @@ a:hover {
     filter: grayscale(0.5)
 }
 
-.admin-modal > .modal-content {
+.admin-modal>.modal-content {
     display: none;
     position: relative;
     flex-direction: column;
@@ -2173,7 +2182,7 @@ a:hover {
     overflow: visible
 }
 
-.admin-modal.open > .modal-content {
+.admin-modal.open>.modal-content {
     display: flex;
     position: fixed;
     top: 50%;
@@ -2188,13 +2197,13 @@ a:hover {
     background: var(--light)
 }
 
-.admin-modal.open > .modal-content > div {
+.admin-modal.open>.modal-content>div {
     display: flex;
     flex-direction: column;
     gap: var(--large)
 }
 
-.admin-modal.open > .modal-content h1 {
+.admin-modal.open>.modal-content h1 {
     height: var(--3xlarge) !important;
     line-height: 1
 }
@@ -2275,7 +2284,7 @@ a:hover {
     flex-wrap: wrap
 }
 
-.details-modal > * {
+.details-modal>* {
     width: 30%;
     text-align: center;
     flex: 1 1 calc(100% / 3 - var(--small))
@@ -2343,7 +2352,7 @@ a:hover {
     height: var(--xlarge)
 }
 
-.phseven-city .time > * {
+.phseven-city .time>* {
     background-color: var(--dark);
     color: var(--light);
     padding: 0 var(--4xsmall);
@@ -3300,7 +3309,7 @@ dl {
     gap: var(--large)
 }
 
-dl + dl {
+dl+dl {
     margin-top: var(--2xsmall)
 }
 
@@ -3345,7 +3354,7 @@ dt required {
     gap: var(--large)
 }
 
-h2 + .panel {
+h2+.panel {
     padding: var(--large)
 }
 
@@ -3375,7 +3384,7 @@ h2 + .panel {
     flex: 1
 }
 
-.listings .post > sep {
+.listings .post>sep {
     display: none
 }
 
@@ -3572,7 +3581,7 @@ a.nav {
     display: none
 }
 
-.quickreply form > div:nth-of-type(2) {
+.quickreply form>div:nth-of-type(2) {
     text-align: center;
     margin-top: var(--large);
     display: flex;
@@ -3729,7 +3738,7 @@ div.sceditor-group {
 }
 
 .has-credit:hover::after {
-    content: "crédit: " attr(data-credit);
+    content: "crédit: "attr(data-credit);
     position: absolute;
     background: var(--light-dark);
     color: var(--light);

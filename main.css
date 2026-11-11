@@ -121,7 +121,7 @@
     --gradient23-100: linear-gradient(to right, var(--co2-100), var(--co3-100));
     --gradientAll-100: linear-gradient(to right, var(--co1-100), var(--co2-100), var(--co3-100));
 
-    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50));
+    --gradient23-op50: linear-gradient(to right, var(--co2-op50), var(--co3-op50))
 }
 
 [data-color-scheme="dark"] {
@@ -196,45 +196,45 @@
 
     --lighter-dark: color-mix(in srgb, black 45%, white);
     --light-dark: color-mix(in srgb, black 40%, white);
-    --dark: color-mix(in srgb, black 35%, white);
+    --dark: color-mix(in srgb, black 35%, white)
 }
 
 .group-test {
-    --group-base: var(--test);
+    --group-base: var(--test)
 }
 
 .group-2 {
-    --group-base: var(--admin);
+    --group-base: var(--admin)
 }
 
 .group-3,
 .carmine {
-    --group-base: var(--carmine);
+    --group-base: var(--carmine)
 }
 
 .group-4,
 .bronze {
-    --group-base: var(--bronze);
+    --group-base: var(--bronze)
 }
 
 .group-5,
 .saffron {
-    --group-base: var(--saffron);
+    --group-base: var(--saffron)
 }
 
 .group-6,
 .emerald {
-    --group-base: var(--emerald);
+    --group-base: var(--emerald)
 }
 
 .group-7,
 .majorelle {
-    --group-base: var(--majorelle);
+    --group-base: var(--majorelle)
 }
 
 .group-8,
 .heliotrope {
-    --group-base: var(--heliotrope);
+    --group-base: var(--heliotrope)
 }
 
 [class^="group-"],
@@ -265,7 +265,7 @@
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
 
-    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light));
+    --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
 }
 
 .family,
@@ -283,7 +283,7 @@
     --fam-color-op25: color-mix(in srgb, var(--fam-color) 25%, transparent);
     --fam-color-op50: color-mix(in srgb, var(--fam-color) 50%, transparent);
     --fam-color-op75: color-mix(in srgb, var(--fam-color) 75%, transparent);
-    --fam-color-op90: color-mix(in srgb, var(--fam-color) 90%, transparent);
+    --fam-color-op90: color-mix(in srgb, var(--fam-color) 90%, transparent)
 }
 
 [data-color-scheme="dark"] :is([class^="group-"], [class*=" group-"], .carmine, .bronze, .saffron, .emerald, .majorelle, .heliotrope) {
@@ -300,7 +300,7 @@
 
     --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
     --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
-    --group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent);
+    --group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent)
 }
 
 [data-color-scheme="dark"] :is(.family, .corporation, .fam-row) {
@@ -315,7 +315,7 @@
 
     --fam-color-op25: color-mix(in srgb, var(--fam-color) 75%, transparent);
     --fam-color-op75: color-mix(in srgb, var(--fam-color) 25%, transparent);
-    --fam-color-op90: color-mix(in srgb, var(--fam-color) 10%, transparent);
+    --fam-color-op90: color-mix(in srgb, var(--fam-color) 10%, transparent)
 }
 
 @media (max-width: 800px) {
@@ -441,7 +441,7 @@
 
 html {
     -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+    text-size-adjust: 100%
 }
 
 body {
@@ -457,7 +457,7 @@ body {
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -471,71 +471,71 @@ body {
 *::after {
     box-sizing: border-box !important;
     scrollbar-width: thin;
-    scrollbar-color: var(--white-op50) transparent;
+    scrollbar-color: var(--white-op50) transparent
 }
 
 *::-webkit-scrollbar {
     width: var(--3xsmall);
-    height: var(--3xsmall);
+    height: var(--3xsmall)
 }
 
 *::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--white-op50);
-    border-radius: 0 !important;
+    border-radius: 0 !important
 }
 
 img {
     max-height: 600px;
     max-width: 600px;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .corners-top,
 .corners-bottom {
-    display: none;
+    display: none
 }
 
 .invisible {
     display: none;
-    visibility: hidden;
+    visibility: hidden
 }
 
 .visible {
     display: block;
-    visibility: visible;
+    visibility: visible
 }
 
 .panel {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 p {
     line-height: inherit;
-    margin: 0;
+    margin: 0
 }
 
 a,
 a:visited,
 a:hover {
-    text-decoration: none !important;
+    text-decoration: none !important
 }
 
 a,
 a:visited {
-    color: var(--light-dark);
+    color: var(--light-dark)
 }
 
 a:hover {
-    color: var(--dark-neutral);
+    color: var(--dark-neutral)
 }
 
 .usr_grp_clr {
-    color: var(--group-color) !important;
+    color: var(--group-color) !important
 }
 
 [class^="fi-ts-"]::before,
@@ -545,27 +545,27 @@ a:hover {
     font-weight: normal !important;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;
+    line-height: 1
 }
 
 .tabsystem .tab-content,
 .tabinline .tab-content {
-    display: none;
+    display: none
 }
 
 .tabsystem .tab-content.active,
 .tabinline .tab-content.active {
-    display: block;
+    display: block
 }
 
 .tabsystem .tab,
 .tabinline .tab {
-    cursor: pointer;
+    cursor: pointer
 }
 
 [data-color-scheme="dark"] .color-scheme-toggle .dark,
 [data-color-scheme="light"] .color-scheme-toggle .light {
-    display: none;
+    display: none
 }
 
 .pages-navbar {
@@ -576,7 +576,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 .pages-navbar i::before {
@@ -588,22 +588,22 @@ a:hover {
     background-color: var(--co1-100);
     border-radius: 100%;
     line-height: 1;
-    color: var(--co1);
+    color: var(--co1)
 }
 
 #fa_toolbar {
-    display: none;
+    display: none
 }
 
 .copyright {
     position: fixed;
     bottom: var(--large);
     left: var(--large);
-    z-index: 999;
+    z-index: 999
 }
 
 .copyright br {
-    display: none;
+    display: none
 }
 
 #page-header {
@@ -620,7 +620,7 @@ a:hover {
     flex-wrap: wrap;
     align-content: center;
     gap: var(--large);
-    padding: var(--large);
+    padding: var(--large)
 }
 
 #page-header a {
@@ -634,21 +634,21 @@ a:hover {
     color: transparent;
     display: flex;
     text-shadow: 0 0 5px var(--white-op50);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-header a span {
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 [data-color-scheme="dark"] #page-header {
     -webkit-backdrop-filter: brightness(0.35);
-    backdrop-filter: brightness(0.35);
+    backdrop-filter: brightness(0.35)
 }
 
 [data-color-scheme="dark"] #page-header a {
     -webkit-text-stroke: 0.5px var(--black-op90);
-    text-shadow: 0 0 5px var(--white-op50);
+    text-shadow: 0 0 5px var(--white-op50)
 }
 
 .header-tab {
@@ -660,7 +660,7 @@ a:hover {
     padding: var(--2xsmall) var(--large);
     font-weight: 900;
     font-family: var(--display);
-    background-color: var(--co1);
+    background-color: var(--co1)
 }
 
 #page-navbar {
@@ -674,30 +674,30 @@ a:hover {
     background-color: var(--dark-light);
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-navbar > div {
     display: flex;
     align-items: center;
     gap: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #page-navbar > div:first-of-type {
-    padding-top: var(--large);
+    padding-top: var(--large)
 }
 
 #page-navbar > div + div {
     border-top: 2.5px solid var(--lighter-neutral);
     margin-top: var(--2xlarge);
     border-radius: 1.25px;
-    padding-top: var(--2xlarge);
+    padding-top: var(--2xlarge)
 }
 
 .mainmenu {
     position: relative;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .mainmenu span {
@@ -717,11 +717,11 @@ a:hover {
     width: max-content;
     display: none;
     z-index: 999;
-    color: var(--black-op90);
+    color: var(--black-op90)
 }
 
 .mainmenu:hover span {
-    display: flex;
+    display: flex
 }
 
 .mainmenu#notiffi_button {
@@ -729,7 +729,7 @@ a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 #page-content,
@@ -740,17 +740,17 @@ a:hover {
     margin: 0 auto;
     background-color: var(--dark-light);
     border-left: 0.5px solid var(--co2);
-    border-right: 0.5px solid var(--co3);
+    border-right: 0.5px solid var(--co3)
 }
 
 #page-home {
     padding-top: 0;
     padding-bottom: 0.5rem;
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.5rem
 }
 
 #page-footer {
-    padding-top: 0;
+    padding-top: 0
 }
 
 #page-footer > div:first-of-type {
@@ -758,7 +758,7 @@ a:hover {
     padding: var(--large);
     background: var(--light);
     font-size: var(--xsmall);
-    border: 0.5px solid var(--lighter-neutral);
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 #page-footer > div:first-of-type a {
@@ -766,7 +766,7 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 1px;
-    font-weight: 300;
+    font-weight: 300
 }
 
 #sub-page-header {
@@ -777,7 +777,7 @@ a:hover {
     border-style: solid;
     border-image: var(--gradient23) 1;
     width: 100%;
-    margin-bottom: -0.5px;
+    margin-bottom: -0.5px
 }
 
 .forumlist,
@@ -789,7 +789,7 @@ a:hover {
     padding: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--dark-light);
-    outline: 0.5px solid var(--lighter-neutral);
+    outline: 0.5px solid var(--lighter-neutral)
 }
 
 #categories {
@@ -798,7 +798,7 @@ a:hover {
     gap: var(--2xlarge);
     width: calc(100% + 8rem);
     margin-left: -4rem;
-    align-items: center;
+    align-items: center
 }
 
 #categories .tabsystem-tabs {
@@ -810,36 +810,36 @@ a:hover {
     background-color: var(--white-op75);
     flex-direction: column;
     width: var(--2xlarge);
-    padding: var(--large);
+    padding: var(--large)
 }
 
 #categories .tabsystem-tabs.off {
     outline: 0.5px solid var(--co2-200);
-    color: var(--co2);
+    color: var(--co2)
 }
 
 #categories .tabsystem-tabs.off:has(.active) {
-    outline: 0.5px solid var(--co2);
+    outline: 0.5px solid var(--co2)
 }
 
 #categories .tabsystem-tabs.loc {
     outline: 0.5px solid var(--co3-200);
-    color: var(--co3);
+    color: var(--co3)
 }
 
 #categories .tabsystem-tabs.loc:has(.active) {
-    outline: 0.5px solid var(--co3);
+    outline: 0.5px solid var(--co3)
 }
 
 #categories .tabsystem-tabs i {
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 #categories .tab {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #categories .tab::before {
@@ -847,7 +847,7 @@ a:hover {
     width: var(--2xsmall);
     outline: 0.5px solid;
     border-radius: 100%;
-    content: "";
+    content: ""
 }
 
 #categories .tab span {
@@ -859,39 +859,39 @@ a:hover {
     align-items: center;
     width: max-content;
     font-family: var(--display);
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 #categories .tab:hover span {
-    display: flex !important;
+    display: flex !important
 }
 
 #categories .tabsystem-tabs.off .tab span {
-    right: 2.5rem;
+    right: 2.5rem
 }
 
 #categories .tabsystem-tabs.loc .tab span {
-    left: 2.5rem;
+    left: 2.5rem
 }
 
 #categories .tabsystem-tabs.off .tab.active::before,
 #categories .tabsystem-tabs.off .tab:hover::before {
-    background-color: var(--co2);
+    background-color: var(--co2)
 }
 
 #categories .tabsystem-tabs.loc .tab.active::before,
 #categories .tabsystem-tabs.loc .tab:hover::before {
-    background-color: var(--co3);
+    background-color: var(--co3)
 }
 
 .category {
     flex-direction: column;
     gap: var(--large);
-    width: 100%;
+    width: 100%
 }
 
 .category.active {
-    display: flex !important;
+    display: flex !important
 }
 
 .category-title h2 {
@@ -908,7 +908,7 @@ a:hover {
     display: flex;
     -webkit-text-stroke: 0.5px var(--co1);
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .forumlist {
@@ -916,18 +916,18 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: var(--large);
-    width: 100%;
+    width: 100%
 }
 
 .forum {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-content {
-    display: flex;
+    display: flex
 }
 
 .forum-img {
@@ -935,37 +935,37 @@ a:hover {
     width: auto;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 [data-color-scheme="dark"] .forum-img {
     -webkit-filter: grayscale(1) brightness(0.5);
-    filter: grayscale(1) brightness(0.5);
+    filter: grayscale(1) brightness(0.5)
 }
 
 #f16 .forum-img,
 #f11 .forum-img {
-    order: 3;
+    order: 3
 }
 
 #f1.forum::before {
-    content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher.";
+    content: "Dans la vie, il n’y a que les plus honteux qui perdent. L’argent est l’argent : quand on n’en a pas, le plus court est de se coucher."
 }
 
 #f80.forum::after {
     content: "Dans ces batailles de l’argent, sourdes et lâches, où l’on éventre les faibles, sans bruit, il n’y a plus de liens, plus de parenté, plus d’amitié.";
     text-align: right;
-    align-self: flex-end;
+    align-self: flex-end
 }
 
 #f10.forum::before {
-    content: "C’est drôle, les hommes riches s’imaginent qu’ils peuvent tout avoir pour leur argent... Eh bien, et si je ne veux pas ?";
+    content: "C’est drôle, les hommes riches s’imaginent qu’ils peuvent tout avoir pour leur argent... Eh bien, et si je ne veux pas ?"
 }
 
 #f45.forum::after {
     content: "Ah ! l'argent, cet argent pourrisseur, empoisonneur, qui desséchait les âmes, en chassait la bonté, la tendresse, l'amour des autres !";
     text-align: right;
-    align-self: flex-end;
+    align-self: flex-end
 }
 
 #f1.forum::before,
@@ -982,7 +982,7 @@ a:hover {
     font-size: var(--medium);
     width: 90%;
     height: 55px;
-    font-weight: 100;
+    font-weight: 100
 }
 
 .forum-icon {
@@ -997,21 +997,21 @@ a:hover {
     align-items: center;
     justify-content: center;
     top: 0;
-    right: 0;
+    right: 0
 }
 
 .forum-icon::before {
     font-family: var(--icons-thin) !important;
-    content: "\e688";
+    content: "\e688"
 }
 
 .forum-description br {
-    display: none;
+    display: none
 }
 
 .forum-description img {
     height: 0;
-    width: 0;
+    width: 0
 }
 
 .forum-lastpost {
@@ -1021,15 +1021,15 @@ a:hover {
     font-family: var(--display);
     padding-left: 0.5px;
     letter-spacing: 0.5px;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-lastpost a {
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-lastpost-infos {
-    flex: 1;
+    flex: 1
 }
 
 .forum-posts,
@@ -1038,51 +1038,51 @@ a:hover {
     align-items: center;
     font-family: var(--display);
     font-size: var(--large);
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-topics::after,
 .forum-posts::after,
 .topic-posts::after,
 .topic-views::after {
-    font-family: var(--icons-thin) !important;
+    font-family: var(--icons-thin) !important
 }
 
 .forum-topics::after {
-    content: "\e8d6";
+    content: "\e8d6"
 }
 
 .forum-posts::after,
 .topic-posts::after {
-    content: "\e6de";
+    content: "\e6de"
 }
 
 .topic-views::after {
-    content: "\e7bb";
+    content: "\e7bb"
 }
 
 .forum-divers {
     flex-direction: row;
     width: 100%;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-divers .forum-icon {
     position: relative;
     top: auto;
-    right: auto;
+    right: auto
 }
 
 .forum-divers .forums-posts,
 .forum-divers .forums-views {
     display: flex;
-    gap: var(--2xsmall);
+    gap: var(--2xsmall)
 }
 
 .forum-divers .forum-content {
     width: 100%;
     gap: var(--large);
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .forum-divers .forum-title {
@@ -1092,13 +1092,13 @@ a:hover {
     justify-content: center;
     font-weight: 300;
     text-transform: lowercase;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .forum-divers .forumtitle {
     font-family: var(--spe);
     text-transform: lowercase;
-    font-size: var(--2xlarge);
+    font-size: var(--2xlarge)
 }
 
 .forum-divers .forum-description {
@@ -1106,7 +1106,7 @@ a:hover {
     text-transform: uppercase;
     color: var(--dark-neutral);
     letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall);
+    padding-left: var(--4xsmall)
 }
 
 .forum-divers .forum-links {
@@ -1117,7 +1117,7 @@ a:hover {
     margin-right: var(--3xlarge);
     align-items: center;
     justify-content: center;
-    gap: var(--2xsmall);
+    gap: var(--2xsmall)
 }
 
 .forum-divers .forum-links a {
@@ -1128,14 +1128,14 @@ a:hover {
     font-weight: 700;
     font-size: var(--small);
     border-radius: var(--small);
-    padding: var(--4xsmall) var(--2xsmall);
+    padding: var(--4xsmall) var(--2xsmall)
 }
 
 .forum-divers .forum-statistics {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-divers .forum-lastpost {
@@ -1143,17 +1143,17 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--large);
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-divers .forum-lastpost-avatar img {
     height: 50px;
     width: 35px;
-    border-radius: 2.5px;
+    border-radius: 2.5px
 }
 
 .forum-loc {
-    flex: 1 1 calc(100% / 2.1);
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-loc .forum-content {
@@ -1165,7 +1165,7 @@ a:hover {
     border: 0.5px solid var(--white-op90);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-loc .forumtitle {
@@ -1177,7 +1177,7 @@ a:hover {
     font-family: var(--serif);
     font-size: var(--large);
     font-style: italic;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .forum-loc .forum-statistics {
@@ -1186,7 +1186,7 @@ a:hover {
     justify-content: center;
     gap: var(--large);
     height: max-content;
-    order: 3;
+    order: 3
 }
 
 .forum-loc .forum-topics,
@@ -1196,38 +1196,38 @@ a:hover {
     height: 35px;
     border-radius: var(--2xsmall);
     background-color: var(--co2);
-    color: var(--white-op90);
+    color: var(--white-op90)
 }
 
 .forum-loc .forum-topics::after,
 .forum-loc .forum-posts::after {
-    font-size: var(--medium);
+    font-size: var(--medium)
 }
 
 .forum-loc .forum-topics:hover::after,
 .forum-loc .forum-posts:hover::after {
-    font-size: 0 !important;
+    font-size: 0 !important
 }
 
 .forum-loc .forum-topics:hover span,
 .forum-loc .forum-posts:hover span {
-    font-size: var(--medium) !important;
+    font-size: var(--medium) !important
 }
 
 .forum-loc .forum-lastpost {
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-loc .forum-lastpost-avatar img {
     height: var(--3xlarge);
     width: var(--3xlarge);
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 .forum-admin {
     justify-content: space-between;
     gap: var(--large);
-    flex: 1 1 calc(100% / 2.1);
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-admin:nth-of-type(even) .forum-icon,
@@ -1235,43 +1235,43 @@ a:hover {
     left: var(--large);
     bottom: var(--large);
     top: auto;
-    right: auto;
+    right: auto
 }
 
 .forum-admin .forumtitle {
     font-size: var(--xlarge);
     font-weight: 900;
     text-transform: lowercase;
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .forum-admin:nth-of-type(even) .forumtitle {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-content {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 100px 1fr;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-admin:nth-of-type(even) .forum-content {
-    grid-template-columns: 1fr 100px !important;
+    grid-template-columns: 1fr 100px !important
 }
 
 .forum-admin .forum-content:has(.forum-links a) {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto
 }
 
 .forum-admin .forum-title {
     display: flex;
     flex-direction: column;
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2
 }
 
 .forum-admin:has(.forum-links a) .forum-title {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3
 }
 
 .forum-admin .forum-description {
@@ -1279,20 +1279,20 @@ a:hover {
     letter-spacing: 2.5px;
     font-size: var(--small);
     color: var(--co1-700);
-    padding: 0 var(--large);
+    padding: 0 var(--large)
 }
 
 .forum-admin:nth-of-type(even) .forum-description {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-links {
     grid-area: 2 / 1 / 3 / 3;
-    font-size: 0;
+    font-size: 0
 }
 
 .forum-admin:nth-of-type(even) .forum-links:not(:empty) {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-links a {
@@ -1302,11 +1302,11 @@ a:hover {
     color: var(--light);
     font-size: var(--small);
     font-weight: 700;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-admin .forum-links a + a {
-    margin-left: var(--large);
+    margin-left: var(--large)
 }
 
 .forum-admin .forum-statistics {
@@ -1316,30 +1316,30 @@ a:hover {
     align-items: flex-end;
     justify-content: center;
     gap: var(--4xsmall);
-    width: 100%;
+    width: 100%
 }
 
 .forum-admin:nth-of-type(even) .forum-statistics,
 .forum-admin .forum-lastpost {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 2 / 3 / 3
 }
 
 .forum-admin:nth-of-type(even) .forum-lastpost {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .forum-admin:has(.forum-links a) .forum-lastpost,
 .forum-admin:nth-of-type(even):has(.forum-links a) .forum-statistics {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 3 / 2 / 4 / 3
 }
 
 .forum-admin:nth-of-type(even):has(.forum-links a) .forum-lastpost,
 .forum-admin:has(.forum-links a) .forum-statistics {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3 / 1 / 4 / 2
 }
 
 .forum-admin:nth-of-type(even) .forum-lastpost-infos {
-    text-align: right;
+    text-align: right
 }
 
 .forum-admin .forum-posts,
@@ -1350,14 +1350,14 @@ a:hover {
     padding: var(--4xsmall);
     justify-content: space-between;
     background-color: var(--white-op50);
-    width: 100%;
+    width: 100%
 }
 
 .forum-admin .forum-posts span,
 .forum-admin .forum-topics span,
 .forum-off .forum-posts span,
 .forum-off .forum-topics span {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .forum-admin .forum-posts::after,
@@ -1372,36 +1372,36 @@ a:hover {
     display: flex;
     font-size: var(--2xsmall);
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-admin:nth-of-type(even) .forum-posts span,
 .forum-admin:nth-of-type(even) .forum-topics span {
-    order: 3;
+    order: 3
 }
 
 .forum-admin .forum-lastpost-avatar img {
-    display: none;
+    display: none
 }
 
 .forum-admin,
 .forum-off,
 .forum-archives {
-    flex: 1 1 calc(100% / 2.1);
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-off {
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .forum-off:nth-of-type(even) .forum-icon {
     right: auto;
-    left: 0;
+    left: 0
 }
 
 .forum-off:nth-of-type(odd) {
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .forum-off .forum-content {
@@ -1409,15 +1409,15 @@ a:hover {
     grid-template-columns: auto 75px;
     row-gap: var(--large);
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto
 }
 
 .forum-off .forum-title {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3
 }
 
 .forum-off:nth-of-type(even) .forum-title {
-    text-align: right;
+    text-align: right
 }
 
 .forum-off .forumtitle {
@@ -1426,26 +1426,26 @@ a:hover {
     color: var(--co2);
     text-transform: lowercase;
     font-weight: 700;
-    text-shadow: 1px 1px var(--light);
+    text-shadow: 1px 1px var(--light)
 }
 
 .forum-off .forum-links {
     grid-area: 3 / 1 / 4 / 3;
-    text-align: right;
+    text-align: right
 }
 
 .forum-off:nth-of-type(odd) .forum-links {
-    text-align: left;
+    text-align: left
 }
 
 .forum-off .forum-links a {
     color: var(--co1-300);
     font-family: var(--mono);
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-off .forum-lastpost {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .forum-off .forum-statistics {
@@ -1453,7 +1453,7 @@ a:hover {
     display: flex;
     gap: var(--3xsmall);
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
 .forum-off .forum-lastpost-avatar img {
@@ -1461,12 +1461,12 @@ a:hover {
     width: 75px;
     left: 0;
     top: 0;
-    position: absolute;
+    position: absolute
 }
 
 .forum-off:nth-of-type(even) .forum-lastpost-avatar img {
     left: auto;
-    right: 0;
+    right: 0
 }
 
 .forum-media {
@@ -1478,17 +1478,17 @@ a:hover {
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
-    border: 0.5px solid var(--co1);
+    border: 0.5px solid var(--co1)
 }
 
 .forum-media .forum-content {
     align-items: center;
     column-gap: var(--large);
-    flex: 1;
+    flex: 1
 }
 
 .forum-media .forum-title {
-    flex: 1;
+    flex: 1
 }
 
 .forum-media .forumtitle {
@@ -1498,69 +1498,69 @@ a:hover {
     padding-left: var(--4xsmall);
     font-weight: 100;
     font-size: var(--xlarge);
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .forum-media .forum-description {
-    display: none;
+    display: none
 }
 
 .forum-media .forum-icon {
     position: relative;
     top: auto;
-    right: auto;
+    right: auto
 }
 
 .forum-media:nth-of-type(even) .forum-icon,
 .forum-media:nth-of-type(even) .forum-links a {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .forum-media .forum-links {
-    font-size: 0;
+    font-size: 0
 }
 
 .forum-media .forum-links a {
     font-size: var(--medium);
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .forum-media .forum-links a + a {
-    margin-left: var(--medium);
+    margin-left: var(--medium)
 }
 
 .forum-media .forum-lastpost {
     display: flex;
     gap: var(--large);
-    align-items: center;
+    align-items: center
 }
 
 .forum-media .forum-lastpost-avatar img {
     height: 35px;
     width: 35px;
-    border-radius: var(--small);
+    border-radius: var(--small)
 }
 
 .forum-archives {
     padding: var(--large);
     border: 0.5px solid var(--neutral);
     background-color: var(--light-neutral);
-    align-items: center;
+    align-items: center
 }
 
 .forum-archives .forum-content {
     flex-direction: column;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-archives .forum-icon,
 .forum-archives .forum-statistics,
 .forum-archives .forum-lastpost {
-    display: none;
+    display: none
 }
 
 .forum-archives .forum-title {
-    text-align: center;
+    text-align: center
 }
 
 .forum-archives .forumtitle {
@@ -1569,32 +1569,32 @@ a:hover {
     font-size: var(--3xlarge);
     line-height: 1;
     font-weight: 100;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .forum-archives .forum-links {
     font-size: 0;
-    text-align: center;
+    text-align: center
 }
 
 .forum-archives .forum-links a {
     color: var(--darker-neutral);
     font-size: var(--medium);
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .forum-archives .forum-links a + a {
-    margin-left: var(--large);
+    margin-left: var(--large)
 }
 
 .post {
     display: flex;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .post + .post {
-    margin-top: var(--large);
+    margin-top: var(--large)
 }
 
 .posticons {
@@ -1602,7 +1602,7 @@ a:hover {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    background: var(--light);
+    background: var(--light)
 }
 
 .posticons a,
@@ -1612,12 +1612,12 @@ a:hover {
     height: var(--2xlarge);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .posticons a,
 .posticons div:not(:last-of-type) {
-    border-bottom: 0.5px solid var(--lighter-neutral);
+    border-bottom: 0.5px solid var(--lighter-neutral)
 }
 
 .posticons a > span,
@@ -1633,18 +1633,18 @@ a:hover {
     text-transform: uppercase;
     align-items: center;
     font-weight: 300;
-    height: var(--2xlarge);
+    height: var(--2xlarge)
 }
 
 .posticons a:hover span,
 .posticons div:hover span {
-    display: flex;
+    display: flex
 }
 
 .mini .posticons,
 .compact .posticons,
 .sms .posticons {
-    flex-direction: row;
+    flex-direction: row
 }
 
 .mini .posticons a,
@@ -1654,7 +1654,7 @@ a:hover {
 .compact .posticons div:not(:last-of-type),
 .sms .posticons div:not(:last-of-type) {
     border-right: 0.5px solid var(--lighter-neutral);
-    border-bottom: 0;
+    border-bottom: 0
 }
 
 .mini .posticons a > span,
@@ -1664,7 +1664,7 @@ a:hover {
 .compact .posticons div > span,
 .sms .posticons div > span {
     position: absolute;
-    left: auto;
+    left: auto
 }
 
 .fa_like_div > span {
@@ -1672,11 +1672,11 @@ a:hover {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     top: 2.5rem !important;
-    gap: var(--2xsmall);
+    gap: var(--2xsmall)
 }
 
 .fa_liked i[class*=" fi-ts-"]::before {
-    font-family: var(--icons-solid) !important;
+    font-family: var(--icons-solid) !important
 }
 
 .rep-nb {
@@ -1685,29 +1685,29 @@ a:hover {
     background-color: var(--neutral);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .postbody {
     flex: 1;
-    min-width: 0;
+    min-width: 0
 }
 
 .mini .postbody {
-    width: 100%;
+    width: 100%
 }
 
 .message {
     text-align: justify;
     -webkit-hyphens: auto;
     hyphens: auto;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word
 }
 
 .postprofile .online-icon {
     position: absolute;
     top: -0.5rem;
-    left: -0.5rem;
+    left: -0.5rem
 }
 
 .post.online .postprofile .online-icon::before {
@@ -1720,14 +1720,14 @@ a:hover {
     justify-content: center;
     height: var(--large);
     aspect-ratio: 1;
-    border-radius: 100%;
+    border-radius: 100%
 }
 
 .postprofile {
     position: relative;
     width: 200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .postprofile-avatar img {
@@ -1735,39 +1735,39 @@ a:hover {
     padding: 0.125rem;
     background-color: var(--light);
     border: 0.475rem solid var(--group-color-100, var(--co1-100));
-    width: 200px;
+    width: 200px
 }
 
 .mini {
-    flex-direction: column;
+    flex-direction: column
 }
 
 .post:has(#presentation-form) .postprofile {
-    display: none;
+    display: none
 }
 
 .sms .postprofile {
-    width: 100px;
+    width: 100px
 }
 
 .compact .postprofile {
     width: 100%;
     height: 100px;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .mini .postprofile {
     width: 100%;
     height: 50px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .mini .postprofile-name {
     display: flex;
     align-items: center;
     font-size: var(--2xlarge);
-    font-family: var(--spe);
+    font-family: var(--spe)
 }
 
 .mini .postprofile-avatar img {
@@ -1775,24 +1775,24 @@ a:hover {
     aspect-ratio: 1;
     border: 0;
     outline: 0;
-    padding: 0;
+    padding: 0
 }
 
 .mini .postprofile-info,
 .mini .postprofile-contact {
-    display: none;
+    display: none
 }
 
 .post > sep {
     width: 0.5px;
-    background: var(--gradientNeutralVertical);
+    background: var(--gradientNeutralVertical)
 }
 
 .mini > sep {
     width: 100%;
     height: 0.5px;
     margin: 0 auto;
-    background: var(--gradientNeutralHorizontal);
+    background: var(--gradientNeutralHorizontal)
 }
 
 .quick-nav-topics {
@@ -1800,18 +1800,18 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .postlist .quick-nav-topics:last-of-type {
-    display: none !important;
+    display: none !important
 }
 
 .topic-actions {
     display: flex;
     padding: var(--large);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .memberpanel > div {
@@ -1823,7 +1823,7 @@ a:hover {
     padding: var(--large);
     text-transform: uppercase;
     text-align: center;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .memberlist {
@@ -1831,7 +1831,7 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .member {
@@ -1841,12 +1841,12 @@ a:hover {
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
-    border-image: var(--gradientgc3, var(--gradientLight)) 1;
+    border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
 .member-avatar img {
     height: 250px;
-    width: 100%;
+    width: 100%
 }
 
 .member-bloc {
@@ -1855,7 +1855,7 @@ a:hover {
     display: flex;
     gap: var(--large);
     flex-direction: column;
-    position: relative;
+    position: relative
 }
 
 .member-infos {
@@ -1868,11 +1868,11 @@ a:hover {
     position: absolute;
     background: var(--gradientgc3, var(--gradientLight));
     top: 0;
-    right: 0;
+    right: 0
 }
 
 .member-bloc:hover .member-infos {
-    display: flex;
+    display: flex
 }
 
 .member-infos > div {
@@ -1887,36 +1887,36 @@ a:hover {
     text-transform: uppercase;
     text-align: center;
     font-weight: 300;
-    color: var(--group-color, var(--co1));
+    color: var(--group-color, var(--co1))
 }
 
 .member-pseudo {
     text-align: center;
     font-family: var(--spe);
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 #hub a.lea strong::before,
 .member a.lea strong::before,
 #hub a.cam strong::before,
 .member a.cam strong::before {
-    padding-right: var(--2xsmall);
+    padding-right: var(--2xsmall)
 }
 
 #hub a.lea strong::before,
 .member a.lea strong::before,
 .lea.profile.en.ligne .profile-pseudo::before {
-    content: "⭒";
+    content: "⭒"
 }
 
 #hub a.cam strong::before,
 .member a.cam strong::before,
 .cam.profile.en.ligne .profile-pseudo::before {
-    content: "✻";
+    content: "✻"
 }
 
 .profile.en.ligne {
-    position: relative;
+    position: relative
 }
 
 .profile-body {
@@ -1925,7 +1925,7 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     background-color: var(--light);
-    border: 0.5px solid var(--lighter-neutral);
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 .profile-pseudo {
@@ -1937,7 +1937,7 @@ a:hover {
     text-shadow: 1px 1px var(--light);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .profile.en.ligne .profile-pseudo::before {
@@ -1954,14 +1954,14 @@ a:hover {
     width: var(--2xlarge);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #reception {
     display: flex;
     flex-direction: column;
     gap: var(--large);
-    width: 100%;
+    width: 100%
 }
 
 #reception.open .content-toggle {
@@ -1969,7 +1969,7 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 150px 100px 150px 100px 150px;
     gap: var(--large);
-    width: 100%;
+    width: 100%
 }
 
 #reception .seven {
@@ -1977,21 +1977,21 @@ a:hover {
     width: 100%;
     flex-wrap: wrap;
     gap: var(--large);
-    grid-area: 4 / 1 / 5 / 6;
+    grid-area: 4 / 1 / 5 / 6
 }
 
 #reception .five,
 #reception .one {
     height: 150px;
     background-color: var(--light);
-    padding: var(--large);
+    padding: var(--large)
 }
 
 #reception .one {
     background: var(--gradient23-100);
     background-size: cover;
     background-position: center center;
-    grid-area: 1 / 1 / 2 / 4;
+    grid-area: 1 / 1 / 2 / 4
 }
 
 #reception .one div {
@@ -1999,12 +1999,12 @@ a:hover {
     height: 100%;
     width: 100%;
     padding: var(--large);
-    border: 0.5px solid var(--white-op90);
+    border: 0.5px solid var(--white-op90)
 }
 
 #reception .one span {
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
 #reception .two {
@@ -2012,7 +2012,7 @@ a:hover {
     height: 100%;
     padding: var(--large);
     background-color: var(--co1);
-    color: var(--co1-100);
+    color: var(--co1-100)
 }
 
 #reception .two span {
@@ -2020,19 +2020,19 @@ a:hover {
     text-transform: lowercase;
     color: var(--light);
     font-weight: 500;
-    padding: var(--2xsmall);
+    padding: var(--2xsmall)
 }
 
 #reception .two div {
     text-align: justify;
     line-height: 1.45;
-    font-weight: 300;
+    font-weight: 300
 }
 
 #reception .three {
     padding: var(--large);
     grid-area: 2 / 3 / 4 / 6;
-    border: 0.5px solid var(--white-op90);
+    border: 0.5px solid var(--white-op90)
 }
 
 #reception .three strong,
@@ -2041,25 +2041,25 @@ a:hover {
     flex: 1;
     padding: var(--4xsmall);
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 #reception .three strong {
     background-color: var(--co2-100);
     color: var(--co2);
-    font-family: var(--mono);
+    font-family: var(--mono)
 }
 
 #reception .three i {
     background-color: var(--co3-100);
     color: var(--co3);
     text-align: right;
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 #reception .three div {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 #reception .four {
@@ -2072,17 +2072,17 @@ a:hover {
     gap: var(--large);
     margin: 0 auto;
     padding: var(--large);
-    background-color: var(--white-op90);
+    background-color: var(--white-op90)
 }
 
 #reception .five {
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 4 / 2 / 6
 }
 
 #reception .five div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 #reception .five div,
@@ -2091,30 +2091,26 @@ a:hover {
 #reception .one span {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: auto
 }
 
 #reception .one span,
 #reception .two div {
-    display: block;
+    display: block
 }
 
 #reception .six {
-    grid-area: 5 / 1 / 6 / 4;
+    grid-area: 5 / 1 / 6 / 4
 }
 
 #reception .eight {
-    grid-area: 5 / 4 / 6 / 6;
+    grid-area: 5 / 4 / 6 / 6
 }
 
 #reception .five span {
     color: var(--co1);
     display: flex;
-    align-items: center;
-}
-
-#reception .five intel:hover {
-    font-size: var(--medium);
+    align-items: center
 }
 
 #reception .five date {
@@ -2126,7 +2122,7 @@ a:hover {
     height: 37.5px;
     width: 75px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 #reception .five intel {
@@ -2137,7 +2133,7 @@ a:hover {
     font-size: var(--small);
     display: flex;
     align-items: center;
-    flex: 1;
+    flex: 1
 }
 
 #reception .five intel::before {
@@ -2148,19 +2144,19 @@ a:hover {
     position: absolute;
     left: -1.15rem;
     height: 5px;
-    width: 5px;
+    width: 5px
 }
 
 #reception .five .ipt {
-    color: var(--black-op90);
+    color: var(--black-op90)
 }
 
 #reception .five .ipt intel::before {
-    background-color: var(--black-op90);
+    background-color: var(--black-op90)
 }
 
 #reception .five .ipt intel {
-    font-weight: 500;
+    font-weight: 500
 }
 
 .admin-modal,
@@ -2168,21 +2164,21 @@ a:hover {
     background-color: transparent;
     color: inherit;
     border: 0;
-    padding: 0;
+    padding: 0
 }
 
 .admin-modal {
     flex: 1;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .admin-modal img {
     width: 100%;
     height: 100%;
     -webkit-filter: grayscale(0.5);
-    filter: grayscale(0.5);
+    filter: grayscale(0.5)
 }
 
 .admin-modal > .modal-content {
@@ -2190,11 +2186,11 @@ a:hover {
     position: relative;
     flex-direction: column;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .admin-modal.open {
-    overflow: visible;
+    overflow: visible
 }
 
 .admin-modal.open > .modal-content {
@@ -2209,24 +2205,24 @@ a:hover {
     border: 0;
     padding: var(--2xlarge);
     outline: var(--4xlarge) solid var(--white-op75);
-    background: var(--light);
+    background: var(--light)
 }
 
 .admin-modal.open > .modal-content > div {
     display: flex;
     flex-direction: column;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .admin-modal.open > .modal-content h1 {
     height: var(--3xlarge) !important;
-    line-height: 1;
+    line-height: 1
 }
 
 .admin-close {
     position: absolute;
     top: var(--large);
-    right: var(--large);
+    right: var(--large)
 }
 
 .admin-close::before,
@@ -2236,7 +2232,7 @@ a:hover {
 .item-close {
     font-family: var(--icons-thin) !important;
     content: "\e5e8";
-    cursor: pointer;
+    cursor: pointer
 }
 
 .inside-modal {
@@ -2246,19 +2242,19 @@ a:hover {
     width: 95%;
     margin: 0 auto;
     border: 0.5px solid var(--group-color);
-    padding: var(--large);
+    padding: var(--large)
 }
 
 .inside-modal pseudo {
     text-transform: capitalize;
     color: var(--group-color);
     font-family: var(--serif);
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .inside-modal dtls {
     display: flex;
-    gap: var(--2xsmall);
+    gap: var(--2xsmall)
 }
 
 .inside-modal dtls span {
@@ -2268,12 +2264,12 @@ a:hover {
     padding: 0 var(--2xsmall);
     border-radius: var(--small);
     font-size: var(--small);
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .inside-modal a {
     color: var(--group-color);
-    padding: var(--2xsmall);
+    padding: var(--2xsmall)
 }
 
 .modal-content .inside-modal div {
@@ -2281,13 +2277,13 @@ a:hover {
     flex-direction: column;
     gap: var(--2xsmall);
     flex: 1;
-    align-items: center;
+    align-items: center
 }
 
 .modal-content .inside-modal img {
     width: 150px;
     height: 100px;
-    border-radius: var(--2xsmall);
+    border-radius: var(--2xsmall)
 }
 
 .details-modal {
@@ -2296,13 +2292,13 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .details-modal > * {
     width: 30%;
     text-align: center;
-    flex: 1 1 calc(100% / 3 - var(--small));
+    flex: 1 1 calc(100% / 3 - var(--small))
 }
 
 .details-modal a {
@@ -2310,7 +2306,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--large);
     text-transform: uppercase;
-    color: var(--black-op90);
+    color: var(--black-op90)
 }
 
 .details-modal div {
@@ -2320,7 +2316,7 @@ a:hover {
     color: var(--lighter-dark);
     font-weight: 100;
     border-bottom: 0.5px solid var(--lighter-dark);
-    padding-bottom: var(--2xsmall);
+    padding-bottom: var(--2xsmall)
 }
 
 .details-modal span {
@@ -2331,22 +2327,23 @@ a:hover {
     color: var(--lighter-dark);
     padding: var(--4xsmall);
     letter-spacing: var(--4xsmall);
-    padding-right: 0 !important;
+    padding-right: 0 !important
 }
 
 .phseven-city {
-    flex: 1 1 calc(100% / 3.1);
+    flex: 1 1 calc(100% / 3.2);
     background-size: cover;
     background-position: center center;
     display: flex;
     color: var(--dark);
+    gap: var(--2xsmall);
     font-weight: 700;
     align-items: center;
     justify-content: center;
     font-family: var(--display);
     font-size: var(--large);
     flex-direction: column;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .phseven-city .city,
@@ -2354,22 +2351,23 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .phseven-city .city {
     font-size: var(--xlarge);
+    height: var(--xlarge)
 }
 
 .phseven-city .city img {
-    height: var(--xlarge);
+    height: var(--xlarge)
 }
 
 .phseven-city .time > * {
     background-color: var(--dark);
     color: var(--light);
     padding: 0 var(--4xsmall);
-    font-weight: 900;
+    font-weight: 900
 }
 
 #hub {
@@ -2377,35 +2375,35 @@ a:hover {
     position: relative;
     gap: var(--large);
     flex-wrap: wrap;
-    margin-top: var(--large);
+    margin-top: var(--large)
 }
 
 #hub .one {
     flex: 1;
     background-color: var(--white-op50);
     border: 0.5px solid var(--lighter-neutral);
-    padding: var(--large);
+    padding: var(--large)
 }
 
 #logged-in-user-list,
 #l-connected-members {
-    height: 100%;
+    height: 100%
 }
 
 #logged-in-user-list div,
 #l-connected-members div {
     height: 100%;
-    overflow: auto;
+    overflow: auto
 }
 
 #hub .one a {
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding-left: 0.5px;
+    padding-left: 0.5px
 }
 
 #hub .one a strong {
-    font-weight: 700;
+    font-weight: 700
 }
 
 #hub .two {
@@ -2413,7 +2411,7 @@ a:hover {
     height: auto;
     display: flex;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 #hub .two div {
@@ -2428,20 +2426,20 @@ a:hover {
     font-style: italic;
     outline: 2.5px solid var(--white-op50);
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #hub .three {
     display: flex;
     gap: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 #hub .four {
     display: flex;
     gap: var(--large);
     height: auto;
-    width: 100%;
+    width: 100%
 }
 
 #hub .four div {
@@ -2459,18 +2457,18 @@ a:hover {
     font-weight: 600;
     letter-spacing: 2.5px;
     border: 0.5px solid var(--co1);
-    outline: 2.5px solid var(--white-op50);
+    outline: 2.5px solid var(--white-op50)
 }
 
 #hub .four strong {
-    font-weight: 900;
+    font-weight: 900
 }
 
 #newest-user-avatar {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 #newest-user-avatar img {
@@ -2478,7 +2476,7 @@ a:hover {
     border: var(--4xsmall) solid var(--white-op90);
     position: relative;
     height: 234px;
-    width: 149px;
+    width: 149px
 }
 
 #newest-user-avatar::before {
@@ -2487,22 +2485,22 @@ a:hover {
     height: 235px;
     border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
     position: absolute;
-    background: var(--gradient23);
+    background: var(--gradient23)
 }
 
 #newest-user {
     font-family: var(--spe);
     font-size: var(--2xlarge);
-    text-align: center;
+    text-align: center
 }
 
 #newest-user span,
 #newest-user span:hover {
-    color: var(--lighter-dark) !important;
+    color: var(--lighter-dark) !important
 }
 
 #newest-user strong {
-    font-weight: 300;
+    font-weight: 300
 }
 
 #notiffi_panel {
@@ -2522,18 +2520,18 @@ a:hover {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
-    transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease
 }
 
 #notiffi_panel.open {
     visibility: visible;
-    opacity: 1;
+    opacity: 1
 }
 
 #notiffi_button_close {
     position: absolute;
     right: var(--large);
-    z-index: 9999;
+    z-index: 9999
 }
 
 #notiffi_button:has(.unread_count:not(:empty))::before {
@@ -2549,12 +2547,12 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-op90);
+    color: var(--white-op90)
 }
 
 .unread_count:not(:empty)::before {
     content: "｜";
-    padding-right: 2.5px;
+    padding-right: 2.5px
 }
 
 .all_notifications {
@@ -2568,38 +2566,38 @@ a:hover {
     -ms-overflow-style: none;
     scrollbar-width: none;
     flex-direction: column;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch
 }
 
 .all_notifications::-webkit-scrollbar {
-    display: none;
+    display: none
 }
 
 .no_notification {
     text-align: center;
-    font-style: italic;
+    font-style: italic
 }
 
 .notiffi_manage {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .notiffi_actions {
     display: grid;
     justify-items: end;
-    gap: 5px;
+    gap: 5px
 }
 
 .notiffi_actions button {
     padding: 2px var(--small);
     background: var(--darker-light);
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .notiffi_actions button:hover {
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .notiffi_head {
@@ -2607,7 +2605,7 @@ a:hover {
     gap: var(--large);
     width: 50%;
     margin: 0 auto;
-    align-items: center;
+    align-items: center
 }
 
 .notiffi_head img {
@@ -2615,11 +2613,11 @@ a:hover {
     height: 200px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 5px solid var(--white-op90);
-    outline: 0.5px solid var(--group-color);
+    outline: 0.5px solid var(--group-color)
 }
 
 .notiffi_head_info {
-    flex: 1;
+    flex: 1
 }
 
 .notification {
@@ -2631,11 +2629,11 @@ a:hover {
     align-items: center;
     -webkit-animation: notiffiFadeIn 0.3s ease-in-out;
     animation: notiffiFadeIn 0.3s ease-in-out;
-    background-color: var(--light);
+    background-color: var(--light)
 }
 
 .notification:hover {
-    border-color: var(--neutral);
+    border-color: var(--neutral)
 }
 
 @-webkit-keyframes notiffiFadeIn {
@@ -2659,7 +2657,7 @@ a:hover {
 }
 
 .notification.unread {
-    border: 0.5px solid var(--group-color);
+    border: 0.5px solid var(--group-color)
 }
 
 .notification.alert {
@@ -2674,7 +2672,7 @@ a:hover {
     opacity: 0;
     -webkit-filter: blur(5px);
     filter: blur(5px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out
 }
 
 .notification.alert.up {
@@ -2682,24 +2680,24 @@ a:hover {
     transform: translateY(0);
     opacity: 1;
     -webkit-filter: blur(0);
-    filter: blur(0);
+    filter: blur(0)
 }
 
 .notif_details {
-    position: relative;
+    position: relative
 }
 
 .notif_avatar {
     height: 50px;
     border-radius: 5px;
     aspect-ratio: 1;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .notif_avatar img {
     width: 100%;
     aspect-ratio: 1;
-    object-position: center;
+    object-position: center
 }
 
 .notif_icon {
@@ -2712,68 +2710,68 @@ a:hover {
     width: var(--large);
     aspect-ratio: 1;
     border-radius: 100%;
-    background-color: var(--light);
+    background-color: var(--light)
 }
 
 .notification.unread .notif_icon {
-    background-color: var(--white-op90);
+    background-color: var(--white-op90)
 }
 
 .notif_icon i::before {
     color: var(--neutral);
-    font-size: var(--2xsmall);
+    font-size: var(--2xsmall)
 }
 
 .notification.unread .notif_icon i::before {
-    color: var(--group-color);
+    color: var(--group-color)
 }
 
 .notif_content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--2xsmall);
+    gap: var(--2xsmall)
 }
 
 .notif_text {
     text-transform: lowercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .notif_text a {
     font-weight: 700;
-    color: var(--group-color);
+    color: var(--group-color)
 }
 
 .notif_time {
     font-size: var(--small);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .notif_close,
 .alert_close {
     background: transparent;
     border: 0 !important;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .notif_close {
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.3s
 }
 
 .notification:hover .notif_close {
-    opacity: 1;
+    opacity: 1
 }
 
 .notification.unread .notif_close {
-    color: var(--group-color);
+    color: var(--group-color)
 }
 
 .switcheroo {
     padding: var(--large);
-    background-color: var(--white-op90);
+    background-color: var(--white-op90)
 }
 
 .switcheroo__squircles {
@@ -2785,7 +2783,7 @@ a:hover {
     gap: var(--large);
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .switcheroo__squircle {
@@ -2798,18 +2796,18 @@ a:hover {
     border-radius: 100%;
     cursor: pointer;
     transition: border-radius 128ms var(--ease);
-    background-color: var(--group-color-100, var(--co1-100));
+    background-color: var(--group-color-100, var(--co1-100))
 }
 
 .switcheroo__squircle.active,
 .switcheroo__squircle:hover {
     background-color: var(--group-color, var(--co1));
-    cursor: default;
+    cursor: default
 }
 
 .switcheroo__squircle--button:hover {
     color: var(--light);
-    font-weight: 700;
+    font-weight: 700
 }
 
 .switcheroo__avatar img {
@@ -2820,13 +2818,13 @@ a:hover {
     transition: border-radius 128ms var(--ease);
     position: relative;
     -webkit-filter: grayscale(1);
-    filter: grayscale(1);
+    filter: grayscale(1)
 }
 
 .switcheroo__squircle.active img,
 .switcheroo__squircle:hover img {
     -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+    filter: grayscale(0)
 }
 
 .switcheroo__delete {
@@ -2845,13 +2843,13 @@ a:hover {
     transition: transform 128ms var(--ease), opacity 64ms var(--ease);
     cursor: pointer;
     color: var(--light);
-    justify-content: center;
+    justify-content: center
 }
 
 .switcheroo__squircle:hover .switcheroo__delete {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    transform: scale(1)
 }
 
 .switcheroo__popper {
@@ -2867,29 +2865,29 @@ a:hover {
     text-transform: uppercase;
     font-weight: 300;
     top: calc(26px + var(--3xsmall));
-    right: 50%;
+    right: 50%
 }
 
 .switcheroo .switcheroo__squircle:hover .switcheroo__popper {
     opacity: 1;
     -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    transform: translateX(50%)
 }
 
 .switcheroo__form {
     padding: var(--2xlarge);
-    background: var(--co2-100);
+    background: var(--co2-100)
 }
 
 .switcheroo__form-row {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    margin-bottom: var(--large);
+    margin-bottom: var(--large)
 }
 
 .switcheroo__form-row:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .switcheroo__form-label {
@@ -2897,12 +2895,12 @@ a:hover {
     font-size: var(--large);
     text-transform: uppercase;
     font-weight: 300;
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .switcheroo__form-input {
     width: 100%;
-    background-color: var(--co2-100) !important;
+    background-color: var(--co2-100) !important
 }
 
 .switcheroo__form-button {
@@ -2919,11 +2917,11 @@ a:hover {
     color: var(--co2);
     cursor: pointer;
     background-color: transparent;
-    align-self: center;
+    align-self: center
 }
 
 .switcheroo__form-button:hover {
-    color: var(--co2-700);
+    color: var(--co2-700)
 }
 
 .monomer-overlay {
@@ -2935,7 +2933,7 @@ a:hover {
     width: 100%;
     height: 100%;
     transition: opacity 0.2s ease;
-    background: var(--white-op75);
+    background: var(--white-op75)
 }
 
 .monomer-modal {
@@ -2947,12 +2945,12 @@ a:hover {
     width: 100%;
     transition: opacity 0.2s ease;
     -webkit-transform: translate(-100%, -100%);
-    transform: translate(-100%, -100%);
+    transform: translate(-100%, -100%)
 }
 
 .monomer-modal.monomer-open,
 .monomer-overlay.monomer-open {
-    opacity: 1;
+    opacity: 1
 }
 
 .monomer-close {
@@ -2972,19 +2970,19 @@ a:hover {
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
+    padding: 0 !important
 }
 
 .monomer-close:hover {
     background: var(--white-op90);
     color: var(--co2);
-    border: 0 !important;
+    border: 0 !important
 }
 
 #presentation-form {
     display: grid;
     gap: var(--2xsmall);
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 250px 1fr
 }
 
 #presentation-form label {
@@ -2997,7 +2995,7 @@ a:hover {
     border-radius: var(--small);
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 #presentation-form input,
@@ -3008,24 +3006,24 @@ a:hover {
     color: var(--co1);
     height: 25px;
     font-weight: 300;
-    align-items: center;
+    align-items: center
 }
 
 #presentation-form input:required,
 #presentation-form select:required {
-    background-color: var(--co1-100);
+    background-color: var(--co1-100)
 }
 
 #presentation-form desc,
 #presentation-form button,
 #presentation-form formtitle {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1
 }
 
 #presentation-form desc {
     font-family: var(--mono);
     text-transform: lowercase;
-    color: var(--co2);
+    color: var(--co2)
 }
 
 #presentation-form formtitle {
@@ -3034,7 +3032,7 @@ a:hover {
     font-size: var(--large);
     text-align: center;
     padding: var(--2xsmall);
-    color: var(--co3);
+    color: var(--co3)
 }
 
 #presentation-form button {
@@ -3044,7 +3042,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--2xlarge);
     text-transform: lowercase;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .ellipsis {
@@ -3052,7 +3050,7 @@ a:hover {
     white-space: nowrap;
     overflow: hidden;
     overflow: clip;
-    display: inline-block;
+    display: inline-block
 }
 
 .topiclist {
@@ -3062,7 +3060,7 @@ a:hover {
     flex-direction: column;
     padding: var(--large);
     background-color: var(--light);
-    border: 0.5px solid var(--lighter-neutral);
+    border: 0.5px solid var(--lighter-neutral)
 }
 
 .topic {
@@ -3072,38 +3070,38 @@ a:hover {
     align-items: center;
     gap: var(--large);
     border: 0.5px solid var(--lighter-neutral);
-    justify-content: center;
+    justify-content: center
 }
 
 .post_new {
-    border: 0.5px solid var(--group-color-100, var(--co1-100));
+    border: 0.5px solid var(--group-color-100, var(--co1-100))
 }
 
 .folder_global {
-    border: 0.5px solid var(--co2-100);
+    border: 0.5px solid var(--co2-100)
 }
 
 .folder_announce,
 .folder_sticky {
-    border: 0.5px solid var(--co3-100);
+    border: 0.5px solid var(--co3-100)
 }
 
 .topic-lastpost-avatar img {
     height: 45px;
     width: 45px;
-    border-radius: 2.5px;
+    border-radius: 2.5px
 }
 
 .f27.topiclist .topic-lastpost,
 .f27.topiclist .topic-author,
 .f27.topiclist .topic-statistics {
-    display: none;
+    display: none
 }
 
 .topic-content {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .topic-icon {
@@ -3115,79 +3113,79 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-op90);
+    color: var(--white-op90)
 }
 
 .topic-icon::before {
     content: "\ed4f";
-    font-family: var(--icons-solid) !important;
+    font-family: var(--icons-solid) !important
 }
 
 .post_new .topic-icon {
     background: var(--group-color-200, var(--co1-200));
-    border: 0.5px solid var(--co1);
+    border: 0.5px solid var(--co1)
 }
 
 .post_new .topic-icon::before {
-    content: "\ed61";
+    content: "\ed61"
 }
 
 .topictitle {
     font-family: var(--serif);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .post_new .topictitle {
     font-weight: 700;
-    color: var(--group-color, var(--co2));
+    color: var(--group-color, var(--co2))
 }
 
 .folder_global .topictitle {
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .folder_announce .topictitle,
 .folder_sticky .topictitle {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .topic-lastpost {
     display: flex;
     gap: var(--large);
     width: 220px;
-    align-items: center;
+    align-items: center
 }
 
 .folder_global .topic-type,
 .folder_announce .topic-type,
 .folder_sticky .topic-type {
-    display: block !important;
+    display: block !important
 }
 
 .folder_global .topic-content,
 .folder_announce .topic-content,
 .folder_sticky .topic-content {
-    align-items: flex-end;
+    align-items: flex-end
 }
 
 .folder_global .topic-type::before,
 .folder_announce .topic-type::before,
 .folder_sticky .topic-type::before {
     font-family: var(--icons-thin) !important;
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .folder_global .topic-type::before {
-    content: "\e449";
+    content: "\e449"
 }
 
 .folder_announce .topic-type::before {
-    content: "\e442";
+    content: "\e442"
 }
 
 .folder_sticky .topic-type::before {
-    content: "\e444";
+    content: "\e444"
 }
 
 .topic:not(.folder_no_new) .topic-icon,
@@ -3196,11 +3194,11 @@ a:hover {
 .topic:not(.folder_no_new) .topic-nav,
 .topic:not(.folder_no_new) .topic-lastpost,
 .topic:not(.folder_no_new) .topic-statistics {
-    display: none;
+    display: none
 }
 
 .topic-participate {
-    color: var(--group-color-200, var(--neutral));
+    color: var(--group-color-200, var(--neutral))
 }
 
 .forum-divers .forum-statistics div,
@@ -3209,19 +3207,19 @@ a:hover {
     gap: var(--2xsmall);
     width: 50px;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .title-toggle {
-    cursor: pointer;
+    cursor: pointer
 }
 
 .content-toggle {
-    display: none;
+    display: none
 }
 
 .bloc-toggle.open .content-toggle {
-    display: block;
+    display: block
 }
 
 input,
@@ -3235,20 +3233,20 @@ textarea {
     padding: var(--4xsmall);
     width: auto !important;
     flex: 1 1 100%;
-    color: inherit;
+    color: inherit
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 textarea,
 button {
     -webkit-appearance: none;
-    appearance: none;
+    appearance: none
 }
 
 input::placeholder,
 textarea::placeholder {
     color: var(--neutral);
-    opacity: 1;
+    opacity: 1
 }
 
 fieldset {
@@ -3256,7 +3254,7 @@ fieldset {
     padding: var(--large);
     border: 0;
     background-color: var(--dark-light);
-    min-width: 0;
+    min-width: 0
 }
 
 button,
@@ -3265,13 +3263,13 @@ form {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: transparent;
+    background-color: transparent
 }
 
 button {
     font: inherit;
     color: inherit;
-    cursor: pointer;
+    cursor: pointer
 }
 
 button1,
@@ -3287,7 +3285,7 @@ button2,
     font-weight: 700;
     font-size: var(--large);
     width: fit-content;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 button3,
@@ -3300,7 +3298,7 @@ button3,
     text-transform: uppercase;
     color: var(--co3) !important;
     font-weight: 700;
-    font-size: var(--xlarge);
+    font-size: var(--xlarge)
 }
 
 button3 span,
@@ -3311,7 +3309,7 @@ button3 span,
     color: var(--light);
     font-size: var(--large);
     text-transform: lowercase;
-    letter-spacing: var(--2xsmall);
+    letter-spacing: var(--2xsmall)
 }
 
 dl {
@@ -3319,11 +3317,11 @@ dl {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 dl + dl {
-    margin-top: var(--2xsmall);
+    margin-top: var(--2xsmall)
 }
 
 dt {
@@ -3331,7 +3329,7 @@ dt {
     width: 250px;
     font-family: var(--mono);
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 dd {
@@ -3341,11 +3339,11 @@ dd {
     align-items: center;
     flex-wrap: wrap;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 dd br {
-    display: none;
+    display: none
 }
 
 dt required {
@@ -3357,27 +3355,27 @@ dt required {
     align-items: center;
     justify-content: center;
     font-weight: 100;
-    border-radius: 100%;
+    border-radius: 100%
 }
 
 .submit-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 h2 + .panel {
-    padding: var(--large);
+    padding: var(--large)
 }
 
 .fields1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .fields1 #message-box {
-    flex: 1;
+    flex: 1
 }
 
 .listings-table {
@@ -3385,25 +3383,25 @@ h2 + .panel {
     padding: 0 !important;
     font-weight: 300;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .listings {
-    display: flex;
+    display: flex
 }
 
 .listings .tab-content.active {
     display: flex !important;
-    flex: 1;
+    flex: 1
 }
 
 .listings .post > sep {
-    display: none;
+    display: none
 }
 
 .listings .tabsystem-tabs {
     margin-right: var(--large) !important;
-    width: 25%;
+    width: 25%
 }
 
 .listings .tabsystem-tabs .message {
@@ -3415,28 +3413,28 @@ h2 + .panel {
     color: var(--co1-200);
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
+    height: auto
 }
 
 .listings .tabsystem-tabs .posticons {
     right: calc(100% + var(--large));
-    left: auto;
+    left: auto
 }
 
 .listings .tabsystem-tabs .message .active {
     color: var(--co1);
     padding-left: var(--large);
-    border-left: var(--4xsmall) solid var(--co1-200);
+    border-left: var(--4xsmall) solid var(--co1-200)
 }
 
 .list-row,
 .listings-table:has(.list-row) .bloc-toggle {
     display: flex;
-    --border-row: var(--neutral);
+    --border-row: var(--neutral)
 }
 
 .listings-table:has(.list-row) .bloc-toggle {
-    flex-direction: column;
+    flex-direction: column
 }
 
 .list-row.title {
@@ -3450,34 +3448,34 @@ h2 + .panel {
     justify-content: center;
     font-family: var(--display);
     text-transform: uppercase;
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .list-row.title span {
     text-transform: uppercase !important;
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .bloc-toggle:nth-of-type(2n) .title,
 .title:nth-child(2n of .title) {
-    color: var(--co3);
+    color: var(--co3)
 }
 
 .fam-row {
     --border-row: var(--neutral);
-    color: var(--fam-color);
+    color: var(--fam-color)
 }
 
 .fam-row .title-toggle {
     display: grid;
-    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr))
 }
 
 .fam-row:first-of-type span {
     text-transform: uppercase;
     font-family: var(--display);
     font-size: var(--large);
-    font-weight: 700;
+    font-weight: 700
 }
 
 .fam-row span,
@@ -3489,81 +3487,81 @@ h2 + .panel {
     text-align: center;
     align-items: center;
     justify-content: center;
-    text-transform: lowercase;
+    text-transform: lowercase
 }
 
 .list-row:not(.title) span {
     height: 2.5rem;
-    color: var(--group-color);
+    color: var(--group-color)
 }
 
 .list-row:not(.title) span:first-of-type {
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 .fam-row span {
-    height: 4rem !important;
+    height: 4rem !important
 }
 
 span[data-field="pseudo"] a {
     color: var(--group-color);
-    font-weight: 700;
+    font-weight: 700
 }
 
 span[data-field="pseudo"],
 span[data-field="face"] {
-    text-transform: capitalize;
+    text-transform: capitalize
 }
 
 .fam-row:nth-of-type(2n) {
-    background-color: var(--dark-light);
+    background-color: var(--dark-light)
 }
 
 .fam-row.open {
     background-color: var(--fam-color-100);
-    --border-row: var(--fam-color) !important;
+    --border-row: var(--fam-color) !important
 }
 
 .fam-row.open .content-toggle {
     border-top: 0.5px solid;
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr))
 }
 
 .fam-row.open [data-field="name"] {
-    font-weight: 700;
+    font-weight: 700
 }
 
 .fam-row [data-field="name"] {
     font-family: var(--spe);
-    font-size: var(--large);
+    font-size: var(--large)
 }
 
 .fam-row [data-field="played"]::before {
     content: "en jeu: ";
-    padding-right: var(--2xsmall);
+    padding-right: var(--2xsmall)
 }
 
 .fam-row [data-field="rank"]::after {
-    content: "/26";
+    content: "/26"
 }
 
 .fam-row span:last-of-type,
 .list-row span:last-of-type {
-    border: 0 !important;
+    border: 0 !important
 }
 
 [id="267"].postlist .quick-nav-topics,
 [id="0"].post {
-    display: none;
+    display: none
 }
 
 .topic-header {
     display: flex;
     flex-direction: column;
     padding: var(--large);
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .topic-header-path {
@@ -3571,7 +3569,7 @@ span[data-field="face"] {
     align-items: center;
     justify-content: center;
     font-size: 0;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 a.nav {
@@ -3579,19 +3577,19 @@ a.nav {
     padding: var(--4xsmall) var(--2xsmall);
     border-radius: var(--large);
     color: var(--white-op90) !important;
-    background-color: var(--co2);
+    background-color: var(--co2)
 }
 
 .topic-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .quickreply .h3,
 .quickreply br {
-    display: none;
+    display: none
 }
 
 .quickreply form > div:nth-of-type(2) {
@@ -3601,7 +3599,7 @@ a.nav {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    font-size: 0;
+    font-size: 0
 }
 
 .topic-watch {
@@ -3609,7 +3607,7 @@ a.nav {
     align-items: center;
     justify-content: center;
     text-transform: lowercase;
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 .topic-watch a {
@@ -3617,7 +3615,7 @@ a.nav {
     font-weight: 300 !important;
     letter-spacing: var(--2xsmall);
     padding-left: var(--2xsmall);
-    text-shadow: 1px 1px var(--light);
+    text-shadow: 1px 1px var(--light)
 }
 
 .topic-admin {
@@ -3625,7 +3623,7 @@ a.nav {
     align-items: center;
     justify-content: center;
     font-size: 0;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .topic-admin i::before {
@@ -3637,32 +3635,32 @@ a.nav {
     width: var(--xlarge);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .trad vf {
-    display: none;
+    display: none
 }
 
 .trad:hover vo {
     display: none;
-    transition: 0.5s;
+    transition: 0.5s
 }
 
 .trad:hover vf {
     display: inline;
-    transition: 0.5s;
+    transition: 0.5s
 }
 
 .fi-ts-align-right::before {
     content: "\e07a";
     display: inline-block;
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    transform: scaleX(-1)
 }
 
 #textarea_content {
-    width: 100% !important;
+    width: 100% !important
 }
 
 .sceditor-container {
@@ -3674,7 +3672,7 @@ a.nav {
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     font-weight: 500 !important;
-    outline: 0.5px solid var(--lighter-neutral) !important;
+    outline: 0.5px solid var(--lighter-neutral) !important
 }
 
 div.sceditor-toolbar {
@@ -3691,7 +3689,7 @@ div.sceditor-toolbar {
     flex-wrap: wrap !important;
     align-items: center !important;
     gap: var(--2xsmall) !important;
-    justify-content: center !important;
+    justify-content: center !important
 }
 
 div.sceditor-group {
@@ -3704,7 +3702,7 @@ div.sceditor-group {
     padding: 0 !important;
     align-items: center !important;
     gap: var(--2xsmall) !important;
-    justify-content: center !important;
+    justify-content: center !important
 }
 
 .sceditor-button {
@@ -3720,14 +3718,14 @@ div.sceditor-group {
     text-indent: 0 !important;
     background-color: var(--co1-100) !important;
     color: var(--co1) !important;
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 .sceditor-button:hover {
     background-color: var(--co1) !important;
     color: var(--white-op90) !important;
     box-shadow: none !important;
-    border: 0 !important;
+    border: 0 !important
 }
 
 .sceditor-container iframe,
@@ -3740,14 +3738,14 @@ div.sceditor-group {
     font-size: var(--medium) !important;
     padding: var(--large) !important;
     width: 100% !important;
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 .has-credit {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .has-credit:hover::after {
@@ -3759,7 +3757,7 @@ div.sceditor-group {
     text-transform: lowercase;
     font-family: var(--mono);
     font-size: var(--small);
-    z-index: 9999;
+    z-index: 9999
 }
 
 .registration-tabs {
@@ -3769,7 +3767,7 @@ div.sceditor-group {
     gap: var(--large);
     flex-wrap: wrap;
     margin: var(--large) 0;
-    width: 100%;
+    width: 100%
 }
 
 .registration-tabs a {
@@ -3778,13 +3776,13 @@ div.sceditor-group {
     font-family: var(--serif);
     text-transform: lowercase;
     padding: var(--2xsmall) var(--large);
-    border-radius: var(--large);
+    border-radius: var(--large)
 }
 
 .registration {
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .registration-dtls {
-    width: 100%;
+    width: 100%
 }

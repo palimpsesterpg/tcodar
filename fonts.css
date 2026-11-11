@@ -139,59 +139,52 @@
 }
 
 @font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-Thin.otf') format('opentype');
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-ExtraLight.ttf') format('opentype');
 	font-weight: 100;
 	font-style: normal
 }
 
 @font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-Light.otf') format('opentype');
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-Light.ttf') format('opentype');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-Regular.ttf') format('opentype');
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-Semibold.otf') format('opentype');
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-Medium.ttf') format('opentype');
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-SemiBold.ttf') format('opentype');
+	font-weight: 600;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-Bold.ttf') format('opentype');
 	font-weight: 700;
 	font-style: normal
 }
 
 @font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-Black.otf') format('opentype');
-	font-weight: 1000;
+	font-family: 'Valmist';
+	src: url('../fonts/TBJValmistDemo-ExtraBold.ttf') format('opentype');
+	font-weight: 900;
 	font-style: normal
-}
-
-@font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-ThinItalic.otf') format('opentype');
-	font-weight: 100;
-	font-style: italic
-}
-
-@font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-LightItalic.otf') format('opentype');
-	font-weight: 400;
-	font-style: italic
-}
-
-@font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-SemiboldItalic.otf') format('opentype');
-	font-weight: 700;
-	font-style: italic
-}
-
-@font-face {
-	font-family: 'Acma';
-	src: url('../fonts/PPAcma-BlackItalic.otf') format('opentype');
-	font-weight: 1000;
-	font-style: italic
 }
 
 @font-face {

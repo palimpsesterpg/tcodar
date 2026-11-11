@@ -927,7 +927,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: var(--large);
-    padding: var(--2xlarge);
+    padding: var(--large);
     background-color: var(--light);
     border: var(--2xsmall) solid var(--dark-light);
     outline: 0.5px solid var(--lighter-neutral);
@@ -1249,9 +1249,6 @@ a:hover {
 }
 
 .forum-admin {
-    background-color: var(--white-op50);
-    backdrop-filter: blur(2px);
-    padding: var(--large);
     justify-content: space-between;
     gap: var(--2xlarge);
     flex: 1 1 calc(100% / 2)
@@ -1382,12 +1379,16 @@ a:hover {
 }
 
 .forum-admin .forum-posts span,
-.forum-admin .forum-topics span {
+.forum-admin .forum-topics span,
+.forum-off .forum-posts span,
+.forum-off .forum-topics span {
     color: var(--co3)
 }
 
 .forum-admin .forum-posts:after,
-.forum-admin .forum-topics:after {
+.forum-admin .forum-topics:after,
+.forum-off .forum-posts:after,
+.forum-off .forum-topics:after {
     background-color: var(--co3);
     color: var(--light);
     border-radius: 100%;
@@ -1414,10 +1415,6 @@ a:hover {
 }
 
 .forum-off {
-    padding: var(--large);
-    background-color: var(--white-op50);
-    backdrop-filter: blur(2px);
-    border: 0.5px solid var(--white-op90);
     justify-content: flex-end
 }
 
@@ -1483,19 +1480,10 @@ a:hover {
     justify-content: center
 }
 
-.forum-off .forum-posts,
-.forum-off .forum-topics {
-    background-color: var(--co3-100);
-    color: var(--co3);
-    font-weight: 300;
-    border-color: var(--co3)
-}
-
 .forum-off .forum-lastpost-avatar img {
     height: 100%;
     width: 75px;
     left: 0;
-
     top: 0;
     position: absolute
 }
@@ -1513,15 +1501,7 @@ a:hover {
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
-    border: 0.5px solid
-}
-
-.forum-media:nth-of-type(odd) {
-    border-color: var(--co3)
-}
-
-.forum-media:nth-of-type(even) {
-    border-color: var(--co2)
+    border: 0.5px solid var(--co1)
 }
 
 .forum-media .forum-content {
@@ -1540,15 +1520,8 @@ a:hover {
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
     font-weight: 100;
-    font-size: var(--xlarge)
-}
-
-.forum-media:nth-of-type(odd) .forumtitle {
-    color: var(--co3)
-}
-
-.forum-media:nth-of-type(even) .forumtitle {
-    color: var(--co2)
+    font-size: var(--xlarge);
+    color: var(--co1)
 }
 
 .forum-media .forum-description {
@@ -1593,15 +1566,9 @@ a:hover {
 
 .forum-archives {
     padding: var(--large);
-    background-color: var(black-op50);
-    border: 0.5px solid var(--black-op90);
-    backdrop-filter: blur(2px);
+    border: 0.5px solid var(--neutral);
+    background-color: var(--light-neutral);
     align-items: center
-}
-
-[data-color-scheme="dark"] .forum-archives {
-    background-color: var(--white-op50);
-    border: 0.5px solid var(--black-op90)
 }
 
 .forum-archives .forum-content {
@@ -1621,7 +1588,7 @@ a:hover {
 
 .forum-archives .forumtitle {
     font-family: var(--spe);
-    color: var(--light);
+    color: var(--dark);
     font-size: var(--3xlarge);
     line-height: 1;
     font-weight: 100;

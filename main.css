@@ -1803,13 +1803,11 @@ a:hover {
     justify-content: space-between
 }
 
-.memberpanel>div {
+.memberpanel {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    flex-wrap: wrap;
-    padding: var(--large);
     text-transform: uppercase;
     text-align: center;
     font-weight: 300
@@ -1826,12 +1824,14 @@ a:hover {
 .member {
     gap: var(--large);
     display: flex;
-    flex-direction: column;
+    width: 100%;
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
+
+.member:hover {width: 150%}
 
 .member-avatar img {
     height: 250px;
@@ -1843,8 +1843,7 @@ a:hover {
     width: 100%;
     display: flex;
     gap: var(--large);
-    flex-direction: column;
-    position: relative
+    flex-direction: column
 }
 
 .member-infos {
@@ -1854,7 +1853,6 @@ a:hover {
     padding: var(--2xsmall);
     flex-direction: column;
     display: none;
-    position: absolute;
     background: var(--gradientgc3, var(--gradientLight));
     top: 0;
     right: 0

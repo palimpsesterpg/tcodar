@@ -2345,28 +2345,41 @@ a:hover {
     text-transform: uppercase
 }
 
-.phseven-city .city,
-.phseven-city .meteo {
+.phseven-city .city {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large)
 }
 
+.phseven-city .meteo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--large)
+}
+
+season {
+    flex: 1
+}
+
 .phseven-city .city {
-    font-size: var(--xlarge);
     height: var(--xlarge)
+}
+
+.phseven-city .city strong {
+    font-size: var(--xlarge)
 }
 
 .phseven-city .city img {
     height: var(--xlarge)
 }
 
-.phseven-city .time>* {
-    background-color: var(--dark);
-    color: var(--light);
-    padding: 0 var(--4xsmall);
-    font-weight: 900
+.phseven-city .time {
+    color: var(--dark);
+    font-family: var(--serif);
+    font-size: var(--2xlarge)
 }
 
 #hub {

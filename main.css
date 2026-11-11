@@ -17,8 +17,8 @@
 
     --main: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --mono: "Inconsolata", ui-monospace, monospace;
-    --serif: "Editorial", Georgia, serif;
-    --display: "Bebas", Impact, sans-serif;
+    --serif: "Bodoni Moda", Georgia, serif;
+    --display: "Switzer", Impact, sans-serif;
     --spe: "Valmist", serif;
     --cursive: "Cedarville Cursive", cursive;
 
@@ -386,7 +386,6 @@
     }
 
     #page-navbar {
-        width: 100vh !important;
         height: 3rem !important;
         justify-content: center !important;
         flex-direction: row !important;
@@ -394,10 +393,6 @@
 
     #page-navbar > div {
         flex-direction: row !important;
-    }
-
-    #page-navbar > div:first-of-type {
-        padding-top: 0 !important;
     }
 
     #page-navbar > div + div {
@@ -664,10 +659,12 @@ a:hover {
 }
 
 #page-navbar {
-    top: 0;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 var(--large) var(--large) 0;
     left: 0;
     width: 3rem;
+    padding: var(--large);
     z-index: 999;
     position: fixed;
     display: flex;
@@ -682,10 +679,6 @@ a:hover {
     align-items: center;
     gap: var(--large);
     flex-direction: column
-}
-
-#page-navbar > div:first-of-type {
-    padding-top: var(--large)
 }
 
 #page-navbar > div + div {

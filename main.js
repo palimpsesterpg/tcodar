@@ -1186,6 +1186,13 @@ function initCategoriesToggle() {
   });
 }
 
+function moveAdminLinks() {
+  const target = q('#page-navbar div:nth-of-type(2)');
+  if (!target) return;
+
+  target.append(...qq('a[href^="/admin/?part=admin"]'));
+}
+
 function initForumList() {
     qq('.forum-links:empty').forEach(el => el.remove());
 
@@ -1290,6 +1297,7 @@ onReady(() => {
     addQueendomTab();
     unwrapTabs();
     formatFieldLabels();
+    moveAdminLinks();
     initTabs();
     initTabsInline();
     initHeaderNav();

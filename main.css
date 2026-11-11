@@ -659,21 +659,15 @@ a:hover {
     background-color: var(--dark-light);
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column
-}
-
-#page-navbar>div {
-    display: flex;
-    align-items: center;
-    gap: var(--large);
-    flex-direction: column
+    flex-direction: column;
+    gap: var(--large)
 }
 
 #page-navbar sep {
-    border-top: 2.5px solid var(--lighter-neutral);
-    margin-top: var(--2xlarge);
-    border-radius: 1.25px;
-    padding-top: var(--2xlarge)
+    background-color: var(--light);
+    height: 2.5px;
+    width: 100%;
+    border-radius: var(--2xsmall)
 }
 
 .mainmenu {

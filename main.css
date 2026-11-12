@@ -2090,6 +2090,10 @@ a:hover {
     justify-items: center
 }
 
+.wombat .profile-head {
+    grid-template-rows: auto auto auto;
+}
+
 .profile-avatar {
     grid-area: 1 / 1 / 4 / 2
 }
@@ -2114,6 +2118,22 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
+}
+
+.profile-mini {
+    grid-area: 4 / 2 / 5 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+}
+
+.profile-mini>div {
+    background-color: var(--gorup-color-100);
+    color: var(--group-color);
+    text-transform: uppercase;
+    font-family: var(--mono);
+    padding: var(--4xsmall)
 }
 
 .profile-stats a {

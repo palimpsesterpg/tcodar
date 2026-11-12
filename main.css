@@ -2017,15 +2017,16 @@ a:hover {
 
 .profile-body .tabsystem-tabs {
     display: flex;
-    gap: var(--large);
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start;
+    aspect-ratio: 1;
     width: 200px;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 .profile-body .tabsystem-contents {
     height: 200px;
+    flex: 1;
     overflow: auto
 }
 
@@ -2035,6 +2036,16 @@ a:hover {
     font-size: var(--5xlarge);
     color: var(--group-color, var(--co1));
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
+}
+
+.profile-second-avatar {
+    aspect-ratio: 1;
+    width: 200px;
+    overflow: hidden
+}
+
+.profile-fields>div {
+    display: flex
 }
 
 .profile-pseudo .nom {

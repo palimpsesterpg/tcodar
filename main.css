@@ -332,7 +332,7 @@
         --3xlarge: 2rem;
         --4xlarge: 3rem;
         --5xlarge: 4rem;
-        --6xlarge: 5rem;
+        --6xlarge: 5rem
     }
 
     #categories {
@@ -340,63 +340,62 @@
         margin-left: 0 !important;
         grid-template-columns: var(--2xlarge) auto !important;
         grid-template-rows: auto auto !important;
-        width: 100% !important;
+        width: 100% !important
     }
 
     #categories .tabsystem-contents {
-        grid-area: 1 / 2 / 3 / 3 !important;
+        grid-area: 1 / 2 / 3 / 3 !important
     }
 
     #categories .tabsystem-tabs.off {
         grid-area: 1 / 1 / 2 / 2 !important;
-        align-self: end !important;
+        align-self: end !important
     }
 
     #categories .tabsystem-tabs.loc {
         grid-area: 2 / 1 / 3 / 2 !important;
-        align-self: start !important;
+        align-self: start !important
     }
 
     #categories .tabsystem-tabs.loc>i {
-        order: 3 !important;
+        order: 3 !important
     }
 
     .category-title h2 {
         width: calc(100% + var(--5xlarge)) !important;
-        margin-left: -4rem !important;
+        margin-left: -4rem !important
     }
 
     body {
         min-height: 100vh !important;
         min-height: 100dvh !important;
         width: 100h !important;
-        height: auto !important;
+        height: auto !important
     }
 
     #page-content,
     #page-home,
     #page-footer {
         width: 100% !important;
-        border: 0 !important;
+        border: 0 !important
     }
 
     #page-header {
         width: 100vh !important;
-        height: 500px !important;
+        height: 500px !important
     }
 
     #page-navbar {
+        right: 50%;
+        transform: translateX(-50%);
+        top: var(--large);
         height: 3rem !important;
         justify-content: center !important;
-        flex-direction: row !important;
-    }
-
-    #page-navbar>div {
-        flex-direction: row !important;
+        flex-direction: row !important
     }
 
     #page-navbar sep {
-        width: 2.5px;
+        width: 0.5px;
         height: auto
     }
 
@@ -404,17 +403,17 @@
         top: var(--large) !important;
         right: var(--large) !important;
         bottom: auto !important;
-        left: auto !important;
+        left: auto !important
     }
 
     #notiffi_panel {
         width: 100% !important;
         border: 0 !important;
-        top: 3rem !important;
+        top: 3rem !important
     }
 
     .forum-off .forum-lastpost-avatar img {
-        width: 50px !important;
+        width: 50px !important
     }
 }
 
@@ -441,7 +440,7 @@ body {
 
 @supports (-webkit-touch-callout: none) {
     body {
-        background-attachment: scroll;
+        background-attachment: scroll
     }
 }
 
@@ -656,12 +655,12 @@ a:hover {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    gap: var(--large)
+    gap: var(--2xsmall)
 }
 
 #page-navbar sep {
     background-color: var(--light);
-    height: 2.5px;
+    height: 0.5px;
     width: 100%;
     border-radius: var(--2xsmall)
 }
@@ -2802,21 +2801,21 @@ season {
 
 @-webkit-keyframes notiffiFadeIn {
     from {
-        opacity: 0;
+        opacity: 0
     }
 
     to {
-        opacity: 1;
+        opacity: 1
     }
 }
 
 @keyframes notiffiFadeIn {
     from {
-        opacity: 0;
+        opacity: 0
     }
 
     to {
-        opacity: 1;
+        opacity: 1
     }
 }
 

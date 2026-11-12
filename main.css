@@ -3961,3 +3961,7 @@ div.sceditor-group {
 .registration-dtls {
     width: 100%
 }
+
+#field_id:has(#i_icon_email) {
+    display: none
+}

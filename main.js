@@ -119,7 +119,12 @@ const ICONS = [{
     },
     {
         selector: 'img[src*="icon_contact_www.png"]',
-        icon: 'fi fi-ts-envelope-plus',
+        icon: 'fi fi-ts-info-guide',
+        replace: true
+    },
+        {
+        selector: 'img[src*="icon_contact_wwww.png"]',
+        icon: 'fi fi-ts-file-user',
         replace: true
     },
     {

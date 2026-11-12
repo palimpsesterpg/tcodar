@@ -1158,6 +1158,22 @@ a:hover {
     flex: 1 1 calc(100% / 2.1)
 }
 
+.forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
+    grid-column: 1;
+}
+
+.forumlist:has(.forum-loc)>.forum-loc:nth-child(even) {
+    grid-column: 3;
+}
+
+.forum-preview {
+    width: 150px;
+    grid-column: 2;
+    height: auto;
+    pointer-events: none;
+    transition: opacity .2s, top .2s;
+}
+
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;

@@ -468,6 +468,35 @@ function formatFieldLabels() {
     });
 }
 
+function initForumPreviews() {
+  qq('.forumlist:has(.forum-loc)').forEach(list => {
+    const preview = document.createElement('img');
+    preview.className = 'forum-preview';
+    list.append(preview);
+
+    let current = null;
+
+    list.addEventListener('mouseover', e => {
+      const forum = e.target.closest('.forum-loc');
+      if (!forum || forum === current) return;
+
+      const img = q('.forum-description img', forum);
+      if (!img) return;
+
+      current = forum;
+      preview.src = img.src;
+      preview.alt = img.alt;
+      preview.style.setProperty('--preview-top', `${forum.offsetTop}px`);
+      preview.classList.add('is-visible');
+    });
+
+    list.addEventListener('mouseleave', () => {
+      current = null;
+      preview.classList.remove('is-visible');
+    });
+  });
+}
+
 function initColorScheme() {
     const html = document.documentElement;
     const toggle = q('.color-scheme-toggle');
@@ -1362,6 +1391,7 @@ onReady(() => {
     initTitles();
     initForumList();
     initColorScheme();
+    initForumPreviews();
     numberSpans();
     loadNewestUserAvatar();
     replaceEmojis();

@@ -1986,7 +1986,8 @@ a:hover {
     padding-right: var(--2xsmall)
 }
 
-.member:has(.cam, .lea) span {
+.member:has(.cam, .lea) .member-pseudo span,
+.profile:has(.cam, .lea) .profile-pseudo {
     display: flex;
     gap: var(--2xsmall);
     align-items: center;
@@ -1995,13 +1996,13 @@ a:hover {
 
 #hub a.lea strong::before,
 .member a.lea span::before,
-.lea.profile.en.ligne .profile-pseudo::before {
+.profile.lea .profile-pseudo::before {
     content: "⭒"
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
-.cam.profile.en.ligne .profile-pseudo::before {
+.profile.cam .profile-pseudo::before {
     content: "✻"
 }
 

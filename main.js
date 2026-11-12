@@ -1382,6 +1382,7 @@ onReady(() => {
 
     setCharacterKeys('.member', '.member-pseudo');
     setCharacterKeys('.postprofile', '.postprofile-name');
+    setCharacterKeys('.wombat', '.profile-pseudo');
     fillAllCards();
     qq('.list-row[data-character]').forEach(buildRow);
     splitPseudonyme();

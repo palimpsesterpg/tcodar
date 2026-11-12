@@ -1159,11 +1159,11 @@ a:hover {
 }
 
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
-    grid-column: 1;
+    grid-column: 1
 }
 
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(even) {
-    grid-column: 3;
+    grid-column: 3
 }
 
 .forum-preview {
@@ -1245,7 +1245,18 @@ a:hover {
     flex: 1 1 calc(100% / 2.1)
 }
 
-.forum-admin:nth-of-type(even) .forum-icon,
+.forum-admin:nth-of-type(even) .forum-icon {
+    left: 0;
+    bottom: 0;
+    top: auto;
+    right: auto
+}
+
+.forum-loc:nth-of-type(even) .forum-icon {
+    top: var(--large);
+    right: var(--large)
+}
+
 .forum-loc:nth-of-type(even) .forum-icon {
     left: var(--large);
     bottom: var(--large);
@@ -1450,7 +1461,7 @@ a:hover {
 }
 
 .forum-off:nth-of-type(odd) .forum-content {
-    grid-template-columns: 100px auto;
+    grid-template-columns: 100px auto
 }
 
 .forum-off .forum-title {

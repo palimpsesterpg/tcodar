@@ -1419,7 +1419,7 @@ a:hover {
 
 .forum-off .forum-content {
     width: calc(100% - 75px - var(--large));
-    grid-template-columns: auto 75px;
+    grid-template-columns: auto 100px;
     gap: var(--large);
     display: grid;
     grid-template-rows: auto auto auto
@@ -1458,11 +1458,11 @@ a:hover {
 }
 
 .forum-off .forum-lastpost,
-.forum-off:nth-of-type(odd) .forum-off .forum-statistics {
+.forum-off:nth-of-type(odd) .forum-statistics {
     grid-area: 2 / 1 / 3 / 2
 }
 
-.forum-off:nth-of-type(odd) .forum-off .forum-lastpost {
+.forum-off:nth-of-type(odd) .forum-lastpost {
     grid-area: 2 / 2 / 3 / 3
 }
 
@@ -1491,12 +1491,10 @@ a:hover {
     flex: 1 1 100%;
     padding: var(--large);
     gap: var(--large);
-    background-color: var(--white-op90);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
-    border: 0.5px solid var(--co3)
+    border: var(--2xsmall) solid var(--dark-light);
+    outline: 0.5px solid var(--co3)
 }
 
 .forum-media .forum-content {
@@ -1515,8 +1513,8 @@ a:hover {
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
     font-weight: 100;
-    font-size: var(--xlarge);
-    color: var(--co1)
+    font-size: var(--large);
+    color: var(--co3)
 }
 
 .forum-media .forum-description {
@@ -1552,6 +1550,10 @@ a:hover {
     height: 35px;
     width: 35px;
     border-radius: var(--small)
+}
+
+.forum-statistics {
+    width: 100px
 }
 
 .forum-archives {

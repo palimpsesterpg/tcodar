@@ -2176,7 +2176,7 @@ a:hover {
     display: grid;
     width: 100%;
     grid-template-columns: auto 0.5px auto 0.5px auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 0.5px auto;
     gap: var(--large)
 }
 

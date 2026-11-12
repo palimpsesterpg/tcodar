@@ -1169,9 +1169,8 @@ a:hover {
 .forum-preview {
     width: 150px;
     grid-column: 2;
-    height: auto;
-    pointer-events: none;
-    transition: opacity .2s, top .2s;
+    grid-row: all;
+    height: 100%
 }
 
 .forum-loc .forum-content {
@@ -1429,6 +1428,8 @@ a:hover {
 
 .forum-off:nth-of-type(odd) .forum-icon {
     left: auto;
+    top: auto;
+    bottom: 0;
     right: 0
 }
 
@@ -1460,17 +1461,17 @@ a:hover {
 
 .forum-off:nth-of-type(even) .forum-title,
 .forum-off:nth-of-type(even) .forum-lastpost-infos,
-.forum-off:nth-of-type(even) .forum-off .forum-links {
+.forum-off:nth-of-type(even) .forum-links {
     text-align: right
 }
 
 .forum-off .forumtitle {
-    font-size: var(--xlarge);
+    font-size: var(--2xlarge);
     font-family: var(--spe);
     color: var(--co2);
     text-transform: lowercase;
     font-weight: 700;
-    text-shadow: 1px 1px var(--light)
+    text-shadow: 1px 1px var(--co2-100)
 }
 
 .forum-off .forum-links {

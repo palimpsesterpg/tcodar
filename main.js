@@ -486,13 +486,10 @@ function initForumPreviews() {
       current = forum;
       preview.src = img.src;
       preview.alt = img.alt;
-      preview.style.setProperty('--preview-top', `${forum.offsetTop}px`);
-      preview.classList.add('is-visible');
     });
 
     list.addEventListener('mouseleave', () => {
       current = null;
-      preview.classList.remove('is-visible');
     });
   });
 }

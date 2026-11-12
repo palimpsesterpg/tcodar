@@ -2156,13 +2156,15 @@ a:hover {
 #reception .tab-content.active {
     display: flex;
     align-items: center;
-    gap: var(--large)
+    gap: var(--large);
+    width: 100%
 }
 
 #reception .seven {
-    display: flex;
+    display: grid;
     width: 100%;
-    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     gap: var(--large)
 }
 
@@ -2496,9 +2498,6 @@ a:hover {
 }
 
 .phseven-city {
-    flex: 1 1 calc(100% / 3.2);
-    background-size: cover;
-    background-position: center center;
     display: flex;
     color: var(--dark);
     gap: var(--large);
@@ -2529,10 +2528,10 @@ a:hover {
     gap: var(--large)
 }
 
-.phseven-city.brd {
-    padding: 0 var(--large);
-    border-left: 0.5px solid var(--darker-light);
-    border-right: 0.5px solid var(--darker-light)
+.phseven-city.brd+sep+.phseven-city.brd {
+    height: 100%;
+    width: 0.5px;
+    background-color: var(--gradientNeutralVertical)
 }
 
 season {

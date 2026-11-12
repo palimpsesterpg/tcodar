@@ -1367,6 +1367,10 @@ onReady(() => {
         p.before(sep());
         p.after(sep());
     });
+    qq('.phseven-city.brd').forEach(p => {
+        p.before(sep());
+        p.after(sep());
+    });
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
     qq('.page-filters').forEach(p => p.after(sep()));

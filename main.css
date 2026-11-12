@@ -1993,18 +1993,6 @@ a:hover {
     justify-content: center
 }
 
-#hub a.lea strong::before,
-.member a.lea span::before,
-.profile.lea::before {
-    content: "⭒" !important
-}
-
-#hub a.cam strong::before,
-.member a.cam span::before,
-.profile.cam::before {
-    content: "✻" !important
-}
-
 .profile {
     position: relative
 }
@@ -2072,6 +2060,7 @@ a:hover {
     color: var(--group-color, var(--co1));
     height: var(--2xlarge);
     width: var(--2xlarge);
+    border: 0.5px solid var(--group-color, var(--co1));
     display: flex;
     align-items: center;
     justify-content: center
@@ -2140,7 +2129,7 @@ a:hover {
 }
 
 .profile-mini>div {
-    background-color: var(--gorup-color-100);
+    background-color: var(--group-color-100);
     color: var(--group-color);
     text-transform: uppercase;
     font-family: var(--mono);

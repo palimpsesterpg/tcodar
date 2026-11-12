@@ -2164,7 +2164,7 @@ a:hover {
 #reception .seven {
     display: grid;
     width: 100%;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 0.5px auto 0.5px auto;
     grid-template-rows: auto auto;
     gap: var(--large)
 }
@@ -2529,7 +2529,7 @@ a:hover {
     gap: var(--large)
 }
 
-.phseven-city.brd+sep+.phseven-city.brd {
+minisep {
     height: 100%;
     width: 0.5px;
     background-color: var(--gradientNeutralVertical)

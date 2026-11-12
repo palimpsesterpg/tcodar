@@ -1490,7 +1490,7 @@ a:hover {
     backdrop-filter: blur(2px);
     flex-direction: row !important;
     align-items: center;
-    border: 0.5px solid var(--co1)
+    border: 0.5px solid var(--co3)
 }
 
 .forum-media .forum-content {
@@ -1523,8 +1523,8 @@ a:hover {
     right: auto
 }
 
-.forum-media:nth-of-type(even) .forum-icon,
-.forum-media:nth-of-type(even) .forum-links a {
+.forum-media .forum-icon,
+.forum-media .forum-links a {
     color: var(--co1)
 }
 

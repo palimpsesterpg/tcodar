@@ -1169,7 +1169,7 @@ a:hover {
 .forum-preview {
     width: 150px;
     grid-column: 2;
-    grid-row: all;
+    grid-row: 1 / 10;
     height: 100%
 }
 

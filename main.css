@@ -2060,7 +2060,7 @@ a:hover {
 }
 
 .profile::before {
-    content: "";
+    content: "o";
     font-family: var(--icons-thin);
     font-size: var(--large);
     border-radius: 100%;
@@ -2068,7 +2068,8 @@ a:hover {
     left: var(--2xsmall);
     top: var(--2xsmall);
     color: var(--light);
-    background-color: var(--group-color, var(--co1));
+    background-color: var(--light);
+    color: var(--group-color, var(--co1));
     height: var(--2xlarge);
     width: var(--2xlarge);
     display: flex;
@@ -2077,7 +2078,9 @@ a:hover {
 }
 
 .profile.en.ligne::before {
-    content: "\e974"
+    content: "\e974";
+    background-color: var(--group-color, var(--co1));
+    color: var(--light)
 }
 
 .profile-head {

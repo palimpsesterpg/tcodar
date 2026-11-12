@@ -1166,9 +1166,10 @@ a:hover {
 }
 
 .forum-preview {
-    width: 150px;
+    position: absolute;
     grid-column: 2;
-    grid-row: 1 / 10;
+    grid-row: 1 / -1;
+    width: 150px;
     height: 100%
 }
 

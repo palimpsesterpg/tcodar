@@ -474,22 +474,16 @@ function initForumPreviews() {
     preview.className = 'forum-preview';
     list.append(preview);
 
-    let current = null;
+    const show = forum => {
+      const img = q('.forum-description img', forum);
+      if (img) Object.assign(preview, { src: img.src, alt: img.alt });
+    };
+
+    show(q('.forum-loc', list));
 
     list.addEventListener('mouseover', e => {
       const forum = e.target.closest('.forum-loc');
-      if (!forum || forum === current) return;
-
-      const img = q('.forum-description img', forum);
-      if (!img) return;
-
-      current = forum;
-      preview.src = img.src;
-      preview.alt = img.alt;
-    });
-
-    list.addEventListener('mouseleave', () => {
-      current = null;
+      if (forum) show(forum);
     });
   });
 }

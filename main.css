@@ -1996,13 +1996,13 @@ a:hover {
 #hub a.lea strong::before,
 .member a.lea span::before,
 .profile.lea::before {
-    content: "⭒"
+    content: "⭒" !important
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
 .profile.cam::before {
-    content: "✻"
+    content: "✻" !important
 }
 
 .profile {
@@ -2054,8 +2054,8 @@ a:hover {
     font-size: var(--large);
     border-radius: 100%;
     position: absolute;
-    left: var(--large);
-    top: var(--large);
+    left: var(--2xsmall);
+    top: var(--2xsmall);
     color: var(--light);
     background-color: var(--group-color, var(--co1));
     height: var(--2xlarge);
@@ -2092,7 +2092,7 @@ a:hover {
     color: var(--light);
     background-color: var(--group-color);
     border-radius: var(--2xsmall);
-    padding: var(--large);
+    padding: var(--2xsmall) var(--2xlarge);
     text-transform: uppercase;
     font-weight: 300
 }
@@ -2108,6 +2108,7 @@ a:hover {
 .profile-stats a {
     color: var(--group-color);
     font-family: var(--serif);
+    font-size: var(--large);
     text-transform: lowercase;
     font-weight: 700
 }

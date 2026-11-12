@@ -2005,14 +2005,28 @@ a:hover {
     content: "✻"
 }
 
-.profile.en.ligne {
+.profile {
     position: relative
 }
 
 .profile-body {
     display: flex;
     gap: var(--large);
-    flex-wrap: wrap
+    align-items: center
+}
+
+.profile-body .tabsystem-tabs {
+    display: flex;
+    gap: var(--large);
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
+
+.profile-body .tabsystem-contents {
+    height: 200px;
+    overflow: auto
 }
 
 .profile-pseudo {
@@ -2034,8 +2048,8 @@ a:hover {
     width: 200px
 }
 
-.profile.en.ligne::before {
-    content: "\e974";
+.profile::before {
+    content: "";
     font-family: var(--icons-thin);
     font-size: var(--large);
     border-radius: 100%;
@@ -2049,6 +2063,10 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center
+}
+
+.profile.en.ligne::before {
+    content: "\e974"
 }
 
 .profile-head {
@@ -2080,7 +2098,18 @@ a:hover {
 }
 
 .profile-stats {
-    grid-area: 3 / 2 / 4 / 3
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--large);
+}
+
+.profile-stats a {
+    color: var(--group-color);
+    font-family: var(--serif);
+    text-transform: lowercase;
+    font-weight: 700
 }
 
 #reception {

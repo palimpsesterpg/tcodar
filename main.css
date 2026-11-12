@@ -1350,6 +1350,8 @@ a:hover {
 
 .forum-admin .forum-posts,
 .forum-admin .forum-topics,
+.forum-media .forum-posts,
+.forum-media .forum-topics,
 .forum-off .forum-posts,
 .forum-off .forum-topics {
     padding: var(--4xsmall);
@@ -1360,6 +1362,8 @@ a:hover {
 
 .forum-admin .forum-posts span,
 .forum-admin .forum-topics span,
+.forum-media .forum-posts span,
+.forum-media .forum-topics span,
 .forum-off .forum-posts span,
 .forum-off .forum-topics span {
     color: var(--co3)
@@ -1367,6 +1371,8 @@ a:hover {
 
 .forum-admin .forum-posts::after,
 .forum-admin .forum-topics::after,
+.forum-media .forum-posts::after,
+.forum-media .forum-topics::after,
 .forum-off .forum-posts::after,
 .forum-off .forum-topics::after {
     background-color: var(--co3);

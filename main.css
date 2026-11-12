@@ -1176,12 +1176,10 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-    background: var(--white-op50);
+    background: var(--dark-light);
     flex: 1;
     padding: var(--large);
-    border: 0.5px solid var(--white-op90);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    align-items: center;
     gap: var(--large)
 }
 

@@ -2134,6 +2134,7 @@ a:hover {
 #reception sep {
     height: 0.5px;
     width: 100%;
+    grid-column: 1 / 6;
     background: var(--gradientNeutralHorizontal)
 }
 
@@ -2543,7 +2544,7 @@ a:hover {
 minisep {
     height: 100%;
     width: 0.5px;
-    background-color: var(--gradientNeutralVertical)
+    background: var(--gradientNeutralVertical)
 }
 
 season {

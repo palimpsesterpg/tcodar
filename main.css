@@ -1404,10 +1404,13 @@ a:hover {
     justify-content: flex-end
 }
 
+.forum-off:nth-of-type(odd) .forum-icon {
+    left: auto;
+    right: 0
+}
+
 .forum-off:nth-of-type(even) .forum-icon {
     right: auto;
-    top: auto;
-    bottom: 0;
     left: 0
 }
 

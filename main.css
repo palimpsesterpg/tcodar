@@ -1523,11 +1523,6 @@ a:hover {
     right: auto
 }
 
-.forum-media .forum-icon,
-.forum-media .forum-links a {
-    color: var(--co1)
-}
-
 .forum-media .forum-links {
     font-size: 0
 }

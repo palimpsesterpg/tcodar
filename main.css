@@ -2198,6 +2198,8 @@ color: var(--group-color);
     color: var(--light)
 }
 
+#reception .tabsystem-tabs sep {flex:2}
+
 #reception.open .content-toggle {
     display: flex;
     gap: var(--large);

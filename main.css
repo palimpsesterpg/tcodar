@@ -3706,7 +3706,7 @@ h2+.panel {
     display: flex;
     text-transform: lowercase;
     font-size: var(--xlarge);
-    color: var(--group-color-200);
+    color: var(--co1-200);
     border-left: var(--2xsmall) solid var(--light);
     align-items: center;
 }
@@ -3714,7 +3714,7 @@ h2+.panel {
 .listings .tabsystem-tabs .message .active {
     color: var(--group-color);
     padding-left: var(--large);
-    border-color: var(--group-color-200)
+    border-color: var(--co1-200)
 }
 
 .listings .tabsystem-tabs .posticons {

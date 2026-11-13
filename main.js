@@ -898,11 +898,11 @@ function fillCard(root, data, index) {
 
 function countToggleRows() {
   qq('.bloc-toggle').forEach(bloc => {
-    const title = q('.list-row.title-toggle span', bloc);
+    const title = q('.list-row.title-toggle', bloc);
     if (!title) return;
 
     const count = qq('.content-toggle .list-row', bloc).length;
-    title.append = ${count};
+    title.insertAdjacentHTML('beforeend', `<strong>${count}</strong>`);
   });
 }
 

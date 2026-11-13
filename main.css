@@ -386,10 +386,8 @@
     }
 
     #page-navbar {
-        right: 50%;
-        transform: translateX(-50%);
-        top: var(--large);
-        height: 3rem !important;
+        width: 100%;
+        height: 5rem !important;
         justify-content: center !important;
         flex-direction: row !important
     }
@@ -651,9 +649,10 @@ a:hover {
     flex-direction: column
 }
 
-#page-navbar > div {
+#page-navbar>div {
     border-radius: var(--small);
-    width: 1rem;
+    transition-duration: 2s;
+    width: 0.5rem;
     padding: var(--large);
     display: flex;
     background-color: var(--white-op50);
@@ -664,8 +663,9 @@ a:hover {
     gap: var(--2xsmall)
 }
 
-#page-navbar:hover > div {
+#page-navbar:hover>div {
     width: 3rem;
+    transition-duration: 2s
 }
 
 #page-navbar sep {
@@ -677,11 +677,13 @@ a:hover {
 
 .mainmenu {
     position: relative;
-    font-size: var(--small)
+    font-size: var(--xsmall);
+    transition-duration: 2s
 }
 
 #page-navbar:hover .mainmenu {
-    font-size: var(--large)
+    font-size: var(--large);
+    transition-duration: 2s
 }
 
 .mainmenu span {
@@ -2027,7 +2029,7 @@ a:hover {
     aspect-ratio: 1;
     width: 200px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .profile-body .tabsystem-contents {
@@ -2041,13 +2043,13 @@ a:hover {
     font-weight: 900;
     text-transform: lowercase;
     font-size: var(--xlarge);
-    color: var(--group-color-200);
+    color: var(--group-color-200)
 }
 
 .profile-body .tab.active {
     color: var(--group-color);
     padding-left: var(--large);
-    border-left: var(--4xsmall) solid var(--group-color-200);
+    border-left: var(--4xsmall) solid var(--group-color-200)
 }
 
 .profile-pseudo {
@@ -2116,7 +2118,7 @@ a:hover {
 }
 
 .wombat .profile-head {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto
 }
 
 .profile-avatar {
@@ -2150,7 +2152,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .profile-mini {
@@ -2158,7 +2160,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .profile-mini>div {
@@ -3697,7 +3699,7 @@ h2+.panel {
 }
 
 .list-row:not(.title) {
-    height: var(--2xlarge);
+    height: var(--2xlarge)
 }
 
 .listings-table:has(.list-row) .bloc-toggle {
@@ -3733,7 +3735,7 @@ h2+.panel {
 .bloc-toggle:nth-of-type(2n) .title-toggle span,
 .title:nth-child(2n of .title) span {
     color: var(--co3);
-    text-align: right !important;
+    text-align: right !important
 }
 
 .fam-row {
@@ -3747,7 +3749,7 @@ h2+.panel {
 }
 
 .bloc-toggle:last-of-type:not(.open) .title-toggle {
-    border: 0 !important;
+    border: 0 !important
 }
 
 .fam-row .title-toggle {

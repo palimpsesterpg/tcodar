@@ -1320,6 +1320,7 @@ const OVERVIEW_FIELDS = [
 
 function buildOverview(link) {
   const key = toCharacterKey(link.textContent);
+  const character = getCharacters()[key];
 
   const overview = document.createElement('div');
   overview.className = 'profile overview';
@@ -1327,45 +1328,48 @@ function buildOverview(link) {
 
   const originalHead = document.querySelector('.profile-head');
 
-  if (originalHead) {
-    const head = originalHead.cloneNode(true);
-
-    const stats = head.querySelector('.profile-stats');
-
-    if (stats) {
-      const profile = document.createElement('a');
-      profile.href = link.href;
-      profile.target = '_blank';
-      profile.rel = 'noopener';
-      profile.textContent = 'Voir le profil';
-
-      stats.append(profile);
-
-      const mini = document.createElement('div');
-      mini.className = 'profile-mini';
-
-      mini.append(
-        ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
-          const div = createDiv(className, text);
-          div.dataset.field = field;
-          return div;
-        })
-      );
-
-      stats.after(mini);
-    }
-
-    overview.append(head);
+  if (!originalHead) {
+    console.error('profile-head introuvable');
+    return overview;
   }
 
-  fillCard(overview, getCharacters()[key]);
+  const head = originalHead.cloneNode(true);
+
+  const stats = head.querySelector('.profile-stats');
+
+  if (stats) {
+    const profile = document.createElement('a');
+    profile.href = link.href;
+    profile.target = '_blank';
+    profile.rel = 'noopener';
+    profile.textContent = 'Voir le profil';
+
+    stats.append(profile);
+
+    const mini = document.createElement('div');
+    mini.className = 'profile-mini';
+
+    mini.append(
+      ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
+        const div = createDiv(className, text);
+        div.dataset.field = field;
+        return div;
+      })
+    );
+
+    stats.after(mini);
+  }
+
+  fillCard(head, character);
+
+  overview.append(head);
 
   return overview;
 }
 
 function initProfileOverview() {
   const overlay = document.createElement('div');
-  overlay.className = 'profile overlay';
+  overlay.className = 'profile-overlay';
 
   let overview = null;
 

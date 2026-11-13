@@ -4134,9 +4134,10 @@ div.sceditor-group {
     align-items: center;
     justify-content: center;
     color: var(--group-color);
-    height: 2rem;
+    height: var(--3xlarge);
     text-transform: uppercase;
-    font-weight: 300
+    font-weight: 300;
+    gap: var(--2xsmall)
 }
 
 .profile-dtls>div:not(:last-of-type) {
@@ -4160,6 +4161,8 @@ div.sceditor-group {
     letter-spacing: var(--2xsmall);
     padding-left: var(--2xsmall);
     justify-content: center;
+    font-size: var(--large);
+    font-weight: 300;
     align-items: center;
     flex-direction: row !important
 }
@@ -4222,10 +4225,6 @@ div.sceditor-group {
     gap: var(--large)
 }
 
-.awards_block_simple_wrapper {
-    flex: 1
-}
-
 .profile-icon {
     display: flex;
     align-items: center;
@@ -4236,7 +4235,14 @@ div.sceditor-group {
 
 .profile-icon img {
     height: 200px;
-    width: 200
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.profile-awards-block {
+    flex: 1;
+    height: 200px;
+    overflow: auto
 }
 
 .tab-content[data-tab="character"] .profile-field-label {
@@ -4256,5 +4262,8 @@ div.sceditor-group {
     flex: 1;
     min-height: 0;
     height: 100%;
-    overflow: auto
+    overflow: auto;
+    padding: var(large) 0;
+    border-top: 0.5px solid var(--darker-light);
+    border-bottom: 0.5px solid var(--darker-light)
 }

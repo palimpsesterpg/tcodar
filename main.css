@@ -641,14 +641,20 @@ a:hover {
 }
 
 #page-navbar {
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: var(--small);
-    left: var(--large);
-    width: 3rem;
-    padding: var(--large);
+    width: 5rem;
+    height: 100%;
     z-index: 999;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+#page-navbar div {
+    border-radius: var(--small);
+    width: 1rem;
+    padding: var(--large);
     display: flex;
     background-color: var(--white-op50);
     border: 0.5px solid var(--light);
@@ -656,6 +662,10 @@ a:hover {
     justify-content: flex-start;
     flex-direction: column;
     gap: var(--2xsmall)
+}
+
+#page-navbar:hover div {
+    width: 3rem;
 }
 
 #page-navbar sep {
@@ -667,6 +677,10 @@ a:hover {
 
 .mainmenu {
     position: relative;
+    font-size: var(--small)
+}
+
+#page-navbar:hover .mainmenu {
     font-size: var(--large)
 }
 

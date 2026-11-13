@@ -2098,7 +2098,7 @@ a:hover {
     background: linear-gradient(to right, var(--light), var(--group-color))
 }
 
-.profile-pseudo .nom:before {
+.profile-pseudo .nom:after {
     background: linear-gradient(to right, var(--group-color), var(--light))
 }
 

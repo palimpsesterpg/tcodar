@@ -4141,8 +4141,8 @@ div.sceditor-group {
     color: var(--group-color);
     font-family: var(--serif);
     text-transform: uppercase;
-    letter-spacing: var(--2xsmall);
-    padding-left: var(--2xsmall);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     font-size: var(--xlarge)
 }
 
@@ -4150,15 +4150,15 @@ div.sceditor-group {
     margin-right: var(--large)
 }
 
-#field_id-5:after {
+#field_id-5 .field_uneditable:after {
     content: ' ans '
 }
 
-#field_id-5:before {
+#field_id-12 .field_uneditable:before {
     content: '('
 }
 
-#field_id-12:before {
+#field_id-12 .field_uneditable:before {
     content: ')'
 }
 

@@ -4120,9 +4120,8 @@ div.sceditor-group {
 
 .profile-dtls {
     display: flex;
-    gap: var(--large);
     align-items: center;
-    border: var(--large) solid var(--group-color-200);
+    border: var(--2xsmall) solid var(--group-color-200);
     justify-content: center
 }
 
@@ -4158,15 +4157,19 @@ div.sceditor-group {
     color: var(--group-color);
     font-family: var(--mono);
     text-transform: uppercase;
-    height: 100%;
-    writing-mode: sideways-lr;
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall);
     justify-content: center;
     align-items: center;
     flex-direction: row !important
 }
 
-.character-age {
-    writing-mode: sideways-rl
+#field_id-6 .field_uneditable:after {
+    content: ' messages'
+}
+
+#field_id-13 .field_uneditable:after {
+    content: ' points'
 }
 
 #field_id-5 .field_uneditable:after {
@@ -4244,10 +4247,14 @@ div.sceditor-group {
 
 .tab-content[data-tab="character"].active {
     display: flex;
-    align-items: flex-start;
-    gap: var(--large)
+    gap: var(--large);
+    flex-direction: column;
+    overflow: hidden
 }
 
 .tab-content[data-tab="character"]>div:nth-of-type(2) {
-    flex: 1
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    overflow: auto
 }

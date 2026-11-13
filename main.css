@@ -4149,12 +4149,16 @@ div.sceditor-group {
 .profile-icon .profile-field-label,
 #field_id11 .profile-field-label,
 .character-pronoun .profile-field-label,
-.character-age .profile-field-label {
+.character-age .profile-field-label,
+.player .profile-field-label,
+.player-dtls .profile-field-label {
     display: none
 }
 
 .character-pronoun,
-.character-age {
+.character-age,
+.player,
+.player-dtls {
     color: var(--group-color);
     font-family: var(--mono);
     text-transform: uppercase;

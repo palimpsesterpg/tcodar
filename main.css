@@ -651,7 +651,7 @@ a:hover {
     flex-direction: column
 }
 
-#page-navbar div {
+#page-navbar > div {
     border-radius: var(--small);
     width: 1rem;
     padding: var(--large);
@@ -664,7 +664,7 @@ a:hover {
     gap: var(--2xsmall)
 }
 
-#page-navbar:hover div {
+#page-navbar:hover > div {
     width: 3rem;
 }
 
@@ -2655,8 +2655,9 @@ season {
 
 #hub .one a {
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding-left: 0.5px
+    font-family: var(--display);
+    letter-spacing: 0.25px;
+    padding-left: 0.25px
 }
 
 #hub .one a strong {

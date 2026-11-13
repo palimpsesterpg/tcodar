@@ -1325,13 +1325,12 @@ function buildOverview(link) {
   overview.className = 'profile overview';
   overview.dataset.character = key;
 
-  const head = document.querySelector('.profile-head');
+  const originalHead = document.querySelector('.profile-head');
 
-  if (head) {
-    const clone = head.cloneNode(true);
-    const stats = clone.querySelector('.profile-stats');
-    const mini = document.createElement('div');
-    mini.className = 'profile-mini';
+  if (originalHead) {
+    const head = originalHead.cloneNode(true);
+
+    const stats = head.querySelector('.profile-stats');
 
     if (stats) {
       const profile = document.createElement('a');
@@ -1342,20 +1341,21 @@ function buildOverview(link) {
 
       stats.append(profile);
 
+      const mini = document.createElement('div');
+      mini.className = 'profile-mini';
+
+      mini.append(
+        ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
+          const div = createDiv(className, text);
+          div.dataset.field = field;
+          return div;
+        })
+      );
+
       stats.after(mini);
-    } else {
-      clone.append(mini);
     }
 
-    mini.append(
-      ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
-        const div = createDiv(className, text);
-        div.dataset.field = field;
-        return div;
-      })
-    );
-
-    overview.append(clone);
+    overview.append(head);
   }
 
   fillCard(overview, getCharacters()[key]);
@@ -1365,7 +1365,7 @@ function buildOverview(link) {
 
 function initProfileOverview() {
   const overlay = document.createElement('div');
-  overlay.className = 'profile-overlay';
+  overlay.className = 'profile overlay';
 
   let overview = null;
 
@@ -1384,7 +1384,7 @@ function initProfileOverview() {
 
   const findProfileLink = target => {
     const link = target.closest('a[href]');
-    if (!link || link.closest('.profile-overview')) return null;
+    if (!link || link.closest('.profile.overview')) return null;
     return /^\/u\d+/.test(link.getAttribute('href')) ? link : null;
   };
 
@@ -1401,7 +1401,7 @@ function initProfileOverview() {
         return;
       }
 
-      if (overview && !e.target.closest('.profile-overview')) close();
+      if (overview && !e.target.closest('.profile.overview')) close();
     },
     true
   );

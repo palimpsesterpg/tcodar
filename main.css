@@ -3709,7 +3709,7 @@ h2+.panel {
     color: var(--co1-200);
     border-left: var(--2xsmall) solid var(--dark-light);
     padding-left: var(--large);
-    align-items: center;
+    align-items: center
 }
 
 .listings .tabsystem-tabs .message .active {
@@ -4244,7 +4244,7 @@ div.sceditor-group {
 .profile-icon img {
     height: 200px;
     aspect-ratio: 1;
-    border-radius: 100%;
+    border-radius: 100%
 }
 
 .profile-awards-block {
@@ -4253,13 +4253,23 @@ div.sceditor-group {
     overflow: auto
 }
 
-.tab-content[data-tab="character"] .profile-field-label {
-    text-transform: lowercase;
+.tab-content[data-tab="character"] .profile-field-label,
+.tab-content[data-tab="settings"] .profile-field-label {
     font-weight: 900;
+    font-family: var(--serif);
     color: var(--group-color)
 }
 
-.tab-content[data-tab="character"].active {
+.tab-content[data-tab="character"] .profile-field-label {
+    text-transform: lowercase
+}
+
+.tab-content[data-tab="settings"] .profile-field-label {
+    text-transform: uppercase
+}
+
+.tab-content[data-tab="character"].active,
+.tab-content[data-tab="settings"].active {
     display: flex;
     gap: var(--large);
     flex-direction: column;

@@ -2039,7 +2039,7 @@ a:hover {
 .profile-pseudo {
     grid-area: 1 / 2 / 2 / 3;
     font-family: var(--spe);
-    font-size: var(--5xlarge);
+    font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
@@ -2056,7 +2056,8 @@ a:hover {
 
 .profile-pseudo .nom {
     margin-left: var(--2xlarge);
-    font-size: var(--5xlarge);
+    font-size: var(--3xlarge);
+    letter-spacing: var(--4xsmall);
     text-transform: uppercase
 }
 

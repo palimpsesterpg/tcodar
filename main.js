@@ -1311,28 +1311,78 @@ function moveAdminLinks() {
     });
 }
 
-function buildProfileMini() {
-  const stats = q('.profile-head .profile-stats');
-  if (!stats || q('.profile-mini', stats.parentElement)) return;
+const OVERVIEW_FIELDS = [
+  ['face', 'Célébrité'],
+  ['player', 'Joueur.euse'],
+  ['dateOfBirth', '01.01.1990', 'age-perso'],
+  ['status', 'Statut amoureux'],
+];
 
-  const fields = [
-    ['face', 'Célébrité'],
-    ['player', 'Joueur.euse'],
-    ['dateOfBirth', '01.01.1990', 'age-perso'],
-    ['status', 'Statut amoureux'],
-  ];
+function buildOverview(link) {
+  const key = toCharacterKey(link.textContent);
 
-  const mini = document.createElement('div');
-  mini.className = 'profile-mini';
-  mini.append(
-    ...fields.map(([field, text, className = '']) => {
+  const overview = document.createElement('div');
+  overview.className = 'profile-overview';
+  overview.dataset.character = key;
+
+  const profile = document.createElement('a');
+  profile.href = link.href;
+  profile.target = '_blank';
+  profile.rel = 'noopener';
+  profile.textContent = 'Voir le profil';
+
+  const stats = document.createElement('div');
+  stats.className = 'profile-stats';
+  stats.append(profile);
+
+  overview.append(
+    ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;
       return div;
-    })
+    }),
+    stats
   );
 
-  stats.after(mini);
+  fillCard(overview, getCharacters()[key]);
+  return overview;
+}
+
+function initProfileOverview() {
+  const overlay = document.createElement('div');
+  overlay.className = 'profile-overlay';
+
+  let overview = null;
+
+  const close = () => {
+    overview?.remove();
+    overlay.remove();
+    overview = null;
+  };
+
+  const open = link => {
+    close();
+    overview = buildOverview(link);
+    document.body.append(overlay, overview);
+    initAges();
+  };
+
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a[class^="u"]');
+    const plainClick = e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey;
+
+    if (link && plainClick) {
+      e.preventDefault();
+      open(link);
+      return;
+    }
+
+    if (overview && !e.target.closest('.profile-overview')) close();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
 }
 
 function initForumList() {
@@ -1410,7 +1460,7 @@ onReady(() => {
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 
     qq('.message').forEach(transformDiceMessage);
-    buildProfileMini();
+    initProfileOverview();
 
     setCharacterKeys('.member', '.member-pseudo');
     setCharacterKeys('.postprofile', '.postprofile-name');

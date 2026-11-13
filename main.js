@@ -1311,6 +1311,30 @@ function moveAdminLinks() {
     });
 }
 
+function buildProfileMini() {
+  const stats = q('.profile-head .profile-stats');
+  if (!stats || q('.profile-mini', stats.parentElement)) return;
+
+  const fields = [
+    ['face', 'Célébrité'],
+    ['player', 'Joueur.euse'],
+    ['dateOfBirth', '01.01.1990', 'age-perso'],
+    ['status', 'Statut amoureux'],
+  ];
+
+  const mini = document.createElement('div');
+  mini.className = 'profile-mini';
+  mini.append(
+    ...fields.map(([field, text, className = '']) => {
+      const div = createDiv(className, text);
+      div.dataset.field = field;
+      return div;
+    })
+  );
+
+  stats.after(mini);
+}
+
 function initForumList() {
     qq('.forum-links:empty').forEach(el => el.remove());
 
@@ -1386,6 +1410,7 @@ onReady(() => {
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 
     qq('.message').forEach(transformDiceMessage);
+    buildProfileMini();
 
     setCharacterKeys('.member', '.member-pseudo');
     setCharacterKeys('.postprofile', '.postprofile-name');

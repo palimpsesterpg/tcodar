@@ -1245,7 +1245,7 @@ function buildOverview(link, sourceHead) {
   profile.href = link.href;
   profile.target = '_blank';
   profile.rel = 'noopener';
-  profile.textContent = 'Voir le profil';
+  profile.textContent = 'profil';
 
   const mini = document.createElement('div');
   mini.className = 'profile-mini';

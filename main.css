@@ -2131,7 +2131,7 @@ a:hover {
     justify-items: center
 }
 
-.wombat .profile-head {
+.overview .profile-head {
     grid-template-rows: auto auto auto
 }
 
@@ -2139,7 +2139,7 @@ a:hover {
     grid-area: 1 / 1 / 4 / 2
 }
 
-.wombat .profile-avatar {
+.overview .profile-avatar {
     grid-area: 1 / 1 / 5 / 2
 }
 
@@ -2147,7 +2147,7 @@ a:hover {
     grid-area: 1 / 3 / 4 / 4
 }
 
-.wombat .profile-contact {
+.overview .profile-contact {
     grid-area: 1 / 3 / 5 / 4
 }
 

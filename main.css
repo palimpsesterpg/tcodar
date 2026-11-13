@@ -1994,7 +1994,10 @@ a:hover {
 }
 
 .profile {
-    position: relative
+        position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--large)
 }
 
 .profile-body {
@@ -2006,16 +2009,31 @@ a:hover {
 .profile-body .tabsystem-tabs {
     display: flex;
     align-items: flex-start;
+    gap: var(--large);
     aspect-ratio: 1;
     width: 200px;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: flex-start;
 }
 
 .profile-body .tabsystem-contents {
     height: 200px;
     flex: 1;
     overflow: auto
+}
+
+.profile-body .tab {
+border-left: var(--4xsmall) solid var(--darker-light);
+    padding-left: var(--large);
+    text-transform: lowercase;
+    font-weight: 700;
+color: var(--group-color);
+font-family: var(--display)
+}
+
+.profile-body .active {
+border-color: var(--group-color);
+    padding-left: var(--2xlarge);
 }
 
 .profile-pseudo {

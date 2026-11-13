@@ -395,11 +395,11 @@ function initColorScheme() {
   updateLabel();
 }
 
-function applyIcons(map) {
+function applyIcons(map, root = document) {
   map.forEach(({ selector, icon, replace }) => {
     const html = `<i class="${icon}"></i>`;
 
-    qq(selector).forEach(el => {
+    qq(selector, root).forEach(el => {
       if (replace) el.outerHTML = html;
       else el.innerHTML = html;
     });
@@ -816,8 +816,8 @@ function setCharacterKeys(selector, nameSelector) {
   });
 }
 
-function splitPseudonyme() {
-  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user .usr_grp_clr').forEach(el => {
+function splitPseudonyme(root = document) {
+  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user .usr_grp_clr', root).forEach(el => {
     if (q('.prenom', el)) return;
 
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -1042,8 +1042,8 @@ function getAge(birthDate) {
   return today.getFullYear() - year - (birthdayPassed ? 0 : 1);
 }
 
-function initAges() {
-  qq('.age-perso').forEach(el => {
+function initAges(root = document) {
+  qq('.age-perso', root).forEach(el => {
     if (el.dataset.age) return;
 
     const birthDate = el.textContent.trim();
@@ -1275,6 +1275,13 @@ function buildOverview(link, sourceHead) {
   return overview;
 }
 
+function enhanceOverview(overview) {
+  splitPseudonyme(overview);
+  applyIcons(ICONS, overview);
+  applyGroupClasses(overview);
+  initAges(overview);
+}
+
 function initProfileOverview() {
   const overlay = document.createElement('div');
   overlay.className = 'profile-overlay';
@@ -1304,7 +1311,7 @@ function initProfileOverview() {
 
     overview = buildOverview(link, head);
     document.body.append(overlay, overview);
-    initAges();
+    enhanceOverview(overview);
   };
 
   const findProfileLink = target => {

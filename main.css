@@ -2161,6 +2161,18 @@ a:hover {
     font-weight: 300
 }
 
+.profile-contact i::before {
+    height: var(--2xlarge);
+    width: var(--2xlarge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid;
+    color: var(--group-color);
+    font-size: var(--large);
+    background-color: var(--group-color-100)
+}
+
 .profile-stats {
     grid-area: 3 / 2 / 4 / 3;
     display: flex;

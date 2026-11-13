@@ -1351,32 +1351,27 @@ const OVERVIEW_FIELDS = [
   ['status', 'Statut amoureux'],
 ];
 
-function buildOverview(link) {
-  const key = toCharacterKey(link.textContent);
+const profileHeads = new Map();
 
-  const overview = document.createElement('div');
-  overview.className = 'profile overview';
-  overview.dataset.character = key;
+function fetchProfileHead(url) {
+  if (!profileHeads.has(url)) {
+    const request = fetch(url)
+      .then(response => response.text())
+      .then(html => q('.profile-head', new DOMParser().parseFromString(html, 'text/html')))
+      .catch(() => null)
+      .then(head => {
+        if (!head) profileHeads.delete(url);
+        return head;
+      });
 
-  const match = link.getAttribute('href').match(/\/u(\d+)(?:[/?#]|$)/);
-  const sourceProfile = match
-    ? document.getElementById(`u${match[1]}`)
-    : null;
-
-  const originalHead = sourceProfile?.querySelector('.profile-head');
-
-  if (!originalHead) {
-    console.warn('Profil source introuvable pour :', link.href);
-    return overview;
+    profileHeads.set(url, request);
   }
+  return profileHeads.get(url);
+}
 
-  const head = originalHead.cloneNode(true);
-  console.log('3. clone créé :', head);
-
-  const stats = head.querySelector('.profile-stats');
-  console.log('4. stats trouvées :', stats);
-
-  if (!stats) return overview;
+function buildOverview(link, sourceHead) {
+  const key = toCharacterKey(link.textContent);
+  const head = document.importNode(sourceHead, true);
 
   const profile = document.createElement('a');
   profile.href = link.href;
@@ -1384,12 +1379,9 @@ function buildOverview(link) {
   profile.rel = 'noopener';
   profile.textContent = 'Voir le profil';
 
-  stats.append(profile);
-
-  const mini = document.createElement('div');
-  mini.className = 'profile-mini';
-
-  mini.append(
+  const fields = document.createElement('div');
+  fields.className = 'profile-overview';
+  fields.append(
     ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;
@@ -1397,18 +1389,20 @@ function buildOverview(link) {
     })
   );
 
-  stats.after(mini);
-
-  console.log('5. head avant fillCard :', head);
+  const stats = q('.profile-stats', head);
+  if (stats) {
+    stats.append(profile);
+    stats.after(fields);
+  } else {
+    head.append(profile, fields);
+  }
 
   fillCard(head, getCharacters()[key]);
 
-  console.log('6. head après fillCard :', head);
-
+  const overview = document.createElement('div');
+  overview.className = 'profile overview';
+  overview.dataset.character = key;
   overview.append(head);
-
-  console.log('7. overview finale :', overview);
-
   return overview;
 }
 
@@ -1417,16 +1411,28 @@ function initProfileOverview() {
   overlay.className = 'profile-overlay';
 
   let overview = null;
+  let requestId = 0;
 
   const close = () => {
+    requestId++;
     overview?.remove();
     overlay.remove();
     overview = null;
   };
 
-  const open = link => {
+  const open = async link => {
     close();
-    overview = buildOverview(link);
+    const id = requestId;
+
+    const head = await fetchProfileHead(link.href);
+    if (id !== requestId) return;
+
+    if (!head) {
+      location.assign(link.href);
+      return;
+    }
+
+    overview = buildOverview(link, head);
     document.body.append(overlay, overview);
     initAges();
   };

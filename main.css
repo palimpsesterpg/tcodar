@@ -3757,16 +3757,16 @@ h2+.panel {
 
 .list-row.title span,
 .list-row.title-toggle span {
-    text-align: left !important;
+    justify-content: flex-start !important;
     padding: 0 var(--large);
     color: var(--co2);
     text-transform: uppercase !important
 }
 
-.bloc-toggle:nth-of-type(2n) .title-toggle span,
+.listing .bloc-toggle:nth-of-type(2n) .title-toggle span,
 .title:nth-child(2n of .title) span {
     color: var(--co3);
-    text-align: right !important
+    justify-content: flex-end !important
 }
 
 .fam-row {
@@ -3806,11 +3806,16 @@ h2+.panel {
     padding: 0 var(--4xsmall);
     height: fit-content;
     text-align: center;
-    text-transform: lowercase
+    text-transform: lowercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
-.fam-row {
-    height: 4rem !important
+.fam-row .title-toggle,
+.fam-row .content-toggle {
+    height: 3rem !important
 }
 
 span[data-field="pseudo"] a {
@@ -4143,12 +4148,13 @@ div.sceditor-group {
 .profile-second-avatar .profile-field-label,
 .profile-icon .profile-field-label,
 #field_id11 .profile-field-label,
-.character-table .profile-field-label {
+.character-pronoun .profile-field-label,
+.character-age .profile-field-label {
     display: none
 }
 
-.character-table {
-    flex-direction: row !important;
+.character-pronoun,
+.character-age {
     align-items: center;
     justify-content: center;
     color: var(--group-color);
@@ -4156,11 +4162,8 @@ div.sceditor-group {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
-    font-size: var(--large)
-}
-
-#field_id2 {
-    margin-right: var(--2xlarge)
+    font-size: var(--large);
+    writing-mode: sideways-lr
 }
 
 #field_id-5 .field_uneditable:after {
@@ -4229,8 +4232,18 @@ div.sceditor-group {
     width: 200
 }
 
-[data-tab="character"] .profile-field-label {
+.tab-content[data-tab="character"] .profile-field-label {
     text-transform: lowercase;
     font-weight: 900;
     color: var(--group-color)
+}
+
+.tab-content[data-tab="character"] {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--large)
+}
+
+.tab-content[data-tab="character"] div:nth-of-type(2) {
+    flex: 1
 }

@@ -42,14 +42,19 @@ const TAB_PROFILE = {
     'player': 'field_id-9',
     '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id11, field_id-20',
     'player-dtls': 'field_id14, field_id1',
-    roleplay: 'field_id9, field_id10',
-    moodboard: 'field_id-11',
+    '.tab-content[data-tab="roleplay"]': 'field_id9, field_id10',
+    '.tab-content[data-tab="moodboard"]': 'field_id-11',
     'profile-icon': 'field_id6'
 };
 
 const organizeProfileElements = () => {
-    Object.entries(TAB_PROFILE).forEach(([targetClass, fieldIdsStr]) => {
-        const targetContainer = q(`.${targetClass}`) || q(`.tab-content[data-tab="${targetClass}"]`);
+    Object.entries(TAB_PROFILE).forEach(([selectorOrKey, fieldIdsStr]) => {
+        let targetContainer = null;
+        if (selectorOrKey.startsWith('.')) {
+            targetContainer = q(selectorOrKey);
+        } else {
+            targetContainer = q(`.${selectorOrKey}`);
+        }
 
         if (!targetContainer) return;
 

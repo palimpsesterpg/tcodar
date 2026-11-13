@@ -2073,7 +2073,7 @@ a:hover {
     flex-direction: column
 }
 
-.profile-pseudo .nom {
+.profile-pseudo .prenom {
     text-align: right;
     font-size: var(--3xlarge);
     letter-spacing: var(--4xsmall);

@@ -3692,7 +3692,7 @@ h2+.panel {
 
 .list-row.title span {text-align: left !important;
                           padding: 0 var(--large);
-                      color: var(--co2)
+                      color: var(--co2);
     text-transform: uppercase !important}
 
 .bloc-toggle:nth-of-type(2n) .title span,

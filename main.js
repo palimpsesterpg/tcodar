@@ -680,24 +680,34 @@ function initBlockToggles() {
 }
 
 function initAdminPanels() {
-    document.addEventListener('click', e => {
-        if (e.target.closest('.admin-close')) {
-            e.target.closest('.admin-modal, .admin-overlay')?.classList.remove('open');
-            return;
-        }
-        
-        if (e.target.closest('.modal-content, .overlay-content')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'admin-overlay';
 
-        const modal = e.target.closest('.admin-modal');
-        const overlay = e.target.closest('.admin-overlay');
+  const showOverlay = () => {
+    if (!overlay.isConnected) document.body.append(overlay);
+  };
 
-        qq('.admin-modal.open, .admin-overlay.open').forEach(p => {
-            if (p !== modal && p !== overlay) p.classList.remove('open');
-        });
+  document.addEventListener('click', e => {
+    if (e.target.closest('.admin-close')) {
+      e.target.closest('.admin-modal')?.classList.remove('open');
+      overlay.remove();
+      return;
+    }
 
-        if (modal && q('.modal-content', modal)) modal.classList.add('open');
-        if (overlay && q('.overlay-content', overlay)) overlay.classList.add('open');
+    if (e.target.closest('.modal-content')) return;
+
+    const modal = e.target.closest('.admin-modal');
+    qq('.admin-modal.open').forEach(m => {
+      if (m !== modal) m.classList.remove('open');
     });
+
+    if (modal && q('.modal-content', modal)) {
+      modal.classList.add('open');
+      showOverlay();
+    } else {
+      overlay.remove();
+    }
+  });
 }
 
 function addQueendomTab() {

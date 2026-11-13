@@ -2688,20 +2688,14 @@ season {
 }
 
 #newest-user-avatar img {
-    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    border: var(--4xsmall) solid var(--white-op90);
+    border-radius: var(--2xsmall);
+    padding: var(--4xsmall);
     position: relative;
-    height: 234px;
-    width: 149px
-}
-
-#newest-user-avatar::before {
-    content: "";
-    width: 150px;
     height: 235px;
-    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-    position: absolute;
-    background: var(--gradient23)
+    border-width: 0.5px !important;
+    border-style: dotted;
+    border-image: var(--gradient23) 1;
+    width: 150px
 }
 
 #newest-user {

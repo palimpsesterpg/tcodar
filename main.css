@@ -2083,7 +2083,18 @@ a:hover {
 
 .profile-avatar img,
 .profile-second-avatar img {
-    width: 200px
+    width: 200px;
+    height: 320px
+}
+
+.profile-avatar img {
+    padding: var(--large);
+    border: 0.5px solid var(--group-color)
+}
+
+.profile-second-avatar img {
+    padding: var(--large);
+    background-color: var(--group-color-100)
 }
 
 .profile::before {
@@ -4130,4 +4141,12 @@ div.sceditor-group {
     width: 100%;
     border-radius: var(--small);
     aspect-ratio: 1
+}
+
+.profile-second-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    width: 200px
 }

@@ -2030,6 +2030,8 @@ a:hover {
 .profile-body .tabsystem-tabs {
     display: flex;
     align-items: flex-start;
+    padding: var(--large);
+    background-color: var(--dark-light);
     gap: var(--large);
     aspect-ratio: 1;
     width: 200px;
@@ -2073,7 +2075,8 @@ a:hover {
 }
 
 .profile-fields>div {
-    display: flex
+    display: flex;
+    flex-direction: column
 }
 
 .profile-pseudo .nom {
@@ -4135,7 +4138,7 @@ div.sceditor-group {
 }
 
 .character-table {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     color: var(--group-color);
@@ -4214,4 +4217,10 @@ div.sceditor-group {
 .profile-icon img {
     height: 200px;
     width: 200
+}
+
+[data-tab="character"] .profile-field-label {
+    text-transform: lowercase;
+    font-weight: 900;
+    color: var(--group-color)
 }

@@ -3669,10 +3669,11 @@ h2+.panel {
 .list-row,
 .listings-table:has(.list-row) .bloc-toggle {
     display: flex;
-    height: var(--2xlarge);
     --border-row: var(--darker-light);
     align-items: center
 }
+
+.list-row:not(.title) {    height: var(--2xlarge);}
 
 .listings-table:has(.list-row) .bloc-toggle {
     flex-direction: column
@@ -3686,21 +3687,18 @@ h2+.panel {
     font-size: var(--2xlarge);
     font-weight: 700;
     align-items: center;
-    font-family: var(--display);
-    color: var(--co2)
+    font-family: var(--display)
 }
 
 .list-row.title span {text-align: left !important;
                           padding: 0 var(--large);
+                      color: var(--co2)
     text-transform: uppercase !important}
 
-.bloc-toggle:nth-of-type(2n) .title,
-.title:nth-child(2n of .title) {
-    color: var(--co3);
-}
-
 .bloc-toggle:nth-of-type(2n) .title span,
-.title:nth-child(2n of .title) span {text-align: right !important;}
+.title:nth-child(2n of .title) span {
+    color: var(--co3);
+    text-align: right !important;}
 
 .fam-row {
     --border-row: var(--lighter-neutral);
@@ -3902,7 +3900,7 @@ a.nav {
 .sceditor-container {
     background: var(--light) !important;
     background-clip: padding-box !important;
-    border: var(--2xsmall) solid var(--lighter-neutral) !important;
+    border: var(--2xsmall) solid var(--darker-light) !important;
     border-radius: 0 !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
@@ -3968,7 +3966,7 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    border-top: var(--2xsmall) solid var(--lighter-neutral) !important;
+    border-top: var(--2xsmall) solid var(--darker-light) !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;

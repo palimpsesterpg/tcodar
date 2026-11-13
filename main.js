@@ -1319,18 +1319,23 @@ const OVERVIEW_FIELDS = [
 ];
 
 function buildOverview(link) {
-  console.log('1. buildOverview appelée');
-
   const key = toCharacterKey(link.textContent);
 
   const overview = document.createElement('div');
   overview.className = 'profile overview';
   overview.dataset.character = key;
 
-  const originalHead = document.querySelector('.profile-head');
-  console.log('2. profile-head trouvé :', originalHead);
+  const match = link.getAttribute('href').match(/\/u(\d+)(?:[/?#]|$)/);
+  const sourceProfile = match
+    ? document.getElementById(`u${match[1]}`)
+    : null;
 
-  if (!originalHead) return overview;
+  const originalHead = sourceProfile?.querySelector('.profile-head');
+
+  if (!originalHead) {
+    console.warn('Profil source introuvable pour :', link.href);
+    return overview;
+  }
 
   const head = originalHead.cloneNode(true);
   console.log('3. clone créé :', head);

@@ -2423,8 +2423,10 @@ color: var(--group-color);
     width: 50%;
     z-index: 999;
     border: 0;
+    border: 0.5px solid var(--group-color);
+    outline: var(--large) solid var(--group-color);
+    width: cacl(1000px - var(--2xlarge));
     padding: var(--2xlarge);
-    outline: var(--4xlarge) solid var(--white-op75);
     background: var(--light)
 }
 

@@ -4143,19 +4143,19 @@ div.sceditor-group {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
-    font-size: var(--xlarge)
+    font-size: var(--large)
 }
 
 #field_id2 {
-    margin-right: var(--large)
+    margin-right: var(--2xlarge)
 }
 
 #field_id-5 .field_uneditable:after {
-    content: ' ans '
+    content: ' ans'
 }
 
 #field_id-12 .field_uneditable:before {
-    content: '('
+    content: ' ('
 }
 
 #field_id-12 .field_uneditable:after {

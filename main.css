@@ -2048,7 +2048,7 @@ a:hover {
 }
 
 .profile::before {
-    content: "o";
+    content: "\ef57";
     font-family: var(--icons-thin);
     font-size: var(--large);
     border-radius: 100%;

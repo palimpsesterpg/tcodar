@@ -675,24 +675,27 @@ a:hover {
 
 #page-navbar:hover>div {
     width: 3rem;
-    transition-duration: 2s
+    transition-duration: 2s;
+    background-color: var(--black-op50);
+    border: 0.5px solid var(--dark);
 }
 
 #page-navbar sep {
     background-color: var(--light);
-    height: 0.5px;
-    width: 100%;
-    border-radius: var(--small)
+    height: 1px;
+    width: 100%
 }
 
 .mainmenu {
     position: relative;
     font-size: var(--xsmall);
+    color: var(--light);
     transition-duration: 2s
 }
 
 #page-navbar:hover .mainmenu {
     font-size: var(--large);
+    color: var(--dark);
     transition-duration: 2s
 }
 
@@ -734,8 +737,7 @@ a:hover {
     cursor: pointer;
     position: relative;
     display: flex;
-    align-items: center;
-    gap: var(--large)
+    align-items: center
 }
 
 #page-content,

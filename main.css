@@ -4134,6 +4134,34 @@ div.sceditor-group {
     display: none
 }
 
+.character-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--group-color);
+    font-family: var(--serif);
+    text-transform: uppercase;
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall);
+    font-size: var(--xlarge)
+}
+
+#field_id2 {
+    margin-right: var(--large)
+}
+
+#field_id-5:after {
+    content: ' ans '
+}
+
+#field_id-5:before {
+    content: '('
+}
+
+#field_id-12:before {
+    content: ')'
+}
+
 #field_id11 .field_uneditable {
     height: 100%;
     min-height: 0;

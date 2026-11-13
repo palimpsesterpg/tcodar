@@ -4158,7 +4158,7 @@ div.sceditor-group {
     content: '('
 }
 
-#field_id-12 .field_uneditable:before {
+#field_id-12 .field_uneditable:after {
     content: ')'
 }
 

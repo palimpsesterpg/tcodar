@@ -3457,7 +3457,8 @@ season {
 }
 
 .bloc-toggle.open .content-toggle {
-    display: block
+    display: block;
+    width: 100%
 }
 
 input,

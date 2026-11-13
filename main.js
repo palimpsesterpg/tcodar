@@ -40,10 +40,10 @@ const TAB_PROFILE = {
     'character-pronoun': 'field_id2',
     'character-age': 'field_id-5, field_id-12',
     'player': 'field_id-9',
-    '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id11, field_id-20',
+    '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
     'player-dtls': 'field_id14, field_id1',
     '.tab-content[data-tab="roleplay"]': 'field_id9, field_id10',
-    '.tab-content[data-tab="moodboard"]': 'field_id-11',
+    '.tab-content[data-tab="moodboard"]': 'field_id11',
     'profile-icon': 'field_id6'
 };
 

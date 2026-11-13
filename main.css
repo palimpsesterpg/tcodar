@@ -4266,12 +4266,13 @@ div.sceditor-group {
     overflow: hidden
 }
 
-.tab-content[data-tab="character"]>div:nth-of-type(2) {
+.tab-content[data-tab="character"]>div:nth-of-type(2),
+.tab-content[data-tab="settings"]>div:nth-of-type(2) {
     flex: 1;
     min-height: 0;
     height: 100%;
     overflow: auto;
-    padding: var(large) 0;
+    padding: var(--large) 0;
     border-top: 0.5px solid var(--darker-light);
     border-bottom: 0.5px solid var(--darker-light)
 }

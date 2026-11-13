@@ -400,24 +400,6 @@
         opacity: 1
     }
 
-    #page-navbar sep {
-        width: 0.5px;
-        height: auto
-    }
-
-    .copyright {
-        top: var(--large) !important;
-        right: var(--large) !important;
-        bottom: auto !important;
-        left: auto !important
-    }
-
-    #notiffi_panel {
-        width: 100% !important;
-        border: 0 !important;
-        top: 3rem !important
-    }
-
     .forum-off .forum-lastpost-avatar img {
         width: 50px !important
     }

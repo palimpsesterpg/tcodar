@@ -1994,7 +1994,7 @@ a:hover {
 }
 
 .profile {
-        position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--large)
@@ -2031,7 +2031,7 @@ a:hover {
 }
 
 .profile-body .tab.active {
-color: var(--group-color);
+    color: var(--group-color);
     padding-left: var(--large);
     border-left: var(--4xsmall) solid var(--group-color-200);
 }
@@ -2198,7 +2198,9 @@ color: var(--group-color);
     color: var(--light)
 }
 
-#reception .tabsystem-tabs sep {flex:2}
+#reception .tabsystem-tabs sep {
+    flex: 2
+}
 
 #reception.open .content-toggle {
     display: flex;
@@ -3678,13 +3680,16 @@ h2+.panel {
     align-items: center
 }
 
-.list-row:not(.title) {    height: var(--2xlarge);}
+.list-row:not(.title) {
+    height: var(--2xlarge);
+}
 
 .listings-table:has(.list-row) .bloc-toggle {
     flex-direction: column
 }
 
-.list-row.title,.list-row.title-toggle {
+.list-row.title,
+.list-row.title-toggle {
     height: 4rem;
     width: 100%;
     min-width: 0;
@@ -3695,31 +3700,38 @@ h2+.panel {
     font-family: var(--display)
 }
 
-.list-row.title-toggle count {padding-left: var(--large);
-                             font-size: var(--large);
-                             font-weight: 700)}
+.list-row.title-toggle count {
+    padding-left: var(--large);
+    font-size: var(--large);
+    font-weight: 700
+}
 
-.list-row.title span, .list-row.title-toggle span {text-align: left !important;
-                          padding: 0 var(--large);
-                      color: var(--co2);
-    text-transform: uppercase !important}
+.list-row.title span,
+.list-row.title-toggle span {
+    text-align: left !important;
+    padding: 0 var(--large);
+    color: var(--co2);
+    text-transform: uppercase !important
+}
 
 .bloc-toggle:nth-of-type(2n) .title-toggle span,
 .title:nth-child(2n of .title) span {
     color: var(--co3);
-    text-align: right !important;}
+    text-align: right !important;
+}
 
 .fam-row {
     --border-row: var(--lighter-neutral);
     color: var(--fam-color)
 }
 
-.fam-row:not(:last-of-type), .list-row:not(:last-of-type) {
+.fam-row:not(:last-of-type),
+.list-row:not(:last-of-type) {
     border-bottom: 0.5px solid var(--border-row)
 }
 
 .bloc-toggle:last-of-type:not(.open) .title-toggle {
-  border: 0 !important;
+    border: 0 !important;
 }
 
 .fam-row .title-toggle {
@@ -3734,7 +3746,8 @@ h2+.panel {
     font-weight: 700
 }
 
-.fam-row span:not(:last-of-type), .list-row span:not(:last-of-type) {
+.fam-row span:not(:last-of-type),
+.list-row span:not(:last-of-type) {
     border-right: 0.5px solid var(--border-row)
 }
 

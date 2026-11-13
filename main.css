@@ -3900,13 +3900,13 @@ a.nav {
 .sceditor-container {
     background: var(--light) !important;
     background-clip: padding-box !important;
-    border: var(--2xsmall) solid var(--darker-light) !important;
+    border: 0 !important;
     border-radius: 0 !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     font-weight: 500 !important;
-    outline: 0.5px solid var(--lighter-neutral) !important
+    outline: 0 !important
 }
 
 div.sceditor-toolbar {
@@ -3966,7 +3966,7 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    border-top: var(--2xsmall) solid var(--darker-light) !important;
+    border-top: 0.5 solid var(--darker-light) !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;

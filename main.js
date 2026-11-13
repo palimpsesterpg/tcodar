@@ -559,7 +559,7 @@ function wrapNode(node, className) {
 }
 
 function splitPseudonyme() {
-  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo').forEach(el => {
+  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user').forEach(el => {
     if (q('.prenom', el)) return;
 
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -1161,13 +1161,6 @@ function buildCount(count, label) {
     return div;
 }
 
-function setProfileId() {
-    const id = location.pathname.match(/\/u(\d+)/) ?. [1];
-    if (!id) return;
-
-    qq('.profile').forEach(el => (el.id = `u${id}`));
-}
-
 async function loadNewestUserAvatar() {
     const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
     const target = q('#newest-user-avatar');
@@ -1395,7 +1388,6 @@ onReady(() => {
     prefixPseudos();
     groupPlayers();
     sortListRows();
-    setProfileId();
     highlight();
     applyIcons(ICONS);
     replaceZodiacIcons();

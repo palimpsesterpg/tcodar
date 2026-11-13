@@ -4105,13 +4105,19 @@ div.sceditor-group {
     justify-content: center
 }
 
-.profile-dtls div {
-    flex: 1;
+.profile-dtls > div {
+    flex: 1
+}
+
+.profile-dtls .field_uneditable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--group-color);
     text-transform: uppercase
 }
 
-.profile-dtls div:not:last-of-type {
+.profile-dtls > div:not(:last-of-type) {
     border-right: 0.5px solid var(--darker-light)
 }
 

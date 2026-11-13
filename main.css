@@ -4029,13 +4029,11 @@ div.sceditor-group {
 #hub a.lea strong::before,
 .member a.lea span::before,
 .profile.lea::before {
-    content: "⭒"
     content: "⭒" !important
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
 .profile.cam::before {
-    content: "✻"
     content: "✻" !important
 }

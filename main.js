@@ -1322,8 +1322,20 @@ function buildOverview(link) {
   const key = toCharacterKey(link.textContent);
 
   const overview = document.createElement('div');
-  overview.className = 'profile-overview';
+  overview.className = 'profile overview';
   overview.dataset.character = key;
+
+  const head = document.querySelector('.profile-head');
+
+  if (head) {
+    overview.append(head.cloneNode(true));
+  }
+
+  const mini = document.createElement('div');
+  mini.className = 'profile-mini';
+
+  const stats = document.createElement('div');
+  stats.className = 'profile-stats';
 
   const profile = document.createElement('a');
   profile.href = link.href;
@@ -1331,20 +1343,21 @@ function buildOverview(link) {
   profile.rel = 'noopener';
   profile.textContent = 'Voir le profil';
 
-  const stats = document.createElement('div');
-  stats.className = 'profile-stats';
   stats.append(profile);
 
-  overview.append(
+  mini.append(
+    stats,
     ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;
       return div;
-    }),
-    stats
+    })
   );
 
+  overview.append(mini);
+
   fillCard(overview, getCharacters()[key]);
+
   return overview;
 }
 

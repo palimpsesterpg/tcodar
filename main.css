@@ -3690,6 +3690,10 @@ h2+.panel {
     font-family: var(--display)
 }
 
+.list-row.title-toggle count {padding-left: var(--large);
+                             font-size: var(--large);
+                             font-weight: 700)}
+
 .list-row.title span, .list-row.title-toggle span {text-align: left !important;
                           padding: 0 var(--large);
                       color: var(--co2);

@@ -3714,6 +3714,10 @@ h2+.panel {
     border-bottom: 0.5px solid var(--border-row)
 }
 
+.bloc-toggle:last-of-type:not(.open) .title-toggle {
+  border: 0 !important;
+}
+
 .fam-row .title-toggle {
     display: grid;
     grid-template-columns: 4rem repeat(5, minmax(0, 1fr))

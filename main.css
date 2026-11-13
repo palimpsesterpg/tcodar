@@ -4104,7 +4104,7 @@ div.sceditor-group {
     display: flex;
     gap: var(--large);
     align-items: center;
-    border: var(--large) solid var(--goup-color-200);
+    border: var(--large) solid var(--group-color-200);
     justify-content: center
 }
 
@@ -4118,11 +4118,12 @@ div.sceditor-group {
     justify-content: center;
     color: var(--group-color);
     height: 2rem;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-weight: 300
 }
 
 .profile-dtls>div:not(:last-of-type) {
-    border-right: 0.5px solid var(--goup-color-200)
+    border-right: 0.5px solid var(--group-color-200)
 }
 
 .profile-dtls .profile-field-label,

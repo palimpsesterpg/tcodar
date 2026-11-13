@@ -37,8 +37,9 @@ const TAB_FIELDS = {
 const TAB_PROFILE = {
     'profile-dtls': 'field_id-6, field_id-8, field_id-9, field_id1, field_id-13',
     'profile-second-avatar': 'field_id7',
-    settings: 'field_id14, field_id-20',
-    roleplay: 'field_id10',
+    'character-table': 'field_id2, field_id-5, field_id-12',
+    settings: 'field_id-11, field_id14, field_id-20',
+    roleplay: 'field_id9, field_id10',
     moodboard: 'field_id11',
     'profile-icon': 'field_id6'
 };

@@ -1328,33 +1328,35 @@ function buildOverview(link) {
   const head = document.querySelector('.profile-head');
 
   if (head) {
-    overview.append(head.cloneNode(true));
+    const clone = head.cloneNode(true);
+    const stats = clone.querySelector('.profile-stats');
+    const mini = document.createElement('div');
+    mini.className = 'profile-mini';
+
+    if (stats) {
+      const profile = document.createElement('a');
+      profile.href = link.href;
+      profile.target = '_blank';
+      profile.rel = 'noopener';
+      profile.textContent = 'Voir le profil';
+
+      stats.append(profile);
+
+      stats.after(mini);
+    } else {
+      clone.append(mini);
+    }
+
+    mini.append(
+      ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
+        const div = createDiv(className, text);
+        div.dataset.field = field;
+        return div;
+      })
+    );
+
+    overview.append(clone);
   }
-
-  const mini = document.createElement('div');
-  mini.className = 'profile-mini';
-
-  const stats = document.createElement('div');
-  stats.className = 'profile-stats';
-
-  const profile = document.createElement('a');
-  profile.href = link.href;
-  profile.target = '_blank';
-  profile.rel = 'noopener';
-  profile.textContent = 'Voir le profil';
-
-  stats.append(profile);
-
-  mini.append(
-    stats,
-    ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
-      const div = createDiv(className, text);
-      div.dataset.field = field;
-      return div;
-    })
-  );
-
-  overview.append(mini);
 
   fillCard(overview, getCharacters()[key]);
 

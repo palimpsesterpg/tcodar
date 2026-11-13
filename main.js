@@ -902,7 +902,7 @@ function countToggleRows() {
     if (!title) return;
 
     const count = qq('.content-toggle .list-row', bloc).length;
-    title.textContent = `Autres (${count})`;
+    title.append = ${count};
   });
 }
 

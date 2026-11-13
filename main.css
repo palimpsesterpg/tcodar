@@ -3707,7 +3707,7 @@ h2+.panel {
     text-transform: lowercase;
     font-size: var(--xlarge);
     color: var(--co1-200);
-    border-left: var(--2xsmall) solid var(--dak-light);
+    border-left: var(--2xsmall) solid var(--dark-light);
     padding-left: var(--large);
     align-items: center;
 }

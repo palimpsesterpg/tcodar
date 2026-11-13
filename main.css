@@ -4238,7 +4238,7 @@ div.sceditor-group {
     color: var(--group-color)
 }
 
-.tab-content[data-tab="character"] {
+.tab-content[data-tab="character"].active {
     display: flex;
     align-items: flex-start;
     gap: var(--large)

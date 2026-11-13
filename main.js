@@ -896,6 +896,16 @@ function fillCard(root, data, index) {
     });
 }
 
+function countToggleRows() {
+  qq('.bloc-toggle').forEach(bloc => {
+    const title = q('.list-row.title-toggle span', bloc);
+    if (!title) return;
+
+    const count = qq('.content-toggle .list-row', bloc).length;
+    title.textContent = `Autres (${count})`;
+  });
+}
+
 function buildRow(el) {
     const tab = el.closest('.tab-content') ?.dataset.tab;
     const data = getCharacters()[el.dataset.character];
@@ -1383,6 +1393,7 @@ onReady(() => {
     prefixPseudos();
     groupPlayers();
     sortListRows();
+    countToggleRows();
     highlight();
     applyIcons(ICONS);
     replaceZodiacIcons();

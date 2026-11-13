@@ -34,6 +34,30 @@ const TAB_FIELDS = {
     players: 'player[0],pseudo',
 };
 
+const TAB_PROFILE = {
+    'profile-dtls': 'field_id-6, field_id-8, field_id-9, field_id1, field_id-13',
+    'profile-second-avatar': 'field_id7',
+    settings: 'field_id14, field_id-20',
+    roleplay: 'field_id10',
+    moodboard: 'field_id11',
+    icon: 'field_id6'
+};
+
+const organizeProfileElements = () => {
+    Object.entries(TAB_PROFILE).forEach(([targetClass, fieldIdsStr]) => {
+        const targetContainer = q(`.${targetClass}`) || q(`.tab-content[data-tab="${targetClass}"]`);
+
+        if (!targetContainer) return;
+
+        fieldIdsStr.split(',').forEach(id => {
+            const field = q(`#${id.trim()}`);
+            if (field) {
+                targetContainer.appendChild(field);
+            }
+        });
+    });
+};
+
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
 const FAMILY_FIELDS_HIDDEN = ['rank', 'city1', 'city2', 'ethnies', 'color', 'played'];
 
@@ -1536,6 +1560,7 @@ onReady(() => {
     unwrapTabs();
     formatFieldLabels();
     moveAdminLinks();
+    organizeProfileElements();
     initTabs();
     initTabsInline();
     initHeaderNav();

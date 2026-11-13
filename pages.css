@@ -546,6 +546,17 @@ fam {
     cursor: pointer
 }
 
-itemnb {
-    grid-row: 1 / 11
+itemsnb {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--display);
+    text-transform: uppercase;
+    color: var(--co1);
+    letter-spacing: var(--2xsmall);
+    padding: var(--large) 0;
+    line-height: 1;
+    font-weight: 700;
+    font-size: var(--large);
+    height: var(--3xlarge);
+    padding-left: var(--2xsmall)
 }

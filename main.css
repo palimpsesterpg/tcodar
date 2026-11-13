@@ -696,7 +696,7 @@ a:hover {
     background-color: var(--dark-light);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(230deg);
     left: -0.5rem
 }
 

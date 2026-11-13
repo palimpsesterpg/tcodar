@@ -2023,6 +2023,7 @@ a:hover {
 .profile-body {
     display: flex;
     gap: var(--large);
+    height: 320px;
     align-items: center
 }
 
@@ -2031,13 +2032,14 @@ a:hover {
     align-items: flex-start;
     gap: var(--large);
     aspect-ratio: 1;
-    width: 320px;
+    width: 200px;
+    height: 320px;
     flex-direction: column;
     justify-content: flex-start
 }
 
 .profile-body .tabsystem-contents {
-    height: 200px;
+    height: 320px;
     flex: 1;
     overflow: auto
 }
@@ -4102,6 +4104,7 @@ div.sceditor-group {
     display: flex;
     gap: var(--large);
     align-items: center;
+    border: var(--large) solid var(--goup-color-200);
     justify-content: center
 }
 
@@ -4114,11 +4117,12 @@ div.sceditor-group {
     align-items: center;
     justify-content: center;
     color: var(--group-color);
+    height: 2rem;
     text-transform: uppercase
 }
 
 .profile-dtls>div:not(:last-of-type) {
-    border-right: 0.5px solid var(--darker-light)
+    border-right: 0.5px solid var(--goup-color-200)
 }
 
 .profile-dtls .profile-field-label,

@@ -2243,6 +2243,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--large);
+    flex-wrap: wrap;
     width: 100%
 }
 
@@ -2323,9 +2324,9 @@ a:hover {
     font-family: var(--serif)
 }
 
-#reception .three div {
+#reception .three {
     display: flex;
-    flex-direction: column
+    width: 100%
 }
 
 #reception .four {

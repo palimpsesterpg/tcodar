@@ -3679,7 +3679,7 @@ h2+.panel {
     flex-direction: column
 }
 
-.list-row.title {
+.list-row.title,.list-row.title-toggle {
     height: 4rem;
     width: 100%;
     min-width: 0;
@@ -3690,12 +3690,12 @@ h2+.panel {
     font-family: var(--display)
 }
 
-.list-row.title span {text-align: left !important;
+.list-row.title span, .list-row.title-toggle span {text-align: left !important;
                           padding: 0 var(--large);
                       color: var(--co2);
     text-transform: uppercase !important}
 
-.bloc-toggle:nth-of-type(2n) .title span,
+.bloc-toggle:nth-of-type(2n) .title-toggle span,
 .title:nth-child(2n of .title) span {
     color: var(--co3);
     text-align: right !important;}

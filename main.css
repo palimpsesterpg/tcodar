@@ -2023,17 +2023,17 @@ a:hover {
 }
 
 .profile-body .tab {
-border-left: var(--4xsmall) solid var(--darker-light);
-    padding-left: var(--large);
+    font-family: var(--display);
+    font-weight: 900;
     text-transform: lowercase;
-    font-weight: 700;
-color: var(--group-color);
-font-family: var(--display)
+    font-size: var(--xlarge);
+    color: var(--group-color-200);
 }
 
 .profile-body .active {
-border-color: var(--group-color);
-    padding-left: var(--2xlarge);
+color: var(--cgroup-color);
+    padding-left: var(--large);
+    border-left: var(--4xsmall) solid var(--group-color-200);
 }
 
 .profile-pseudo {
@@ -3651,6 +3651,7 @@ h2+.panel {
     color: var(--co1-200);
     flex-direction: column;
     align-items: flex-start;
+    gap: var(--large);
     height: auto
 }
 

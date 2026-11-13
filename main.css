@@ -3669,7 +3669,9 @@ h2+.panel {
 .list-row,
 .listings-table:has(.list-row) .bloc-toggle {
     display: flex;
-    --border-row: var(--darker-light)
+    height: var(--2xlarge);
+    --border-row: var(--darker-light);
+    align-items: center
 }
 
 .listings-table:has(.list-row) .bloc-toggle {
@@ -3729,20 +3731,13 @@ h2+.panel {
 .list-row span {
     width: 100%;
     padding: 0 var(--4xsmall);
+    height: fit-content;
     text-align: center;
-    text-transform: lowercase
-}
-
-.list-row:not(.title) span {
-    height: 2.5rem;
+    text-transform: lowercase;
     color: var(--group-color)
 }
 
-.list-row:not(.title) span:first-of-type {
-    font-family: var(--serif)
-}
-
-.fam-row span {
+.fam-row {
     height: 4rem !important
 }
 

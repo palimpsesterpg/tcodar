@@ -4039,11 +4039,13 @@ div.sceditor-group {
 #hub a.lea strong::before,
 .member a.lea span::before,
 .profile.lea::before {
-    content: "\ecb9" !important
+    content: "\ecb9" !important;
+    font-family: var(--icons-thin)
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
 .profile.cam::before {
-    content: "\e1d5" !important
+    content: "\e1d5" !important;
+    font-family: var(--icons-thin)
 }

@@ -1497,7 +1497,7 @@ onReady(() => {
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
     qq('.page-filters').forEach(p => p.after(sep()));
-    qq('#page-navbar > *:not(:last-child)').forEach(p => p.after(sep()));
+    qq('#page-navbar div > *').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 

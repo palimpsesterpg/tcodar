@@ -649,6 +649,16 @@ a:hover {
     flex-direction: column
 }
 
+#page-navbar * {
+    opacity: 0.5;
+    transition-duration: 2s
+}
+
+#page-navbar:hover * {
+    opacity: 1;
+    transition-duration: 2s
+}
+
 #page-navbar>div {
     border-radius: var(--small);
     transition-duration: 2s;

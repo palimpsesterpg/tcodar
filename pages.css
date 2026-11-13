@@ -545,3 +545,7 @@ fam {
     color: var(--group-color, var(--dark));
     cursor: pointer
 }
+
+itemnb {
+    grid-row: 1 / 11
+}

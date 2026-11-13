@@ -58,7 +58,17 @@ let items = [];
 let searchInput = null;
 let searchButton = null;
 let isDirectory = false;
+let itemsCountEl = null;
 const groupOf = new Map();
+
+function updateItemsCount() {
+  if (!itemsCountEl) return;
+  const visibleCount = items.filter(item => 
+    item.style.display !== 'none' && !item.classList.contains('search-hidden')
+  ).length;
+
+  itemsCountEl.textContent = `${visibleCount} célébrité${visibleCount > 1 ? 's' : ''}`;
+}
 
 function buildContentHead(item) {
   const genderClass = Object.keys(GENDERS).find(c => item.classList.contains(c));
@@ -160,6 +170,8 @@ function updateFilters() {
     );
     item.style.display = visible ? 'flex' : 'none';
   });
+
+  updateItemsCount();
 }
 
 function initFilters() {
@@ -183,6 +195,8 @@ function updateSearch() {
   items.forEach(item => {
     item.classList.toggle('search-hidden', !normalize(getTitle(item)).includes(query));
   });
+
+  updateItemsCount();
 }
 
 function initSearch() {
@@ -214,6 +228,7 @@ onReady(() => {
   searchInput = q('#site-search');
   searchButton = q('.page-search button');
   isDirectory = document.body.id === 'directory';
+  itemsCountEl = q('itemsnb', itemsContainer);
 
   addDecadeClasses();
   cloneContent();
@@ -221,4 +236,5 @@ onReady(() => {
   initFilters();
   initSearch();
   initItemPanels();
+  updateItemsCount();
 });

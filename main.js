@@ -1365,7 +1365,7 @@ function buildOverview(link) {
 
 function initProfileOverview() {
   const overlay = document.createElement('div');
-  overlay.className = 'profile-overlay';
+  overlay.className = 'profile overlay';
 
   let overview = null;
 
@@ -1384,7 +1384,7 @@ function initProfileOverview() {
 
   const findProfileLink = target => {
     const link = target.closest('a[href]');
-    if (!link || link.closest('.profile-overview')) return null;
+    if (!link || link.closest('.profile.overview')) return null;
     return /^\/u\d+/.test(link.getAttribute('href')) ? link : null;
   };
 
@@ -1401,7 +1401,7 @@ function initProfileOverview() {
         return;
       }
 
-      if (overview && !e.target.closest('.profile-overview')) close();
+      if (overview && !e.target.closest('.profile.overview')) close();
     },
     true
   );

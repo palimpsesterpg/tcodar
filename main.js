@@ -40,7 +40,7 @@ const TAB_PROFILE = {
     settings: 'field_id14, field_id-20',
     roleplay: 'field_id10',
     moodboard: 'field_id11',
-    icon: 'field_id6'
+    'profile-icon': 'field_id6'
 };
 
 const organizeProfileElements = () => {

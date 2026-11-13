@@ -2265,6 +2265,7 @@ a:hover {
 #reception .context {
     background: var(--gradient23-100);
     background-size: cover;
+    height: 210px;
     background-position: center center
 }
 
@@ -2282,7 +2283,7 @@ a:hover {
 }
 
 #reception .rules {
-    height: 100%;
+    height: 210px;
     flex: 1;
     padding: var(--large);
     background-color: var(--co1);
@@ -2309,19 +2310,20 @@ a:hover {
     padding: var(--2xsmall);
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    text-transform: lowercase;
+    text-align: center
 }
 
 #reception .intels strong {
     background-color: var(--co2-100);
-    color: var(--co2);
+    color: var(--co2-700);
     font-family: var(--mono)
 }
 
 #reception .intels i {
     background-color: var(--co3-100);
-    color: var(--co3);
-    text-align: right;
+    color: var(--co3-700);
     font-family: var(--serif)
 }
 

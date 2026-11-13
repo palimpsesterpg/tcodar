@@ -2059,6 +2059,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
+    width: 75%;
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
 
@@ -2073,12 +2074,24 @@ a:hover {
     flex-direction: column
 }
 
+.profile-pseudo div {
+    display: flex;
+    gap: var(--large);
+    align-items: center
+}
+
 .profile-pseudo .prenom {
-    text-align: right;
     font-size: var(--3xlarge);
     letter-spacing: var(--4xsmall);
     text-transform: uppercase;
     margin-bottom: -1rem
+}
+
+.profile-pseudo .prenom:before,
+.profile-pseudo .nom:before {
+    content: '';
+    border-bottom: 0.5px solid var(--darker-light);
+    flex: 1
 }
 
 .profile-avatar img,

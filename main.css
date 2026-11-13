@@ -4171,7 +4171,7 @@ div.sceditor-group {
     flex-direction: row !important
 }
 
-#field_id-8 .field_uneditable:after {
+#field_id-8 .field_uneditable:before {
     content: 'ft.'
 }
 

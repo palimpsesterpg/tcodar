@@ -559,7 +559,7 @@ function wrapNode(node, className) {
 }
 
 function splitPseudonyme() {
-  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user').forEach(el => {
+  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user:last-child').forEach(el => {
     if (q('.prenom', el)) return;
 
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);

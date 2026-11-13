@@ -4171,12 +4171,16 @@ div.sceditor-group {
     flex-direction: row !important
 }
 
+#field_id-8 .field_uneditable:after {
+    content: 'ft.'
+}
+
 #field_id-6 .field_uneditable:after {
-    content: ' messages'
+    content: 'messages'
 }
 
 #field_id-13 .field_uneditable:after {
-    content: ' points'
+    content: 'points'
 }
 
 #field_id-5 .field_uneditable:after {

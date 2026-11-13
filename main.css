@@ -2088,10 +2088,18 @@ a:hover {
 }
 
 .profile-pseudo .prenom:before,
-.profile-pseudo .nom:before {
+.profile-pseudo .nom:after {
     content: '';
-    border-bottom: 0.5px solid var(--darker-light);
-    flex: 1
+    flex: 1;
+    height: 0.5px;
+}
+
+.profile-pseudo .prenom:before {
+    background: linear-gradient(to right, var(--light), var(--group-color))
+}
+
+.profile-pseudo .nom:before {
+    background: linear-gradient(to right, var(--group-color), var(--light))
 }
 
 .profile-avatar img,

@@ -1367,18 +1367,29 @@ function initProfileOverview() {
     initAges();
   };
 
-  document.addEventListener('click', e => {
-    const link = e.target.closest('a[class^="u"]');
-    const plainClick = e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey;
+  const findProfileLink = target => {
+    const link = target.closest('a[href]');
+    if (!link || link.closest('.profile-overview')) return null;
+    return /^\/u\d+/.test(link.getAttribute('href')) ? link : null;
+  };
 
-    if (link && plainClick) {
-      e.preventDefault();
-      open(link);
-      return;
-    }
+  document.addEventListener(
+    'click',
+    e => {
+      const link = findProfileLink(e.target);
+      const plainClick = e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey;
 
-    if (overview && !e.target.closest('.profile-overview')) close();
-  });
+      if (link && plainClick) {
+        e.preventDefault();
+        e.stopPropagation();
+        open(link);
+        return;
+      }
+
+      if (overview && !e.target.closest('.profile-overview')) close();
+    },
+    true
+  );
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();

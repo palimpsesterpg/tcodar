@@ -2255,11 +2255,11 @@ a:hover {
     gap: var(--large)
 }
 
-#reception .five,
+#reception .timeline,
 #reception .context {
-    height: 150px;
     background-color: var(--light);
-    padding: var(--large)
+    padding: var(--large);
+    flex: 1
 }
 
 #reception .context {
@@ -2283,6 +2283,7 @@ a:hover {
 
 #reception .rules {
     height: 100%;
+    flex: 1;
     padding: var(--large);
     background-color: var(--co1);
     color: var(--co1-100)
@@ -2298,7 +2299,6 @@ a:hover {
 
 #reception .rules div {
     text-align: justify;
-    line-height: 1.45;
     font-weight: 300
 }
 
@@ -2306,9 +2306,10 @@ a:hover {
 #reception .intels i {
     width: 100%;
     flex: 1;
-    padding: var(--4xsmall);
+    padding: var(--2xsmall);
     display: flex;
-    align-items: center
+    align-items: center;
+    justify-content: center
 }
 
 #reception .intels strong {
@@ -2329,9 +2330,9 @@ a:hover {
     width: 100%
 }
 
-#reception .four {
+#reception .admins {
     height: 100%;
-    width: 100%;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -2341,13 +2342,13 @@ a:hover {
     background-color: var(--white-op90)
 }
 
-#reception .five div {
+#reception .timeline div {
     display: flex;
     flex-direction: column;
     align-items: flex-start
 }
 
-#reception .five div,
+#reception .timeline div,
 #reception .intels div,
 #reception .rules div,
 #reception .context span {
@@ -2361,13 +2362,13 @@ a:hover {
     display: block
 }
 
-#reception .five span {
+#reception .timeline span {
     color: var(--co1);
     display: flex;
     align-items: center
 }
 
-#reception .five date {
+#reception .timeline date {
     text-transform: lowercase;
     font-weight: 700;
     padding-right: var(--large);
@@ -2379,7 +2380,7 @@ a:hover {
     align-items: center
 }
 
-#reception .five intel {
+#reception .timeline intel {
     text-transform: uppercase;
     font-weight: 300;
     height: 37.5px;
@@ -2390,7 +2391,7 @@ a:hover {
     flex: 1
 }
 
-#reception .five intel::before {
+#reception .timeline intel::before {
     content: "";
     background-color: var(--co1);
     border-radius: 100%;
@@ -2401,15 +2402,15 @@ a:hover {
     width: 5px
 }
 
-#reception .five .ipt {
+#reception .timeline .ipt {
     color: var(--black-op90)
 }
 
-#reception .five .ipt intel::before {
+#reception .timeline .ipt intel::before {
     background-color: var(--black-op90)
 }
 
-#reception .five .ipt intel {
+#reception .timeline .ipt intel {
     font-weight: 500
 }
 

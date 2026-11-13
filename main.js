@@ -1319,50 +1319,57 @@ const OVERVIEW_FIELDS = [
 ];
 
 function buildOverview(link) {
+  console.log('1. buildOverview appelée');
+
   const key = toCharacterKey(link.textContent);
-  const character = getCharacters()[key];
 
   const overview = document.createElement('div');
   overview.className = 'profile overview';
   overview.dataset.character = key;
 
   const originalHead = document.querySelector('.profile-head');
+  console.log('2. profile-head trouvé :', originalHead);
 
-  if (!originalHead) {
-    console.error('profile-head introuvable');
-    return overview;
-  }
+  if (!originalHead) return overview;
 
   const head = originalHead.cloneNode(true);
+  console.log('3. clone créé :', head);
 
   const stats = head.querySelector('.profile-stats');
+  console.log('4. stats trouvées :', stats);
 
-  if (stats) {
-    const profile = document.createElement('a');
-    profile.href = link.href;
-    profile.target = '_blank';
-    profile.rel = 'noopener';
-    profile.textContent = 'Voir le profil';
+  if (!stats) return overview;
 
-    stats.append(profile);
+  const profile = document.createElement('a');
+  profile.href = link.href;
+  profile.target = '_blank';
+  profile.rel = 'noopener';
+  profile.textContent = 'Voir le profil';
 
-    const mini = document.createElement('div');
-    mini.className = 'profile-mini';
+  stats.append(profile);
 
-    mini.append(
-      ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
-        const div = createDiv(className, text);
-        div.dataset.field = field;
-        return div;
-      })
-    );
+  const mini = document.createElement('div');
+  mini.className = 'profile-mini';
 
-    stats.after(mini);
-  }
+  mini.append(
+    ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
+      const div = createDiv(className, text);
+      div.dataset.field = field;
+      return div;
+    })
+  );
 
-  fillCard(head, character);
+  stats.after(mini);
+
+  console.log('5. head avant fillCard :', head);
+
+  fillCard(head, getCharacters()[key]);
+
+  console.log('6. head après fillCard :', head);
 
   overview.append(head);
+
+  console.log('7. overview finale :', overview);
 
   return overview;
 }

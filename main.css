@@ -2030,8 +2030,8 @@ a:hover {
     color: var(--group-color-200);
 }
 
-.profile-body .active {
-color: var(--cgroup-color);
+.profile-body .tab.active {
+color: var(--group-color);
     padding-left: var(--large);
     border-left: var(--4xsmall) solid var(--group-color-200);
 }
@@ -4044,11 +4044,11 @@ div.sceditor-group {
 #hub a.lea strong::before,
 .member a.lea span::before,
 .profile.lea::before {
-    content: "⭒" !important
+    content: "\ecb9" !important
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
 .profile.cam::before {
-    content: "✻" !important
+    content: "\e1d5" !important
 }

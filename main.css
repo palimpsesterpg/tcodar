@@ -2609,6 +2609,8 @@ season {
 #logged-in-user-list div,
 #l-connected-members div {
     height: 100%;
+    text-align: justify;
+    width: 100%;
     overflow: auto
 }
 

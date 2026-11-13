@@ -2074,10 +2074,11 @@ a:hover {
 }
 
 .profile-pseudo .nom {
-    margin-left: var(--2xlarge);
+    text-align: right;
     font-size: var(--3xlarge);
     letter-spacing: var(--4xsmall);
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-bottom: -1rem
 }
 
 .profile-avatar img,
@@ -2144,7 +2145,11 @@ a:hover {
 }
 
 .profile-contact {
-    grid-area: 1 / 3 / 4 / 4
+    grid-area: 1 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--large);
 }
 
 .overview .profile-contact {
@@ -2167,10 +2172,10 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 100%;
     border: 0.5px solid;
     color: var(--group-color);
-    font-size: var(--large);
-    background-color: var(--group-color-100)
+    font-size: var(--large)
 }
 
 .profile-stats {
@@ -2194,7 +2199,9 @@ a:hover {
     color: var(--group-color);
     text-transform: uppercase;
     font-family: var(--mono);
-    padding: var(--4xsmall)
+    padding: var(--4xsmall) var(--2xsmall);
+    border: 0.5px solid var(--group-color-200);
+    text-shadow: 1px 1px var(--light);
 }
 
 .profile-stats a {

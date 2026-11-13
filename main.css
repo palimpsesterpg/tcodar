@@ -2466,7 +2466,8 @@ a:hover {
 .admin-modal.open>.modal-content>div {
     display: flex;
     flex-direction: column;
-    gap: var(--large)
+    gap: var(--large);
+    width: 100%
 }
 
 .admin-modal.open>.modal-content h1 {
@@ -2480,7 +2481,6 @@ a:hover {
     right: var(--large)
 }
 
-.admin-close::before,
 #notiffi_button_close::before,
 .alert_close::before,
 .notif_close::before,
@@ -2567,9 +2567,11 @@ a:hover {
 .details-modal div {
     font-family: var(--mono);
     text-transform: uppercase;
-    font-size: var(--large);
-    color: var(--lighter-dark);
-    font-weight: 100;
+    font-size: var(--xlarge);
+    color: var(--light-dark);
+    letter-spacing: 1px;
+    padding-left: 1px;
+    font-weight: 300;
     border-bottom: 0.5px solid var(--lighter-dark);
     padding-bottom: var(--2xsmall)
 }
@@ -2577,7 +2579,6 @@ a:hover {
 .details-modal span {
     font-family: var(--display);
     text-transform: lowercase;
-    font-size: var(--small);
     background-color: var(--darker-light);
     color: var(--lighter-dark);
     padding: var(--4xsmall);

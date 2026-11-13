@@ -3684,26 +3684,23 @@ h2+.panel {
     font-size: var(--2xlarge);
     font-weight: 700;
     align-items: center;
-    justify-content: center;
     font-family: var(--display);
-    text-transform: uppercase;
-    justify-content: flex-start;
     padding: 0 var(--large);
     color: var(--co2)
 }
 
-.list-row.title span {
-    text-transform: uppercase !important;
-    font-size: var(--large)
-}
+.list-row.title span {text-align: left !important;
+    text-transform: uppercase !important}
 
 .bloc-toggle:nth-of-type(2n) .title,
 .title:nth-child(2n of .title) {
     color: var(--co3);
-    justify-content: flex-end;
 }
 
-.fam-row, .list-row {
+.bloc-toggle:nth-of-type(2n) .title span,
+.title:nth-child(2n of .title) span {text-align: right !important;}
+
+.fam-row {
     --border-row: var(--lighter-neutral);
     color: var(--fam-color)
 }
@@ -3798,11 +3795,6 @@ span[data-field="face"] {
 
 .fam-row [data-field="rank"]::after {
     content: "/26"
-}
-
-.fam-row span:last-of-type,
-.list-row span:last-of-type {
-    border: 0 !important
 }
 
 [id="267"].postlist .quick-nav-topics,

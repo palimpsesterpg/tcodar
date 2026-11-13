@@ -2055,12 +2055,12 @@ a:hover {
     font-size: var(--xlarge);
     color: var(--group-color-200);
     border-left: var(--2xsmall) solid var(--light);
-    align-items: center;
+    padding-left: var(--large);
+    align-items: center
 }
 
 .profile-body .tab.active {
     color: var(--group-color);
-    padding-left: var(--large);
     border-color: var(--group-color-200)
 }
 
@@ -3691,7 +3691,7 @@ h2+.panel {
     width: 25%
 }
 
-.listings .tabsystem-tabs {
+.listings .tabsystem-tabs .message {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -3707,13 +3707,13 @@ h2+.panel {
     text-transform: lowercase;
     font-size: var(--xlarge);
     color: var(--co1-200);
-    border-left: var(--2xsmall) solid var(--light);
+    border-left: var(--2xsmall) solid var(--dak-light);
+    padding-left: var(--large);
     align-items: center;
 }
 
 .listings .tabsystem-tabs .message .active {
-    color: var(--group-color);
-    padding-left: var(--large);
+    color: var(--co1);
     border-color: var(--co1-200)
 }
 
@@ -4149,7 +4149,7 @@ div.sceditor-group {
 }
 
 .character-table {
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     justify-content: center;
     color: var(--group-color);

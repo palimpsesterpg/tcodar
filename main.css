@@ -2425,7 +2425,7 @@ color: var(--group-color);
     border: 0;
     border: 0.5px solid var(--group-color);
     outline: var(--large) solid var(--group-color-100);
-    width: cacl(1000px - var(--2xlarge));
+    width: calc(1000px - var(--2xlarge));
     padding: var(--2xlarge);
     background: var(--light)
 }

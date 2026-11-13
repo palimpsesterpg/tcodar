@@ -367,9 +367,8 @@
     }
 
     body {
-        min-height: 100vh !important;
         min-height: 100dvh !important;
-        width: 100h !important;
+        width: 100vh !important;
         height: auto !important
     }
 
@@ -386,10 +385,19 @@
     }
 
     #page-navbar {
-        width: 100%;
+        width: 100% !important;
         height: 5rem !important;
-        justify-content: center !important;
         flex-direction: row !important
+    }
+
+    #page-navbar>div {
+        flex-direction: row !important;
+        background-color: var(--white-op25);
+        border: 0.5px solid var(--light);
+    }
+
+    #page-navbar * {
+        opacity: 1
     }
 
     #page-navbar sep {
@@ -4168,6 +4176,7 @@ div.sceditor-group {
     font-size: var(--large);
     font-weight: 300;
     align-items: center;
+    gap: var(--large);
     flex-direction: row !important
 }
 

@@ -2655,8 +2655,9 @@ season {
 
 #hub .one a {
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding-left: 0.5px
+    font-family: var(--display);
+    letter-spacing: 0.25px;
+    padding-left: 0.25px
 }
 
 #hub .one a strong {

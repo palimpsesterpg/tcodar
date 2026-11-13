@@ -682,18 +682,21 @@ function initBlockToggles() {
 function initAdminPanels() {
     document.addEventListener('click', e => {
         if (e.target.closest('.admin-close')) {
-            e.target.closest('.admin-modal') ?.classList.remove('open');
+            e.target.closest('.admin-modal, .admin-overlay')?.classList.remove('open');
             return;
         }
-
-        if (e.target.closest('.modal-content')) return;
+        
+        if (e.target.closest('.modal-content, .overlay-content')) return;
 
         const modal = e.target.closest('.admin-modal');
-        qq('.admin-modal.open').forEach(m => {
-            if (m !== modal) m.classList.remove('open');
+        const overlay = e.target.closest('.admin-overlay');
+
+        qq('.admin-modal.open, .admin-overlay.open').forEach(p => {
+            if (p !== modal && p !== overlay) p.classList.remove('open');
         });
 
         if (modal && q('.modal-content', modal)) modal.classList.add('open');
+        if (overlay && q('.overlay-content', overlay)) overlay.classList.add('open');
     });
 }
 

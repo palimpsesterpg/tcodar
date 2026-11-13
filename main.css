@@ -2256,19 +2256,19 @@ a:hover {
 }
 
 #reception .five,
-#reception .one {
+#reception .context {
     height: 150px;
     background-color: var(--light);
     padding: var(--large)
 }
 
-#reception .one {
+#reception .context {
     background: var(--gradient23-100);
     background-size: cover;
     background-position: center center
 }
 
-#reception .one div {
+#reception .context div {
     background-color: var(--white-op75);
     height: 100%;
     width: 100%;
@@ -2276,19 +2276,19 @@ a:hover {
     border: 0.5px solid var(--white-op90)
 }
 
-#reception .one span {
+#reception .context span {
     text-align: justify;
     line-height: 1.5
 }
 
-#reception .two {
+#reception .rules {
     height: 100%;
     padding: var(--large);
     background-color: var(--co1);
     color: var(--co1-100)
 }
 
-#reception .two span {
+#reception .rules span {
     font-family: var(--serif);
     text-transform: lowercase;
     color: var(--light);
@@ -2296,14 +2296,14 @@ a:hover {
     padding: var(--2xsmall)
 }
 
-#reception .two div {
+#reception .rules div {
     text-align: justify;
     line-height: 1.45;
     font-weight: 300
 }
 
-#reception .three strong,
-#reception .three i {
+#reception .intels strong,
+#reception .intels i {
     width: 100%;
     flex: 1;
     padding: var(--4xsmall);
@@ -2311,20 +2311,20 @@ a:hover {
     align-items: center
 }
 
-#reception .three strong {
+#reception .intels strong {
     background-color: var(--co2-100);
     color: var(--co2);
     font-family: var(--mono)
 }
 
-#reception .three i {
+#reception .intels i {
     background-color: var(--co3-100);
     color: var(--co3);
     text-align: right;
     font-family: var(--serif)
 }
 
-#reception .three {
+#reception .intels {
     display: flex;
     width: 100%
 }
@@ -2348,16 +2348,16 @@ a:hover {
 }
 
 #reception .five div,
-#reception .three div,
-#reception .two div,
-#reception .one span {
+#reception .intels div,
+#reception .rules div,
+#reception .context span {
     height: 100%;
     width: 100%;
     overflow: auto
 }
 
-#reception .one span,
-#reception .two div {
+#reception .context span,
+#reception .intels div {
     display: block
 }
 

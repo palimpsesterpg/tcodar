@@ -3806,8 +3806,7 @@ h2+.panel {
     padding: 0 var(--4xsmall);
     height: fit-content;
     text-align: center;
-    text-transform: lowercase;
-    color: var(--group-color)
+    text-transform: lowercase
 }
 
 .fam-row {

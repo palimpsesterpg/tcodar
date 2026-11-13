@@ -1303,7 +1303,7 @@ function initCategoriesToggle() {
 }
 
 function moveAdminLinks() {
-    const target = q('#page-navbar > a[href="#bottom"]');
+    const target = q('#page-navbar div > a[href="#bottom"]');
     if (!target) return;
 
     qq('a[href^="/admin/?part=admin"]').forEach(link => {
@@ -1497,7 +1497,6 @@ onReady(() => {
     qq('.fc-second-title-main').forEach(p => p.after(sep()));
     qq('.timeline-date').forEach(p => p.after(sep()));
     qq('.page-filters').forEach(p => p.after(sep()));
-    qq('#page-navbar div > *').forEach(p => p.after(sep()));
 
     qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
 

@@ -2184,7 +2184,7 @@ color: var(--group-color);
 
 #reception .tab {
     cursor: pointer;
-    flex: 1;
+    flex: 0.5;
     background-color: var(--co1-100);
     color: var(--co1);
     padding: var(--2xsmall) var(--large);
@@ -2193,7 +2193,7 @@ color: var(--group-color);
 }
 
 #reception .tab.active {
-    flex: 1.5;
+    flex: 1;
     background-color: var(--co1);
     color: var(--light)
 }

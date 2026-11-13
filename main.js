@@ -108,11 +108,6 @@ const ICONS = [{
         replace: true
     },
     {
-        selector: '.ajax-profil_valid, .ajax-profil_edit',
-        icon: 'fi fi-ts-check',
-        replace: true
-    },
-    {
         selector: 'img[src*="folder_new.gif"]',
         icon: 'fi fi-ts-exclamation',
         replace: true

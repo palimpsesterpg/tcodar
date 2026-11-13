@@ -670,14 +670,13 @@ a:hover {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    backdrop-filter: blur(2px);
     gap: var(--large)
 }
 
 #page-navbar:hover>div {
     width: 3rem;
-    transition-duration: 2s;
-    background-color: var(--black-op25);
-    border: 0.5px solid var(--dark);
+    transition-duration: 2s
 }
 
 #page-navbar>div>* {

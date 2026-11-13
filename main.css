@@ -4087,8 +4087,22 @@ div.sceditor-group {
     font-family: var(--icons-thin)
 }
 
+.profile-dtls {
+    display: flex;
+    gap: var(--large);
+    align-items: center;
+    justify-content: center
+}
 
+.profile-dtls div {
+    flex: 1;
+    color: var(--group-color);
+    text-transform: uppercase
+}
 
+.profile-dtls div:not:last-of-type {
+    border-right: 0.5px solid var(--darker-light)
+}
 
 .profile-dtls .profile-field-label,
 .profile-avatar .profile-field-label,

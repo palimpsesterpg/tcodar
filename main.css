@@ -3822,10 +3822,6 @@ h2+.panel {
     align-items: center
 }
 
-.list-row:not(.title) {
-    height: var(--2xlarge)
-}
-
 .listings-table:has(.list-row) .bloc-toggle {
     flex-direction: column
 }
@@ -3906,9 +3902,10 @@ h2+.panel {
     justify-content: center
 }
 
+.list-row:not(.title),
 .fam-row .title-toggle,
 .fam-row .content-toggle {
-    height: 3rem !important
+    height: var(--3xlarge) !important
 }
 
 span[data-field="pseudo"] a {

@@ -4213,7 +4213,6 @@ div.sceditor-group {
 
 .character-details,
 .player-details {
-    display: flex;
     align-items: center;
     justify-content: center;
     color: var(--group-color);
@@ -4221,16 +4220,19 @@ div.sceditor-group {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
-    justify-content: center;
     font-size: var(--large);
-    text-align: center;
-    align-items: center;
     gap: var(--large);
     flex-direction: row !important
 }
 
-.character-details div {
+.character-details div,
+.player-details div {
     flex: 1
+}
+
+.character-details .field_uneditable,
+.player-details .field_uneditable {
+    text-align: center
 }
 
 .profile-contact a {

@@ -912,15 +912,33 @@ function initGroupClasses() {
   qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }
 
+const FIELD_TEXT = /^([\s()[\]{}«»"“”]*)([\s\S]*?)([\s()[\]{}«»"“”]*)$/;
+
 function setFieldValue(el, field, value) {
   const textNodes = [...el.childNodes].filter(node => node.nodeType === Node.TEXT_NODE);
 
-  setFieldValue(el, field, value);
+  if (field === 'img') {
+    q(':scope > img', el)?.remove();
+    textNodes.forEach(node => node.remove());
+
+    if (value) {
+      const img = document.createElement('img');
+      img.src = value;
+      el.prepend(img);
+    }
+    return;
+  }
 
   const text = Array.isArray(value) ? value.join(', ') : String(value);
+  const node = textNodes.find(n => FIELD_TEXT.exec(n.textContent)[2]);
 
-  if (textNodes.length) textNodes[0].textContent = text;
-  else el.prepend(text);
+  if (!node) {
+    el.prepend(text);
+    return;
+  }
+
+  const [, before, , after] = FIELD_TEXT.exec(node.textContent);
+  node.textContent = before + text + after;
 }
 
 function fillCard(root, data, index) {
@@ -931,11 +949,7 @@ function fillCard(root, data, index) {
     const value = resolveValue(field, data, index);
     if (value === undefined || value === null) return;
 
-    if (field === 'img') {
-      el.innerHTML = value ? `<img src="${value}">` : '';
-    } else {
-      el.textContent = Array.isArray(value) ? value.join(', ') : value;
-    }
+    setFieldValue(el, field, value);
   });
 
   if (data.groupId != null && root.matches('.list-row, .item')) {

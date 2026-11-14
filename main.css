@@ -4403,7 +4403,9 @@ div.sceditor-group {
 
 #field_id-20 .field_uneditable strong {
     font-family: var(--spe);
-    font-size: var(--large);
+    font-size: var(--2xlarge);
+    letter-spacing: var(2xsmall);
+    text-transform: capitalize;
     color: var(--group-color)
 }
 

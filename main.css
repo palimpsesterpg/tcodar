@@ -2205,7 +2205,7 @@ a:hover {
 
 .profile-head {
     display: grid;
-    gap: var(--large);
+    column-gap: var(--large);
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 200px 1fr var(--3xlarge);
     align-items: center;

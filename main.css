@@ -855,16 +855,34 @@ a:hover {
     content: ""
 }
 
-#categories.tabsystem .tab span {
-    display: none;
+#categories.tabsystem .tab span::before {
     position: absolute;
-    padding: var(--small) var(--large);
-    background-color: var(--white-op75);
-    border: 0.5px solid;
     align-items: center;
+    left: var(--3xlarge);
+    padding: var(--large);
+    padding-left: calc(var(--large) + 2.5px);
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+    background-color: var(--dark-light);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--serif);
+    font-style: italic;
     width: max-content;
-    font-family: var(--display);
-    font-size: var(--large)
+    display: none;
+    z-index: 999;
+    color: var(--dark)
+}
+
+#categories.tabsystem .tab span::before {
+    content: '';
+    height: var(--large);
+    width: var(--large);
+    background-color: var(--dark-light);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(230deg);
+    left: -0.5rem
 }
 
 #categories.tabsystem .tab:hover span {
@@ -2189,6 +2207,10 @@ a:hover {
     gap: var(--large)
 }
 
+.profile-dtls>div {
+    flex: 1
+}
+
 .profile-dtls .field_uneditable,
 .profile-dtls div[data-field] {
     background-color: var(--group-color-100);
@@ -2198,8 +2220,7 @@ a:hover {
     padding: var(--4xsmall) var(--2xsmall);
     border: 0.5px solid var(--group-color-200);
     text-shadow: 1px 1px var(--light);
-    text-align:center;
-    flex: 1
+    text-align: center
 }
 
 .profile-stats a {
@@ -4132,7 +4153,7 @@ div.sceditor-group {
 .profile-dtls .profile-field-label,
 .profile-second-avatar .profile-field-label,
 .profile-moodboard .profile-field-label,
-.character-dtls .profile-field-label
+.character-dtls .profile-field-label,
 .player-dtls .profile-field-label {
     display: none
 }
@@ -4150,6 +4171,49 @@ div.sceditor-group {
     align-items: center;
     gap: var(--large);
     flex-direction: row !important
+}
+
+.profile-contat a {
+    position: relative
+}
+
+.profile-contat a::after {
+    position: absolute;
+    align-items: center;
+    left: var(--3xlarge);
+    padding: var(--large);
+    padding-left: calc(var(--large) + 2.5px);
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+    background-color: var(--dark-light);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--serif);
+    font-style: italic;
+    width: max-content;
+    display: none;
+    z-index: 999;
+    color: var(--dark)
+}
+
+.profile-contat a:hover::after {
+    display: flex
+}
+
+.profile-contat #field_id:first-of-type a::after {
+    content: "message privé"
+}
+
+#field_id4 a::after {
+    content: "présentation"
+}
+
+#field_id-10 a::after {
+    content: "fiche de personnage"
+}
+
+#field_id-23 a::after {
+    content: "moodboard pinterest"
 }
 
 #field_id-6 .field_uneditable:after {

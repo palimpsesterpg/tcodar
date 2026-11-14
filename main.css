@@ -2186,7 +2186,8 @@ a:hover {
     gap: var(--large)
 }
 
-.profile-dtls .field_uneditable {
+.profile-dtls .field_uneditable,
+.profile-dtls div[data-field] {
     background-color: var(--group-color-100);
     color: var(--group-color);
     text-transform: uppercase;

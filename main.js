@@ -1276,6 +1276,9 @@ function initProfileOverview() {
   const OPEN_DELAY = 250;
   const CLOSE_DELAY = 150;
 
+  const overlay = document.createElement('div');
+  overlay.className = 'profile-overlay';
+
   let overview = null;
   let currentLink = null;
   let requestId = 0;
@@ -1286,14 +1289,9 @@ function initProfileOverview() {
     clearTimeout(openTimer);
     requestId++;
     overview?.remove();
+    overlay.remove();
     overview = null;
     currentLink = null;
-  };
-
-  const position = link => {
-    const rect = link.getBoundingClientRect();
-    overview.style.setProperty('--overview-top', `${rect.bottom}px`);
-    overview.style.setProperty('--overview-left', `${rect.left}px`);
   };
 
   const open = async link => {
@@ -1308,9 +1306,8 @@ function initProfileOverview() {
     if (!head) return;
 
     overview = buildOverview(link, head);
-    document.body.append(overview);
+    document.body.append(overlay, overview);
     enhanceOverview(overview);
-    position(link);
   };
 
   const findProfileLink = target => {

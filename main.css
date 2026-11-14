@@ -4383,3 +4383,26 @@ div.sceditor-group {
     padding: var(--large) 0;
     border-top: 0.5px solid var(--darker-light)
 }
+
+#field_id-20 .field_uneditable a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--large);
+}
+
+#field_id-20 .field_uneditable a:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+#field_id-20 .field_uneditable img {
+    width: var(--3xlarge);
+    aspect-ratio: 1
+}
+
+#field_id-20 .field_uneditable strong {
+    font-family: var(--spe);
+    font-size: var(--large);
+    color: var(--group-color)
+}

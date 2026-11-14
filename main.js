@@ -1430,7 +1430,7 @@ function initForumPreviews() {
 
 function buildOverview(link, sourceHead) {
   const key = toCharacterKey(getLinkName(link));
-  const userId = link.getAttribute('href').match(/\/u(\d+)/) ?. [1];
+    const userId = link.pathname.match(/^\/u(\d+)/)?.[1];
   const head = document.importNode(sourceHead, true);
 
   const profile = document.createElement('a');
@@ -1507,7 +1507,7 @@ function initProfileOverview() {
   const findProfileLink = target => {
     const link = target.closest('a[href]');
     if (!link || link.closest('.profile.overview')) return null;
-    return /^\/u\d+/.test(link.getAttribute('href')) ? link : null;
+    return link.origin === location.origin && /^\/u\d+/.test(link.pathname) ? link : null;
   };
 
   document.addEventListener('mouseover', e => {

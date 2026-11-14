@@ -37,11 +37,10 @@ const TAB_FIELDS = {
 const TAB_PROFILE = {
   'profile-dtls': 'field_id-6, field_id-8, field_id-9, field_id-13',
   'profile-second-avatar': 'field_id7',
-  'character-pronoun': 'field_id2',
-  'character-age': 'field_id-5, field_id-12',
+  'character-dtls': 'field_id2, field_id-5, field_id-12, field_id-2',
   '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
   'player-dtls': 'field_id14, field_id1',
-  '.tab-content[data-tab="roleplay"]': 'field_id9, field_id10',
+  '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
   'profile-moodboard': 'field_id11',
 };
 
@@ -1246,23 +1245,15 @@ function buildOverview(link, sourceHead) {
   profile.rel = 'noopener';
   profile.textContent = 'profil';
 
-  const mini = document.createElement('div');
-  mini.className = 'profile-mini';
-  mini.append(
+  q('.profile-stats', head)?.append(profile);
+
+  q('.profile-dtls', head)?.append(
     ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;
       return div;
     })
   );
-
-  const stats = q('.profile-stats', head);
-  if (stats) {
-    stats.append(profile);
-    stats.after(mini);
-  } else {
-    head.append(profile, mini);
-  }
 
   fillCard(head, getCharacters()[key]);
 
@@ -1282,35 +1273,44 @@ function enhanceOverview(overview) {
 }
 
 function initProfileOverview() {
-  const overlay = document.createElement('div');
-  overlay.className = 'profile-overlay';
+  const OPEN_DELAY = 250;
+  const CLOSE_DELAY = 150;
 
   let overview = null;
+  let currentLink = null;
   let requestId = 0;
+  let openTimer;
+  let closeTimer;
 
   const close = () => {
+    clearTimeout(openTimer);
     requestId++;
     overview?.remove();
-    overlay.remove();
     overview = null;
+    currentLink = null;
+  };
+
+  const position = link => {
+    const rect = link.getBoundingClientRect();
+    overview.style.setProperty('--overview-top', `${rect.bottom}px`);
+    overview.style.setProperty('--overview-left', `${rect.left}px`);
   };
 
   const open = async link => {
     close();
+    currentLink = link;
     const id = requestId;
 
     const doc = await fetchProfileDoc(link.href);
     if (id !== requestId) return;
 
     const head = doc && q('.profile-head', doc);
-    if (!head) {
-      location.assign(link.href);
-      return;
-    }
+    if (!head) return;
 
     overview = buildOverview(link, head);
-    document.body.append(overlay, overview);
+    document.body.append(overview);
     enhanceOverview(overview);
+    position(link);
   };
 
   const findProfileLink = target => {
@@ -1319,23 +1319,24 @@ function initProfileOverview() {
     return /^\/u\d+/.test(link.getAttribute('href')) ? link : null;
   };
 
-  document.addEventListener(
-    'click',
-    e => {
-      const link = findProfileLink(e.target);
-      const plainClick = e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey;
+  document.addEventListener('mouseover', e => {
+    const link = findProfileLink(e.target);
 
-      if (link && plainClick) {
-        e.preventDefault();
-        e.stopPropagation();
-        open(link);
-        return;
-      }
+    if (link || e.target.closest('.profile.overview')) clearTimeout(closeTimer);
+    if (!link || link === currentLink) return;
 
-      if (overview && !e.target.closest('.profile.overview')) close();
-    },
-    true
-  );
+    clearTimeout(openTimer);
+    openTimer = setTimeout(() => open(link), OPEN_DELAY);
+  });
+
+  document.addEventListener('mouseout', e => {
+    const source = findProfileLink(e.target) ?? e.target.closest('.profile.overview');
+    if (!source || source.contains(e.relatedTarget)) return;
+
+    clearTimeout(openTimer);
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(close, CLOSE_DELAY);
+  });
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();

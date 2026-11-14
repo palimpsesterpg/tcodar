@@ -682,7 +682,7 @@ a:hover {
 #page-navbar:hover>div>* {
     font-size: var(--large);
     transition-duration: 2s;
-    color: var(--co1);
+    color: var(--co1)
 }
 
 .mainmenu span {
@@ -862,7 +862,6 @@ a:hover {
 #categories.tabsystem .tab span {
     position: absolute;
     align-items: center;
-    left: var(--3xlarge);
     padding: var(--large);
     padding-left: calc(var(--large) + 2.5px);
     letter-spacing: 2.5px;
@@ -874,8 +873,7 @@ a:hover {
     font-style: italic;
     width: max-content;
     display: none;
-    z-index: 999;
-    color: var(--dark)
+    z-index: 999
 }
 
 #categories.tabsystem .tab span::before {
@@ -894,11 +892,11 @@ a:hover {
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab span {
-    right: 2.5rem
+    right: var(--3xlarge)
 }
 
 #categories.tabsystem .tabsystem-tabs.loc .tab span {
-    left: 2.5rem
+    left: var(--3xlarge)
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab.active::before,
@@ -1704,23 +1702,38 @@ a:hover {
 
 .posticons a>span,
 .posticons div>span {
-    display: none;
     position: absolute;
-    left: calc(100% + var(--large));
-    font-size: var(--small);
-    color: var(--dark);
-    width: max-content;
-    background-color: var(--white-op75);
-    padding: var(--2xsmall);
-    text-transform: uppercase;
     align-items: center;
-    font-weight: 300;
-    height: var(--2xlarge)
+    left: var(--3xlarge);
+    padding: var(--large);
+    padding-left: calc(var(--large) + 2.5px);
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+    background-color: var(--dark-light);
+    left: calc(100% + var(--large));
+    font-family: var(--serif);
+    font-style: italic;
+    width: max-content;
+    display: none;
+    z-index: 999;
+    color: var(--dark)
 }
 
 .posticons a:hover span,
 .posticons div:hover span {
     display: flex
+}
+
+.posticons a:hover span::before,
+.posticons div:hover span::before {
+    content: '';
+    height: var(--large);
+    width: var(--large);
+    background-color: var(--dark-light);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(230deg);
+    left: -0.5rem
 }
 
 .mini .posticons,
@@ -1746,6 +1759,7 @@ a:hover {
 .compact .posticons div>span,
 .sms .posticons div>span {
     position: absolute;
+    top: calc(100% + var(--large));
     left: auto
 }
 
@@ -2409,7 +2423,7 @@ a:hover {
 #reception .timeline div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 #reception .timeline div,

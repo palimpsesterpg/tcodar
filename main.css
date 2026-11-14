@@ -4337,19 +4337,29 @@ div.sceditor-group {
     overflow: auto
 }
 
-.tab-content[data-tab="character"] .profile-field-label,
-.tab-content[data-tab="settings"] .profile-field-label {
-    font-weight: 900;
+.tab-content .profile-field-label {
     font-family: var(--serif);
     color: var(--group-color)
 }
 
 .tab-content[data-tab="character"] .profile-field-label {
-    text-transform: lowercase
+    text-transform: lowercase;
+    font-size: var(--large);
+    font-weight: 700;
 }
 
 .tab-content[data-tab="settings"] .profile-field-label {
-    text-transform: uppercase
+    text-transform: uppercase;
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4small);
+    font-weight: 900;
+}
+
+.tab-content[data-tab="roleplay"] .profile-field-label {
+    text-transform: lowercase;
+    font-size: var(--large);
+    background-color: var(--group-color-100);
+    padding: var(--4xsmall)
 }
 
 .tab-content[data-tab="character"].active,

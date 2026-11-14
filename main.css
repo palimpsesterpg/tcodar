@@ -1832,7 +1832,7 @@ a:hover {
     width: 200px
 }
 
-.postprofile-dtls {
+.postprofile-details {
     display: none
 }
 
@@ -1893,7 +1893,7 @@ a:hover {
     display: none
 }
 
-.mini .postprofile-dtls {
+.mini .postprofile-details {
     display: flex;
     gap: var(--large);
     grid-area: 2 / 2 / 3 / 3;
@@ -1905,12 +1905,12 @@ a:hover {
     font-weight: 700
 }
 
-.mini .postprofile-dtls [data-field="face"]::before {
+.mini .postprofile-details [data-field="face"]::before {
     content: "est incarné.e par ";
     font-weight: 300
 }
 
-.mini .postprofile-dtls [data-field="player"]::before {
+.mini .postprofile-details [data-field="player"]::before {
     content: "sous la plume de ";
     font-weight: 300
 }
@@ -2247,7 +2247,7 @@ a:hover {
     font-size: var(--large)
 }
 
-.profile-stats {
+.profile-statistics {
     grid-area: 3 / 2 / 4 / 3;
     display: flex;
     align-items: center;
@@ -2255,7 +2255,7 @@ a:hover {
     gap: var(--large)
 }
 
-.profile-dtls {
+.profile-details {
     grid-area: 4 / 2 / 5 / 3;
     display: flex;
     align-items: center;
@@ -2265,7 +2265,7 @@ a:hover {
     gap: var(--large)
 }
 
-.profile-dtls>div {
+.profile-details>div {
     flex: 1 1 calc(100% / 2.1);
     background-color: var(--group-color-100);
     color: var(--group-color);
@@ -2277,7 +2277,7 @@ a:hover {
     text-align: center
 }
 
-.profile-stats a {
+.profile-statistics a {
     color: var(--group-color);
     font-family: var(--serif);
     font-size: var(--large);
@@ -2601,12 +2601,12 @@ a:hover {
     font-size: var(--large)
 }
 
-.inside-modal dtls {
+.inside-modal details {
     display: flex;
     gap: var(--2xsmall)
 }
 
-.inside-modal dtls span {
+.inside-modal details span {
     background-color: var(--group-color);
     color: var(--light);
     font-weight: 900;
@@ -4181,7 +4181,7 @@ div.sceditor-group {
     gap: var(--large)
 }
 
-.registration-dtls {
+.registration-details {
     width: 100%
 }
 
@@ -4203,16 +4203,16 @@ div.sceditor-group {
     font-family: var(--icons-thin)
 }
 
-.profile-dtls .profile-field-label,
+.profile-details .profile-field-label,
 .profile-second-avatar .profile-field-label,
 .profile-moodboard .profile-field-label,
-.character-dtls .profile-field-label,
-.player-dtls .profile-field-label {
+.character-details .profile-field-label,
+.player-details .profile-field-label {
     display: none
 }
 
-.character-dtls,
-.player-dtls {
+.character-details,
+.player-details {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4229,7 +4229,7 @@ div.sceditor-group {
     flex-direction: row !important
 }
 
-.character-dtls div {
+.character-details div {
     flex: 1
 }
 

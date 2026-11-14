@@ -2057,7 +2057,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
-    width: 65%;
+    width: 75%;
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
 
@@ -2073,16 +2073,19 @@ a:hover {
 }
 
 .profile-pseudo div {
-    display: flex;
-    gap: var(--large);
-    align-items: center
+    width: 100%
 }
 
 .profile-pseudo .prenom {
     font-size: var(--3xlarge);
     letter-spacing: var(--4xsmall);
     text-transform: uppercase;
+    text-align: right;
     margin-bottom: -1rem
+}
+
+.profile-pseudo .nom {
+    text-align: left
 }
 
 .profile-avatar img,
@@ -2195,6 +2198,7 @@ a:hover {
     padding: var(--4xsmall) var(--2xsmall);
     border: 0.5px solid var(--group-color-200);
     text-shadow: 1px 1px var(--light);
+    text-align:center;
     flex: 1
 }
 
@@ -4128,15 +4132,12 @@ div.sceditor-group {
 .profile-dtls .profile-field-label,
 .profile-second-avatar .profile-field-label,
 .profile-moodboard .profile-field-label,
-.character-pronoun .profile-field-label,
-.character-age .profile-field-label,
+.character-dtls .profile-field-label
 .player-dtls .profile-field-label {
     display: none
 }
 
-.character-pronoun,
-.character-age,
-.player,
+.character-dtls,
 .player-dtls {
     color: var(--group-color);
     font-family: var(--mono);
@@ -4152,11 +4153,11 @@ div.sceditor-group {
 }
 
 #field_id-6 .field_uneditable:after {
-    content: 'messages'
+    content: ' messages'
 }
 
 #field_id-13 .field_uneditable:after {
-    content: 'points'
+    content: ' points'
 }
 
 #field_id-5 .field_uneditable:after {

@@ -4364,8 +4364,9 @@ div.sceditor-group {
 .tab-content[data-tab="roleplay"] .profile-field-label {
     text-transform: lowercase;
     font-size: var(--large);
-    background-color: var(--group-color-100);
-    padding: var(--4xsmall)
+    border: 0.5px solid;
+    text-align: right;
+    letter-spacing: var(--2xsmall)
 }
 
 .tab-content[data-tab="character"].active,

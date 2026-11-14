@@ -2208,7 +2208,7 @@ a:hover {
 }
 
 .profile-dtls>div {
-    flex: 1
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .profile-dtls .field_uneditable,
@@ -4173,11 +4173,11 @@ div.sceditor-group {
     flex-direction: row !important
 }
 
-.profile-contat a {
+.profile-contact a {
     position: relative
 }
 
-.profile-contat a::after {
+.profile-contact a::after {
     position: absolute;
     align-items: center;
     left: var(--3xlarge);
@@ -4196,11 +4196,11 @@ div.sceditor-group {
     color: var(--dark)
 }
 
-.profile-contat a:hover::after {
+.profile-contact a:hover::after {
     display: flex
 }
 
-.profile-contat #field_id:first-of-type a::after {
+.profile-contact #field_id:first-of-type a::after {
     content: "message privé"
 }
 

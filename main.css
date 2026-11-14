@@ -2057,7 +2057,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
-    width: 75%;
+    width: 65%;
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
 
@@ -2083,21 +2083,6 @@ a:hover {
     letter-spacing: var(--4xsmall);
     text-transform: uppercase;
     margin-bottom: -1rem
-}
-
-.profile-pseudo .prenom:before,
-.profile-pseudo .nom:after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-}
-
-.profile-pseudo .prenom:before {
-    background: linear-gradient(to right, var(--light), var(--group-color))
-}
-
-.profile-pseudo .nom:after {
-    background: linear-gradient(to right, var(--group-color), var(--light))
 }
 
 .profile-avatar img,
@@ -2151,32 +2136,22 @@ a:hover {
     justify-items: center
 }
 
-.overview .profile-head {
-    grid-template-rows: auto auto auto auto auto
-}
-
 .profile-avatar {
     grid-area: 1 / 1 / 5 / 2
-}
-
-.overview .profile-avatar {
-    grid-area: 1 / 1 / 6 / 2
 }
 
 .profile-contact {
     grid-area: 1 / 3 / 5 / 4;
     display: flex;
     flex-direction: column;
+    height: 100%;
     align-items: center;
     gap: var(--large);
     border-radius: var(--small);
     padding: var(--large);
     width: var(--3xlarge);
-    border: 0.5px solid var(--group-color)
-}
-
-.overview .profile-contact {
-    grid-area: 1 / 3 / 6 / 4
+    border: 0.5px solid var(--group-color);
+    justify-content: space-evenly
 }
 
 .profile-presence {
@@ -4147,12 +4122,16 @@ div.sceditor-group {
     font-family: var(--icons-thin)
 }
 
+.overview .profile-dtls {
+    display: none
+}
+
 .profile-dtls {
+    width: 100%;
     display: flex;
     align-items: center;
-    border-image: var(--gradientgc2) 1;
-    border-width: var(--4xsmall);
-    border-style: solid;
+    background: var(--gradientgc2);
+    color: var(--light);
     justify-content: center
 }
 
@@ -4164,15 +4143,10 @@ div.sceditor-group {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--group-color);
     height: var(--3xlarge);
     text-transform: uppercase;
     font-weight: 300;
     gap: var(--2xsmall)
-}
-
-.profile-dtls>div:not(:last-of-type) {
-    border-right: 0.5px solid var(--group-color-200)
 }
 
 .profile-dtls .profile-field-label,
@@ -4199,10 +4173,6 @@ div.sceditor-group {
     align-items: center;
     gap: var(--large);
     flex-direction: row !important
-}
-
-#field_id-8 .field_uneditable:before {
-    content: 'ft.'
 }
 
 #field_id-6 .field_uneditable:after {

@@ -644,17 +644,16 @@ a:hover {
 
 #page-navbar * {
     opacity: 0.5;
-    transition-duration: 2s
+    transition: var(--ease)
 }
 
 #page-navbar:hover * {
     opacity: 1;
-    transition-duration: 2s
+    transition: var(--ease)
 }
 
 #page-navbar>div {
     border-radius: var(--small);
-    transition-duration: 2s;
     width: 0.5rem;
     padding: var(--large);
     display: flex;
@@ -663,25 +662,23 @@ a:hover {
     justify-content: flex-start;
     flex-direction: column;
     backdrop-filter: blur(2px);
+    border: 0.5px solid var(--white-op50);
     gap: var(--large)
 }
 
 #page-navbar:hover>div {
     width: 3rem;
-    border: 0.5px solid var(--light);
-    transition-duration: 2s
+    border-color: var(--light)
 }
 
 #page-navbar>div>* {
     position: relative;
     font-size: var(--xsmall);
-    color: transparent;
-    transition-duration: 2s
+    color: transparent
 }
 
 #page-navbar:hover>div>* {
     font-size: var(--large);
-    transition-duration: 2s;
     text-shadow: 1px 1px var(--light);
     color: var(--co1)
 }

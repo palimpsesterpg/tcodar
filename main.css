@@ -1916,7 +1916,7 @@ a:hover {
 }
 
 .mini .postprofile-details [data-field="player[2]"]::before {
-    content: "("
+    content: " ("
 }
 
 .mini .postprofile-details [data-field="player[2]"]::after {

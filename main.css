@@ -1829,9 +1829,8 @@ a:hover {
 
 .postprofile-avatar img {
     height: auto;
-    padding: 0.125rem;
-    background-color: var(--light);
-    border: 0.475rem solid var(--group-color-100, var(--co1-100));
+    padding: var(--4xsmall);
+    border: var(--2xsmall) solid var(--group-color-100, var(--co1-100));
     width: 200px
 }
 
@@ -1887,7 +1886,8 @@ a:hover {
     width: var(--5xlarge);
     aspect-ratio: 1;
     outline: 0;
-    padding: var(--2xsmall);
+    border-width: 0.5px;
+    padding: var(--2xsmall) !important
 }
 
 .mini .postprofile-info,
@@ -2396,8 +2396,6 @@ a:hover {
 
 #reception .intels strong,
 #reception .intels i {
-    width: 100%;
-    flex: 1;
     padding: var(--2xsmall);
     display: flex;
     align-items: center;
@@ -2407,12 +2405,14 @@ a:hover {
 }
 
 #reception .intels strong {
+    width: 55%;
     background-color: var(--co2-100);
     color: var(--co2-700);
     font-family: var(--mono)
 }
 
 #reception .intels i {
+    width: 45%;
     background-color: var(--co3-100);
     color: var(--co3-700);
     font-family: var(--serif)
@@ -2420,7 +2420,8 @@ a:hover {
 
 #reception .intels {
     display: flex;
-    width: 100%
+    width: 100%;
+    flex-wrap: wrap
 }
 
 #reception .admins {
@@ -2441,7 +2442,6 @@ a:hover {
 }
 
 #reception .timeline div,
-#reception .intels div,
 #reception .rules div,
 #reception .context span {
     height: 100%;
@@ -2449,8 +2449,7 @@ a:hover {
     overflow: auto
 }
 
-#reception .context span,
-#reception .intels div {
+#reception .context span {
     display: block
 }
 

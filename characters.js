@@ -11,7 +11,7 @@ const CHARACTERS = {
     status: 'célibataire',
     job: ['co-fondatrice et présidente de la branche londonienne de Jennings Consulting', 'un autre truc'],
     gender: 'femme cis',
-    player: ['palimpseste', 'cam', 'elle'],
+    player: ['palimpseste', 'elle', 'cam'],
     groupId: 6
   },
   johnDoe: {
@@ -24,7 +24,7 @@ const CHARACTERS = {
     address: ['blablabla'],
     job: 'homme de chambre au Carlton',
     gender: 'homme cis',
-    player: ['saperlipopette', 'soso', 'elle'],
+    player: ['saperlipopette', 'il', 'soso'],
     status: 'célibataire',
     groupId: 4
   },
@@ -38,7 +38,7 @@ const CHARACTERS = {
     address: ['blablabla'],
     job: 'héritière',
     gender: 'femme cis',
-    player: ['catching fire', 'cha', 'elle'],
+    player: ['catching fire', 'elle', 'cha'],
     status: 'en couple',
     groupId: 3
   }

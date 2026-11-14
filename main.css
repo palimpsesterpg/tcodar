@@ -4232,7 +4232,7 @@ div.sceditor-group {
 
 .character-details .field_uneditable,
 .player-details .field_uneditable {
-    text-align: center
+    text-align: center !important
 }
 
 .profile-contact a {

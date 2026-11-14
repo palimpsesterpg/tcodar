@@ -418,10 +418,16 @@ const hasMentionNear = el =>
   isMention(el) || Boolean(el.parentElement ?.querySelector(':scope > .mentiontag'));
 
 function resolveValue(field, data, index) {
-  const m = field.match(/^(\w+)\[(\d+)\]$/);
+  const m = field.match(/^(\w+)\[(\d+(?:\s*,\s*\d+)*)\]$/);
   if (m) {
     const arr = data[m[1]];
-    return Array.isArray(arr) ? arr[Number(m[2])] : arr;
+    if (!Array.isArray(arr)) return arr;
+
+    const indexes = m[2].split(',').map(Number);
+    if (indexes.length === 1) return arr[indexes[0]];
+
+    const values = indexes.map(i => arr[i]).filter(value => value != null);
+    return values.length ? values : undefined;
   }
 
   const value = data[field];

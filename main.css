@@ -4288,14 +4288,6 @@ div.sceditor-group {
     content: ' ans'
 }
 
-#field_id-12 .field_uneditable:before {
-    content: ' ('
-}
-
-#field_id-12 .field_uneditable:after {
-    content: ')'
-}
-
 .profile-moodboard {
     height: 320px;
     width: 320px
@@ -4375,6 +4367,5 @@ div.sceditor-group {
     height: 100%;
     overflow: auto;
     padding: var(--large) 0;
-    border-top: 0.5px solid var(--darker-light);
-    border-bottom: 0.5px solid var(--darker-light)
+    border-top: 0.5px solid var(--darker-light)
 }

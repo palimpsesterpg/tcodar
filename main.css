@@ -4342,6 +4342,10 @@ div.sceditor-group {
     color: var(--group-color)
 }
 
+.tab-content .field_uneditable {
+    text-align: justify
+}
+
 .tab-content[data-tab="character"] .profile-field-label {
     text-transform: lowercase;
     font-size: var(--large);

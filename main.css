@@ -2129,7 +2129,7 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
-    width: 75%;
+    width: 50%;
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
 
@@ -2234,7 +2234,9 @@ a:hover {
     color: var(--light);
     background-color: var(--group-color);
     border-radius: var(--small);
-    padding: var(--2xsmall) var(--2xlarge);
+    padding-right: var(--2xlarge);
+    letter-spacing: var(--2xsmall);
+    padding-left: calc(var(--2xlarge) + var(--2xsmall));
     text-transform: uppercase;
     font-weight: 300
 }

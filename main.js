@@ -1445,9 +1445,9 @@ function buildOverview(link, sourceHead) {
   profile.rel = 'noopener';
   profile.textContent = 'profil';
 
-  q('.profile-stats', head) ?.append(profile);
+  q('.profile-statistics', head) ?.append(profile);
 
-  q('.profile-dtls', head) ?.append(
+  q('.profile-details', head) ?.append(
     ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;

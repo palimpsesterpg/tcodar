@@ -4167,8 +4167,9 @@ div.sceditor-group {
     padding-left: var(--4xsmall);
     justify-content: center;
     font-size: var(--large);
+    text-align:center;
     align-items: center;
-    gap: var(--4xlarge);
+    gap: var(--large);
     flex-direction: row !important
 }
 

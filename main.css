@@ -2177,15 +2177,16 @@ a:hover {
     gap: var(--large)
 }
 
-.profile-mini {
+.profile-dtls {
     grid-area: 4 / 2 / 5 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     gap: var(--large)
 }
 
-.profile-mini>div {
+.profile-dtls .field_uneditable {
     background-color: var(--group-color-100);
     color: var(--group-color);
     text-transform: uppercase;
@@ -2193,6 +2194,7 @@ a:hover {
     padding: var(--4xsmall) var(--2xsmall);
     border: 0.5px solid var(--group-color-200);
     text-shadow: 1px 1px var(--light);
+    flex: 1
 }
 
 .profile-stats a {
@@ -4120,33 +4122,6 @@ div.sceditor-group {
 .profile.cam::before {
     content: "\e1d5" !important;
     font-family: var(--icons-thin)
-}
-
-.overview .profile-dtls {
-    display: none
-}
-
-.profile-dtls {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: var(--gradientgc2);
-    color: var(--light);
-    justify-content: center
-}
-
-.profile-dtls>div {
-    flex: 1
-}
-
-.profile-dtls .field_uneditable {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--3xlarge);
-    text-transform: uppercase;
-    font-weight: 300;
-    gap: var(--2xsmall)
 }
 
 .profile-dtls .profile-field-label,

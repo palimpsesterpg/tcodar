@@ -462,6 +462,12 @@ function formatFieldLabels() {
   });
 }
 
+function trimProfileLabels() {
+  qq('.profile-field-label').forEach(label => {
+    label.textContent = label.textContent.replace(/\s*:\s*$/, '');
+  });
+}
+
 function moveAdminLinks() {
   const target = q('#page-navbar div > a[href="#bottom"]');
   if (!target) return;
@@ -1394,6 +1400,7 @@ onReady(() => {
   addQueendomTab();
   unwrapTabs();
   formatFieldLabels();
+  trimProfileLabels();
   moveAdminLinks();
   organizeProfileElements();
   initTabs();

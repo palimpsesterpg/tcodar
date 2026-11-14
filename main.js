@@ -595,7 +595,7 @@ function formatFieldLabels() {
 
 function trimProfileLabels() {
   qq('.profile-field-label').forEach(label => {
-    label.textContent = label.textContent.replace(/\s*:\s*$/, '');
+    label.textContent = label.textContent.replace(/[\s*:]+$/, '');
   });
 }
 

@@ -1910,9 +1910,17 @@ a:hover {
     font-weight: 300
 }
 
-.mini .postprofile-details [data-field="player"]::before {
+.mini .postprofile-details [data-field="player[0]"]::before {
     content: "sous la plume de ";
     font-weight: 300
+}
+
+.mini .postprofile-details [data-field="player[2]"]::before {
+    content: "("
+}
+
+.mini .postprofile-details [data-field="player[2]"]::after {
+    content: ")"
 }
 
 .post>sep {

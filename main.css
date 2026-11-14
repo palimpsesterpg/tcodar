@@ -4406,3 +4406,14 @@ div.sceditor-group {
     font-size: var(--large);
     color: var(--group-color)
 }
+
+.ajax-profil_parent:has(.ajax-profil_hover) {
+    display: flex;
+    gap: var(--large);
+    align-items: center;
+    justify-content: center
+}
+
+.ajax-profil_parent:has(.ajax-profil_hover) .field_uneditable {
+    flex: 1
+}

@@ -35,16 +35,14 @@ const TAB_FIELDS = {
 };
 
 const TAB_PROFILE = {
-  'profile-dtls': 'field_id-6, field_id-8, field_id-13',
+  'profile-dtls': 'field_id-6, field_id-8, field_id-9, field_id-13',
   'profile-second-avatar': 'field_id7',
   'character-pronoun': 'field_id2',
   'character-age': 'field_id-5, field_id-12',
-  'player': 'field_id-9',
   '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
   'player-dtls': 'field_id14, field_id1',
   '.tab-content[data-tab="roleplay"]': 'field_id9, field_id10',
-  '.tab-content[data-tab="moodboard"]': 'field_id11',
-  'profile-icon': 'field_id6',
+  'profile-moodboard': 'field_id11',
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

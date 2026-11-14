@@ -1808,14 +1808,15 @@ a:hover {
 }
 
 .post.online .postprofile .online-icon::before {
-    content: "•";
+    content: "\e974";
+    font-family: var(--icons-thin);
     background-color: var(--darker-light);
     color: var(--group-color, var(--co1));
     display: flex;
     align-items: center;
     font-size: var(--small);
     justify-content: center;
-    height: var(--large);
+    height: var(--2xlarge);
     aspect-ratio: 1;
     border-radius: 100%
 }

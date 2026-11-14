@@ -15,6 +15,9 @@
     --5xlarge: 5rem;
     --6xlarge: 6rem;
 
+    --doc-size: 40rem;
+    --mini-doc-size: 20rem;
+
     --main: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --mono: "Inconsolata", ui-monospace, monospace;
     --serif: "Bodoni Moda", Georgia, serif;
@@ -455,8 +458,8 @@ body {
 }
 
 img {
-    max-height: 600px;
-    max-width: 600px;
+    max-height: 500px;
+    max-width: 500px;
     object-fit: cover
 }
 
@@ -656,7 +659,6 @@ a:hover {
     padding: var(--large);
     display: flex;
     background-color: var(--white-op25);
-    border: 0.5px solid var(--light);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -666,19 +668,21 @@ a:hover {
 
 #page-navbar:hover>div {
     width: 3rem;
+    border: 0.5px solid var(--light);
     transition-duration: 2s
 }
 
 #page-navbar>div>* {
     position: relative;
     font-size: var(--xsmall);
-    color: var(--light);
+    color: transparent;
     transition-duration: 2s
 }
 
 #page-navbar:hover>div>* {
     font-size: var(--large);
-    transition-duration: 2s
+    transition-duration: 2s;
+    color: var(--co1);
 }
 
 .mainmenu span {
@@ -855,7 +859,7 @@ a:hover {
     content: ""
 }
 
-#categories.tabsystem .tab span::before {
+#categories.tabsystem .tab span {
     position: absolute;
     align-items: center;
     left: var(--3xlarge);
@@ -4167,7 +4171,7 @@ div.sceditor-group {
     padding-left: var(--4xsmall);
     justify-content: center;
     font-size: var(--large);
-    text-align:center;
+    text-align: center;
     align-items: center;
     gap: var(--large);
     flex-direction: row !important

@@ -658,7 +658,7 @@ a:hover {
     width: 0.5rem;
     padding: var(--large);
     display: flex;
-    background-color: var(--white-op25);
+    background-color: var(--white-op50);
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -682,6 +682,7 @@ a:hover {
 #page-navbar:hover>div>* {
     font-size: var(--large);
     transition-duration: 2s;
+    text-shadow: 1px 1px var(--light);
     color: var(--co1)
 }
 

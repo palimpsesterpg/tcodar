@@ -408,7 +408,7 @@ function replaceZodiacIcons() {
   ZODIAC_SIGNS.forEach(sign => {
     qq(`img[src*="icon_zodiac_${sign}_2.gif"]`).forEach(img => {
       const span = document.createElement('span');
-      span.className = `tes-${sign}`;
+      span.className = `icon-tcodar-${sign}`;
       img.replaceWith(span);
     });
   });

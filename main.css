@@ -4157,6 +4157,9 @@ div.sceditor-group {
 
 .character-dtls,
 .player-dtls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--group-color);
     font-family: var(--display);
     text-transform: uppercase;
@@ -4167,6 +4170,10 @@ div.sceditor-group {
     align-items: center;
     gap: var(--4xlarge);
     flex-direction: row !important
+}
+
+.character-dtls div {
+    flex: 1
 }
 
 .profile-contact a {

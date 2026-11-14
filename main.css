@@ -2204,15 +2204,12 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
     gap: var(--large)
 }
 
 .profile-dtls>div {
-    flex: 1 1 calc(100% / 2.1)
-}
-
-.profile-dtls .field_uneditable,
-.profile-dtls div[data-field] {
+    flex: 1 1 calc(100% / 2.1);
     background-color: var(--group-color-100);
     color: var(--group-color);
     text-transform: uppercase;
@@ -4161,15 +4158,14 @@ div.sceditor-group {
 .character-dtls,
 .player-dtls {
     color: var(--group-color);
-    font-family: var(--mono);
+    font-family: var(--display);
     text-transform: uppercase;
-    letter-spacing: var(--2xsmall);
-    padding-left: var(--2xsmall);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     justify-content: center;
     font-size: var(--large);
-    font-weight: 300;
     align-items: center;
-    gap: var(--large);
+    gap: var(--4xlarge);
     flex-direction: row !important
 }
 

@@ -3856,8 +3856,8 @@ h2+.panel {
     text-transform: uppercase !important
 }
 
-.listing .bloc-toggle:nth-of-type(2n) .title-toggle span,
-.title:nth-child(2n of .title) span {
+.listings .bloc-toggle:nth-of-type(even) .title-toggle span,
+.title:nth-child(even of .title) span {
     color: var(--co3);
     justify-content: flex-end !important
 }
@@ -3921,7 +3921,7 @@ span[data-field="face"] {
     text-transform: capitalize
 }
 
-.fam-row:nth-of-type(2n) {
+.fam-row:nth-of-type(even) {
     background-color: var(--dark-light)
 }
 

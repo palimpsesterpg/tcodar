@@ -4187,7 +4187,7 @@ div.sceditor-group {
     font-size: var(--medium) !important;
     padding: var(--large) !important;
     width: 100% !important;
-    width: 35% !important;
+    height: 35% !important;
     margin: 0 !important
 }
 

@@ -737,7 +737,7 @@ a:hover {
     color: var(--dark)
 }
 
-.mainmenu span:before {
+.mainmenu span::before {
     content: '';
     height: var(--large);
     width: var(--large);
@@ -4313,7 +4313,7 @@ div.sceditor-group {
     color: var(--dark)
 }
 
-.profile-contact span {
+.profile-contact span::before {
     content: '';
     height: var(--large);
     width: var(--large);
@@ -4330,19 +4330,19 @@ div.sceditor-group {
     display: flex
 }
 
-.profile-contact #field_id:first-of-type a::after {
+.profile-contact #field_id:first-of-type span::after {
     content: "message privé"
 }
 
-#field_id4 a::after {
+#field_id4 span::after {
     content: "présentation"
 }
 
-#field_id-10 a::after {
+#field_id-10 span::after {
     content: "fiche de personnage"
 }
 
-#field_id-23 a::after {
+#field_id-23 span::after {
     content: "moodboard pinterest"
 }
 

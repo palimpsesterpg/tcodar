@@ -804,6 +804,7 @@ a:hover {
 .profile,
 #reception,
 #hub,
+#textarea_content,
 .registration {
     padding: var(--large);
     background-color: var(--light);
@@ -4033,13 +4034,14 @@ a.nav {
 }
 
 .quickreply form>div:nth-of-type(2) {
-    text-align: center;
-    margin-top: var(--large);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    font-size: 0
+    margin-top: var(--large) !important;
+    font-size: 0;
+    width: 50%;
+    margin: 0 auto
 }
 
 .topic-watch {
@@ -4178,6 +4180,7 @@ div.sceditor-group {
     font-size: var(--medium) !important;
     padding: var(--large) !important;
     width: 100% !important;
+    width: 35% !important;
     margin: 0 !important
 }
 

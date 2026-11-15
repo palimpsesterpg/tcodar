@@ -1754,13 +1754,13 @@ a:hover {
     color: var(--dark)
 }
 
-.posticons>a:hover span,
-.posticons>div:hover span {
+.posticons>a:hover>span,
+.posticons>div:hover>span {
     display: flex
 }
 
-.posticons>a:hover span::before,
-.posticons>div:hover span::before {
+.posticons>a:hover>span::before,
+.posticons>div:hover>span::before {
     content: '';
     height: var(--large);
     width: var(--large);
@@ -1816,15 +1816,6 @@ a:hover {
 
 .fa_liked i[class*=" fi-ts-"]::before {
     font-family: var(--icons-solid) !important
-}
-
-.rep-nb {
-    height: var(--large);
-    width: var(--large);
-    background-color: var(--neutral);
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 .postbody {
@@ -4015,7 +4006,6 @@ span[data-field="face"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0;
     width: 75%;
     margin: 0 auto;
     gap: var(--large)

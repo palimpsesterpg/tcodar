@@ -29,7 +29,7 @@
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
 
-        --ease: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease: cubic-bezier(0.65, 0, 0.35, 1);
     --duration: 1s;
 
     --co1: #725794;
@@ -397,6 +397,14 @@
         flex-direction: row !important;
         background-color: var(--white-op25);
         border: 0.5px solid var(--light);
+        width: 3rem;
+        border-color: var(--light)
+    }
+
+    #page-navbar>div>* {
+        font-size: var(--large);
+        text-shadow: 1px 1px var(--light);
+        color: var(--co1)
     }
 
     #page-navbar * {
@@ -409,13 +417,25 @@
 }
 
 @keyframes fade-up {
-    from { opacity: 0; transform: translateY(0.5rem); }
-    to { opacity: 1; transform: none; }
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 html {
@@ -724,9 +744,10 @@ a:hover {
     background-color: var(--dark-light);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(230deg);
-    border: 0.5px solid;
-    left: -0.5rem
+    transform: translateY(-50%) rotate(225deg);
+    border-top: 0.5px solid;
+    border-right: 0.5px solid;
+    left: -0.525rem;
 }
 
 .mainmenu:hover span {
@@ -899,7 +920,9 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(230deg);
-    border: 0.5px solid
+    border-top: 0.5px solid;
+    border-right: 0.5px solid;
+    left: -0.525rem
 }
 
 #categories.tabsystem .tab:hover span {
@@ -1755,8 +1778,9 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(230deg);
-    border: 0.5px solid;
-    left: -0.5rem
+    border-top: 0.5px solid;
+    border-right: 0.5px solid;
+    left: -0.525rem
 }
 
 .mini .posticons,
@@ -4269,7 +4293,7 @@ div.sceditor-group {
     position: relative
 }
 
-.profile-contact a::after {
+.profile-contact span {
     position: absolute;
     align-items: center;
     left: var(--3xlarge);
@@ -4289,7 +4313,20 @@ div.sceditor-group {
     color: var(--dark)
 }
 
-.profile-contact a:hover::after {
+.profile-contact span {
+    content: '';
+    height: var(--large);
+    width: var(--large);
+    background-color: var(--dark-light);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(225deg);
+    border-top: 0.5px solid;
+    border-right: 0.5px solid;
+    left: -0.525rem;
+}
+
+.profile-contact a:hover span {
     display: flex
 }
 

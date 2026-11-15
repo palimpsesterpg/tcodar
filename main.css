@@ -677,14 +677,14 @@ a:hover {
     opacity: 0.5;
     transition:
         opacity var(--duration) var(--ease),
-        transform var(--duration) var(--ease);
+        transform var(--duration) var(--ease)
 }
 
 #page-navbar:hover * {
     opacity: 1;
     transition:
         opacity var(--duration) var(--ease),
-        transform var(--duration) var(--ease);
+        transform var(--duration) var(--ease)
 }
 
 #page-navbar>div {
@@ -748,7 +748,7 @@ a:hover {
     transform: translateY(-50%) rotate(225deg);
     border-top: 0.5px solid;
     border-right: 0.5px solid;
-    left: -0.525rem;
+    left: -0.525rem
 }
 
 .mainmenu:hover span {
@@ -935,11 +935,13 @@ a:hover {
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab span::before {
-    right: -0.55rem
+    right: -0.525rem !important;
+    left: auto !important;
+    transform: translateY(-50%) rotate(45deg) !important
 }
 
 #categories.tabsystem .tabsystem-tabs.loc .tab span {
-    left: var(--3xlarge);
+    left: var(--3xlarge)
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab.active::before,
@@ -1911,7 +1913,7 @@ a:hover {
     grid-template-rows: auto auto;
     justify-content: space-between;
     align-items: center;
-    justify-items: end;
+    justify-items: end
 }
 
 .mini .postprofile-name {
@@ -4322,7 +4324,7 @@ div.sceditor-group {
     transform: translateY(-50%) rotate(225deg);
     border-top: 0.5px solid;
     border-right: 0.5px solid;
-    left: -0.525rem;
+    left: -0.525rem
 }
 
 .profile-contact a:hover span {
@@ -4418,14 +4420,14 @@ div.sceditor-group {
 .tab-content[data-tab="character"] .profile-field-label {
     text-transform: lowercase;
     font-size: var(--large);
-    font-weight: 700;
+    font-weight: 700
 }
 
 .tab-content[data-tab="settings"] .profile-field-label {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4small);
-    font-weight: 900;
+    font-weight: 900
 }
 
 .tab-content[data-tab="roleplay"] .profile-field-label {
@@ -4459,11 +4461,11 @@ div.sceditor-group {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 #field_id-20 .field_uneditable a:nth-of-type(even) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 #field_id-20 .field_uneditable img {

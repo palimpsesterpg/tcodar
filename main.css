@@ -29,8 +29,8 @@
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
 
-    --ease: cubic-bezier(0.4, 0, 0.2, 1);
-    --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+        --ease: cubic-bezier(0.65, 0, 0.35, 1);
+    --duration: 1s;
 
     --co1: #725794;
     --co2: #6184d8;
@@ -408,6 +408,16 @@
     }
 }
 
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(0.5rem); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%
@@ -644,12 +654,16 @@ a:hover {
 
 #page-navbar * {
     opacity: 0.5;
-    transition: var(--ease)
+    transition:
+        opacity var(--duration) var(--ease),
+        transform var(--duration) var(--ease);
 }
 
 #page-navbar:hover * {
     opacity: 1;
-    transition: var(--ease)
+    transition:
+        opacity var(--duration) var(--ease),
+        transform var(--duration) var(--ease);
 }
 
 #page-navbar>div {
@@ -699,6 +713,7 @@ a:hover {
     width: max-content;
     display: none;
     z-index: 999;
+    border: 0.5px solid;
     color: var(--dark)
 }
 
@@ -710,6 +725,7 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(230deg);
+    border: 0.5px solid;
     left: -0.5rem
 }
 
@@ -871,6 +887,7 @@ a:hover {
     font-style: italic;
     width: max-content;
     display: none;
+    border: 0.5px solid;
     z-index: 999
 }
 
@@ -882,7 +899,7 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(230deg);
-    left: -0.5rem
+    border: 0.5px solid
 }
 
 #categories.tabsystem .tab:hover span {
@@ -893,8 +910,14 @@ a:hover {
     right: var(--3xlarge)
 }
 
+#categories.tabsystem .tabsystem-tabs.off .tab span::before {
+    right: var(--3xlarge);
+    right: -0.5rem
+}
+
 #categories.tabsystem .tabsystem-tabs.loc .tab span {
-    left: var(--3xlarge)
+    left: var(--3xlarge);
+    left: -0.5rem
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab.active::before,
@@ -1714,6 +1737,7 @@ a:hover {
     width: max-content;
     display: none;
     z-index: 999;
+    border: 0.5px solid;
     color: var(--dark)
 }
 
@@ -1731,6 +1755,7 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(230deg);
+    border: 0.5px solid;
     left: -0.5rem
 }
 
@@ -4260,6 +4285,7 @@ div.sceditor-group {
     width: max-content;
     display: none;
     z-index: 999;
+    border: 0.5px solid;
     color: var(--dark)
 }
 

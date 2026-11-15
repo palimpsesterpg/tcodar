@@ -941,6 +941,12 @@ function setFieldValue(el, field, value) {
   node.textContent = before + text + after;
 }
 
+function addContactSpans(root = document) {
+  qq('.profile-contact a', root).forEach(link => {
+    if (!q(':scope > span', link)) link.append(document.createElement('span'));
+  });
+}
+
 function fillCard(root, data, index) {
   if (!root || !data) return;
 
@@ -1611,6 +1617,7 @@ onReady(() => {
   trimProfileLabels();
   moveAdminLinks();
   organizeProfileElements();
+  addContactSpans();
   initTabs();
   initTabsInline();
   initHeaderNav();

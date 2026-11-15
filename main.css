@@ -395,20 +395,21 @@
 
     #page-navbar>div {
         flex-direction: row !important;
-        background-color: var(--white-op25);
-        border: 0.5px solid var(--light);
-        width: 3rem;
-        border-color: var(--light)
+        background-color: var(--white-op25) !important;
+        border: 0.5px solid var(--light) !important;
+        height: 3rem !important;
+        width: auto !important;
+        border-color: var(--light) !important
     }
 
     #page-navbar>div>* {
-        font-size: var(--large);
-        text-shadow: 1px 1px var(--light);
-        color: var(--co1)
+        font-size: var(--large) !important;
+        text-shadow: 1px 1px var(--light) !important;
+        color: var(--co1) !important
     }
 
     #page-navbar * {
-        opacity: 1
+        opacity: 1 !important
     }
 
     .forum-off .forum-lastpost-avatar img {

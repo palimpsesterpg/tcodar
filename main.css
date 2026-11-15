@@ -4361,7 +4361,7 @@ div.sceditor-group {
 
 .profile-moodboard {
     height: 320px;
-    width: 320px
+    width: 200px
 }
 
 .profile-moodboard .field_uneditable {
@@ -4369,9 +4369,11 @@ div.sceditor-group {
     min-height: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
-    gap: var(--large)
+    gap: var(--2xsmall);
+    justify-items: stretch;
+    align-content: space-between;
 }
 
 .profile-moodboard .field_uneditable img {

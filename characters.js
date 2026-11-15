@@ -14,11 +14,11 @@ const CHARACTERS = {
     player: ['palimpseste', 'elle', 'cam'],
     groupId: 6
   },
-  johnDoe: {
-    face: 'Jacob Elordi',
-    pseudo: 'Pip Mayfair',
-    firstNames: 'Pip',
-    lastNames: ['Pip', 'Myers'],
+  edmondDantes: {
+    face: 'Pierre Niney',
+    pseudo: 'Edmond Dantès',
+    firstNames: 'Edmond',
+    lastNames: 'Dantès',
     families: [],
     dateOfBirth: '00.00.0000',
     address: ['blablabla'],

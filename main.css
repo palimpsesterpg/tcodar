@@ -1870,9 +1870,8 @@ a:hover {
     width: 200px
 }
 
-.postprofile-details,
-.u1 .postprofile-details {
-    display: none !important
+.postprofile-details {
+    display: none
 }
 
 .mini {
@@ -1898,7 +1897,7 @@ a:hover {
     height: var(--5xlarge);
     display: grid;
     grid-template-columns: var(--5xlarge) 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
     justify-items: end

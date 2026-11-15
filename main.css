@@ -919,7 +919,7 @@ a:hover {
     background-color: var(--dark-light);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(230deg);
+    transform: translateY(-50%) rotate(225deg);
     border-top: 0.5px solid;
     border-right: 0.5px solid;
     left: -0.525rem
@@ -934,13 +934,11 @@ a:hover {
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab span::before {
-    right: var(--3xlarge);
-    right: -0.5rem
+    right: -0.55rem
 }
 
 #categories.tabsystem .tabsystem-tabs.loc .tab span {
     left: var(--3xlarge);
-    left: -0.5rem
 }
 
 #categories.tabsystem .tabsystem-tabs.off .tab.active::before,
@@ -1777,7 +1775,7 @@ a:hover {
     background-color: var(--dark-light);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(230deg);
+    transform: translateY(-50%) rotate(225deg);
     border-top: 0.5px solid;
     border-right: 0.5px solid;
     left: -0.525rem

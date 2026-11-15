@@ -4010,14 +4010,21 @@ span[data-field="face"] {
     align-items: center;
     justify-content: center;
     font-size: 0;
+    width: 75%;
     gap: var(--large)
 }
 
+.topic-header-path sep {
+    flex: 1;
+    background-color: var(--co2);
+    height: 0.5px
+}
+
 a.nav {
-    font-size: var(--small);
-    padding: var(--4xsmall) var(--2xsmall);
+    font-weight: 300;
+    padding: var(--4xsmall) var(--small);
     border-radius: var(--small);
-    color: var(--white-op90) !important;
+    color: var(--light) !important;
     background-color: var(--co2)
 }
 

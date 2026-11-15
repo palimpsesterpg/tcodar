@@ -1719,8 +1719,8 @@ a:hover {
     background: var(--light)
 }
 
-.posticons a,
-.posticons div {
+.posticons>a,
+.posticons>div {
     position: relative;
     width: var(--2xlarge);
     height: var(--2xlarge);
@@ -1729,8 +1729,8 @@ a:hover {
     justify-content: center
 }
 
-.posticons a,
-.posticons div:not(:last-of-type) {
+.posticons>a,
+.posticons>div:not(:last-of-type) {
     border-bottom: 0.5px solid var(--lighter-neutral)
 }
 
@@ -1754,13 +1754,13 @@ a:hover {
     color: var(--dark)
 }
 
-.posticons a:hover span,
-.posticons div:hover span {
+.posticons>a:hover span,
+.posticons>div:hover span {
     display: flex
 }
 
-.posticons a:hover span::before,
-.posticons div:hover span::before {
+.posticons>a:hover span::before,
+.posticons>div:hover span::before {
     content: '';
     height: var(--large);
     width: var(--large);
@@ -1779,12 +1779,12 @@ a:hover {
     flex-direction: row
 }
 
-.mini .posticons a,
-.compact .posticons a,
-.sms .posticons a,
-.mini .posticons div:not(:last-of-type),
-.compact .posticons div:not(:last-of-type),
-.sms .posticons div:not(:last-of-type) {
+.mini .posticons>a,
+.compact .posticons>a,
+.sms .posticons>a,
+.mini .posticons>div:not(:last-of-type),
+.compact .posticons>div:not(:last-of-type),
+.sms .posticons>div:not(:last-of-type) {
     border-right: 0.5px solid var(--lighter-neutral);
     border-bottom: 0
 }
@@ -1802,10 +1802,23 @@ a:hover {
 
 .fa_like_div>span {
     left: 50% !important;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     top: 2.5rem !important;
     gap: var(--2xsmall)
+}
+
+.fa_like_div>span::before {
+    content: '';
+    height: var(--large);
+    width: var(--large);
+    background-color: var(--dark-light);
+    position: absolute;
+    top: -0.525rem;
+    transform: translateX(-50%) rotate(315deg);
+    border-top: 0.5px solid;
+    border-right: 0.5px solid;
+    left: 50%;
 }
 
 .fa_liked i[class*=" fi-ts-"]::before {

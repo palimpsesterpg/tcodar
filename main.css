@@ -2883,7 +2883,7 @@ season {
     position: relative;
     height: 250px;
     border-width: 0.5px !important;
-    border-style: dotted;
+    border-style: solid;
     border-image: var(--gradientAll) 1;
     width: 150px
 }
@@ -3021,6 +3021,7 @@ season {
     border-radius: var(--small);
     border-image: var(--gradientgc1) 1;
     border-width: 0.5px;
+    padding: var(--4xsmall);
     border-style: solid
 }
 
@@ -3052,11 +3053,12 @@ season {
     gap: var(--large);
     color: var(--group-color);
     text-transform: lowercase;
+    font-size: var(--large);
     font-family: var(--serif)
 }
 
-.notiffi_head_data>div:after {
-    font-size: var(--large);
+.notiffi_head_data span:after {
+    font-size: var(--xlarge);
     color: var(--group-color-300)
 }
 
@@ -3066,6 +3068,17 @@ season {
 
 .notiffi_head_pts:after {
     content: " points"
+}
+
+.notiffi_links {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: var(--mono);
+    font-weight: 300;
+    font-size: var(--large);
+    padding: var(--large);
+    background-color: var(--group-color-100)
 }
 
 .notification {

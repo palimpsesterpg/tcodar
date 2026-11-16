@@ -517,6 +517,13 @@ function formatFieldLabels() {
   });
 }
 
+function trimForumLinks() {
+  qq('.forum-links').forEach(bloc => {
+    bloc.innerHTML = bloc.innerHTML
+      .replace(/\s*:\s*$/, '')
+  });
+}
+
 function trimProfileLabels() {
   qq('.profile-field-label').forEach(label => {
     label.textContent = label.textContent.replace(/[\s*:]+$/, '');
@@ -1452,6 +1459,7 @@ onReady(() => {
   unwrapTabs();
   formatFieldLabels();
   trimProfileLabels();
+  trimForumLinks();
   moveAdminLinks();
   organizeProfileElements();
   addContactSpans();

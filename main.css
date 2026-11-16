@@ -1146,8 +1146,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: var(--4xsmall);
-    column-gap: var(--2xsmall)
+    gap: var(--2xsmall)
 }
 
 .forum-links a {
@@ -1156,10 +1155,6 @@ a:hover {
     font-size: var(--small);
     font-weight: 700;
     text-transform: lowercase
-}
-
-.forum-links a+a {
-    margin-left: var(--large)
 }
 
 .forum-preview {
@@ -1302,15 +1297,17 @@ a:hover {
 .forum-description {
     display: flex;
     align-items: center;
-    gap: var(--large);
+    justify-items: center;
+    gap: var(--2xsmall);
     text-transform: uppercase
 }
 
 .forum-description span {
     font-weight: 300;
     color: var(--ligher-dark);
-    letter-spacing: var(--2xsmall);
-    padding-left: var(--2xsmall)
+    font-size: var(--small);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall)
 }
 
 .forum-description span:before {
@@ -1415,27 +1412,19 @@ a:hover {
     grid-area: 1 / 1 / 2 / 3
 }
 
-.forum-admin .forum-description {
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-size: var(--small);
-    color: var(--co1-700);
-    padding: 0 var(--large)
-}
-
 .forum-admin:nth-of-type(even) .forum-description {
-    text-align: right
+    justify-items: flex-end;
 }
 
 .forum-admin .forum-links {
     grid-area: 2 / 1 / 3 / 3;
     padding-bottom: var(--large);
     border-bottom: 0.5px solid var(--lighter-neutral);
-    font-size: 0
+    justify-content: flex-start
 }
 
-.forum-admin:nth-of-type(even) .forum-links:not(:empty) {
-    text-align: right
+.forum-admin:nth-of-type(even) .forum-links {
+    justify-content: flex-end
 }
 
 .forum-admin .forum-links a {

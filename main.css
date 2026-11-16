@@ -997,7 +997,10 @@ a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-light);
+    padding: var(--large)
 }
 
 .forum-loc,
@@ -1669,13 +1672,6 @@ a:hover {
 .forum-admin:nth-of-type(even) .forum-posts span,
 .forum-admin:nth-of-type(even) .forum-topics span {
     order: 3
-}
-
-.forum-archives {
-    padding: var(--large);
-    border: 0.5px solid var(--neutral);
-    background-color: var(--light-neutral);
-    align-items: center
 }
 
 .forum-archives .forum-content {

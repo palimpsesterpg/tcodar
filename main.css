@@ -1193,13 +1193,15 @@ a:hover {
 }
 
 .forum-divers .forum-content {
-    width: 100%;
+    flex: 1;
     gap: var(--large);
-    flex-wrap: wrap
+    display: grid;
+    grid-template-columns: 1fr 75px 200px;
+    grid-template-rows: 1fr 1fr
 }
 
 .forum-divers .forum-title {
-    flex: 1;
+    grid-area: 1 / 1 / 2 / 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1213,14 +1215,7 @@ a:hover {
 }
 
 .forum-divers .forum-links {
-    width: 100%;
-    order: 3;
-    font-size: 0;
-    display: flex;
-    margin-right: var(--3xlarge);
-    align-items: center;
-    justify-content: center;
-    gap: var(--2xsmall)
+    grid-area: 1 / 2 / 2 / 3
 }
 
 .forum-divers .forum-links a {

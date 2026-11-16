@@ -1235,11 +1235,11 @@ a:hover {
     max-height: 10000px;
 }
 
-data-tab["c4"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
-data-tab["c5"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
-data-tab["c6"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
-data-tab["c7"] .forum-preview {grid-area: 1 / 2 / 4 / 3}
-data-tab["c10"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
+[data-tab="c4"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
+[data-tab="c5"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
+[data-tab="c6"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
+[data-tab="c7"] .forum-preview {grid-area: 1 / 2 / 4 / 3}
+[data-tab="c10"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
 
 .forum-loc .forum-content {
     width: 100%;

@@ -520,7 +520,7 @@ function formatFieldLabels() {
 function trimForumLinks() {
   qq('.forum-links').forEach(bloc => {
     bloc.innerHTML = bloc.innerHTML
-      .replace(/\s*:\s*$/, '')
+      .replace(/,\s*/g, '');
   });
 }
 

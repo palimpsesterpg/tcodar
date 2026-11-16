@@ -1129,7 +1129,7 @@ a:hover {
 .forumtitle {font-size: var(--xlarge);
                 text-transform: lowercase;
     text-shadow: 1px 1px var(--co1-100);
-    color: var(--co1);}
+    color: var(--co1) !important;}
 
 
 .forum-off .forum-links a {
@@ -1340,7 +1340,7 @@ a:hover {
     text-transform: lowercase
 }
 
-.forum-admin .forum-links a+a {
+.forum-links a+a {
     margin-left: var(--large)
 }
 

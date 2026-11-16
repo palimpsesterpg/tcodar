@@ -1213,7 +1213,7 @@ a:hover {
     gap: var(--large);
     display: grid;
     grid-template-columns: 1fr 100px 200px;
-    grid-template-rows: 1fr 1fr
+    grid-template-rows: auto auto
 }
 
 .forum-divers .forum-title {
@@ -1231,7 +1231,7 @@ a:hover {
 }
 
 .forum-divers .forumtitle {
-    font-family: var(--spe)
+    font-family: var(--serif)
 }
 
 .forum-divers .forum-links {
@@ -1296,6 +1296,11 @@ a:hover {
     justify-items: center;
     gap: var(--2xsmall);
     text-transform: uppercase
+}
+
+.forum-description:has(br:only-child),
+.forum-description:empty {
+    display: none
 }
 
 .forum-description span {

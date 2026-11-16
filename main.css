@@ -1185,7 +1185,8 @@ a:hover {
     gap: var(--2xsmall)
 }
 
-.forum-divers .forum-links a {
+.forum-divers .forum-links a,
+.forum-off .forum-links a{
     text-transform: lowercase;
     background-color: var(--co2-100);
     border: 0.5px solid var(--co2);
@@ -1258,9 +1259,12 @@ a:hover {
     justify-content: center;
     text-transform: lowercase;
     font-family: var(--serif);
-    font-size: var(--large);
+    font-size: var(--2xlarge);
     font-style: italic;
-    font-weight: 700
+    color: var(--co1);
+    font-weight: 900;
+    height: var(--2xlarge);
+    text-shadow: 1px 1px var(--co1-100);
 }
 
 .forum-loc .forum-statistics {
@@ -1275,10 +1279,10 @@ a:hover {
 .forum-loc .forum-topics,
 .forum-loc .forum-posts {
     font-size: 0;
-    width: 35px;
-    height: 35px;
+    width: var(--2xlarge);
+    height: var(--2xlarge);
     border-radius: var(--small);
-    background-color: var(--co2);
+    background-color: var(--co3);
     color: var(--white-op90)
 }
 
@@ -1544,21 +1548,16 @@ a:hover {
 
 .forum-off .forumtitle {
     font-size: var(--2xlarge);
-    font-family: var(--spe);
-    color: var(--co2);
+    font-family: var(--serif);
+    text-transform: uppercase;
+    color: var(--co1);
     text-transform: lowercase;
     font-weight: 700;
-    text-shadow: 1px 1px var(--co2-100)
+    text-shadow: 1px 1px var(--co1-100)
 }
 
 .forum-off .forum-links {
     grid-area: 3 / 1 / 4 / 3
-}
-
-.forum-off .forum-links a {
-    color: var(--co1-300);
-    font-family: var(--mono);
-    text-transform: uppercase
 }
 
 .forum-off .forum-lastpost,

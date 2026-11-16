@@ -1222,6 +1222,9 @@ a:hover {
     flex: 1 1 calc(100% / 2.1)
 }
 
+.forum-loc .forum-icon {top: var(--large);
+                       right: var(--large)}
+
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
     grid-column: 1
 }

@@ -1253,18 +1253,17 @@ a:hover {
 }
 
 .forum-loc .forumtitle {
-    display: flex;
+display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-family: var(--serif);
-    font-size: var(--2xlarge);
-    font-style: italic;
+    font-size: var(--xlarge);
     color: var(--co1);
     font-weight: 900;
-    height: var(--2xlarge);
-    text-shadow: 1px 1px var(--co1-100);
+    height: var(--xlarge);
+    text-shadow: 1px 1px var(--co1-100)
 }
 
 .forum-loc .forum-statistics {
@@ -1340,6 +1339,7 @@ a:hover {
     font-size: var(--xlarge);
     font-weight: 900;
     text-transform: lowercase;
+    text-shadow: 1px 1px var(--co1-100);
     color: var(--co1)
 }
 
@@ -1597,7 +1597,7 @@ a:hover {
     flex-direction: row !important;
     align-items: center;
     border: var(--2xsmall) solid var(--dark-light);
-    outline: 0.5px solid var(--co3)
+    outline: 0.5px solid var(--co1)
 }
 
 .forum-media .forum-content {
@@ -1612,12 +1612,13 @@ a:hover {
 
 .forum-media .forumtitle {
     font-family: var(--mono);
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
     font-weight: 100;
     font-size: var(--large);
-    color: var(--co3)
+    color: var(--co1);
+    text-shadow: 1px 1px var(--co1-100)
 }
 
 .forum-media .forum-description {
@@ -1636,11 +1637,11 @@ a:hover {
 
 .forum-media .forum-links a {
     font-size: var(--medium);
-    color: var(--co3)
+    color: var(--co2)
 }
 
 .forum-media .forum-links a+a {
-    margin-left: var(--medium)
+    margin-left: var(--large)
 }
 
 .forum-media .forum-lastpost {

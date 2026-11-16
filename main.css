@@ -1594,9 +1594,8 @@ a:hover {
 
 .forum-media .forumtitle {
     font-family: var(--mono);
-    letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall);
-    font-weight: 100
+    letter-spacing: 1px;
+    font-weight: 700
 }
 
 .forum-media .forum-description {
@@ -1614,7 +1613,8 @@ a:hover {
 }
 
 .forum-media .forum-links a {
-    font-size: var(--medium) !important
+    font-size: var(--medium) !important;
+    color: var(--co2)
 }
 
 .forum-media .forum-lastpost {

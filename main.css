@@ -1105,9 +1105,11 @@ a:hover {
 }
 
 .forumtitle {
-    font-size: var(--xlarge);
+    font-size: var(--2xlarge);
     text-transform: lowercase;
-    text-shadow: 1px 1px var(--co1-100);
+    text-shadow: 1px 1px var(--light);
+    height: var(--2xlarge);
+    line-height: 1;
     color: var(--co1) !important
 }
 
@@ -1298,9 +1300,9 @@ a:hover {
     text-transform: uppercase
 }
 
-.forum-description:has(br:only-child),
-.forum-description:empty {
-    display: none
+.forum-description:empty,
+.forum-description:not(:has(*:not(br))) {
+    display: none !important;
 }
 
 .forum-description span {
@@ -1649,11 +1651,9 @@ a:hover {
 }
 
 .forum-archives .forumtitle {
-    letter-spacing: var(--2xsmall);
+    letter-spacing: var(--4xsmall);
     color: var(--dark) !important;
-    text-shadow: 1px 1px var(--light);
-    padding-left: var(--2xsmall);
-    font-size: var(--2xlarge);
+    padding-left: var(--4xsmall);
     font-weight: 900
 }
 

@@ -1123,7 +1123,11 @@ a:hover {
 }
 
 .forum-statistics {
-    width: 100px
+    width: 100px;
+    display: flex;
+    gap: var(--2xsmall);
+    flex-direction: column;
+    justify-content: center
 }
 
 .forum-posts,
@@ -1136,11 +1140,13 @@ a:hover {
 }
 
 .forum-topics::after {
-    content: "\e8d6"
+    content: "\e8d6";
+    font-family: var(--icons-thin)
 }
 
 .forum-posts::after {
-    content: "\e6de"
+    content: "\e6de";
+    font-family: var(--icons-thin)
 }
 
 .forum-links {
@@ -1196,7 +1202,7 @@ a:hover {
     flex: 1;
     gap: var(--large);
     display: grid;
-    grid-template-columns: 1fr 75px 200px;
+    grid-template-columns: 1fr 100px 200px;
     grid-template-rows: 1fr 1fr
 }
 
@@ -1210,12 +1216,16 @@ a:hover {
     flex-direction: column
 }
 
+.forum-divers:has(:not(.forum-links)) .forum-title {
+    grid-area: 1 / 1 / 3 / 2
+}
+
 .forum-divers .forumtitle {
     font-family: var(--spe)
 }
 
 .forum-divers .forum-links {
-    grid-area: 1 / 2 / 2 / 3
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .forum-divers .forum-links a {
@@ -1225,18 +1235,7 @@ a:hover {
 }
 
 .forum-divers .forum-statistics {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
-}
-
-.forum-divers .forum-statistics div {
-    display: flex;
-    gap: var(--2xsmall);
-    width: 50px;
-    justify-content: space-between;
-    align-items: center
+    grid-area: 1 / 2 / 3 / 3
 }
 
 .forum-divers .forums-posts,
@@ -1250,7 +1249,8 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--large);
-    justify-content: center
+    justify-content: center;
+    grid-area: 1 / 3 / 3 / 4
 }
 
 .forum-divers .forum-lastpost-avatar img {
@@ -1432,13 +1432,7 @@ a:hover {
 }
 
 .forum-admin .forum-statistics {
-    grid-area: 2 / 1 / 3 / 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: var(--4xsmall);
-    width: 100%
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .forum-admin:nth-of-type(even) .forum-statistics,
@@ -1550,11 +1544,7 @@ a:hover {
 }
 
 .forum-off .forum-statistics {
-    grid-area: 2 / 2 / 3 / 3;
-    display: flex;
-    gap: var(--3xsmall);
-    flex-direction: column;
-    justify-content: center
+    grid-area: 2 / 2 / 3 / 3
 }
 
 .forum-off .forum-lastpost-avatar img {

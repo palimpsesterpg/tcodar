@@ -1019,7 +1019,7 @@ a:hover {
 }
 
 .forum-img {
-    height: 43px;
+    height: 50px;
     width: auto;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -1048,7 +1048,6 @@ a:hover {
     color: var(--dark-neutral);
     font-size: var(--medium);
     width: 90%;
-    height: 43px;
     font-weight: 300
 }
 
@@ -1293,9 +1292,8 @@ a:hover {
 }
 
 .forum-divers .forum-lastpost-avatar img {
-    height: 50px;
     width: 35px;
-    border-radius: 2.5px
+    border-radius: var(--small)
 }
 
 .forum-loc .forum-content {
@@ -2994,13 +2992,13 @@ season {
 .notiffi_actions {
     display: grid;
     justify-items: end;
-    gap: 5px
+    gap: var(--large)
 }
 
 .notiffi_actions button {
-    padding: 2px var(--small);
+    padding: var(--large);
     background: var(--darker-light);
-    border-radius: 5px
+    border-radius: var(--small)
 }
 
 .notiffi_actions button:hover {
@@ -3096,7 +3094,7 @@ season {
 
 .notif_avatar {
     height: 50px;
-    border-radius: 5px;
+    border-radius: var(--small);
     aspect-ratio: 1;
     overflow: hidden
 }
@@ -3271,7 +3269,8 @@ season {
     pointer-events: none;
     text-transform: uppercase;
     font-weight: 300;
-    top: calc(26px + var(--3xsmall));
+    bottom: var(--large);
+    transform: translateX(50%);
     right: 50%
 }
 
@@ -3496,7 +3495,7 @@ season {
 .topic-lastpost-avatar img {
     height: 45px;
     width: 45px;
-    border-radius: 2.5px
+    border-radius: var(--small)
 }
 
 .f27.topiclist .topic-lastpost,

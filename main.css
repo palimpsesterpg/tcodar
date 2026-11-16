@@ -1403,21 +1403,24 @@ a:hover {
 
 .forum-off .forum-title,
 .forum-admin .forum-title {
-    justify-items: flex-start;
-    grid-area: 1 / 1 / 2 / 2
+    grid-area: 1 / 1 / 2 / 2;
+    align-items: flex-start
+}
+
+.forum-admin:nth-of-type(even) .forum-title,
+.forum-off:nth-of-type(even) .forum-title {
+    align-items: flex-end
 }
 
 .forum-admin:has(.forum-links a) .forum-title {
     grid-area: 1 / 1 / 2 / 3
 }
 
-.forum-admin:nth-of-type(even) .forum-title,
 .forum-admin:nth-of-type(even) .forum-description,
 .forum-admin:nth-of-type(even) .forum-links,
-.forum-off:nth-of-type(even) .forum-title,
 .forum-off:nth-of-type(even) .forum-description,
 .forum-off:nth-of-type(even) .forum-links {
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .forum-admin .forum-links {
@@ -1471,33 +1474,28 @@ a:hover {
 }
 
 .forum-off {
-    justify-content: flex-end
-}
-
-.forum-off:nth-of-type(odd) {
     flex-direction: row-reverse;
     justify-content: flex-start
 }
 
+.forum-off:nth-of-type(even) {
+    flex-direction: row
+}
+
 .forum-off .forum-content {
-    width: calc(100% - 75px - var(--large));
-    grid-template-columns: auto 100px;
+    width: calc(100% - 75px);
+    grid-template-columns: 100px auto;
     gap: var(--large);
     display: grid;
     grid-template-rows: auto auto auto
 }
 
-.forum-off:nth-of-type(odd) .forum-content {
-    grid-template-columns: 100px auto
+.forum-off:nth-of-type(even) .forum-content {
+    grid-template-columns: auto 100px
 }
 
 .forum-off .forum-title {
     grid-area: 1 / 1 / 2 / 3
-}
-
-.forum-off:nth-of-type(even) .forum-title,
-.forum-off:nth-of-type(even) .forum-lastpost-infos {
-    text-align: right
 }
 
 .forum-off .forumtitle {
@@ -1508,7 +1506,7 @@ a:hover {
     grid-area: 3 / 1 / 4 / 3;
     padding-top: var(--large);
     border-top: 0.5px solid var(--lighter-neutral);
-    justify-items: flex-start
+    justify-content: flex-start !important
 }
 
 .forum-off .forum-links a {
@@ -1625,8 +1623,8 @@ a:hover {
     justify-content: center
 }
 
-.forum-admin:nth-of-type(even) .forum-posts span,
-.forum-admin:nth-of-type(even) .forum-topics span {
+.forum:not(.forum-loc):nth-of-type(even) .forum-posts span,
+.forum:not(.forum-loc):nth-of-type(even) .forum-topics span {
     order: 3
 }
 

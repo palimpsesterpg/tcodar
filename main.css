@@ -1078,9 +1078,7 @@ a:hover {
     border-radius: 100%;
     color: var(--co3);
     align-items: center;
-    justify-content: center;
-    top: var(--large);
-    right: var(--large)
+    justify-content: center
 }
 
 .forum-icon::before {
@@ -1088,15 +1086,24 @@ a:hover {
     content: "\e688"
 }
 
-.forum:nth-of-type(even) .forum-icon {
-    left: var(--large);
-    bottom: var(--large);
-    top: auto;
-    right: auto
+.forum-admin:nth-of-type(odd) .forum-icon {
+    top: var(--large);
+    right: var(--large)
 }
 
-.forum-description br {
-    display: none
+.forum-admin:nth-of-type(even) .forum-icon {
+    left: var(--large);
+    bottom: var(--large)
+}
+
+.forum-off:nth-of-type(odd) .forum-icon {
+    bottom: var(--large);
+    right: var(--large)
+}
+
+.forum-off:nth-of-type(even) .forum-icon {
+    left: var(--large);
+    top: var(--large)
 }
 
 .forum-description img {
@@ -1534,6 +1541,7 @@ a:hover {
 
 .forum-off:nth-of-type(even) .forum-lastpost {
     padding-right: var(--large);
+    text-align: right;
     border-right: 0.5px solid var(--lighter-neutral)
 }
 
@@ -1570,7 +1578,8 @@ a:hover {
 }
 
 .forum-media .forum-title {
-    flex: 1
+    flex: 1;
+    align-items: flex-start
 }
 
 .forum-media .forumtitle {

@@ -1590,6 +1590,9 @@ a:hover {
     gap: var(--large);
     flex-direction: row !important;
     align-items: center;
+    border-image: var(--gradientAll) 1;
+    border-width: 0.5px;
+    border-style: solid;
     background-color: var(--dark-light)
 }
 
@@ -2878,10 +2881,10 @@ season {
     border-radius: var(--small);
     padding: var(--4xsmall);
     position: relative;
-    height: 235px;
+    height: 250px;
     border-width: 0.5px !important;
     border-style: dotted;
-    border-image: var(--gradient23) 1;
+    border-image: var(--gradientAll) 1;
     width: 150px
 }
 
@@ -3008,21 +3011,61 @@ season {
 .notiffi_head {
     display: flex;
     gap: var(--large);
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
     align-items: center
 }
 
 .notiffi_head img {
     width: 150px;
-    height: 200px;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    border: 5px solid var(--white-op90);
-    outline: 0.5px solid var(--group-color)
+    height: 250px;
+    border-radius: var(--small);
+    border-image: var(--gradientgc1) 1;
+    border-width: 0.5px;
+    border-style: solid
 }
 
 .notiffi_head_info {
-    flex: 1
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--large)
+}
+
+.notiffi_head_pseudo {
+    font-size: var(--4xlarge);
+    font-family: var(--spe);
+    color: var(--group-base);
+}
+
+.notiffi_head_links {
+    display: flex;
+    gap: var(--large);
+    font-size: var(--xlarge);
+    text-transform: uppercase;
+    font-family: var(--display);
+    font-weight: 900;
+    color: var(--group-color-300)
+}
+
+.notiffi_head_data {
+    display: flex;
+    gap: var(--large);
+    color: var(--group-color);
+    text-transform: lowercase;
+    font-family: var(--serif)
+}
+
+.notiffi_head_data>div:after {
+    font-size: var(--large);
+    color: var(--group-color-300)
+}
+
+.notiffi_head_msg:after {
+    content: " messages"
+}
+
+.notiffi_head_pts:after {
+    content: " points"
 }
 
 .notification {

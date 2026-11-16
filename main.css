@@ -1453,7 +1453,7 @@ a:hover {
 .forum-admin:nth-of-type(even) .forum-links,
 .forum-off:nth-of-type(even) .forum-description,
 .forum-off:nth-of-type(even) .forum-links {
-    justify-content: flex-end
+    justify-content: flex-end !important
 }
 
 .forum-admin .forum-links {

@@ -1569,9 +1569,9 @@ display: flex;
 
 .forum-off .forum-links {
     grid-area: 3 / 1 / 4 / 3;
-    padding-bottom: var(--large);
+    padding-top: var(--large);
     border-top: 0.5px solid var(--lighter-neutral);
-    font-size: 0;
+    font-size: 0
 }
 
 .forum-off .forum-lastpost,

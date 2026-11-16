@@ -1010,6 +1010,10 @@ a:hover {
     flex: 1 1 calc(100% / 2.1)
 }
 
+.forum-archives {
+    justify-content: flex-start
+}
+
 .forum-content {
     display: flex
 }
@@ -1077,7 +1081,6 @@ a:hover {
     content: "\e688";
     height: var(--xlarge);
     display: flex;
-    z-index: 2;
     aspect-ratio: 1;
     background-color: var(--light);
     border-radius: 100%;
@@ -1132,6 +1135,10 @@ a:hover {
     color: var(--co1) !important
 }
 
+.forumtitle:hover {
+    color: var(--co1-300) !important
+}
+
 .forum-lastpost {
     display: flex;
     align-items: center;
@@ -1139,6 +1146,7 @@ a:hover {
     font-family: var(--display);
     padding-left: 0.5px;
     letter-spacing: 0.5px;
+    width: 200px;
     text-transform: lowercase
 }
 
@@ -1148,6 +1156,15 @@ a:hover {
 
 .forum-lastpost-infos {
     flex: 1
+}
+
+.forum-lastpost-avatar img {
+    filter: grayscale(1)
+}
+
+.forum_new .forum-lastpost-avatar img,
+.cat_new .forum-lastpost-avatar img {
+    filter: grayscale(0)
 }
 
 .forum-statistics {
@@ -1295,6 +1312,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: var(--2xsmall)
 }
 
@@ -1504,11 +1522,13 @@ a:hover {
     grid-template-columns: 100px auto;
     gap: var(--large);
     display: grid;
+    justify-items: start;
     grid-template-rows: auto auto auto
 }
 
 .forum-off:nth-of-type(even) .forum-content {
-    grid-template-columns: auto 100px
+    grid-template-columns: auto 100px;
+    justify-items: end
 }
 
 .forum-off .forum-title {
@@ -1523,6 +1543,7 @@ a:hover {
     grid-area: 3 / 1 / 4 / 3;
     padding-top: var(--large);
     border-top: 0.5px solid var(--lighter-neutral);
+    width: 100%;
     justify-content: flex-start !important
 }
 
@@ -1586,21 +1607,18 @@ a:hover {
 }
 
 .forum-media .forumtitle {
-    letter-spacing: var(--2xsmall);
-    font-weight: 300
+    letter-spacing: var(--4xsmall);
+    font-weight: 900
 }
 
 .forum-media .forum-description {
     display: none
 }
 
-.forum-media .forum-links {
-    font-size: 0
-}
-
 .forum-media .forum-links a {
     font-size: var(--medium) !important;
-    color: var(--co2)
+    color: var(--co2);
+    padding: 0
 }
 
 .forum-media .forum-lastpost {
@@ -1655,10 +1673,6 @@ a:hover {
 .forum-archives .forum-statistics,
 .forum-archives .forum-lastpost {
     display: none
-}
-
-.forum-archives .forum-title {
-    text-align: center
 }
 
 .forum-archives .forumtitle {

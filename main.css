@@ -1312,9 +1312,9 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large);
-    height: max-content;
-    order: 3
+    gap: var(--2xsmall);
+    order: 3;
+    flex-direction: row
 }
 
 .forum-loc .forum-topics,
@@ -1368,7 +1368,7 @@ a:hover {
 
 .forum-admin {
     align-items: flex-start;
-    gap: var(--large)
+    gap: var(--2xlarge)
 }
 
 .forum-admin:nth-of-type(even) {
@@ -1399,7 +1399,8 @@ a:hover {
     grid-template-rows: auto auto auto
 }
 
-.forum-off .forum-title .forum-admin .forum-title {
+.forum-off .forum-title,
+.forum-admin .forum-title {
     justify-items: flex-start;
     grid-area: 1 / 1 / 2 / 2
 }

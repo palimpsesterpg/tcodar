@@ -1112,7 +1112,7 @@ a:hover {
     top: var(--large)
 }
 
-.forum-divers .forum-loc,
+.forum-loc .forum-icon,
 .forum-divers .forum-icon,
 .forum-media .forum-icon {
     position: relative

@@ -1069,21 +1069,27 @@ a:hover {
 }
 
 .forum-icon {
-    position: absolute;
-    height: var(--2xlarge);
+    position: absolute
+}
+
+.forum-icon::before {
+    font-family: var(--icons-thin) !important;
+    content: "\e688";
+    height: var(--xlarge);
     display: flex;
     z-index: 2;
     aspect-ratio: 1;
     background-color: var(--light);
     border-radius: 100%;
-    color: var(--co3);
+    color: var(--dark);
     align-items: center;
     justify-content: center
 }
 
-.forum-icon::before {
-    font-family: var(--icons-thin) !important;
-    content: "\e688"
+.forum_new .forum-icon::before,
+.cat_new .forum-icon::before {
+    background-color: var(--dark);
+    color: var(--light)
 }
 
 .forum-admin:nth-of-type(odd) .forum-icon {
@@ -1104,6 +1110,12 @@ a:hover {
 .forum-off:nth-of-type(even) .forum-icon {
     left: var(--large);
     top: var(--large)
+}
+
+.forum-divers .forum-loc,
+.forum-divers .forum-icon,
+.forum-media .forum-icon {
+    position: relative
 }
 
 .forum-description img {
@@ -1206,15 +1218,6 @@ a:hover {
     flex-direction: row;
     width: 100%;
     gap: var(--large)
-}
-
-.forum-divers .forum-icon,
-.forum-media .forum-icon {
-    position: relative;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    bottom: auto !important
 }
 
 .forum-divers .forum-content {
@@ -1583,9 +1586,8 @@ a:hover {
 }
 
 .forum-media .forumtitle {
-    font-family: var(--mono);
-    letter-spacing: 1px;
-    font-weight: 700
+    letter-spacing: var(--2xsmall);
+    font-weight: 300
 }
 
 .forum-media .forum-description {

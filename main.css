@@ -1126,64 +1126,11 @@ a:hover {
     content: "\e7bb"
 }
 
-.forum-divers {
-    flex-direction: row;
-    width: 100%;
-    gap: var(--large)
-}
+.forumtitle {font-size: var(--xlarge);
+                text-transform: lowercase;
+    text-shadow: 1px 1px var(--co1-100);
+    color: var(--co1);}
 
-.forum-divers .forum-icon {
-    position: relative;
-    top: auto;
-    right: auto
-}
-
-.forum-divers .forums-posts,
-.forum-divers .forums-views {
-    display: flex;
-    gap: var(--2xsmall)
-}
-
-.forum-divers .forum-content {
-    width: 100%;
-    gap: var(--large);
-    flex-wrap: wrap
-}
-
-.forum-divers .forum-title {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    text-transform: lowercase;
-    flex-direction: column
-}
-
-.forum-divers .forumtitle {
-    font-family: var(--spe);
-    text-transform: lowercase;
-    font-size: var(--2xlarge)
-}
-
-.forum-divers .forum-description {
-    font-weight: 300;
-    text-transform: uppercase;
-    color: var(--dark-neutral);
-    letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall)
-}
-
-.forum-divers .forum-links {
-    width: 100%;
-    order: 3;
-    font-size: 0;
-    display: flex;
-    margin-right: var(--3xlarge);
-    align-items: center;
-    justify-content: center;
-    gap: var(--2xsmall)
-}
 
 .forum-off .forum-links a {
     text-transform: lowercase;
@@ -1255,16 +1202,7 @@ a:hover {
 }
 
 .forum-loc .forumtitle {
-display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-transform: lowercase;
-    font-family: var(--spe);
-    font-size: var(--2xlarge);
-    color: var(--co1);
-    height: var(--2xlarge);
-    text-shadow: 1px 1px var(--co1-100)
+    font-family: var(--spe)
 }
 
 .forum-loc .forum-statistics {
@@ -1337,11 +1275,7 @@ display: flex;
 }
 
 .forum-admin .forumtitle {
-    font-size: var(--xlarge);
-    font-weight: 900;
-    text-transform: lowercase;
-    text-shadow: 1px 1px var(--co1-100);
-    color: var(--co1)
+    font-weight: 900
 }
 
 .forum-admin:nth-of-type(even) .forumtitle {
@@ -1558,13 +1492,7 @@ display: flex;
 }
 
 .forum-off .forumtitle {
-    font-size: var(--2xlarge);
     font-family: var(--serif);
-    text-transform: uppercase;
-    color: var(--co1);
-    text-transform: lowercase;
-    font-weight: 700;
-    text-shadow: 1px 1px var(--co1-100)
 }
 
 .forum-off .forum-links {
@@ -1626,13 +1554,9 @@ display: flex;
 
 .forum-media .forumtitle {
     font-family: var(--mono);
-    text-transform: lowercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall);
-    font-weight: 100;
-    font-size: var(--large);
-    color: var(--co1);
-    text-shadow: 1px 1px var(--co1-100)
+    font-weight: 100
 }
 
 .forum-media .forum-description {
@@ -1698,11 +1622,11 @@ display: flex;
 
 .forum-archives .forumtitle {
 letter-spacing: var(--2xsmall);
-    color: var(--dark);
+    color: var(--dark) !important;
+    text-shadow: 1px 1px var(--light);
     padding-left: var(--2xsmall);
     font-size: var(--2xlarge);
-    font-weight: 900;
-    text-transform: lowercase
+    font-weight: 900
 }
 
 .forum-archives .forum-links {

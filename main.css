@@ -1079,13 +1079,20 @@ a:hover {
     color: var(--co3);
     align-items: center;
     justify-content: center;
-    top: 0;
-    right: 0
+    top: var(--large);
+    right: var(--large)
 }
 
 .forum-icon::before {
     font-family: var(--icons-thin) !important;
     content: "\e688"
+}
+
+.forum:nth-of-type(even) .forum-icon {
+    left: var(--large);
+    bottom: var(--large);
+    top: auto;
+    right: auto
 }
 
 .forum-description br {
@@ -1192,7 +1199,8 @@ a:hover {
     gap: var(--large)
 }
 
-.forum-divers .forum-icon {
+.forum-divers .forum-icon,
+.forum-media .forum-icon {
     position: relative;
     top: auto;
     right: auto
@@ -1257,18 +1265,6 @@ a:hover {
     height: 50px;
     width: 35px;
     border-radius: 2.5px
-}
-
-.forum-loc .forum-icon {
-    top: var(--large);
-    right: var(--large)
-}
-
-.forum-loc:nth-of-type(even) .forum-icon {
-    left: var(--large);
-    bottom: var(--large);
-    top: auto;
-    right: auto
 }
 
 .forum-loc .forum-content {
@@ -1371,13 +1367,6 @@ a:hover {
     gap: var(--large)
 }
 
-.forum-admin:nth-of-type(even) .forum-icon {
-    left: 0;
-    bottom: 0;
-    top: auto;
-    right: auto
-}
-
 .forum-admin .forumtitle {
     font-weight: 900
 }
@@ -1478,18 +1467,6 @@ a:hover {
     justify-content: flex-start
 }
 
-.forum-off:nth-of-type(odd) .forum-icon {
-    left: auto;
-    top: auto;
-    bottom: 0;
-    right: 0
-}
-
-.forum-off:nth-of-type(even) .forum-icon {
-    right: auto;
-    left: 0
-}
-
 .forum-off .forum-content {
     width: calc(100% - 75px - var(--large));
     grid-template-columns: auto 100px;
@@ -1587,12 +1564,6 @@ a:hover {
 
 .forum-media .forum-description {
     display: none
-}
-
-.forum-media .forum-icon {
-    position: relative;
-    top: auto;
-    right: auto
 }
 
 .forum-media .forum-links {

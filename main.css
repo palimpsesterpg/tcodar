@@ -1126,21 +1126,17 @@ a:hover {
     content: "\e7bb"
 }
 
-.forumtitle {font-size: var(--xlarge);
-                text-transform: lowercase;
+.forumtitle {
+    font-size: var(--xlarge);
+    text-transform: lowercase;
     text-shadow: 1px 1px var(--co1-100);
-    color: var(--co1) !important;}
+    color: var(--co1) !important
+}
 
 
 .forum-off .forum-links a {
-    text-transform: lowercase;
     background-color: var(--co2-100);
-    border: 0.5px solid var(--co2);
-    color: var(--co2);
-    font-weight: 700;
-    font-size: var(--small);
-    border-radius: var(--small);
-    padding: 0 var(--small)
+    color: var(--co2)
 }
 
 .forum-divers .forum-statistics {
@@ -1168,8 +1164,10 @@ a:hover {
     flex: 1 1 calc(100% / 2.1)
 }
 
-.forum-loc .forum-icon {top: var(--large);
-                       right: var(--large)}
+.forum-loc .forum-icon {
+    top: var(--large);
+    right: var(--large)
+}
 
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
     grid-column: 1
@@ -1182,14 +1180,28 @@ a:hover {
 .forum-preview {
     width: 200px;
     height: 100%;
-    max-height: 10000px;
+    max-height: 10000px
 }
 
-[data-tab="c4"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
-[data-tab="c5"] .forum-preview {grid-area: 1 / 2 / 3 / 3}
-[data-tab="c6"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
-[data-tab="c7"] .forum-preview {grid-area: 1 / 2 / 4 / 3}
-[data-tab="c10"] .forum-preview {grid-area: 1 / 2 / 5 / 3}
+[data-tab="c4"] .forum-preview {
+    grid-area: 1 / 2 / 3 / 3
+}
+
+[data-tab="c5"] .forum-preview {
+    grid-area: 1 / 2 / 3 / 3
+}
+
+[data-tab="c6"] .forum-preview {
+    grid-area: 1 / 2 / 5 / 3
+}
+
+[data-tab="c7"] .forum-preview {
+    grid-area: 1 / 2 / 4 / 3
+}
+
+[data-tab="c10"] .forum-preview {
+    grid-area: 1 / 2 / 5 / 3
+}
 
 .forum-loc .forum-content {
     width: 100%;
@@ -1201,8 +1213,33 @@ a:hover {
     gap: var(--large)
 }
 
+.forum-loc .forum-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--large)
+}
+
 .forum-loc .forumtitle {
     font-family: var(--spe)
+}
+
+.forum-loc .forum-description {
+    display: flex;
+    align-items: center;
+    gap: var(--large);
+    text-transform: uppercase
+}
+
+.forum-loc .forum-description span {
+    font-weight: 300;
+    color: var(--ligher-dark);
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall)
+}
+
+.forum-loc .forum-description span:before {
+    content: '#'
 }
 
 .forum-loc .forum-statistics {
@@ -1247,6 +1284,15 @@ a:hover {
     height: var(--3xlarge);
     width: var(--3xlarge);
     border-radius: 50%
+}
+
+.forum-loc .forum-links {
+    font-size: 0
+}
+
+.forum-loc .forum-links a {
+    color: var(--co2);
+    border: 0.5px solid var(--co2-100)
 }
 
 .forum-admin {
@@ -1332,16 +1378,19 @@ a:hover {
 
 .forum-admin .forum-links a {
     background-color: var(--co2);
-    padding: 0 var(--small);
-    border-radius: var(--small);
-    color: var(--light);
-    font-size: var(--small);
-    font-weight: 700;
-    text-transform: lowercase
+    color: var(--light)
 }
 
 .forum-links a+a {
     margin-left: var(--large)
+}
+
+.forum-links a {
+    padding: 0 var(--small);
+    border-radius: var(--small);
+    font-size: var(--small);
+    font-weight: 700;
+    text-transform: lowercase
 }
 
 .forum-admin .forum-statistics {
@@ -1492,7 +1541,7 @@ a:hover {
 }
 
 .forum-off .forumtitle {
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 .forum-off .forum-links {
@@ -1574,12 +1623,7 @@ a:hover {
 }
 
 .forum-media .forum-links a {
-    font-size: var(--medium);
-    color: var(--co2)
-}
-
-.forum-media .forum-links a+a {
-    margin-left: var(--large)
+    font-size: var(--medium) !important
 }
 
 .forum-media .forum-lastpost {
@@ -1621,7 +1665,7 @@ a:hover {
 }
 
 .forum-archives .forumtitle {
-letter-spacing: var(--2xsmall);
+    letter-spacing: var(--2xsmall);
     color: var(--dark) !important;
     text-shadow: 1px 1px var(--light);
     padding-left: var(--2xsmall);
@@ -1635,14 +1679,10 @@ letter-spacing: var(--2xsmall);
 }
 
 .forum-archives .forum-links a {
-    color: var(--darker-neutral);
-    font-size: var(--medium);
-    font-weight: 300;
-    text-transform: uppercase
-}
-
-.forum-archives .forum-links a+a {
-    margin-left: var(--large)
+    color: var(--darker-neutral) !important;
+    font-size: var(--medium) !important;
+    font-weight: 300 !important;
+    text-transform: uppercase !important
 }
 
 .post {
@@ -4310,7 +4350,7 @@ div.sceditor-group {
     grid-template-rows: auto auto auto;
     gap: var(--2xsmall);
     justify-items: stretch;
-    align-content: space-between;
+    align-content: space-between
 }
 
 .profile-moodboard .field_uneditable img {

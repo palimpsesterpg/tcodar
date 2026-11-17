@@ -1888,7 +1888,7 @@ a:hover {
     width: 100%;
     height: var(--5xlarge);
     display: grid;
-    grid-template-columns: var(--5xlarge) 1fr 1fr;
+    grid-template-columns: var(--5xlarge) 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
@@ -1923,8 +1923,7 @@ a:hover {
     display: none
 }
 
-.mini .postprofile-player {grid-area: 2 / 2 / 3 / 3}
-.mini .postprofile-face {grid-area: 2 / 2 / 3 / 4}
+.mini .postprofile-face {    justify-self: anchor-center;}
 
 .mini .postprofile-player .label,
 .mini .postprofile-face .label {display: none}
@@ -1932,7 +1931,8 @@ a:hover {
 .mini .postprofile-player,
 .mini .postprofile-face {
     display: flex;
-    gap: var(--large);
+    grid-area: 2 / 2 / 3 / 3
+    gap: var(--4xsmall);
     font-family: var(--serif);
     text-transform: lowercase;
     font-style: italic;
@@ -1942,12 +1942,12 @@ a:hover {
 }
 
 .mini .postprofile-face::before {
-    content: "est incarné.e par ";
+    content: "est incarné.e par";
     font-weight: 300
 }
 
 .mini .postprofile-player::before {
-    content: "sous la plume de ";
+    content: "sous la plume de";
     font-weight: 300
 }
 

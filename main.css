@@ -2911,12 +2911,7 @@ season {
     z-index: 9999;
     top: var(--large);
     right: var(--large);
-    display: flex;
-    flex-direction: column;
-    gap: var(--large);
-    align-items: flex-start;
     background-color: var(--light);
-    padding: var(--large);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
@@ -2954,6 +2949,14 @@ season {
     content: "｜";
     padding-right: 2.5px
 }
+
+.notiffi_content{    min-height: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    padding: var(--large);
+    gap: var(--large)}
 
 .all_notifications {
     width: calc(100% - 2rem);

@@ -1923,7 +1923,8 @@ a:hover {
     display: none
 }
 
-.mini .postprofile-details {
+.mini .postprofile-player,
+.mini .postprofile-face,{
     display: flex;
     gap: var(--large);
     grid-area: 2 / 2 / 3 / 3;
@@ -1935,22 +1936,14 @@ a:hover {
     font-weight: 700
 }
 
-.mini .postprofile-details [data-field="face"]::before {
+.mini .postprofile-face::before {
     content: "est incarné.e par ";
     font-weight: 300
 }
 
-.mini .postprofile-details [data-field="player[0]"]::before {
+.mini .postprofile-player::before {
     content: "sous la plume de ";
     font-weight: 300
-}
-
-.mini .postprofile-details [data-field="player[1]"]::before {
-    content: " ("
-}
-
-.mini .postprofile-details [data-field="player[1]"]::after {
-    content: ")"
 }
 
 .post>sep {

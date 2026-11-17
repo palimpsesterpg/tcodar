@@ -2964,8 +2964,6 @@ season {
     grid-area: 3 / 2 / 5 / 4;
     height: 100%;
     min-height: 0;
-    overflow: hidden;
-    border: 0.5px solid var(--group-color-100);
     padding: var(--large);
     flex: 1;
     overflow: auto;
@@ -3066,7 +3064,7 @@ width: 100%;
     display: flex;
     min-height: 0;
     overflow: hidden;
-    border: 0.5px solid var(--group-color);
+    border: 0.5px solid var(--group-color-100);
     padding: var(--large);
     flex-direction: column;}
 

@@ -48,6 +48,7 @@ const TAB_PROFILE = {
   'player-details': 'field_id14, field_id1',
   '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
   'profile-moodboard': 'field_id11',
+  'postprofile-faceclaim': 'label-celebrite',
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
@@ -1018,6 +1019,35 @@ function organizeProfileElements() {
   });
 }
 
+const slugCache = new Map();
+
+function slugify(text) {
+  if (!slugCache.has(text)) {
+    slugCache.set(
+      text,
+      text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+        .replace(/^-+|-+$/g, '')
+    );
+  }
+  return slugCache.get(text);
+}
+
+function initPostProfileLabels() {
+  qq('.post .postprofile-info').forEach(field => {
+    const label = q('.label', field);
+    if (!label) return;
+
+    const text = label.textContent.replace(/:\s*$/, '').trim();
+    label.textContent = text;
+    field.id = `label-${slugify(text)}`;
+  });
+}
+
 function transformDiceMessage(el) {
   if (el.dataset.dice) return;
 
@@ -1462,6 +1492,7 @@ onReady(() => {
   trimForumLinks();
   moveAdminLinks();
   organizeProfileElements();
+  initPostProfileLabels();
   addContactSpans();
   initTabs();
   initTabsInline();

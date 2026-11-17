@@ -49,7 +49,8 @@ const TAB_PROFILE = {
   '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',
   '.postprofile-icon': 'label_icon',
-  '.postprofile-faceclaim': 'label_celebrite',
+  '.postprofile-face': 'label_celebrite',
+  '.postprofile-player': 'label_pseudo'
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

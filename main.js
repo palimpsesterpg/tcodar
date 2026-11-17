@@ -165,10 +165,13 @@ const TOPIC_LABELS = [
 const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .relation';
 
 const GROUP_COLORS = {
-  '6A6A6A': 'group-7',
-  'A7AD37': 'group-4',
-  '9E5F1D': 'group-5',
-  '729DAD': 'group-6',
+  '333333': 'group-2',
+  '960018': 'group-3',
+  'cd5700': 'group-4',
+  'bf920d': 'group-5',
+  '2c7e65': 'group-6',
+  '6050dc': 'group-7',
+  '8e3fab': 'group-8'
 };
 
 const DICE_RULES = {

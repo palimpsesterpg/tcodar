@@ -1038,7 +1038,7 @@ function slugify(text) {
 }
 
 function initPostProfileLabels() {
-  qq('.post .postprofile-info').forEach(field => {
+  qq('.post .postprofile-field').forEach(field => {
     const label = q('.label', field);
     if (!label) return;
 

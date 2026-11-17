@@ -1918,7 +1918,7 @@ a:hover {
     padding: var(--2xsmall) !important
 }
 
-.mini .postprofile-info,
+.mini .tabsystem,
 .mini .postprofile-contact {
     display: none
 }

@@ -1861,7 +1861,8 @@ a:hover {
     width: 200px
 }
 
-.postprofile-details {
+.postprofile-details, 
+.postprofile-icon {
     display: none
 }
 

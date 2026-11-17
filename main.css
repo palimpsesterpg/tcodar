@@ -2956,8 +2956,8 @@ season {
     overflow: hidden;
     display: grid;
     padding: var(--large);
-                     grid-template-columns: 1fr 1fr 1fr 1fr;
-                     grid-template-row: 1fr 1fr 1fr;
+                     grid-template-columns: 1fr 1fr 1fr;
+                     grid-template-row: 1fr 1fr 1fr 1fr;
     gap: var(--large)}
 
 .all_notifications {

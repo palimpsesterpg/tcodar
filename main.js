@@ -48,7 +48,7 @@ const TAB_PROFILE = {
   'player-details': 'field_id14, field_id1',
   '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
   'profile-moodboard': 'field_id11',
-  'postprofile-faceclaim': 'label-celebrite',
+  'postprofile-faceclaim': 'label_celebrite',
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
@@ -1044,7 +1044,7 @@ function initPostProfileLabels() {
 
     const text = label.textContent.replace(/:\s*$/, '').trim();
     label.textContent = text;
-    field.id = `label-${slugify(text)}`;
+    field.id = `label_${slugify(text)}`;
   });
 }
 

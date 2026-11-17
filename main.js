@@ -48,6 +48,7 @@ const TAB_PROFILE = {
   'player-details': 'field_id14, field_id1',
   '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
   'profile-moodboard': 'field_id11',
+  'postprofile-icon': 'label_icon',
   'postprofile-faceclaim': 'label_celebrite',
 };
 
@@ -1008,13 +1009,15 @@ function numberSpans() {
 }
 
 function organizeProfileElements() {
-  Object.entries(TAB_PROFILE).forEach(([key, fieldIds]) => {
-    const container = q(key.startsWith('.') ? key : `.${key}`);
-    if (!container) return;
+  qq('.profile, .postprofile').forEach(root => {
+    Object.entries(TAB_PROFILE).forEach(([key, fieldIds]) => {
+      const container = q(key.startsWith('.') ? key : `.${key}`, root);
+      if (!container) return;
 
-    fieldIds.split(',').forEach(id => {
-      const field = q(`#${id.trim()}`);
-      if (field) container.append(field);
+      fieldIds.split(',').forEach(id => {
+        const field = q(`#${id.trim()}`, root);
+        if (field) container.append(field);
+      });
     });
   });
 }

@@ -45,13 +45,15 @@ const TAB_PROFILE = {
   'profile-details': 'field_id-6, field_id-13, field_id-8, field_id-9',
   'profile-second-avatar': 'field_id7',
   'character-details': 'field_id2, field_id-5, field_id-2',
-  '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
+  '.tab-content[data-tab="profile-settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
   'player-details': 'field_id14, field_id1',
-  '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
+  '.tab-content[data-tab="profile-roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',
   '.postprofile-icon': 'label_icon',
   '.postprofile-face': 'label_celebrite',
-  '.postprofile-player': 'label_pseudo'
+  '.postprofile-player': 'label_pseudo',
+  '.postprofile-attendance': 'label_presence',
+  '.tab-content[data-tab="postprofile-settings"]': 'label_compte, label_credits'
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

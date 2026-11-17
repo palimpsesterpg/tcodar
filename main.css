@@ -1861,7 +1861,7 @@ a:hover {
     width: 200px
 }
 
-.postprofile-details, 
+.postprofile-details,
 .postprofile-icon {
     display: none
 }
@@ -1923,15 +1923,19 @@ a:hover {
     display: none
 }
 
-.mini .postprofile-face {    justify-self: anchor-center;}
+.mini .postprofile-face {
+    justify-self: anchor-center;
+}
 
 .mini .postprofile-player .label,
-.mini .postprofile-face .label {display: none}
+.mini .postprofile-face .label {
+    display: none
+}
 
 .mini .postprofile-player,
 .mini .postprofile-face {
     display: flex;
-    grid-area: 2 / 2 / 3 / 3
+    grid-area: 2 / 2 / 3 / 3;
     gap: var(--4xsmall);
     font-family: var(--serif);
     text-transform: lowercase;
@@ -2175,7 +2179,8 @@ a:hover {
     overflow: hidden
 }
 
-.profile-fields>div {
+[id^="field_id"],
+[id^="label_"] {
     display: flex;
     flex-direction: column
 }
@@ -2950,15 +2955,17 @@ season {
     padding-right: 2.5px
 }
 
-.notiffi_content{    min-height: 0;
+.notiffi_content {
+    min-height: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
     display: grid;
     padding: var(--large);
-                     grid-template-columns: 1fr 1fr 1fr;
-                     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: var(--large)}
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: var(--large)
+}
 
 .all_notifications {
     grid-area: 3 / 2 / 5 / 4;
@@ -2975,7 +2982,7 @@ season {
 }
 
 .notiffi_manage {
-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2986,7 +2993,7 @@ width: 100%;
     display: flex;
     gap: var(--large);
     width: 100%;
-        grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3;
     align-items: center
 }
 
@@ -3057,16 +3064,20 @@ width: 100%;
     grid-area: 3 / 1 / 5 / 2
 }
 
-.notiffi_personal_links {grid-area: 1 / 3 / 2 / 4}
+.notiffi_personal_links {
+    grid-area: 1 / 3 / 2 / 4
+}
 
-.notiffi_notif_list {grid-area: 3 / 2 / 5 / 4;
+.notiffi_notif_list {
+    grid-area: 3 / 2 / 5 / 4;
     height: 100%;
     display: flex;
     min-height: 0;
     overflow: hidden;
     border: 0.5px solid var(--group-color-100);
     padding: var(--large);
-    flex-direction: column;}
+    flex-direction: column;
+}
 
 .notification {
     display: flex;
@@ -4449,20 +4460,20 @@ div.sceditor-group {
     text-align: justify
 }
 
-.tab-content[data-tab="character"] .profile-field-label {
+.tab-content[data-tab="profile-character"] .profile-field-label {
     text-transform: lowercase;
     font-size: var(--large);
     font-weight: 700
 }
 
-.tab-content[data-tab="settings"] .profile-field-label {
+.tab-content[data-tab="profile-settings"] .profile-field-label {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
     padding-left: var(--4small);
     font-weight: 900
 }
 
-.tab-content[data-tab="roleplay"] .profile-field-label {
+.tab-content[data-tab="profile-roleplay"] .profile-field-label {
     text-transform: lowercase;
     font-size: var(--large);
     border: 0.5px solid;
@@ -4470,16 +4481,16 @@ div.sceditor-group {
     letter-spacing: var(--2xsmall)
 }
 
-.tab-content[data-tab="character"].active,
-.tab-content[data-tab="settings"].active {
+.tab-content[data-tab="profile-character"].active,
+.tab-content[data-tab="profile-settings"].active {
     display: flex;
     gap: var(--large);
     flex-direction: column;
     overflow: hidden
 }
 
-.tab-content[data-tab="character"]>div:nth-of-type(2),
-.tab-content[data-tab="settings"]>div:nth-of-type(2) {
+.tab-content[data-tab="profile-character"]>div:nth-of-type(2),
+.tab-content[data-tab="profile-settings"]>div:nth-of-type(2) {
     flex: 1;
     min-height: 0;
     height: 100%;

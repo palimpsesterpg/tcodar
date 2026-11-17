@@ -1494,8 +1494,8 @@ onReady(() => {
   trimProfileLabels();
   trimForumLinks();
   moveAdminLinks();
+    initPostProfileLabels();
   organizeProfileElements();
-  initPostProfileLabels();
   addContactSpans();
   initTabs();
   initTabsInline();

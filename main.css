@@ -2956,33 +2956,17 @@ season {
     overflow: hidden;
     display: grid;
     padding: var(--large);
-                     grid-template-columns: 1fr 1fr 1fr;
-                     grid-template-columns: 1fr 1fr 1fr;
+                     grid-template-columns: 1fr 1fr 1fr 1fr;
+                     grid-template-row: 1fr 1fr 1fr;
     gap: var(--large)}
 
 .all_notifications {
-    width: calc(100% - 2rem);
-    height: calc(100vh - 2rem);
-    outline: var(--large) solid var(--white-op75);
-    border: 0.5px solid var(--group-color, var(--co1));
-    position: fixed;
-    z-index: 9999;
-    top: var(--large);
-    left: var(--large);
     display: flex;
     flex-direction: column;
     gap: var(--large);
     align-items: flex-start;
     background-color: var(--light);
-    padding: var(--large);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
-    transition: opacity 0.7s ease, visibility 0.7s ease
-}
-
-.all_notifications::-webkit-scrollbar {
-    display: none
+    padding: var(--large)
 }
 
 .no_notification {
@@ -2991,25 +2975,11 @@ season {
 }
 
 .notiffi_manage {
-    width: 100%;
+width: 100%;
     display: flex;
-    justify-content: space-between
-}
-
-.notiffi_actions {
-    display: grid;
-    justify-items: end;
-    gap: var(--large)
-}
-
-.notiffi_actions button {
-    padding: var(--large);
-    background: var(--darker-light);
-    border-radius: var(--small)
-}
-
-.notiffi_actions button:hover {
-    color: var(--co1)
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .notiffi_head {
@@ -3087,7 +3057,7 @@ season {
     grid-area: 1 / 3 / 2 / 4
 }
 
-.notiffi_notif_list {grid-area: 3 / 1 / 4 / 3}
+.notiffi_notif_list {grid-area: 3 / 1 / 5 / 3}
 
 .notification {
     display: flex;

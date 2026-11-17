@@ -47,9 +47,9 @@ const TAB_PROFILE = {
   '.tab-content[data-tab="settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20',
   'player-details': 'field_id14, field_id1',
   '.tab-content[data-tab="roleplay"]': 'field_id8, field_id9, field_id10',
-  'profile-moodboard': 'field_id11',
-  'postprofile-icon': 'label_icon',
-  'postprofile-faceclaim': 'label_celebrite',
+  '.profile-moodboard': 'field_id11',
+  '.postprofile-icon': 'label_icon',
+  '.postprofile-faceclaim': 'label_celebrite',
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

@@ -2956,6 +2956,8 @@ season {
     overflow: hidden;
     display: grid;
     padding: var(--large);
+                     grid-template-columns: 1fr 1fr 1fr;
+                     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--large)}
 
 .all_notifications {
@@ -3014,6 +3016,7 @@ season {
     display: flex;
     gap: var(--large);
     width: 100%;
+        grid-area: 1 / 1 / 2 / 3;
     align-items: center
 }
 
@@ -3080,8 +3083,11 @@ season {
     font-weight: 300;
     font-size: var(--large);
     padding: var(--large);
-    background-color: var(--group-color-100)
+    background-color: var(--group-color-100);
+    grid-area: 1 / 3 / 2 / 4
 }
+
+.notiffi_notif_list {grid-area: 3 / 1 / 4 / 3}
 
 .notification {
     display: flex;
@@ -3234,7 +3240,8 @@ season {
 
 .switcheroo {
     padding: var(--large);
-    background-color: var(--white-op90)
+    background-color: var(--dark-light);
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .switcheroo__squircles {

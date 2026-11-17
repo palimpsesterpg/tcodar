@@ -23,6 +23,7 @@ const isCam = hasId(camIds);
 const isLea = hasId(leaIds);
 
 const classes = {
+  ...Object.fromEntries(adminsIds.map(id => [`u${id}`, 'admin'])),
   ...Object.fromEntries(camIds.map(id => [`u${id}`, 'cam'])),
   ...Object.fromEntries(leaIds.map(id => [`u${id}`, 'lea'])),
 };
@@ -789,8 +790,8 @@ function initGroupClasses() {
 
   observeGroupContainers();
 
-  const color = String(user.groupcolor ?? '').replace('#', '').toUpperCase();
-  const groupClass = GROUP_COLORS[color] ?? 'group-2';
+  const color = String(user.groupcolor ?? '').toUpperCase();
+  const groupClass = GROUP_COLORS[color] ?? 'group-test';
   qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }
 

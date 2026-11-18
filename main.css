@@ -1770,7 +1770,8 @@ a:hover {
 .mini .post-icons,
 .compact .post-icons,
 .sms .post-icons {
-    flex-direction: row
+    flex-direction: row;
+    width: 100%
 }
 
 .mini .post-icons>a,
@@ -1819,7 +1820,7 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    align-items: center
+    align-content: center
 }
 
 .post-body {

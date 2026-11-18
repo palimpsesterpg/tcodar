@@ -4702,11 +4702,13 @@ div.sceditor-group {
 #label_themes-abordes .content strong {
     filter: blur(3px);
     font-weight: 500;
+    color: var(--neutral);
     transition-duration: 0.7s
 }
 
 #field_id18 .profile-field-content strong:hover,
 #label_themes-abordes .content strong:hover {
     filter: blur(0px);
+    color: var(--lighter-dark);
     transition-duration: 0.7s
 }

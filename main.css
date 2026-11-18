@@ -3037,7 +3037,10 @@ season {
     height: 100%;
     min-height: 0;
     flex: 1;
-    overflow: auto
+    display: flex;
+    overflow: auto;
+    gap: var(--large);
+    flex-direction: column
 }
 
 .no_notification {
@@ -3050,9 +3053,16 @@ season {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
+    gap: var(--large);
+    text-transform: uppercase !important;
     font-weight: 900;
+    color: var(--dark);
     font-size: var(--small)
+}
+
+.notiffi_manage button {
+    text-transform: uppercase;
+    color: var(--dark)
 }
 
 .notiffi_head {
@@ -3166,7 +3176,7 @@ season {
     display: flex;
     min-height: 0;
     overflow: hidden;
-    border: 0.5px solid var(--group-color-100);
+    border: 0.5px solid var(--lighter-neutral);
     padding: var(--large);
     flex-direction: column
 }
@@ -3174,9 +3184,9 @@ season {
 .notification {
     display: flex;
     width: 100%;
-    gap: var(--large);
-    padding: var(--large);
-    border: 0.5px solid var(--dark-light);
+    gap: var(--2xsmall);
+    padding: var(--2xsmall);
+    border: 0.5px solid var(--darker-light);
     transition: border 0.2s;
     align-items: center;
     -webkit-animation: notiffiFadeIn 0.3s ease-in-out;

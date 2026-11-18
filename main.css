@@ -4645,7 +4645,8 @@ div.sceditor-group {
     font-size: var(--large);
     font-weight: 700;
     font-family: var(--serif);
-    color: var(--group-color)
+    color: var(--group-color);
+    display: block
 }
 
 .cam #field_id3 .profile-field-label,
@@ -4653,4 +4654,17 @@ div.sceditor-group {
 .cam #field_id13 .profile-field-label,
 .cam #field_id16 .profile-field-label {
     display: none
+}
+
+
+#field_id18 .profile-field-content strong,
+.label_themes-abordes .content strong {
+    filter: blur(3px);
+    transition-duration: 0.7s
+}
+
+#field_id18 .profile-field-content strong:hover,
+.label_themes-abordes .content strong:hover {
+    filter: blur(0px);
+    transition-duration: 0.7s
 }

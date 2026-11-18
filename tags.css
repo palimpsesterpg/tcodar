@@ -101,6 +101,28 @@ hr {
     border-bottom: 0.5px solid var(--lighter-neutral) !important;
 }
 
+avct {
+    filter: blur(3px);
+    transition-duration: 0.7s
+}
+
+avct:hover {
+    filter: blur(0px);
+    transition-duration: 0.7s
+}
+
+avhi {
+    background-color: var(--darker-light);
+    color: var(--darker-light);
+    transition-duration: 0.7s
+}
+
+avhi:hover {
+    background-color: transparent;
+    color: var(--light-dark);
+    transition-duration: 0.7s
+}
+
 .order-0 {
     order: 0
 }

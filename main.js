@@ -53,6 +53,7 @@ const TAB_PROFILE = {
   '.post-profile-face': 'label_celebrite',
   '.post-profile-player': 'label_pseudo',
   '.post-profile-attendance': 'label_presence',
+  '.post-profile-icon': 'label_icon',
   '.tab-content[data-tab="postprofile-settings"]': 'label_comptes, label_credits, label_habitudes'
 };
 

@@ -1233,6 +1233,7 @@ function initPageContext() {
   if (postlist.id === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
+    qq('.post-header', postlist).forEach(p => p.classList.add('d-none'));
     qq('.post-profile', postlist).forEach(p => p.classList.add('d-none'));
 
     const tabsPost = document.getElementById('340');

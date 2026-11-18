@@ -4639,3 +4639,18 @@ div.sceditor-group {
 .ajax-profil_parent:has(.ajax-profil_hover) .field_uneditable {
     flex: 1
 }
+
+.cam .field_uneditable strong {
+    text-transform: lowercase;
+    font-size: var(--large);
+    font-weight: 700;
+    font-family: var(--serif);
+    color: var(--group-color)
+}
+
+.cam #field_id3 .profile-field-label,
+.cam #field_id15 .profile-field-label,
+.cam #field_id13 .profile-field-label,
+.cam #field_id16 .profile-field-label {
+    display: none
+}

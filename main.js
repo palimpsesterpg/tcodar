@@ -795,6 +795,7 @@ function initGroupClasses() {
   observeGroupContainers();
 
   const color = String(user.groupcolor ?? '').toUpperCase();
+  console.log(color)
   const groupClass = GROUP_COLORS[color] ?? 'group-test';
   qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }

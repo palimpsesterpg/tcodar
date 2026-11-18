@@ -1879,10 +1879,22 @@ a:hover {
     display: none
 }
 
+.post-profile .tabsystem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large)
+}
+
+.post-profile .tabsystem-contents {
+    height: 320px;
+    overflow: auto
+}
+
 .post-profile .tab-content.active {
     display: flex;
-    gap: var(--large);
-    flex-wrap: wrap
+    column-gap: var(--large);
+    flex-wrap: wrap;
+    row-gap: var(--2xsmall)
 }
 
 .post-profile .tab-content>div {
@@ -2014,6 +2026,10 @@ a:hover {
     font-size: var(--xlarge);
     font-weight: 900;
     text-shadow: 1 1 var(--group-color-100)
+}
+
+.post-profile-field .content {
+    text-align: justify
 }
 
 .post>sep {
@@ -4649,10 +4665,20 @@ div.sceditor-group {
     display: block
 }
 
+.cam .post-profile-field .content strong {
+    text-transform: uppercase;
+    color: var(--group-color);
+    font-family: var(--display)
+}
+
 .cam #field_id3 .profile-field-label,
 .cam #field_id15 .profile-field-label,
 .cam #field_id13 .profile-field-label,
-.cam #field_id16 .profile-field-label {
+.cam #field_id16 .profile-field-label,
+.cam #label_occupation .post-profile-field .label,
+.cam #label_statut-amoureux .post-profile-field .label,
+.cam #label_situation-financiere .post-profile-field .label,
+.cam #label_residence .post-profile-field .label {
     display: none
 }
 

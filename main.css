@@ -1904,7 +1904,9 @@ a:hover {
 .post-profile .label {
     text-transform: uppercase;
     color: var(--group-color);
-    font-family: var(--display)
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: var(--large)
 }
 
 .mini .post:has(#presentation-form) .post-profile {
@@ -4666,28 +4668,31 @@ div.sceditor-group {
     flex: 1
 }
 
-.cam [data-tab="profile-character"] .field_uneditable strong {
-    text-transform: lowercase;
+.cam [data-tab="profile-character"] .field_uneditable strong,
+.cam [data-tab="post-profile-character"] .post-profile-field .content strong {
     font-size: var(--large);
-    font-weight: 700;
-    font-family: var(--serif);
     color: var(--group-color);
     display: block
 }
 
+.cam [data-tab="profile-character"] .field_uneditable strong {
+    text-transform: lowercase;
+    font-family: var(--serif)
+}
+
 .cam [data-tab="post-profile-character"] .post-profile-field .content strong {
     text-transform: uppercase;
-    color: var(--group-color);
-    font-family: var(--display)
+    font-family: var(--display);
+    font-weight: 300 !important
 }
 
 .cam #field_id3 .profile-field-label,
 .cam #field_id15 .profile-field-label,
 .cam #field_id13 .profile-field-label,
 .cam #field_id16 .profile-field-label,
-.cam #label_occupation .post-profile-field .label,
-.cam #label_statut-amoureux .post-profile-field .label,
-.cam #label_situation-financiere .post-profile-field .label,
+.cam #label_occupation .label,
+.cam #label_statut-amoureux .label,
+.cam #label_situation-financiere .label,
 .cam #label_residence .label {
     display: none
 }
@@ -4696,6 +4701,7 @@ div.sceditor-group {
 #field_id18 .profile-field-content strong,
 #label_themes-abordes .content strong {
     filter: blur(3px);
+    font-weight: 500;
     transition-duration: 0.7s
 }
 

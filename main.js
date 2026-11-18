@@ -54,6 +54,7 @@ const TAB_PROFILE = {
   '.post-profile-player': 'label_pseudo',
   '.post-profile-attendance': 'label_presence',
   '.post-profile-icon': 'label_icon',
+  '.post-profile-gif': 'label_gif',
   '.tab-content[data-tab="postprofile-settings"]': 'label_comptes, label_credits, label_habitudes'
 };
 

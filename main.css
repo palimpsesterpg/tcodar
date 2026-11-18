@@ -1859,7 +1859,9 @@ a:hover {
     position: relative;
     width: 200px;
     display: flex;
-    top: -5rem;
+    top: -6rem;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column
 }
 
@@ -1907,6 +1909,8 @@ a:hover {
 
 .mini .post-profile-contact {
     flex: none;
+    padding: var(--2xsmall);
+    flex-wrap: wrap;
     flex-direction: column
 }
 
@@ -1943,7 +1947,12 @@ a:hover {
     padding: var(--2xsmall) !important
 }
 
-.mini .tabsystem {
+.mini .tabsystem,
+.sms .tabsystem,
+.compact .tabsystem,
+.mini .post-profile-attendance,
+.sms .post-profile-attendance,
+.compact .post-profile-attendance {
     display: none
 }
 

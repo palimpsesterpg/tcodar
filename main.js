@@ -172,11 +172,11 @@ const GROUP_TARGETS = '.member, .forumrow, .post, .profile, .tooltip-content, .r
 const GROUP_COLORS = {
   '333333': 'group-2',
   '960018': 'group-3',
-  'cd5700': 'group-4',
-  'bf920d': 'group-5',
-  '2c7e65': 'group-6',
-  '6050dc': 'group-7',
-  '8e3fab': 'group-8'
+  'CD5700': 'group-4',
+  'BF920d': 'group-5',
+  '2C7E65': 'group-6',
+  '6050DC': 'group-7',
+  '8E3FAB': 'group-8'
 };
 
 const DICE_RULES = {
@@ -795,7 +795,6 @@ function initGroupClasses() {
   observeGroupContainers();
 
   const color = String(user.groupcolor ?? '').toUpperCase();
-  console.log(color)
   const groupClass = GROUP_COLORS[color] ?? 'group-test';
   qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }

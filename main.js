@@ -1016,7 +1016,7 @@ function numberSpans() {
 }
 
 function organizeProfileElements() {
-  qq('.profile, .postprofile').forEach(root => {
+  qq('.profile, .post').forEach(root => {
     Object.entries(TAB_PROFILE).forEach(([key, fieldIds]) => {
       const container = q(key.startsWith('.') ? key : `.${key}`, root);
       if (!container) return;

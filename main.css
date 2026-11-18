@@ -2204,7 +2204,7 @@ a:hover {
 .profile-body .tabsystem-contents {
     height: 320px;
     flex: 1;
-    overflow: auto
+    overflow: hidden
 }
 
 .profile-body .tab {
@@ -4342,6 +4342,7 @@ div.sceditor-group {
     width: 100%
 }
 
+.profile #field_id17,
 #field_id:has(#i_icon_email) {
     display: none
 }

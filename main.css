@@ -2278,10 +2278,9 @@ a:hover {
 }
 
 .profile-second-avatar img {
-    height: 100%;
-    width: 100%;
-    filter: grayscale(1);
-    border: var(--large) solid var(--group-color-100)
+    height: calc(320px - var(--2xlarge));
+    width: calc(320px - var(--2xlarge));
+    filter: grayscale(1)
 }
 
 .profile::before {

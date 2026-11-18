@@ -4665,7 +4665,7 @@ div.sceditor-group {
     display: block
 }
 
-.cam [data-tab="character"] .post-profile-field .content strong {
+.cam [data-tab="post-profile-character"] .post-profile-field .content strong {
     text-transform: uppercase;
     color: var(--group-color);
     font-family: var(--display)
@@ -4678,19 +4678,19 @@ div.sceditor-group {
 .cam #label_occupation .post-profile-field .label,
 .cam #label_statut-amoureux .post-profile-field .label,
 .cam #label_situation-financiere .post-profile-field .label,
-.cam #label_residence .post-profile-field .label {
+.cam #label_residence .label {
     display: none
 }
 
 
 #field_id18 .profile-field-content strong,
-.label_themes-abordes .content strong {
+#label_themes-abordes .content strong {
     filter: blur(3px);
     transition-duration: 0.7s
 }
 
 #field_id18 .profile-field-content strong:hover,
-.label_themes-abordes .content strong:hover {
+#label_themes-abordes .content strong:hover {
     filter: blur(0px);
     transition-duration: 0.7s
 }

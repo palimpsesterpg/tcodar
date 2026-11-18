@@ -55,7 +55,7 @@ const TAB_PROFILE = {
   '.post-profile-attendance': 'label_presence',
   '.post-profile-icon': 'label_icon',
   '.post-profile-gif': 'label_gif',
-  '.tab-content[data-tab="postprofile-settings"]': 'label_comptes, label_credits, label_habitudes'
+  '.tab-content[data-tab="post-profile-settings"]': 'label_comptes, label_credits, label_habitudes'
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
@@ -1049,7 +1049,7 @@ function slugify(text) {
   return slugCache.get(text);
 }
 
-function initPostProfileLabels() {
+function initpost-profileLabels() {
   qq('.post .post-profile-field').forEach(field => {
     const label = q('.label', field);
     if (!label) return;
@@ -1503,7 +1503,7 @@ onReady(() => {
   trimProfileLabels();
   trimForumLinks();
   moveAdminLinks();
-    initPostProfileLabels();
+    initpost-profileLabels();
   organizeProfileElements();
   addContactSpans();
   initTabs();

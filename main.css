@@ -1955,6 +1955,12 @@ a:hover {
     font-weight: 300
 }
 
+#label_presence .label,
+#label_pseudo .label,
+#label_celebrite .label,
+#label_comptes img {display: none;
+}
+
 .post>sep {
     width: 0.5px;
     background: var(--gradientNeutralVertical)

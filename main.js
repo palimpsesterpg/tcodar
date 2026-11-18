@@ -53,7 +53,7 @@ const TAB_PROFILE = {
   '.postprofile-face': 'label_celebrite',
   '.postprofile-player': 'label_pseudo',
   '.postprofile-attendance': 'label_presence',
-  '.tab-content[data-tab="postprofile-settings"]': 'label_compte, label_credits'
+  '.tab-content[data-tab="postprofile-settings"]': 'label_comptes, label_credits'
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];

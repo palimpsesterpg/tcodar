@@ -1813,7 +1813,7 @@ a:hover {
 }
 
 .post-header {
-    flex: 1 1 100%;
+    width: 100%;
     height: var(--5xlarge);
     column-gap: var(--large);
     display: flex;
@@ -1891,26 +1891,17 @@ a:hover {
     font-family: var(--display)
 }
 
-.mini {
-    flex-direction: column
-}
-
 .mini .post:has(#presentation-form) .post-profile {
     display: none
 }
 
-.sms .post-profile {
-    width: 100px
-}
-
 .compact .post-profile {
-    width: 100%;
-    height: 100px;
-    flex-direction: row
+    display: grid
 }
 
 .mini .post-profile {
-    height: var(--5xlarge)
+    height: var(--5xlarge);
+    flex-direction: column
 }
 
 .post-profile-name {
@@ -1932,8 +1923,7 @@ a:hover {
     padding: var(--2xsmall) !important
 }
 
-.mini .tabsystem,
-.mini .post-profile-contact {
+.mini .tabsystem {
     display: none
 }
 

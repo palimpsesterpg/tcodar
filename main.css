@@ -1704,7 +1704,7 @@ a:hover {
     margin-top: var(--large)
 }
 
-.posticons {
+.post-icons {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -1712,8 +1712,8 @@ a:hover {
     background: var(--light)
 }
 
-.posticons>a,
-.posticons>div {
+.post-icons>a,
+.post-icons>div {
     position: relative;
     width: var(--2xlarge);
     height: var(--2xlarge);
@@ -1722,13 +1722,13 @@ a:hover {
     justify-content: center
 }
 
-.posticons>a,
-.posticons>div:not(:last-of-type) {
+.post-icons>a,
+.post-icons>div:not(:last-of-type) {
     border-bottom: 0.5px solid var(--lighter-neutral)
 }
 
-.posticons a>span,
-.posticons div>span {
+.post-icons a>span,
+.post-icons div>span {
     position: absolute;
     align-items: center;
     left: var(--3xlarge);
@@ -1747,13 +1747,13 @@ a:hover {
     color: var(--dark)
 }
 
-.posticons>a:hover>span,
-.posticons>div:hover>span {
+.post-icons>a:hover>span,
+.post-icons>div:hover>span {
     display: flex
 }
 
-.posticons>a:hover>span::before,
-.posticons>div:hover>span::before {
+.post-icons>a:hover>span::before,
+.post-icons>div:hover>span::before {
     content: '';
     height: var(--large);
     width: var(--large);
@@ -1766,28 +1766,28 @@ a:hover {
     left: -0.525rem
 }
 
-.mini .posticons,
-.compact .posticons,
-.sms .posticons {
+.mini .post-icons,
+.compact .post-icons,
+.sms .post-icons {
     flex-direction: row
 }
 
-.mini .posticons>a,
-.compact .posticons>a,
-.sms .posticons>a,
-.mini .posticons>div:not(:last-of-type),
-.compact .posticons>div:not(:last-of-type),
-.sms .posticons>div:not(:last-of-type) {
+.mini .post-icons>a,
+.compact .post-icons>a,
+.sms .post-icons>a,
+.mini .post-icons>div:not(:last-of-type),
+.compact .post-icons>div:not(:last-of-type),
+.sms .post-icons>div:not(:last-of-type) {
     border-right: 0.5px solid var(--lighter-neutral);
     border-bottom: 0
 }
 
-.mini .posticons a>span,
-.compact .posticons a>span,
-.sms .posticons a>span,
-.mini .posticons div>span,
-.compact .posticons div>span,
-.sms .posticons div>span {
+.mini .post-icons a>span,
+.compact .post-icons a>span,
+.sms .post-icons a>span,
+.mini .post-icons div>span,
+.compact .post-icons div>span,
+.sms .post-icons div>span {
     position: absolute;
     top: calc(100% + var(--large));
     left: auto
@@ -1811,12 +1811,13 @@ a:hover {
     font-family: var(--icons-solid) !important
 }
 
-.postbody {
+.post-body,
+.post-header {
     flex: 1;
     min-width: 0
 }
 
-.mini .postbody {
+.mini .post-body {
     width: 100%
 }
 
@@ -1827,13 +1828,10 @@ a:hover {
     overflow-wrap: break-word
 }
 
-.postprofile .online-icon {
+.post.online .post-profile-avatar::before {
     position: absolute;
     top: -0.5rem;
-    left: -0.5rem
-}
-
-.post.online .postprofile .online-icon::before {
+    left: -0.5rem;
     content: "\e974";
     font-family: var(--icons-thin);
     background-color: var(--darker-light);
@@ -1847,36 +1845,36 @@ a:hover {
     border-radius: 100%
 }
 
-.postprofile {
+.post-profile {
     position: relative;
     width: 200px;
     display: flex;
     flex-direction: column
 }
 
-.postprofile-avatar img {
+.post-profile-avatar img {
     height: auto;
     padding: var(--4xsmall);
     border: var(--2xsmall) solid var(--group-color-100, var(--co1-100));
     width: 200px
 }
 
-.postprofile-details,
-.postprofile-icon {
+.post-profile-details,
+.post-profile-icon {
     display: none
 }
 
-.postprofile .tab-content {
+.post-profile .tab-content {
     display: flex;
     gap: var(--large);
     flex-wrap: wrap
 }
 
-.postprofile .tab-content>div {
+.post-profile .tab-content>div {
     flex: 1 1 100%
 }
 
-.postprofile .label {
+.post-profile .label {
     text-transform: uppercase;
     color: var(--group-color);
     font-family: var(--display)
@@ -1886,21 +1884,21 @@ a:hover {
     flex-direction: column
 }
 
-.mini .post:has(#presentation-form) .postprofile {
+.mini .post:has(#presentation-form) .post-profile {
     display: none
 }
 
-.sms .postprofile {
+.sms .post-profile {
     width: 100px
 }
 
-.compact .postprofile {
+.compact .post-profile {
     width: 100%;
     height: 100px;
     flex-direction: row
 }
 
-.mini .postprofile {
+.mini .post-profile {
     width: 100%;
     height: var(--5xlarge);
     display: grid;
@@ -1911,7 +1909,7 @@ a:hover {
     justify-items: end
 }
 
-.mini .postprofile-name {
+.mini .post-profile-name {
     display: flex;
     align-items: center;
     font-size: var(--2xlarge);
@@ -1922,11 +1920,11 @@ a:hover {
     letter-spacing: var(--2xsmall)
 }
 
-.mini .postprofile-avatar {
+.mini .post-profile-avatar {
     grid-area: 1 / 1 / 3 / 2
 }
 
-.mini .postprofile-avatar img {
+.mini .post-profile-avatar img {
     width: var(--5xlarge);
     aspect-ratio: 1;
     outline: 0;
@@ -1935,21 +1933,21 @@ a:hover {
 }
 
 .mini .tabsystem,
-.mini .postprofile-contact {
+.mini .post-profile-contact {
     display: none
 }
 
-.mini .postprofile-face {
+.mini .post-profile-face {
     justify-self: anchor-center;
 }
 
-.mini .postprofile-player .label,
-.mini .postprofile-face .label {
+.mini .post-profile-player .label,
+.mini .post-profile-face .label {
     display: none
 }
 
-.mini .postprofile-player,
-.mini .postprofile-face {
+.mini .post-profile-player,
+.mini .post-profile-face {
     display: flex;
     grid-area: 2 / 2 / 3 / 3;
     gap: var(--4xsmall);
@@ -1961,12 +1959,12 @@ a:hover {
     font-weight: 700
 }
 
-.mini .postprofile-face::before {
+.mini .post-profile-face::before {
     content: "est incarné.e par";
     font-weight: 300
 }
 
-.mini .postprofile-player::before {
+.mini .post-profile-player::before {
     content: "sous la plume de";
     font-weight: 300
 }
@@ -3922,7 +3920,7 @@ h2+.panel {
     border-color: var(--co1-200)
 }
 
-.listings .tabsystem-tabs .posticons {
+.listings .tabsystem-tabs .post-icons {
     right: calc(100% + var(--large));
     left: auto
 }

@@ -49,10 +49,10 @@ const TAB_PROFILE = {
   'player-details': 'field_id14, field_id1',
   '.tab-content[data-tab="profile-roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',
-  '.postprofile-icon': 'label_icon',
-  '.postprofile-face': 'label_celebrite',
-  '.postprofile-player': 'label_pseudo',
-  '.postprofile-attendance': 'label_presence',
+  '.post-profile-icon': 'label_icon',
+  '.post-profile-face': 'label_celebrite',
+  '.post-profile-player': 'label_pseudo',
+  '.post-profile-attendance': 'label_presence',
   '.tab-content[data-tab="postprofile-settings"]': 'label_comptes, label_credits, label_habitudes'
 };
 
@@ -567,7 +567,7 @@ function addUsernameToNotiffiButton() {
 
 function hideAdminTools() {
   if (isAdmin()) return;
-  qq('.post.u1 .postbody-icons .postbody .head').forEach(el => el.remove());
+  qq('.post.u1 .post-icons').forEach(el => el.remove());
 }
 
 function addTranslateButton() {
@@ -898,7 +898,7 @@ function setCharacterKeys(selector, nameSelector) {
 }
 
 function splitPseudonyme(root = document) {
-  qq('.member-pseudo, .profile-pseudo, .postprofile-pseudo, #newest-user .usr_grp_clr', root).forEach(el => {
+  qq('.member-pseudo, .profile-pseudo, .post-profile-pseudo, #newest-user .usr_grp_clr', root).forEach(el => {
     if (q('.prenom', el)) return;
 
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -1048,7 +1048,7 @@ function slugify(text) {
 }
 
 function initPostProfileLabels() {
-  qq('.post .postprofile-field').forEach(field => {
+  qq('.post .post-profile-field').forEach(field => {
     const label = q('.label', field);
     if (!label) return;
 
@@ -1231,7 +1231,7 @@ function initPageContext() {
   if (postlist.id === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
-    qq('.postprofile', postlist).forEach(p => p.classList.add('d-none'));
+    qq('.post-profile', postlist).forEach(p => p.classList.add('d-none'));
 
     const tabsPost = document.getElementById('340');
     tabsPost?.classList.add('tabsystem-tabs');
@@ -1455,7 +1455,7 @@ onReady(() => {
   cloneMemberPseudo();
 
   qq('.fc-pres-pseudo prenom').forEach(p => p.after(sep()));
-  qq('.postbody').forEach(p => {
+  qq('.post-body').forEach(p => {
     p.before(sep());
     p.after(sep());
   });
@@ -1467,7 +1467,7 @@ onReady(() => {
   qq('.message').forEach(transformDiceMessage);
 
   setCharacterKeys('.member', '.member-pseudo');
-  setCharacterKeys('.postprofile', '.postprofile-name');
+  setCharacterKeys('.post-profile', '.post-profile-name');
   setCharacterKeys('.wombat', '.profile-pseudo');
   fillAllCards();
   qq('.list-row[data-character]').forEach(buildRow);

@@ -1815,8 +1815,11 @@ a:hover {
 .post-header {
     flex: 1 1 100%;
     height: var(--5xlarge);
+    column-gap: var(--large);
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center
 }
 
 .post-body {
@@ -1912,6 +1915,9 @@ a:hover {
 
 .post-profile-name {
     font-size: var(--2xlarge);
+    height: var(--2xlarge);
+    line-height: 1;
+    text-align: right;
     font-family: var(--spe);
     width: 100%;
     text-transform: uppercase;
@@ -1933,6 +1939,8 @@ a:hover {
 
 .post-profile-player,
 .post-profile-face {
+    display: flex;
+    gap: var(--4xsmall);
     font-family: var(--serif);
     text-transform: lowercase;
     font-style: italic;

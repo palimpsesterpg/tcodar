@@ -2254,12 +2254,12 @@ a:hover {
     font-size: var(--3xlarge);
     letter-spacing: var(--4xsmall);
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     margin-bottom: -1rem
 }
 
 .profile-pseudo .nom {
-    text-align: left
+    text-align: right
 }
 
 .profile-avatar img,

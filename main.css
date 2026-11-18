@@ -1269,7 +1269,7 @@ a:hover {
 .forum-divers .forum-links a {
     background-color: var(--co2-100);
     border: 0.5px solid var(--co2);
-    color: var(--co2);
+    color: var(--co2)
 }
 
 .forum-divers .forum-statistics {
@@ -1328,7 +1328,7 @@ a:hover {
 
 .forum-description:empty,
 .forum-description:not(:has(*:not(br))) {
-    display: none !important;
+    display: none !important
 }
 
 .forum-description span {
@@ -1365,7 +1365,7 @@ a:hover {
 .forum-loc .forum-topics::after,
 .forum-loc .forum-posts::after {
     font-size: var(--medium);
-    font-family: var(--icons-thin);
+    font-family: var(--icons-thin)
 }
 
 .forum-loc .forum-topics:hover::after,
@@ -1878,7 +1878,7 @@ a:hover {
     display: none
 }
 
-.post-profile .tab-content {
+.post-profile .tab-content.active {
     display: flex;
     gap: var(--large);
     flex-wrap: wrap
@@ -1993,12 +1993,30 @@ a:hover {
 #label_age .label,
 #label_pronoms .label,
 #label_comptes img {
-    display: none;
+    display: none
 }
 
 #label_age,
 #label_pronoms {
-    flex: 1 1 calc(100% / 2.1)
+    flex: 1 1 calc(100% / 3);
+    text-align: center;
+    text-transform: lowercase;
+    font-family: var(--display);
+    background-color: var(--group-color-100);
+    color: var(--group-color);
+    padding: var(--4xsmall)
+}
+
+.post-profile .tabsystem-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--large);
+    color: var(--group-color);
+    font-family: var(--serif);
+    font-size: var(--xlarge);
+    font-weight: 900;
+    text-shadow: 1 1 var(--group-color-100)
 }
 
 .post>sep {
@@ -3019,7 +3037,7 @@ season {
     min-height: 0;
     padding: var(--large);
     flex: 1;
-    overflow: auto;
+    overflow: auto
 }
 
 .no_notification {
@@ -3032,7 +3050,7 @@ season {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .notiffi_head {
@@ -3063,7 +3081,7 @@ season {
 .notiffi_head_pseudo {
     font-size: var(--4xlarge);
     font-family: var(--spe);
-    color: var(--group-base);
+    color: var(--group-base)
 }
 
 .notiffi_head_links {
@@ -3122,7 +3140,7 @@ season {
     overflow: hidden;
     border: 0.5px solid var(--group-color-100);
     padding: var(--large);
-    flex-direction: column;
+    flex-direction: column
 }
 
 .notification {
@@ -3278,7 +3296,7 @@ season {
 .switcheroo {
     padding: var(--large);
     background-color: var(--dark-light);
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 2
 }
 
 .switcheroo__squircles {

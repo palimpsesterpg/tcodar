@@ -3036,7 +3036,6 @@ season {
 .all_notifications {
     height: 100%;
     min-height: 0;
-    padding: var(--large);
     flex: 1;
     overflow: auto
 }
@@ -3160,7 +3159,7 @@ season {
 }
 
 .notiffi_notif_list {
-    grid-area: 4 / 2 / 6 / 5;
+    grid-area: 4 / 2 / 6 / 4;
     height: 100%;
     display: flex;
     min-height: 0;
@@ -3323,7 +3322,7 @@ season {
 .switcheroo {
     padding: var(--large);
     background-color: var(--dark-light);
-    grid-area: 3 / 1 / 4 / 2
+    grid-area: 3 / 1 / 4 / 3
 }
 
 .switcheroo__squircles {

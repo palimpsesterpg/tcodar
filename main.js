@@ -1470,8 +1470,8 @@ onReady(() => {
   qq('.message').forEach(transformDiceMessage);
 
   setCharacterKeys('.member', '.member-pseudo');
-  setCharacterKeys('.post-profile', '.post-profile-name');
-  setCharacterKeys('.wombat', '.profile-pseudo');
+  setCharacterKeys('.post', '.post-profile-name');
+  setCharacterKeys('.profile', '.profile-pseudo');
   fillAllCards();
   qq('.list-row[data-character]').forEach(buildRow);
   splitPseudonyme();

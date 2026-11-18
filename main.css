@@ -3050,7 +3050,9 @@ season {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: var(--small)
 }
 
 .notiffi_head {

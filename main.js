@@ -900,7 +900,7 @@ function setCharacterKeys(selector, nameSelector) {
 }
 
 function splitPseudonyme(root = document) {
-  qq('.member-pseudo, .profile-pseudo, .post-profile-pseudo, #newest-user .usr_grp_clr', root).forEach(el => {
+  qq('.member-pseudo, .profile-pseudo, #newest-user .usr_grp_clr', root).forEach(el => {
     if (q('.prenom', el)) return;
 
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -1049,7 +1049,7 @@ function slugify(text) {
   return slugCache.get(text);
 }
 
-function initpost-profileLabels() {
+function initProfileLabels() {
   qq('.post .post-profile-field').forEach(field => {
     const label = q('.label', field);
     if (!label) return;
@@ -1503,7 +1503,7 @@ onReady(() => {
   trimProfileLabels();
   trimForumLinks();
   moveAdminLinks();
-    initpost-profileLabels();
+  initPostprofileLabels();
   organizeProfileElements();
   addContactSpans();
   initTabs();

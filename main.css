@@ -1901,7 +1901,23 @@ a:hover {
 
 .mini .post-profile {
     height: var(--5xlarge);
+    flex-direction: row;
+    gap: var(--large)
+}
+
+.mini .post-profile-contact {
+    flex: none;
     flex-direction: column
+}
+
+.post-profile-contact {
+    display: flex;
+    gap: var(--large);
+    background-color: var(--group-color-100);
+    padding: var(--large);
+    flex: 1;
+    align-items: center;
+    justify-content: center
 }
 
 .post-profile-name {
@@ -1913,6 +1929,10 @@ a:hover {
     width: 100%;
     text-transform: uppercase;
     letter-spacing: var(--2xsmall)
+}
+
+.mini .post-profile-avatar {
+    order: 3
 }
 
 .mini .post-profile-avatar img {

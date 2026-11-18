@@ -1866,6 +1866,22 @@ a:hover {
     display: none
 }
 
+.postprofile .tab-content {
+    display: flex;
+    gap: var(--large);
+    flex-wrap: wrap
+}
+
+.postprofile .tab-content>div {
+    flex: 1 1 100%
+}
+
+.postprofile .label {
+    text-transform: uppercase;
+    color: var(--group-color);
+    font-family: var(--display)
+}
+
 .mini {
     flex-direction: column
 }
@@ -1958,7 +1974,15 @@ a:hover {
 #label_presence .label,
 #label_pseudo .label,
 #label_celebrite .label,
-#label_comptes img {display: none;
+#label_age .label,
+#label_pronoms .label,
+#label_comptes img {
+    display: none;
+}
+
+#label_age,
+#label_pronoms {
+    flex: 1 1 calc(100% / 2.1)
 }
 
 .post>sep {
@@ -4394,15 +4418,16 @@ div.sceditor-group {
     content: "moodboard pinterest"
 }
 
-#field_id-6 .field_uneditable:after {
+#field_id-6 .field_uneditable::after {
     content: ' messages'
 }
 
-#field_id-13 .field_uneditable:after {
+#field_id-13 .field_uneditable::after {
     content: ' points'
 }
 
-#field_id-5 .field_uneditable:after {
+#field_id-5 .field_uneditable::after,
+#label_age .content::after {
     content: ' ans'
 }
 

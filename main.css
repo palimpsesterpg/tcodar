@@ -1922,17 +1922,22 @@ a:hover {
 
 .mini .post-profile-contact {
     flex-wrap: wrap;
+    flex-direction: column;
     width: auto;
     height: var(--5xlarge)
 }
 
 .post-profile-contact {
     display: flex;
-    background-color: var(--group-color-100);
+    background-color: var(--group-color-200);
     padding: var(--2xsmall);
     width: 100%;
     align-items: center;
     justify-content: space-evenly
+}
+
+.post-profile-contact i::before {
+    color: var(--light)
 }
 
 .post-profile-name {
@@ -2015,6 +2020,11 @@ a:hover {
     background-color: var(--group-color-100);
     color: var(--group-color);
     padding: var(--4xsmall)
+}
+
+#label_age .content,
+#label_pronoms .content {
+    text-align: center !important
 }
 
 .post-profile .tabsystem-tabs {

@@ -1962,7 +1962,7 @@ a:hover {
 }
 
 .sms .post-profile-icon,
-.sms .post-profile-avatar {
+.compact .post-profile-gif {
     display: block
 }
 

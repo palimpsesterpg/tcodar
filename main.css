@@ -3129,6 +3129,10 @@ season {
     grid-area: 1 / 3 / 2 / 4
 }
 
+.notiffi_personal_links .profile-field-label {
+    display: none
+}
+
 .notiffi_notif_list {
     grid-area: 3 / 2 / 5 / 4;
     height: 100%;

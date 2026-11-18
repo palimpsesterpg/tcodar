@@ -1952,8 +1952,17 @@ a:hover {
 .compact .tabsystem,
 .mini .post-profile-attendance,
 .sms .post-profile-attendance,
-.compact .post-profile-attendance {
+.compact .post-profile-attendance,
+.post-profile-gif,
+.post-profile-icon,
+.compact .post-profile-avatar,
+.sms .post-profile-avatar {
     display: none
+}
+
+.sms .post-profile-icon,
+.sms .post-profile-avatar {
+    display: block
 }
 
 .post-profile-player,

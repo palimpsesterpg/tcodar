@@ -4656,7 +4656,7 @@ div.sceditor-group {
     flex: 1
 }
 
-.cam .field_uneditable strong {
+.cam [data-tab="profile-character"] .field_uneditable strong {
     text-transform: lowercase;
     font-size: var(--large);
     font-weight: 700;
@@ -4665,7 +4665,7 @@ div.sceditor-group {
     display: block
 }
 
-.cam .post-profile-field .content strong {
+.cam [data-tab="character"] .post-profile-field .content strong {
     text-transform: uppercase;
     color: var(--group-color);
     font-family: var(--display)

@@ -103,24 +103,26 @@ hr {
 
 cttwrn1 {
     filter: blur(3px);
-    transition-duration: 0.7s
+    color: var(--neutral);
+    transition-duration: 1s
 }
 
 cttwrn1:hover {
     filter: blur(0px);
-    transition-duration: 0.7s
+    color: var(--light-dark);
+    transition-duration: 1s
 }
 
 cttwrn2 {
     background-color: var(--darker-light);
     color: var(--darker-light);
-    transition-duration: 0.7s
+    transition-duration: 1s
 }
 
 cttwrn2:hover {
     background-color: transparent;
     color: var(--light-dark);
-    transition-duration: 0.7s
+    transition-duration: 1s
 }
 
 words1,

@@ -2287,7 +2287,7 @@ a:hover {
     color: var(--group-color-300);
     border-left: var(--2xsmall) solid var(--light);
     padding-left: var(--large);
-    flex:1;
+    flex: 1;
     align-items: center
 }
 
@@ -2315,6 +2315,10 @@ a:hover {
 [id^="label_"] {
     display: flex;
     flex-direction: column;
+    gap: var(--2xsmall)
+}
+
+[id^="label_"] {
     gap: var(--4xsmall)
 }
 
@@ -4702,11 +4706,8 @@ div.sceditor-group {
 }
 
 #field_id-20 .field_uneditable strong {
-    font-family: var(--serif);
-    font-size: var(--large);
-    font-weight: 500;
-    text-transform: capitalize;
-    color: var(--group-color)
+    font-weight: 300;
+    text-transform: uppercase
 }
 
 .ajax-profil_parent:has(.ajax-profil_hover) {
@@ -4734,8 +4735,8 @@ div.sceditor-group {
     font-weight: 700;
     font-family: var(--serif);
     border-right: var(--2xsmall) solid var(--group-color-100);
-    padding-right: var(--2xlarge);
-    margin: 0 var(--2xsmall) var(--4xsmall);
+    padding-right: var(--large);
+    margin: 0 var(--large) var(--2xsmall);
     text-align: right
 }
 

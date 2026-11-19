@@ -1895,7 +1895,10 @@ a:hover {
     display: flex;
     column-gap: var(--large);
     flex-wrap: wrap;
-    row-gap: var(--2xsmall)
+    row-gap: var(--2xsmall);
+    height: 100%;
+    min-height: 0;
+    overflow: auto
 }
 
 .post-profile .tab-content>div {

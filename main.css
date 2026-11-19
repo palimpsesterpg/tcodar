@@ -1424,11 +1424,13 @@ a:hover {
     grid-template-rows: auto auto;
     grid-template-columns: 100px 1fr;
     width: 100%;
+    justify-items: start;
     gap: var(--large)
 }
 
 .forum-admin:nth-of-type(even) .forum-content {
-    grid-template-columns: 1fr 100px !important
+    grid-template-columns: 1fr 100px !important;
+    justify-items: end
 }
 
 .forum-admin .forum-content:has(.forum-links a) {
@@ -1437,8 +1439,9 @@ a:hover {
 
 .forum-off .forum-title,
 .forum-admin .forum-title {
-    grid-area: 1 / 1 / 2 / 2;
-    align-items: flex-start
+    grid-area: 1 / 1 / 2 / 3;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .forum-admin:nth-of-type(even) .forum-title,
@@ -1533,10 +1536,6 @@ a:hover {
 .forum-off:nth-of-type(even) .forum-content {
     grid-template-columns: auto 100px;
     justify-items: end
-}
-
-.forum-off .forum-title {
-    grid-area: 1 / 1 / 2 / 3
 }
 
 .forum-off .forumtitle {

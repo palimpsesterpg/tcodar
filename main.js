@@ -34,6 +34,7 @@ const SUB_TITLE = 'the curses of diamonds and rings';
 const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
 const FIELD_TEXT = /^([\s()[\]{}«»"“”]*)([\s\S]*?)([\s()[\]{}«»"“”]*)$/;
 const PROFILE_PATH = /^\/u(\d+)$/;
+const OVERVIEW_TITLE = "cliquer pour ouvrir l'aperçu";
 
 const TAB_FIELDS = {
   faces: 'face,pseudo',
@@ -306,6 +307,9 @@ const isMention = el => Boolean(el.closest('.mentiontag'));
 const hasMentionNear = el =>
   isMention(el) || Boolean(el.parentElement?.querySelector(':scope > .mentiontag'));
 
+const isProfileLink = link =>
+  link.origin === location.origin && PROFILE_PATH.test(link.pathname);
+
 function slugify(text) {
   if (!slugCache.has(text)) {
     slugCache.set(
@@ -428,6 +432,7 @@ function observeBody() {
       queued = false;
       highlight();
       removeAdBlock();
+      markProfileLinks();
     });
   }).observe(document.body, { childList: true, subtree: true });
 }
@@ -1361,7 +1366,7 @@ function buildOverview(link, sourceHead) {
   fillCard(head, getCharacters()[key]);
 
   const overview = document.createElement('div');
-  overview.className = 'profile overview';
+  overview.classList.add('profile', 'overview', ...(sourceHead.closest('.profile')?.classList ?? []));
   overview.dataset.character = key;
   if (userId) overview.id = `u${userId}`;
   overview.append(head);
@@ -1373,6 +1378,12 @@ function enhanceOverview(overview) {
   applyIcons(ICONS, overview);
   applyGroupClasses(overview);
   initAges(overview);
+}
+
+function markProfileLinks() {
+  qq('a[href*="/u"]:not([title])').forEach(link => {
+    if (isProfileLink(link) && !link.closest('.profile.overview')) link.title = OVERVIEW_TITLE;
+  });
 }
 
 function initProfileOverview() {
@@ -1409,8 +1420,7 @@ function initProfileOverview() {
 
   const findProfileLink = target => {
     const link = target.closest('a[href]');
-    if (!link || link.closest('.profile.overview')) return null;
-    return link.origin === location.origin && PROFILE_PATH.test(link.pathname) ? link : null;
+    return link && !link.closest('.profile.overview') && isProfileLink(link) ? link : null;
   };
 
   document.addEventListener(
@@ -1504,6 +1514,7 @@ onReady(() => {
   initBlockToggles();
   initAdminPanels();
   initCategoriesToggle();
+  markProfileLinks();
   initProfileOverview();
   addUsernameToNotiffiButton();
 });

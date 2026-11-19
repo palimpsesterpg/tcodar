@@ -1893,7 +1893,7 @@ a:hover {
     height: 320px;
     overflow: hidden;
     padding: var(--2xsmall);
-    border: 0.5px solid var(--group-color)
+    border: 0.5px solid var(--group-color-100)
 }
 
 .post-profile .tab-content.active {
@@ -1939,7 +1939,7 @@ a:hover {
 
 .post-profile-contact {
     display: flex;
-    background-color: var(--group-color-200);
+    background-color: var(--group-color-100);
     padding: var(--2xsmall);
     width: 100%;
     align-items: center;
@@ -1947,7 +1947,7 @@ a:hover {
 }
 
 .post-profile-contact i::before {
-    color: var(--light)
+    color: var(--group-color)
 }
 
 .post-profile-name {
@@ -2054,9 +2054,9 @@ a:hover {
 
 .post-profile .tabsystem-tabs .tab {
     color: var(--group-color);
-    border-top: 0.5px solid var(--group-color);
-    border-left: 0.5px solid var(--group-color);
-    border-right: 0.5px solid var(--group-color);
+    border-top: 0.5px solid var(--group-color-100);
+    border-left: 0.5px solid var(--group-color-100);
+    border-right: 0.5px solid var(--group-color-100);
     border-radius: var(--small) var(--small) 0 0;
     font-family: var(--serif);
     font-size: var(--large);
@@ -2065,8 +2065,8 @@ a:hover {
 }
 
 .post-profile .tabsystem-tabs .active {
-    color: var(--light);
-    background-color: var(--group-color);
+    background-color: var(--group-color-100);
+    font-weight: 700;
     flex: 1.5
 }
 

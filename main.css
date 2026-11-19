@@ -2036,14 +2036,18 @@ a:hover {
 .post-profile .tabsystem-tabs {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly
+}
+
+.post-profile .tabsystem-tabs .tab {
     color: var(--group-color);
     border-top: 0.5px solid var(--group-color);
     border-left: 0.5px solid var(--group-color);
     border-right: 0.5px solid var(--group-color);
     border-radius: var(--small) 0 0 var(--small);
     font-family: var(--serif);
-    font-size: var(--large)
+    font-size: var(--large);
+    padding: var(--large)
 }
 
 .post-profile .tabsystem-tabs .active {

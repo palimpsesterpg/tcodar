@@ -111,8 +111,8 @@
     --light-dark: color-mix(in srgb, white 30%, black);
     --dark: color-mix(in srgb, white 25%, black);
 
-    --gradientNeutralVertical: linear-gradient(var(--light), var(--darker-light), var(--light));
-    --gradientNeutralHorizontal: linear-gradient(to right, var(--light), var(--darker-light), var(--light));
+    --gradientNeutralVertical: linear-gradient(transparent, var(--lighter-neutral), var(--lighter-neutral), transparent);
+    --gradientNeutralHorizontal: linear-gradient(to right, transparent, var(--lighter-neutral), var(--lighter-neutral), transparent);
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));

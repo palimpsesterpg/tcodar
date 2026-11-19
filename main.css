@@ -1887,15 +1887,14 @@ a:hover {
 .post-profile .tabsystem-contents {
     height: 320px;
     overflow: hidden;
-    padding: var(--large);
+    padding: var(--2xsmall);
     border: 0.5px solid var(--group-color)
 }
 
 .post-profile .tab-content.active {
     display: flex;
-    column-gap: var(--large);
+    gap: var(--2xsmall);
     flex-wrap: wrap;
-    row-gap: var(--2xsmall);
     height: 100%;
     min-height: 0;
     overflow: auto
@@ -2030,7 +2029,7 @@ a:hover {
     text-align: center;
     text-transform: uppercase;
     font-family: var(--display);
-    border: 0.5px solid var(--group-color-100);
+    background-color: var(--group-color-100);
     color: var(--group-color);
     padding: var(--4xsmall)
 }
@@ -2041,9 +2040,11 @@ a:hover {
 }
 
 .post-profile .tabsystem-tabs {
-    display: flex;
+display: flex;
     align-items: center;
-    justify-content: space-evenly
+    margin: 0 var(--2xsmall);
+    gap: var(--2xsmall);
+    justify-content: center
 }
 
 .post-profile .tabsystem-tabs .tab {
@@ -2051,15 +2052,17 @@ a:hover {
     border-top: 0.5px solid var(--group-color);
     border-left: 0.5px solid var(--group-color);
     border-right: 0.5px solid var(--group-color);
-    border-radius: var(--small) 0 0 var(--small);
+    border-radius: var(--small) var(--small) 0 0;
     font-family: var(--serif);
     font-size: var(--large);
-    padding: var(--large)
+    text-align: center;
+    flex: 1
 }
 
 .post-profile .tabsystem-tabs .active {
     color: var(--light);
-    background-color: var(--group-color)
+    background-color: var(--group-color);
+    flex: 1.5
 }
 
 .post-profile-field .content {

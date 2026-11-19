@@ -2274,8 +2274,7 @@ a:hover {
 
 .profile-body .tabsystem-contents {
     height: 320px;
-    flex: 1;
-    overflow: hidden
+    flex: 1
 }
 
 .profile-body .tab {
@@ -4658,11 +4657,15 @@ div.sceditor-group {
     letter-spacing: var(--2xsmall)
 }
 
-.tab-content[data-tab="profile-character"].active,
-.tab-content[data-tab="profile-settings"].active {
+.profile .tab-content.active {
     display: flex;
     gap: var(--large);
     flex-direction: column;
+    overflow: auto
+}
+
+.tab-content[data-tab="profile-character"],
+.tab-content[data-tab="profile-settings"] {
     overflow: hidden
 }
 

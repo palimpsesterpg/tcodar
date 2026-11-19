@@ -4748,3 +4748,12 @@ div.sceditor-group {
 .cam #label_residence .label {
     display: none
 }
+
+#field_id19 .profile-field-label {
+    display: none
+}
+
+#field_id19 .field_uneditable {
+    padding: var(--large);
+    border: 0.5px solid var(--group-color-100)
+}

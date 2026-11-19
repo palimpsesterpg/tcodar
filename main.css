@@ -2008,6 +2008,13 @@ a:hover {
     font-weight: 300
 }
 
+.post-profile-attendance .content {
+    text-align: center;
+    color: var(--group-color);
+    font-family: var(--mono);
+    text-transform: uppercase
+}
+
 #label_presence .label,
 #label_pseudo .label,
 #label_celebrite .label,

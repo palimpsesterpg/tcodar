@@ -101,26 +101,47 @@ hr {
     border-bottom: 0.5px solid var(--lighter-neutral) !important;
 }
 
-avct {
+cttwrn1 {
     filter: blur(3px);
     transition-duration: 0.7s
 }
 
-avct:hover {
+cttwrn1:hover {
     filter: blur(0px);
     transition-duration: 0.7s
 }
 
-avhi {
+cttwrn2 {
     background-color: var(--darker-light);
     color: var(--darker-light);
     transition-duration: 0.7s
 }
 
-avhi:hover {
+cttwrn2:hover {
     background-color: transparent;
     color: var(--light-dark);
     transition-duration: 0.7s
+}
+
+words1,
+words2 {
+    color: var(--group-color);
+    font-family: var(--serif)
+}
+
+words1:before {
+    content: '❛';
+    padding: var(--2xsmall)
+}
+
+words1:after {
+    content: '❜';
+    padding: var(--2xsmall)
+}
+
+words2:before {
+    content: '⎯';
+    padding: var(--2xsmall)
 }
 
 .order-0 {

@@ -4669,13 +4669,15 @@ div.sceditor-group {
 }
 
 .cam [data-tab="profile-character"] .field_uneditable strong,
-.cam [data-tab="post-profile-character"] .post-profile-field .content strong {
+.cam [data-tab="post-profile-character"] .post-profile-field .content strong,
+.cam #field_id-12 .field_uneditable {
     font-size: var(--large);
     color: var(--group-color);
     display: block
 }
 
-.cam [data-tab="profile-character"] .field_uneditable strong {
+.cam [data-tab="profile-character"] .field_uneditable strong,
+.cam #field_id-12 .field_uneditable {
     text-transform: lowercase;
     font-family: var(--serif)
 }
@@ -4686,11 +4688,15 @@ div.sceditor-group {
     font-weight: 300 !important
 }
 
+.cam #field_id-12 .profile-field-content::after {
+    content: "blablabla"
+}
+
 .cam #field_id3 .profile-field-label,
 .cam #field_id15 .profile-field-label,
 .cam #field_id13 .profile-field-label,
 .cam #field_id16 .profile-field-label,
-.cam #label_occupation .label,
+.cam #field_id-12 .profile-field-label .cam #label_occupation .label,
 .cam #label_statut-amoureux .label,
 .cam #label_situation-financiere .label,
 .cam #label_residence .label {

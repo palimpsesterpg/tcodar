@@ -46,7 +46,7 @@ const TAB_PROFILE = {
   'profile-second-avatar': 'field_id7',
   'character-details': 'field_id2, field_id-5, field_id-2',
   '.tab-content[data-tab="profile-settings"] > div:nth-of-type(2)': 'field_id12, field_id18, field_id-11, field_id-20',
-  'player-details': 'field_id14, field_id1',
+  'player-details': 'field_id14, field_id12, field_id1',
   '.tab-content[data-tab="profile-roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',
   '.post-profile-icon': 'label_icon',

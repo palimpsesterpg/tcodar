@@ -1881,13 +1881,14 @@ a:hover {
 
 .post-profile .tabsystem {
     display: flex;
-    flex-direction: column;
-    gap: var(--large)
+    flex-direction: column
 }
 
 .post-profile .tabsystem-contents {
     height: 320px;
-    overflow: auto
+    overflow: hidden;
+    padding: var(--large);
+    border: 0.5px solid var(--group-color)
 }
 
 .post-profile .tab-content.active {
@@ -2017,9 +2018,9 @@ a:hover {
 #label_pronoms {
     flex: 1 1 calc(100% / 3);
     text-align: center;
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-family: var(--display);
-    background-color: var(--group-color-100);
+    border: 0.5px solid var(--group-color-100);
     color: var(--group-color);
     padding: var(--4xsmall)
 }
@@ -2034,10 +2035,17 @@ a:hover {
     align-items: center;
     justify-content: space-evenly;
     color: var(--group-color);
+    border-top: 0.5px solid var(--group-color);
+    border-left: 0.5px solid var(--group-color);
+    border-right: 0.5px solid var(--group-color);
+    border-radius: var(--small) 0 0 var(--small);
     font-family: var(--serif);
-    font-size: var(--xlarge);
-    font-weight: 900;
-    text-shadow: 1 1 var(--group-color-100)
+    font-size: var(--large)
+}
+
+.post-profile .tabsystem-tabs .active {
+    color: var(--light);
+    background-color: var(--group-color)
 }
 
 .post-profile-field .content {
@@ -3185,7 +3193,7 @@ season {
 .notiffi_personal_links {
     grid-area: 1 / 4 / 3 / 5;
     padding: var(--large);
-    background-color: var(--group-color-300);
+    background-color: var(--group-color-300)
 }
 
 .notiffi_personal_links a {

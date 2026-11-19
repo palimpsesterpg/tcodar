@@ -1709,6 +1709,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: fit-content;
     background: var(--light)
 }
 
@@ -1772,7 +1773,8 @@ a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%
+    width: fit-content;
+    margin: 0 auto
 }
 
 .mini .post-icons>a,
@@ -1826,6 +1828,7 @@ a:hover {
 
 .post-body {
     flex: 1;
+    height: fit-content;
     min-width: 0
 }
 
@@ -1863,6 +1866,7 @@ a:hover {
     width: 200px;
     display: flex;
     top: -7rem;
+    height: fit-content;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column

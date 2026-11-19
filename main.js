@@ -33,6 +33,8 @@ const COPY_RESET_DELAY = 5000;
 const SUB_TITLE = 'the curses of diamonds and rings';
 const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
 const FIELD_TEXT = /^([\s()[\]{}«»"“”]*)([\s\S]*?)([\s()[\]{}«»"“”]*)$/;
+const PROFILE_PATH = /^\/u(\d+)$/;
+const OVERVIEW_TITLE = "cliquer pour ouvrir l'aperçu";
 
 const TAB_FIELDS = {
   faces: 'face,pseudo',
@@ -53,9 +55,8 @@ const TAB_PROFILE = {
   '.post-profile-face': 'label_celebrite',
   '.post-profile-player': 'label_pseudo',
   '.post-profile-attendance': 'label_presence',
-  '.post-profile-icon': 'label_icon',
   '.post-profile-gif': 'label_gif',
-  '.tab-content[data-tab="post-profile-settings"]': 'label_comptes, label_credits, label_habitudes, label_themes-abordes'
+  '.tab-content[data-tab="post-profile-settings"]': 'label_comptes, label_credits, label_habitudes, label_themes-abordes',
 };
 
 const FAMILY_FIELDS = ['num', 'name', 'country', 'domaine', 'crime', 'fortune'];
@@ -173,10 +174,10 @@ const GROUP_COLORS = {
   '333333': 'group-2',
   '960018': 'group-3',
   'CD5700': 'group-4',
-  'BF920d': 'group-5',
+  'BF920D': 'group-5',
   '2C7E65': 'group-6',
   '6050DC': 'group-7',
-  '8E3FAB': 'group-8'
+  '8E3FAB': 'group-8',
 };
 
 const DICE_RULES = {
@@ -262,6 +263,7 @@ const FORUM_LINK_ICONS = {
 const clockFormatters = new Map();
 const monthFormatters = new Map();
 const profileDocs = new Map();
+const slugCache = new Map();
 
 const fieldSpan = f => `<span data-field="${f}"></span>`;
 
@@ -304,6 +306,25 @@ const editHtml = (selector, ...replacers) =>
 const isMention = el => Boolean(el.closest('.mentiontag'));
 const hasMentionNear = el =>
   isMention(el) || Boolean(el.parentElement?.querySelector(':scope > .mentiontag'));
+
+const isProfileLink = link =>
+  link.origin === location.origin && PROFILE_PATH.test(link.pathname);
+
+function slugify(text) {
+  if (!slugCache.has(text)) {
+    slugCache.set(
+      text,
+      text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+        .replace(/^-+|-+$/g, '')
+    );
+  }
+  return slugCache.get(text);
+}
 
 function resolveValue(field, data, index) {
   const m = field.match(/^(\w+)\[(\d+(?:\s*,\s*\d+)*)\]$/);
@@ -411,6 +432,7 @@ function observeBody() {
       queued = false;
       highlight();
       removeAdBlock();
+      markProfileLinks();
     });
   }).observe(document.body, { childList: true, subtree: true });
 }
@@ -528,16 +550,26 @@ function formatFieldLabels() {
   });
 }
 
-function trimForumLinks() {
-  qq('.forum-links').forEach(bloc => {
-    bloc.innerHTML = bloc.innerHTML
-      .replace(/,\s*/g, '');
-  });
-}
-
 function trimProfileLabels() {
   qq('.profile-field-label').forEach(label => {
     label.textContent = label.textContent.replace(/[\s*:]+$/, '');
+  });
+}
+
+function trimForumLinks() {
+  qq('.forum-links').forEach(bloc => {
+    bloc.innerHTML = bloc.innerHTML.replace(/,\s*/g, '');
+  });
+}
+
+function initProfileLabels() {
+  qq('.post .post-profile-field').forEach(field => {
+    const label = q('.label', field);
+    if (!label) return;
+
+    const text = label.textContent.replace(/:\s*$/, '').trim();
+    label.textContent = text;
+    field.id = `label_${slugify(text)}`;
   });
 }
 
@@ -794,7 +826,7 @@ function initGroupClasses() {
 
   observeGroupContainers();
 
-  const color = String(user.groupcolor ?? '').toUpperCase();
+  const color = String(user.groupcolor ?? '').replace('#', '').toUpperCase();
   const groupClass = GROUP_COLORS[color] ?? 'group-test';
   qq('.sceditor-toolbar, #notiffi_panel').forEach(el => el.classList.add(groupClass));
 }
@@ -1031,35 +1063,6 @@ function organizeProfileElements() {
   });
 }
 
-const slugCache = new Map();
-
-function slugify(text) {
-  if (!slugCache.has(text)) {
-    slugCache.set(
-      text,
-      text
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, '')
-        .replace(/^-+|-+$/g, '')
-    );
-  }
-  return slugCache.get(text);
-}
-
-function initProfileLabels() {
-  qq('.post .post-profile-field').forEach(field => {
-    const label = q('.label', field);
-    if (!label) return;
-
-    const text = label.textContent.replace(/:\s*$/, '').trim();
-    label.textContent = text;
-    field.id = `label_${slugify(text)}`;
-  });
-}
-
 function transformDiceMessage(el) {
   if (el.dataset.dice) return;
 
@@ -1233,8 +1236,7 @@ function initPageContext() {
   if (postlist.id === '267') {
     postlist.classList.add('tabsystem', 'listings');
     qq('.post', postlist).forEach(post => post.classList.add('tab-content'));
-    qq('.post-header', postlist).forEach(p => p.classList.add('d-none'));
-    qq('.post-profile', postlist).forEach(p => p.classList.add('d-none'));
+    qq('.post-header, .post-profile', postlist).forEach(el => el.classList.add('d-none'));
 
     const tabsPost = document.getElementById('340');
     tabsPost?.classList.add('tabsystem-tabs');
@@ -1342,7 +1344,7 @@ function initForumPreviews() {
 
 function buildOverview(link, sourceHead) {
   const key = toCharacterKey(getLinkName(link));
-  const userId = link.pathname.match(/^\/u(\d+)/)?.[1];
+  const userId = link.pathname.match(PROFILE_PATH)?.[1];
   const head = document.importNode(sourceHead, true);
 
   const profile = document.createElement('a');
@@ -1364,7 +1366,7 @@ function buildOverview(link, sourceHead) {
   fillCard(head, getCharacters()[key]);
 
   const overview = document.createElement('div');
-  overview.className = 'profile overview';
+  overview.classList.add('profile', 'overview', ...(sourceHead.closest('.profile')?.classList ?? []));
   overview.dataset.character = key;
   if (userId) overview.id = `u${userId}`;
   overview.append(head);
@@ -1378,38 +1380,38 @@ function enhanceOverview(overview) {
   initAges(overview);
 }
 
-function initProfileOverview() {
-  const OPEN_DELAY = 250;
-  const CLOSE_DELAY = 150;
+function markProfileLinks() {
+  qq('a[href*="/u"]:not([title])').forEach(link => {
+    if (isProfileLink(link) && !link.closest('.profile.overview')) link.title = OVERVIEW_TITLE;
+  });
+}
 
+function initProfileOverview() {
   const overlay = document.createElement('div');
   overlay.className = 'profile-overlay';
 
   let overview = null;
-  let currentLink = null;
   let requestId = 0;
-  let openTimer;
-  let closeTimer;
 
   const close = () => {
-    clearTimeout(openTimer);
     requestId++;
     overview?.remove();
     overlay.remove();
     overview = null;
-    currentLink = null;
   };
 
   const open = async link => {
     close();
-    currentLink = link;
     const id = requestId;
 
     const doc = await fetchProfileDoc(link.href);
     if (id !== requestId) return;
 
     const head = doc && q('.profile-head', doc);
-    if (!head) return;
+    if (!head) {
+      location.assign(link.href);
+      return;
+    }
 
     overview = buildOverview(link, head);
     document.body.append(overlay, overview);
@@ -1418,28 +1420,26 @@ function initProfileOverview() {
 
   const findProfileLink = target => {
     const link = target.closest('a[href]');
-    if (!link || link.closest('.profile.overview')) return null;
-    return link.origin === location.origin && /^\/u\d+/.test(link.pathname) ? link : null;
+    return link && !link.closest('.profile.overview') && isProfileLink(link) ? link : null;
   };
 
-  document.addEventListener('mouseover', e => {
-    const link = findProfileLink(e.target);
+  document.addEventListener(
+    'click',
+    e => {
+      const link = findProfileLink(e.target);
+      const plainClick = e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey;
 
-    if (link || e.target.closest('.profile.overview')) clearTimeout(closeTimer);
-    if (!link || link === currentLink) return;
+      if (link && plainClick) {
+        e.preventDefault();
+        e.stopPropagation();
+        open(link);
+        return;
+      }
 
-    clearTimeout(openTimer);
-    openTimer = setTimeout(() => open(link), OPEN_DELAY);
-  });
-
-  document.addEventListener('mouseout', e => {
-    const source = findProfileLink(e.target) ?? e.target.closest('.profile.overview');
-    if (!source || source.contains(e.relatedTarget)) return;
-
-    clearTimeout(openTimer);
-    clearTimeout(closeTimer);
-    closeTimer = setTimeout(close, CLOSE_DELAY);
-  });
+      if (overview && !e.target.closest('.profile.overview')) close();
+    },
+    true
+  );
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();
@@ -1514,6 +1514,7 @@ onReady(() => {
   initBlockToggles();
   initAdminPanels();
   initCategoriesToggle();
+  markProfileLinks();
   initProfileOverview();
   addUsernameToNotiffiButton();
 });

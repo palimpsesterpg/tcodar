@@ -4727,7 +4727,11 @@ div.sceditor-group {
 .cam #field_id-12 .field_uneditable {
     text-transform: lowercase;
     font-weight: 700;
-    font-family: var(--serif)
+    font-family: var(--serif);
+    border-right: var(--2xsmall) solid;
+    padding-right: var(--2xlarge);
+    margin: 0 var(--2xsmall);
+    text-align: right
 }
 
 .cam [data-tab="post-profile-character"] .post-profile-field .content strong {
@@ -4762,20 +4766,21 @@ div.sceditor-group {
     border: 0.5px solid var(--group-color-100)
 }
 
-.tab-content[data-tab="profile-character"] .profile-field-label {
+.tab-content[data-tab="profile-character"]>div:nth-of-type(2) .profile-field-label {
     border-right: var(--2xsmall) solid;
     padding-right: var(--2xlarge);
     margin: 0 var(--2xsmall);
     text-align: right
 }
 
-.tab-content[data-tab="profile-settings"] .profile-field-label {
+.tab-content[data-tab="profile-settings"]>div:nth-of-type(2) .profile-field-label {
     display: flex;
     gap: var(--2xlarge);
     margin: 0 var(--2xsmall);
+    align-items: center;
 }
 
-.tab-content[data-tab="profile-settings"] .profile-field-label::after {
+.tab-content[data-tab="profile-settings"]>div:nth-of-type(2) .profile-field-label::after {
     content: '';
     border-bottom: 0.5px solid;
     flex: 1

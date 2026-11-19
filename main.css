@@ -1707,9 +1707,8 @@ a:hover {
 
 .post-icons {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background: var(--light)
 }
 
@@ -1771,6 +1770,8 @@ a:hover {
 .compact .post-icons,
 .sms .post-icons {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%
 }
 
@@ -1861,7 +1862,7 @@ a:hover {
     gap: var(--large);
     width: 200px;
     display: flex;
-    top: -6rem;
+    top: -7rem;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column

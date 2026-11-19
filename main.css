@@ -3258,7 +3258,7 @@ season {
     width: 100%;
     gap: var(--2xsmall);
     padding: var(--2xsmall);
-    border: 0.5px solid var(--darker-light);
+    border: 0.5px solid var(--lighter-neutral);
     transition: border 0.2s;
     align-items: center;
     -webkit-animation: notiffiFadeIn 0.3s ease-in-out;
@@ -4399,7 +4399,7 @@ div.sceditor-group {
 .sceditor-container textarea {
     background: var(--light) !important;
     border: 0 !important;
-    border-top: 0.5 solid var(--darker-light) !important;
+    border-top: 0.5 solid var(--lighter-neutral) !important;
     color: var(--lighter-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
@@ -4670,7 +4670,7 @@ div.sceditor-group {
 .tab-content[data-tab="profile-settings"]>div:nth-of-type(2) {
     flex: 1;
     display: flex;
-    gap: var(--2xsmall);
+    gap: var(--large);
     min-height: 0;
     height: 100%;
     overflow: auto;
@@ -4769,15 +4769,15 @@ div.sceditor-group {
 
 .tab-content[data-tab="profile-character"]>div:nth-of-type(2) .profile-field-label {
     border-right: var(--2xsmall) solid var(--group-color-100);
-    padding-right: var(--2xlarge);
-    margin: 0 var(--2xsmall);
+    gap: var(--large);
+    margin: 0 var(--large);
     text-align: right
 }
 
 .tab-content[data-tab="profile-settings"]>div:nth-of-type(2) .profile-field-label {
     display: flex;
-    gap: var(--2xlarge);
-    margin: 0 var(--2xsmall);
+    gap: var(--large);
+    margin: 0 var(--large);
     align-items: center;
 }
 

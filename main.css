@@ -2284,9 +2284,10 @@ a:hover {
     display: flex;
     text-transform: lowercase;
     font-size: var(--2xlarge);
-    color: var(--group-color-200);
+    color: var(--group-color-300);
     border-left: var(--2xsmall) solid var(--light);
     padding-left: var(--large);
+    flex:1;
     align-items: center
 }
 

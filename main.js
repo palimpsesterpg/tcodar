@@ -33,7 +33,7 @@ const COPY_RESET_DELAY = 5000;
 const SUB_TITLE = 'the curses of diamonds and rings';
 const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
 const FIELD_TEXT = /^([\s()[\]{}«»"“”]*)([\s\S]*?)([\s()[\]{}«»"“”]*)$/;
-const PROFILE_PATH = /\/u(\d+)$/;
+const PROFILE_PATH = /^\/u(\d+)$/;
 
 const TAB_FIELDS = {
   faces: 'face,pseudo',

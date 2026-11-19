@@ -2314,7 +2314,8 @@ a:hover {
 [id^="field_id"],
 [id^="label_"] {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: var(--4xsmall)
 }
 
 .profile-pseudo div {
@@ -4728,9 +4729,9 @@ div.sceditor-group {
     text-transform: lowercase;
     font-weight: 700;
     font-family: var(--serif);
-    border-right: var(--2xsmall) solid;
+    border-right: var(--2xsmall) solid var(--group-color-100);
     padding-right: var(--2xlarge);
-    margin: 0 var(--2xsmall);
+    margin: 0 var(--2xsmall) var(--4xsmall);
     text-align: right
 }
 
@@ -4767,7 +4768,7 @@ div.sceditor-group {
 }
 
 .tab-content[data-tab="profile-character"]>div:nth-of-type(2) .profile-field-label {
-    border-right: var(--2xsmall) solid;
+    border-right: var(--2xsmall) solid var(--group-color-100);
     padding-right: var(--2xlarge);
     margin: 0 var(--2xsmall);
     text-align: right

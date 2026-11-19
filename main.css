@@ -2040,7 +2040,7 @@ a:hover {
 }
 
 .post-profile .tabsystem-tabs {
-display: flex;
+    display: flex;
     align-items: center;
     margin: 0 var(--2xsmall);
     gap: var(--2xsmall);
@@ -2074,7 +2074,20 @@ display: flex;
     background: var(--gradientNeutralVertical)
 }
 
-.mini>sep {
+.post>ssep {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    height: 0.5px;
+    background: var(--gradientNeutralHorizontal);
+}
+
+.mini>ssep {
+    display: none
+}
+
+.mini>sep,
+.sms>sep,
+.compact>sep {
     width: 100%;
     height: 0.5px;
     margin: 0 auto;

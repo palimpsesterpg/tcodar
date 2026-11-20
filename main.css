@@ -2353,9 +2353,9 @@ a:hover {
     display: none
 }
 
-.profile-first-quote .field_uneditable:not(:empty) .blank-quote,
+.profile-first-quote:has(.field_uneditable:not(:empty)) .blank-quote,
+.profile-second-quote:has(.field_uneditable:not(:empty)) .blank-quote,
 .profile-first-quote .empty,
-.profile-second-quote .field_uneditable:not(:empty) .blank-quote,
 .profile-second-quote .empty {
     display: none
 }

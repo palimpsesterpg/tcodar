@@ -2333,10 +2333,13 @@ a:hover {
 }
 
 .profile-first-quote,
-.profile-second-quote {width: 100%;
+.profile-second-quote {width: 95%%;
                       font-family: var(--serif);
                       font-style: italic;
                       color: var(--neutral)}
+
+.profile-first-quote .profile-field-label,
+.profile-second-quote .profile-field-label {display: none}
 
 .profile-second-quote {text-align: right}
 

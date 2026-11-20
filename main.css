@@ -2353,6 +2353,11 @@ a:hover {
     display: none
 }
 
+.profile-first-quote:has(.profile-field-label) .blank-quote,
+.profile-second-quote:has(.profile-field-label) .blank-quote {
+    display: none
+}
+
 .profile-second-quote {
     text-align: right
 }

@@ -267,7 +267,7 @@
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
-    --gradientgc4: linear-gradient(to right, transparent, var(--group-color), var(--group-color), transparent);
+    --gradientgc4: linear-gradient(to right, transparent, var(--group-color), transparent);
 
     --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
 }
@@ -4671,7 +4671,7 @@ div.sceditor-group {
 .tab-content[data-tab="profile-settings"] .profile-field-label {
     text-transform: uppercase;
     letter-spacing: var(--4xsmall);
-    padding-left: var(--4small);
+    padding-left: var(--4xsmall);
     font-weight: 900
 }
 
@@ -4770,6 +4770,6 @@ div.sceditor-group {
 
 .tab-content[data-tab="profile-settings"]>div:nth-of-type(2) .profile-field-label::after {
     content: '';
-    border-bottom: 0.5px solid;
+    border-bottom: 0.5px solid var(--group-color-100);
     flex: 1
 }

@@ -552,6 +552,17 @@ function formatFieldLabels() {
   });
 }
 
+function applyOtherLabels() {
+  qq('[id^="field_id"]').forEach(field => {
+    const other = q('.field_uneditable otherlbl', field);
+    const label = q('.profile-field-label', field);
+    if (!other || !label) return;
+
+    label.textContent = other.textContent.trim();
+    other.remove();
+  });
+}
+
 function trimProfileLabels() {
   qq('.profile-field-label').forEach(label => {
     label.textContent = label.textContent.replace(/[\s*:]+$/, '');
@@ -1504,6 +1515,7 @@ onReady(() => {
   addQueendomTab();
   unwrapTabs();
   formatFieldLabels();
+  applyOtherLabels();
   trimProfileLabels();
   trimForumLinks();
   moveAdminLinks();

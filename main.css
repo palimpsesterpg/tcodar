@@ -4566,6 +4566,11 @@ div.sceditor-group {
     flex: 1
 }
 
+.character-details .empty,
+.player-details .empty {
+    display: none
+}
+
 .character-details .field_uneditable,
 .player-details .field_uneditable {
     text-align: center !important

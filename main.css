@@ -267,6 +267,7 @@
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(var(--white-op75), var(--group-color-op75));
+    --gradientgc4: linear-gradient(to right, transparent, var(--group-color), var(--group-color), transparent);
 
     --gradientLight: linear-gradient(to right, var(--light), var(--group-color), var(--light))
 }
@@ -4706,7 +4707,7 @@ div.sceditor-group {
 .tab-content[data-tab="profile-character"] sep,
 .tab-content[data-tab="profile-settings"] sep {width: 100%;
                                                height:0.5px;
-                                               background:var(--gradient12)}
+                                               background:var(--gradientgc4)}
 
 #field_id-20 .field_uneditable {
     display: grid;

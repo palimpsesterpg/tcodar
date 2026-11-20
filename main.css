@@ -2332,6 +2332,14 @@ a:hover {
     overflow: hidden
 }
 
+.profile-first-quote,
+.profile-second-quote {width: 100%;
+                      font-family: var(--serif);
+                      font-style: italic;
+                      color: var(--neutral)}
+
+.profile-second-quote {text-align: right}
+
 [id^="field_id"],
 [id^="label_"] {
     display: flex;

@@ -2818,19 +2818,19 @@ a:hover {
     padding: var(--large)
 }
 
-.inside-modal pseudo {
+.inside-modal modal-pseudo {
     text-transform: capitalize;
     color: var(--group-color);
     font-family: var(--serif);
     font-size: var(--large)
 }
 
-.inside-modal details {
+.inside-modal modal-details {
     display: flex;
     gap: var(--2xsmall)
 }
 
-.inside-modal details span {
+.inside-modal modal-details span {
     background-color: var(--group-color);
     color: var(--light);
     font-weight: 900;

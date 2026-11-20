@@ -553,9 +553,9 @@ function formatFieldLabels() {
 }
 
 function applyOtherLabels() {
-  qq('[id^="field_id"]').forEach(field => {
-    const other = q('.field_uneditable otherlbl', field);
-    const label = q('.profile-field-label', field);
+  qq('[id^="field_id"], [id^="label"]').forEach(field => {
+    const other = q('otherlbl', field);
+    const label = q('.profile-field-label, .label', field);
     if (!other || !label) return;
 
     label.textContent = other.textContent.trim();
@@ -1515,11 +1515,11 @@ onReady(() => {
   addQueendomTab();
   unwrapTabs();
   formatFieldLabels();
-  applyOtherLabels();
-  trimProfileLabels();
   trimForumLinks();
   moveAdminLinks();
   initProfileLabels();
+  applyOtherLabels();
+  trimProfileLabels();
   organizeProfileElements();
   addContactSpans();
   initTabs();

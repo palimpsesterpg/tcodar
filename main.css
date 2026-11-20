@@ -4731,48 +4731,6 @@ div.sceditor-group {
     flex: 1
 }
 
-.cam [data-tab="profile-character"] .field_uneditable strong,
-.cam [data-tab="post-profile-character"] .post-profile-field .content strong,
-.cam #field_id-12 .field_uneditable {
-    font-size: var(--large);
-    color: var(--group-color);
-    display: block
-}
-
-.cam [data-tab="profile-character"] .field_uneditable strong,
-.cam #field_id-12 .field_uneditable {
-    text-transform: lowercase;
-    font-weight: 700;
-    font-family: var(--serif);
-    border-right: var(--2xsmall) solid var(--group-color-100);
-    padding-right: var(--large);
-    margin: 0 var(--large) var(--2xsmall);
-    text-align: right
-}
-
-.cam [data-tab="post-profile-character"] .post-profile-field .content strong {
-    text-transform: uppercase;
-    font-family: var(--display);
-    font-weight: 300 !important
-}
-
-.cam #field_id-12 .profile-field-content::after {
-    text-align: justify;
-    content: "Deuxième née du couple morbide, entre Londres et Paris la gamine n'est, nulle part, un enfant de l'amour. Issue la plus fructueuse d'un contrat passé à l'encre ensanglantée, abandonnée tôt par une mère qui ne l'a jamais désirée, pas une fille, pas ce genre de fille."
-}
-
-.cam #field_id3 .profile-field-label,
-.cam #field_id15 .profile-field-label,
-.cam #field_id13 .profile-field-label,
-.cam #field_id16 .profile-field-label,
-.cam #field_id-12 .profile-field-label,
-.cam #label_occupation .label,
-.cam #label_statut-amoureux .label,
-.cam #label_situation-financiere .label,
-.cam #label_residence .label {
-    display: none
-}
-
 #field_id19 .profile-field-label {
     display: none
 }

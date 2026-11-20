@@ -2069,14 +2069,20 @@ a:hover {
     height: var(--large);
     line-height: 0.75;
     text-align: center;
+    background-color: var(--group-color-100);
     flex: 1
 }
 
 .post-profile .tabsystem-tabs .active {
-    background-color: var(--group-color-100);
     font-weight: 700;
     flex: 1.5
 }
+
+[data-tab="post-profile-settings"]:not(.active) {    border-radius: var(--small) 0 0 0;
+    margin-right: -1rem;}
+
+[data-tab="post-profile-settings"]:not(.active) {    border-radius: 0 var(--small) 0 0;
+    margin-left: -1rem;}
 
 .post-profile-field .content {
     text-align: justify

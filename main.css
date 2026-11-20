@@ -2354,7 +2354,9 @@ a:hover {
 }
 
 .profile-first-quote .field_uneditable:empty .blank-quote,
-.profile-second-quote .field_uneditable:empty .blank-quote {
+.profile-first-quote .empty,
+.profile-second-quote .field_uneditable:empty .blank-quote,
+.profile-second-quote .empty {
     display: none
 }
 

@@ -2055,7 +2055,6 @@ a:hover {
     display: flex;
     align-items: center;
     margin: 0 var(--2xsmall);
-    gap: var(--2xsmall);
     justify-content: center
 }
 
@@ -2070,19 +2069,22 @@ a:hover {
     height: var(--large);
     line-height: 0.75;
     text-align: center;
+    margin-bottom: -0.5px;
     background-color: var(--group-color-100);
     flex: 1
 }
 
 .post-profile .tabsystem-tabs .active {
     font-weight: 700;
+    background-color: var(--light);
+    border-bottom: 0.5px solid var(--light);
     flex: 1.5
 }
 
-[data-tab="post-profile-settings"]:not(.active) {    border-radius: var(--small) 0 0 0;
+[data-tab="post-profile-settings"]:not(.active) {    border-radius: var(--small) 0 0 0 !important;
     margin-right: -1rem;}
 
-[data-tab="post-profile-settings"]:not(.active) {    border-radius: 0 var(--small) 0 0;
+[data-tab="post-profile-settings"]:not(.active) {    border-radius: 0 var(--small) 0 0 !important;
     margin-left: -1rem;}
 
 .post-profile-field .content {

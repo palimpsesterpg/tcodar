@@ -4742,7 +4742,7 @@ div.sceditor-group {
 
 .tab-content[data-tab="profile-character"]>div:nth-of-type(2) .profile-field-label {
     border-right: var(--2xsmall) solid var(--group-color-100);
-    gap: var(--large);
+    padding-right: var(--large);
     margin: 0 var(--large);
     text-align: right
 }

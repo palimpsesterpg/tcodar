@@ -4692,10 +4692,13 @@ div.sceditor-group {
     min-height: 0;
     height: 100%;
     overflow: auto;
-    padding-top: var(--large);
-    border-top: 0.5px solid var(--lighter-neutral);
     flex-direction: column
 }
+
+.tab-content[data-tab="profile-character"] .sep,
+.tab-content[data-tab="profile-settings"] .sep {width: 100%;
+                                               height:0.5px;
+                                               background:var(--gradient12)}
 
 #field_id-20 .field_uneditable {
     display: grid;

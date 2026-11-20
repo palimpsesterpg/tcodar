@@ -1446,7 +1446,7 @@ a:hover {
 .forum-admin .forum-title {
     grid-area: 1 / 1 / 2 / 3;
     align-items: flex-start;
-    width: 100%;
+    width: 100%
 }
 
 .forum-admin:nth-of-type(even) .forum-title,
@@ -2090,13 +2090,13 @@ a:hover {
 [data-tab="post-profile-settings"]:not(.active) {
     border-radius: 0 var(--small) 0 0 !important;
     margin-left: -0.5rem;
-    margin-right: 0;
+    margin-right: 0
 }
 
 [data-tab="post-profile-character"]:not(.active) {
     border-radius: var(--small) 0 0 0 !important;
     margin-right: -0.5rem;
-    margin-left: 0;
+    margin-left: 0
 }
 
 .post-profile-field .content {
@@ -2341,11 +2341,12 @@ a:hover {
 
 .profile-first-quote,
 .profile-second-quote {
-    width: 90%;
+    width: 85%;
+    font-size: var(--large);
     margin: var(--large) auto;
     font-family: var(--serif);
     font-style: italic;
-    color: var(--dark-neutral)
+    color: var(--darker-neutral)
 }
 
 .profile-first-quote .profile-field-label,
@@ -2381,7 +2382,7 @@ a:hover {
 
 .profile-pseudo div {
     width: 100%;
-    text-align: center;
+    text-align: center
 }
 
 .profile-pseudo .prenom {

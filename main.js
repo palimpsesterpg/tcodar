@@ -626,8 +626,8 @@ function applyIcons(map, root = document) {
 function replaceZodiacIcons() {
   ZODIAC_SIGNS.forEach(sign => {
     qq(`img[src*="icon_zodiac_${sign}_2.gif"]`).forEach(img => {
-      const span = document.createElement('span');
-      span.className = `icon-tcodar-${sign}`;
+      const i = document.createElement('i');
+      i.className = `icon-tcodar-${sign}`;
       img.replaceWith(span);
     });
   });

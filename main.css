@@ -2353,11 +2353,15 @@ a:hover {
     display: none
 }
 
-.profile-first-quote:has(.field_uneditable:not(:empty)) .blank-quote,
-.profile-second-quote:has(.field_uneditable:not(:empty)) .blank-quote,
+.blank-quote,
 .profile-first-quote .empty,
 .profile-second-quote .empty {
     display: none
+}
+
+.profile-first-quote:has(.empty) .blank-quote,
+.profile-second-quote:has(.empty) .blank-quote {
+    display: block
 }
 
 .profile-second-quote {

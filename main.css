@@ -2066,6 +2066,8 @@ a:hover {
     border-radius: var(--small) var(--small) 0 0;
     font-family: var(--serif);
     font-size: var(--large);
+    height: var(--large);
+    line-height: 0.75;
     text-align: center;
     flex: 1
 }

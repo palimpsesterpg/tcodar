@@ -2379,6 +2379,11 @@ a:hover {
     margin-bottom: -1rem
 }
 
+.profile-pseudo .prenom {
+    text-align: center;
+    text-transform: capitalize
+}
+
 .profile-avatar img,
 .profile-second-avatar {
     width: 200px;

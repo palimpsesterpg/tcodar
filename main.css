@@ -416,6 +416,10 @@
     .forum-off .forum-lastpost-avatar img {
         width: 50px !important
     }
+
+    .profile.overview {
+        width: 90% !important
+    }
 }
 
 @keyframes fade {
@@ -437,7 +441,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: var(--main);
-    color: var(--lighter-dark);
+    color: var(--light-dark);
     font-size: var(--medium);
     background: var(--gradient23-100);
     background-size: cover;
@@ -464,8 +468,8 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: var(--3xsmall);
-    height: var(--3xsmall)
+    width: var(--4xsmall);
+    height: var(--4xsmall)
 }
 
 *::-webkit-scrollbar-track {
@@ -516,7 +520,7 @@ a:hover {
 
 a,
 a:visited {
-    color: var(--light-dark)
+    color: var(--lighter-dark)
 }
 
 a:hover {
@@ -1909,7 +1913,7 @@ a:hover {
     flex-wrap: wrap;
     height: 100%;
     min-height: 0;
-        scrollbar-width: none;
+    scrollbar-width: none;
     overflow: auto
 }
 
@@ -2083,13 +2087,17 @@ a:hover {
     flex: 1.5
 }
 
-[data-tab="post-profile-settings"]:not(.active) {border-radius: 0 var(--small) 0 0 !important;
+[data-tab="post-profile-settings"]:not(.active) {
+    border-radius: 0 var(--small) 0 0 !important;
     margin-left: -0.5rem;
-    margin-right: 0;}
+    margin-right: 0;
+}
 
-[data-tab="post-profile-character"]:not(.active) {border-radius: var(--small) 0 0 0 !important;
+[data-tab="post-profile-character"]:not(.active) {
+    border-radius: var(--small) 0 0 0 !important;
     margin-right: -0.5rem;
-    margin-left: 0;}
+    margin-left: 0;
+}
 
 .post-profile-field .content {
     text-align: justify
@@ -2332,16 +2340,22 @@ a:hover {
 }
 
 .profile-first-quote,
-.profile-second-quote {width: 90%;
-                       margin: var(--large) auto;
-                      font-family: var(--serif);
-                      font-style: italic;
-                      color: var(--dark-neutral)}
+.profile-second-quote {
+    width: 90%;
+    margin: var(--large) auto;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--dark-neutral)
+}
 
 .profile-first-quote .profile-field-label,
-.profile-second-quote .profile-field-label {display: none}
+.profile-second-quote .profile-field-label {
+    display: none
+}
 
-.profile-second-quote {text-align: right}
+.profile-second-quote {
+    text-align: right
+}
 
 [id^="field_id"],
 [id^="label_"] {
@@ -2876,7 +2890,7 @@ a:hover {
     letter-spacing: 1px;
     padding-left: 1px;
     font-weight: 300;
-    border-bottom: 0.5px solid var(--lighter-dark);
+    border-bottom: 0.5px solid var(--light-dark);
     padding-bottom: var(--2xsmall)
 }
 
@@ -2884,7 +2898,7 @@ a:hover {
     font-family: var(--display);
     text-transform: lowercase;
     background-color: var(--darker-light);
-    color: var(--lighter-dark);
+    color: var(--light-dark);
     padding: var(--4xsmall);
     letter-spacing: var(--4xsmall);
     padding-right: 0 !important
@@ -3071,7 +3085,10 @@ season {
     display: none
 }
 
-#newest-user span,
+#newest-user span {
+    color: var(--dark) !important
+}
+
 #newest-user span:hover {
     color: var(--lighter-dark) !important
 }
@@ -4370,7 +4387,7 @@ a.nav {
     background-clip: padding-box !important;
     border: 0 !important;
     border-radius: 0 !important;
-    color: var(--lighter-dark) !important;
+    color: var(--light-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     font-weight: 500 !important;
@@ -4435,7 +4452,7 @@ div.sceditor-group {
     background: var(--light) !important;
     border: 0 !important;
     border-top: 0.5 solid var(--lighter-neutral) !important;
-    color: var(--lighter-dark) !important;
+    color: var(--light-dark) !important;
     font-family: var(--main) !important;
     font-size: var(--medium) !important;
     padding: var(--large) !important;
@@ -4452,7 +4469,7 @@ div.sceditor-group {
 }
 
 .has-credit:hover::after {
-    content: "crédit: " attr(data-credit);
+    content: "crédit: "attr(data-credit);
     position: absolute;
     background: var(--light-dark);
     color: var(--light);
@@ -4684,8 +4701,8 @@ div.sceditor-group {
 }
 
 .profile-awards-block {
-height: 100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     min-height: 0;
     overflow: auto
 }
@@ -4737,7 +4754,7 @@ height: 100%;
     flex: 1;
     display: flex;
     gap: var(--large);
-        scrollbar-width: none;
+    scrollbar-width: none;
     min-height: 0;
     height: 100%;
     overflow: auto;
@@ -4745,9 +4762,11 @@ height: 100%;
 }
 
 .tab-content[data-tab="profile-character"] sep,
-.tab-content[data-tab="profile-settings"] sep {width: 100%;
-                                               height:0.5px;
-                                               background:var(--gradientgc4)}
+.tab-content[data-tab="profile-settings"] sep {
+    width: 100%;
+    height: 0.5px;
+    background: var(--gradientgc4)
+}
 
 #field_id-20 .field_uneditable {
     display: grid;

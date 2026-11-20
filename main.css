@@ -2322,7 +2322,6 @@ a:hover {
     font-family: var(--spe);
     font-size: var(--4xlarge);
     color: var(--group-color, var(--co1));
-    width: 50%;
     text-shadow: 1px 1px var(--group-color-100, var(--co1-100))
 }
 
@@ -2361,14 +2360,9 @@ a:hover {
 
 .profile-pseudo .prenom {
     font-size: var(--3xlarge);
-    letter-spacing: var(--4xsmall);
+    letter-spacing: var(--2xsmall);
     text-transform: uppercase;
-    text-align: left;
     margin-bottom: -1rem
-}
-
-.profile-pseudo .nom {
-    text-align: right
 }
 
 .profile-avatar img,

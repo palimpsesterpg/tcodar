@@ -2376,14 +2376,14 @@ a:hover {
 }
 
 .profile-pseudo div {
-    width: 100%
+    width: 100%;
+    text-align: center;
 }
 
 .profile-pseudo .prenom {
     font-size: var(--3xlarge);
     letter-spacing: var(--2xsmall);
-    text-transform: uppercase;
-    margin-bottom: -1rem
+    text-transform: uppercase
 }
 
 .profile-pseudo .nom {

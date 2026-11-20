@@ -50,6 +50,8 @@ const TAB_PROFILE = {
   'character-details': 'field_id2, field_id-5, field_id-2',
   '.tab-content[data-tab="profile-settings"] > div:nth-of-type(2)': 'field_id-11, field_id-20, field_id18',
   'player-details': 'field_id14, field_id12, field_id1',
+  'profile-first-quote': 'field_id21',
+  'profile-second-quote': 'field_id20',
   '.tab-content[data-tab="profile-extra"]': 'field_id19',
   '.tab-content[data-tab="profile-roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',

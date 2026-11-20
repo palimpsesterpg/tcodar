@@ -2353,8 +2353,8 @@ a:hover {
     display: none
 }
 
-.profile-first-quote:has(.profile-field-label) .blank-quote,
-.profile-second-quote:has(.profile-field-label) .blank-quote {
+.profile-first-quote .field_uneditable:empty .blank-quote,
+.profile-second-quote .field_uneditable:empty .blank-quote {
     display: none
 }
 

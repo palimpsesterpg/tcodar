@@ -4,9 +4,9 @@ const sep = () => document.createElement('sep');
 const ssep = () => document.createElement('ssep');
 
 const onReady = fn =>
-  document.readyState === 'loading'
-    ? document.addEventListener('DOMContentLoaded', fn)
-    : fn();
+  document.readyState === 'loading' ?
+  document.addEventListener('DOMContentLoaded', fn) :
+  fn();
 
 const getCharacters = () => (typeof CHARACTERS !== 'undefined' && CHARACTERS) || {};
 const getFamilies = () => (typeof FAMILIES !== 'undefined' && FAMILIES) || {};
@@ -73,31 +73,122 @@ const OVERVIEW_FIELDS = [
   ['status', 'Statut amoureux'],
 ];
 
-const ICONS = [
-  { selector: '.copyright a', icon: 'fi fi-ts-crown' },
-  { selector: 'a[href="#top"]', icon: 'fi fi-ts-angle-up' },
-  { selector: 'a[href="#bottom"]', icon: 'fi fi-ts-angle-down' },
-  { selector: 'img[src*="modernbb/arrow_right.png"]', icon: 'fi fi-ts-angle-right', replace: true },
-  { selector: 'img[src*="modernbb/arrow_left.png"]', icon: 'fi fi-ts-angle-left', replace: true },
-  { selector: '.sprite-icon_topic_newest, .sprite-icon_topic_latest', icon: 'fi fi-ts-sparkles', replace: true },
-  { selector: 'a.last-post-icon', icon: 'fi fi-ts-sparkles' },
-  { selector: '.topic-participate img', icon: 'fi fi-ss-star', replace: true },
-  { selector: '#i_icon_profile, .i_icon_profile', icon: 'fi fi-ts-user', replace: true },
-  { selector: '.memberlistmp img, .i_icon_pm, #i_icon_pm', icon: 'fi fi-ts-envelope', replace: true },
-  { selector: '#i_msg_inbox', icon: 'fi fi-ts-mailbox', replace: true },
-  { selector: '#i_msg_sentbox', icon: 'fi fi-ts-paper-plane-top', replace: true },
-  { selector: '#i_msg_outbox', icon: 'fi fi-ts-envelope', replace: true },
-  { selector: '#i_msg_savebox', icon: 'fi fi-ts-archive', replace: true },
-  { selector: 'img[src*="folder_new.gif"]', icon: 'fi fi-ts-exclamation', replace: true },
-  { selector: 'img[src*="icon_contact_www.png"]', icon: 'fi fi-ts-info-guide', replace: true },
-  { selector: 'img[src*="icon_contact_fb.png"]', icon: 'fi fi-ts-file-user', replace: true },
-  { selector: 'img[src*="icon_contact_pinterest.png"]', icon: 'fi fi-ts-images', replace: true },
-  { selector: '.topic-admin a[href*="/modcp?mode=delete"] img', icon: 'fi fi-ts-trash', replace: true },
-  { selector: '.topic-admin a[href*="/modcp?mode=move"] img', icon: 'fi fi-ts-expand-arrows-alt', replace: true },
-  { selector: '.topic-admin a[href*="/modcp?mode=lock"] img', icon: 'fi fi-ts-lock', replace: true },
-  { selector: '.topic-admin a[href*="/modcp?mode=unlock"] img', icon: 'fi fi-ts-lock-open-alt', replace: true },
-  { selector: '.topic-admin a[href*="/modcp?mode=split"] img', icon: 'fi fi-ts-split', replace: true },
-  { selector: '.topic-admin a[href*="/merge"] img', icon: 'fi fi-ts-code-merge', replace: true },
+const ICONS = [{
+    selector: '.copyright a',
+    icon: 'fi fi-ts-crown'
+  },
+  {
+    selector: 'a[href="#top"]',
+    icon: 'fi fi-ts-angle-up'
+  },
+  {
+    selector: 'a[href="#bottom"]',
+    icon: 'fi fi-ts-angle-down'
+  },
+  {
+    selector: 'img[src*="modernbb/arrow_right.png"]',
+    icon: 'fi fi-ts-angle-right',
+    replace: true
+  },
+  {
+    selector: 'img[src*="modernbb/arrow_left.png"]',
+    icon: 'fi fi-ts-angle-left',
+    replace: true
+  },
+  {
+    selector: '.sprite-icon_topic_newest, .sprite-icon_topic_latest',
+    icon: 'fi fi-ts-sparkles',
+    replace: true
+  },
+  {
+    selector: 'a.last-post-icon',
+    icon: 'fi fi-ts-sparkles'
+  },
+  {
+    selector: '.topic-participate img',
+    icon: 'fi fi-ss-star',
+    replace: true
+  },
+  {
+    selector: '#i_icon_profile, .i_icon_profile',
+    icon: 'fi fi-ts-user',
+    replace: true
+  },
+  {
+    selector: '.memberlistmp img, .i_icon_pm, #i_icon_pm',
+    icon: 'fi fi-ts-envelope',
+    replace: true
+  },
+  {
+    selector: '#i_msg_inbox',
+    icon: 'fi fi-ts-mailbox',
+    replace: true
+  },
+  {
+    selector: '#i_msg_sentbox',
+    icon: 'fi fi-ts-paper-plane-top',
+    replace: true
+  },
+  {
+    selector: '#i_msg_outbox',
+    icon: 'fi fi-ts-envelope',
+    replace: true
+  },
+  {
+    selector: '#i_msg_savebox',
+    icon: 'fi fi-ts-archive',
+    replace: true
+  },
+  {
+    selector: 'img[src*="folder_new.gif"]',
+    icon: 'fi fi-ts-exclamation',
+    replace: true
+  },
+  {
+    selector: 'img[src*="icon_contact_www.png"]',
+    icon: 'fi fi-ts-info-guide',
+    replace: true
+  },
+  {
+    selector: 'img[src*="icon_contact_fb.png"]',
+    icon: 'fi fi-ts-file-user',
+    replace: true
+  },
+  {
+    selector: 'img[src*="icon_contact_pinterest.png"]',
+    icon: 'fi fi-ts-images',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/modcp?mode=delete"] img',
+    icon: 'fi fi-ts-trash',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/modcp?mode=move"] img',
+    icon: 'fi fi-ts-expand-arrows-alt',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/modcp?mode=lock"] img',
+    icon: 'fi fi-ts-lock',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/modcp?mode=unlock"] img',
+    icon: 'fi fi-ts-lock-open-alt',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/modcp?mode=split"] img',
+    icon: 'fi fi-ts-split',
+    replace: true
+  },
+  {
+    selector: '.topic-admin a[href*="/merge"] img',
+    icon: 'fi fi-ts-code-merge',
+    replace: true
+  },
 ];
 
 const COPY_ICONS = {
@@ -238,12 +329,42 @@ const SEASON_LABELS = {
 };
 
 const CLIMATES = {
-  london: { winter: [5, 12], spring: [7, 21], summer: [15, 20], autumn: [5, 16] },
-  sydney: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  rio: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  singapore: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  marrakech: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
-  newyork: { winter: [8, 17], spring: [12, 23], summer: [19, 27], autumn: [14, 24] },
+  london: {
+    winter: [5, 12],
+    spring: [7, 21],
+    summer: [15, 20],
+    autumn: [5, 16]
+  },
+  sydney: {
+    winter: [8, 17],
+    spring: [12, 23],
+    summer: [19, 27],
+    autumn: [14, 24]
+  },
+  rio: {
+    winter: [8, 17],
+    spring: [12, 23],
+    summer: [19, 27],
+    autumn: [14, 24]
+  },
+  singapore: {
+    winter: [8, 17],
+    spring: [12, 23],
+    summer: [19, 27],
+    autumn: [14, 24]
+  },
+  marrakech: {
+    winter: [8, 17],
+    spring: [12, 23],
+    summer: [19, 27],
+    autumn: [14, 24]
+  },
+  newyork: {
+    winter: [8, 17],
+    spring: [12, 23],
+    summer: [19, 27],
+    autumn: [14, 24]
+  },
 };
 
 const FORUM_TAB_CLASSES = {
@@ -272,7 +393,10 @@ const slugCache = new Map();
 const fieldSpan = f => `<span data-field="${f}"></span>`;
 
 const createDiv = (className, text) =>
-  Object.assign(document.createElement('div'), { className, textContent: text });
+  Object.assign(document.createElement('div'), {
+    className,
+    textContent: text
+  });
 
 const strongEl = text => {
   const el = document.createElement('strong');
@@ -282,17 +406,17 @@ const strongEl = text => {
 
 const own = (system, selector) =>
   qq(selector, system).filter(
-    el => el.parentElement?.closest('.tabsystem, .tabinline') === system
+    el => el.parentElement ?.closest('.tabsystem, .tabinline') === system
   );
 
 const toCharacterKey = name =>
   name
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .split(/[^a-zA-Z0-9]+/)
-    .filter(Boolean)
-    .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
-    .join('');
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .split(/[^a-zA-Z0-9]+/)
+  .filter(Boolean)
+  .map((w, i) => (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
+  .join('');
 
 const getLinkName = link => {
   const parts = qq('.prenom, .nom', link);
@@ -309,7 +433,7 @@ const editHtml = (selector, ...replacers) =>
 
 const isMention = el => Boolean(el.closest('.mentiontag'));
 const hasMentionNear = el =>
-  isMention(el) || Boolean(el.parentElement?.querySelector(':scope > .mentiontag'));
+  isMention(el) || Boolean(el.parentElement ?.querySelector(':scope > .mentiontag'));
 
 const isProfileLink = link =>
   link.origin === location.origin && PROFILE_PATH.test(link.pathname);
@@ -319,12 +443,12 @@ function slugify(text) {
     slugCache.set(
       text,
       text
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, '')
-        .replace(/^-+|-+$/g, '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '')
+      .replace(/^-+|-+$/g, '')
     );
   }
   return slugCache.get(text);
@@ -355,7 +479,10 @@ function getFormatter(cache, options, timeZone) {
   if (!cache.has(timeZone)) {
     let formatter;
     try {
-      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, { ...options, timeZone });
+      formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, {
+        ...options,
+        timeZone
+      });
     } catch {
       formatter = new Intl.DateTimeFormat(CLOCK_LOCALE, options);
     }
@@ -365,10 +492,16 @@ function getFormatter(cache, options, timeZone) {
 }
 
 const getClockFormatter = timeZone =>
-  getFormatter(clockFormatters, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }, timeZone);
+  getFormatter(clockFormatters, {
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  }, timeZone);
 
 const getMonthFormatter = timeZone =>
-  getFormatter(monthFormatters, { month: 'numeric' }, timeZone);
+  getFormatter(monthFormatters, {
+    month: 'numeric'
+  }, timeZone);
 
 function getSeason(now, timeZone, hemisphere) {
   const month = Number(getMonthFormatter(timeZone).format(now)) - 1;
@@ -402,15 +535,15 @@ function fetchProfileDoc(href) {
     profileDocs.set(
       url,
       fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error(response.status);
-          return response.text();
-        })
-        .then(html => new DOMParser().parseFromString(html, 'text/html'))
-        .catch(() => {
-          profileDocs.delete(url);
-          return null;
-        })
+      .then(response => {
+        if (!response.ok) throw new Error(response.status);
+        return response.text();
+      })
+      .then(html => new DOMParser().parseFromString(html, 'text/html'))
+      .catch(() => {
+        profileDocs.delete(url);
+        return null;
+      })
     );
   }
   return profileDocs.get(url);
@@ -438,7 +571,10 @@ function observeBody() {
       removeAdBlock();
       markProfileLinks();
     });
-  }).observe(document.body, { childList: true, subtree: true });
+  }).observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 }
 
 function applyColorScheme() {
@@ -473,7 +609,11 @@ function initColorScheme() {
 }
 
 function applyIcons(map, root = document) {
-  map.forEach(({ selector, icon, replace }) => {
+  map.forEach(({
+    selector,
+    icon,
+    replace
+  }) => {
     const html = `<i class="${icon}"></i>`;
 
     qq(selector, root).forEach(el => {
@@ -520,7 +660,7 @@ function removeSpacers() {
 function replaceBreadcrumbSeparators() {
   qq('.topic-header-path').forEach(path => {
     [...path.childNodes]
-      .filter(node => node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('::'))
+    .filter(node => node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('::'))
       .forEach(node => {
         const parts = node.nodeValue.split('\u00A0::\u00A0');
         if (parts.length < 2) return;
@@ -565,6 +705,16 @@ function applyOtherLabels() {
   });
 }
 
+function markEmptyFields() {
+  qq('[id^="field_id"]').forEach(field => {
+    const content = q('.field_uneditable', field);
+    if (!content) return;
+
+    const empty = !content.textContent.replace(/[\s-]/g, '') && !q('img, svg, i', content);
+    field.classList.toggle('empty', empty);
+  });
+}
+
 function trimProfileLabels() {
   qq('.profile-field-label').forEach(label => {
     label.textContent = label.textContent.replace(/[\s*:]+$/, '');
@@ -603,7 +753,7 @@ function moveAdminLinks() {
 
 function addQueendomTab() {
   if (!isAdmin()) return;
-  q('#categories .tabsystem-tabs.off')?.insertAdjacentHTML(
+  q('#categories .tabsystem-tabs.off') ?.insertAdjacentHTML(
     'beforeend',
     '<div class="tab" data-tab="c11"><span>queendom</span></div>'
   );
@@ -629,16 +779,16 @@ function addTranslateButton() {
 
     btn.addEventListener('click', () => {
       const container = fahide.closest('.sceditor-container');
-      const textarea = container?.nextElementSibling?.matches('textarea')
-        ? container.nextElementSibling
-        : document.getElementById('text_editor_textarea');
+      const textarea = container ?.nextElementSibling ?.matches('textarea') ?
+        container.nextElementSibling :
+        document.getElementById('text_editor_textarea');
       if (!textarea) return;
 
       const instance =
-        window.sceditor?.instance?.(textarea) ??
-        window.jQuery?.(textarea).sceditor?.('instance');
+        window.sceditor ?.instance ?.(textarea) ??
+        window.jQuery ?.(textarea).sceditor ?.('instance');
 
-      instance?.insertText(
+      instance ?.insertText(
         '<span class="trad"><vo>texte en vo</vo><vf>texte en fr</vf></span>'
       );
     });
@@ -701,8 +851,8 @@ function initHeaderNav() {
 
     headerTab.addEventListener('click', () => {
       const key = CSS.escape(headerTab.id);
-      q(`.tab[data-tab="${key}"]`, categories)?.click();
-      q(`.category[data-tab="${key}"]`, categories)?.scrollIntoView({
+      q(`.tab[data-tab="${key}"]`, categories) ?.click();
+      q(`.category[data-tab="${key}"]`, categories) ?.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
@@ -726,7 +876,7 @@ function initCategoriesToggle() {
 
 function initBlockToggles() {
   document.addEventListener('click', e => {
-    e.target.closest('.title-toggle')?.closest('.bloc-toggle')?.classList.toggle('open');
+    e.target.closest('.title-toggle') ?.closest('.bloc-toggle') ?.classList.toggle('open');
   });
 }
 
@@ -736,7 +886,7 @@ function initAdminPanels() {
 
   document.addEventListener('click', e => {
     if (e.target.closest('.admin-close')) {
-      e.target.closest('.admin-modal')?.classList.remove('open');
+      e.target.closest('.admin-modal') ?.classList.remove('open');
       overlay.remove();
       return;
     }
@@ -770,14 +920,27 @@ function initClockWall() {
       hemisphere: city.dataset.hemisphere,
       climate: CLIMATES[city.dataset.climate],
     }))
-    .filter(({ hour, min }) => hour && min);
+    .filter(({
+      hour,
+      min
+    }) => hour && min);
 
   if (!cities.length) return;
 
   const update = () => {
     const now = new Date();
 
-    cities.forEach(({ city, hour, min, season, tempMin, tempMax, timeZone, hemisphere, climate }) => {
+    cities.forEach(({
+      city,
+      hour,
+      min,
+      season,
+      tempMin,
+      tempMax,
+      timeZone,
+      hemisphere,
+      climate
+    }) => {
       [hour.textContent, min.textContent] = getClockFormatter(timeZone).format(now).split(':');
 
       const current = getSeason(now, timeZone, hemisphere);
@@ -786,7 +949,7 @@ function initClockWall() {
       city.dataset.season = current;
       if (season) season.textContent = SEASON_LABELS[current];
 
-      const range = climate?.[current];
+      const range = climate ?. [current];
       if (tempMin && range) tempMin.textContent = `${range[0]}°`;
       if (tempMax && range) tempMax.textContent = `${range[1]}°`;
     });
@@ -802,9 +965,9 @@ function applyGroupClasses(container, sourceSelector = '[class*="group-"]') {
   const source = q(sourceSelector, container);
   if (!source) return;
 
-  const skip = container.matches('.boxlien')
-    ? isMention(container)
-    : isMention(container) || hasMentionNear(source);
+  const skip = container.matches('.boxlien') ?
+    isMention(container) :
+    isMention(container) || hasMentionNear(source);
   if (skip) return;
 
   const groupClasses = [...source.classList].filter(cls => cls.startsWith('group-'));
@@ -813,26 +976,35 @@ function applyGroupClasses(container, sourceSelector = '[class*="group-"]') {
 
 function observeGroupContainers() {
   new MutationObserver(mutations => {
-    for (const { addedNodes } of mutations) {
+    for (const {
+        addedNodes
+      } of mutations) {
       for (const node of addedNodes) {
         if (node.nodeType !== 1 || !node.classList.contains('tooltipster-base')) continue;
         applyGroupClasses(q('.tooltipster-content', node));
       }
     }
-  }).observe(document.body, { childList: true });
+  }).observe(document.body, {
+    childList: true
+  });
 
   const panel = q('#notiffi_panel');
   if (!panel) return;
 
   new MutationObserver(mutations => {
-    for (const { addedNodes } of mutations) {
+    for (const {
+        addedNodes
+      } of mutations) {
       for (const node of addedNodes) {
         if (node.nodeType !== 1) continue;
         if (node.matches('.notification')) applyGroupClasses(node);
         qq('.notification', node).forEach(el => applyGroupClasses(el));
       }
     }
-  }).observe(panel, { childList: true, subtree: true });
+  }).observe(panel, {
+    childList: true,
+    subtree: true
+  });
 }
 
 function initGroupClasses() {
@@ -850,7 +1022,7 @@ function setFieldValue(el, field, value) {
   const textNodes = [...el.childNodes].filter(node => node.nodeType === Node.TEXT_NODE);
 
   if (field === 'img') {
-    q(':scope > img', el)?.remove();
+    q(':scope > img', el) ?.remove();
     textNodes.forEach(node => node.remove());
 
     if (value) {
@@ -898,7 +1070,7 @@ function fillCard(root, data, index) {
 
   const fam = String(data.id ?? '');
   qq('.tab-content[data-tab="tree"] .node', root).forEach((node, i) => {
-    q(':scope > .node-num', node)?.remove();
+    q(':scope > .node-num', node) ?.remove();
     node.dataset.id = i + 1;
     node.insertAdjacentHTML('afterbegin', `<span class="node-num">${fam}${i + 1}.</span>`);
   });
@@ -912,14 +1084,17 @@ function fillAllCards() {
     .filter(el => !el.matches('.fam-row.bloc-toggle'))
     .forEach(el => {
       const data = families[el.dataset.family];
-      if (data) fillCard(el, { ...families.default, ...data });
+      if (data) fillCard(el, {
+        ...families.default,
+        ...data
+      });
     });
 
   qq('[data-character]').forEach(el => fillCard(el, characters[el.dataset.character]));
 }
 
 function buildRow(el) {
-  const tab = el.closest('.tab-content')?.dataset.tab;
+  const tab = el.closest('.tab-content') ?.dataset.tab;
   const data = getCharacters()[el.dataset.character];
   if (!TAB_FIELDS[tab] || !data) return;
 
@@ -933,15 +1108,22 @@ function buildFamilyRow(el) {
     `<div class="content-toggle">${FAMILY_FIELDS_HIDDEN.map(fieldSpan).join('')}</div>`;
 
   const families = getFamilies();
-  const data = { ...families.default, ...families[el.dataset.family] };
+  const data = {
+    ...families.default,
+    ...families[el.dataset.family]
+  };
   const [city1, city2] = Object.values(data.cities ?? {});
 
-  fillCard(el, { ...data, city1, city2 });
+  fillCard(el, {
+    ...data,
+    city1,
+    city2
+  });
 }
 
 function setCharacterKeys(selector, nameSelector) {
   qq(selector).forEach(el => {
-    const name = q(nameSelector, el)?.textContent.trim();
+    const name = q(nameSelector, el) ?.textContent.trim();
     if (name) el.dataset.character = toCharacterKey(name);
   });
 }
@@ -968,10 +1150,10 @@ function prefixPseudos() {
   qq('.list-row [data-field="pseudo"]').forEach(el => {
     if (q('a.mentiontag', el)) return;
 
-    const data = characters[el.closest('.list-row')?.dataset.character];
+    const data = characters[el.closest('.list-row') ?.dataset.character];
     const name = el.textContent.trim();
 
-    if (!data?.id) {
+    if (!data ?.id) {
       el.textContent = `@${name}`;
       return;
     }
@@ -995,7 +1177,7 @@ function sortListRows() {
     groups.get(parent).push(row);
   });
 
-  const key = row => (q(':scope > span', row)?.textContent ?? '').trim();
+  const key = row => (q(':scope > span', row) ?.textContent ?? '').trim();
 
   groups.forEach(rows => {
     const markers = rows.map(row => {
@@ -1005,7 +1187,9 @@ function sortListRows() {
     });
 
     const sorted = [...rows].sort((a, b) =>
-      key(a).localeCompare(key(b), 'fr', { sensitivity: 'base' })
+      key(a).localeCompare(key(b), 'fr', {
+        sensitivity: 'base'
+      })
     );
 
     markers.forEach((m, i) => m.replaceWith(sorted[i]));
@@ -1016,7 +1200,7 @@ function groupPlayers() {
   const parents = new Map();
 
   qq('.list-row[data-character]').forEach(row => {
-    const name = q(':scope > [data-field^="player"]', row)?.textContent.trim().toLowerCase();
+    const name = q(':scope > [data-field^="player"]', row) ?.textContent.trim().toLowerCase();
     if (!name) return;
 
     if (!parents.has(row.parentElement)) parents.set(row.parentElement, new Map());
@@ -1083,9 +1267,9 @@ function transformDiceMessage(el) {
 
   const hr = q(':scope > hr', el);
   const [player, action] = qq(':scope > strong', el);
-  if (!hr || !player || action?.textContent.trim() !== 'Lancer de dés') return;
+  if (!hr || !player || action ?.textContent.trim() !== 'Lancer de dés') return;
 
-  const type = hr.nextSibling?.textContent.match(/'([^']*)'/)?.[1].trim().toLowerCase() ?? '';
+  const type = hr.nextSibling ?.textContent.match(/'([^']*)'/) ?. [1].trim().toLowerCase() ?? '';
   const rules = DICE_RULES[type];
 
   const dice = [];
@@ -1147,7 +1331,7 @@ function initCodeBoxes() {
       if (btn.classList.contains('copied')) return;
 
       const clone = code.cloneNode(true);
-      q('.copy-code', clone)?.remove();
+      q('.copy-code', clone) ?.remove();
 
       if (!(await copyText(clone.textContent))) return;
 
@@ -1183,7 +1367,7 @@ function buildCount(count, label) {
 }
 
 async function loadNewestUserAvatar() {
-  const href = q('#newest-user a[href^="/u"]')?.getAttribute('href');
+  const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
   const target = q('#newest-user-avatar');
   if (!href || !target) return;
 
@@ -1193,7 +1377,7 @@ async function loadNewestUserAvatar() {
 }
 
 function initBoardStats() {
-  q('#logged-in-user-list div br')?.remove();
+  q('#logged-in-user-list div br') ?.remove();
 
   editHtml('#logged-in-user-list', [/Utilisateurs enregistrés\s*:\s*/i, '']);
   editHtml('#total-posts', [/^Nos membres ont posté un total de\s*/i, '']);
@@ -1211,7 +1395,7 @@ function initBoardStats() {
 
   if (online && hub) {
     const text = online.textContent.replace(/\d+\s*Invisible\s*,?\s*/g, '');
-    const count = pattern => parseInt(text.match(pattern)?.[1], 10) || 0;
+    const count = pattern => parseInt(text.match(pattern) ?. [1], 10) || 0;
 
     hub.append(
       buildCount(count(/Il y a en tout (\d+)/), 'connecté.e'),
@@ -1219,7 +1403,7 @@ function initBoardStats() {
       buildCount(count(/(\d+)\s*Invité/), 'invité.e')
     );
   }
-  online?.remove();
+  online ?.remove();
 
   editHtml('#l-connected-members, #logged-in-user-list', [/,\s+/g, ' · ']);
 }
@@ -1228,16 +1412,16 @@ function initPageContext() {
   const page = q('#page-content');
   if (!page) return;
 
-  const forumHref = qq('.topic-header-path a.nav', page).at(-1)?.href ?? '';
-  const forumId = forumHref.match(/\/f(\d+)/)?.[1];
+  const forumHref = qq('.topic-header-path a.nav', page).at(-1) ?.href ?? '';
+  const forumId = forumHref.match(/\/f(\d+)/) ?. [1];
 
   const titleEl = q('.page-title', page);
   const titleHref =
-    titleEl?.href ??
-    titleEl?.querySelector('a')?.href ??
-    titleEl?.closest('a')?.href ??
+    titleEl ?.href ??
+    titleEl ?.querySelector('a') ?.href ??
+    titleEl ?.closest('a') ?.href ??
     '';
-  const topicId = titleHref.match(/\/t(\d+)/)?.[1];
+  const topicId = titleHref.match(/\/t(\d+)/) ?. [1];
 
   const topiclist = q('.topiclist', page);
   const postlist = q('.postlist', page);
@@ -1254,8 +1438,8 @@ function initPageContext() {
     qq('.post-header, .post-profile', postlist).forEach(el => el.classList.add('d-none'));
 
     const tabsPost = document.getElementById('340');
-    tabsPost?.classList.add('tabsystem-tabs');
-    tabsPost?.classList.remove('tab-content');
+    tabsPost ?.classList.add('tabsystem-tabs');
+    tabsPost ?.classList.remove('tab-content');
 
     const tabIds = {
       675: 'faces',
@@ -1270,7 +1454,7 @@ function initPageContext() {
       const post = document.getElementById(id);
       if (!post) return;
       post.dataset.tab = tab;
-      q('.message', post)?.classList.add('listings-table');
+      q('.message', post) ?.classList.add('listings-table');
     });
   }
 
@@ -1280,7 +1464,7 @@ function initPageContext() {
 }
 
 function initTitles() {
-  const pageTitle = q('.page-title')?.textContent;
+  const pageTitle = q('.page-title') ?.textContent;
 
   if (pageTitle) {
     qq('.fc-main-title-main, .fc-second-title-main').forEach(el => (el.textContent = pageTitle));
@@ -1330,7 +1514,7 @@ function initForumList() {
     if (!list) return;
 
     forum.addEventListener('mouseenter', () => {
-      const src = q('.forum-description img', forum)?.getAttribute('src');
+      const src = q('.forum-description img', forum) ?.getAttribute('src');
       if (src) list.style.setProperty('--forum-bg', `url("${src}")`);
     });
 
@@ -1348,7 +1532,10 @@ function initForumPreviews() {
 
     const show = forum => {
       const img = forum && q('.forum-description img', forum);
-      if (img) Object.assign(preview, { src: img.src, alt: img.alt });
+      if (img) Object.assign(preview, {
+        src: img.src,
+        alt: img.alt
+      });
     };
 
     show(q('.forum-loc', list));
@@ -1359,7 +1546,7 @@ function initForumPreviews() {
 
 function buildOverview(link, sourceHead) {
   const key = toCharacterKey(getLinkName(link));
-  const userId = link.pathname.match(PROFILE_PATH)?.[1];
+  const userId = link.pathname.match(PROFILE_PATH) ?. [1];
   const head = document.importNode(sourceHead, true);
 
   const profile = document.createElement('a');
@@ -1368,9 +1555,9 @@ function buildOverview(link, sourceHead) {
   profile.rel = 'noopener';
   profile.textContent = 'profil';
 
-  q('.profile-statistics', head)?.append(profile);
+  q('.profile-statistics', head) ?.append(profile);
 
-  q('.profile-details', head)?.append(
+  q('.profile-details', head) ?.append(
     ...OVERVIEW_FIELDS.map(([field, text, className = '']) => {
       const div = createDiv(className, text);
       div.dataset.field = field;
@@ -1381,7 +1568,7 @@ function buildOverview(link, sourceHead) {
   fillCard(head, getCharacters()[key]);
 
   const overview = document.createElement('div');
-  overview.classList.add('profile', 'overview', ...(sourceHead.closest('.profile')?.classList ?? []));
+  overview.classList.add('profile', 'overview', ...(sourceHead.closest('.profile') ?.classList ?? []));
   overview.dataset.character = key;
   if (userId) overview.id = `u${userId}`;
   overview.append(head);
@@ -1410,7 +1597,7 @@ function initProfileOverview() {
 
   const close = () => {
     requestId++;
-    overview?.remove();
+    overview ?.remove();
     overlay.remove();
     overview = null;
   };
@@ -1522,6 +1709,7 @@ onReady(() => {
   initProfileLabels();
   applyOtherLabels();
   trimProfileLabels();
+  markEmptyFields();
   organizeProfileElements();
   addContactSpans();
   initTabs();

@@ -1367,13 +1367,13 @@ function buildCount(count, label) {
 }
 
 async function loadNewestUserAvatar() {
-  const href = q('#newest-user a[href^="/u"]') ?.getAttribute('href');
+  const href = q('#newest-user a[href^="/u"]')?.getAttribute('href');
   const target = q('#newest-user-avatar');
   if (!href || !target) return;
 
   const doc = await fetchProfileDoc(href);
   const avatar = doc && q('.profile-avatar img', doc);
-  if (avatar) target.replaceChildren(avatar);
+  if (avatar) target.replaceChildren(document.importNode(avatar, true));
 }
 
 function initBoardStats() {

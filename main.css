@@ -2458,7 +2458,7 @@ a:hover {
     filter: grayscale(1)
 }
 
-.profile::before {
+.profile-avatar::before {
     content: "\ef57";
     font-family: var(--icons-thin);
     font-size: var(--large);
@@ -2477,7 +2477,7 @@ a:hover {
     justify-content: center
 }
 
-.profile.en.ligne::before {
+.profile.en.ligne .profile-avatar::before {
     content: "\e974";
     background-color: var(--group-color, var(--co1));
     color: var(--light)
@@ -2495,7 +2495,8 @@ a:hover {
 }
 
 .profile-avatar {
-    grid-area: 1 / 1 / 5 / 2
+    grid-area: 1 / 1 / 5 / 2;
+    position: relative
 }
 
 .profile-contact {
@@ -4579,7 +4580,7 @@ div.sceditor-group {
 
 #hub a.cam strong::before,
 .member a.cam span::before,
-.profile.cam::before {
+.cam .profile-avatar::before {
     content: "\e1d5" !important;
     font-family: var(--icons-thin)
 }

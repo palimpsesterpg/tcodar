@@ -257,37 +257,37 @@
     --group-color-300: color-mix(in srgb, var(--group-color) 60%, white);
     --group-color-400: color-mix(in srgb, var(--group-color) 80%, white);
 
-      --group-invert-100: color-mix(in srgb, var(--group-invert) 20%, white);
-  --group-invert-200: color-mix(in srgb, var(--group-invert) 40%, white);
-  --group-invert-300: color-mix(in srgb, var(--group-invert) 60%, white);
-  --group-invert-400: color-mix(in srgb, var(--group-invert) 80%, white);
+    --group-invert-100: color-mix(in srgb, var(--group-invert) 20%, white);
+    --group-invert-200: color-mix(in srgb, var(--group-invert) 40%, white);
+    --group-invert-300: color-mix(in srgb, var(--group-invert) 60%, white);
+    --group-invert-400: color-mix(in srgb, var(--group-invert) 80%, white);
 
     --group-color-600: color-mix(in srgb, var(--group-color) 80%, black);
     --group-color-700: color-mix(in srgb, var(--group-color) 60%, black);
     --group-color-800: color-mix(in srgb, var(--group-color) 40%, black);
     --group-color-900: color-mix(in srgb, var(--group-color) 20%, black);
 
-      --group-invert-600: color-mix(in srgb, var(--group-invert) 80%, black);
-  --group-invert-700: color-mix(in srgb, var(--group-invert) 60%, black);
-  --group-invert-800: color-mix(in srgb, var(--group-invert) 40%, black);
-  --group-invert-900: color-mix(in srgb, var(--group-invert) 20%, black);
+    --group-invert-600: color-mix(in srgb, var(--group-invert) 80%, black);
+    --group-invert-700: color-mix(in srgb, var(--group-invert) 60%, black);
+    --group-invert-800: color-mix(in srgb, var(--group-invert) 40%, black);
+    --group-invert-900: color-mix(in srgb, var(--group-invert) 20%, black);
 
     --group-color-op25: color-mix(in srgb, var(--group-color) 25%, transparent);
     --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
     --group-color-op75: color-mix(in srgb, var(--group-color) 75%, transparent);
     --group-color-op90: color-mix(in srgb, var(--group-color) 90%, transparent);
 
-      --group-invert-op25: color-mix(in srgb, var(--group-invert) 25%, transparent);
-  --group-invert-op50: color-mix(in srgb, var(--group-invert) 50%, transparent);
-  --group-invert-op75: color-mix(in srgb, var(--group-invert) 75%, transparent);
-  --group-invert-op90: color-mix(in srgb, var(--group-invert) 90%, transparent);
+    --group-invert-op25: color-mix(in srgb, var(--group-invert) 25%, transparent);
+    --group-invert-op50: color-mix(in srgb, var(--group-invert) 50%, transparent);
+    --group-invert-op75: color-mix(in srgb, var(--group-invert) 75%, transparent);
+    --group-invert-op90: color-mix(in srgb, var(--group-invert) 90%, transparent);
 
     --gradientgc1: linear-gradient(to right, var(--group-color-400), var(--group-color-600), var(--group-color-400));
     --gradientgc2: linear-gradient(to right, var(--group-color-200), var(--group-color-400), var(--group-color-200));
     --gradientgc3: linear-gradient(transparent, var(--group-color));
     --gradientgc4: linear-gradient(to right, transparent, var(--group-color-100), transparent);
 
-        --gradientgi1: linear-gradient(to right, var(--group-invert-400), var(--group-invert-600), var(--group-invert-400));
+    --gradientgi1: linear-gradient(to right, var(--group-invert-400), var(--group-invert-600), var(--group-invert-400));
     --gradientgi2: linear-gradient(to right, var(--group-invert-200), var(--group-invert-400), var(--group-invert-200));
     --gradientgi3: linear-gradient(transparent, var(--group-invert));
     --gradientgi4: linear-gradient(to right, transparent, var(--group-invert-100), transparent);
@@ -301,7 +301,7 @@
     --fam-color-200: color-mix(in srgb, var(--fam-color) 40%, white);
     --fam-color-300: color-mix(in srgb, var(--fam-color) 60%, white);
     --fam-color-400: color-mix(in srgb, var(--fam-color) 80%, white);
-    
+
     --fam-color-600: color-mix(in srgb, var(--fam-color) 80%, black);
     --fam-color-700: color-mix(in srgb, var(--fam-color) 60%, black);
     --fam-color-800: color-mix(in srgb, var(--fam-color) 40%, black);
@@ -314,38 +314,38 @@
 }
 
 [data-color-scheme="dark"] :is([class^="group-"], [class*=" group-"], .carmine, .bronze, .saffron, .emerald, .majorelle, .heliotrope) {
-  --group-color: color-mix(in srgb, var(--group-base) 80%, white);
-  --group-invert: oklch(from var(--group-color) l c calc(h + 180));
+    --group-color: color-mix(in srgb, var(--group-base) 80%, white);
+    --group-invert: oklch(from var(--group-color) l c calc(h + 180));
 
-  --group-color-100: color-mix(in srgb, var(--group-color) 20%, black);
-  --group-color-200: color-mix(in srgb, var(--group-color) 40%, black);
-  --group-color-300: color-mix(in srgb, var(--group-color) 60%, black);
-  --group-color-400: var(--group-base);
+    --group-color-100: color-mix(in srgb, var(--group-color) 20%, black);
+    --group-color-200: color-mix(in srgb, var(--group-color) 40%, black);
+    --group-color-300: color-mix(in srgb, var(--group-color) 60%, black);
+    --group-color-400: var(--group-base);
 
-  --group-invert-100: color-mix(in srgb, var(--group-invert) 20%, black);
-  --group-invert-200: color-mix(in srgb, var(--group-invert) 40%, black);
-  --group-invert-300: color-mix(in srgb, var(--group-invert) 60%, black);
-  --group-invert-400: var(--group-invert);
+    --group-invert-100: color-mix(in srgb, var(--group-invert) 20%, black);
+    --group-invert-200: color-mix(in srgb, var(--group-invert) 40%, black);
+    --group-invert-300: color-mix(in srgb, var(--group-invert) 60%, black);
+    --group-invert-400: var(--group-invert);
 
-  --group-color-600: color-mix(in srgb, var(--group-color) 80%, white);
-  --group-color-700: color-mix(in srgb, var(--group-color) 60%, white);
-  --group-color-800: color-mix(in srgb, var(--group-color) 40%, white);
-  --group-color-900: color-mix(in srgb, var(--group-color) 20%, white);
+    --group-color-600: color-mix(in srgb, var(--group-color) 80%, white);
+    --group-color-700: color-mix(in srgb, var(--group-color) 60%, white);
+    --group-color-800: color-mix(in srgb, var(--group-color) 40%, white);
+    --group-color-900: color-mix(in srgb, var(--group-color) 20%, white);
 
-  --group-invert-600: color-mix(in srgb, var(--group-invert) 80%, white);
-  --group-invert-700: color-mix(in srgb, var(--group-invert) 60%, white);
-  --group-invert-800: color-mix(in srgb, var(--group-invert) 40%, white);
-  --group-invert-900: color-mix(in srgb, var(--group-invert) 20%, white);
+    --group-invert-600: color-mix(in srgb, var(--group-invert) 80%, white);
+    --group-invert-700: color-mix(in srgb, var(--group-invert) 60%, white);
+    --group-invert-800: color-mix(in srgb, var(--group-invert) 40%, white);
+    --group-invert-900: color-mix(in srgb, var(--group-invert) 20%, white);
 
-  --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
-  --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
-  --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
-  --group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent);
+    --group-color-op25: color-mix(in srgb, var(--group-color) 75%, transparent);
+    --group-color-op50: color-mix(in srgb, var(--group-color) 50%, transparent);
+    --group-color-op75: color-mix(in srgb, var(--group-color) 25%, transparent);
+    --group-color-op90: color-mix(in srgb, var(--group-color) 10%, transparent);
 
-  --group-invert-op25: color-mix(in srgb, var(--group-invert) 75%, transparent);
-  --group-invert-op50: color-mix(in srgb, var(--group-invert) 50%, transparent);
-  --group-invert-op75: color-mix(in srgb, var(--group-invert) 25%, transparent);
-  --group-invert-op90: color-mix(in srgb, var(--group-invert) 10%, transparent);
+    --group-invert-op25: color-mix(in srgb, var(--group-invert) 75%, transparent);
+    --group-invert-op50: color-mix(in srgb, var(--group-invert) 50%, transparent);
+    --group-invert-op75: color-mix(in srgb, var(--group-invert) 25%, transparent);
+    --group-invert-op90: color-mix(in srgb, var(--group-invert) 10%, transparent)
 }
 
 [data-color-scheme="dark"] :is(.family, .corporation, .fam-row) {
@@ -2218,11 +2218,13 @@ a:hover {
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
-        transition: var(--ease) var(--duration);
+    transition: var(--ease) var(--duration);
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
-.member * {    transition: var(--ease) var(--duration)}
+.member * {
+    transition: var(--ease) var(--duration)
+}
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr
@@ -2285,9 +2287,11 @@ a:hover {
     text-align: center
 }
 
-.member-infos * {    color: var(--group-color, var(--co1));
-                font-weight: 300;
-                    font-size: var(--small)}
+.member-infos * {
+    color: var(--group-color, var(--co1));
+    font-weight: 300;
+    font-size: var(--small)
+}
 
 .member-infos>div:not(:last-of-type) {
     padding-bottom: var(--2xsmall);
@@ -2447,7 +2451,7 @@ a:hover {
 }
 
 .profile-second-avatar {
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     border: var(--large) solid var(--group-invert-100)
@@ -4575,7 +4579,7 @@ div.sceditor-group {
 #hub a.lea strong::before,
 .member a.lea span::before,
 .lea .profile-avatar::before,
-.lea .post-profile-avatar::before{
+.lea .post-profile-avatar::before {
     content: "\ecb9" !important;
     font-family: var(--icons-thin)
 }
@@ -4583,7 +4587,7 @@ div.sceditor-group {
 #hub a.cam strong::before,
 .member a.cam span::before,
 .cam .profile-avatar::before,
-.cam .post-profile-avatar::before{
+.cam .post-profile-avatar::before {
     content: "\e1d5" !important;
     font-family: var(--icons-thin)
 }

@@ -113,6 +113,7 @@
 
     --gradientNeutralVertical: linear-gradient(transparent, var(--lighter-neutral), var(--lighter-neutral), transparent);
     --gradientNeutralHorizontal: linear-gradient(to right, transparent, var(--lighter-neutral), var(--lighter-neutral), transparent);
+    --gradientLight: linear-gradient(transparent, var(--lighter-neutral));
 
     --gradient12: linear-gradient(to right, var(--co1), var(--co2));
     --gradient13: linear-gradient(to right, var(--co1), var(--co3));
@@ -2208,18 +2209,20 @@ a:hover {
 }
 
 .member {
-    gap: var(--large);
+    gap: var(--2xsmall);
     display: flex;
     flex-direction: column;
     width: 100%;
     min-width: 0;
     overflow: hidden;
-    padding: var(--large);
+    padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
-    transition-duration: 1s;
+        transition: var(--ease) var(--duration);
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
+
+.member * {    transition: var(--ease) var(--duration)}
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr
@@ -2274,19 +2277,20 @@ a:hover {
 }
 
 .member-infos>div {
-    font-size: var(--small);
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    text-align: center;
-    font-weight: 300;
-    color: var(--group-color, var(--co1))
+    text-align: center
 }
 
+.member-infos * {    color: var(--group-color, var(--co1));
+                font-weight: 300;
+                    font-size: var(--small)}
+
 .member-infos>div:not(:last-of-type) {
-    padding-bottom: var(--large);
+    padding-bottom: var(--2xsmall);
     border-bottom: 0.5px solid
 }
 
@@ -2297,22 +2301,22 @@ a:hover {
 
 .member-pseudo .prenom {
     text-transform: lowercase;
-    font-size: var(--2xlarge)
+    font-size: var(--xlarge)
 }
 
 .member-pseudo .nom {
     text-transform: uppercase;
-    font-size: var(--xlarge)
+    font-size: var(--large)
 }
 
 #hub a.lea strong::before,
 #hub a.cam strong::before {
-    padding-right: var(--2xsmall)
+    padding-right: var(--4xsmall)
 }
 
 .member:has(.cam, .lea) .member-pseudo span {
     display: flex;
-    gap: var(--2xsmall);
+    gap: var(--4xsmall);
     align-items: center;
     justify-content: center
 }

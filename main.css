@@ -4574,14 +4574,16 @@ div.sceditor-group {
 
 #hub a.lea strong::before,
 .member a.lea span::before,
-.lea .profile-avatar::before {
+.lea .profile-avatar::before,
+.lea .post-profile-avatar::before{
     content: "\ecb9" !important;
     font-family: var(--icons-thin)
 }
 
 #hub a.cam strong::before,
 .member a.cam span::before,
-.cam .profile-avatar::before {
+.cam .profile-avatar::before,
+.cam .post-profile-avatar::before{
     content: "\e1d5" !important;
     font-family: var(--icons-thin)
 }

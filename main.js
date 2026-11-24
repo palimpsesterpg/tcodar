@@ -1650,79 +1650,84 @@ function initProfileOverview() {
 
 applyColorScheme();
 
-onReady(() => {
-  observeBody();
-  removeAdBlock();
+const safe = fn => {
+  try {
+    fn();
+  } catch (error) {
+    console.error(fn.name || String(fn).slice(0, 80), error);
+  }
+};
 
-  hideAdminTools();
-  initPageContext();
-  replaceBreadcrumbSeparators();
-  cloneMemberPseudo();
-
-  qq('.fc-pres-pseudo prenom').forEach(p => p.after(sep()));
-  qq('.post-header').forEach(p => p.after(ssep()));
-  qq('.post-body').forEach(p => {
-    p.before(sep());
-    p.after(sep());
-  });
-  qq('.fc-second-title-main').forEach(p => p.after(sep()));
-  qq('.timeline-date').forEach(p => p.after(sep()));
-  qq('.page-filters').forEach(p => p.after(sep()));
-
-  qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow);
-  qq('.message').forEach(transformDiceMessage);
-
-  setCharacterKeys('.member', '.member-pseudo');
-  setCharacterKeys('.post', '.post-profile-name');
-  setCharacterKeys('.profile', '.profile-pseudo');
-  fillAllCards();
-  qq('.list-row[data-character]').forEach(buildRow);
-  splitPseudonyme();
-
-  initAges();
-  initBoardStats();
-  initTitles();
-  initForumList();
-  initForumPreviews();
-  initColorScheme();
-  numberSpans();
-  loadNewestUserAvatar();
-  replaceEmojis();
-  prefixPseudos();
-  groupPlayers();
-  sortListRows();
-  countToggleRows();
-  highlight();
-  applyIcons(ICONS);
-  replaceZodiacIcons();
-  replaceTopicLabels();
-  addTranslateButton();
-  removeSpacers();
-  initQuotes();
-  initCodeBoxes();
-  setTimeout(applyEditorIcons, 500);
-  addQueendomTab();
-  unwrapTabs();
-  formatFieldLabels();
-  trimForumLinks();
-  moveAdminLinks();
-  initProfileLabels();
-  applyOtherLabels();
-  trimProfileLabels();
-  markEmptyFields();
-  organizeProfileElements();
-  addContactSpans();
-  initTabs();
-  initTabsInline();
-  initHeaderNav();
-  initClockWall();
-  initBlockToggles();
-  initAdminPanels();
-  initCategoriesToggle();
-  markProfileLinks();
-  initProfileOverview();
-  addUsernameToNotiffiButton();
-});
+onReady(() =>
+  [
+    observeBody,
+    removeAdBlock,
+    hideAdminTools,
+    initPageContext,
+    replaceBreadcrumbSeparators,
+    cloneMemberPseudo,
+    () => qq('.fc-pres-pseudo prenom').forEach(p => p.after(sep())),
+    () => qq('.post-header').forEach(p => p.after(ssep())),
+    () => qq('.post-body').forEach(p => {
+      p.before(sep());
+      p.after(sep());
+    }),
+    () => qq('.fc-second-title-main').forEach(p => p.after(sep())),
+    () => qq('.timeline-date').forEach(p => p.after(sep())),
+    () => qq('.page-filters').forEach(p => p.after(sep())),
+    () => qq('.fam-row.bloc-toggle[data-family]').forEach(buildFamilyRow),
+    () => qq('.message').forEach(transformDiceMessage),
+    () => setCharacterKeys('.member', '.member-pseudo'),
+    () => setCharacterKeys('.post', '.post-profile-name'),
+    () => setCharacterKeys('.profile', '.profile-pseudo'),
+    fillAllCards,
+    () => qq('.list-row[data-character]').forEach(buildRow),
+    splitPseudonyme,
+    initAges,
+    initBoardStats,
+    initTitles,
+    initForumList,
+    initForumPreviews,
+    initColorScheme,
+    numberSpans,
+    loadNewestUserAvatar,
+    replaceEmojis,
+    prefixPseudos,
+    groupPlayers,
+    sortListRows,
+    countToggleRows,
+    highlight,
+    () => applyIcons(ICONS),
+    replaceZodiacIcons,
+    replaceTopicLabels,
+    addTranslateButton,
+    removeSpacers,
+    initQuotes,
+    initCodeBoxes,
+    () => setTimeout(applyEditorIcons, 500),
+    addQueendomTab,
+    unwrapTabs,
+    formatFieldLabels,
+    trimForumLinks,
+    moveAdminLinks,
+    initProfileLabels,
+    applyOtherLabels,
+    trimProfileLabels,
+    markEmptyFields,
+    organizeProfileElements,
+    addContactSpans,
+    initTabs,
+    initTabsInline,
+    initHeaderNav,
+    initClockWall,
+    initBlockToggles,
+    initAdminPanels,
+    initCategoriesToggle,
+    markProfileLinks,
+    initProfileOverview,
+    addUsernameToNotiffiButton,
+  ].forEach(safe)
+);
 
 if (document.readyState === 'complete') initGroupClasses();
 else window.addEventListener('load', initGroupClasses);

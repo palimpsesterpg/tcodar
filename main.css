@@ -2464,8 +2464,8 @@ a:hover {
     font-size: var(--large);
     border-radius: 100%;
     position: absolute;
-    left: var(--2xsmall);
-    top: var(--2xsmall);
+    left: -0.5rem;
+    top: -0.5rem;
     color: var(--light);
     background-color: var(--light);
     color: var(--group-color, var(--co1));
@@ -4573,7 +4573,7 @@ div.sceditor-group {
 
 #hub a.lea strong::before,
 .member a.lea span::before,
-.profile.lea::before {
+.lea .profile-avatar::before {
     content: "\ecb9" !important;
     font-family: var(--icons-thin)
 }

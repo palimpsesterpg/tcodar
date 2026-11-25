@@ -4040,7 +4040,7 @@ button2,
     font-family: var(--display);
     font-weight: 700;
     font-size: var(--large);
-    width: fit-content;
+    flex: 1;
     text-transform: uppercase
 }
 

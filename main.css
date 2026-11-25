@@ -1046,8 +1046,8 @@ a:hover {
 }
 
 .forumlist:has(.forum-media) {
-    background-image: linear-gradient(30deg, var(--co3) 12%, transparent 12.5%, transparent 87%, var(--co3) 87.5%, var(--co3)), linear-gradient(150deg, var(--co3) 12%, transparent 12.5%, transparent 87%, var(--co3) 87.5%, var(--co3)), linear-gradient(30deg, var(--co3) 12%, transparent 12.5%, transparent 87%, var(--co3) 87.5%, var(--co3)), linear-gradient(150deg, var(--co3) 12%, transparent 12.5%, transparent 87%, var(--co3) 87.5%, var(--co3)), linear-gradient(60deg, var(--co2) 25%, transparent 25.5%, transparent 75%, var(--co2) 75%, var(--co2)), linear-gradient(60deg, var(--co2) 25%, transparent 25.5%, transparent 75%, var(--co2) 75%, var(--co2));
-    background-size: var(--large) var(--2xlarge)
+    background-image: linear-gradient(30deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(150deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(30deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(150deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(60deg, var(--co2-100) 25%, transparent 25.5%, transparent 75%, var(--co2-100) 75%, var(--co2-100)), linear-gradient(60deg, var(--co2-100) 25%, transparent 25.5%, transparent 75%, var(--co2-100) 75%, var(--co2-100));
+    background-size: var(--large) var(--small)
 }
 
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
@@ -1689,11 +1689,7 @@ a:hover {
     padding: var(--large);
     gap: var(--large);
     flex-direction: row !important;
-    align-items: center;
-    border-image: var(--gradient23) 1;
-    border-width: 0.5px;
-    border-style: solid;
-    background-color: var(--dark-light)
+    align-items: center
 }
 
 .forum-media .forum-content {

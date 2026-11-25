@@ -864,13 +864,22 @@ function initCategoriesToggle() {
   const categories = q('#categories');
   if (!categories) return;
 
-  qq('[data-toggle-tabs]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const active = categories.classList.contains('tabsystem');
+  qq('.tabs-alignement-toggle').forEach(btn => {
+    const sync = () => {
+      const tabs = categories.classList.contains('tabsystem');
+      btn.classList.toggle('tabs', tabs);
+      btn.classList.toggle('notabs', !tabs);
+    };
 
-      categories.classList.toggle('tabsystem', !active);
-      categories.classList.toggle('notabs', active);
+    btn.addEventListener('click', () => {
+      const tabs = categories.classList.contains('tabsystem');
+
+      categories.classList.toggle('tabsystem', !tabs);
+      categories.classList.toggle('notabs', tabs);
+      sync();
     });
+
+    sync();
   });
 }
 

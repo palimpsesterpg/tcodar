@@ -1626,8 +1626,8 @@ a:hover {
 
 .forum-loc:hover .forumtitle,
 .forum-archives:hover .forumtitle {
-    letter-spacing: 1px;
-    padding-left: 1px;
+    letter-spacing: var(--2xsmall);
+    padding-left: var(--2xsmall);
     transition-duration: 1s
 }
 

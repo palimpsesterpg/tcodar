@@ -1196,6 +1196,7 @@ a:hover {
     text-shadow: 1px 1px var(--light);
     height: var(--2xlarge);
     line-height: 1;
+    transition-duration: 1s;
     color: var(--co1) !important
 }
 
@@ -1615,17 +1616,18 @@ a:hover {
 
 .forum-off .forumtitle {
     font-family: var(--serif);
-    transition-duration: 1s
 }
 
-.forum-off:hover .forumtitle {
+.forum:hover .forumtitle {
     transition-duration: 1s;
-    font-weight: 700;
+    font-weight: 700
+}
+
+.forum:nth-of-type(odd):hover .forumtitle {
     padding-left: var(--2xlarge)
 }
 
-.forum-off:nth-of-type(even):hover .forumtitle {
-    padding-left: 0;
+.forum:nth-of-type(even):hover .forumtitle {
     padding-right: var(--2xlarge)
 }
 

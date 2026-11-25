@@ -2209,23 +2209,23 @@ a:hover {
 }
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr
 }
 
 .memberlist:has(.member:nth-child(5n+2):hover) {
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr
 }
 
 .memberlist:has(.member:nth-child(5n+3):hover) {
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr
 }
 
 .memberlist:has(.member:nth-child(5n+4):hover) {
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr
 }
 
 .memberlist:has(.member:nth-child(5n):hover) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr
 }
 
 .member {

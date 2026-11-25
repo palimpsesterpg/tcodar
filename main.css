@@ -1383,7 +1383,8 @@ a:hover {
 }
 
 .forum-description:empty,
-.forum-description:not(:has(*:not(br))) {
+.forum-description:not(:has(*:not(br))),
+.forum-description:not(:has(span)) {
     display: none !important
 }
 

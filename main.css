@@ -1202,10 +1202,6 @@ a:hover {
     color: var(--co1) !important
 }
 
-.forumtitle:hover {
-    color: var(--co1-300) !important
-}
-
 .forum-lastpost {
     display: flex;
     align-items: center;
@@ -1630,8 +1626,8 @@ a:hover {
 
 .forum-loc:hover .forumtitle,
 .forum-archives:hover .forumtitle {
-    font-size: var(--3xlarge);
-    height: var(--3xlarge);
+    letter-spacing: 1px;
+    padding-left: 1px;
     transition-duration: 1s
 }
 

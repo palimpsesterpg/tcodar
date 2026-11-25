@@ -864,27 +864,36 @@ function initCategoriesToggle() {
   const categories = q('#categories');
   if (!categories) return;
 
-  const sync = () => {
-    const tabs = categories.classList.contains('tabsystem');
+  const btns = qq('.tabs-alignement-toggle');
+  const targets = qq('.tabs-alignement-toggle, [data-tabs-alignement]');
+  const classes = [...new Set(
+    qq('[data-tabs-alignement]').map(el => el.dataset.tabsAlignement).filter(Boolean)
+  )];
 
-    qq('.tabs-alignement-toggle, [data-tabs-alignement]').forEach(el => {
-      el.classList.toggle('tabs', tabs);
-      el.classList.toggle('notabs', !tabs);
+  const apply = (activeClass) => {
+    const isTabs = Boolean(activeClass);
+    categories.classList.toggle('tabsystem', isTabs);
+    categories.classList.toggle('notabs', !isTabs);
+
+    targets.forEach(el => {
+      el.classList.toggle('tabs', isTabs);
+      el.classList.toggle('notabs', !isTabs);
     });
+
+    classes.forEach(c => categories.classList.remove(c));
+    if (activeClass) categories.classList.add(activeClass);
   };
 
-  qq('.tabs-alignement-toggle').forEach(btn => {
+  let current = categories.dataset.tabsAlignement || btns[0]?.dataset.tabsAlignement || '';
+  apply(current);
+
+  btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const tabs = categories.classList.contains('tabsystem');
-
-      categories.classList.toggle('tabsystem', !tabs);
-      categories.classList.toggle('notabs', tabs);
-
-      sync();
+      const next = btn.dataset.tabsAlignement || '';
+      current = current === next ? '' : next;
+      apply(current);
     });
   });
-
-  sync();
 }
 
 function initBlockToggles() {

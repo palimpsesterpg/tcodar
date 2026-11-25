@@ -2205,7 +2205,27 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    transition: grid-template-columns 0.4s ease
+    transition: grid-template-columns .7s cubic-bezier(.22, 1, .36, 1)
+}
+
+.memberlist:has(.member:nth-child(5n+1):hover) {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+2):hover) {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+3):hover) {
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n+4):hover) {
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr
+}
+
+.memberlist:has(.member:nth-child(5n):hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr
 }
 
 .member {

@@ -1785,6 +1785,7 @@ a:hover {
     color: var(--darker-neutral) !important;
     font-size: var(--medium) !important;
     font-weight: 300 !important;
+    padding: 0 !important;
     text-transform: uppercase !important
 }
 
@@ -3086,7 +3087,7 @@ season {
 
 #hub .one {
     flex: 1;
-    background-color: var(--white-op50);
+    background-color: var(--dark-light);
     border: 0.5px solid var(--lighter-neutral);
     padding: var(--large)
 }

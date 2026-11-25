@@ -2490,7 +2490,7 @@ a:hover {
     border: 0.5px solid var(--group-color, var(--co1));
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .profile.en.ligne .profile-avatar::before {

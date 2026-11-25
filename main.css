@@ -1034,6 +1034,10 @@ a:hover {
     gap: var(--large)
 }
 
+.forum-loc {
+    gap: var(--large)
+}
+
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
     grid-column: 1
 }
@@ -1206,6 +1210,10 @@ a:hover {
     flex: 1
 }
 
+.forum-lastpost:not(:has(.forum-lastpost-avatar)) {
+    display: none
+}
+
 .forum-lastpost-avatar img {
     filter: grayscale(1)
 }
@@ -1350,7 +1358,6 @@ a:hover {
     flex-direction: column;
     background: var(--dark-light);
     flex: 1;
-    padding: var(--large);
     align-items: center;
     gap: var(--large)
 }
@@ -1360,7 +1367,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--2xsmall)
+    gap: var(--large)
 }
 
 .forum-loc .forumtitle {

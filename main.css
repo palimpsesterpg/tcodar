@@ -87,15 +87,15 @@
     --co3-op75: color-mix(in srgb, var(--co3) 75%, transparent);
     --co3-op90: color-mix(in srgb, var(--co3) 90%, transparent);
 
-    --white-op25: color-mix(in srgb, white 25%, transparent);
-    --white-op50: color-mix(in srgb, white 50%, transparent);
-    --white-op75: color-mix(in srgb, white 75%, transparent);
-    --white-op90: color-mix(in srgb, white 90%, transparent);
+    --white-op25: color-mix(in srgb, var(--light) 25%, transparent);
+    --white-op50: color-mix(in srgb, var(--light) 50%, transparent);
+    --white-op75: color-mix(in srgb, var(--light) 75%, transparent);
+    --white-op90: color-mix(in srgb, var(--light) 90%, transparent);
 
-    --black-op25: color-mix(in srgb, black 25%, transparent);
-    --black-op50: color-mix(in srgb, black 50%, transparent);
-    --black-op75: color-mix(in srgb, black 75%, transparent);
-    --black-op90: color-mix(in srgb, black 90%, transparent);
+    --black-op25: color-mix(in srgb, var(--dark) 25%, transparent);
+    --black-op50: color-mix(in srgb, var(--dark) 50%, transparent);
+    --black-op75: color-mix(in srgb, var(--dark) 75%, transparent);
+    --black-op90: color-mix(in srgb, var(--dark) 90%, transparent);
 
     --light: color-mix(in srgb, white 97.5%, black);
     --dark-light: color-mix(in srgb, white 95%, black);
@@ -178,15 +178,15 @@
     --co3-op75: color-mix(in srgb, var(--co3) 25%, transparent);
     --co3-op90: color-mix(in srgb, var(--co3) 10%, transparent);
 
-    --white-op25: color-mix(in srgb, black 25%, transparent);
-    --white-op50: color-mix(in srgb, black 50%, transparent);
-    --white-op75: color-mix(in srgb, black 75%, transparent);
-    --white-op90: color-mix(in srgb, black 90%, transparent);
+    --white-op25: color-mix(in srgb, var(--dark) 25%, transparent);
+    --white-op50: color-mix(in srgb, var(--dark) 50%, transparent);
+    --white-op75: color-mix(in srgb, var(--dark) 75%, transparent);
+    --white-op90: color-mix(in srgb, var(--dark) 90%, transparent);
 
-    --black-op25: color-mix(in srgb, white 25%, transparent);
-    --black-op50: color-mix(in srgb, white 50%, transparent);
-    --black-op75: color-mix(in srgb, white 75%, transparent);
-    --black-op90: color-mix(in srgb, white 90%, transparent);
+    --black-op25: color-mix(in srgb, var(--light) 25%, transparent);
+    --black-op50: color-mix(in srgb, var(--light) 50%, transparent);
+    --black-op75: color-mix(in srgb, var(--light) 75%, transparent);
+    --black-op90: color-mix(in srgb, var(--light) 90%, transparent);
 
     --light: color-mix(in srgb, black 87.5%, white);
     --dark-light: color-mix(in srgb, black 85%, white);
@@ -1025,16 +1025,14 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: var(--large);
-    width: 100%
+    width: 100%;
+    opacity: 1;
+    background: repeating-linear-gradient(45deg, var(--co1-200), var(--co1-200) 2px, var(--co1-100) 2px, var(--co1-100) 10px)
 }
 
 .forumlist:has(.forum-loc) {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
-    gap: var(--large)
-}
-
-.forum-loc {
     gap: var(--large)
 }
 
@@ -1052,7 +1050,8 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark-light);
+    background-color: var(--light-op50);
+    gap: var(--large);
     padding: var(--large)
 }
 

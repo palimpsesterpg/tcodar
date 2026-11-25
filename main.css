@@ -1025,6 +1025,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: var(--large);
+    background-position: center center;
     width: 100%
 }
 
@@ -1585,6 +1586,7 @@ a:hover {
 
 .forum-off {
     flex-direction: row;
+    padding: var(--large);
     justify-content: space-between
 }
 
@@ -1598,6 +1600,7 @@ a:hover {
     gap: var(--large);
     display: grid;
     justify-items: start;
+    padding: var(--large) 0;
     grid-template-rows: auto auto
 }
 
@@ -1611,7 +1614,19 @@ a:hover {
 }
 
 .forum-off .forumtitle {
-    font-family: var(--serif)
+    font-family: var(--serif);
+    transition-duration: 1s
+}
+
+.forum-off:hover .forumtitle {
+    transition-duration: 1s;
+    font-weight: 700;
+    padding-left: var(--2xlarge)
+}
+
+.forum-off:nth-of-type(even):hover .forumtitle {
+    padding-left: 0;
+    padding-right: var(--2xlarge)
 }
 
 .forum-off .forum-links {

@@ -861,13 +861,11 @@ function initHeaderNav() {
 }
 
 function initCategoriesToggle() {
+  const html = document.documentElement;
   const categories = q('#categories');
-  const elements = qq('[data-tabs-alignement]');
-
-  if (!elements.length) return;
 
   const sync = () => {
-    const tabs = elements[0].dataset.tabsAlignement === 'tabs';
+    const tabs = html.dataset.tabsAlignement === 'tabs';
 
     if (categories) {
       categories.classList.toggle('tabsystem', tabs);
@@ -882,12 +880,9 @@ function initCategoriesToggle() {
 
   qq('.tabs-alignement-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
-      const tabs = elements[0].dataset.tabsAlignement === 'tabs';
-      const value = tabs ? 'notabs' : 'tabs';
+      const tabs = html.dataset.tabsAlignement === 'tabs';
 
-      elements.forEach(el => {
-        el.dataset.tabsAlignement = value;
-      });
+      html.dataset.tabsAlignement = tabs ? 'notabs' : 'tabs';
 
       sync();
     });

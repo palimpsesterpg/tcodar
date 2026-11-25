@@ -2324,6 +2324,8 @@ a:hover {
 
 .member-pseudo .nom {
     text-transform: uppercase;
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     font-size: var(--large)
 }
 

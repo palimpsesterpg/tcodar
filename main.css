@@ -2259,15 +2259,13 @@ a:hover {
 }
 
 .member:hover .member-avatar {
-    width: 25%;
-    transition-duration: 1s
+    width: 25%
 }
 
 .member-infos {
     height: 250px;
-    flex: 1;
-    gap: var(--large);
-    padding: var(--large);
+    gap: var(--2xsmall);
+    width: 0;
     flex-direction: column;
     display: none;
     background: var(--group-color-100, var(--light))
@@ -2275,7 +2273,8 @@ a:hover {
 
 .member:hover .member-infos {
     display: flex;
-    transition-duration: 1s
+    flex: 1;
+    padding: var(--2xsmall)
 }
 
 .member-infos>div {
@@ -2290,6 +2289,10 @@ a:hover {
 .member-infos * {
     color: var(--group-color, var(--co1));
     font-weight: 300;
+    font-size: 0
+}
+
+.member:hover .member-infos * {
     font-size: var(--small)
 }
 

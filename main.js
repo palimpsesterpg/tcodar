@@ -35,7 +35,7 @@ const SUB_TITLE = 'the curses of diamonds and rings';
 const NAME_PATTERN = /^\s*(\S+)\s+(\S[\s\S]*)$/;
 const FIELD_TEXT = /^([\s()[\]{}«»"“”]*)([\s\S]*?)([\s()[\]{}«»"“”]*)$/;
 const PROFILE_PATH = /^\/u(\d+)$/;
-const OVERVIEW_TITLE = "cliquer pour ouvrir l'aperçu";
+const OVERVIEW_TITLE = "Ouvrir l'aperçu";
 
 const TAB_FIELDS = {
   faces: 'face,pseudo',

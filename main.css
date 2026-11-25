@@ -2264,7 +2264,8 @@ a:hover {
 }
 
 .member:hover .member-avatar {
-    flex-basis: 20%
+    flex-basis: 20%;
+    filter: grayscale(1)
 }
 
 .member-infos {
@@ -2285,7 +2286,7 @@ a:hover {
 }
 
 .member:hover .member-infos {
-    flex-basis: 75%;
+    flex-basis: 80%;
     padding: var(--2xsmall);
     opacity: 1;
     transition-delay: 0s, 0s, .15s

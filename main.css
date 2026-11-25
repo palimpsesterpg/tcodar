@@ -1026,8 +1026,7 @@ a:hover {
     flex-wrap: wrap;
     gap: var(--large);
     width: 100%;
-    opacity: 1;
-    background: repeating-linear-gradient(45deg, var(--co1-200), var(--co1-200) 2px, var(--co1-100) 2px, var(--co1-100) 10px)
+    background: repeating-linear-gradient(45deg, var(--co1-100), var(--co1-100) var(--4xsmall), var(--light) var(--4xsmall), var(--light) var(--small))
 }
 
 .forumlist:has(.forum-loc) {
@@ -1050,7 +1049,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-op50);
+    background-color: var(--white-op50);
     gap: var(--large);
     padding: var(--large)
 }

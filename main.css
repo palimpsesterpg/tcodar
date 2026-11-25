@@ -600,8 +600,8 @@ a:hover {
 
 [data-color-scheme="dark"] .color-scheme-toggle .dark,
 [data-color-scheme="light"] .color-scheme-toggle .light,
-[data-tabs-alignement="tabs"] .tabs-alignement-toggle .notabs,
-[data-tabs-alignement="notabs"] .tabs-alignement-toggle .tabs {
+[data-tabs-alignement="tabs"] .tabs-alignement-toggle .tabs,
+[data-tabs-alignement="notabs"] .tabs-alignement-toggle .notabs {
     display: none
 }
 

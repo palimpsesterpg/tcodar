@@ -871,11 +871,6 @@ function initCategoriesToggle() {
       categories.classList.toggle('tabsystem', tabs);
       categories.classList.toggle('notabs', !tabs);
     }
-
-    qq('.tabs-alignement-toggle').forEach(btn => {
-      btn.classList.toggle('tabs', tabs);
-      btn.classList.toggle('notabs', !tabs);
-    });
   };
 
   qq('.tabs-alignement-toggle').forEach(btn => {

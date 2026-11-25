@@ -2648,7 +2648,6 @@ a:hover {
 
 #reception .tab {
     cursor: pointer;
-    flex: 0.5;
     background-color: var(--co1-100);
     color: var(--co1);
     padding: var(--2xsmall) var(--large);
@@ -2657,13 +2656,14 @@ a:hover {
 }
 
 #reception .tab.active {
-    flex: 1;
+    padding: var(--2xsmall) var(--2xlarge);
     background-color: var(--co1);
     color: var(--light)
 }
 
 #reception .tabsystem-tabs sep {
-    flex: 2
+    flex: 1;
+    background: var(--co1-100);
 }
 
 #reception.open .content-toggle {

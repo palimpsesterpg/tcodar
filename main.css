@@ -2218,63 +2218,55 @@ a:hover {
     padding: var(--2xsmall);
     border-width: 0.5px !important;
     border-style: solid;
-    transition: var(--ease) var(--duration);
     border-image: var(--gradientgc3, var(--gradientLight)) 1
 }
 
-.member * {
-    transition: var(--ease) var(--duration)
+.member-bloc {
+    display: flex;
+    height: 250px;
+    width: 100%
 }
 
-.memberlist:has(.member:nth-child(5n+1):hover) {
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr
-}
-
-.memberlist:has(.member:nth-child(5n+2):hover) {
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr
-}
-
-.memberlist:has(.member:nth-child(5n+3):hover) {
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr
-}
-
-.memberlist:has(.member:nth-child(5n+4):hover) {
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr
-}
-
-.memberlist:has(.member:nth-child(5n):hover) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr
+.member-avatar {
+    flex: 0 0 100%;
+    min-width: 0;
+    overflow: hidden;
+    transition: flex-basis .7s cubic-bezier(.22, 1, .36, 1)
 }
 
 .member-avatar img {
-    height: 250px;
+    display: block;
     width: 100%;
-    display: block
-}
-
-.member-bloc {
     height: 250px;
-    width: 100%;
-    display: flex
+    object-fit: cover
 }
 
 .member:hover .member-avatar {
-    width: 25%
+    flex-basis: 25%
 }
 
 .member-infos {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 0%;
+    min-width: 0;
     height: 250px;
     gap: var(--2xsmall);
-    width: 0;
-    flex-direction: column;
-    display: none;
-    background: var(--group-color-100, var(--light))
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: var(--group-color-100, var(--light));
+    transition:
+        flex-basis .7s cubic-bezier(.22, 1, .36, 1),
+        padding .7s cubic-bezier(.22, 1, .36, 1),
+        opacity .4s ease 0s
 }
 
 .member:hover .member-infos {
-    display: flex;
-    flex: 1;
-    padding: var(--2xsmall)
+    flex-basis: 75%;
+    padding: var(--2xsmall);
+    opacity: 1;
+    transition-delay: 0s, 0s, .15s
 }
 
 .member-infos>div {
@@ -2289,11 +2281,10 @@ a:hover {
 .member-infos * {
     color: var(--group-color, var(--co1));
     font-weight: 300;
-    font-size: 0
-}
-
-.member:hover .member-infos * {
-    font-size: var(--small)
+    font-size: var(--small);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .member-infos>div:not(:last-of-type) {
@@ -2314,11 +2305,6 @@ a:hover {
 .member-pseudo .nom {
     text-transform: uppercase;
     font-size: var(--large)
-}
-
-#hub a.lea strong::before,
-#hub a.cam strong::before {
-    padding-right: var(--4xsmall)
 }
 
 .member:has(.cam, .lea) .member-pseudo span {
@@ -4579,22 +4565,6 @@ div.sceditor-group {
     display: none
 }
 
-#hub a.lea strong::before,
-.member a.lea span::before,
-.lea .profile-avatar::before,
-.lea.online .post-profile-avatar::before {
-    content: "\ecb9" !important;
-    font-family: var(--icons-thin)
-}
-
-#hub a.cam strong::before,
-.member a.cam span::before,
-.cam .profile-avatar::before,
-.cam.online .post-profile-avatar::before {
-    content: "\e1d5" !important;
-    font-family: var(--icons-thin)
-}
-
 .profile-details .profile-field-label,
 .profile-second-avatar .profile-field-label,
 .profile-moodboard .profile-field-label,
@@ -4895,4 +4865,32 @@ div.sceditor-group {
     content: '';
     border-bottom: 0.5px solid var(--group-invert-100);
     flex: 1
+}
+
+#hub a.lea strong::before,
+.member a.lea span::before,
+.lea .profile-avatar::before,
+.lea.online .post-profile-avatar::before {
+    content: "\ecb9" !important;
+    font-family: var(--icons-thin)
+}
+
+#hub a.cam strong::before,
+.member a.cam span::before,
+.cam .profile-avatar::before,
+.cam.online .post-profile-avatar::before {
+    content: "\e1d5" !important;
+    font-family: var(--icons-thin)
+}
+
+.member:has(.cam, .lea) .member-pseudo span {
+    display: flex;
+    gap: var(--4xsmall);
+    align-items: center;
+    justify-content: center
+}
+
+#hub a.lea strong::before,
+#hub a.cam strong::before {
+    padding-right: var(--4xsmall)
 }

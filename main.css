@@ -1270,7 +1270,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--2xsmall)
+    gap: var(--large)
 }
 
 .forum-links a {

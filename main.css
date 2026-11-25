@@ -1618,17 +1618,24 @@ a:hover {
     font-family: var(--serif);
 }
 
-.forum:hover .forumtitle {
-    transition-duration: 1s;
-    font-weight: 700
+.forum-off:nth-of-type(odd):hover .forumtitle,
+.forum-admin:nth-of-type(odd):hover .forumtitle,
+.forum-media:hover .forumtitle {
+    padding-left: var(--2xlarge);
+    transition-duration: 1s
 }
 
-.forum:nth-of-type(odd):hover .forumtitle {
-    padding-left: var(--2xlarge)
+.forum-loc:hover .forumtitle,
+.forum-archives:hover .forumtitle {
+    font-size: var(--3xlarge);
+    height: var(--3xlarge);
+    transition-duration: 1s
 }
 
-.forum:nth-of-type(even):hover .forumtitle {
-    padding-right: var(--2xlarge)
+.forum-off:nth-of-type(even):hover .forumtitle,
+.forum-admin:nth-of-type(even):hover .forumtitle {
+    padding-right: var(--2xlarge);
+    transition-duration: 1s
 }
 
 .forum-off .forum-links {

@@ -1181,7 +1181,16 @@ a:hover {
     top: var(--large)
 }
 
-.forum-loc .forum-icon,
+.forum-loc:nth-of-type(odd) .forum-icon {
+    top: var(--large);
+    left: var(--large)
+}
+
+.forum-loc:nth-of-type(even) .forum-icon {
+    right: var(--large);
+    bottom: var(--large)
+}
+
 .forum-divers .forum-icon,
 .forum-media .forum-icon {
     position: relative
@@ -1268,6 +1277,11 @@ a:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--large)
+}
+
+.forum-archives .forum-links,
+.forum-loc .forum-links {
+    gap: var(--2xsmall) !important
 }
 
 .forum-links a {
@@ -1455,13 +1469,10 @@ a:hover {
     border-radius: 50%
 }
 
-.forum-loc .forum-links {
-    font-size: 0
-}
-
 .forum-loc .forum-links a {
     color: var(--co2);
-    border: 0.5px solid var(--co2-100)
+    background-color: var(--light);
+    border: 0.5px solid var(--co2-200)
 }
 
 .forumlist:has(.forum-admin) {

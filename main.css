@@ -1690,7 +1690,7 @@ a:hover {
     gap: var(--large);
     flex-direction: row !important;
     align-items: center;
-    border-image: var(--gradientAll) 1;
+    border-image: var(--gradient23) 1;
     border-width: 0.5px;
     border-style: solid;
     background-color: var(--dark-light)

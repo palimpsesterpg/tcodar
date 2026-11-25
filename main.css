@@ -1626,8 +1626,8 @@ a:hover {
 
 .forum-loc:hover .forumtitle,
 .forum-archives:hover .forumtitle {
-    letter-spacing: var(--2xsmall);
-    padding-left: var(--2xsmall);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     transition-duration: 1s
 }
 
@@ -1770,9 +1770,9 @@ a:hover {
 }
 
 .forum-archives .forumtitle {
-    letter-spacing: var(--4xsmall);
+    letter-spacing: 1px;
     color: var(--dark) !important;
-    padding-left: var(--4xsmall);
+    padding-left: 1px;
     font-weight: 900
 }
 
@@ -2663,7 +2663,8 @@ a:hover {
 
 #reception .tabsystem-tabs sep {
     flex: 1;
-    background: var(--co1-100);
+    background: linear-gradient(to right, var(--co1-100), var(--co1-200), var(--co1-100));
+    height: 2.5px
 }
 
 #reception.open .content-toggle {

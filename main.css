@@ -1036,7 +1036,8 @@ a:hover {
 }
 
 .forumlist:has(.forum-off) {
-    background-image: linear-gradient(var(--co1-100) 1px, transparent 1px), linear-gradient(to right, var(--co1-100) 1px, var(--light) 1px)
+    background-image: linear-gradient(var(--co1-100) 1px, transparent 1px), linear-gradient(to right, var(--co1-100) 1px, var(--light) 1px);
+    background-size: var(--large) var(--large);
 }
 
 .forumlist:has(.forum-admin) {
@@ -1366,7 +1367,6 @@ a:hover {
 .forum-loc .forum-content {
     width: 100%;
     flex-direction: column;
-    background: var(--dark-light);
     flex: 1;
     align-items: center;
     gap: var(--large)
@@ -1584,20 +1584,24 @@ a:hover {
 }
 
 .forum-off {
-    flex-direction: row-reverse;
-    justify-content: flex-start
+    flex-direction: row;
+    justify-content: space-between
 }
 
 .forum-off:nth-of-type(even) {
-    flex-direction: row
+    flex-direction: row-reverse
 }
 
 .forum-off .forum-content {
-    width: calc(100% - 75px);
+    flex: 1;
     grid-template-columns: 100px auto;
     gap: var(--large);
     display: grid;
     justify-items: start;
+    grid-template-rows: auto auto
+}
+
+.forum-off .forum-content:has(.forum-links) {
     grid-template-rows: auto auto auto
 }
 
@@ -1644,17 +1648,14 @@ a:hover {
     grid-area: 2 / 2 / 3 / 3
 }
 
-.forum-off .forum-lastpost-avatar img {
+.forum-off .forum-lastpost-avatar {
     height: 100%;
-    width: 75px;
-    left: 0;
-    top: 0;
-    position: absolute
+    width: 75px
 }
 
-.forum-off:nth-of-type(even) .forum-lastpost-avatar img {
-    left: auto;
-    right: 0
+.forum-off .forum-lastpost-avatar img {
+    height: 100%;
+    width: 100%
 }
 
 .forum-media {

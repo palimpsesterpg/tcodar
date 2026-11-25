@@ -1210,7 +1210,7 @@ a:hover {
     flex: 1
 }
 
-.forum-lastpost:not(:has(.forum-lastpost-avatar)) {
+.forum-loc .forum-lastpost:not(:has(.forum-lastpost-avatar)) {
     display: none
 }
 

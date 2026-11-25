@@ -1065,6 +1065,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: var(--white-op75);
+    border: 0.5px solid var(--light);
     gap: var(--large);
     padding: var(--large)
 }

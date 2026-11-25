@@ -864,23 +864,27 @@ function initCategoriesToggle() {
   const categories = q('#categories');
   if (!categories) return;
 
-  qq('.tabs-alignement-toggle').forEach(btn => {
-    const sync = () => {
-      const tabs = categories.classList.contains('tabsystem');
-      btn.classList.toggle('tabs', tabs);
-      btn.classList.toggle('notabs', !tabs);
-    };
+  const sync = () => {
+    const tabs = categories.classList.contains('tabsystem');
 
+    qq('.tabs-alignement-toggle, [data-tabs-alignement]').forEach(el => {
+      el.classList.toggle('tabs', tabs);
+      el.classList.toggle('notabs', !tabs);
+    });
+  };
+
+  qq('.tabs-alignement-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const tabs = categories.classList.contains('tabsystem');
 
       categories.classList.toggle('tabsystem', !tabs);
       categories.classList.toggle('notabs', tabs);
+
       sync();
     });
-
-    sync();
   });
+
+  sync();
 }
 
 function initBlockToggles() {

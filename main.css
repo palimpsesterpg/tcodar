@@ -1302,6 +1302,7 @@ a:hover {
     height: 100%;
     max-height: 10000px;
     display: none;
+    gap: var(--large);
     justify-content: center;
     align-items: center;
     flex-direction: column
@@ -1309,11 +1310,12 @@ a:hover {
 
 .forumlist:has(.forum-loc) .forum-description img {
     flex: 1;
-    object-fit: cover
+    width: 100%;
+    object-fit: cover;
 }
 
 .forumlist:has(.forum-loc) .forum-description.active {
-    display: none
+    display: flex
 }
 
 [data-tab="c4"] .forum-description,
@@ -1414,7 +1416,7 @@ a:hover {
     font-family: var(--spe)
 }
 
-.forum-description {
+.forum:not(.forum-loc) .forum-description {
     display: flex;
     align-items: center;
     justify-items: center;

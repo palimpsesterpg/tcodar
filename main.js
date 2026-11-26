@@ -1538,24 +1538,35 @@ function initForumList() {
 
 function initForumPreviews() {
   qq('.forumlist:has(.forum-loc)').forEach(list => {
+    if (list.dataset.previews) return;
+    list.dataset.previews = 'done';
+
     const previews = new Map();
 
     qq('.forum-loc', list).forEach(forum => {
       const desc = q('.forum-description', forum);
       if (!desc) return;
+
       list.append(desc);
       previews.set(forum, desc);
     });
 
+    if (!previews.size) return;
+
+    let current = null;
+
     const show = forum => {
       const desc = previews.get(forum);
-      if (!desc) return;
+      if (!desc || desc === current) return;
+
+      current = desc;
       previews.forEach(d => d.classList.toggle('active', d === desc));
     };
 
-    show(q('.forum-loc', list));
+    show(previews.keys().next().value);
 
     list.addEventListener('mouseover', e => show(e.target.closest('.forum-loc')));
+    list.addEventListener('focusin', e => show(e.target.closest('.forum-loc')));
   });
 }
 

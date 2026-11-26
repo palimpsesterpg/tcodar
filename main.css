@@ -1206,11 +1206,6 @@ a:hover {
     position: relative
 }
 
-.forum-description img {
-    height: 0;
-    width: 0
-}
-
 .forumtitle {
     font-size: var(--2xlarge);
     text-transform: lowercase;
@@ -1305,10 +1300,19 @@ a:hover {
 .forumlist:has(.forum-loc) .forum-description {
     width: 200px;
     height: 100%;
-    max-height: 10000px
+    max-height: 10000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
 }
 
-.forum-preview:not(.active) {
+.forumlist:has(.forum-loc) .forum-description img {
+    flex: 1;
+    object-fit: cover
+}
+
+.forum-description:not(.active) {
     display: none
 }
 

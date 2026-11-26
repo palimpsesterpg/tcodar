@@ -1543,7 +1543,6 @@ function initForumPreviews() {
     qq('.forum-loc', list).forEach(forum => {
       const desc = q('.forum-description', forum);
       if (!desc) return;
-      desc.classList.add('forum-preview');
       list.append(desc);
       previews.set(forum, desc);
     });

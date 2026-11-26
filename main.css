@@ -290,8 +290,7 @@
     --gradientgi1: linear-gradient(to right, var(--group-invert-400), var(--group-invert-600), var(--group-invert-400));
     --gradientgi2: linear-gradient(to right, var(--group-invert-200), var(--group-invert-400), var(--group-invert-200));
     --gradientgi3: linear-gradient(transparent, var(--group-invert));
-    --gradientgi4: linear-gradient(to right, transparent, var(--group-invert-100), transparent);
-
+    --gradientgi4: linear-gradient(to right, transparent, var(--group-invert-100), transparent)
 }
 
 .family,
@@ -506,7 +505,12 @@ body {
 *::after {
     box-sizing: border-box !important;
     scrollbar-width: thin;
-    scrollbar-color: var(--white-op50) transparent
+    scrollbar-color: var(--white-op50) transparent;
+    transition-duration: 1s
+}
+
+*:hover {
+    transition-duration: 1s
 }
 
 *::-webkit-scrollbar {
@@ -699,12 +703,11 @@ a:hover {
     padding: var(--4xsmall);
     font-weight: 900;
     font-family: var(--display);
-    background-color: var(--co1);
-    transition: 1s
+    background-color: var(--co1)
 }
 
 .header-tab:hover {
-    transition: 1s;
+
     background-color: var(--co1-100);
     color: var(--co1)
 }
@@ -1048,11 +1051,11 @@ a:hover {
 
 .forumlist:has(.forum-off) {
     background-image: linear-gradient(var(--co1-100) 1px, transparent 1px), linear-gradient(to right, var(--co1-100) 1px, var(--light) 1px);
-    background-size: var(--2xlarge) var(--2xlarge);
+    background-size: var(--2xlarge) var(--2xlarge)
 }
 
 .forumlist:has(.forum-admin) {
-    background: repeating-linear-gradient(-45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), repeating-linear-gradient(45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), linear-gradient(var(--co1-100), var(--co1-100));
+    background: repeating-linear-gradient(-45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), repeating-linear-gradient(45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), linear-gradient(var(--co1-100), var(--co1-100))
 }
 
 .forumlist:has(.forum-media) {
@@ -1212,7 +1215,7 @@ a:hover {
     text-shadow: 1px 1px var(--light);
     height: var(--2xlarge);
     line-height: 1;
-    transition-duration: 1s;
+    text-align: center;
     color: var(--co1) !important
 }
 
@@ -1642,27 +1645,24 @@ a:hover {
 }
 
 .forum-off .forumtitle {
-    font-family: var(--serif);
+    font-family: var(--serif)
 }
 
 .forum-off:nth-of-type(odd):hover .forumtitle,
 .forum-admin:nth-of-type(odd):hover .forumtitle,
 .forum-media:hover .forumtitle {
-    padding-left: var(--2xlarge);
-    transition-duration: 1s
+    padding-left: var(--2xlarge)
 }
 
 .forum-loc:hover .forumtitle,
 .forum-archives:hover .forumtitle {
     letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall);
-    transition-duration: 1s
+    padding-left: var(--4xsmall)
 }
 
 .forum-off:nth-of-type(even):hover .forumtitle,
 .forum-admin:nth-of-type(even):hover .forumtitle {
-    padding-right: var(--2xlarge);
-    transition-duration: 1s
+    padding-right: var(--2xlarge)
 }
 
 .forum-off .forum-links {

@@ -1415,7 +1415,7 @@ a:hover {
     font-family: var(--spe)
 }
 
-.forum:not(.forum-loc) .forum-description {
+.forum:not(.forum-loc, .forum-media) .forum-description {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -1423,6 +1423,7 @@ a:hover {
     text-transform: uppercase
 }
 
+.forum-description:has(> br):not(:has(> :not(br))),
 .forum-description br,
 .forum-description:empty {
     display: none !important
@@ -1730,10 +1731,6 @@ a:hover {
 .forum-media .forumtitle {
     letter-spacing: var(--4xsmall);
     font-weight: 900
-}
-
-.forum-media .forum-description {
-    display: none
 }
 
 .forum-media .forum-links a {

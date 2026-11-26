@@ -1308,6 +1308,8 @@ a:hover {
     max-height: 10000px
 }
 
+.forum-preview:not(.active) { display: none; }
+
 [data-tab="c4"] .forum-description,
 [data-tab="c5"] .forum-description {
     grid-area: 1 / 2 / 3 / 3

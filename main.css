@@ -2655,38 +2655,32 @@ a:hover {
     width: 100%
 }
 
-#reception sep {
-    height: 0.5px;
-    width: 100%;
-    grid-column: 1 / 6;
-    background: var(--gradientNeutralHorizontal)
-}
-
 #reception .tabsystem-tabs {
     gap: var(--large);
     display: flex;
-    align-items: center
+    align-items: center;
+    flex-direction: column
 }
 
 #reception .tab {
     cursor: pointer;
     background-color: var(--co1-100);
     color: var(--co1);
-    padding: var(--2xsmall) var(--large);
+    padding: var(--small) var(--2xsmall) ;
     font-family: var(--serif);
     border-radius: var(--small)
 }
 
 #reception .tab.active {
-    padding: var(--2xsmall) var(--2xlarge);
+    padding: var(--large) var(--2xsmall) ;
     background-color: var(--co1);
     color: var(--light)
 }
 
 #reception .tabsystem-tabs sep {
     flex: 1;
-    background: linear-gradient(to right, var(--co1-100), var(--co1-200), var(--co1-100));
-    height: 2.5px
+    background: linear-gradient(var(--co1-100), var(--co1-200), var(--co1-100));
+    width: 0.5px
 }
 
 #reception.open .content-toggle {

@@ -1301,7 +1301,7 @@ a:hover {
     width: 200px;
     height: 100%;
     max-height: 10000px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column
@@ -1312,12 +1312,13 @@ a:hover {
     object-fit: cover
 }
 
-.forum-description:not(.active) {
+.forumlist:has(.forum-loc) .forum-description.active {
     display: none
 }
 
 [data-tab="c4"] .forum-description,
-[data-tab="c5"] .forum-description [data-tab="c7"] .forum-description {
+[data-tab="c5"] .forum-description,
+[data-tab="c7"] .forum-description {
     grid-area: 1 / 2 / 4 / 3
 }
 
@@ -1421,9 +1422,7 @@ a:hover {
     text-transform: uppercase
 }
 
-.forum-description:empty,
-.forum-description:not(:has(*:not(br))),
-.forum-description:not(:has(span)) {
+.forum-description:not(:has(*:not(br))) {
     display: none !important
 }
 

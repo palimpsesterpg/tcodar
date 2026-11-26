@@ -2666,13 +2666,13 @@ a:hover {
     cursor: pointer;
     background-color: var(--co1-100);
     color: var(--co1);
-    padding: var(--small) var(--2xsmall) ;
+    padding: var(--2xsmall) var(--4xsmall) ;
     font-family: var(--serif);
-    border-radius: var(--small)
+    border-radius: var(--2xlarge)
 }
 
 #reception .tab.active {
-    padding: var(--large) var(--2xsmall) ;
+    padding: var(--small) var(--4xsmall) ;
     background-color: var(--co1);
     color: var(--light)
 }

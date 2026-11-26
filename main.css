@@ -1308,14 +1308,12 @@ a:hover {
     max-height: 10000px
 }
 
-.forum-preview:not(.active) { display: none; }
-
-[data-tab="c4"] .forum-description,
-[data-tab="c5"] .forum-description {
-    grid-area: 1 / 2 / 3 / 3
+.forum-preview:not(.active) {
+    display: none
 }
 
-[data-tab="c7"] .forum-description {
+[data-tab="c4"] .forum-description,
+[data-tab="c5"] .forum-description [data-tab="c7"] .forum-description {
     grid-area: 1 / 2 / 4 / 3
 }
 
@@ -2668,13 +2666,13 @@ a:hover {
     cursor: pointer;
     background-color: var(--co1-100);
     color: var(--co1);
-    padding: var(--2xsmall) var(--4xsmall) ;
+    padding: var(--2xsmall) var(--4xsmall);
     font-family: var(--serif);
     border-radius: var(--2xlarge)
 }
 
 #reception .tab.active {
-    padding: var(--small) var(--4xsmall) ;
+    padding: var(--small) var(--4xsmall);
     background-color: var(--co1);
     color: var(--light)
 }

@@ -1310,8 +1310,7 @@ a:hover {
 
 .forumlist:has(.forum-loc) .forum-description img {
     flex: 1;
-    width: 100%;
-    object-fit: cover;
+    width: 100%
 }
 
 .forumlist:has(.forum-loc) .forum-description.active {

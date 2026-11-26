@@ -1302,23 +1302,23 @@ a:hover {
     text-transform: lowercase
 }
 
-.forum-preview {
+.forumlist:has(.forum-loc) .forum-description {
     width: 200px;
     height: 100%;
     max-height: 10000px
 }
 
-[data-tab="c4"] .forum-preview,
-[data-tab="c5"] .forum-preview {
+[data-tab="c4"] .forum-description,
+[data-tab="c5"] .forum-description {
     grid-area: 1 / 2 / 3 / 3
 }
 
-[data-tab="c7"] .forum-preview {
+[data-tab="c7"] .forum-description {
     grid-area: 1 / 2 / 4 / 3
 }
 
-[data-tab="c6"] .forum-preview,
-[data-tab="c10"] .forum-preview {
+[data-tab="c6"] .forum-description,
+[data-tab="c10"] .forum-description {
     grid-area: 1 / 2 / 5 / 3
 }
 

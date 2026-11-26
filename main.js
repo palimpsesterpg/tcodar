@@ -1538,16 +1538,10 @@ function initForumList() {
 
 function initForumPreviews() {
   qq('.forumlist:has(.forum-loc)').forEach(list => {
-    const preview = document.createElement('img');
-    preview.className = 'forum-preview';
-    list.append(preview);
-
     const show = forum => {
-      const img = forum && q('.forum-description img', forum);
-      if (img) Object.assign(preview, {
-        src: img.src,
-        alt: img.alt
-      });
+      if (!forum) return;
+      q('.forum-loc.active', list)?.classList.remove('active');
+      forum.classList.add('active');
     };
 
     show(q('.forum-loc', list));

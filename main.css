@@ -30,7 +30,6 @@
     --icons-custom: "uicons-custom-tcodar";
 
     --ease: cubic-bezier(0.65, 0, 0.35, 1);
-    --duration: 1s;
 
     --co1: #725794;
     --co2: #6184d8;
@@ -726,15 +725,15 @@ a:hover {
 #page-navbar * {
     opacity: 0.5;
     transition:
-        opacity var(--duration) var(--ease),
-        transform var(--duration) var(--ease)
+        opacity var(--ease),
+        transform var(--ease)
 }
 
 #page-navbar:hover * {
     opacity: 1;
     transition:
-        opacity var(--duration) var(--ease),
-        transform var(--duration) var(--ease)
+        opacity var(--ease),
+        transform var(--ease)
 }
 
 #page-navbar>div {
@@ -2270,7 +2269,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: var(--large);
-    transition: grid-template-columns .7s cubic-bezier(.22, 1, .36, 1)
+    transition: grid-template-columns var(--ease)
 }
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
@@ -2316,7 +2315,7 @@ a:hover {
     flex: 0 0 100%;
     min-width: 0;
     overflow: hidden;
-    transition: flex-basis .7s cubic-bezier(.22, 1, .36, 1)
+    transition: flex-basis var(--ease)
 }
 
 .member-avatar img {
@@ -2343,9 +2342,9 @@ a:hover {
     opacity: 0;
     background: var(--group-color-100, var(--light));
     transition:
-        flex-basis .7s cubic-bezier(.22, 1, .36, 1),
-        padding .7s cubic-bezier(.22, 1, .36, 1),
-        opacity .4s ease 0s
+        flex-basis var(--ease),
+        padding var(--ease),
+        opacity var(--ease)
 }
 
 .member:hover .member-infos {

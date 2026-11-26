@@ -1424,7 +1424,8 @@ a:hover {
     text-transform: uppercase
 }
 
-.forum-description:not(:has(*:not(br))) {
+.forum-description br,
+.forum-description:empty {
     display: none !important
 }
 

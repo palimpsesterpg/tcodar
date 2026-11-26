@@ -693,10 +693,20 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--2xsmall) var(--large);
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall) !important;
+    border-radius: var(--2xlarge);
+    padding: var(--4xsmall);
     font-weight: 900;
     font-family: var(--display);
-    background-color: var(--co1)
+    background-color: var(--co1);
+    transition: 1s
+}
+
+.header-tab:hover {
+    transition: 1s;
+    background-color: var(--co1-100);
+    color: var(--co1)
 }
 
 #page-navbar {
@@ -725,7 +735,7 @@ a:hover {
 }
 
 #page-navbar>div {
-    border-radius: var(--small);
+    border-radius: var(--2xlarge);
     width: 0.5rem;
     padding: var(--large);
     display: flex;
@@ -886,7 +896,7 @@ a:hover {
 
 #categories.tabsystem .tabsystem-tabs {
     display: flex;
-    border-radius: var(--small);
+    border-radius: var(--2xlarge);
     align-items: center;
     gap: var(--large);
     justify-content: space-between;
@@ -2576,7 +2586,7 @@ a:hover {
     height: 100%;
     align-items: center;
     gap: var(--large);
-    border-radius: var(--small);
+    border-radius: var(--2xlarge);
     padding: var(--large);
     width: var(--3xlarge);
     border: 0.5px solid var(--group-color);

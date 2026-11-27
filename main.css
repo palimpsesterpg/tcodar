@@ -1305,7 +1305,7 @@ a:hover {
     background-color: var(--light);
     display: flex;
     flex-direction: column;
-    gap: var(--large);
+    gap: var(--large)
 }
 
 .forum-previews img {
@@ -1891,9 +1891,7 @@ a:hover {
     left: -0.525rem
 }
 
-.mini .post-icons,
-.compact .post-icons,
-.sms .post-icons {
+:is(.mini, .compact, .sms) .post-icons {
     grid-area: 5 / 1 / 6 / 3;
     flex-direction: row;
     align-items: center;
@@ -1902,22 +1900,14 @@ a:hover {
     margin: 0 auto
 }
 
-.mini .post-icons>a,
-.compact .post-icons>a,
-.sms .post-icons>a,
-.mini .post-icons>div:not(:last-of-type),
-.compact .post-icons>div:not(:last-of-type),
-.sms .post-icons>div:not(:last-of-type) {
+:is(.mini, .compact, .sms) .post-icons>a,
+:is(.mini, .compact, .sms) .post-icons>div:not(:last-of-type) {
     border-right: 0.5px solid var(--lighter-neutral);
     border-bottom: 0
 }
 
-.mini .post-icons a>span,
-.compact .post-icons a>span,
-.sms .post-icons a>span,
-.mini .post-icons div>span,
-.compact .post-icons div>span,
-.sms .post-icons div>span {
+:is(.mini, .compact, .sms) .post-icons a>span,
+:is(.mini, .compact, .sms) .post-icons div>span {
     position: absolute;
     top: calc(100% + var(--large));
     left: auto
@@ -2002,7 +1992,7 @@ a:hover {
     height: 100%;
     padding: 0.5px;
     border: var(--4xsmall) solid var(--group-color-100, var(--co1-100));
-    width: 100%;
+    width: 100%
 }
 
 .post-profile .tabsystem {
@@ -2196,12 +2186,12 @@ a:hover {
     border-radius: 50%;
     height: var(--small);
     width: var(--small);
-    background-color: var(--light);
+    background-color: var(--light)
 }
 
 .post-profile .tabsystem-tabs .active {
     background-color: var(--group-color);
-    border-color: var(--group-color);
+    border-color: var(--group-color)
 }
 
 .post-profile-field .content {

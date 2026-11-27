@@ -1990,10 +1990,10 @@ a:hover {
 }
 
 .post-profile-avatar img {
-    height: auto;
-    padding: var(--4xsmall);
-    border: var(--2xsmall) solid var(--group-color-100, var(--co1-100));
-    width: 200px
+    height: 100%;
+    padding: 0.5px;
+    border: var(--4xsmall) solid var(--group-color-100, var(--co1-100));
+    width: 100%;
 }
 
 .post-profile-details,
@@ -2130,8 +2130,11 @@ a:hover {
     font-weight: 300
 }
 
-.post-profile-attendance .content {
-    text-align: center;
+.post-profile-attendance {
+    margin: 0 auto;
+    font-weight: 300;
+    letter-spacing: var(--4xsmall);
+    padding-left: var(--4xsmall);
     color: var(--group-color);
     font-family: var(--mono);
     text-transform: uppercase
@@ -2165,45 +2168,20 @@ a:hover {
 .post-profile .tabsystem-tabs {
     display: flex;
     align-items: center;
-    margin: 0 var(--2xsmall);
-    margin-bottom: -0.5px;
+gap: var(--large);
     justify-content: center
 }
 
 .post-profile .tabsystem-tabs .tab {
-    color: var(--group-color);
-    border-top: 0.5px solid var(--group-color-100);
-    border-left: 0.5px solid var(--group-color-100);
-    border-right: 0.5px solid var(--group-color-100);
-    border-radius: var(--small) var(--small) 0 0;
-    font-family: var(--serif);
-    font-size: var(--large);
-    height: var(--large);
-    line-height: 0.75;
-    text-align: center;
-    background-color: var(--group-color-100);
-    flex: 1
+border: 0.5px solid var(--group-color);
+    border-radius: 50%;
+    height: var(--small);
+    width: var(--small);
+    background-color: var(--light);
 }
 
 .post-profile .tabsystem-tabs .active {
-    font-weight: 700;
-    background-color: var(--light);
-    border-bottom: 0.5px solid var(--light);
-    z-index: 9;
-    flex: 1.5
-}
-
-[data-tab="post-profile-settings"]:not(.active) {
-    border-radius: 0 var(--small) 0 0 !important;
-    margin-left: -0.5rem;
-    margin-right: 0
-}
-
-[data-tab="post-profile-character"]:not(.active) {
-    border-radius: var(--small) 0 0 0 !important;
-    margin-right: -0.5rem;
-    margin-left: 0
-}
+background-color: var(--group-color);}
 
 .post-profile-field .content {
     text-align: justify

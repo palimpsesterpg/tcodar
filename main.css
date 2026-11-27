@@ -1037,7 +1037,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: var(--large);
-    background-position: center center;
+isolation: isolate;
     width: 100%
 }
 
@@ -1065,6 +1065,9 @@ a:hover {
 }
 
 .forumlist::before {  content: "";
+                      position: absolute;
+  inset: 0;
+  z-index: -1;
   background-color: var(--co1);
   -webkit-mask-size: calc(var(--large) * 2);
           mask-size: calc(var(--large) * 2);

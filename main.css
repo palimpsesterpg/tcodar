@@ -2070,22 +2070,28 @@ a:hover {
 }
 
 :is(.mini, .compact) .post-profile-contact {
-    height: 95%;
-    width: 95%;
+    height: calc(100% - var(--large));
+    width: calc(100% - var(--large));
     border-radius: 0;
     position: absolute;
-    display: none;
-    top: 5%;
-    left: 5%
+    display: flex;
+    top: var(--2xsmall);
+    left: var(--2xsmall);
+    background-color: var(--group-color-op75);
+    backdrop-filter: blur(2px)
 }
 
 :is(.mini, .compact) .post-profile:hover .post-profile-contact {
     display: flex
 }
 
+:is(.mini, .compact) .post-profile:hover .post-profile-gif img {
+    filter: grayscale(1)
+}
+
 .post-profile-contact {
     display: flex;
-    background-color: var(--group-color-op50);
+    background-color: var(--group-color-100);
     padding: var(--2xsmall);
     width: 100%;
     border-radius: var(--2xlarge);

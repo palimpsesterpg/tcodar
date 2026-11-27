@@ -1812,9 +1812,11 @@ a:hover {
     gap: var(--large)
 }
 
+.listings .post {
+    display: flex;
+}
+
 .post:not(.mini, .compact, .sms) {
-    display: grid;
-    gap: var(--large);
     grid-template-columns: 216px 0.5px 1fr 0.5px var(--2xlarge);
     grid-template-rows: var(--5xlarge) 0.5px 1fr
 }

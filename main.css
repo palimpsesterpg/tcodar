@@ -1980,7 +1980,7 @@ a:hover {
 .post-profile {
     position: relative;
     gap: var(--large);
-    width: 200px;
+    width: 216px;
     display: flex;
     top: -7rem;
     height: fit-content;

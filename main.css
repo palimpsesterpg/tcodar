@@ -2120,6 +2120,7 @@ a:hover {
 #label_pseudo,
 #label_celebrite {
     display: flex;
+    flex-direction: row;
     gap: var(--4xsmall);
     font-family: var(--serif);
     text-transform: lowercase;
@@ -2492,7 +2493,10 @@ a:hover {
 [id^="field_id"],
 [id^="label_"] {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
+}
+
+[id^="field_id"] {
     gap: var(--2xsmall)
 }
 

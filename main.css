@@ -1308,7 +1308,7 @@ grid-column: 2;
     overflow: hidden;
     width: 200px;
     padding: var(--large);
-    background-color: var(--white-op75);
+    background-color: var(--light);
   display: flex;
   flex-direction: column;
   gap: var(--large);
@@ -1319,13 +1319,12 @@ grid-column: 2;
   min-height: 0;
   width: 100%;
     filter: grayscale(1);
-      opacity: 0;
-  visibility: hidden
+    opacity: 0.75;
+display: none
 }
 
 .forum-previews .active {
-  opacity: 1;
-  visibility: visible
+display: block
 }
 
 .forum-divers {

@@ -2053,17 +2053,20 @@ a:hover {
 .mini .post-profile {
     height: var(--5xlarge);
     align-items: center;
+    position: relative;
     flex-direction: row
 }
 
 .mini .post-profile-contact {
-    display: flex;
-    width: var(--4xlarge);
-    height: var(--4xlarge);
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0
+    height: 100%;
+    border-radius: 0;
+    position: absolute;
+    display: none;
+    top: 0
+}
+
+.mini:hover .post-profile-contact {
+    display: flex
 }
 
 .post-profile-contact a {
@@ -2189,6 +2192,10 @@ a:hover {
 #label_pronoms .content,
 #label_presence .content {
     text-align: center !important
+}
+
+#label_comptes img {
+    height: var(--medium)
 }
 
 .post-profile .tabsystem-tabs {

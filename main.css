@@ -2074,7 +2074,7 @@ a:hover {
     width: calc(100% - var(--large));
     border-radius: 0;
     position: absolute;
-    display: flex;
+    display: none;
     top: var(--2xsmall);
     left: var(--2xsmall);
     background-color: var(--group-color-op75);
@@ -2085,7 +2085,7 @@ a:hover {
     display: flex
 }
 
-:is(.mini, .compact) .post-profile:hover .post-profile-gif img {
+:is(.mini, .compact) .post-profile:hover .label_gif img {
     filter: grayscale(1)
 }
 

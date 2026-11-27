@@ -1541,17 +1541,29 @@ function initForumPreviews() {
     if (list.dataset.previews) return;
     list.dataset.previews = 'done';
 
+    const forums = qq('.forum-loc', list);
+    const box = document.createElement('div');
+    box.className = 'forum-previews';
+
     const previews = new Map();
 
-    qq('.forum-loc', list).forEach(forum => {
+    forums.forEach(forum => {
       const desc = q('.forum-description', forum);
       if (!desc) return;
 
-      list.append(desc);
+      qq('img', desc).forEach(img => {
+        img.loading = 'eager';
+        img.decoding = 'async';
+      });
+
+      box.append(desc);
       previews.set(forum, desc);
     });
 
     if (!previews.size) return;
+
+    list.style.setProperty('--rows', Math.ceil(forums.length / 2));
+    list.append(box);
 
     let current = null;
 
@@ -1559,14 +1571,15 @@ function initForumPreviews() {
       const desc = previews.get(forum);
       if (!desc || desc === current) return;
 
+      current?.classList.remove('active');
+      desc.classList.add('active');
       current = desc;
-      previews.forEach(d => d.classList.toggle('active', d === desc));
     };
 
     show(previews.keys().next().value);
 
-    list.addEventListener('mouseover', e => show(e.target.closest('.forum-loc')));
-    list.addEventListener('focusin', e => show(e.target.closest('.forum-loc')));
+    const onEnter = e => show(e.target.closest('.forum-loc'));
+    ['mouseover', 'focusin'].forEach(type => list.addEventListener(type, onEnter));
   });
 }
 

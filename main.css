@@ -1953,7 +1953,15 @@ a:hover {
 }
 
 .post-body {
-    grid-area: 3 / 3 / 4 / 4;
+    grid-area: 3 / 3 / 4 / 4
+}
+
+:is(.mini, .compact, .sms) .post-body {
+    grid-area: 3 / 1 / 4 / 3
+}
+
+:is(.mini, .compact, .sms) .post-header {
+    grid-area: 1 / 2 / 2 / 3
 }
 
 .message {
@@ -2099,7 +2107,9 @@ a:hover {
     display: none
 }
 
-#label_gif {flex: 1}
+#label_gif {
+    flex: 1
+}
 
 #label_icon .content {
     height: var(--5xlarge);

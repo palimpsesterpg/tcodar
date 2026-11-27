@@ -1034,36 +1034,36 @@ a:hover {
 
 .forumlist {
     position: relative;
-    display: flex;
-    grid-template-columns: 1fr 200px 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--large);
-    width: 100%
+    width: 100%;
+    background-blend-mode: multiply
 }
 
 .forumlist:has(.forum-loc) {
     grid-template-columns: 1fr 200px 1fr
 }
 
+.forumlist:has(.forum-media, .forum-divers) {
+    grid-template-columns: 1fr
+}
+
 .forumlist:has(.forum-off) {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
+    background-image: linear-gradient(var(--co1), var(--co1)), url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
 }
 
-.forumlist:has(.forum-admin)::before {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
+.forumlist:has(.forum-admin) {
+    background-image: linear-gradient(var(--co1), var(--co1)), url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
 }
 
-.forumlist:has(.forum-media)::before {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
+.forumlist:has(.forum-media) {
+    background-image: linear-gradient(var(--co1), var(--co1)), url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
 }
 
-
-.forumlist .forum:nth-child(odd) {
+.forumlist .forum:nth-child(odd),
+.forumlist:has(.forum-media, .forum-divers) {
     grid-column: 1
-}
-
-.forumlist:has(.forum-media) .forum:nth-child(odd),
-.forumlist:has(.forum-divers) .forum:nth-child(odd) {
-    grid-column: 1 / -1
 }
 
 .forumlist .forum:nth-child(even) {

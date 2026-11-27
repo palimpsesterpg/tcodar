@@ -1035,50 +1035,42 @@ a:hover {
 .forumlist {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 200px 1fr;
     gap: var(--large);
-isolation: isolate;
     width: 100%
 }
 
 .forumlist:has(.forum-loc) {
-    display: grid;
-      position: relative;
-  width: 100%;
-    grid-template-columns: 1fr 200px 1fr;
-    gap: var(--large)
+    grid-template-columns: 1fr 200px 1fr
 }
 
-.forumlist:has(.forum-off)::before {
-  -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
-          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+.forumlist:has(.forum-off) {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
 }
 
 .forumlist:has(.forum-admin)::before {
-      -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
-          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
-    }
-
-.forumlist:has(.forum-media)::before {
-     -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
-          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
 }
 
-.forumlist::before {  content: "";
-                      position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: var(--co1);
-  -webkit-mask-size: calc(var(--large) * 2);
-          mask-size: calc(var(--large) * 2);
-  -webkit-mask-repeat: repeat;
-          mask-repeat: repeat;}
+.forumlist:has(.forum-media)::before {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
+}
 
-.forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
+
+.forumlist .forum:nth-child(odd) {
     grid-column: 1
 }
 
-.forumlist:has(.forum-loc)>.forum-loc:nth-child(even) {
+.forumlist:has(.forum-media) .forum:nth-child(odd),
+.forumlist:has(.forum-divers) .forum:nth-child(odd) {
+    grid-column: 1 / -1
+}
+
+.forumlist .forum:nth-child(even) {
+    grid-column: 2
+}
+
+.forumlist:has(.forum-loc) .forum:nth-child(even) {
     grid-column: 3
 }
 
@@ -1092,13 +1084,6 @@ isolation: isolate;
     border: 0.5px solid var(--light);
     gap: var(--large);
     padding: var(--large)
-}
-
-.forum-loc,
-.forum-admin,
-.forum-off,
-.forum-archives {
-    flex: 1 1 calc(100% / 2.1)
 }
 
 .forum-archives {
@@ -1310,30 +1295,30 @@ isolation: isolate;
     text-transform: lowercase
 }
 
-.forumlist:has(.forum-loc) > .forum-previews {
-grid-column: 2;
+.forumlist:has(.forum-loc)>.forum-previews {
+    grid-column: 2;
     grid-row: 1 / span var(--rows, 1);
     min-height: 0;
     overflow: hidden;
     width: 200px;
     padding: var(--large);
     background-color: var(--light);
-  display: flex;
-  flex-direction: column;
-  gap: var(--large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--large);
 }
 
 .forum-previews img {
-  flex: 1 1 0;
-  min-height: 0;
-  width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
     filter: grayscale(0.75);
     opacity: 0.75;
-display: none
+    display: none
 }
 
 .forum-previews .active {
-display: block
+    display: block
 }
 
 .forum-divers {
@@ -1446,7 +1431,7 @@ display: block
 }
 
 .forum-description span:before {
-        content: "\ea36";
+    content: "\ea36";
     font-family: var(--icons-thin)
 }
 
@@ -1507,6 +1492,7 @@ display: block
 
 .forum-admin {
     align-items: flex-start;
+    border: 0 !important;
     gap: var(--2xlarge)
 }
 
@@ -1707,14 +1693,14 @@ display: block
 
 .forum-off .forum-lastpost-avatar {
     width: 75px;
-        height: 100%;
+    height: 100%;
     display: flex;
     overflow: hidden
 }
 
 .forum-off .forum-lastpost-avatar img {
-   max-width: 75px !important;
-  max-height: 100% !important
+    max-width: 75px !important;
+    max-height: 100% !important
 }
 
 .forum-media {
@@ -2071,7 +2057,7 @@ display: block
     background-color: var(--group-color-200);
     padding: var(--2xsmall);
     width: 100%;
-        border-radius: var(--2xlarge);
+    border-radius: var(--2xlarge);
     align-items: center;
     justify-content: space-evenly
 }
@@ -2180,12 +2166,12 @@ display: block
 .post-profile .tabsystem-tabs {
     display: flex;
     align-items: center;
-gap: var(--large);
+    gap: var(--large);
     justify-content: center
 }
 
 .post-profile .tabsystem-tabs .tab {
-border: 0.5px solid var(--group-color-100);
+    border: 0.5px solid var(--group-color-100);
     border-radius: 50%;
     height: var(--small);
     width: var(--small);
@@ -2193,8 +2179,8 @@ border: 0.5px solid var(--group-color-100);
 }
 
 .post-profile .tabsystem-tabs .active {
-background-color: var(--group-color);
-border-color: var(--group-color);
+    background-color: var(--group-color);
+    border-color: var(--group-color);
 }
 
 .post-profile-field .content {

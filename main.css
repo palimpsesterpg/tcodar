@@ -29,8 +29,6 @@
     --icons-solid: "uicons-solid-straight";
     --icons-custom: "uicons-custom-tcodar";
 
-    --ease: cubic-bezier(0.65, 0, 0.35, 1);
-
     --co1: #725794;
     --co2: #6184d8;
     --co3: #50c5b7;
@@ -505,11 +503,11 @@ body {
     box-sizing: border-box !important;
     scrollbar-width: thin;
     scrollbar-color: var(--white-op50) transparent;
-    transition-duration: 1s
+    transition: 1.5s cubic-bezier(0.65, 0, 0.35, 1)
 }
 
 *:hover {
-    transition-duration: 1s
+    transition: 1.5s cubic-bezier(0.65, 0, 0.35, 1)
 }
 
 *::-webkit-scrollbar {
@@ -723,17 +721,11 @@ a:hover {
 }
 
 #page-navbar * {
-    opacity: 0.5;
-    transition:
-        opacity var(--ease),
-        transform var(--ease)
+    opacity: 0.5
 }
 
 #page-navbar:hover * {
-    opacity: 1;
-    transition:
-        opacity var(--ease),
-        transform var(--ease)
+    opacity: 1
 }
 
 #page-navbar>div {
@@ -2314,8 +2306,7 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
-    gap: var(--large);
-    transition: grid-template-columns var(--ease)
+    gap: var(--large)
 }
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
@@ -2360,8 +2351,7 @@ a:hover {
 .member-avatar {
     flex: 0 0 100%;
     min-width: 0;
-    overflow: hidden;
-    transition: flex-basis var(--ease)
+    overflow: hidden
 }
 
 .member-avatar img {
@@ -2386,11 +2376,7 @@ a:hover {
     padding: 0;
     overflow: hidden;
     opacity: 0;
-    background: var(--group-color-100, var(--light));
-    transition:
-        flex-basis var(--ease),
-        padding var(--ease),
-        opacity var(--ease)
+    background: var(--group-color-100, var(--light))
 }
 
 .member:hover .member-infos {
@@ -3292,9 +3278,7 @@ season {
     right: var(--large);
     background-color: var(--light);
     opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
-    transition: opacity 0.7s ease, visibility 0.7s ease
+    visibility: hidden
 }
 
 #notiffi_panel.open {
@@ -3666,7 +3650,6 @@ season {
     color: var(--group-color, var(--co1));
     border-radius: 100%;
     cursor: pointer;
-    transition: border-radius 128ms var(--ease);
     background-color: var(--group-color-100, var(--co1-100))
 }
 
@@ -3686,7 +3669,6 @@ season {
     height: 3rem;
     object-position: center;
     border-radius: 100%;
-    transition: border-radius 128ms var(--ease);
     position: relative;
     -webkit-filter: grayscale(1);
     filter: grayscale(1)
@@ -3711,7 +3693,6 @@ season {
     -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 1;
-    transition: transform 128ms var(--ease), opacity 64ms var(--ease);
     cursor: pointer;
     color: var(--light);
     justify-content: center
@@ -3804,7 +3785,6 @@ season {
     opacity: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.2s ease;
     background: var(--white-op75)
 }
 
@@ -3815,7 +3795,6 @@ season {
     left: 50%;
     opacity: 0;
     width: 100%;
-    transition: opacity 0.2s ease;
     -webkit-transform: translate(-100%, -100%);
     transform: translate(-100%, -100%)
 }

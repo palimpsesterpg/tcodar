@@ -1057,6 +1057,10 @@ a:hover {
     background-image: repeating-linear-gradient(45deg, var(--co1-200) 0, var(--co1-200) 1px, var(--light) 0, var(--light) 50%);
 }
 
+.forumlist:has(.forum-media) {
+    background: repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 4px, var(--co1-200) 4px, var(--co1-200) 5px, transparent 5px, transparent 10px);
+}
+
 .forumlist .forum:nth-child(odd),
 .forumlist:has(.forum-media, .forum-divers) {
     grid-column: 1

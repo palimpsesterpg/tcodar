@@ -1430,14 +1430,15 @@ display: block
 
 .forum-description span {
     font-weight: 300;
-    color: var(--ligher-dark);
+    color: var(--dark-neutral);
     font-size: var(--small);
     letter-spacing: var(--4xsmall);
     padding-left: var(--4xsmall)
 }
 
 .forum-description span:before {
-    content: '#'
+        content: "\ea36";
+    font-family: var(--icons-thin)
 }
 
 .forum-loc .forum-statistics {

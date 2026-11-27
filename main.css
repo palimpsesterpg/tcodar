@@ -1414,12 +1414,11 @@ display: block
     font-family: var(--spe)
 }
 
-.forum:not(.forum-loc, .forum-media) .forum-description {
+.forum-description {
     display: flex;
     align-items: center;
     justify-items: center;
-    gap: var(--2xsmall);
-    text-transform: uppercase
+    gap: var(--2xsmall)
 }
 
 .forum-description:has(> br):not(:has(> :not(br))),
@@ -1433,7 +1432,8 @@ display: block
     color: var(--dark-neutral);
     font-size: var(--small);
     letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall)
+    padding-left: var(--4xsmall);
+    text-transform: uppercase
 }
 
 .forum-description span:before {
@@ -1697,7 +1697,7 @@ display: block
 }
 
 .forum-off .forum-lastpost-avatar {
-    height: auto;
+    height: -webkit-fill-available;
     width: 75px
 }
 

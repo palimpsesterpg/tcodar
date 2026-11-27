@@ -1035,7 +1035,7 @@ a:hover {
 .forumlist {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--large);
     width: 100%;
     background-blend-mode: multiply
@@ -2041,14 +2041,26 @@ a:hover {
 
 .mini .post-profile {
     height: var(--5xlarge);
+    align-items: center;
     flex-direction: row
 }
 
 .mini .post-profile-contact {
+    display: flex;
+    width: var(--4xlarge);
+    height: var(--4xlarge);
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: auto;
-    height: var(--5xlarge)
+    padding: 0
+}
+
+.post-profile-contact a {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .post-profile-contact {
@@ -2219,7 +2231,7 @@ a:hover {
 }
 
 :is(.mini, .compact, .sms) .post-sep-one,
-:is(.mini, .compact, .sms) .post-sep-two {
+:is(.mini, .compact, .sms) .post-sep-three {
     height: 0.5px;
     background: var(--gradientNeutralHorizontal)
 }
@@ -2275,23 +2287,23 @@ a:hover {
 }
 
 .memberlist:has(.member:nth-child(5n+1):hover) {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr
+    grid-template-columns: 1.5fr repeat(4, 1fr)
 }
 
 .memberlist:has(.member:nth-child(5n+2):hover) {
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1.5fr repeat(3, 1fr)
 }
 
 .memberlist:has(.member:nth-child(5n+3):hover) {
-    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr
+    grid-template-columns: repeat(2, 1fr) 1.5fr repeat(2, 1fr)
 }
 
 .memberlist:has(.member:nth-child(5n+4):hover) {
-    grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr
+    grid-template-columns: repeat(3, 1fr) 1.5fr 1fr
 }
 
 .memberlist:has(.member:nth-child(5n):hover) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr
+    grid-template-columns: repeat(4, 1fr) 1.5fr
 }
 
 .member {
@@ -3292,8 +3304,8 @@ season {
     overflow: hidden;
     display: grid;
     padding: var(--large);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: var(--large)
 }
 
@@ -4766,8 +4778,8 @@ div.sceditor-group {
     min-height: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: var(--2xsmall);
     justify-items: stretch;
     align-content: space-between
@@ -4889,7 +4901,7 @@ div.sceditor-group {
 
 #field_id-20 .field_uneditable {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--large)
 }
 

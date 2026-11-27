@@ -1696,13 +1696,13 @@ display: block
 }
 
 .forum-off .forum-lastpost-avatar {
-    height: -webkit-fill-available;
-    width: 75px
+    width: 75px;
+    overflow: hidden
 }
 
 .forum-off .forum-lastpost-avatar img {
-    height: 100%;
-    width: 100%
+   max-width: 75px !important;
+  max-height: 100% !important
 }
 
 .forum-media {

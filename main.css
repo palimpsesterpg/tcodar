@@ -1902,10 +1902,11 @@ a:hover {
 :is(.mini, .compact, .sms) .post-icons>a:hover>span::before,
 :is(.mini, .compact, .sms) .post-icons>div:hover>span::before {
     left: 50%;
-    transform: translateY(-50%) rotate(225deg);
+    transform: translateX(-50%) rotate(225deg);
     border-bottom: 0.5px solid;
     border-right: 0.5px solid;
-    top: 0;
+    top: -0.525rem;
+    border-top: 0
 }
 
 :is(.mini, .compact, .sms) .post-icons {
@@ -1940,10 +1941,11 @@ a:hover {
 
 .fa_like_div>span::before {
     left: 50%;
-    transform: translateY(-50%) rotate(225deg);
+    transform: translateX(-50%) rotate(225deg);
     border-bottom: 0.5px solid;
     border-right: 0.5px solid;
-    top: 0
+    top: -0.525rem;
+    border-top: 0
 }
 
 .fa_liked i[class*=" fi-ts-"]::before {

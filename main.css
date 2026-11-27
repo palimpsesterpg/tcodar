@@ -2074,6 +2074,7 @@ a:hover {
 :is(.mini, .compact) .post-profile-contact {
     height: calc(100% - var(--large));
     width: calc(100% - var(--large));
+    z-index: 99;
     border-radius: 0;
     position: absolute;
     display: none;

@@ -1043,6 +1043,8 @@ a:hover {
 
 .forumlist:has(.forum-loc) {
     display: grid;
+      position: relative;
+  width: 100%;
     grid-template-columns: 1fr 200px 1fr;
     gap: var(--large);
     background: repeating-linear-gradient(45deg, var(--co1-100), var(--co1-100) var(--4xsmall), var(--light) var(--4xsmall), var(--light) var(--small))
@@ -1299,35 +1301,33 @@ a:hover {
     text-transform: lowercase
 }
 
-.forumlist:has(.forum-loc) .forum-description {
-    width: 200px;
-    height: 100%;
-    max-height: 10000px;
-    display: none;
-    gap: var(--large);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column
+.forumlist:has(.forum-loc) > .forum-previews {
+  grid-column: 2;
+  grid-row: 1 / span var(--rows, 1);
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
 }
 
-.forumlist:has(.forum-loc) .forum-description img {
-    flex: 1;
-    width: 100%
+.forum-previews .forum-description {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s;
 }
 
-.forumlist:has(.forum-loc) .forum-description.active {
-    display: flex
+.forum-previews .forum-description.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-[data-tab="c4"] .forum-description,
-[data-tab="c5"] .forum-description,
-[data-tab="c7"] .forum-description {
-    grid-area: 1 / 2 / 4 / 3
-}
-
-[data-tab="c6"] .forum-description,
-[data-tab="c10"] .forum-description {
-    grid-area: 1 / 2 / 5 / 3
+.forum-previews .forum-description img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .forum-divers {

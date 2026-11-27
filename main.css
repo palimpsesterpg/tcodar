@@ -1944,7 +1944,7 @@ a:hover {
 }
 
 .post-header {
-    grid-area: 1 / 2 / 2 / 5;
+    grid-area: 1 / 2 / 2 / 6;
     width: 100%;
     height: var(--5xlarge);
     column-gap: var(--large);
@@ -1965,6 +1965,16 @@ a:hover {
     overflow-wrap: break-word
 }
 
+.post-profile {
+    grid-area: 1 / 1 / 5 / 2;
+    gap: var(--large);
+    width: 216px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column
+}
+
 .post.online .post-profile-avatar::before {
     position: absolute;
     top: -0.5rem;
@@ -1980,16 +1990,6 @@ a:hover {
     height: var(--2xlarge);
     aspect-ratio: 1;
     border-radius: 100%
-}
-
-.post-profile {
-    grid-area: 1 / 1 / 3 / 2;
-    gap: var(--large);
-    width: 216px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column
 }
 
 .post-profile-avatar img {
@@ -2202,27 +2202,34 @@ a:hover {
 }
 
 .post-sep-two {
-    grid-area: 2 / 2 / 3 / 5
+    grid-area: 3 / 2 / 4 / 3
 }
 
 .post-sep-three {
-    grid-area: 2 / 2 / 3 / 5
+    grid-area: 3 / 4 / 4 / 5
 }
 
 .post-sep-one {
     grid-area: 2 / 2 / 3 / 5;
-    width: 100%;
     height: 0.5px;
     background: var(--gradientNeutralHorizontal)
 }
 
-.post:not(.mini, .compact, .sms) .post-sep-one,
+:is(.mini, .compact, .sms) .post-sep-one,
+:is(.mini, .compact, .sms) .post-sep-two {
+    height: 0.5px;
+    background: var(--gradientNeutralHorizontal)
+}
+
+:is(.mini, .compact, .sms) .post-sep-one {
+    grid-area: 2 / 1 / 3 / 5
+}
+
+:is(.mini, .compact, .sms) .post-sep-three {
+    grid-area: 4 / 1 / 5 / 5
+}
+
 .post:not(.mini, .compact, .sms) .post-sep-two {
-    height: 0.5px;
-    background: var(--gradientNeutralHorizontal)
-}
-
-.post:not(.mini, .compact, .sms) .post-sep-three {
     display: none
 }
 

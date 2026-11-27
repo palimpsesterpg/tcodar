@@ -2094,24 +2094,31 @@ a:hover {
 :is(.mini, .sms, .compact) #label_presence,
 .post:not(.mini, .compact) #label_gif,
 .post:not(.sms) #label_icon,
+:is(#label_gif, #label_icon, #label_presence) .label,
 .post:not(.compact) .post-profile-details {
     display: none
 }
 
-.sms #label_icon {
+#label_icon .content {
     height: var(--5xlarge);
     width: var(--5xlarge);
     overflow: hidden
 }
 
-#label_gif {
+#label_gif .content {
     height: var(--5xlarge);
     width: 200px;
     overflow: hidden
 }
 
-.post-profile-player,
-.post-profile-face {
+#label_icon,
+#label_gif {
+    height: 100%;
+    width: 100%
+}
+
+#label_pseudo,
+#label_celebrite {
     display: flex;
     gap: var(--4xsmall);
     font-family: var(--serif);
@@ -2121,12 +2128,12 @@ a:hover {
     font-weight: 700
 }
 
-.post-profile-face::before {
+#label_celebrite::before {
     content: "est incarné.e par";
     font-weight: 300
 }
 
-.post-profile-player::before {
+#label_pseudo::before {
     content: "sous la plume de";
     font-weight: 300
 }

@@ -1043,7 +1043,14 @@ a:hover {
 }
 
 .forumlist:has(.forum-off) {
-    background-image: linear-gradient(var(--co1), var(--co1)), url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png)
+    opacity: 0.8;
+    background-image: linear-gradient(45deg, var(--co1) 25%, transparent 25%, transparent 75%, var(--co1) 75%), linear-gradient(45deg, var(--co1) 25%, transparent 25%, transparent 75%, var(--co1) 75%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
 }
 
 .forumlist:has(.forum-admin) {

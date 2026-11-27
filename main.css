@@ -2112,10 +2112,9 @@ a:hover {
 }
 
 :is(.mini, .sms, .compact) .tabsystem,
-:is(.mini, .sms, .compact) #label_presence,
 .post:not(.mini, .compact) #label_gif,
 .post:not(.sms) #label_icon,
-:is(#label_gif, #label_icon, #label_presence) .label,
+:is(#label_gif, #label_icon) .label,
 .post:not(.compact) .post-profile-details {
     display: none
 }
@@ -2162,28 +2161,18 @@ a:hover {
     font-weight: 300
 }
 
-#label_presence {
-    margin: 0 auto;
-    font-weight: 300;
-    letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall);
-    color: var(--group-color);
-    font-family: var(--mono);
-    text-transform: uppercase
-}
-
 #label_presence .label,
 #label_pseudo .label,
 #label_celebrite .label,
 #label_age .label,
-#label_pronoms .label,
-#label_comptes img {
+#label_pronoms .label {
     display: none
 }
 
 #label_age,
-#label_pronoms {
-    flex: 1 1 calc(100% / 3);
+#label_pronoms,
+#label_presence {
+    flex: 1 1 calc(100% / 2.1);
     text-align: center;
     text-transform: uppercase;
     font-family: var(--display);
@@ -2192,8 +2181,13 @@ a:hover {
     padding: var(--4xsmall)
 }
 
+#label_presence {
+    flex: 1 1 100%
+}
+
 #label_age .content,
-#label_pronoms .content {
+#label_pronoms .content,
+#label_presence .content {
     text-align: center !important
 }
 

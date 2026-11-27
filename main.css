@@ -1046,23 +1046,30 @@ a:hover {
       position: relative;
   width: 100%;
     grid-template-columns: 1fr 200px 1fr;
-    gap: var(--large);
-    background: repeating-linear-gradient(45deg, var(--co1-100), var(--co1-100) var(--4xsmall), var(--light) var(--4xsmall), var(--light) var(--small))
+    gap: var(--large)
 }
 
-.forumlist:has(.forum-off) {
-    background-image: linear-gradient(var(--co1-100) 1px, transparent 1px), linear-gradient(to right, var(--co1-100) 1px, var(--light) 1px);
-    background-size: var(--2xlarge) var(--2xlarge)
+.forumlist:has(.forum-off)::before {
+  -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
 }
 
-.forumlist:has(.forum-admin) {
-    background: repeating-linear-gradient(-45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), repeating-linear-gradient(45deg, var(--light) 0px, var(--light) var(--2xsmall), transparent var(--2xsmall), transparent var(--small)), linear-gradient(var(--co1-100), var(--co1-100))
+.forumlist:has(.forum-admin)::before {
+      -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+    }
+
+.forumlist:has(.forum-media)::before {
+     -webkit-mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
+          mask-image: url(https://cdn-icons-png.flaticon.com/512/16139/16139769.png);
 }
 
-.forumlist:has(.forum-media) {
-    background-image: linear-gradient(30deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(150deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(30deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(150deg, var(--co3-100) 12%, transparent 12.5%, transparent 87%, var(--co3-100) 87.5%, var(--co3-100)), linear-gradient(60deg, var(--co2-100) 25%, transparent 25.5%, transparent 75%, var(--co2-100) 75%, var(--co2-100)), linear-gradient(60deg, var(--co2-100) 25%, transparent 25.5%, transparent 75%, var(--co2-100) 75%, var(--co2-100));
-    background-size: var(--large) var(--small)
-}
+.forumlist::before {  content: "";
+  background-color: var(--co1);
+  -webkit-mask-size: calc(var(--large) * 2);
+          mask-size: calc(var(--large) * 2);
+  -webkit-mask-repeat: repeat;
+          mask-repeat: repeat;}
 
 .forumlist:has(.forum-loc)>.forum-loc:nth-child(odd) {
     grid-column: 1

@@ -1,7 +1,6 @@
 const q = (selector, root = document) => root.querySelector(selector);
 const qq = (selector, root = document) => [...root.querySelectorAll(selector)];
 const sep = () => document.createElement('sep');
-const ssep = () => document.createElement('ssep');
 
 const onReady = fn =>
   document.readyState === 'loading' ?
@@ -1705,11 +1704,6 @@ onReady(() => [
   replaceBreadcrumbSeparators,
   cloneMemberPseudo,
   () => qq('.fc-pres-pseudo prenom').forEach(p => p.after(sep())),
-  () => qq('.post-header').forEach(p => p.after(ssep())),
-  () => qq('.post-body').forEach(p => {
-    p.before(sep());
-    p.after(sep());
-  }),
   () => qq('.fc-second-title-main').forEach(p => p.after(sep())),
   () => qq('.timeline-date').forEach(p => p.after(sep())),
   () => qq('.page-filters').forEach(p => p.after(sep())),

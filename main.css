@@ -2003,11 +2003,13 @@ a:hover {
 
 .post-profile .tabsystem {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: var(--large)
 }
 
 .post-profile .tabsystem-contents {
-    height: 320px;
+    height: 336px;
+    width: 216px;
     overflow: hidden;
     padding: var(--2xsmall);
     border: 0.5px solid var(--group-color-100)
@@ -2173,7 +2175,7 @@ gap: var(--large);
 }
 
 .post-profile .tabsystem-tabs .tab {
-border: 0.5px solid var(--group-color);
+border: 0.5px solid var(--group-color-100);
     border-radius: 50%;
     height: var(--small);
     width: var(--small);
@@ -2181,7 +2183,9 @@ border: 0.5px solid var(--group-color);
 }
 
 .post-profile .tabsystem-tabs .active {
-background-color: var(--group-color);}
+background-color: var(--group-color);
+border-color: var(--group-color);
+}
 
 .post-profile-field .content {
     text-align: justify

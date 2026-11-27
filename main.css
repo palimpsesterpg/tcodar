@@ -2070,20 +2070,22 @@ a:hover {
 }
 
 :is(.mini, .compact) .post-profile-contact {
-    height: 100%;
+    height: 95%;
+    width: 95%;
     border-radius: 0;
     position: absolute;
     display: none;
-    top: 0
+    top: 5%;
+    left: 5%
 }
 
-:is(.mini, .compact):hover .post-profile-contact {
+:is(.mini, .compact) .post-profile:hover .post-profile-contact {
     display: flex
 }
 
 .post-profile-contact {
     display: flex;
-    background-color: var(--group-color-200);
+    background-color: var(--group-color-op50);
     padding: var(--2xsmall);
     width: 100%;
     border-radius: var(--2xlarge);
@@ -2092,8 +2094,8 @@ a:hover {
 }
 
 .post-profile-contact i::before {
-    color: var(--light);
-    text-shadow: 0.5px 0.5px var(--group-color)
+    color: var(--group-color);
+    text-shadow: 0.5px 0.5px var(--light)
 }
 
 .post-profile-name {

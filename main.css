@@ -2087,7 +2087,7 @@ a:hover {
     display: flex
 }
 
-:is(.mini, .compact) .post-profile:hover .label_gif img {
+:is(.mini, .compact) .post-profile:hover #label_gif img {
     filter: grayscale(1)
 }
 

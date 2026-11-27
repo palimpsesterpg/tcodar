@@ -1808,9 +1808,22 @@ a:hover {
 }
 
 .post {
-    display: flex;
+    display: grid;
+    gap: var(--large)
+}
+
+.post:not(.mini, .compact, .sms) {
+    display: grid;
     gap: var(--large);
-    flex-wrap: wrap
+    grid-template-columns: 216px 0.5px 1fr 0.5px var(--2xlarge);
+    grid-template-rows: 80px 0.5px 1fr
+}
+
+.mini,
+.compact,
+.sms {
+    grid-template-columns: 216px 1fr;
+    grid-template-rows: 80px 0.5px 1fr 0.5px var(--2xlarge)
 }
 
 .post+.post {
@@ -1819,6 +1832,7 @@ a:hover {
 
 .post-icons {
     display: flex;
+    grid-area: 2 / 3 / 3 / 3;
     flex-direction: column;
     justify-content: flex-start;
     height: fit-content;
@@ -1882,6 +1896,7 @@ a:hover {
 .mini .post-icons,
 .compact .post-icons,
 .sms .post-icons {
+    grid-area: 3 / 1 / 4 / 5;
     flex-direction: row;
     align-items: center;
     justify-content: center;

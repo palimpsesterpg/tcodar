@@ -1042,24 +1042,24 @@ a:hover {
 }
 
 .forumlist:has(.forum-off) {
-    background-image: linear-gradient(45deg, var(--co1-200) 25%, transparent 25%, transparent 75%, var(--co1-200) 75%), linear-gradient(45deg, var(--co1-200) 25%, transparent 25%, transparent 75%, var(--co1-200) 75%);
+    background-image: linear-gradient(45deg, var(--co1-100) 25%, transparent 25%, transparent 75%, var(--co1-100) 75%), linear-gradient(45deg, var(--co1-100) 25%, transparent 25%, transparent 75%, var(--co1-100) 75%);
     background-size: var(--2xlarge) var(--2xlarge);
     background-position: 0 0, var(--large) var(--large)
 }
 
 .forumlist:has(.forum-admin) {
-    background-image: radial-gradient(var(--co1-200) 1.5px, transparent 1.5px), radial-gradient(var(--co1-200) 1.5px, var(--light) 1.5px);
+    background-image: radial-gradient(var(--co1-100) 1.5px, transparent 1.5px), radial-gradient(var(--co1-100) 1.5px, var(--light) 1.5px);
     background-size: var(--2xlarge) var(--2xlarge);
     background-position: 0 0, var(--large) var(--large)
 }
 
 .forumlist:has(.forum-loc) {
     background-size: var(--2xlarge) var(--2xlarge);
-    background-image: repeating-linear-gradient(45deg, var(--co1-200) 0, var(--co1-200) 1px, var(--light) 0, var(--light) 50%)
+    background-image: repeating-linear-gradient(45deg, var(--co1-100) 0, var(--co1-100) 1px, var(--light) 0, var(--light) 50%)
 }
 
 .forumlist:has(.forum-media) {
-    background: repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 4px, var(--co1-200) 4px, var(--co1-200) 5px, transparent 5px, transparent 10px)
+    background: repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 4px, var(--co1-100) 4px, var(--co1-100) 5px, transparent 5px, transparent 10px)
 }
 
 .forumlist .forum:nth-child(odd) {

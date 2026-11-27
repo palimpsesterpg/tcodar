@@ -1817,10 +1817,18 @@ a:hover {
     grid-template-rows: var(--5xlarge) 0.5px 1fr
 }
 
-.mini,
-.compact,
-.sms {
+.mini {
     grid-template-columns: 216px 1fr;
+    grid-template-rows: var(--5xlarge) 0.5px 1fr 0.5px var(--2xlarge)
+}
+
+.compact {
+    grid-template-columns: 216px 1fr;
+    grid-template-rows: var(--6xlarge) 0.5px 1fr 0.5px var(--2xlarge)
+}
+
+.sms {
+    grid-template-columns: var(--5xlarge) 1fr;
     grid-template-rows: var(--5xlarge) 0.5px 1fr 0.5px var(--2xlarge)
 }
 

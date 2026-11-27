@@ -54,7 +54,7 @@ const TAB_PROFILE = {
   '.tab-content[data-tab="profile-extra"]': 'field_id19',
   '.tab-content[data-tab="profile-roleplay"]': 'field_id8, field_id9, field_id10',
   '.profile-moodboard': 'field_id11',
-  '.post-head': 'label_pseudo, label_celebrite',
+  '.post-header': 'label_pseudo, label_celebrite',
   '.post-profile': 'label_icon, label_gif, label_presence',
   '.tab-content[data-tab="post-profile-settings"]': 'label_comptes, label_credits, label_habitudes, label_themes-abordes, label_rps',
   '.tab-content[data-tab="post-profile-aesthetic"]': 'label_aes'

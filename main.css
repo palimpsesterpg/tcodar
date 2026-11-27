@@ -2104,6 +2104,11 @@ a:hover {
     text-shadow: 0.5px 0.5px var(--light)
 }
 
+:is(.mini, .compact) .post-profile-contact i::before {
+    color: var(--light);
+    text-shadow: 0.5px 0.5px var(--group-color)
+}
+
 .post-profile-name {
     font-size: var(--2xlarge);
     height: var(--2xlarge);

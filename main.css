@@ -1891,6 +1891,15 @@ a:hover {
     left: -0.525rem
 }
 
+:is(.mini, .compact, .sms) .post-icons>a:hover>span::before,
+:is(.mini, .compact, .sms) .post-icons>div:hover>span::before {
+    left: 50%;
+    transform: translateY(-50%) rotate(225deg);
+    border-bottom: 0.5px solid;
+    border-right: 0.5px solid;
+    top: 0;
+}
+
 :is(.mini, .compact, .sms) .post-icons {
     grid-area: 5 / 1 / 6 / 3;
     flex-direction: row;
@@ -1922,9 +1931,11 @@ a:hover {
 }
 
 .fa_like_div>span::before {
-    top: -0.525rem !important;
-    transform: translateX(-50%) rotate(315deg) ! important;
-    left: 50% !important
+    left: 50%;
+    transform: translateY(-50%) rotate(225deg);
+    border-bottom: 0.5px solid;
+    border-right: 0.5px solid;
+    top: 0
 }
 
 .fa_liked i[class*=" fi-ts-"]::before {
@@ -2233,6 +2244,7 @@ a:hover {
 :is(.mini, .compact, .sms) .post-sep-one,
 :is(.mini, .compact, .sms) .post-sep-three {
     height: 0.5px;
+    width: 100%;
     background: var(--gradientNeutralHorizontal)
 }
 
@@ -2244,7 +2256,7 @@ a:hover {
     grid-area: 4 / 1 / 5 / 3
 }
 
-.post:not(.mini, .compact, .sms) .post-sep-two {
+:is(.mini, .compact, .sms) .post-sep-two {
     display: none
 }
 

@@ -1697,6 +1697,8 @@ display: block
 
 .forum-off .forum-lastpost-avatar {
     width: 75px;
+        height: 100%;
+    display: flex;
     overflow: hidden
 }
 

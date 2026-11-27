@@ -684,6 +684,7 @@ a:hover {
 }
 
 .header-tab {
+    text-align: center;
     color: var(--light);
     flex: 1;
     display: flex;

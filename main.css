@@ -4451,7 +4451,7 @@ span[data-field="face"] {
 .topic-header {
     display: flex;
     flex-direction: column;
-    padding: var(--large);
+    margin-bottom: var(--large);
     gap: var(--large)
 }
 
@@ -4482,7 +4482,7 @@ a.nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--large)
+    gap: 25%
 }
 
 .quickreply .h3,

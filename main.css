@@ -1029,9 +1029,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--large);
-    width: 100%;
-    background-size: var(--xlarge) var(--xlarge);
-    background-position: center center
+    width: 100%
 }
 
 .forumlist:has(.forum-loc) {
@@ -1043,36 +1041,20 @@ a:hover {
 }
 
 .forumlist:has(.forum-off) {
-    opacity: 0.8;
-    background-image: linear-gradient(45deg, var(--co1) 25%, transparent 25%, transparent 75%, var(--co1) 75%), linear-gradient(45deg, var(--co1) 25%, transparent 25%, transparent 75%, var(--co1) 75%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
+    background-image: linear-gradient(45deg, var(--co1-200) 25%, transparent 25%, transparent 75%, var(--co1-200) 75%), linear-gradient(45deg, var(--co1-200) 25%, transparent 25%, transparent 75%, var(--co1-200) 75%);
+    background-size: var(--2xlarge) var(--2xlarge);
+    background-position: 0 0, var(--large) var(--large);
 }
 
 .forumlist:has(.forum-admin) {
-    opacity: 0.8;
-    background-image: radial-gradient(var(--co1) 1.5px, transparent 1.5px), radial-gradient(var(--co1) 1.5px, var(--light) 1.5px);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
+    background-image: radial-gradient(var(--co1-200) 1.5px, transparent 1.5px), radial-gradient(var(--co1-200) 1.5px, var(--light) 1.5px);
+    background-size: var(--2xlarge) var(--2xlarge);
+    background-position: 0 0, var(--large) var(--large);
 }
 
 .forumlist:has(.forum-loc) {
-    opacity: 0.8;
-    background-image: repeating-linear-gradient(45deg, var(--co1) 0, var(--co1) 1px, var(--light) 0, var(--light) 50%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
+    background-size: var(--2xlarge) var(--2xlarge);
+    background-image: repeating-linear-gradient(45deg, var(--co1-200) 0, var(--co1-200) 1px, var(--light) 0, var(--light) 50%);
 }
 
 .forumlist .forum:nth-child(odd),

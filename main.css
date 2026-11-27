@@ -2059,15 +2059,16 @@ a:hover {
 
 .post-profile-contact {
     display: flex;
-    background-color: var(--group-color-100);
+    background-color: var(--group-color-200);
     padding: var(--2xsmall);
     width: 100%;
+        border-radius: var(--2xlarge);
     align-items: center;
     justify-content: space-evenly
 }
 
 .post-profile-contact i::before {
-    color: var(--group-color)
+    color: var(--light)
 }
 
 .post-profile-name {

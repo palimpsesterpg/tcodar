@@ -2050,14 +2050,18 @@ a:hover {
     display: grid
 }
 
-.mini .post-profile {
+:is(.mini, .compact) .post-profile {
     height: var(--5xlarge);
     align-items: center;
     position: relative;
     flex-direction: row
 }
 
-.mini .post-profile-contact {
+:is(.compact) .post-profile {
+    height: var(--6xlarge)
+}
+
+:is(.mini, .compact) .post-profile-contact {
     height: 100%;
     border-radius: 0;
     position: absolute;
@@ -2065,16 +2069,8 @@ a:hover {
     top: 0
 }
 
-.mini:hover .post-profile-contact {
+:is(.mini, .compact):hover .post-profile-contact {
     display: flex
-}
-
-.post-profile-contact a {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 .post-profile-contact {
@@ -2088,7 +2084,8 @@ a:hover {
 }
 
 .post-profile-contact i::before {
-    color: var(--light)
+    color: var(--light);
+    text-shadow: 0.5px 0.5px var(--group-color)
 }
 
 .post-profile-name {

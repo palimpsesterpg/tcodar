@@ -1302,30 +1302,28 @@ a:hover {
 }
 
 .forumlist:has(.forum-loc) > .forum-previews {
-  grid-column: 2;
-  grid-row: 1 / span var(--rows, 1);
-  position: relative;
-  min-height: 0;
-  overflow: hidden
-}
-
-.forum-previews .forum-description {
-  position: absolute;
-  inset: 0;
+grid-column: 2;
+    grid-row: 1 / span var(--rows, 1);
+    min-height: 0;
+    overflow: hidden;
+    width: 200px;
+    padding: var(--large);
+    background-color: var(--white-op75);
   display: flex;
   flex-direction: column;
   gap: var(--large);
-  opacity: 0;
+}
+
+.forum-previews img {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+    filter: grayscale(1);
+      opacity: 0;
   visibility: hidden
 }
 
-.forum-previews .forum-description img {
-  flex: 1 1 0;
-  min-height: 0;
-  width: 100%
-}
-
-.forum-previews .forum-description.active {
+.forum-previews .active {
   opacity: 1;
   visibility: visible
 }

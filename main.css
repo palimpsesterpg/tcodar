@@ -1816,14 +1816,14 @@ a:hover {
     display: grid;
     gap: var(--large);
     grid-template-columns: 216px 0.5px 1fr 0.5px var(--2xlarge);
-    grid-template-rows: 80px 0.5px 1fr
+    grid-template-rows: var(--5xlarge) 0.5px 1fr
 }
 
 .mini,
 .compact,
 .sms {
     grid-template-columns: 216px 1fr;
-    grid-template-rows: 80px 0.5px 1fr 0.5px var(--2xlarge)
+    grid-template-rows: var(--5xlarge) 0.5px 1fr 0.5px var(--2xlarge)
 }
 
 .post+.post {
@@ -2097,22 +2097,23 @@ a:hover {
     padding: var(--2xsmall) !important
 }
 
-.mini .tabsystem,
-.sms .tabsystem,
-.compact .tabsystem,
-.mini .post-profile-attendance,
-.sms .post-profile-attendance,
-.compact .post-profile-attendance,
-.post-profile-gif,
-.post-profile-icon,
-.compact .post-profile-avatar,
-.sms .post-profile-avatar {
+:is(.mini, .sms, .compact) .tabsystem,
+:is(.mini, .sms, .compact) .post-profile-attendance,
+.post:not(.mini, .compact) .post-profile-gif,
+.post:not(.sms) .post-profile-icon {
     display: none
 }
 
-.sms .post-profile-icon,
-.compact .post-profile-gif {
-    display: block
+.sms .post-profile-icon {
+    height: var(--5xlarge);
+    width: var(--5xlarge);
+    overflow: hidden
+}
+
+.post-profile-gif {
+    height: var(--5xlarge);
+    width: 200px;
+    overflow: hidden
 }
 
 .post-profile-player,

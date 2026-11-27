@@ -2111,8 +2111,8 @@ a:hover {
     overflow: hidden
 }
 
-#label_icon,
-#label_gif {
+#label_icon img,
+#label_gif img {
     height: 100%;
     width: 100%
 }

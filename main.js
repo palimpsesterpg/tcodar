@@ -1548,16 +1548,16 @@ function initForumPreviews() {
     const previews = new Map();
 
     forums.forEach(forum => {
-      const desc = q('.forum-description', forum);
-      if (!desc) return;
+      const images = qq('.forum-description img', forum);
+      if (!images.length) return;
 
-      qq('img', desc).forEach(img => {
+      images.forEach(img => {
         img.loading = 'eager';
         img.decoding = 'async';
       });
 
-      box.append(desc);
-      previews.set(forum, desc);
+      box.append(...images);
+      previews.set(forum, images);
     });
 
     if (!previews.size) return;
@@ -1565,15 +1565,15 @@ function initForumPreviews() {
     list.style.setProperty('--rows', Math.ceil(forums.length / 2));
     list.append(box);
 
-    let current = null;
+    let current = [];
 
     const show = forum => {
-      const desc = previews.get(forum);
-      if (!desc || desc === current) return;
+      const images = previews.get(forum);
+      if (!images || images === current) return;
 
-      current?.classList.remove('active');
-      desc.classList.add('active');
-      current = desc;
+      current.forEach(img => img.classList.remove('active'));
+      images.forEach(img => img.classList.add('active'));
+      current = images;
     };
 
     show(previews.keys().next().value);

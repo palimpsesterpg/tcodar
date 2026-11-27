@@ -1214,7 +1214,6 @@ a:hover {
     font-size: var(--2xlarge);
     text-transform: lowercase;
     text-shadow: 1px 1px var(--light);
-    height: var(--2xlarge);
     line-height: 1;
     text-align: center;
     color: var(--co1) !important
@@ -1653,8 +1652,8 @@ display: block
 
 .forum-loc:hover .forumtitle,
 .forum-archives:hover .forumtitle {
-    letter-spacing: var(--4xsmall);
-    padding-left: var(--4xsmall)
+    letter-spacing: 1px;
+    padding-left: 1px
 }
 
 .forum-off:nth-of-type(even):hover .forumtitle,

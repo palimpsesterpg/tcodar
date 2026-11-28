@@ -2066,25 +2066,27 @@ a:hover {
 }
 
 .post-profile-contact {
-    height: calc(336px - var(--2xlarge));
-    width: calc(216px - var(--2xlarge));
+    height: calc(336px - var(--4xlarge));
+    width: calc(216px - var(--4xlarge));
     z-index: 99;
     border-radius: 0;
     position: absolute;
     display: none;
-    top: var(--large);
-    left: var(--large);
+    top: var(--2xlarge);
+    left: var(--2xlarge);
     background-color: var(--group-color-op75);
     backdrop-filter: blur(2px)
 }
 
 :is(.mini, .compact) .post-profile-contact {
     height: calc(100% - var(--2xlarge));
-    width: calc(100% - var(--2xlarge))
+    width: calc(100% - var(--2xlarge));
+    top: var(--large);
+    left: var(--large);
 }
 
 #label_gif:hover .post-profile-contact,
-.post-profile-avatar:hover .post-profile-contact {
+.post-profile:has(.post-profile-avatar:hover) .post-profile-contact {
     display: flex
 }
 

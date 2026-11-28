@@ -1981,9 +1981,10 @@ a:hover {
     gap: var(--large);
     width: 216px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative
 }
 
 .post.online .post-profile-avatar::before {
@@ -2046,14 +2047,6 @@ a:hover {
     font-size: var(--large)
 }
 
-.mini .post:has(#presentation-form) .post-profile {
-    display: none
-}
-
-.compact .post-profile {
-    display: grid
-}
-
 :is(.mini, .compact) .post-profile {
     height: var(--5xlarge);
     align-items: center;
@@ -2075,14 +2068,18 @@ a:hover {
     top: var(--2xlarge);
     left: var(--2xlarge);
     background-color: var(--group-color-op75);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     backdrop-filter: blur(2px)
 }
 
 :is(.mini, .compact) .post-profile-contact {
     height: calc(100% - var(--2xlarge));
     width: calc(100% - var(--2xlarge));
+    flex-direction: row;
     top: var(--large);
-    left: var(--large);
+    left: var(--large)
 }
 
 .post-profile:has(#label_gif:hover) .post-profile-contact,

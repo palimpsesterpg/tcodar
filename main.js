@@ -70,7 +70,7 @@ const OVERVIEW_FIELDS = [
   ['status', 'Statut amoureux'],
 ];
 
-const COMPACT_FIELDS = ['label_statut', 'label_age', 'label_occupation'];
+const COMPACT_FIELDS = ['label_age', 'label_statut-amoureux', 'label_occupation'];
 
 const ICONS = [{
     selector: '.copyright a',
@@ -1273,16 +1273,16 @@ function organizeProfileElements() {
   });
 }
 
-function syncCompactProfile(profile) {
-  const header = q('.post-header', profile.closest('.post') ?? document);
+function syncCompactPost(post) {
+  const header = q('.post-header', post);
   if (!header) return;
 
   qq(':scope > [data-from]', header).forEach(copy => copy.remove());
-  if (!profile.classList.contains('compact')) return;
+  if (!post.classList.contains('compact')) return;
 
   header.append(
     ...COMPACT_FIELDS.flatMap(id => {
-      const source = q(`#${id}`, profile);
+      const source = q(`#${id}`, post);
       if (!source || header.contains(source)) return [];
 
       const copy = source.cloneNode(true);
@@ -1295,19 +1295,19 @@ function syncCompactProfile(profile) {
 }
 
 function initCompactProfiles() {
-  qq('.post-profile').forEach(profile => {
+  qq('.post').forEach(post => {
     let compact = null;
 
     const update = () => {
-      const next = profile.classList.contains('compact');
+      const next = post.classList.contains('compact');
       if (next === compact) return;
 
       compact = next;
-      syncCompactProfile(profile);
+      syncCompactPost(post);
     };
 
     update();
-    new MutationObserver(update).observe(profile, { attributes: true, attributeFilter: ['class'] });
+    new MutationObserver(update).observe(post, { attributes: true, attributeFilter: ['class'] });
   });
 }
 

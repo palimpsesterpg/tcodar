@@ -1911,7 +1911,7 @@ a:hover {
 }
 
 .sms:hover .post-icons,
-.sms .post-sep-three {
+.sms:hover .post-sep-three {
     display: flex
 }
 

@@ -1981,7 +1981,7 @@ a:hover {
 }
 
 .post-profile {
-    grid-area: 1 / 1 / 5 / 2;
+    grid-area: 1 / 1 / 4 / 2;
     gap: var(--large);
     width: 216px;
     display: flex;

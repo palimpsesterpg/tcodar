@@ -1510,6 +1510,10 @@ function initPageContext() {
   if (postlist.id === '272') {
     qq('.post', postlist).forEach(p => p.classList.add('mini'));
   }
+
+    if (postlist.id === '11') {
+    qq('.post', postlist).forEach(p => p.classList.add('compact'));
+  }
 }
 
 function initTitles() {

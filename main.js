@@ -1279,7 +1279,7 @@ function initContactReveal() {
     if (!profile || !avatar || !contact) return;
 
     const targets = () => (post.matches('.mini, .compact, .sms') ? [profile] : [avatar, contact]);
-    const set = visible => contact.classList.toggle('is-visible', visible);
+    const set = visible => contact.classList.toggle('visible', visible);
 
     [profile, avatar, contact].forEach(el => {
       el.addEventListener('mouseenter', () => {

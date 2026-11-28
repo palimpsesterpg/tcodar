@@ -1969,6 +1969,10 @@ a:hover {
     grid-area: 1 / 2 / 2 / 3
 }
 
+.compact .post-header {
+    height: var(--7xlarge)
+}
+
 .message {
     text-align: justify;
     -webkit-hyphens: auto;
@@ -2055,7 +2059,7 @@ a:hover {
 }
 
 :is(.compact) .post-profile {
-    height: var(--6xlarge)
+    height: var(--7xlarge)
 }
 
 .post-profile-contact {
@@ -2140,6 +2144,10 @@ a:hover {
 #label_gif .content {
     height: var(--5xlarge);
     overflow: hidden
+}
+
+.compact #label_gif .content {
+    height: var(--7xlarge)
 }
 
 #label_icon img,
@@ -2264,15 +2272,17 @@ a:hover {
     display: none
 }
 
-.post-profile-details {order: 3;
+.post-profile-details {
+    order: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     column-gap: var(--large);
     font-family: var(--serif);
-    color: var(--group-color);
+    color: var(--group-color-700);
     font-style: italic;
-    text-transform: lowercase;}
+    text-transform: lowercase
+}
 
 .quick-nav-topics {
     padding: var(--large) 0;

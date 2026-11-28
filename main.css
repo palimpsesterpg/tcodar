@@ -2065,7 +2065,7 @@ a:hover {
     height: var(--6xlarge)
 }
 
-:is(.mini, .compact) .post-profile-contact {
+.post-profile-contact {
     height: calc(100% - var(--large));
     width: calc(100% - var(--large));
     z-index: 99;
@@ -2078,11 +2078,11 @@ a:hover {
     backdrop-filter: blur(2px)
 }
 
-:is(.mini, .compact) .post-profile:hover .post-profile-contact {
+.post-profile:hover .post-profile-contact {
     display: flex
 }
 
-:is(.mini, .compact) .post-profile:hover #label_gif img {
+.post-profile:hover #label_gif img {
     filter: grayscale(1)
 }
 
@@ -2097,11 +2097,6 @@ a:hover {
 }
 
 .post-profile-contact i::before {
-    color: var(--group-color);
-    text-shadow: 0.5px 0.5px var(--light)
-}
-
-:is(.mini, .compact) .post-profile-contact i::before {
     color: var(--light);
     text-shadow: 0.5px 0.5px var(--group-color)
 }

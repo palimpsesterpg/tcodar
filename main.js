@@ -70,6 +70,8 @@ const OVERVIEW_FIELDS = [
   ['status', 'Statut amoureux'],
 ];
 
+const COMPACT_FIELDS = ['label_statut', 'label_age', 'label_occupation'];
+
 const ICONS = [{
     selector: '.copyright a',
     icon: 'fi fi-ts-crown'
@@ -1271,6 +1273,44 @@ function organizeProfileElements() {
   });
 }
 
+function syncCompactProfile(profile) {
+  const header = q('.post-header', profile.closest('.post') ?? document);
+  if (!header) return;
+
+  qq(':scope > [data-from]', header).forEach(copy => copy.remove());
+  if (!profile.classList.contains('compact')) return;
+
+  header.append(
+    ...COMPACT_FIELDS.flatMap(id => {
+      const source = q(`#${id}`, profile);
+      if (!source || header.contains(source)) return [];
+
+      const copy = source.cloneNode(true);
+      copy.removeAttribute('id');
+      qq('[id]', copy).forEach(el => el.removeAttribute('id'));
+      copy.dataset.from = id;
+      return [copy];
+    })
+  );
+}
+
+function initCompactProfiles() {
+  qq('.post-profile').forEach(profile => {
+    let compact = null;
+
+    const update = () => {
+      const next = profile.classList.contains('compact');
+      if (next === compact) return;
+
+      compact = next;
+      syncCompactProfile(profile);
+    };
+
+    update();
+    new MutationObserver(update).observe(profile, { attributes: true, attributeFilter: ['class'] });
+  });
+}
+
 function transformDiceMessage(el) {
   if (el.dataset.dice) return;
 
@@ -1745,6 +1785,7 @@ onReady(() => [
   trimProfileLabels,
   markEmptyFields,
   organizeProfileElements,
+  initCompactProfiles,
   addContactSpans,
   initTabs,
   initTabsInline,

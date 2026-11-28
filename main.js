@@ -1474,6 +1474,10 @@ function initPageContext() {
     if (postlist.id === '11') {
     qq('.post', postlist).forEach(p => p.classList.add('compact'));
   }
+
+      if (postlist.id === '10') {
+    qq('.post', postlist).forEach(p => p.classList.add('sms'));
+  }
 }
 
 function initTitles() {

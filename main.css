@@ -2602,8 +2602,11 @@ a:hover {
 }
 
 .profile-avatar img {
-    padding: var(--large);
-    border: 0.5px solid var(--group-color)
+    border-radius: var(--small);
+    border-image: var(--gradientgc2) 1;
+    border-width: 0.5px;
+    padding: var(--4xsmall);
+    border-style: solid
 }
 
 .profile-second-avatar {

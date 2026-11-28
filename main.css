@@ -1811,8 +1811,8 @@ a:hover {
 }
 
 .sms {
-    grid-template-columns: var(--5xlarge) 1fr;
-    grid-template-rows: var(--5xlarge) 0.5px 1fr 0.5px var(--2xlarge)
+    grid-template-columns: var(--3xlarge) 1fr;
+    grid-template-rows: var(--3xlarge) 0.5px 1fr 0.5px var(--2xlarge)
 }
 
 .post+.post {
@@ -1962,6 +1962,10 @@ a:hover {
     height: var(--7xlarge)
 }
 
+.compact .post-header {
+    height: var(--3xlarge)
+}
+
 .message {
     text-align: justify;
     -webkit-hyphens: auto;
@@ -2043,12 +2047,20 @@ a:hover {
 :is(.mini, .compact) .post-profile {
     height: var(--5xlarge);
     align-items: center;
-    position: relative;
-    flex-direction: row
+    position: relative
+}
+
+:is(.mini) .post-profile {
+    height: var(--7xlarge)
 }
 
 :is(.compact) .post-profile {
     height: var(--7xlarge)
+}
+
+:is(.sms) .post-profile {
+    height: var(--3xlarge);
+    width: var(--3xlarge)
 }
 
 .post-profile-contact {
@@ -2116,7 +2128,9 @@ a:hover {
 .post:not(.mini, .compact) #label_gif,
 .post:not(.sms) #label_icon,
 :is(#label_gif, #label_icon) .label,
-.post:not(.compact) .post-profile-details {
+.post:not(.compact) .post-profile-details,
+.mini #label_celebrite,
+.mini #label_pseudo {
     display: none
 }
 
@@ -2125,8 +2139,8 @@ a:hover {
 }
 
 #label_icon .content {
-    height: var(--5xlarge);
-    width: var(--5xlarge);
+    height: var(--3xlarge);
+    width: var(--3xlarge);
     overflow: hidden
 }
 

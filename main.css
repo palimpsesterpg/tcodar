@@ -1812,6 +1812,10 @@ a:hover {
 
 .sms {
     grid-template-columns: var(--4xlarge) 1fr;
+    grid-template-rows: var(--4xlarge) 0.5px 1fr
+}
+
+.sms:hover {
     grid-template-rows: var(--4xlarge) 0.5px 1fr 0.5px var(--2xlarge)
 }
 
@@ -1899,6 +1903,16 @@ a:hover {
     justify-content: center;
     width: fit-content;
     margin: 0 auto
+}
+
+.sms .post-icons,
+.sms .post-sep-three {
+    display: none
+}
+
+.sms:hover .post-icons,
+.sms .post-sep-three {
+    display: flex
 }
 
 :is(.mini, .compact, .sms) .post-icons>a,
@@ -2093,6 +2107,7 @@ a:hover {
     width: calc(100% - var(--2xsmall));
     flex-direction: row;
     flex-wrap: wrap;
+    gap: var(--2xsmall);
     top: var(--4xsmall);
     left: var(--4xsmall)
 }

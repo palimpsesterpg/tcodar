@@ -1978,7 +1978,7 @@ a:hover {
     gap: var(--large);
     width: 216px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     position: relative

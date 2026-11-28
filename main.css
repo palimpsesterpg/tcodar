@@ -1460,7 +1460,7 @@ a:hover {
 .forum-loc .forum-lastpost-avatar img {
     height: var(--3xlarge);
     width: var(--3xlarge);
-    border-radius: 50%
+    border-radius: 100%
 }
 
 .forum-loc .forum-links a {
@@ -2145,6 +2145,14 @@ a:hover {
     width: 100%
 }
 
+#label_icon img {
+    border-radius: 100%
+}
+
+#label_gif img {
+    border-radius: var(--small);
+}
+
 #label_pseudo,
 #label_celebrite {
     display: flex;
@@ -2207,14 +2215,15 @@ a:hover {
 }
 
 .post-profile .tabsystem-tabs .tab {
-    border: 0.5px solid var(--group-color);
-    border-radius: 50%;
-    height: var(--small);
-    width: var(--small);
+    outline: 0.5px solid var(--group-color);
+    border-radius: 100%;
+    height: var(--xsmall);
+    width: var(--xsmall);
     background-color: var(--light)
 }
 
-.post-profile .tabsystem-tabs .active {
+.post-profile .tabsystem-tabs .active,
+.post-profile .tabsystem-tabs .tab:hover {
     background-color: var(--group-color)
 }
 

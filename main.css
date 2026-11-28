@@ -2312,23 +2312,27 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    column-gap: var(--large);
+    column-gap: var(--2xlarge);
     font-family: var(--display);
     color: var(--group-color);
     font-weight: 700;
-    text-transform: uppercase
+    text-transform: uppercase;
+    align-items: center
 }
 
 .post-profile-details div::before {
     font-weight: 100 !important;
     padding-right: var(--4xsmall);
     font-family: var(--icons-solid);
-    color: var(--group-color-300)
+    color: var(--group-color-200);
+    position: absolute;
+    left: -1.5rem
 }
 
 .post-profile-details div {
     background-color: var(--group-color-100);
-    padding: 0 var(--2xsmall)
+    padding: 0 var(--4xsmall);
+    position: relative
 }
 
 .post-profile-details div[data-field="dateOfBirth"]::before {

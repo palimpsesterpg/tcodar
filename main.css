@@ -2095,21 +2095,28 @@ a:hover {
 }
 
 :is(.mini, .compact) .post-profile-contact {
-    height: calc(100% - var(--large));
-    width: calc(100% - var(--large));
     flex-direction: row;
     top: var(--2xsmall);
+    width: calc(216px - var(--large));
     left: var(--2xsmall)
 }
 
+.mini .post-profile-contact {
+    height: var(--4xlarge)
+}
+
+.compact .post-profile-contact {
+    height: var(--6xlarge)
+}
+
 .sms .post-profile-contact {
-    height: calc(100% - var(--2xsmall));
-    width: calc(100% - var(--2xsmall));
+    height: var(--3xlarge);
+    width: var(--3xlarge);
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--2xsmall);
-    top: var(--4xsmall);
-    left: var(--4xsmall)
+    top: var(--2xsmall);
+    left: var(--2xsmall)
 }
 
 .visible.post-profile-contact {

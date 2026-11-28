@@ -2066,16 +2066,21 @@ a:hover {
 }
 
 .post-profile-contact {
-    height: calc(100% - var(--large));
-    width: calc(100% - var(--large));
+    height: calc(336px - var(--2xlarge));
+    width: calc(216px - var(--2xlarge));
     z-index: 99;
     border-radius: 0;
     position: absolute;
     display: none;
-    top: var(--2xsmall);
-    left: var(--2xsmall);
+    top: var(--large);
+    left: var(--large);
     background-color: var(--group-color-op75);
     backdrop-filter: blur(2px)
+}
+
+:is(.mini, .compact) .post-profile-contact {
+    height: calc(100% - var(--2xlarge));
+    width: calc(100% - var(--2xlarge))
 }
 
 #label_gif:hover .post-profile-contact,
@@ -2086,16 +2091,6 @@ a:hover {
 #label_gif:hover img,
 .post-profile-avatar:hover img {
     filter: grayscale(1)
-}
-
-.post-profile-contact {
-    display: flex;
-    background-color: var(--group-color-100);
-    padding: var(--2xsmall);
-    width: 100%;
-    border-radius: var(--2xlarge);
-    align-items: center;
-    justify-content: space-evenly
 }
 
 .post-profile-contact i::before {

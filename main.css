@@ -2184,6 +2184,10 @@ a:hover {
     height: 100%;
     width: 100%;
     border-radius: var(--small);
+    border-image: var(--gradientgc1) 1;
+    border-width: 0.5px;
+    padding: var(--4xsmall);
+    border-style: solid
 }
 
 #label_pseudo,

@@ -9,7 +9,7 @@ const CHARACTERS = {
     dateOfBirth: '07.02.1993',
     address: ['blablabla'],
     status: 'célibataire',
-    job: ['co-fondatrice et présidente de la branche londonienne de Jennings Consulting', 'un autre truc'],
+    job: 'co-fondatrice et présidente de la branche londonienne de Jennings Consulting',
     gender: 'femme cis',
     player: ['palimpseste', 'elle', 'cam'],
     groupId: 6

@@ -1749,7 +1749,6 @@ onReady(() => [
   trimProfileLabels,
   markEmptyFields,
   organizeProfileElements,
-  initCompactProfiles,
   addContactSpans,
   initTabs,
   initTabsInline,

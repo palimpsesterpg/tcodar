@@ -1962,7 +1962,7 @@ a:hover {
     height: var(--7xlarge)
 }
 
-.compact .post-header {
+.sms .post-header {
     height: var(--3xlarge)
 }
 
@@ -2087,8 +2087,7 @@ a:hover {
     left: var(--large)
 }
 
-:is(.mini, .compact) .post-profile:hover .post-profile-contact,
-.tabsystem .tab-content:first-of-type:hover~.post-profile-contact {
+.visible.post-profile-contact {
     display: flex
 }
 
@@ -2129,8 +2128,8 @@ a:hover {
 .post:not(.sms) #label_icon,
 :is(#label_gif, #label_icon) .label,
 .post:not(.compact) .post-profile-details,
-.mini #label_celebrite,
-.mini #label_pseudo {
+.sms #label_celebrite,
+.sms #label_pseudo {
     display: none
 }
 
@@ -2146,6 +2145,7 @@ a:hover {
 
 #label_gif .content {
     height: var(--5xlarge);
+    width: 216px;
     overflow: hidden
 }
 

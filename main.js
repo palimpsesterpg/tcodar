@@ -1271,6 +1271,29 @@ function organizeProfileElements() {
   });
 }
 
+function initContactReveal() {
+  qq('.post').forEach(post => {
+    const profile = q('.post-profile', post);
+    const avatar = q('.post-profile-avatar', post);
+    const contact = q('.post-profile-contact', post);
+    if (!profile || !avatar || !contact) return;
+
+    const targets = () => (post.matches('.mini, .compact, .sms') ? [profile] : [avatar, contact]);
+    const set = visible => contact.classList.toggle('is-visible', visible);
+
+    [profile, avatar, contact].forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (targets().includes(el)) set(true);
+      });
+
+      el.addEventListener('mouseleave', event => {
+        if (!targets().includes(el)) return;
+        if (!targets().some(target => target.contains(event.relatedTarget))) set(false);
+      });
+    });
+  });
+}
+
 function transformDiceMessage(el) {
   if (el.dataset.dice) return;
 
@@ -1753,6 +1776,7 @@ onReady(() => [
   trimProfileLabels,
   markEmptyFields,
   organizeProfileElements,
+  initContactReveal,
   addContactSpans,
   initTabs,
   initTabsInline,

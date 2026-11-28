@@ -1963,7 +1963,7 @@ a:hover {
 }
 
 .sms .post-header {
-    height: var(--3xlarge)
+    height: var(--4xlarge)
 }
 
 .message {
@@ -2059,8 +2059,8 @@ a:hover {
 }
 
 :is(.sms) .post-profile {
-    height: var(--3xlarge);
-    width: var(--3xlarge)
+    height: var(--4xlarge);
+    width: var(--4xlarge)
 }
 
 .post-profile-contact {

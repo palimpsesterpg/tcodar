@@ -2078,11 +2078,13 @@ a:hover {
     backdrop-filter: blur(2px)
 }
 
-.post-profile:hover .post-profile-contact {
+#label_gif:hover .post-profile-contact,
+.post-profile-avatar:hover .post-profile-contact {
     display: flex
 }
 
-.post-profile:hover #label_gif img {
+#label_gif:hover img,
+.post-profile-avatar:hover img {
     filter: grayscale(1)
 }
 

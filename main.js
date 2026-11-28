@@ -70,8 +70,6 @@ const OVERVIEW_FIELDS = [
   ['status', 'Statut amoureux'],
 ];
 
-const COMPACT_FIELDS = ['label_age', 'label_statut-amoureux', 'label_occupation'];
-
 const ICONS = [{
     selector: '.copyright a',
     icon: 'fi fi-ts-crown'
@@ -1270,44 +1268,6 @@ function organizeProfileElements() {
         if (field) container.append(field);
       });
     });
-  });
-}
-
-function syncCompactPost(post) {
-  const header = q('.post-header', post);
-  if (!header) return;
-
-  qq(':scope > [data-from]', header).forEach(copy => copy.remove());
-  if (!post.classList.contains('compact')) return;
-
-  header.append(
-    ...COMPACT_FIELDS.flatMap(id => {
-      const source = q(`#${id}`, post);
-      if (!source || header.contains(source)) return [];
-
-      const copy = source.cloneNode(true);
-      copy.removeAttribute('id');
-      qq('[id]', copy).forEach(el => el.removeAttribute('id'));
-      copy.dataset.from = id;
-      return [copy];
-    })
-  );
-}
-
-function initCompactProfiles() {
-  qq('.post').forEach(post => {
-    let compact = null;
-
-    const update = () => {
-      const next = post.classList.contains('compact');
-      if (next === compact) return;
-
-      compact = next;
-      syncCompactPost(post);
-    };
-
-    update();
-    new MutationObserver(update).observe(post, { attributes: true, attributeFilter: ['class'] });
   });
 }
 

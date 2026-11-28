@@ -2315,7 +2315,31 @@ a:hover {
     column-gap: var(--large);
     font-family: var(--display);
     color: var(--group-color-700);
+    font-weight: 700;
     text-transform: uppercase
+}
+
+.post-profile-details div::before {
+    font-weight: 500 !important;
+    padding-right: var(--4xsmall);
+    font-family: var(--icons-solid)
+}
+
+.post-profile-details div {
+    background-color: var(--group-color-100);
+    padding: var(--4xsmall)
+}
+
+.post-profile-details div[data-field="dateOfBirth"]::before {
+    content: "\e354"
+}
+
+.post-profile-details div[data-field="job"]::before {
+    content: "\e2ea"
+}
+
+.post-profile-details div[data-field="status"]::before {
+    content: "\f098"
 }
 
 .quick-nav-topics {

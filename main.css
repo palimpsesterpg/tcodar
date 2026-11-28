@@ -2075,8 +2075,8 @@ a:hover {
     left: var(--large)
 }
 
-.post-profile:has(#label_gif:hover) .post-profile-contact,
-.post-profile:has(.post-profile-avatar:hover) .post-profile-contact {
+:is(.mini, .compact) .post-profile:hover .post-profile-contact,
+.tabsystem .tab-content:first-of-type:hover~.post-profile-contact {
     display: flex
 }
 
@@ -2276,10 +2276,9 @@ a:hover {
     flex-wrap: wrap;
     justify-content: flex-end;
     column-gap: var(--large);
-    font-family: var(--serif);
+    font-family: var(--display);
     color: var(--group-color-700);
-    font-style: italic;
-    text-transform: lowercase
+    text-transform: uppercase
 }
 
 .quick-nav-topics {
